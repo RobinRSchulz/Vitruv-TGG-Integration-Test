@@ -1,7 +1,18 @@
-Methodologist Template Project
+Vitruvius TGG Integration Tests
 ==============================
-This project is a template for the methodologists who are creating a V-SUM.
+Tests and, later, CaseStudies for testing and evaluating the Vitruvius TGG support.
 
+Since this depends on eMoflon, we need at least a Java-21-SDK
+## Install on windows
+* Not use powershell. In IntelliJ: "Command Prompt"
+* Change your shell's JAVA_HOME to a Java-23 JDK path:
+    ```
+    set JAVA_HOME="C:\Users\XPS-15\.jdks\openjdk-23.0.1"
+    ```
+* Install
+    ```
+    mvnw clean install
+    ```
 
 Model
 -----
