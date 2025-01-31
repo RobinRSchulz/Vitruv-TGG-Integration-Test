@@ -8,6 +8,7 @@ import tools.vitruv.framework.vsum.VirtualModelBuilder;
 import tools.vitruv.methodologisttemplate.model.model.Link;
 import tools.vitruv.methodologisttemplate.model.model.ModelFactory;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.util.function.Consumer;
 
@@ -25,6 +26,8 @@ import tools.vitruv.framework.views.View;
 import tools.vitruv.framework.views.ViewTypeFactory;
 import tools.vitruv.framework.vsum.VirtualModel;
 import tools.vitruv.methodologisttemplate.model.model.System;
+import tools.vitruv.methodologisttemplate.model.model2.Model2Factory;
+import tools.vitruv.methodologisttemplate.model.model2.Model2Package;
 
 /**
  * This class provides an example how to define and use a VSUM.
@@ -54,23 +57,33 @@ public class VSUMExampleTest {
 
   @Test
   void testTGGChangePropagationSpecification() {
-    VirtualModel vsum = createVirtualModel(new Model1Model2TGGChangePropagationSpecification());
+    VirtualModel vsum = createVirtualModel(new Model1Model2TGGChangePropagationSpecification(
+            new File("C:\\Users\\XPS-15\\IdeaProjects\\Vitruv-TGG-Integration-Test\\eclipse-ibex-workspace\\Something2Else"),
+//            new File("C:\\Users\\XPS-15\\eclipse-workspace\\Model2Model2"),
+            Model2Package.eINSTANCE.getRoot(),
+            URI.createURI(projectPath.resolve("exampleTarget.model").toString())));
     // since we can only access the models in the VSUM via views, we create a trivial view that represents the identity mapping.
     // This commitableView includes the strategy to generate the change sequence
     CommittableView view = getDefaultView(vsum).withChangeDerivingTrait();
 
     // create changes and trigger change propagation
     logger.info("##################################### first change commit: Few changes!");
+
     modifyView(view, (CommittableView v) -> {
       System system = ModelFactory.eINSTANCE.createSystem();
       v.registerRoot(
               system,
               URI.createURI(projectPath.resolve("example.model").toString()));
-      //TODO add more changes!
-      system.getComponents().add(ModelFactory.eINSTANCE.createComponent());
-      Link link = ModelFactory.eINSTANCE.createLink();
-      system.getLinks().add(link);
+
+      //TODO revert commenting-out these changes
+//      system.getComponents().add(ModelFactory.eINSTANCE.createComponent());
+//      Link link = ModelFactory.eINSTANCE.createLink();
+//      system.getLinks().add(link);
     });
+
+
+    java.lang.System.exit(0);
+
 
     logger.info("##################################### second change commit: More changes!");
     CommittableView view2 = getDefaultView(vsum).withChangeDerivingTrait();
