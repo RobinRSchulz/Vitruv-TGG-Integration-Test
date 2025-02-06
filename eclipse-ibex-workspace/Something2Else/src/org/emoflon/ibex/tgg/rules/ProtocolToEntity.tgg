@@ -1,0 +1,37 @@
+#using Something2Else.*
+#using AttrCondDefLibrary.*
+
+#rule ProtocolToEntity #with Something2Else
+
+#source { 
+	++protocol:Protocol {
+		
+	}
+	system:System{
+		++ -protocols->protocol
+	}
+}
+
+#target {
+	++entity:Entity{
+		
+	}
+	root:Root{
+		++ -entities->entity
+	}
+}
+
+#correspondence {
+	++ptoe:ProtocolToEntity {
+		#src->protocol
+		#trg->entity
+	}
+	stor:SystemToRoot{
+		#src->system
+		#trg->root
+	}
+}
+
+#attributeConditions {
+	
+}
