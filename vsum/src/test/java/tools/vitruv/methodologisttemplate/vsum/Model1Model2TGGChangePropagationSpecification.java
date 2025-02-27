@@ -20,15 +20,18 @@ public class Model1Model2TGGChangePropagationSpecification extends TGGChangeProp
                         "http://vitruv.tools/methodologisttemplate/model")),
                 MetamodelDescriptor.with(Set.of(
                         "http://vitruv.tools/methodologisttemplate/model2")),
+                "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore",
+                "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore",
                 ibexProjectPath,
                 target,
                 targetRootURI);
-        // TODO target-Modell-Pfad erwarten (oder im Konstruktor)
     }
 
     public Model1Model2TGGChangePropagationSpecification(MetamodelDescriptor sourceMetamodelDescriptor, MetamodelDescriptor targetMetamodelDescriptor,
+                                                         String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri,
                                                          File ibexProjectPath, EClass targetRootEclass, URI targetRootURI) {
-        super(sourceMetamodelDescriptor, targetMetamodelDescriptor, ibexProjectPath, targetRootEclass, targetRootURI);
+        super(sourceMetamodelDescriptor, targetMetamodelDescriptor, sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
+                ibexProjectPath, targetRootEclass, targetRootURI);
         logger.debug("In Constructor for Model1Model2TGGChangePropagationSpecification.");
         logger.debug("Ensuring Metamodels being registered: \n  - src NS_URI: "
                 + tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI

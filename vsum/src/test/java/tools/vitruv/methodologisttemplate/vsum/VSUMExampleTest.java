@@ -75,6 +75,9 @@ public class VSUMExampleTest {
               system,
               URI.createURI(projectPath.resolve("example.model").toString()));
 
+
+      system.getProtocols().add(ModelFactory.eINSTANCE.createProtocol());
+      system.getComponents().add(ModelFactory.eINSTANCE.createComponent());
       //TODO revert commenting-out these changes
 //      system.getComponents().add(ModelFactory.eINSTANCE.createComponent());
 //      Link link = ModelFactory.eINSTANCE.createLink();
