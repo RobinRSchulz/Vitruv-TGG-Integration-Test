@@ -2,6 +2,7 @@ package tools.vitruv.methodologisttemplate.vsum;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
+import org.emoflon.ibex.tgg.operational.debug.LoggerConfig;
 import org.junit.jupiter.api.Disabled;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
 import tools.vitruv.framework.vsum.VirtualModelBuilder;
@@ -9,6 +10,8 @@ import tools.vitruv.methodologisttemplate.model.model.Link;
 import tools.vitruv.methodologisttemplate.model.model.ModelFactory;
 
 import java.io.File;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.nio.file.Path;
 import java.util.function.Consumer;
 
@@ -56,7 +59,7 @@ public class VSUMExampleTest {
   }
 
   @Test
-  void testTGGChangePropagationSpecification() {
+  void testTGGChangePropagationSpecification() throws Exception {
     VirtualModel vsum = createVirtualModel(new Model1Model2TGGChangePropagationSpecification(
             new File("C:\\Users\\XPS-15\\IdeaProjects\\Vitruv-TGG-Integration-Test\\eclipse-ibex-workspace\\Something2Else"),
 //            new File("C:\\Users\\XPS-15\\eclipse-workspace\\Model2Model2"),
@@ -84,8 +87,6 @@ public class VSUMExampleTest {
 //      system.getLinks().add(link);
     });
 
-
-    java.lang.System.exit(0);
 
 
     logger.info("##################################### second change commit: More changes!");
@@ -138,5 +139,4 @@ public class VSUMExampleTest {
     modificationFunction.accept(view);
     view.commitChanges();
   }
-
 }
