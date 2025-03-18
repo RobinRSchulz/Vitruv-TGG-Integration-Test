@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Something2Else:SystemToRoot__Marker xmlns:Something2Else="platform:/resource/Something2Else/model/Something2Else.ecore" xmlns:model="http://vitruv.tools/methodologisttemplate/model" xmlns:model2="http://vitruv.tools/methodologisttemplate/model2" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
-  <CREATE__CORR__stor href="platform:/resource/Something2Else/instances/corr.xmi#/" />
-  <CREATE__SRC__system xsi:type="model:System" href="target\vsumexample\example.model#/" />
-  <CREATE__TRG__root xsi:type="model2:Root" href="target\vsumexample\exampleTarget.model#/" />
-</Something2Else:SystemToRoot__Marker>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:Something2Else="platform:/resource/Something2Else/model/Something2Else.ecore" xmlns:model="http://vitruv.tools/methodologisttemplate/model" xmlns:model2="http://vitruv.tools/methodologisttemplate/model2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <Something2Else:SystemToRoot__Marker>
+    <CREATE__SRC__system xsi:type="model:System" href="target\vsumexample\example.model#/" />
+    <CREATE__TRG__root xsi:type="model2:Root" href="target\vsumexample\exampleTarget.model#/" />
+    <CREATE__CORR__stor href="platform:/resource/Something2Else/instances/corr.xmi#/0" />
+  </Something2Else:SystemToRoot__Marker>
+  <Something2Else:SystemRefdComponentToEntity__Marker>
+    <CREATE__TRG__entity xsi:type="model2:Entity" href="target\vsumexample\exampleTarget.model#//@entities.0" />
+    <CONTEXT__SRC__system xsi:type="model:System" href="target\vsumexample\example.model#/" />
+    <CREATE__CORR__ctoe href="platform:/resource/Something2Else/instances/corr.xmi#/1" />
+    <CONTEXT__TRG__root xsi:type="model2:Root" href="target\vsumexample\exampleTarget.model#/" />
+    <CONTEXT__CORR__stor href="platform:/resource/Something2Else/instances/corr.xmi#/0" />
+    <CREATE__SRC__comp xsi:type="model:Component" href="target\vsumexample\example.model#//@components.0" />
+  </Something2Else:SystemRefdComponentToEntity__Marker>
+  <Something2Else:ProtocolToEntity__Marker>
+    <CONTEXT__SRC__system xsi:type="model:System" href="target\vsumexample\example.model#/" />
+    <CREATE__SRC__protocol xsi:type="model:Protocol" href="target\vsumexample\example.model#//@protocols.0" />
+    <CONTEXT__TRG__root xsi:type="model2:Root" href="target\vsumexample\exampleTarget.model#/" />
+    <CONTEXT__CORR__stor href="platform:/resource/Something2Else/instances/corr.xmi#/0" />
+    <CREATE__TRG__entity xsi:type="model2:Entity" href="target\vsumexample\exampleTarget.model#//@entities.1" />
+    <CREATE__CORR__ptoe href="platform:/resource/Something2Else/instances/corr.xmi#/2" />
+  </Something2Else:ProtocolToEntity__Marker>
+</xmi:XMI>

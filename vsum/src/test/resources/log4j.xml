@@ -7,6 +7,33 @@
             <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
         </layout>
     </appender>
+    <!-- vitruv tgg emoflon integration. These we might want to debug!-->
+    <logger name="tools.vitruv.dsls.tgg.emoflonintegration.patternconversion.IbexPatternToChangeSequenceTemplateConverter" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+    <logger name="tools.vitruv.dsls.tgg.emoflonintegration.patternmatching" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+    <logger name="tools.vitruv.dsls.tgg.emoflonintegration.TGGChangePropagationSpecification" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+    <logger name="tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusBackwardConversionTGGEngine" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+    <logger name="tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGResourceHandler" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+
+    <!--vitruv change backend-->
+<!--    <logger name="tools.vitruv.change" additivity="false">-->
+<!--        <level value="INFO"/>-->
+<!--        <appender-ref ref="stdout"/>-->
+<!--    </logger>-->
 
     <root>
         <level value="DEBUG"/>

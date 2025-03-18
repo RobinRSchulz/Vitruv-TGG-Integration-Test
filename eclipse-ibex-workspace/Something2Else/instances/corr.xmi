@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Something2Else:SystemToRoot xmlns:Something2Else="platform:/resource/Something2Else/model/Something2Else.ecore" xmlns:model="http://vitruv.tools/methodologisttemplate/model" xmlns:model2="http://vitruv.tools/methodologisttemplate/model2" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
-  <source xsi:type="model:System" href="target\vsumexample\example.model#/" />
-  <target xsi:type="model2:Root" href="target\vsumexample\exampleTarget.model#/" />
-</Something2Else:SystemToRoot>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:Something2Else="platform:/resource/Something2Else/model/Something2Else.ecore" xmlns:model="http://vitruv.tools/methodologisttemplate/model" xmlns:model2="http://vitruv.tools/methodologisttemplate/model2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <Something2Else:SystemToRoot>
+    <source xsi:type="model:System" href="target\vsumexample\example.model#/" />
+    <target xsi:type="model2:Root" href="target\vsumexample\exampleTarget.model#/" />
+  </Something2Else:SystemToRoot>
+  <Something2Else:ComponentToEntity>
+    <target xsi:type="model2:Entity" href="target\vsumexample\exampleTarget.model#//@entities.0" />
+    <source xsi:type="model:Component" href="target\vsumexample\example.model#//@components.0" />
+  </Something2Else:ComponentToEntity>
+  <Something2Else:ProtocolToEntity>
+    <source xsi:type="model:Protocol" href="target\vsumexample\example.model#//@protocols.0" />
+    <target xsi:type="model2:Entity" href="target\vsumexample\exampleTarget.model#//@entities.1" />
+  </Something2Else:ProtocolToEntity>
+</xmi:XMI>

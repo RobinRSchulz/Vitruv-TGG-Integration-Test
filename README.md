@@ -14,6 +14,16 @@ Since this depends on eMoflon, we need at least a Java-21-SDK
     ```
     mvnw clean install
     ```
+* Debug with IntelliJ
+  1. Set a breakpoint
+  2. Make sure to debug the forked surefire process, not the maven process. 
+     This sets the standard debug jvm options (Port 5005)
+    ```
+    mvnw clean install -Dmaven.surefire.debug
+    ```
+  3. It will wait for the debugger. 
+  4. Optionally attatch a profiler now.
+  4. IntelliJ: CTRL+ALT+F5, choose not the maven wrapper process but the surefire one.
 
 Model
 -----

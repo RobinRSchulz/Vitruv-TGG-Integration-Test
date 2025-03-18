@@ -2,25 +2,21 @@ package tools.vitruv.methodologisttemplate.vsum;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
-import org.emoflon.ibex.tgg.operational.debug.LoggerConfig;
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.*;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
+import tools.vitruv.dsls.tgg.emoflonintegration.Util;
 import tools.vitruv.framework.vsum.VirtualModelBuilder;
-import tools.vitruv.methodologisttemplate.model.model.Link;
-import tools.vitruv.methodologisttemplate.model.model.ModelFactory;
+import tools.vitruv.methodologisttemplate.model.model.*;
 
-import java.io.File;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Iterator;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
 import mir.reactions.model2Model2.Model2Model2ChangePropagationSpecification;
 import tools.vitruv.change.testutils.TestUserInteraction;
@@ -29,20 +25,35 @@ import tools.vitruv.framework.views.View;
 import tools.vitruv.framework.views.ViewTypeFactory;
 import tools.vitruv.framework.vsum.VirtualModel;
 import tools.vitruv.methodologisttemplate.model.model.System;
-import tools.vitruv.methodologisttemplate.model.model2.Model2Factory;
 import tools.vitruv.methodologisttemplate.model.model2.Model2Package;
 
 /**
  * This class provides an example how to define and use a VSUM.
  */
 public class VSUMExampleTest {
+  public static final Path IBEX_PROJECT_ROOT = Path.of("C:\\Users\\XPS-15\\IdeaProjects\\Vitruv-TGG-Integration-Test\\eclipse-ibex-workspace\\Something2Else");
+  public static final Path CORR_RELATIVE_PATH =     Path.of("instances\\corr.xmi");
+  public static final Path PROTOCOL_RELATIVE_PATH = Path.of("instances\\protocol.xmi");
   static Logger logger = Logger.getLogger(VSUMExampleTest.class);
 
-  static final Path projectPath = Path.of("target/vsumexample");
+  static final Path VITRUVIUS_PROJECT_PATH = Path.of("target/vsumexample");
 
   @BeforeAll
   static void setup() {
     Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("model", new XMIResourceFactoryImpl());
+  }
+
+  @BeforeEach
+  void setupCorrAndProtocol() {
+    // wipe corr and protocol This is done before, not afterwards, to be able to debug.
+    logger.info("setupCorrAndProtocol: Wiping corr.xmi and protocol.xmi");
+    try {
+      Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(CORR_RELATIVE_PATH));
+      Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH));
+    } catch (IOException e) {
+      throw new RuntimeException("Could not wipe CORR or PROTOCOL:" + e.getMessage(), e);
+    }
+//    sleepKSeconds(30, "sleeping to check if corr and protocol have been deleted...");
   }
 
   @Disabled
@@ -53,18 +64,18 @@ public class VSUMExampleTest {
     modifyView(view, (CommittableView v) -> {
       v.registerRoot(
         ModelFactory.eINSTANCE.createSystem(),
-        URI.createURI(projectPath.resolve("example.model").toString()));
+        URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("example.model").toString()));
     });
     Assertions.assertFalse(getDefaultView(vsum).getRootObjects().isEmpty(),"Modification of view failed");
   }
 
   @Test
-  void testTGGChangePropagationSpecification() throws Exception {
+  void testCreateSaveAndDelete() throws Exception {
     VirtualModel vsum = createVirtualModel(new Model1Model2TGGChangePropagationSpecification(
-            new File("C:\\Users\\XPS-15\\IdeaProjects\\Vitruv-TGG-Integration-Test\\eclipse-ibex-workspace\\Something2Else"),
+            IBEX_PROJECT_ROOT.toFile(),
 //            new File("C:\\Users\\XPS-15\\eclipse-workspace\\Model2Model2"),
             Model2Package.eINSTANCE.getRoot(),
-            URI.createURI(projectPath.resolve("exampleTarget.model").toString())));
+            URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("exampleTarget.model").toString())));
     // since we can only access the models in the VSUM via views, we create a trivial view that represents the identity mapping.
     // This commitableView includes the strategy to generate the change sequence
     CommittableView view = getDefaultView(vsum).withChangeDerivingTrait();
@@ -73,49 +84,67 @@ public class VSUMExampleTest {
     logger.info("##################################### first change commit: Few changes!");
 
     modifyView(view, (CommittableView v) -> {
-      System system = ModelFactory.eINSTANCE.createSystem();
+      System root = ModelFactory.eINSTANCE.createSystem();
       v.registerRoot(
-              system,
-              URI.createURI(projectPath.resolve("example.model").toString()));
+              root,
+              URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("example.model").toString()));
 
+//      root.getProtocols().add(ModelFactory.eINSTANCE.createProtocol());   // ProtocolToEntity
+      root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
 
-      system.getProtocols().add(ModelFactory.eINSTANCE.createProtocol());
-      system.getComponents().add(ModelFactory.eINSTANCE.createComponent());
-      //TODO revert commenting-out these changes
-//      system.getComponents().add(ModelFactory.eINSTANCE.createComponent());
-//      Link link = ModelFactory.eINSTANCE.createLink();
-//      system.getLinks().add(link);
+      root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
     });
+    view.update();
+    view.close();
 
+//    sleepKSeconds(40, "after View update and close. Protocol should be there.");
+    // 4 created, 7 found, 4 applied
 
-
-    logger.info("##################################### second change commit: More changes!");
-    CommittableView view2 = getDefaultView(vsum).withChangeDerivingTrait();
+    logger.info("##################################### second change commit: Deleting changes!");
+    CommittableView view2 = getDefaultView(vsum).withChangeRecordingTrait();
     modifyView(view2, (CommittableView v) -> {
       System root = (System) v.getRootObjects().stream().findAny().orElseThrow();
 
-      // add protocol to a link and to root
-      Link link = root.getLinks().get(0);
-      link.setProtocol(ModelFactory.eINSTANCE.createProtocol());
-//      v.registerRoot(link,
-//              URI.createURI(projectPath.resolve("example.model").toString()));
-      // TODO warum muss man das machen, wenn protocol schon zu link zugeordnet ist?
-      //  (auch wenn man im Ecore die Kompositionsbeziehung entfernt...) -> liegt das an dem .genmodel file
-      root.getProtocols().add(link.getProtocol());
+      // Test if ProtocolToEntity is executed if we do it in this (new) instance!
+      root.getProtocols().add(ModelFactory.eINSTANCE.createProtocol());
+
+
+      // this should be covered by LinkToEntityEmbedded
+      Protocol protocolFromRoot = root.getProtocols().getFirst();
+      Link link = ModelFactory.eINSTANCE.createLink();
+      root.getLinks().add(link);
+      link.setProtocol(protocolFromRoot);
+      link.getComponents().add(root.getComponents().getFirst());
+//      root.getProtocols().add(link.getProtocol());
 
       // component stuff
-      root.getComponents().get(0).setName("näim");
-//      root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
-//      root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
+      root.getComponents().getFirst().setName("firscht");
+      root.getComponents().getLast().setName("lascht");
+
+      root.getComponents().remove(root.getComponents().getLast());
     });
-//    vsum.createSelector(ViewTypeFactory.createIdentityMappingViewType("default"));
+    view2.update();
+    view2.close();
+
+    //TODO add checking number of markers (as assertion!)
+    logger.info("##################################### third change commit: RemoveRootEChange!");
+    CommittableView view3 = getDefaultView(vsum).withChangeRecordingTrait();
+    modifyView(view3, (CommittableView v) -> {
+      System root = (System) v.getRootObjects().stream().findAny().orElseThrow();
+      //TODO delete newroot->component
+      // remove but not delete (since it is contained in root
+      Link link = root.getLinks().getFirst();
+      link.getComponents().removeFirst();
+
+    });
+
 
     Assertions.assertFalse(getDefaultView(vsum).getRootObjects().isEmpty(),"Modification of view failed");
   }
 
   private VirtualModel createVirtualModel(ChangePropagationSpecification cps) {
     return new VirtualModelBuilder()
-            .withStorageFolder(projectPath)
+            .withStorageFolder(VITRUVIUS_PROJECT_PATH)
             .withUserInteractorForResultProvider(new TestUserInteraction.ResultProvider(new TestUserInteraction()))
             .withChangePropagationSpecifications(cps)
             .buildAndInitialize();
@@ -138,5 +167,14 @@ public class VSUMExampleTest {
   private void modifyView(CommittableView view, Consumer<CommittableView> modificationFunction) {
     modificationFunction.accept(view);
     view.commitChanges();
+  }
+
+  private void sleepKSeconds(long seconds, String message) {
+    logger.info("Sleeping " + seconds + " seconds:" + message);
+      try {
+          Thread.sleep(seconds * 1000);
+      } catch (InterruptedException e) {
+          throw new RuntimeException(e);
+      }
   }
 }
