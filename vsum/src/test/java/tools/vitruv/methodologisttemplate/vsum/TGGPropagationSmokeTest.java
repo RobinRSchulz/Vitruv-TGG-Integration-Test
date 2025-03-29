@@ -157,6 +157,8 @@ public class TGGPropagationSmokeTest {
       root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
       root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
       root.getComponents().add(ModelFactory.eINSTANCE.createComponent());
+
+      root.getComponents().getFirst().setName("firscht");
     });
     view.update();
     view.close();
@@ -183,7 +185,6 @@ public class TGGPropagationSmokeTest {
 //      root.getProtocols().add(link.getProtocol());
 
       // component stuff
-      root.getComponents().getFirst().setName("firscht");
       root.getComponents().get(1).setName("sekend");
       root.getComponents().getLast().setName("lascht");
 
@@ -192,12 +193,12 @@ public class TGGPropagationSmokeTest {
     view2.update();
     view2.close();
     assertEquals(2, tggCps.getVitruviusTGGChangePropagationResults().size()); // one run has been made
-    assertEquals(2, tggCps.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size()); //two corrs have been created
-    assertEquals(1, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
-    assertEquals(1, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+    assertEquals(3, tggCps.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size()); //two corrs have been created + apparently a third because of the attribute change(?)
+    assertEquals(2, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size()); // 1 delete, 1 because of attr change
+    assertEquals(2, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size()); // the corr with the attribute change
     // this counts all deleted nodes that the RedInterpreter deletes.
     // That explicitly doesn't encompass nodes deleted directly by the source change
-    assertEquals(1, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedModelNodes().size());
+    assertEquals(2, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedModelNodes().size());
     //TODO assert deletion somehow! WE ALSO NEED THIS TO DELETE CORRESPONDENCES IN VITRUVIUS!
 
     //TODO add checking number of markers (as assertion!)
