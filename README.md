@@ -41,3 +41,26 @@ Vsum
 ----
 This folder contains the VSUM
 
+How to deal with IBeX-Projects and Eclipse
+------------------------------------------
+### Configuring Eclipse
+Just download the pre-built eclipse from [here](https://github.com/eMoflon/emoflon-ibex-eclipse-build/releases).
+Alternatively, you can install the ibex plugins or download an eclipse VM.
+
+### Creating a new IBeX project
+1. Ensure your metamodels are known to eclipse:
+   1. Create an Ecore modelling project for each metamodel
+   2. copy your models in it
+   3. (right-click on <modelname>.ecore -> EPackages registration -> Register EPackages into repository)
+   4. Don't know if that is necessary...
+5. Build metamodels' Java Code: Open the genmodel files, click right somewhere and "Generate model code"
+2. Create new eMoflon TGG Project (empty)
+   1. Copy the plugin.xml from a working project...
+   2. Add dependencies to the previously generated model code..
+   4. In the Schema.tgg, import models by workspace path, like this
+   ```
+    #import "platform:/resource/Families/model/families.ecore"
+    #import "platform:/resource/Insurance/model/insurance.ecore"
+    ```
+   5. Define Rules, in the org.emoflon.ibex.tgg.rules package, by clicking the right symbol in the editor.
+   6. 

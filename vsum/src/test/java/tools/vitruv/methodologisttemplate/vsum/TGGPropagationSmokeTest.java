@@ -30,6 +30,8 @@ import tools.vitruv.methodologisttemplate.model.model2.Model2Factory;
 import tools.vitruv.methodologisttemplate.model.model2.Model2Package;
 import tools.vitruv.methodologisttemplate.model.model2.Root;
 
+import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.Model1ToModel2TGGCPS;
+import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.Model2ToModel1TGGCPS;
 import tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,7 +47,7 @@ public class TGGPropagationSmokeTest {
   public static final Path PROTOCOL_RELATIVE_PATH = Path.of("instances\\protocol.xmi");
   static Logger logger = Logger.getLogger(TGGPropagationSmokeTest.class);
 
-  static final Path VITRUVIUS_PROJECT_PATH = Path.of("target/vsumexample");
+  final Path VITRUVIUS_PROJECT_PATH = Path.of("target/vsumexample/" + this.getClass().getSimpleName());
 
   @BeforeAll
   static void setup() {
@@ -64,7 +66,6 @@ public class TGGPropagationSmokeTest {
     } catch (IOException e) {
       throw new RuntimeException("Could not wipe the VSUM data, CORR or PROTOCOL file:" + e.getMessage(), e);
     }
-//    sleepKSeconds(30, "sleeping to check if corr and protocol have been deleted...");
   }
 
   @Test

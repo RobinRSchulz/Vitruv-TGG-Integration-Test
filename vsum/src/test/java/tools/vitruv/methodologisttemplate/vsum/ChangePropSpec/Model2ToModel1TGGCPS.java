@@ -1,4 +1,4 @@
-package tools.vitruv.methodologisttemplate.vsum;
+package tools.vitruv.methodologisttemplate.vsum.ChangePropSpec;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
@@ -9,7 +9,7 @@ import tools.vitruv.dsls.tgg.emoflonintegration.TGGChangePropagationSpecificatio
 import java.io.File;
 import java.util.Set;
 
-public class Model1ToModel2TGGCPS extends TGGChangePropagationSpecification {
+public class Model2ToModel1TGGCPS extends TGGChangePropagationSpecification {
 
     static Logger logger = Logger.getLogger(Model1ToModel2TGGCPS.class);
 
@@ -18,9 +18,8 @@ public class Model1ToModel2TGGCPS extends TGGChangePropagationSpecification {
     private static final MetamodelDescriptor TRGMetamodelDescriptor = MetamodelDescriptor.with(Set.of(
             "http://vitruv.tools/methodologisttemplate/model2"));
 
-    public Model1ToModel2TGGCPS(File ibexProjectPath, EClass target, URI targetRootURI) {
+    public Model2ToModel1TGGCPS(File ibexProjectPath, EClass target, URI targetRootURI) {
         this(
-                SRCMetamodelDescriptor, TRGMetamodelDescriptor, //we propagate from model1 to model2
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore",
                 "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore",
@@ -29,21 +28,15 @@ public class Model1ToModel2TGGCPS extends TGGChangePropagationSpecification {
                 targetRootURI);
     }
 
-    public Model1ToModel2TGGCPS(
-            MetamodelDescriptor sourceMetamodelDescriptor, MetamodelDescriptor targetMetamodelDescriptor,
+    public Model2ToModel1TGGCPS(
             MetamodelDescriptor SRCMetamodelDescriptor, MetamodelDescriptor TRGMetamodelDescriptor,
             String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri,
             File ibexProjectPath, EClass targetRootEclass, URI targetRootURI) {
-        super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
+        super(TRGMetamodelDescriptor, SRCMetamodelDescriptor,  //we propagate from model2 to model1!
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
-                sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
+                targetMetamodelPlatformUri, sourceMetamodelPlatformUri,
                 ibexProjectPath, targetRootEclass, targetRootURI);
-        logger.debug("In Constructor for Model1Model2TGGChangePropagationSpecification.");
-        logger.debug("Ensuring Metamodels being registered: \n  - src NS_URI: "
-                + tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI
-                + "\n  - trg NS_URI: "
-                + tools.vitruv.methodologisttemplate.model.model2.impl.Model2PackageImpl.eNS_URI
-        );
+
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI,
                 tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eINSTANCE
@@ -54,3 +47,4 @@ public class Model1ToModel2TGGCPS extends TGGChangePropagationSpecification {
         );
     }
 }
+
