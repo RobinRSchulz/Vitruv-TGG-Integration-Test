@@ -1,0 +1,102 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Classifier is abstract, so we need abstract rules 
+ * and multiple subclasses...
+ */
+#abstract #rule ClassifierToUmlClassifier #with Java2Uml
+	#source { 
+		javaPackage:java.containers.Package {
+			-compilationUnits->compilationUnit
+		}
+		compilationUnit:CompilationUnit {
+			// extended in sub-rules
+		}
+		//abstract classifier, extended in sub-rules
+		++classifier:java.classifiers.Classifier
+	}
+	#target {
+		umlPackage:uml.Package {
+			// extended in sub-rules
+		}
+		++ umlClassifier:uml.Classifier
+	}
+	#correspondence {
+		javaPackToUmlPack:JavaPackageToUmlPackage{
+			#src->javaPackage
+			#trg->umlPackage
+		}
+		++javaClassToUmlClass:JavaClassifierToUmlClassifier{
+			#src->classifier
+			#trg->umlClassifier
+		}
+	}
+	#attributeConditions {
+		eq_string(classifier.name, umlClassifier.name)
+		/** TODO check if that gets overridden because umlClassifier is overridden...
+		 * TODO
+		 * reaction JavaSuperClassChanged ?
+		 * implement -> implement (reaction JavaClassImplementAdded)
+		 */
+		 //That would break this match as soon as another modifier was added...
+//		expectPackage(umlClassifier.visibility)
+	}
+// bei umlPackage ggf
+//			++ -ownedMember->umlClassifier
+//			++ -ownedType->umlClassifier
+#rule ClassToUmlClass #extends ClassifierToUmlClassifier #with Java2Uml
+	#source {
+		++classifier:java.classifiers.Class
+		compilationUnit:CompilationUnit {
+			++-classifiers->classifier
+		}
+	}
+	#target {
+		umlPackage:uml.Package {
+			++ -packagedElement->umlClassifier
+		}
+		++ umlClassifier:uml.Class {
+		}
+	}
+
+#rule InterfaceToUmlInterface #extends ClassifierToUmlClassifier #with Java2Uml
+	#source {
+		++classifier:java.classifiers.Interface
+		compilationUnit:CompilationUnit {
+			++-classifiers->classifier
+		}
+	}
+	#target {
+		umlPackage:uml.Package {
+			++ -packagedElement->umlClassifier
+		}
+		++ umlClassifier:uml.Interface
+	}
+	#attributeConditions {
+		/** TODO
+		 * reaction JavaSuperInterfaceAdded 
+		 * implement -> implement (reaction JavaClassImplementAdded)
+		 * alle attribute mal so durchschaune
+		 */
+	}
+
+#rule EnumToUmlEnum #extends ClassifierToUmlClassifier #with Java2Uml
+	#source {
+		++classifier:java.classifiers.Enumeration
+		compilationUnit:CompilationUnit {
+			++-classifiers->classifier
+		}
+	}
+	#target {
+		umlPackage:uml.Package {
+			++ -packagedElement->umlClassifier
+		}
+		++ umlClassifier:uml.Enumeration
+	}
+	#attributeConditions {
+		/** TODO
+		 * in separater Regel: reaction JavaEnumConstantCreated
+		 */
+	}
+

@@ -1,0 +1,66 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Should apply when the first compilationUnit is created! This way, only one umlModel is created.
+ * Enforcing this with NACs would be better, though...
+ * TODO Use this to enable primitives...
+ */
+#rule JavaFirstCompilationUnitToUmlModel #with Java2Uml
+
+#source { 
+	javaPackage:java.containers.Package {
+		++ -compilationUnits->compilationUnit
+	}
+	++compilationUnit:java.containers.CompilationUnit
+}
+
+#target {
+//	umlPackage:uml.Package {
+//		++ -
+//	}
+	++umlModel:uml.Model {
+		++ -ownedType->booleanType
+		++ -ownedType->byteType
+		++ -ownedType->charType
+		++ -ownedType->floatType
+		++ -ownedType->doubleType
+		++ -ownedType->intType
+		++ -ownedType->longType
+		++ -ownedType->shortType
+		++ -ownedType->stringType
+		++ -ownedType->voidType
+	}
+//	++booleanLiteral:uml.LiteralBoolean
+	++booleanType:uml.PrimitiveType
+	++byteType:uml.PrimitiveType
+	++charType:uml.PrimitiveType
+	++floatType:uml.PrimitiveType
+	++doubleType:uml.PrimitiveType
+	++intType:uml.PrimitiveType
+	++longType:uml.PrimitiveType
+	++shortType:uml.PrimitiveType
+	++stringType:uml.PrimitiveType
+	++voidType:uml.PrimitiveType
+}
+
+#correspondence {
+	++javaCompUnitToUmlModel:JavaCompilationUnitToUmlModel {
+		#src->compilationUnit
+		#trg->umlModel
+	}
+}
+
+#attributeConditions {
+	eq_string("UML_MODEL", umlModel.name)
+	eq_string("boolean", booleanType.name)
+	eq_string("boolean", byteType.name)
+	eq_string("boolean", charType.name)
+	eq_string("boolean", floatType.name)
+	eq_string("boolean", doubleType.name)
+	eq_string("boolean", intType.name)
+	eq_string("boolean", longType.name)
+	eq_string("boolean", shortType.name)
+	eq_string("boolean", stringType.name)
+	eq_string("boolean", voidType.name)
+}

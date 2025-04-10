@@ -1,0 +1,100 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule MethodReturnTypeToReturnType #with Java2Uml
+	#source { 
+		javaMethod:java.members.ClassMethod {
+			++ -typeReference->typeReference
+		}
+		++typeReference:java.types.TypeReference
+	}
+	#target {
+		umlOperation:uml.Operation {
+			 ++ -ownedParameter->umlReturnParameter
+		}
+		++ umlReturnParameter:uml.Parameter
+	}
+	#correspondence {
+		javaMethodToOperation:JavaMethodToOperation{
+			#src->javaMethod
+			#trg->umlOperation
+		}
+	}
+	#attributeConditions {
+		eq_string("returnParameter", umlReturnParameter.name)
+		//See ParameterDirectionKind: RETURN_LITERAL(3, "return", "return");
+		eq_int(3, umlReturnParameter.direction)
+	}
+	
+#abstract #rule MethodClassifierReturnTypeToReturnType #extends MethodReturnTypeToReturnType #with Java2Uml
+	#source {
+		++typeReference:java.types.ClassifierReference {
+			++ -target->classifier
+		}
+		classifier:java.classifiers.Classifier
+	}
+	#target {
+		++ umlReturnParameter:uml.Parameter {
+			++ -type->umlClassifier
+		}
+		umlClassifier:uml.Classifier
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier{
+			#src->classifier
+			#trg->umlClassifier
+		}
+		++javaTypeReferenceToUmlReturnParameter:JavaTypeReferenceToUmlReturnParameter {
+			#src->typeReference
+			#trg->umlReturnParameter
+		}
+	}
+	#rule MethodClassReturnTypeToReturnType #extends MethodClassifierReturnTypeToReturnType #with Java2Uml
+		#source { classifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule MethodInterfaceReturnTypeToReturnType #extends MethodClassifierReturnTypeToReturnType #with Java2Uml
+		#source { classifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }
+	#rule MethodEnumReturnTypeToReturnType #extends MethodClassifierReturnTypeToReturnType #with Java2Uml
+		#source { classifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+
+
+// "Void" is represented by null, thus skipped.
+/*
+ * -----------------------------------------------
+ *             uml.PrimitiveType subclasses
+ * -----------------------------------------------
+ */
+/*TODO primitives cannot be represented!
+ * We would need to correspond "Boolean" (meta-object) with a singleton booleanType
+ * (object), which reactions can but TGGs cannot.
+ * The following would be possible but a wrong representation:
+ * 
+ */
+//#rule MethodBooleanReturnTypeToReturnType #extends MethodReturnTypeToReturnType #with Java2Uml
+//	#source {
+//		++typeReference:java.types.Boolean
+//	}
+//	#target {
+//		++ umlReturnParameter:uml.Parameter {
+//			++ -type->booleanType
+//		}
+//		++booleanType:uml.PrimitiveType {
+//		}
+//	}
+//	#attributeConditions {
+//		eq_string("boolean", booleanType.name)
+//	}
+//	#correspondence {
+//		++javaTypeReferenceToUmlReturnParameter:JavaTypeReferenceToUmlReturnParameter {
+//			#src->typeReference
+//			#trg->umlReturnParameter
+//		}
+//	}
+ 
+	
+	
+	
+	
+	

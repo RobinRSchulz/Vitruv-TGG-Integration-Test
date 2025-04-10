@@ -1,0 +1,27 @@
+#using Families2Insurance.*
+#using AttrCondDefLibrary.*
+
+#rule FamilyRegisterToInsuranceDatabase #with Families2Insurance
+
+#source { 
+	++familyRegister:FamilyRegister {
+		
+	}
+}
+
+#target {
+	++insuranceDb:InsuranceDatabase {
+		
+	}
+}
+
+#correspondence {
+	++famRegToInsDb:FamilyRegisterToInsuranceDatabase {
+		#src->familyRegister
+		#trg->insuranceDb
+	}
+}
+
+#attributeConditions {
+	
+}

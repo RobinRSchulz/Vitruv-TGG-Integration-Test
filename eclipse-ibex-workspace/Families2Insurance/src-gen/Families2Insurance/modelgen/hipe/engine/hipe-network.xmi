@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hipe.network:HiPENetwork xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:hipe.network="platform:/resource/hipe.network/model/hiPENetwork" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage platform:/resource/hipe.network/model/hiPENetwork java://hipe.network.NetworkPackage">
+  <networknode xmi:type="hipe.network:DispatchNode" name="DispatchNode" objectNodes="//@networknode.2 //@networknode.15 //@networknode.16 //@networknode.17 //@networknode.18 //@networknode.19 //@networknode.20" notificationNode="//@networknode.1">
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#/"/>
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/Families/model/families.ecore#/"/>
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/Insurance/model/insurance.ecore#/"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NotificationNode" name="NotificationNode" dispatchNode="//@networknode.0"/>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Family_object" patternName="DaughterToInsuranceClient__GEN_2" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.3" patternName="DaughterToInsuranceClient__GEN_2" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.7" patternName="DaughterToInsuranceClient__GEN_2" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.11" patternName="DaughterToInsuranceClient__GEN_2" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.13" patternName="DaughterToInsuranceClient__GEN_2" matchingNode="//@networknode.2"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Families/model/families.ecore#//Family"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="DaughterToInsuranceClient__GEN_1_localSearch" inputPort="//@networknode.2/@ports/@port.0 //@networknode.15/@ports/@port.0 //@networknode.17/@ports/@port.0 //@networknode.19/@ports/@port.0" patternName="DaughterToInsuranceClient__GEN_1">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.4" patternName="DaughterToInsuranceClient__GEN_1" matchingNode="//@networknode.3"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@patterns.6"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.0 //@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.1" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.2"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.0 //@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.1" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.1"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.0 //@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.1" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.0"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.1 //@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.1"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.1 //@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.2"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.1 //@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.0" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.3"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.3/@orchestrationComponents.2 //@networknode.3/@orchestrationComponents.1 //@networknode.3/@orchestrationComponents.0" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.0"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.2"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>2</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.1"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.0"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DaughterToInsuranceClient__GEN_production" inputPort="//@networknode.3/@ports/@port.0" patternName="DaughterToInsuranceClient__GEN">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="family" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegister" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegisterToInsuranceDB" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="insuranceDB" value="3"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch" inputPort="//@networknode.16/@ports/@port.0 //@networknode.18/@ports/@port.0 //@networknode.20/@ports/@port.0" patternName="FatherNewFamilyToNewInsuranceClient__GEN_6">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.6" patternName="FatherNewFamilyToNewInsuranceClient__GEN_6" matchingNode="//@networknode.5"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@patterns.11"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.5/@orchestrationComponents.0 //@networknode.5/@orchestrationComponents.1" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.3"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.5/@orchestrationComponents.0 //@networknode.5/@orchestrationComponents.1" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.5"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.5/@orchestrationComponents.0 //@networknode.5/@orchestrationComponents.1" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.4"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.5/@orchestrationComponents.1 //@networknode.5/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.4"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.5/@orchestrationComponents.1 //@networknode.5/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.6"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.3"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>1</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.4"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="FatherNewFamilyToNewInsuranceClient__GEN_production" inputPort="//@networknode.5/@ports/@port.0" patternName="FatherNewFamilyToNewInsuranceClient__GEN">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegister" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegisterToInsuranceDB" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="insuranceDB" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="FatherToInsuranceClient__GEN_10_localSearch" inputPort="//@networknode.2/@ports/@port.1 //@networknode.15/@ports/@port.1 //@networknode.17/@ports/@port.1 //@networknode.19/@ports/@port.1" patternName="FatherToInsuranceClient__GEN_10">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.8" patternName="FatherToInsuranceClient__GEN_10" matchingNode="//@networknode.7"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@patterns.15"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.1 //@networknode.7/@orchestrationComponents.2" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.5"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.1 //@networknode.7/@orchestrationComponents.2" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.9"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.1 //@networknode.7/@orchestrationComponents.2" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.8"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.1 //@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.2" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.7"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.1 //@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.2" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.7"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.2 //@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.1" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.6"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.7/@orchestrationComponents.2 //@networknode.7/@orchestrationComponents.0 //@networknode.7/@orchestrationComponents.1" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.10"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.5"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.7"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>2</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.6"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="FatherToInsuranceClient__GEN_production" inputPort="//@networknode.7/@ports/@port.0" patternName="FatherToInsuranceClient__GEN">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="family" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegister" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegisterToInsuranceDB" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="insuranceDB" value="3"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch" inputPort="//@networknode.16/@ports/@port.1 //@networknode.18/@ports/@port.1 //@networknode.20/@ports/@port.1" patternName="MotherNewFamilyToNewInsuranceClient__GEN_15">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.10" patternName="MotherNewFamilyToNewInsuranceClient__GEN_15" matchingNode="//@networknode.9"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@patterns.20"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.0 //@networknode.9/@orchestrationComponents.1" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.9"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.0 //@networknode.9/@orchestrationComponents.1" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.12"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.0 //@networknode.9/@orchestrationComponents.1" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.13"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.8"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.11"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>1</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.9"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.8"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="MotherNewFamilyToNewInsuranceClient__GEN_production" inputPort="//@networknode.9/@ports/@port.0" patternName="MotherNewFamilyToNewInsuranceClient__GEN">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegister" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegisterToInsuranceDB" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="insuranceDB" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="MotherToInsuranceClient__GEN_19_localSearch" inputPort="//@networknode.2/@ports/@port.2 //@networknode.15/@ports/@port.2 //@networknode.17/@ports/@port.2 //@networknode.19/@ports/@port.2" patternName="MotherToInsuranceClient__GEN_19">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.12" patternName="MotherToInsuranceClient__GEN_19" matchingNode="//@networknode.11"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@patterns.24"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.2 //@networknode.11/@orchestrationComponents.1" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.10"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.2 //@networknode.11/@orchestrationComponents.1" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.16"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.2 //@networknode.11/@orchestrationComponents.1" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.15"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.1 //@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.2" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.11"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.1 //@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.2" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.17"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.2 //@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.1" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.12"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.11/@orchestrationComponents.2 //@networknode.11/@orchestrationComponents.0 //@networknode.11/@orchestrationComponents.1" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.14"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.10"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>2</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.11"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.12"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="MotherToInsuranceClient__GEN_production" inputPort="//@networknode.11/@ports/@port.0" patternName="MotherToInsuranceClient__GEN">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="family" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegister" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegisterToInsuranceDB" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="insuranceDB" value="3"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="SonToInsuranceClient__GEN_24_localSearch" inputPort="//@networknode.2/@ports/@port.3 //@networknode.16/@ports/@port.2 //@networknode.18/@ports/@port.2 //@networknode.20/@ports/@port.2" patternName="SonToInsuranceClient__GEN_24">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.14" patternName="SonToInsuranceClient__GEN_24" matchingNode="//@networknode.13"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@patterns.29"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.0 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.2" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.14"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.0 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.2" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.20"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.0 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.2" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.21"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.0 //@networknode.13/@orchestrationComponents.2" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.13"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.0 //@networknode.13/@orchestrationComponents.2" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.19"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.15"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@nodes.18"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>2</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.14"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.13"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Families2Insurance/src-gen/Families2Insurance/modelgen/hipe/engine//hipe-patterns.xmi#//@edges.15"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="SonToInsuranceClient__GEN_production" inputPort="//@networknode.13/@ports/@port.0" patternName="SonToInsuranceClient__GEN">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="family" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegister" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="familyRegisterToInsuranceDB" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="insuranceDB" value="3"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="FamilyRegister_object_SP0" patternName="DaughterToInsuranceClient__GEN_3" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.3" patternName="DaughterToInsuranceClient__GEN_3" matchingNode="//@networknode.15"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.7" patternName="DaughterToInsuranceClient__GEN_3" matchingNode="//@networknode.15"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.11" patternName="DaughterToInsuranceClient__GEN_3" matchingNode="//@networknode.15"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="FamilyRegister_object_SP1" patternName="DaughterToInsuranceClient__GEN_3" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.5" patternName="DaughterToInsuranceClient__GEN_3" matchingNode="//@networknode.16"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.9" patternName="DaughterToInsuranceClient__GEN_3" matchingNode="//@networknode.16"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.13" patternName="DaughterToInsuranceClient__GEN_3" matchingNode="//@networknode.16"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="FamilyRegisterToInsuranceDatabase_object_SP0" patternName="DaughterToInsuranceClient__GEN_4" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.3" patternName="DaughterToInsuranceClient__GEN_4" matchingNode="//@networknode.17"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.7" patternName="DaughterToInsuranceClient__GEN_4" matchingNode="//@networknode.17"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.11" patternName="DaughterToInsuranceClient__GEN_4" matchingNode="//@networknode.17"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="FamilyRegisterToInsuranceDatabase_object_SP1" patternName="DaughterToInsuranceClient__GEN_4" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.5" patternName="DaughterToInsuranceClient__GEN_4" matchingNode="//@networknode.18"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.9" patternName="DaughterToInsuranceClient__GEN_4" matchingNode="//@networknode.18"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.13" patternName="DaughterToInsuranceClient__GEN_4" matchingNode="//@networknode.18"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="InsuranceDatabase_object_SP0" patternName="DaughterToInsuranceClient__GEN_5" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.3" patternName="DaughterToInsuranceClient__GEN_5" matchingNode="//@networknode.19"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.7" patternName="DaughterToInsuranceClient__GEN_5" matchingNode="//@networknode.19"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.11" patternName="DaughterToInsuranceClient__GEN_5" matchingNode="//@networknode.19"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="InsuranceDatabase_object_SP1" patternName="DaughterToInsuranceClient__GEN_5" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.5" patternName="DaughterToInsuranceClient__GEN_5" matchingNode="//@networknode.20"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.9" patternName="DaughterToInsuranceClient__GEN_5" matchingNode="//@networknode.20"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.13" patternName="DaughterToInsuranceClient__GEN_5" matchingNode="//@networknode.20"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+  </networknode>
+</hipe.network:HiPENetwork>

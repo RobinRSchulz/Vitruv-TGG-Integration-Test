@@ -1,0 +1,42 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Should apply when the first compilationUnit is created! This way, only one umlModel is created.
+ * Enforcing this with NACs would be better, though...
+ */
+#rule JavaCompilationUnitToExistingUmlModel #with Java2Uml
+	#source { 
+		javaPackage:java.containers.Package {
+			-compilationUnits->compilationUnit
+			++ -compilationUnits->newCompilationUnit
+		}
+		compilationUnit:java.containers.CompilationUnit
+		++ newCompilationUnit:java.containers.CompilationUnit
+	}
+	
+	#target {
+	//	umlPackage:uml.Package {
+	//		++ -
+	//	}
+		umlModel:uml.Model {
+			
+		}
+	}
+	
+	#correspondence {
+		javaCompUnitToUmlModel:JavaCompilationUnitToUmlModel {
+			#src->compilationUnit
+			#trg->umlModel
+		}
+		++newJavaCompUnitToUmlModel:JavaCompilationUnitToUmlModel {
+			#src->newCompilationUnit
+			#trg->umlModel
+		}
+	}
+	
+	#attributeConditions {
+		eq_string("UML_MODEL", umlModel.name)
+	}
+	
+// TODO try to also model subpackages retrieving the umlModel correspondence...

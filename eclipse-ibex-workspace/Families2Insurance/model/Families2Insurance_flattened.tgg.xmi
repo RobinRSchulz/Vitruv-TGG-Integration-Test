@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Families2Insurance">
+  <src href="platform:/resource/Families/model/families.ecore#/"/>
+  <trg href="platform:/resource/Insurance/model/insurance.ecore#/"/>
+  <corr href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#/"/>
+  <rules name="DaughterToInsuranceClient">
+    <nodes name="daughter" bindingType="CREATE" incomingEdges="//@rules.0/@edges.4 //@rules.0/@edges.7" outgoingEdges="//@rules.0/@edges.6" incomingCorrsSource="//@rules.0/@nodes.7">
+      <type href="platform:/resource/Families/model/families.ecore#//Member"/>
+    </nodes>
+    <nodes name="family" incomingEdges="//@rules.0/@edges.2 //@rules.0/@edges.6 //@rules.0/@edges.8" outgoingEdges="//@rules.0/@edges.7" incomingCorrsSource="//@rules.0/@nodes.6">
+      <type href="platform:/resource/Families/model/families.ecore#//Family"/>
+    </nodes>
+    <nodes name="familyRegister" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.8" incomingCorrsSource="//@rules.0/@nodes.5">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="insuranceClient" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.3 //@rules.0/@edges.5 //@rules.0/@edges.9" incomingCorrsTarget="//@rules.0/@nodes.6 //@rules.0/@nodes.7">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    </nodes>
+    <nodes name="insuranceDB" domainType="TRG" incomingEdges="//@rules.0/@edges.1" outgoingEdges="//@rules.0/@edges.9" incomingCorrsTarget="//@rules.0/@nodes.5">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyRegisterToInsuranceDB" domainType="CORR" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.2" target="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.2 //@rules.0/@edges.3" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="memberToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.4 //@rules.0/@edges.5" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+    </nodes>
+    <edges name="familyRegisterToInsuranceDB__source__familyRegister_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="familyRegisterToInsuranceDB__target__insuranceDB_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <edges name="familyToInsuranceClient__source__family_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.6" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/source"/>
+    </edges>
+    <edges name="familyToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.6" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/target"/>
+    </edges>
+    <edges name="memberToInsuranceClient__source__daughter_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/source"/>
+    </edges>
+    <edges name="memberToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/target"/>
+    </edges>
+    <edges name="daughter__familyDaughter__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/Families/model/families.ecore#//Member/familyDaughter"/>
+    </edges>
+    <edges name="family__daughters__daughter_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.1" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//Family/daughters"/>
+    </edges>
+    <edges name="familyRegister__families__family_eMoflonEdge" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+    </edges>
+    <edges name="insuranceDB__insuranceclient__insuranceClient_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase/insuranceclient"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0 //@rules.0/@attributeConditionLibrary/@parameterValues.1 //@rules.0/@attributeConditionLibrary/@parameterValues.2 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.4"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.0">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Member/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.2" objectVar="//@rules.0/@nodes.1">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Family/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.3" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/gender"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="FamilyRegisterToInsuranceDatabase">
+    <nodes name="familyRegister" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0" incomingCorrsSource="//@rules.1/@nodes.2">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="insuranceDb" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1" incomingCorrsTarget="//@rules.1/@nodes.2">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="famRegToInsDb" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0 //@rules.1/@edges.1" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <edges name="famRegToInsDb__source__familyRegister_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="famRegToInsDb__target__insuranceDb_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="FatherNewFamilyToNewInsuranceClient">
+    <nodes name="family" bindingType="CREATE" incomingEdges="//@rules.2/@edges.2 //@rules.2/@edges.7 //@rules.2/@edges.8" outgoingEdges="//@rules.2/@edges.6" incomingCorrsSource="//@rules.2/@nodes.6">
+      <type href="platform:/resource/Families/model/families.ecore#//Family"/>
+    </nodes>
+    <nodes name="familyRegister" incomingEdges="//@rules.2/@edges.0" outgoingEdges="//@rules.2/@edges.7" incomingCorrsSource="//@rules.2/@nodes.5">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="father" bindingType="CREATE" incomingEdges="//@rules.2/@edges.4 //@rules.2/@edges.6" outgoingEdges="//@rules.2/@edges.8" incomingCorrsSource="//@rules.2/@nodes.7">
+      <type href="platform:/resource/Families/model/families.ecore#//Member"/>
+    </nodes>
+    <nodes name="insuranceClient" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.3 //@rules.2/@edges.5 //@rules.2/@edges.9" incomingCorrsTarget="//@rules.2/@nodes.6 //@rules.2/@nodes.7">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    </nodes>
+    <nodes name="insuranceDB" domainType="TRG" incomingEdges="//@rules.2/@edges.1" outgoingEdges="//@rules.2/@edges.9" incomingCorrsTarget="//@rules.2/@nodes.5">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyRegisterToInsuranceDB" domainType="CORR" outgoingEdges="//@rules.2/@edges.0 //@rules.2/@edges.1" source="//@rules.2/@nodes.1" target="//@rules.2/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.2/@edges.2 //@rules.2/@edges.3" source="//@rules.2/@nodes.0" target="//@rules.2/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="memberToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.2/@edges.4 //@rules.2/@edges.5" source="//@rules.2/@nodes.2" target="//@rules.2/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+    </nodes>
+    <edges name="familyRegisterToInsuranceDB__source__familyRegister_eMoflonEdge" domainType="CORR" srcNode="//@rules.2/@nodes.5" trgNode="//@rules.2/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="familyRegisterToInsuranceDB__target__insuranceDB_eMoflonEdge" domainType="CORR" srcNode="//@rules.2/@nodes.5" trgNode="//@rules.2/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <edges name="familyToInsuranceClient__source__family_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.6" trgNode="//@rules.2/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/source"/>
+    </edges>
+    <edges name="familyToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.6" trgNode="//@rules.2/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/target"/>
+    </edges>
+    <edges name="memberToInsuranceClient__source__father_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.7" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/source"/>
+    </edges>
+    <edges name="memberToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.7" trgNode="//@rules.2/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/target"/>
+    </edges>
+    <edges name="family__father__father_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.2/@nodes.0" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/resource/Families/model/families.ecore#//Family/father"/>
+    </edges>
+    <edges name="familyRegister__families__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.2/@nodes.1" trgNode="//@rules.2/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+    </edges>
+    <edges name="father__familyFather__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//Member/familyFather"/>
+    </edges>
+    <edges name="insuranceDB__insuranceclient__insuranceClient_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.4" trgNode="//@rules.2/@nodes.3">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase/insuranceclient"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11" parameters="//@rules.2/@attributeConditionLibrary/@parameterValues.0 //@rules.2/@attributeConditionLibrary/@parameterValues.1 //@rules.2/@attributeConditionLibrary/@parameterValues.2 //@rules.2/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.2/@attributeConditionLibrary/@parameterValues.4"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.1" objectVar="//@rules.2/@nodes.2">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Member/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.2" objectVar="//@rules.2/@nodes.0">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Family/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.3" objectVar="//@rules.2/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.2/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/gender"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="FatherToInsuranceClient">
+    <nodes name="family" incomingEdges="//@rules.3/@edges.2 //@rules.3/@edges.7 //@rules.3/@edges.8" outgoingEdges="//@rules.3/@edges.6" incomingCorrsSource="//@rules.3/@nodes.6">
+      <type href="platform:/resource/Families/model/families.ecore#//Family"/>
+    </nodes>
+    <nodes name="familyRegister" incomingEdges="//@rules.3/@edges.0" outgoingEdges="//@rules.3/@edges.7" incomingCorrsSource="//@rules.3/@nodes.5">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="father" bindingType="CREATE" incomingEdges="//@rules.3/@edges.4 //@rules.3/@edges.6" outgoingEdges="//@rules.3/@edges.8" incomingCorrsSource="//@rules.3/@nodes.7">
+      <type href="platform:/resource/Families/model/families.ecore#//Member"/>
+    </nodes>
+    <nodes name="insuranceClient" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.3 //@rules.3/@edges.5 //@rules.3/@edges.9" incomingCorrsTarget="//@rules.3/@nodes.6 //@rules.3/@nodes.7">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    </nodes>
+    <nodes name="insuranceDB" domainType="TRG" incomingEdges="//@rules.3/@edges.1" outgoingEdges="//@rules.3/@edges.9" incomingCorrsTarget="//@rules.3/@nodes.5">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyRegisterToInsuranceDB" domainType="CORR" outgoingEdges="//@rules.3/@edges.0 //@rules.3/@edges.1" source="//@rules.3/@nodes.1" target="//@rules.3/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.3/@edges.2 //@rules.3/@edges.3" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="memberToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.3/@edges.4 //@rules.3/@edges.5" source="//@rules.3/@nodes.2" target="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+    </nodes>
+    <edges name="familyRegisterToInsuranceDB__source__familyRegister_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.5" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="familyRegisterToInsuranceDB__target__insuranceDB_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.5" trgNode="//@rules.3/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <edges name="familyToInsuranceClient__source__family_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.6" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/source"/>
+    </edges>
+    <edges name="familyToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.6" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/target"/>
+    </edges>
+    <edges name="memberToInsuranceClient__source__father_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.7" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/source"/>
+    </edges>
+    <edges name="memberToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.7" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/target"/>
+    </edges>
+    <edges name="family__father__father_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.3/@nodes.0" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/Families/model/families.ecore#//Family/father"/>
+    </edges>
+    <edges name="familyRegister__families__family_eMoflonEdge" srcNode="//@rules.3/@nodes.1" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+    </edges>
+    <edges name="father__familyFather__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.3/@nodes.2" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//Member/familyFather"/>
+    </edges>
+    <edges name="insuranceDB__insuranceclient__insuranceClient_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.4" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase/insuranceclient"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.0 //@rules.3/@attributeConditionLibrary/@parameterValues.1 //@rules.3/@attributeConditionLibrary/@parameterValues.2 //@rules.3/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.4"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.1" objectVar="//@rules.3/@nodes.2">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Member/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.2" objectVar="//@rules.3/@nodes.0">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Family/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.3" objectVar="//@rules.3/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/gender"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MotherNewFamilyToNewInsuranceClient">
+    <nodes name="family" bindingType="CREATE" incomingEdges="//@rules.4/@edges.2 //@rules.4/@edges.7 //@rules.4/@edges.8" outgoingEdges="//@rules.4/@edges.6" incomingCorrsSource="//@rules.4/@nodes.6">
+      <type href="platform:/resource/Families/model/families.ecore#//Family"/>
+    </nodes>
+    <nodes name="familyRegister" incomingEdges="//@rules.4/@edges.0" outgoingEdges="//@rules.4/@edges.7" incomingCorrsSource="//@rules.4/@nodes.5">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="mother" bindingType="CREATE" incomingEdges="//@rules.4/@edges.4 //@rules.4/@edges.6" outgoingEdges="//@rules.4/@edges.8" incomingCorrsSource="//@rules.4/@nodes.7">
+      <type href="platform:/resource/Families/model/families.ecore#//Member"/>
+    </nodes>
+    <nodes name="insuranceClient" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.3 //@rules.4/@edges.5 //@rules.4/@edges.9" incomingCorrsTarget="//@rules.4/@nodes.6 //@rules.4/@nodes.7">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    </nodes>
+    <nodes name="insuranceDB" domainType="TRG" incomingEdges="//@rules.4/@edges.1" outgoingEdges="//@rules.4/@edges.9" incomingCorrsTarget="//@rules.4/@nodes.5">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyRegisterToInsuranceDB" domainType="CORR" outgoingEdges="//@rules.4/@edges.0 //@rules.4/@edges.1" source="//@rules.4/@nodes.1" target="//@rules.4/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.4/@edges.2 //@rules.4/@edges.3" source="//@rules.4/@nodes.0" target="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="memberToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.4/@edges.4 //@rules.4/@edges.5" source="//@rules.4/@nodes.2" target="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+    </nodes>
+    <edges name="familyRegisterToInsuranceDB__source__familyRegister_eMoflonEdge" domainType="CORR" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="familyRegisterToInsuranceDB__target__insuranceDB_eMoflonEdge" domainType="CORR" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <edges name="familyToInsuranceClient__source__family_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.6" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/source"/>
+    </edges>
+    <edges name="familyToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.6" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/target"/>
+    </edges>
+    <edges name="memberToInsuranceClient__source__mother_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.7" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/source"/>
+    </edges>
+    <edges name="memberToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.7" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/target"/>
+    </edges>
+    <edges name="family__mother__mother_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.4/@nodes.0" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/Families/model/families.ecore#//Family/mother"/>
+    </edges>
+    <edges name="familyRegister__families__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.4/@nodes.1" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+    </edges>
+    <edges name="mother__familyMother__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.4/@nodes.2" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//Member/familyMother"/>
+    </edges>
+    <edges name="insuranceDB__insuranceclient__insuranceClient_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.4" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase/insuranceclient"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.0 //@rules.4/@attributeConditionLibrary/@parameterValues.1 //@rules.4/@attributeConditionLibrary/@parameterValues.2 //@rules.4/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.4"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.1" objectVar="//@rules.4/@nodes.2">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Member/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.2" objectVar="//@rules.4/@nodes.0">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Family/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.3" objectVar="//@rules.4/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.4/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/gender"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MotherToInsuranceClient">
+    <nodes name="family" incomingEdges="//@rules.5/@edges.2 //@rules.5/@edges.7 //@rules.5/@edges.8" outgoingEdges="//@rules.5/@edges.6" incomingCorrsSource="//@rules.5/@nodes.6">
+      <type href="platform:/resource/Families/model/families.ecore#//Family"/>
+    </nodes>
+    <nodes name="familyRegister" incomingEdges="//@rules.5/@edges.0" outgoingEdges="//@rules.5/@edges.7" incomingCorrsSource="//@rules.5/@nodes.5">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="mother" bindingType="CREATE" incomingEdges="//@rules.5/@edges.4 //@rules.5/@edges.6" outgoingEdges="//@rules.5/@edges.8" incomingCorrsSource="//@rules.5/@nodes.7">
+      <type href="platform:/resource/Families/model/families.ecore#//Member"/>
+    </nodes>
+    <nodes name="insuranceClient" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.3 //@rules.5/@edges.5 //@rules.5/@edges.9" incomingCorrsTarget="//@rules.5/@nodes.6 //@rules.5/@nodes.7">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    </nodes>
+    <nodes name="insuranceDB" domainType="TRG" incomingEdges="//@rules.5/@edges.1" outgoingEdges="//@rules.5/@edges.9" incomingCorrsTarget="//@rules.5/@nodes.5">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyRegisterToInsuranceDB" domainType="CORR" outgoingEdges="//@rules.5/@edges.0 //@rules.5/@edges.1" source="//@rules.5/@nodes.1" target="//@rules.5/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.5/@edges.2 //@rules.5/@edges.3" source="//@rules.5/@nodes.0" target="//@rules.5/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="memberToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.5/@edges.4 //@rules.5/@edges.5" source="//@rules.5/@nodes.2" target="//@rules.5/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+    </nodes>
+    <edges name="familyRegisterToInsuranceDB__source__familyRegister_eMoflonEdge" domainType="CORR" srcNode="//@rules.5/@nodes.5" trgNode="//@rules.5/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="familyRegisterToInsuranceDB__target__insuranceDB_eMoflonEdge" domainType="CORR" srcNode="//@rules.5/@nodes.5" trgNode="//@rules.5/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <edges name="familyToInsuranceClient__source__family_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.6" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/source"/>
+    </edges>
+    <edges name="familyToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.6" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/target"/>
+    </edges>
+    <edges name="memberToInsuranceClient__source__mother_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.7" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/source"/>
+    </edges>
+    <edges name="memberToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.7" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/target"/>
+    </edges>
+    <edges name="family__mother__mother_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.5/@nodes.0" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/Families/model/families.ecore#//Family/mother"/>
+    </edges>
+    <edges name="familyRegister__families__family_eMoflonEdge" srcNode="//@rules.5/@nodes.1" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+    </edges>
+    <edges name="mother__familyMother__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.5/@nodes.2" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//Member/familyMother"/>
+    </edges>
+    <edges name="insuranceDB__insuranceclient__insuranceClient_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.4" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase/insuranceclient"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11" parameters="//@rules.5/@attributeConditionLibrary/@parameterValues.0 //@rules.5/@attributeConditionLibrary/@parameterValues.1 //@rules.5/@attributeConditionLibrary/@parameterValues.2 //@rules.5/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.5/@attributeConditionLibrary/@parameterValues.4"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.1" objectVar="//@rules.5/@nodes.2">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Member/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.2" objectVar="//@rules.5/@nodes.0">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Family/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.3" objectVar="//@rules.5/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.5/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/gender"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="SonToInsuranceClient">
+    <nodes name="family" incomingEdges="//@rules.6/@edges.2 //@rules.6/@edges.7 //@rules.6/@edges.8" outgoingEdges="//@rules.6/@edges.6" incomingCorrsSource="//@rules.6/@nodes.6">
+      <type href="platform:/resource/Families/model/families.ecore#//Family"/>
+    </nodes>
+    <nodes name="familyRegister" incomingEdges="//@rules.6/@edges.0" outgoingEdges="//@rules.6/@edges.7" incomingCorrsSource="//@rules.6/@nodes.5">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    </nodes>
+    <nodes name="son" bindingType="CREATE" incomingEdges="//@rules.6/@edges.4 //@rules.6/@edges.6" outgoingEdges="//@rules.6/@edges.8" incomingCorrsSource="//@rules.6/@nodes.7">
+      <type href="platform:/resource/Families/model/families.ecore#//Member"/>
+    </nodes>
+    <nodes name="insuranceClient" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.3 //@rules.6/@edges.5 //@rules.6/@edges.9" incomingCorrsTarget="//@rules.6/@nodes.6 //@rules.6/@nodes.7">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    </nodes>
+    <nodes name="insuranceDB" domainType="TRG" incomingEdges="//@rules.6/@edges.1" outgoingEdges="//@rules.6/@edges.9" incomingCorrsTarget="//@rules.6/@nodes.5">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyRegisterToInsuranceDB" domainType="CORR" outgoingEdges="//@rules.6/@edges.0 //@rules.6/@edges.1" source="//@rules.6/@nodes.1" target="//@rules.6/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="familyToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.6/@edges.2 //@rules.6/@edges.3" source="//@rules.6/@nodes.0" target="//@rules.6/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="memberToInsuranceClient" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.6/@edges.4 //@rules.6/@edges.5" source="//@rules.6/@nodes.2" target="//@rules.6/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+    </nodes>
+    <edges name="familyRegisterToInsuranceDB__source__familyRegister_eMoflonEdge" domainType="CORR" srcNode="//@rules.6/@nodes.5" trgNode="//@rules.6/@nodes.1">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/source"/>
+    </edges>
+    <edges name="familyRegisterToInsuranceDB__target__insuranceDB_eMoflonEdge" domainType="CORR" srcNode="//@rules.6/@nodes.5" trgNode="//@rules.6/@nodes.4">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase/target"/>
+    </edges>
+    <edges name="familyToInsuranceClient__source__family_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.6/@nodes.6" trgNode="//@rules.6/@nodes.0">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/source"/>
+    </edges>
+    <edges name="familyToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.6/@nodes.6" trgNode="//@rules.6/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient/target"/>
+    </edges>
+    <edges name="memberToInsuranceClient__source__son_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.6/@nodes.7" trgNode="//@rules.6/@nodes.2">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/source"/>
+    </edges>
+    <edges name="memberToInsuranceClient__target__insuranceClient_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.6/@nodes.7" trgNode="//@rules.6/@nodes.3">
+      <type href="platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient/target"/>
+    </edges>
+    <edges name="family__sons__son_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.6/@nodes.0" trgNode="//@rules.6/@nodes.2">
+      <type href="platform:/resource/Families/model/families.ecore#//Family/sons"/>
+    </edges>
+    <edges name="familyRegister__families__family_eMoflonEdge" srcNode="//@rules.6/@nodes.1" trgNode="//@rules.6/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//FamilyRegister/families"/>
+    </edges>
+    <edges name="son__familySon__family_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.6/@nodes.2" trgNode="//@rules.6/@nodes.0">
+      <type href="platform:/resource/Families/model/families.ecore#//Member/familySon"/>
+    </edges>
+    <edges name="insuranceDB__insuranceclient__insuranceClient_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.4" trgNode="//@rules.6/@nodes.3">
+      <type href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase/insuranceclient"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11" parameters="//@rules.6/@attributeConditionLibrary/@parameterValues.0 //@rules.6/@attributeConditionLibrary/@parameterValues.1 //@rules.6/@attributeConditionLibrary/@parameterValues.2 //@rules.6/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.6/@attributeConditionLibrary/@parameterValues.4"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.1" objectVar="//@rules.6/@nodes.2">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Member/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.2" objectVar="//@rules.6/@nodes.0">
+        <attribute href="platform:/resource/Families/model/families.ecore#//Family/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.11/@parameterDefinitions.3" objectVar="//@rules.6/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.6/@nodes.3">
+        <attribute href="platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient/gender"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="expectMale">
+      <parameterDefinitions name="gender">
+        <type href="platform:/resource/Insurance/model/insurance.ecore#//Gender"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="expectFemale">
+      <parameterDefinitions name="gender">
+        <type href="platform:/resource/Insurance/model/insurance.ecore#//Gender"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_string" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_int" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_float" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_double" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_long" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_char" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_boolean" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addPrefix" userDefined="false">
+      <parameterDefinitions name="prefix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addSuffix" userDefined="false">
+      <parameterDefinitions name="suffix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="concat" userDefined="false">
+      <parameterDefinitions name="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultString" userDefined="false">
+      <parameterDefinitions name="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultNumber" userDefined="false">
+      <parameterDefinitions name="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToDouble" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="doubleValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToInt" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="multiply" userDefined="false">
+      <parameterDefinitions name="operand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="operand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="divide" userDefined="false">
+      <parameterDefinitions name="numerator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="denominator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="add" userDefined="false">
+      <parameterDefinitions name="summand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="summand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="sub" userDefined="false">
+      <parameterDefinitions name="minuend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="subtrahend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="max" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="max">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="smallerOrEqual" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setRandomString" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
+</language:TGG>

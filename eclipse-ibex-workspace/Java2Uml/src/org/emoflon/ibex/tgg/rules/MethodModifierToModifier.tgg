@@ -1,0 +1,96 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule MethodModifierToModifier #with Java2Uml
+
+#source { 
+		javaMethod:java.members.ClassMethod {
+			++ -annotationsAndModifiers->modifier
+		}
+		++modifier:java.modifiers.Modifier
+	}
+	#target {
+		umlOperation:uml.Operation {
+			/* 
+			 * Here, modifiers are represented as boolean attributes!
+			 * We need attribute conditions to represent that.
+			 * 
+			 */
+		}
+	}
+	#correspondence {
+		javaMethodToOperation:JavaMethodToOperation{
+			#src->javaMethod
+			#trg->umlOperation
+		}
+	}
+	
+#rule MethodAbstractToAbstract #extends MethodModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Abstract
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		eq_boolean(true, umlOperation.isAbstract)
+	}	
+#rule MethodStaticToStatic #extends MethodModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Static
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		eq_boolean(true, umlOperation.isStatic)
+	}	
+#rule MethodFinalToFinal #extends MethodModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Final
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		eq_boolean(true, umlOperation.isLeaf)
+	}
+
+/*
+ * -----------------------------------------------
+ *             VISIBILITY
+ * -----------------------------------------------
+ */
+
+#abstract #rule MethodPrivateToPrivate #extends MethodModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Private
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		expectPrivate(umlOperation.visibility)
+	}
+#abstract #rule MethodProtectedToProtected #extends MethodModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Protected
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		expectProtected(umlOperation.visibility)
+	}
+#abstract #rule MethodPublicToPublic #extends MethodModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Public
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		expectPublic(umlOperation.visibility)
+	}
+	//TODO package protected?
+		

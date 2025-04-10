@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:Families2Insurance="platform:/resource/Families2Insurance/model/Families2Insurance.ecore" xmlns:families="edu.kit.ipd.sdq.metamodels.families" xmlns:insurance="edu.kit.ipd.sdq.metamodels.insurance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <Families2Insurance:FamilyRegisterToInsuranceDatabase>
+    <source xsi:type="families:FamilyRegister" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#/" />
+    <target xsi:type="insurance:InsuranceDatabase" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#/" />
+  </Families2Insurance:FamilyRegisterToInsuranceDatabase>
+  <Families2Insurance:FamilyToInsuranceClient>
+    <target xsi:type="insurance:InsuranceClient" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#//@insuranceclient.0" />
+    <source xsi:type="families:Family" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#//@families.0" />
+  </Families2Insurance:FamilyToInsuranceClient>
+  <Families2Insurance:MemberToInsuranceClient>
+    <target xsi:type="insurance:InsuranceClient" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#//@insuranceclient.0" />
+    <source xsi:type="families:Member" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#//@families.0/@father" />
+  </Families2Insurance:MemberToInsuranceClient>
+  <Families2Insurance:FamilyToInsuranceClient>
+    <source xsi:type="families:Family" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#//@families.0" />
+    <target xsi:type="insurance:InsuranceClient" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#//@insuranceclient.1" />
+  </Families2Insurance:FamilyToInsuranceClient>
+  <Families2Insurance:MemberToInsuranceClient>
+    <source xsi:type="families:Member" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#//@families.0/@daughters.0" />
+    <target xsi:type="insurance:InsuranceClient" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#//@insuranceclient.1" />
+  </Families2Insurance:MemberToInsuranceClient>
+  <Families2Insurance:FamilyToInsuranceClient>
+    <source xsi:type="families:Family" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#//@families.0" />
+    <target xsi:type="insurance:InsuranceClient" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#//@insuranceclient.2" />
+  </Families2Insurance:FamilyToInsuranceClient>
+  <Families2Insurance:MemberToInsuranceClient>
+    <source xsi:type="families:Member" href="target\vsumexample\InsuranceFamiliesBasicTest\families_instance.model#//@families.0/@sons.0" />
+    <target xsi:type="insurance:InsuranceClient" href="target\vsumexample\InsuranceFamiliesBasicTest\insurance_instance.model#//@insuranceclient.2" />
+  </Families2Insurance:MemberToInsuranceClient>
+</xmi:XMI>

@@ -1,0 +1,205 @@
+package Java2Uml;
+
+import Java2Uml.JavaClassifierToUmlClassifier;
+import Java2Uml.JavaCompilationUnitToUmlModel;
+import Java2Uml.JavaPackageToUmlPackage;
+import Java2Uml.JavaAttributeToUmlProperty;
+import Java2Uml.JavaClassifierReferenceToUmlGeneralization;
+import Java2Uml.JavaMethodToOperation;
+import Java2Uml.JavaConstructorToOperation;
+import Java2Uml.JavaParameterToParameter;
+import Java2Uml.JavaTypeReferenceToUmlReturnParameter;
+import Java2Uml.JavaClassifierReferenceToUmlInterfaceRealization;
+import Java2Uml.ClassAbstractToAbstract__Marker;
+import Java2Uml.ClassAttributeToProperty__Marker;
+import Java2Uml.ClassAttributeTypeToPropertyType__Marker;
+import Java2Uml.ClassConstructorToConstructor__Marker;
+import Java2Uml.ClassFinalToFinal__Marker;
+import Java2Uml.ClassImplementToClassImplement__Marker;
+import Java2Uml.ClassMethodToMethod__Marker;
+import Java2Uml.ClassPrivateToPrivate__Marker;
+import Java2Uml.ClassProtectedToProtected__Marker;
+import Java2Uml.ClassPublicToPublic__Marker;
+import Java2Uml.ClassToUmlClass__Marker;
+import Java2Uml.ConstructorClassParamTypeToParamType__Marker;
+import Java2Uml.ConstructorEnumParamTypeToParamType__Marker;
+import Java2Uml.ConstructorInterfaceParamTypeToParamType__Marker;
+import Java2Uml.EnumAbstractToAbstract__Marker;
+import Java2Uml.EnumAttributeToProperty__Marker;
+import Java2Uml.EnumAttributeTypeToPropertyType__Marker;
+import Java2Uml.EnumFinalToFinal__Marker;
+import Java2Uml.EnumPrivateToPrivate__Marker;
+import Java2Uml.EnumProtectedToProtected__Marker;
+import Java2Uml.EnumPublicToPublic__Marker;
+import Java2Uml.EnumToUmlEnum__Marker;
+import Java2Uml.ExistingClassImplementToClassImplement__Marker;
+import Java2Uml.ExistingSuperClassToSuperClass__Marker;
+import Java2Uml.ExistingSuperInterfaceToSuperInterface__Marker;
+import Java2Uml.FieldFinalToFinal__Marker;
+import Java2Uml.FieldStaticToStatic__Marker;
+import Java2Uml.InterfaceAbstractToAbstract__Marker;
+import Java2Uml.InterfaceAttributeTypeToPropertyType__Marker;
+import Java2Uml.InterfaceConstructorToConstructor__Marker;
+import Java2Uml.InterfaceFinalToFinal__Marker;
+import Java2Uml.InterfaceMethodToMethod__Marker;
+import Java2Uml.InterfacePrivateToPrivate__Marker;
+import Java2Uml.InterfaceProtectedToProtected__Marker;
+import Java2Uml.InterfacePublicToPublic__Marker;
+import Java2Uml.InterfaceToUmlInterface__Marker;
+import Java2Uml.JavaCompilationUnitToExistingUmlModel__Marker;
+import Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker;
+import Java2Uml.MethodAbstractToAbstract__Marker;
+import Java2Uml.MethodClassParamTypeToParamType__Marker;
+import Java2Uml.MethodClassReturnTypeToReturnType__Marker;
+import Java2Uml.MethodEnumParamTypeToParamType__Marker;
+import Java2Uml.MethodEnumReturnTypeToReturnType__Marker;
+import Java2Uml.MethodFinalToFinal__Marker;
+import Java2Uml.MethodInterfaceParamTypeToParamType__Marker;
+import Java2Uml.MethodInterfaceReturnTypeToReturnType__Marker;
+import Java2Uml.MethodStaticToStatic__Marker;
+import Java2Uml.OrdinaryConstructorParameterToParameter__Marker;
+import Java2Uml.OrdinaryMethodParameterToParameter__Marker;
+import Java2Uml.RootJavaPackageToUmlPackage__Marker;
+import Java2Uml.SuperClassToSuperClass__Marker;
+import Java2Uml.SuperInterfaceToSuperInterface__Marker;
+import Java2Uml.VariableLengthConstructorParameterToParameter__Marker;
+import Java2Uml.VariableLengthMethodParameterToParameter__Marker;
+
+import org.eclipse.emf.ecore.EFactory;
+
+public interface Java2UmlFactory extends EFactory {
+
+	Java2UmlFactory eINSTANCE = Java2Uml.impl.Java2UmlFactoryImpl.init();
+	
+	JavaClassifierToUmlClassifier createJavaClassifierToUmlClassifier();
+	
+	JavaCompilationUnitToUmlModel createJavaCompilationUnitToUmlModel();
+	
+	JavaPackageToUmlPackage createJavaPackageToUmlPackage();
+	
+	JavaAttributeToUmlProperty createJavaAttributeToUmlProperty();
+	
+	JavaClassifierReferenceToUmlGeneralization createJavaClassifierReferenceToUmlGeneralization();
+	
+	JavaMethodToOperation createJavaMethodToOperation();
+	
+	JavaConstructorToOperation createJavaConstructorToOperation();
+	
+	JavaParameterToParameter createJavaParameterToParameter();
+	
+	JavaTypeReferenceToUmlReturnParameter createJavaTypeReferenceToUmlReturnParameter();
+	
+	JavaClassifierReferenceToUmlInterfaceRealization createJavaClassifierReferenceToUmlInterfaceRealization();
+	
+	ClassAbstractToAbstract__Marker createClassAbstractToAbstract__Marker();
+	
+	ClassAttributeToProperty__Marker createClassAttributeToProperty__Marker();
+	
+	ClassAttributeTypeToPropertyType__Marker createClassAttributeTypeToPropertyType__Marker();
+	
+	ClassConstructorToConstructor__Marker createClassConstructorToConstructor__Marker();
+	
+	ClassFinalToFinal__Marker createClassFinalToFinal__Marker();
+	
+	ClassImplementToClassImplement__Marker createClassImplementToClassImplement__Marker();
+	
+	ClassMethodToMethod__Marker createClassMethodToMethod__Marker();
+	
+	ClassPrivateToPrivate__Marker createClassPrivateToPrivate__Marker();
+	
+	ClassProtectedToProtected__Marker createClassProtectedToProtected__Marker();
+	
+	ClassPublicToPublic__Marker createClassPublicToPublic__Marker();
+	
+	ClassToUmlClass__Marker createClassToUmlClass__Marker();
+	
+	ConstructorClassParamTypeToParamType__Marker createConstructorClassParamTypeToParamType__Marker();
+	
+	ConstructorEnumParamTypeToParamType__Marker createConstructorEnumParamTypeToParamType__Marker();
+	
+	ConstructorInterfaceParamTypeToParamType__Marker createConstructorInterfaceParamTypeToParamType__Marker();
+	
+	EnumAbstractToAbstract__Marker createEnumAbstractToAbstract__Marker();
+	
+	EnumAttributeToProperty__Marker createEnumAttributeToProperty__Marker();
+	
+	EnumAttributeTypeToPropertyType__Marker createEnumAttributeTypeToPropertyType__Marker();
+	
+	EnumFinalToFinal__Marker createEnumFinalToFinal__Marker();
+	
+	EnumPrivateToPrivate__Marker createEnumPrivateToPrivate__Marker();
+	
+	EnumProtectedToProtected__Marker createEnumProtectedToProtected__Marker();
+	
+	EnumPublicToPublic__Marker createEnumPublicToPublic__Marker();
+	
+	EnumToUmlEnum__Marker createEnumToUmlEnum__Marker();
+	
+	ExistingClassImplementToClassImplement__Marker createExistingClassImplementToClassImplement__Marker();
+	
+	ExistingSuperClassToSuperClass__Marker createExistingSuperClassToSuperClass__Marker();
+	
+	ExistingSuperInterfaceToSuperInterface__Marker createExistingSuperInterfaceToSuperInterface__Marker();
+	
+	FieldFinalToFinal__Marker createFieldFinalToFinal__Marker();
+	
+	FieldStaticToStatic__Marker createFieldStaticToStatic__Marker();
+	
+	InterfaceAbstractToAbstract__Marker createInterfaceAbstractToAbstract__Marker();
+	
+	InterfaceAttributeTypeToPropertyType__Marker createInterfaceAttributeTypeToPropertyType__Marker();
+	
+	InterfaceConstructorToConstructor__Marker createInterfaceConstructorToConstructor__Marker();
+	
+	InterfaceFinalToFinal__Marker createInterfaceFinalToFinal__Marker();
+	
+	InterfaceMethodToMethod__Marker createInterfaceMethodToMethod__Marker();
+	
+	InterfacePrivateToPrivate__Marker createInterfacePrivateToPrivate__Marker();
+	
+	InterfaceProtectedToProtected__Marker createInterfaceProtectedToProtected__Marker();
+	
+	InterfacePublicToPublic__Marker createInterfacePublicToPublic__Marker();
+	
+	InterfaceToUmlInterface__Marker createInterfaceToUmlInterface__Marker();
+	
+	JavaCompilationUnitToExistingUmlModel__Marker createJavaCompilationUnitToExistingUmlModel__Marker();
+	
+	JavaFirstCompilationUnitToUmlModel__Marker createJavaFirstCompilationUnitToUmlModel__Marker();
+	
+	MethodAbstractToAbstract__Marker createMethodAbstractToAbstract__Marker();
+	
+	MethodClassParamTypeToParamType__Marker createMethodClassParamTypeToParamType__Marker();
+	
+	MethodClassReturnTypeToReturnType__Marker createMethodClassReturnTypeToReturnType__Marker();
+	
+	MethodEnumParamTypeToParamType__Marker createMethodEnumParamTypeToParamType__Marker();
+	
+	MethodEnumReturnTypeToReturnType__Marker createMethodEnumReturnTypeToReturnType__Marker();
+	
+	MethodFinalToFinal__Marker createMethodFinalToFinal__Marker();
+	
+	MethodInterfaceParamTypeToParamType__Marker createMethodInterfaceParamTypeToParamType__Marker();
+	
+	MethodInterfaceReturnTypeToReturnType__Marker createMethodInterfaceReturnTypeToReturnType__Marker();
+	
+	MethodStaticToStatic__Marker createMethodStaticToStatic__Marker();
+	
+	OrdinaryConstructorParameterToParameter__Marker createOrdinaryConstructorParameterToParameter__Marker();
+	
+	OrdinaryMethodParameterToParameter__Marker createOrdinaryMethodParameterToParameter__Marker();
+	
+	RootJavaPackageToUmlPackage__Marker createRootJavaPackageToUmlPackage__Marker();
+	
+	SuperClassToSuperClass__Marker createSuperClassToSuperClass__Marker();
+	
+	SuperInterfaceToSuperInterface__Marker createSuperInterfaceToSuperInterface__Marker();
+	
+	VariableLengthConstructorParameterToParameter__Marker createVariableLengthConstructorParameterToParameter__Marker();
+	
+	VariableLengthMethodParameterToParameter__Marker createVariableLengthMethodParameterToParameter__Marker();
+	
+	
+	Java2UmlPackage getJava2UmlPackage();
+
+}

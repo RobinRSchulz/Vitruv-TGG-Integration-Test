@@ -1,0 +1,1108 @@
+package Java2Uml.initfwd.hipe.engine;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+
+import Java2Uml.initfwd.hipe.engine.actor.NotificationActor;
+import Java2Uml.initfwd.hipe.engine.actor.DispatchActor;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAbstractToAbstract__CONSISTENCY_1_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAbstractToAbstract__FWD_7_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_12_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAttributeToProperty__CONSISTENCY_15_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAttributeToProperty__FWD_23_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_28_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAttributeTypeToPropertyType__CONSISTENCY_32_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassAttributeTypeToPropertyType__FWD_41_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_49_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassConstructorToConstructor__CONSISTENCY_52_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassConstructorToConstructor__FWD_60_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassFinalToFinal__CONSISTENCY_65_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassFinalToFinal__FWD_71_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_76_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_80_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassImplementToClassImplement__CONSISTENCY_84_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassImplementToClassImplement__FWD_94_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_100_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassMethodToMethod__CONSISTENCY_103_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassMethodToMethod__FWD_111_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassPrivateToPrivate__CONSISTENCY_116_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassPrivateToPrivate__FWD_122_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassProtectedToProtected__CONSISTENCY_127_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassProtectedToProtected__FWD_133_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassPublicToPublic__CONSISTENCY_138_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassPublicToPublic__FWD_144_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassToUmlClass__CONSISTENCY_149_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ClassToUmlClass__FWD_158_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_164_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorClassParamTypeToParamType__CONSISTENCY_168_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorClassParamTypeToParamType__FWD_180_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_191_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorEnumParamTypeToParamType__CONSISTENCY_195_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorEnumParamTypeToParamType__FWD_207_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_218_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorInterfaceParamTypeToParamType__CONSISTENCY_222_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ConstructorInterfaceParamTypeToParamType__FWD_234_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAbstractToAbstract__CONSISTENCY_245_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAbstractToAbstract__FWD_251_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_256_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAttributeToProperty__CONSISTENCY_259_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAttributeToProperty__FWD_267_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_272_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAttributeTypeToPropertyType__CONSISTENCY_276_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumAttributeTypeToPropertyType__FWD_285_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumFinalToFinal__CONSISTENCY_293_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumFinalToFinal__FWD_299_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumPrivateToPrivate__CONSISTENCY_304_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumPrivateToPrivate__FWD_310_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumProtectedToProtected__CONSISTENCY_315_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumProtectedToProtected__FWD_321_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumPublicToPublic__CONSISTENCY_326_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumPublicToPublic__FWD_332_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumToUmlEnum__CONSISTENCY_337_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.EnumToUmlEnum__FWD_346_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_352_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_356_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingClassImplementToClassImplement__CONSISTENCY_360_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingClassImplementToClassImplement__FWD_370_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_378_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_382_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperClassToSuperClass__CONSISTENCY_386_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperClassToSuperClass__FWD_396_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_404_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_408_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperInterfaceToSuperInterface__CONSISTENCY_412_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.ExistingSuperInterfaceToSuperInterface__FWD_422_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.FieldFinalToFinal__CONSISTENCY_430_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.FieldFinalToFinal__FWD_436_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.FieldStaticToStatic__CONSISTENCY_441_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.FieldStaticToStatic__FWD_447_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceAbstractToAbstract__CONSISTENCY_452_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceAbstractToAbstract__FWD_458_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_463_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceAttributeTypeToPropertyType__CONSISTENCY_467_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceAttributeTypeToPropertyType__FWD_476_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_484_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceConstructorToConstructor__CONSISTENCY_487_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceConstructorToConstructor__FWD_495_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceFinalToFinal__CONSISTENCY_500_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceFinalToFinal__FWD_506_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_511_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceMethodToMethod__CONSISTENCY_514_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceMethodToMethod__FWD_522_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfacePrivateToPrivate__CONSISTENCY_527_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfacePrivateToPrivate__FWD_533_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceProtectedToProtected__CONSISTENCY_538_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceProtectedToProtected__FWD_544_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfacePublicToPublic__CONSISTENCY_549_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfacePublicToPublic__FWD_555_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceToUmlInterface__CONSISTENCY_560_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.InterfaceToUmlInterface__FWD_569_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.JavaCompilationUnitToExistingUmlModel__CONSISTENCY_575_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.JavaCompilationUnitToExistingUmlModel__FWD_583_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.JavaFirstCompilationUnitToUmlModel__CONSISTENCY_589_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.JavaFirstCompilationUnitToUmlModel__FWD_605_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodAbstractToAbstract__CONSISTENCY_608_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodAbstractToAbstract__FWD_614_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_619_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodClassParamTypeToParamType__CONSISTENCY_623_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodClassParamTypeToParamType__FWD_635_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodClassReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_646_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodClassReturnTypeToReturnType__CONSISTENCY_650_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodClassReturnTypeToReturnType__FWD_661_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_669_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodEnumParamTypeToParamType__CONSISTENCY_673_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodEnumParamTypeToParamType__FWD_685_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodEnumReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_696_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodEnumReturnTypeToReturnType__CONSISTENCY_700_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodEnumReturnTypeToReturnType__FWD_711_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodFinalToFinal__CONSISTENCY_719_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodFinalToFinal__FWD_725_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_730_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodInterfaceParamTypeToParamType__CONSISTENCY_734_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodInterfaceParamTypeToParamType__FWD_746_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodInterfaceReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_757_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodInterfaceReturnTypeToReturnType__CONSISTENCY_761_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodInterfaceReturnTypeToReturnType__FWD_772_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodStaticToStatic__CONSISTENCY_780_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.MethodStaticToStatic__FWD_786_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.OrdinaryConstructorParameterToParameter__CONSISTENCY_791_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.OrdinaryConstructorParameterToParameter__FWD_799_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.OrdinaryMethodParameterToParameter__CONSISTENCY_804_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.OrdinaryMethodParameterToParameter__FWD_812_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.RootJavaPackageToUmlPackage_umlPackage_package_incoming_TRG__FILTER_NAC_TRG_817_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.RootJavaPackageToUmlPackage__CONSISTENCY_820_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_826_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_830_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperClassToSuperClass__CONSISTENCY_834_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperClassToSuperClass__FWD_845_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_851_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_855_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperInterfaceToSuperInterface__CONSISTENCY_859_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.SuperInterfaceToSuperInterface__FWD_870_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.VariableLengthConstructorParameterToParameter__CONSISTENCY_876_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.VariableLengthConstructorParameterToParameter__FWD_885_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.VariableLengthMethodParameterToParameter__CONSISTENCY_890_localSearch;
+import Java2Uml.initfwd.hipe.engine.actor.localsearch.VariableLengthMethodParameterToParameter__FWD_899_localSearch;
+
+import hipe.engine.IHiPEEngine;
+import hipe.engine.message.InitGenReferenceActor;
+
+import hipe.generic.actor.GenericObjectActor;
+import hipe.generic.actor.GenericReferenceActor;
+import hipe.generic.actor.GenericProductionActor;
+import hipe.generic.actor.junction.*;
+
+import hipe.network.*;
+
+public class HiPEEngine extends IHiPEEngine{
+	
+	public HiPEEngine(HiPENetwork network) {
+		super(network);
+	}
+	
+	public HiPEEngine() {
+		super();
+	}
+	
+	@Override
+	public String getClassLocation() {
+		return getClass().getProtectionDomain().getCodeSource().getLocation().getPath().toString();
+	}
+	
+	@Override
+	public String getPackageName() {
+		return getClass().getPackageName();
+	}
+	
+	@Override
+	protected ActorRef getDispatchActor() {
+		return system.actorOf(
+			Props.create(DispatchActor.class, () -> new DispatchActor(name2actor, incUtil)),
+			"DispatchActor");
+	}
+	
+	@Override
+	protected ActorRef getNotificationActor(boolean cascadingNotifications) {
+		return system.actorOf(
+			Props.create(NotificationActor.class, () -> new NotificationActor(dispatcher, incUtil, cascadingNotifications)), 
+			"NotificationActor");
+	}
+	
+	@Override
+	public void createProductionNodes() {
+		classes.put("ClassAbstractToAbstract__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAbstractToAbstract__CONSISTENCY_production", "ClassAbstractToAbstract__CONSISTENCY");
+		classes.put("ClassAbstractToAbstract__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAbstractToAbstract__FWD_production", "ClassAbstractToAbstract__FWD");
+		classes.put("ClassAttributeToProperty__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAttributeToProperty__CONSISTENCY_production", "ClassAttributeToProperty__CONSISTENCY");
+		classes.put("ClassAttributeToProperty__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAttributeToProperty__FWD_production", "ClassAttributeToProperty__FWD");
+		classes.put("ClassAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_production", "ClassAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("ClassAttributeTypeToPropertyType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAttributeTypeToPropertyType__CONSISTENCY_production", "ClassAttributeTypeToPropertyType__CONSISTENCY");
+		classes.put("ClassAttributeTypeToPropertyType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAttributeTypeToPropertyType__FWD_production", "ClassAttributeTypeToPropertyType__FWD");
+		classes.put("ClassAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "ClassAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("ClassConstructorToConstructor__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassConstructorToConstructor__CONSISTENCY_production", "ClassConstructorToConstructor__CONSISTENCY");
+		classes.put("ClassConstructorToConstructor__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassConstructorToConstructor__FWD_production", "ClassConstructorToConstructor__FWD");
+		classes.put("ClassConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", "ClassConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("ClassFinalToFinal__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassFinalToFinal__CONSISTENCY_production", "ClassFinalToFinal__CONSISTENCY");
+		classes.put("ClassFinalToFinal__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassFinalToFinal__FWD_production", "ClassFinalToFinal__FWD");
+		classes.put("ClassImplementToClassImplement__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassImplementToClassImplement__CONSISTENCY_production", "ClassImplementToClassImplement__CONSISTENCY");
+		classes.put("ClassImplementToClassImplement__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassImplementToClassImplement__FWD_production", "ClassImplementToClassImplement__FWD");
+		classes.put("ClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", "ClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("ClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_production", "ClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG");
+		classes.put("ClassMethodToMethod__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassMethodToMethod__CONSISTENCY_production", "ClassMethodToMethod__CONSISTENCY");
+		classes.put("ClassMethodToMethod__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassMethodToMethod__FWD_production", "ClassMethodToMethod__FWD");
+		classes.put("ClassMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", "ClassMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("ClassPrivateToPrivate__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassPrivateToPrivate__CONSISTENCY_production", "ClassPrivateToPrivate__CONSISTENCY");
+		classes.put("ClassPrivateToPrivate__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassPrivateToPrivate__FWD_production", "ClassPrivateToPrivate__FWD");
+		classes.put("ClassProtectedToProtected__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassProtectedToProtected__CONSISTENCY_production", "ClassProtectedToProtected__CONSISTENCY");
+		classes.put("ClassProtectedToProtected__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassProtectedToProtected__FWD_production", "ClassProtectedToProtected__FWD");
+		classes.put("ClassPublicToPublic__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassPublicToPublic__CONSISTENCY_production", "ClassPublicToPublic__CONSISTENCY");
+		classes.put("ClassPublicToPublic__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassPublicToPublic__FWD_production", "ClassPublicToPublic__FWD");
+		classes.put("ClassToUmlClass__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassToUmlClass__CONSISTENCY_production", "ClassToUmlClass__CONSISTENCY");
+		classes.put("ClassToUmlClass__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ClassToUmlClass__FWD_production", "ClassToUmlClass__FWD");
+		classes.put("ConstructorClassParamTypeToParamType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorClassParamTypeToParamType__CONSISTENCY_production", "ConstructorClassParamTypeToParamType__CONSISTENCY");
+		classes.put("ConstructorClassParamTypeToParamType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorClassParamTypeToParamType__FWD_production", "ConstructorClassParamTypeToParamType__FWD");
+		classes.put("ConstructorClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "ConstructorClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("ConstructorEnumParamTypeToParamType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorEnumParamTypeToParamType__CONSISTENCY_production", "ConstructorEnumParamTypeToParamType__CONSISTENCY");
+		classes.put("ConstructorEnumParamTypeToParamType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorEnumParamTypeToParamType__FWD_production", "ConstructorEnumParamTypeToParamType__FWD");
+		classes.put("ConstructorEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "ConstructorEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("ConstructorInterfaceParamTypeToParamType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorInterfaceParamTypeToParamType__CONSISTENCY_production", "ConstructorInterfaceParamTypeToParamType__CONSISTENCY");
+		classes.put("ConstructorInterfaceParamTypeToParamType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorInterfaceParamTypeToParamType__FWD_production", "ConstructorInterfaceParamTypeToParamType__FWD");
+		classes.put("ConstructorInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ConstructorInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "ConstructorInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("EnumAbstractToAbstract__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAbstractToAbstract__CONSISTENCY_production", "EnumAbstractToAbstract__CONSISTENCY");
+		classes.put("EnumAbstractToAbstract__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAbstractToAbstract__FWD_production", "EnumAbstractToAbstract__FWD");
+		classes.put("EnumAttributeToProperty__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAttributeToProperty__CONSISTENCY_production", "EnumAttributeToProperty__CONSISTENCY");
+		classes.put("EnumAttributeToProperty__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAttributeToProperty__FWD_production", "EnumAttributeToProperty__FWD");
+		classes.put("EnumAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_production", "EnumAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("EnumAttributeTypeToPropertyType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAttributeTypeToPropertyType__CONSISTENCY_production", "EnumAttributeTypeToPropertyType__CONSISTENCY");
+		classes.put("EnumAttributeTypeToPropertyType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAttributeTypeToPropertyType__FWD_production", "EnumAttributeTypeToPropertyType__FWD");
+		classes.put("EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("EnumFinalToFinal__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumFinalToFinal__CONSISTENCY_production", "EnumFinalToFinal__CONSISTENCY");
+		classes.put("EnumFinalToFinal__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumFinalToFinal__FWD_production", "EnumFinalToFinal__FWD");
+		classes.put("EnumPrivateToPrivate__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumPrivateToPrivate__CONSISTENCY_production", "EnumPrivateToPrivate__CONSISTENCY");
+		classes.put("EnumPrivateToPrivate__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumPrivateToPrivate__FWD_production", "EnumPrivateToPrivate__FWD");
+		classes.put("EnumProtectedToProtected__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumProtectedToProtected__CONSISTENCY_production", "EnumProtectedToProtected__CONSISTENCY");
+		classes.put("EnumProtectedToProtected__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumProtectedToProtected__FWD_production", "EnumProtectedToProtected__FWD");
+		classes.put("EnumPublicToPublic__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumPublicToPublic__CONSISTENCY_production", "EnumPublicToPublic__CONSISTENCY");
+		classes.put("EnumPublicToPublic__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumPublicToPublic__FWD_production", "EnumPublicToPublic__FWD");
+		classes.put("EnumToUmlEnum__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumToUmlEnum__CONSISTENCY_production", "EnumToUmlEnum__CONSISTENCY");
+		classes.put("EnumToUmlEnum__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("EnumToUmlEnum__FWD_production", "EnumToUmlEnum__FWD");
+		classes.put("ExistingClassImplementToClassImplement__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingClassImplementToClassImplement__CONSISTENCY_production", "ExistingClassImplementToClassImplement__CONSISTENCY");
+		classes.put("ExistingClassImplementToClassImplement__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingClassImplementToClassImplement__FWD_production", "ExistingClassImplementToClassImplement__FWD");
+		classes.put("ExistingClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", "ExistingClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("ExistingClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_production", "ExistingClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG");
+		classes.put("ExistingSuperClassToSuperClass__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperClassToSuperClass__CONSISTENCY_production", "ExistingSuperClassToSuperClass__CONSISTENCY");
+		classes.put("ExistingSuperClassToSuperClass__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperClassToSuperClass__FWD_production", "ExistingSuperClassToSuperClass__FWD");
+		classes.put("ExistingSuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", "ExistingSuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG");
+		classes.put("ExistingSuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", "ExistingSuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("ExistingSuperInterfaceToSuperInterface__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperInterfaceToSuperInterface__CONSISTENCY_production", "ExistingSuperInterfaceToSuperInterface__CONSISTENCY");
+		classes.put("ExistingSuperInterfaceToSuperInterface__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperInterfaceToSuperInterface__FWD_production", "ExistingSuperInterfaceToSuperInterface__FWD");
+		classes.put("ExistingSuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", "ExistingSuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG");
+		classes.put("ExistingSuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("ExistingSuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", "ExistingSuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("FieldFinalToFinal__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("FieldFinalToFinal__CONSISTENCY_production", "FieldFinalToFinal__CONSISTENCY");
+		classes.put("FieldFinalToFinal__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("FieldFinalToFinal__FWD_production", "FieldFinalToFinal__FWD");
+		classes.put("FieldStaticToStatic__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("FieldStaticToStatic__CONSISTENCY_production", "FieldStaticToStatic__CONSISTENCY");
+		classes.put("FieldStaticToStatic__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("FieldStaticToStatic__FWD_production", "FieldStaticToStatic__FWD");
+		classes.put("InterfaceAbstractToAbstract__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceAbstractToAbstract__CONSISTENCY_production", "InterfaceAbstractToAbstract__CONSISTENCY");
+		classes.put("InterfaceAbstractToAbstract__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceAbstractToAbstract__FWD_production", "InterfaceAbstractToAbstract__FWD");
+		classes.put("InterfaceAttributeTypeToPropertyType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceAttributeTypeToPropertyType__CONSISTENCY_production", "InterfaceAttributeTypeToPropertyType__CONSISTENCY");
+		classes.put("InterfaceAttributeTypeToPropertyType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceAttributeTypeToPropertyType__FWD_production", "InterfaceAttributeTypeToPropertyType__FWD");
+		classes.put("InterfaceAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "InterfaceAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("InterfaceConstructorToConstructor__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceConstructorToConstructor__CONSISTENCY_production", "InterfaceConstructorToConstructor__CONSISTENCY");
+		classes.put("InterfaceConstructorToConstructor__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceConstructorToConstructor__FWD_production", "InterfaceConstructorToConstructor__FWD");
+		classes.put("InterfaceConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", "InterfaceConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("InterfaceFinalToFinal__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceFinalToFinal__CONSISTENCY_production", "InterfaceFinalToFinal__CONSISTENCY");
+		classes.put("InterfaceFinalToFinal__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceFinalToFinal__FWD_production", "InterfaceFinalToFinal__FWD");
+		classes.put("InterfaceMethodToMethod__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceMethodToMethod__CONSISTENCY_production", "InterfaceMethodToMethod__CONSISTENCY");
+		classes.put("InterfaceMethodToMethod__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceMethodToMethod__FWD_production", "InterfaceMethodToMethod__FWD");
+		classes.put("InterfaceMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_production", "InterfaceMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("InterfacePrivateToPrivate__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfacePrivateToPrivate__CONSISTENCY_production", "InterfacePrivateToPrivate__CONSISTENCY");
+		classes.put("InterfacePrivateToPrivate__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfacePrivateToPrivate__FWD_production", "InterfacePrivateToPrivate__FWD");
+		classes.put("InterfaceProtectedToProtected__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceProtectedToProtected__CONSISTENCY_production", "InterfaceProtectedToProtected__CONSISTENCY");
+		classes.put("InterfaceProtectedToProtected__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceProtectedToProtected__FWD_production", "InterfaceProtectedToProtected__FWD");
+		classes.put("InterfacePublicToPublic__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfacePublicToPublic__CONSISTENCY_production", "InterfacePublicToPublic__CONSISTENCY");
+		classes.put("InterfacePublicToPublic__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfacePublicToPublic__FWD_production", "InterfacePublicToPublic__FWD");
+		classes.put("InterfaceToUmlInterface__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceToUmlInterface__CONSISTENCY_production", "InterfaceToUmlInterface__CONSISTENCY");
+		classes.put("InterfaceToUmlInterface__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("InterfaceToUmlInterface__FWD_production", "InterfaceToUmlInterface__FWD");
+		classes.put("JavaCompilationUnitToExistingUmlModel__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("JavaCompilationUnitToExistingUmlModel__CONSISTENCY_production", "JavaCompilationUnitToExistingUmlModel__CONSISTENCY");
+		classes.put("JavaCompilationUnitToExistingUmlModel__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("JavaCompilationUnitToExistingUmlModel__FWD_production", "JavaCompilationUnitToExistingUmlModel__FWD");
+		classes.put("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_production", "JavaFirstCompilationUnitToUmlModel__CONSISTENCY");
+		classes.put("JavaFirstCompilationUnitToUmlModel__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("JavaFirstCompilationUnitToUmlModel__FWD_production", "JavaFirstCompilationUnitToUmlModel__FWD");
+		classes.put("MethodAbstractToAbstract__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodAbstractToAbstract__CONSISTENCY_production", "MethodAbstractToAbstract__CONSISTENCY");
+		classes.put("MethodAbstractToAbstract__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodAbstractToAbstract__FWD_production", "MethodAbstractToAbstract__FWD");
+		classes.put("MethodClassParamTypeToParamType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodClassParamTypeToParamType__CONSISTENCY_production", "MethodClassParamTypeToParamType__CONSISTENCY");
+		classes.put("MethodClassParamTypeToParamType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodClassParamTypeToParamType__FWD_production", "MethodClassParamTypeToParamType__FWD");
+		classes.put("MethodClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "MethodClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("MethodClassReturnTypeToReturnType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodClassReturnTypeToReturnType__CONSISTENCY_production", "MethodClassReturnTypeToReturnType__CONSISTENCY");
+		classes.put("MethodClassReturnTypeToReturnType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodClassReturnTypeToReturnType__FWD_production", "MethodClassReturnTypeToReturnType__FWD");
+		classes.put("MethodClassReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodClassReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "MethodClassReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("MethodEnumParamTypeToParamType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodEnumParamTypeToParamType__CONSISTENCY_production", "MethodEnumParamTypeToParamType__CONSISTENCY");
+		classes.put("MethodEnumParamTypeToParamType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodEnumParamTypeToParamType__FWD_production", "MethodEnumParamTypeToParamType__FWD");
+		classes.put("MethodEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "MethodEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("MethodEnumReturnTypeToReturnType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodEnumReturnTypeToReturnType__CONSISTENCY_production", "MethodEnumReturnTypeToReturnType__CONSISTENCY");
+		classes.put("MethodEnumReturnTypeToReturnType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodEnumReturnTypeToReturnType__FWD_production", "MethodEnumReturnTypeToReturnType__FWD");
+		classes.put("MethodEnumReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodEnumReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "MethodEnumReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("MethodFinalToFinal__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodFinalToFinal__CONSISTENCY_production", "MethodFinalToFinal__CONSISTENCY");
+		classes.put("MethodFinalToFinal__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodFinalToFinal__FWD_production", "MethodFinalToFinal__FWD");
+		classes.put("MethodInterfaceParamTypeToParamType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodInterfaceParamTypeToParamType__CONSISTENCY_production", "MethodInterfaceParamTypeToParamType__CONSISTENCY");
+		classes.put("MethodInterfaceParamTypeToParamType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodInterfaceParamTypeToParamType__FWD_production", "MethodInterfaceParamTypeToParamType__FWD");
+		classes.put("MethodInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "MethodInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("MethodInterfaceReturnTypeToReturnType__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodInterfaceReturnTypeToReturnType__CONSISTENCY_production", "MethodInterfaceReturnTypeToReturnType__CONSISTENCY");
+		classes.put("MethodInterfaceReturnTypeToReturnType__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodInterfaceReturnTypeToReturnType__FWD_production", "MethodInterfaceReturnTypeToReturnType__FWD");
+		classes.put("MethodInterfaceReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodInterfaceReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_production", "MethodInterfaceReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("MethodStaticToStatic__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodStaticToStatic__CONSISTENCY_production", "MethodStaticToStatic__CONSISTENCY");
+		classes.put("MethodStaticToStatic__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("MethodStaticToStatic__FWD_production", "MethodStaticToStatic__FWD");
+		classes.put("OrdinaryConstructorParameterToParameter__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("OrdinaryConstructorParameterToParameter__CONSISTENCY_production", "OrdinaryConstructorParameterToParameter__CONSISTENCY");
+		classes.put("OrdinaryConstructorParameterToParameter__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("OrdinaryConstructorParameterToParameter__FWD_production", "OrdinaryConstructorParameterToParameter__FWD");
+		classes.put("OrdinaryMethodParameterToParameter__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("OrdinaryMethodParameterToParameter__CONSISTENCY_production", "OrdinaryMethodParameterToParameter__CONSISTENCY");
+		classes.put("OrdinaryMethodParameterToParameter__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("OrdinaryMethodParameterToParameter__FWD_production", "OrdinaryMethodParameterToParameter__FWD");
+		classes.put("RootJavaPackageToUmlPackage__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("RootJavaPackageToUmlPackage__CONSISTENCY_production", "RootJavaPackageToUmlPackage__CONSISTENCY");
+		classes.put("RootJavaPackageToUmlPackage__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("RootJavaPackageToUmlPackage__FWD_production", "RootJavaPackageToUmlPackage__FWD");
+		classes.put("RootJavaPackageToUmlPackage_umlPackage_package_incoming_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("RootJavaPackageToUmlPackage_umlPackage_package_incoming_TRG__FILTER_NAC_TRG_production", "RootJavaPackageToUmlPackage_umlPackage_package_incoming_TRG__FILTER_NAC_TRG");
+		classes.put("SuperClassToSuperClass__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperClassToSuperClass__CONSISTENCY_production", "SuperClassToSuperClass__CONSISTENCY");
+		classes.put("SuperClassToSuperClass__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperClassToSuperClass__FWD_production", "SuperClassToSuperClass__FWD");
+		classes.put("SuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", "SuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG");
+		classes.put("SuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", "SuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("SuperInterfaceToSuperInterface__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperInterfaceToSuperInterface__CONSISTENCY_production", "SuperInterfaceToSuperInterface__CONSISTENCY");
+		classes.put("SuperInterfaceToSuperInterface__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperInterfaceToSuperInterface__FWD_production", "SuperInterfaceToSuperInterface__FWD");
+		classes.put("SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_production", "SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG");
+		classes.put("SuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", GenericProductionActor.class);
+		productionNodes2pattern.put("SuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_production", "SuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC");
+		classes.put("VariableLengthConstructorParameterToParameter__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("VariableLengthConstructorParameterToParameter__CONSISTENCY_production", "VariableLengthConstructorParameterToParameter__CONSISTENCY");
+		classes.put("VariableLengthConstructorParameterToParameter__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("VariableLengthConstructorParameterToParameter__FWD_production", "VariableLengthConstructorParameterToParameter__FWD");
+		classes.put("VariableLengthMethodParameterToParameter__CONSISTENCY_production", GenericProductionActor.class);
+		productionNodes2pattern.put("VariableLengthMethodParameterToParameter__CONSISTENCY_production", "VariableLengthMethodParameterToParameter__CONSISTENCY");
+		classes.put("VariableLengthMethodParameterToParameter__FWD_production", GenericProductionActor.class);
+		productionNodes2pattern.put("VariableLengthMethodParameterToParameter__FWD_production", "VariableLengthMethodParameterToParameter__FWD");
+		
+	}
+	
+	@Override
+	public void createJunctionNodes() {
+		classes.put("ClassAbstractToAbstract__CONSISTENCY_1_localSearch", ClassAbstractToAbstract__CONSISTENCY_1_localSearch.class);
+		classes.put("ClassAbstractToAbstract__FWD_7_localSearch", ClassAbstractToAbstract__FWD_7_localSearch.class);
+		classes.put("ClassAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_12_localSearch", ClassAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_12_localSearch.class);
+		classes.put("ClassAttributeToProperty__CONSISTENCY_15_localSearch", ClassAttributeToProperty__CONSISTENCY_15_localSearch.class);
+		classes.put("ClassAttributeToProperty__FWD_23_localSearch", ClassAttributeToProperty__FWD_23_localSearch.class);
+		classes.put("ClassAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_28_localSearch", ClassAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_28_localSearch.class);
+		classes.put("ClassAttributeTypeToPropertyType__CONSISTENCY_32_localSearch", ClassAttributeTypeToPropertyType__CONSISTENCY_32_localSearch.class);
+		classes.put("ClassAttributeTypeToPropertyType__FWD_41_localSearch", ClassAttributeTypeToPropertyType__FWD_41_localSearch.class);
+		classes.put("ClassConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_49_localSearch", ClassConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_49_localSearch.class);
+		classes.put("ClassConstructorToConstructor__CONSISTENCY_52_localSearch", ClassConstructorToConstructor__CONSISTENCY_52_localSearch.class);
+		classes.put("ClassConstructorToConstructor__FWD_60_localSearch", ClassConstructorToConstructor__FWD_60_localSearch.class);
+		classes.put("ClassFinalToFinal__CONSISTENCY_65_localSearch", ClassFinalToFinal__CONSISTENCY_65_localSearch.class);
+		classes.put("ClassFinalToFinal__FWD_71_localSearch", ClassFinalToFinal__FWD_71_localSearch.class);
+		classes.put("ClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_76_localSearch", ClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_76_localSearch.class);
+		classes.put("ClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_80_localSearch", ClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_80_localSearch.class);
+		classes.put("ClassImplementToClassImplement__CONSISTENCY_84_localSearch", ClassImplementToClassImplement__CONSISTENCY_84_localSearch.class);
+		classes.put("ClassImplementToClassImplement__FWD_94_localSearch", ClassImplementToClassImplement__FWD_94_localSearch.class);
+		classes.put("ClassMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_100_localSearch", ClassMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_100_localSearch.class);
+		classes.put("ClassMethodToMethod__CONSISTENCY_103_localSearch", ClassMethodToMethod__CONSISTENCY_103_localSearch.class);
+		classes.put("ClassMethodToMethod__FWD_111_localSearch", ClassMethodToMethod__FWD_111_localSearch.class);
+		classes.put("ClassPrivateToPrivate__CONSISTENCY_116_localSearch", ClassPrivateToPrivate__CONSISTENCY_116_localSearch.class);
+		classes.put("ClassPrivateToPrivate__FWD_122_localSearch", ClassPrivateToPrivate__FWD_122_localSearch.class);
+		classes.put("ClassProtectedToProtected__CONSISTENCY_127_localSearch", ClassProtectedToProtected__CONSISTENCY_127_localSearch.class);
+		classes.put("ClassProtectedToProtected__FWD_133_localSearch", ClassProtectedToProtected__FWD_133_localSearch.class);
+		classes.put("ClassPublicToPublic__CONSISTENCY_138_localSearch", ClassPublicToPublic__CONSISTENCY_138_localSearch.class);
+		classes.put("ClassPublicToPublic__FWD_144_localSearch", ClassPublicToPublic__FWD_144_localSearch.class);
+		classes.put("ClassToUmlClass__CONSISTENCY_149_localSearch", ClassToUmlClass__CONSISTENCY_149_localSearch.class);
+		classes.put("ClassToUmlClass__FWD_158_localSearch", ClassToUmlClass__FWD_158_localSearch.class);
+		classes.put("ConstructorClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_164_localSearch", ConstructorClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_164_localSearch.class);
+		classes.put("ConstructorClassParamTypeToParamType__CONSISTENCY_168_localSearch", ConstructorClassParamTypeToParamType__CONSISTENCY_168_localSearch.class);
+		classes.put("ConstructorClassParamTypeToParamType__FWD_180_localSearch", ConstructorClassParamTypeToParamType__FWD_180_localSearch.class);
+		classes.put("ConstructorEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_191_localSearch", ConstructorEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_191_localSearch.class);
+		classes.put("ConstructorEnumParamTypeToParamType__CONSISTENCY_195_localSearch", ConstructorEnumParamTypeToParamType__CONSISTENCY_195_localSearch.class);
+		classes.put("ConstructorEnumParamTypeToParamType__FWD_207_localSearch", ConstructorEnumParamTypeToParamType__FWD_207_localSearch.class);
+		classes.put("ConstructorInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_218_localSearch", ConstructorInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_218_localSearch.class);
+		classes.put("ConstructorInterfaceParamTypeToParamType__CONSISTENCY_222_localSearch", ConstructorInterfaceParamTypeToParamType__CONSISTENCY_222_localSearch.class);
+		classes.put("ConstructorInterfaceParamTypeToParamType__FWD_234_localSearch", ConstructorInterfaceParamTypeToParamType__FWD_234_localSearch.class);
+		classes.put("EnumAbstractToAbstract__CONSISTENCY_245_localSearch", EnumAbstractToAbstract__CONSISTENCY_245_localSearch.class);
+		classes.put("EnumAbstractToAbstract__FWD_251_localSearch", EnumAbstractToAbstract__FWD_251_localSearch.class);
+		classes.put("EnumAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_256_localSearch", EnumAttributeToProperty_property_ownedAttribute_incoming_TRG__FILTER_NAC_TRG_256_localSearch.class);
+		classes.put("EnumAttributeToProperty__CONSISTENCY_259_localSearch", EnumAttributeToProperty__CONSISTENCY_259_localSearch.class);
+		classes.put("EnumAttributeToProperty__FWD_267_localSearch", EnumAttributeToProperty__FWD_267_localSearch.class);
+		classes.put("EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_272_localSearch", EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_272_localSearch.class);
+		classes.put("EnumAttributeTypeToPropertyType__CONSISTENCY_276_localSearch", EnumAttributeTypeToPropertyType__CONSISTENCY_276_localSearch.class);
+		classes.put("EnumAttributeTypeToPropertyType__FWD_285_localSearch", EnumAttributeTypeToPropertyType__FWD_285_localSearch.class);
+		classes.put("EnumFinalToFinal__CONSISTENCY_293_localSearch", EnumFinalToFinal__CONSISTENCY_293_localSearch.class);
+		classes.put("EnumFinalToFinal__FWD_299_localSearch", EnumFinalToFinal__FWD_299_localSearch.class);
+		classes.put("EnumPrivateToPrivate__CONSISTENCY_304_localSearch", EnumPrivateToPrivate__CONSISTENCY_304_localSearch.class);
+		classes.put("EnumPrivateToPrivate__FWD_310_localSearch", EnumPrivateToPrivate__FWD_310_localSearch.class);
+		classes.put("EnumProtectedToProtected__CONSISTENCY_315_localSearch", EnumProtectedToProtected__CONSISTENCY_315_localSearch.class);
+		classes.put("EnumProtectedToProtected__FWD_321_localSearch", EnumProtectedToProtected__FWD_321_localSearch.class);
+		classes.put("EnumPublicToPublic__CONSISTENCY_326_localSearch", EnumPublicToPublic__CONSISTENCY_326_localSearch.class);
+		classes.put("EnumPublicToPublic__FWD_332_localSearch", EnumPublicToPublic__FWD_332_localSearch.class);
+		classes.put("EnumToUmlEnum__CONSISTENCY_337_localSearch", EnumToUmlEnum__CONSISTENCY_337_localSearch.class);
+		classes.put("EnumToUmlEnum__FWD_346_localSearch", EnumToUmlEnum__FWD_346_localSearch.class);
+		classes.put("ExistingClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_352_localSearch", ExistingClassImplementToClassImplement_interfaceTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_352_localSearch.class);
+		classes.put("ExistingClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_356_localSearch", ExistingClassImplementToClassImplement_umlInterfaceRealization_contract_outgoing_TRG__FILTER_NAC_TRG_356_localSearch.class);
+		classes.put("ExistingClassImplementToClassImplement__CONSISTENCY_360_localSearch", ExistingClassImplementToClassImplement__CONSISTENCY_360_localSearch.class);
+		classes.put("ExistingClassImplementToClassImplement__FWD_370_localSearch", ExistingClassImplementToClassImplement__FWD_370_localSearch.class);
+		classes.put("ExistingSuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_378_localSearch", ExistingSuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_378_localSearch.class);
+		classes.put("ExistingSuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_382_localSearch", ExistingSuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_382_localSearch.class);
+		classes.put("ExistingSuperClassToSuperClass__CONSISTENCY_386_localSearch", ExistingSuperClassToSuperClass__CONSISTENCY_386_localSearch.class);
+		classes.put("ExistingSuperClassToSuperClass__FWD_396_localSearch", ExistingSuperClassToSuperClass__FWD_396_localSearch.class);
+		classes.put("ExistingSuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_404_localSearch", ExistingSuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_404_localSearch.class);
+		classes.put("ExistingSuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_408_localSearch", ExistingSuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_408_localSearch.class);
+		classes.put("ExistingSuperInterfaceToSuperInterface__CONSISTENCY_412_localSearch", ExistingSuperInterfaceToSuperInterface__CONSISTENCY_412_localSearch.class);
+		classes.put("ExistingSuperInterfaceToSuperInterface__FWD_422_localSearch", ExistingSuperInterfaceToSuperInterface__FWD_422_localSearch.class);
+		classes.put("FieldFinalToFinal__CONSISTENCY_430_localSearch", FieldFinalToFinal__CONSISTENCY_430_localSearch.class);
+		classes.put("FieldFinalToFinal__FWD_436_localSearch", FieldFinalToFinal__FWD_436_localSearch.class);
+		classes.put("FieldStaticToStatic__CONSISTENCY_441_localSearch", FieldStaticToStatic__CONSISTENCY_441_localSearch.class);
+		classes.put("FieldStaticToStatic__FWD_447_localSearch", FieldStaticToStatic__FWD_447_localSearch.class);
+		classes.put("InterfaceAbstractToAbstract__CONSISTENCY_452_localSearch", InterfaceAbstractToAbstract__CONSISTENCY_452_localSearch.class);
+		classes.put("InterfaceAbstractToAbstract__FWD_458_localSearch", InterfaceAbstractToAbstract__FWD_458_localSearch.class);
+		classes.put("InterfaceAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_463_localSearch", InterfaceAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_463_localSearch.class);
+		classes.put("InterfaceAttributeTypeToPropertyType__CONSISTENCY_467_localSearch", InterfaceAttributeTypeToPropertyType__CONSISTENCY_467_localSearch.class);
+		classes.put("InterfaceAttributeTypeToPropertyType__FWD_476_localSearch", InterfaceAttributeTypeToPropertyType__FWD_476_localSearch.class);
+		classes.put("InterfaceConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_484_localSearch", InterfaceConstructorToConstructor_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_484_localSearch.class);
+		classes.put("InterfaceConstructorToConstructor__CONSISTENCY_487_localSearch", InterfaceConstructorToConstructor__CONSISTENCY_487_localSearch.class);
+		classes.put("InterfaceConstructorToConstructor__FWD_495_localSearch", InterfaceConstructorToConstructor__FWD_495_localSearch.class);
+		classes.put("InterfaceFinalToFinal__CONSISTENCY_500_localSearch", InterfaceFinalToFinal__CONSISTENCY_500_localSearch.class);
+		classes.put("InterfaceFinalToFinal__FWD_506_localSearch", InterfaceFinalToFinal__FWD_506_localSearch.class);
+		classes.put("InterfaceMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_511_localSearch", InterfaceMethodToMethod_umlOperation_ownedOperation_incoming_TRG__FILTER_NAC_TRG_511_localSearch.class);
+		classes.put("InterfaceMethodToMethod__CONSISTENCY_514_localSearch", InterfaceMethodToMethod__CONSISTENCY_514_localSearch.class);
+		classes.put("InterfaceMethodToMethod__FWD_522_localSearch", InterfaceMethodToMethod__FWD_522_localSearch.class);
+		classes.put("InterfacePrivateToPrivate__CONSISTENCY_527_localSearch", InterfacePrivateToPrivate__CONSISTENCY_527_localSearch.class);
+		classes.put("InterfacePrivateToPrivate__FWD_533_localSearch", InterfacePrivateToPrivate__FWD_533_localSearch.class);
+		classes.put("InterfaceProtectedToProtected__CONSISTENCY_538_localSearch", InterfaceProtectedToProtected__CONSISTENCY_538_localSearch.class);
+		classes.put("InterfaceProtectedToProtected__FWD_544_localSearch", InterfaceProtectedToProtected__FWD_544_localSearch.class);
+		classes.put("InterfacePublicToPublic__CONSISTENCY_549_localSearch", InterfacePublicToPublic__CONSISTENCY_549_localSearch.class);
+		classes.put("InterfacePublicToPublic__FWD_555_localSearch", InterfacePublicToPublic__FWD_555_localSearch.class);
+		classes.put("InterfaceToUmlInterface__CONSISTENCY_560_localSearch", InterfaceToUmlInterface__CONSISTENCY_560_localSearch.class);
+		classes.put("InterfaceToUmlInterface__FWD_569_localSearch", InterfaceToUmlInterface__FWD_569_localSearch.class);
+		classes.put("JavaCompilationUnitToExistingUmlModel__CONSISTENCY_575_localSearch", JavaCompilationUnitToExistingUmlModel__CONSISTENCY_575_localSearch.class);
+		classes.put("JavaCompilationUnitToExistingUmlModel__FWD_583_localSearch", JavaCompilationUnitToExistingUmlModel__FWD_583_localSearch.class);
+		classes.put("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_589_localSearch", JavaFirstCompilationUnitToUmlModel__CONSISTENCY_589_localSearch.class);
+		classes.put("JavaFirstCompilationUnitToUmlModel__FWD_605_localSearch", JavaFirstCompilationUnitToUmlModel__FWD_605_localSearch.class);
+		classes.put("MethodAbstractToAbstract__CONSISTENCY_608_localSearch", MethodAbstractToAbstract__CONSISTENCY_608_localSearch.class);
+		classes.put("MethodAbstractToAbstract__FWD_614_localSearch", MethodAbstractToAbstract__FWD_614_localSearch.class);
+		classes.put("MethodClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_619_localSearch", MethodClassParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_619_localSearch.class);
+		createJunctionNodes_1();
+			}	
+		
+			private void createJunctionNodes_1() {
+		classes.put("MethodClassParamTypeToParamType__CONSISTENCY_623_localSearch", MethodClassParamTypeToParamType__CONSISTENCY_623_localSearch.class);
+		classes.put("MethodClassParamTypeToParamType__FWD_635_localSearch", MethodClassParamTypeToParamType__FWD_635_localSearch.class);
+		classes.put("MethodClassReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_646_localSearch", MethodClassReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_646_localSearch.class);
+		classes.put("MethodClassReturnTypeToReturnType__CONSISTENCY_650_localSearch", MethodClassReturnTypeToReturnType__CONSISTENCY_650_localSearch.class);
+		classes.put("MethodClassReturnTypeToReturnType__FWD_661_localSearch", MethodClassReturnTypeToReturnType__FWD_661_localSearch.class);
+		classes.put("MethodEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_669_localSearch", MethodEnumParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_669_localSearch.class);
+		classes.put("MethodEnumParamTypeToParamType__CONSISTENCY_673_localSearch", MethodEnumParamTypeToParamType__CONSISTENCY_673_localSearch.class);
+		classes.put("MethodEnumParamTypeToParamType__FWD_685_localSearch", MethodEnumParamTypeToParamType__FWD_685_localSearch.class);
+		classes.put("MethodEnumReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_696_localSearch", MethodEnumReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_696_localSearch.class);
+		classes.put("MethodEnumReturnTypeToReturnType__CONSISTENCY_700_localSearch", MethodEnumReturnTypeToReturnType__CONSISTENCY_700_localSearch.class);
+		classes.put("MethodEnumReturnTypeToReturnType__FWD_711_localSearch", MethodEnumReturnTypeToReturnType__FWD_711_localSearch.class);
+		classes.put("MethodFinalToFinal__CONSISTENCY_719_localSearch", MethodFinalToFinal__CONSISTENCY_719_localSearch.class);
+		classes.put("MethodFinalToFinal__FWD_725_localSearch", MethodFinalToFinal__FWD_725_localSearch.class);
+		classes.put("MethodInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_730_localSearch", MethodInterfaceParamTypeToParamType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_730_localSearch.class);
+		classes.put("MethodInterfaceParamTypeToParamType__CONSISTENCY_734_localSearch", MethodInterfaceParamTypeToParamType__CONSISTENCY_734_localSearch.class);
+		classes.put("MethodInterfaceParamTypeToParamType__FWD_746_localSearch", MethodInterfaceParamTypeToParamType__FWD_746_localSearch.class);
+		classes.put("MethodInterfaceReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_757_localSearch", MethodInterfaceReturnTypeToReturnType_typeReference_target_outgoing_SRC__FILTER_NAC_SRC_757_localSearch.class);
+		classes.put("MethodInterfaceReturnTypeToReturnType__CONSISTENCY_761_localSearch", MethodInterfaceReturnTypeToReturnType__CONSISTENCY_761_localSearch.class);
+		classes.put("MethodInterfaceReturnTypeToReturnType__FWD_772_localSearch", MethodInterfaceReturnTypeToReturnType__FWD_772_localSearch.class);
+		classes.put("MethodStaticToStatic__CONSISTENCY_780_localSearch", MethodStaticToStatic__CONSISTENCY_780_localSearch.class);
+		classes.put("MethodStaticToStatic__FWD_786_localSearch", MethodStaticToStatic__FWD_786_localSearch.class);
+		classes.put("OrdinaryConstructorParameterToParameter__CONSISTENCY_791_localSearch", OrdinaryConstructorParameterToParameter__CONSISTENCY_791_localSearch.class);
+		classes.put("OrdinaryConstructorParameterToParameter__FWD_799_localSearch", OrdinaryConstructorParameterToParameter__FWD_799_localSearch.class);
+		classes.put("OrdinaryMethodParameterToParameter__CONSISTENCY_804_localSearch", OrdinaryMethodParameterToParameter__CONSISTENCY_804_localSearch.class);
+		classes.put("OrdinaryMethodParameterToParameter__FWD_812_localSearch", OrdinaryMethodParameterToParameter__FWD_812_localSearch.class);
+		classes.put("RootJavaPackageToUmlPackage_umlPackage_package_incoming_TRG__FILTER_NAC_TRG_817_localSearch", RootJavaPackageToUmlPackage_umlPackage_package_incoming_TRG__FILTER_NAC_TRG_817_localSearch.class);
+		classes.put("RootJavaPackageToUmlPackage__CONSISTENCY_820_localSearch", RootJavaPackageToUmlPackage__CONSISTENCY_820_localSearch.class);
+		classes.put("SuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_826_localSearch", SuperClassToSuperClass_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_826_localSearch.class);
+		classes.put("SuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_830_localSearch", SuperClassToSuperClass_generalization_general_outgoing_TRG__FILTER_NAC_TRG_830_localSearch.class);
+		classes.put("SuperClassToSuperClass__CONSISTENCY_834_localSearch", SuperClassToSuperClass__CONSISTENCY_834_localSearch.class);
+		classes.put("SuperClassToSuperClass__FWD_845_localSearch", SuperClassToSuperClass__FWD_845_localSearch.class);
+		classes.put("SuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_851_localSearch", SuperInterfaceToSuperInterface_superclassTypeRef_target_outgoing_SRC__FILTER_NAC_SRC_851_localSearch.class);
+		classes.put("SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_855_localSearch", SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_855_localSearch.class);
+		classes.put("SuperInterfaceToSuperInterface__CONSISTENCY_859_localSearch", SuperInterfaceToSuperInterface__CONSISTENCY_859_localSearch.class);
+		classes.put("SuperInterfaceToSuperInterface__FWD_870_localSearch", SuperInterfaceToSuperInterface__FWD_870_localSearch.class);
+		classes.put("VariableLengthConstructorParameterToParameter__CONSISTENCY_876_localSearch", VariableLengthConstructorParameterToParameter__CONSISTENCY_876_localSearch.class);
+		classes.put("VariableLengthConstructorParameterToParameter__FWD_885_localSearch", VariableLengthConstructorParameterToParameter__FWD_885_localSearch.class);
+		classes.put("VariableLengthMethodParameterToParameter__CONSISTENCY_890_localSearch", VariableLengthMethodParameterToParameter__CONSISTENCY_890_localSearch.class);
+		classes.put("VariableLengthMethodParameterToParameter__FWD_899_localSearch", VariableLengthMethodParameterToParameter__FWD_899_localSearch.class);
+	}
+	
+	@Override
+	public void createReferenceNodes() {
+		
+	}
+	
+	@Override
+	public void createObjectNodes() {
+		classes.put("ClassAbstractToAbstract__Marker_object",ClassAbstractToAbstract__Marker_object.class);
+		classes.put("ClassAttributeToProperty__Marker_object",ClassAttributeToProperty__Marker_object.class);
+		classes.put("DataType_object",DataType_object.class);
+		classes.put("ClassAttributeTypeToPropertyType__Marker_object",ClassAttributeTypeToPropertyType__Marker_object.class);
+		classes.put("ClassConstructorToConstructor__Marker_object",ClassConstructorToConstructor__Marker_object.class);
+		classes.put("ClassFinalToFinal__Marker_object",ClassFinalToFinal__Marker_object.class);
+		classes.put("InterfaceRealization_object",InterfaceRealization_object.class);
+		classes.put("ClassImplementToClassImplement__Marker_object",ClassImplementToClassImplement__Marker_object.class);
+		classes.put("ClassMethodToMethod__Marker_object",ClassMethodToMethod__Marker_object.class);
+		classes.put("ClassPrivateToPrivate__Marker_object",ClassPrivateToPrivate__Marker_object.class);
+		classes.put("ClassProtectedToProtected__Marker_object",ClassProtectedToProtected__Marker_object.class);
+		classes.put("ClassPublicToPublic__Marker_object",ClassPublicToPublic__Marker_object.class);
+		classes.put("ClassToUmlClass__Marker_object",ClassToUmlClass__Marker_object.class);
+		classes.put("ConstructorClassParamTypeToParamType__Marker_object",ConstructorClassParamTypeToParamType__Marker_object.class);
+		classes.put("ConstructorEnumParamTypeToParamType__Marker_object",ConstructorEnumParamTypeToParamType__Marker_object.class);
+		classes.put("ConstructorInterfaceParamTypeToParamType__Marker_object",ConstructorInterfaceParamTypeToParamType__Marker_object.class);
+		classes.put("EnumAbstractToAbstract__Marker_object",EnumAbstractToAbstract__Marker_object.class);
+		classes.put("EnumAttributeToProperty__Marker_object",EnumAttributeToProperty__Marker_object.class);
+		classes.put("StructuredClassifier_object",StructuredClassifier_object.class);
+		classes.put("EnumAttributeTypeToPropertyType__Marker_object",EnumAttributeTypeToPropertyType__Marker_object.class);
+		classes.put("EnumFinalToFinal__Marker_object",EnumFinalToFinal__Marker_object.class);
+		classes.put("EnumPrivateToPrivate__Marker_object",EnumPrivateToPrivate__Marker_object.class);
+		classes.put("EnumProtectedToProtected__Marker_object",EnumProtectedToProtected__Marker_object.class);
+		classes.put("EnumPublicToPublic__Marker_object",EnumPublicToPublic__Marker_object.class);
+		classes.put("EnumToUmlEnum__Marker_object",EnumToUmlEnum__Marker_object.class);
+		classes.put("ExistingClassImplementToClassImplement__Marker_object",ExistingClassImplementToClassImplement__Marker_object.class);
+		classes.put("ExistingSuperClassToSuperClass__Marker_object",ExistingSuperClassToSuperClass__Marker_object.class);
+		classes.put("Classifier_1_object",Classifier_1_object.class);
+		classes.put("ExistingSuperInterfaceToSuperInterface__Marker_object",ExistingSuperInterfaceToSuperInterface__Marker_object.class);
+		classes.put("FieldFinalToFinal__Marker_object",FieldFinalToFinal__Marker_object.class);
+		classes.put("Static_object",Static_object.class);
+		classes.put("FieldStaticToStatic__Marker_object",FieldStaticToStatic__Marker_object.class);
+		classes.put("InterfaceAbstractToAbstract__Marker_object",InterfaceAbstractToAbstract__Marker_object.class);
+		classes.put("InterfaceAttributeTypeToPropertyType__Marker_object",InterfaceAttributeTypeToPropertyType__Marker_object.class);
+		classes.put("InterfaceConstructorToConstructor__Marker_object",InterfaceConstructorToConstructor__Marker_object.class);
+		classes.put("InterfaceFinalToFinal__Marker_object",InterfaceFinalToFinal__Marker_object.class);
+		classes.put("InterfaceMethodToMethod__Marker_object",InterfaceMethodToMethod__Marker_object.class);
+		classes.put("InterfacePrivateToPrivate__Marker_object",InterfacePrivateToPrivate__Marker_object.class);
+		classes.put("InterfaceProtectedToProtected__Marker_object",InterfaceProtectedToProtected__Marker_object.class);
+		classes.put("InterfacePublicToPublic__Marker_object",InterfacePublicToPublic__Marker_object.class);
+		classes.put("InterfaceToUmlInterface__Marker_object",InterfaceToUmlInterface__Marker_object.class);
+		classes.put("Model_object",Model_object.class);
+		classes.put("JavaCompilationUnitToUmlModel_object",JavaCompilationUnitToUmlModel_object.class);
+		classes.put("JavaCompilationUnitToExistingUmlModel__Marker_object",JavaCompilationUnitToExistingUmlModel__Marker_object.class);
+		classes.put("PrimitiveType_object",PrimitiveType_object.class);
+		classes.put("JavaFirstCompilationUnitToUmlModel__Marker_object",JavaFirstCompilationUnitToUmlModel__Marker_object.class);
+		classes.put("MethodAbstractToAbstract__Marker_object",MethodAbstractToAbstract__Marker_object.class);
+		classes.put("MethodClassParamTypeToParamType__Marker_object",MethodClassParamTypeToParamType__Marker_object.class);
+		classes.put("JavaTypeReferenceToUmlReturnParameter_object",JavaTypeReferenceToUmlReturnParameter_object.class);
+		classes.put("MethodClassReturnTypeToReturnType__Marker_object",MethodClassReturnTypeToReturnType__Marker_object.class);
+		classes.put("MethodEnumParamTypeToParamType__Marker_object",MethodEnumParamTypeToParamType__Marker_object.class);
+		classes.put("MethodEnumReturnTypeToReturnType__Marker_object",MethodEnumReturnTypeToReturnType__Marker_object.class);
+		classes.put("MethodFinalToFinal__Marker_object",MethodFinalToFinal__Marker_object.class);
+		classes.put("MethodInterfaceParamTypeToParamType__Marker_object",MethodInterfaceParamTypeToParamType__Marker_object.class);
+		classes.put("MethodInterfaceReturnTypeToReturnType__Marker_object",MethodInterfaceReturnTypeToReturnType__Marker_object.class);
+		classes.put("MethodStaticToStatic__Marker_object",MethodStaticToStatic__Marker_object.class);
+		classes.put("OrdinaryParameter_object",OrdinaryParameter_object.class);
+		classes.put("OrdinaryConstructorParameterToParameter__Marker_object",OrdinaryConstructorParameterToParameter__Marker_object.class);
+		classes.put("OrdinaryMethodParameterToParameter__Marker_object",OrdinaryMethodParameterToParameter__Marker_object.class);
+		classes.put("RootJavaPackageToUmlPackage__Marker_object",RootJavaPackageToUmlPackage__Marker_object.class);
+		classes.put("Type_object",Type_object.class);
+		classes.put("JavaClassifierReferenceToUmlGeneralization_object",JavaClassifierReferenceToUmlGeneralization_object.class);
+		classes.put("SuperClassToSuperClass__Marker_object",SuperClassToSuperClass__Marker_object.class);
+		classes.put("SuperInterfaceToSuperInterface__Marker_object",SuperInterfaceToSuperInterface__Marker_object.class);
+		classes.put("VariableLengthParameter_object",VariableLengthParameter_object.class);
+		classes.put("LiteralUnlimitedNatural_object",LiteralUnlimitedNatural_object.class);
+		classes.put("VariableLengthConstructorParameterToParameter__Marker_object",VariableLengthConstructorParameterToParameter__Marker_object.class);
+		classes.put("VariableLengthMethodParameterToParameter__Marker_object",VariableLengthMethodParameterToParameter__Marker_object.class);
+		classes.put("Class_object_SP0",Class_object_SP0.class);
+		classes.put("Class_object_SP1",Class_object_SP1.class);
+		classes.put("Class_object_SP2",Class_object_SP2.class);
+		classes.put("Class_object_SP3",Class_object_SP3.class);
+		classes.put("Class_object_SP4",Class_object_SP4.class);
+		classes.put("Class_object_SP5",Class_object_SP5.class);
+		classes.put("Class_object_SP6",Class_object_SP6.class);
+		classes.put("Class_object_SP7",Class_object_SP7.class);
+		classes.put("Class_object_SP8",Class_object_SP8.class);
+		classes.put("Class_object_SP9",Class_object_SP9.class);
+		classes.put("Abstract_object_SP0",Abstract_object_SP0.class);
+		classes.put("Abstract_object_SP1",Abstract_object_SP1.class);
+		classes.put("Class_1_object_SP0",Class_1_object_SP0.class);
+		classes.put("Class_1_object_SP1",Class_1_object_SP1.class);
+		classes.put("Class_1_object_SP2",Class_1_object_SP2.class);
+		classes.put("Class_1_object_SP3",Class_1_object_SP3.class);
+		classes.put("Class_1_object_SP4",Class_1_object_SP4.class);
+		classes.put("Class_1_object_SP5",Class_1_object_SP5.class);
+		classes.put("Class_1_object_SP6",Class_1_object_SP6.class);
+		classes.put("Class_1_object_SP7",Class_1_object_SP7.class);
+		classes.put("Class_1_object_SP8",Class_1_object_SP8.class);
+		classes.put("Class_1_object_SP9",Class_1_object_SP9.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP0",JavaClassifierToUmlClassifier_object_SP0.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP1",JavaClassifierToUmlClassifier_object_SP1.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP2",JavaClassifierToUmlClassifier_object_SP2.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP3",JavaClassifierToUmlClassifier_object_SP3.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP4",JavaClassifierToUmlClassifier_object_SP4.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP5",JavaClassifierToUmlClassifier_object_SP5.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP6",JavaClassifierToUmlClassifier_object_SP6.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP7",JavaClassifierToUmlClassifier_object_SP7.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP8",JavaClassifierToUmlClassifier_object_SP8.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP9",JavaClassifierToUmlClassifier_object_SP9.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP10",JavaClassifierToUmlClassifier_object_SP10.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP11",JavaClassifierToUmlClassifier_object_SP11.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP12",JavaClassifierToUmlClassifier_object_SP12.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP13",JavaClassifierToUmlClassifier_object_SP13.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP14",JavaClassifierToUmlClassifier_object_SP14.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP15",JavaClassifierToUmlClassifier_object_SP15.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP16",JavaClassifierToUmlClassifier_object_SP16.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP17",JavaClassifierToUmlClassifier_object_SP17.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP18",JavaClassifierToUmlClassifier_object_SP18.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP19",JavaClassifierToUmlClassifier_object_SP19.class);
+		classes.put("JavaClassifierToUmlClassifier_object_SP20",JavaClassifierToUmlClassifier_object_SP20.class);
+		classes.put("Field_object_SP0",Field_object_SP0.class);
+		classes.put("Field_object_SP1",Field_object_SP1.class);
+		classes.put("Field_object_SP2",Field_object_SP2.class);
+		classes.put("Field_object_SP3",Field_object_SP3.class);
+		classes.put("Property_object_SP0",Property_object_SP0.class);
+		classes.put("Property_object_SP1",Property_object_SP1.class);
+		classes.put("Property_object_SP2",Property_object_SP2.class);
+		classes.put("Property_object_SP3",Property_object_SP3.class);
+		classes.put("JavaAttributeToUmlProperty_object_SP0",JavaAttributeToUmlProperty_object_SP0.class);
+		classes.put("JavaAttributeToUmlProperty_object_SP1",JavaAttributeToUmlProperty_object_SP1.class);
+		classes.put("JavaAttributeToUmlProperty_object_SP2",JavaAttributeToUmlProperty_object_SP2.class);
+		classes.put("ClassifierReference_object_SP0",ClassifierReference_object_SP0.class);
+		classes.put("ClassifierReference_object_SP1",ClassifierReference_object_SP1.class);
+		classes.put("ClassifierReference_object_SP2",ClassifierReference_object_SP2.class);
+		classes.put("ClassifierReference_object_SP3",ClassifierReference_object_SP3.class);
+		classes.put("ClassifierReference_object_SP4",ClassifierReference_object_SP4.class);
+		classes.put("ClassifierReference_object_SP5",ClassifierReference_object_SP5.class);
+		classes.put("ClassifierReference_object_SP6",ClassifierReference_object_SP6.class);
+		classes.put("ClassifierReference_object_SP7",ClassifierReference_object_SP7.class);
+		classes.put("ClassifierReference_object_SP8",ClassifierReference_object_SP8.class);
+		classes.put("ClassifierReference_object_SP9",ClassifierReference_object_SP9.class);
+		classes.put("ClassifierReference_object_SP10",ClassifierReference_object_SP10.class);
+		classes.put("ClassifierReference_object_SP11",ClassifierReference_object_SP11.class);
+		classes.put("ClassifierReference_object_SP12",ClassifierReference_object_SP12.class);
+		classes.put("ClassifierReference_object_SP13",ClassifierReference_object_SP13.class);
+		classes.put("Classifier_object_SP0",Classifier_object_SP0.class);
+		classes.put("Classifier_object_SP1",Classifier_object_SP1.class);
+		classes.put("Classifier_object_SP2",Classifier_object_SP2.class);
+		classes.put("Classifier_object_SP3",Classifier_object_SP3.class);
+		classes.put("Classifier_object_SP4",Classifier_object_SP4.class);
+		classes.put("Constructor_object_SP0",Constructor_object_SP0.class);
+		classes.put("Constructor_object_SP1",Constructor_object_SP1.class);
+		classes.put("Constructor_object_SP2",Constructor_object_SP2.class);
+		classes.put("Constructor_object_SP3",Constructor_object_SP3.class);
+		classes.put("Operation_object_SP0",Operation_object_SP0.class);
+		classes.put("Operation_object_SP1",Operation_object_SP1.class);
+		classes.put("Operation_object_SP2",Operation_object_SP2.class);
+		classes.put("Operation_object_SP3",Operation_object_SP3.class);
+		classes.put("Operation_object_SP4",Operation_object_SP4.class);
+		classes.put("Operation_object_SP5",Operation_object_SP5.class);
+		classes.put("Operation_object_SP6",Operation_object_SP6.class);
+		classes.put("Operation_object_SP7",Operation_object_SP7.class);
+		classes.put("Operation_object_SP8",Operation_object_SP8.class);
+		classes.put("Operation_object_SP9",Operation_object_SP9.class);
+		classes.put("JavaConstructorToOperation_object_SP0",JavaConstructorToOperation_object_SP0.class);
+		classes.put("JavaConstructorToOperation_object_SP1",JavaConstructorToOperation_object_SP1.class);
+		classes.put("JavaConstructorToOperation_object_SP2",JavaConstructorToOperation_object_SP2.class);
+		classes.put("Interface_object_SP0",Interface_object_SP0.class);
+		classes.put("Interface_object_SP1",Interface_object_SP1.class);
+		classes.put("Interface_object_SP2",Interface_object_SP2.class);
+		classes.put("Interface_object_SP3",Interface_object_SP3.class);
+		classes.put("Interface_object_SP4",Interface_object_SP4.class);
+		classes.put("Interface_object_SP5",Interface_object_SP5.class);
+		classes.put("Interface_object_SP6",Interface_object_SP6.class);
+		classes.put("Interface_object_SP7",Interface_object_SP7.class);
+		classes.put("Interface_object_SP8",Interface_object_SP8.class);
+		classes.put("Final_object_SP0",Final_object_SP0.class);
+		classes.put("Final_object_SP1",Final_object_SP1.class);
+		classes.put("Final_object_SP2",Final_object_SP2.class);
+		classes.put("Interface_1_object_SP0",Interface_1_object_SP0.class);
+		classes.put("Interface_1_object_SP1",Interface_1_object_SP1.class);
+		classes.put("Interface_1_object_SP2",Interface_1_object_SP2.class);
+		classes.put("Interface_1_object_SP3",Interface_1_object_SP3.class);
+		classes.put("Interface_1_object_SP4",Interface_1_object_SP4.class);
+		classes.put("Interface_1_object_SP5",Interface_1_object_SP5.class);
+		classes.put("Interface_1_object_SP6",Interface_1_object_SP6.class);
+		classes.put("Interface_1_object_SP7",Interface_1_object_SP7.class);
+		classes.put("Interface_1_object_SP8",Interface_1_object_SP8.class);
+		classes.put("Interface_1_object_SP9",Interface_1_object_SP9.class);
+		classes.put("ClassMethod_object_SP0",ClassMethod_object_SP0.class);
+		classes.put("ClassMethod_object_SP1",ClassMethod_object_SP1.class);
+		classes.put("ClassMethod_object_SP2",ClassMethod_object_SP2.class);
+		classes.put("ClassMethod_object_SP3",ClassMethod_object_SP3.class);
+		classes.put("ClassMethod_object_SP4",ClassMethod_object_SP4.class);
+		classes.put("ClassMethod_object_SP5",ClassMethod_object_SP5.class);
+		classes.put("ClassMethod_object_SP6",ClassMethod_object_SP6.class);
+		classes.put("JavaMethodToOperation_object_SP0",JavaMethodToOperation_object_SP0.class);
+		classes.put("JavaMethodToOperation_object_SP1",JavaMethodToOperation_object_SP1.class);
+		classes.put("JavaMethodToOperation_object_SP2",JavaMethodToOperation_object_SP2.class);
+		classes.put("JavaMethodToOperation_object_SP3",JavaMethodToOperation_object_SP3.class);
+		classes.put("JavaMethodToOperation_object_SP4",JavaMethodToOperation_object_SP4.class);
+		classes.put("JavaMethodToOperation_object_SP5",JavaMethodToOperation_object_SP5.class);
+		classes.put("Private_object_SP0",Private_object_SP0.class);
+		classes.put("Private_object_SP1",Private_object_SP1.class);
+		classes.put("Protected_object_SP0",Protected_object_SP0.class);
+		classes.put("Protected_object_SP1",Protected_object_SP1.class);
+		classes.put("Public_object_SP0",Public_object_SP0.class);
+		classes.put("Public_object_SP1",Public_object_SP1.class);
+		classes.put("CompilationUnit_object_SP0",CompilationUnit_object_SP0.class);
+		classes.put("CompilationUnit_object_SP1",CompilationUnit_object_SP1.class);
+		classes.put("CompilationUnit_object_SP2",CompilationUnit_object_SP2.class);
+		classes.put("Package_object_SP0",Package_object_SP0.class);
+		classes.put("Package_object_SP1",Package_object_SP1.class);
+		classes.put("Package_object_SP2",Package_object_SP2.class);
+		classes.put("Package_1_object_SP0",Package_1_object_SP0.class);
+		classes.put("Package_1_object_SP1",Package_1_object_SP1.class);
+		classes.put("JavaPackageToUmlPackage_object_SP0",JavaPackageToUmlPackage_object_SP0.class);
+		classes.put("JavaPackageToUmlPackage_object_SP1",JavaPackageToUmlPackage_object_SP1.class);
+		classes.put("Parameter_object_SP0",Parameter_object_SP0.class);
+		classes.put("Parameter_object_SP1",Parameter_object_SP1.class);
+		classes.put("Parameter_object_SP2",Parameter_object_SP2.class);
+		classes.put("Parameter_1_object_SP0",Parameter_1_object_SP0.class);
+		classes.put("Parameter_1_object_SP1",Parameter_1_object_SP1.class);
+		classes.put("Parameter_1_object_SP2",Parameter_1_object_SP2.class);
+		classes.put("Parameter_1_object_SP3",Parameter_1_object_SP3.class);
+		classes.put("Parameter_1_object_SP4",Parameter_1_object_SP4.class);
+		classes.put("JavaParameterToParameter_object_SP0",JavaParameterToParameter_object_SP0.class);
+		classes.put("JavaParameterToParameter_object_SP1",JavaParameterToParameter_object_SP1.class);
+		classes.put("JavaParameterToParameter_object_SP2",JavaParameterToParameter_object_SP2.class);
+		classes.put("JavaParameterToParameter_object_SP3",JavaParameterToParameter_object_SP3.class);
+		classes.put("Enumeration_object_SP0",Enumeration_object_SP0.class);
+		classes.put("Enumeration_object_SP1",Enumeration_object_SP1.class);
+		classes.put("Enumeration_object_SP2",Enumeration_object_SP2.class);
+		classes.put("Enumeration_object_SP3",Enumeration_object_SP3.class);
+		classes.put("Enumeration_object_SP4",Enumeration_object_SP4.class);
+		classes.put("Enumeration_object_SP5",Enumeration_object_SP5.class);
+		classes.put("Enumeration_object_SP6",Enumeration_object_SP6.class);
+		classes.put("Enumeration_1_object_SP0",Enumeration_1_object_SP0.class);
+		classes.put("Enumeration_1_object_SP1",Enumeration_1_object_SP1.class);
+		classes.put("Enumeration_1_object_SP2",Enumeration_1_object_SP2.class);
+		classes.put("Enumeration_1_object_SP3",Enumeration_1_object_SP3.class);
+		classes.put("Enumeration_1_object_SP4",Enumeration_1_object_SP4.class);
+		classes.put("Enumeration_1_object_SP5",Enumeration_1_object_SP5.class);
+		classes.put("Generalization_object_SP0",Generalization_object_SP0.class);
+		classes.put("Generalization_object_SP1",Generalization_object_SP1.class);
+		
+	}
+	
+	@Override
+	public void initializeReferenceNodes() {
+	}
+}
+
+class ClassAbstractToAbstract__Marker_object extends GenericObjectActor<Java2Uml.ClassAbstractToAbstract__Marker> { }
+class ClassAttributeToProperty__Marker_object extends GenericObjectActor<Java2Uml.ClassAttributeToProperty__Marker> { }
+class DataType_object extends GenericObjectActor<uml.DataType> { }
+class ClassAttributeTypeToPropertyType__Marker_object extends GenericObjectActor<Java2Uml.ClassAttributeTypeToPropertyType__Marker> { }
+class ClassConstructorToConstructor__Marker_object extends GenericObjectActor<Java2Uml.ClassConstructorToConstructor__Marker> { }
+class ClassFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.ClassFinalToFinal__Marker> { }
+class InterfaceRealization_object extends GenericObjectActor<uml.InterfaceRealization> { }
+class ClassImplementToClassImplement__Marker_object extends GenericObjectActor<Java2Uml.ClassImplementToClassImplement__Marker> { }
+class ClassMethodToMethod__Marker_object extends GenericObjectActor<Java2Uml.ClassMethodToMethod__Marker> { }
+class ClassPrivateToPrivate__Marker_object extends GenericObjectActor<Java2Uml.ClassPrivateToPrivate__Marker> { }
+class ClassProtectedToProtected__Marker_object extends GenericObjectActor<Java2Uml.ClassProtectedToProtected__Marker> { }
+class ClassPublicToPublic__Marker_object extends GenericObjectActor<Java2Uml.ClassPublicToPublic__Marker> { }
+class ClassToUmlClass__Marker_object extends GenericObjectActor<Java2Uml.ClassToUmlClass__Marker> { }
+class ConstructorClassParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.ConstructorClassParamTypeToParamType__Marker> { }
+class ConstructorEnumParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.ConstructorEnumParamTypeToParamType__Marker> { }
+class ConstructorInterfaceParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.ConstructorInterfaceParamTypeToParamType__Marker> { }
+class EnumAbstractToAbstract__Marker_object extends GenericObjectActor<Java2Uml.EnumAbstractToAbstract__Marker> { }
+class EnumAttributeToProperty__Marker_object extends GenericObjectActor<Java2Uml.EnumAttributeToProperty__Marker> { }
+class StructuredClassifier_object extends GenericObjectActor<uml.StructuredClassifier> { }
+class EnumAttributeTypeToPropertyType__Marker_object extends GenericObjectActor<Java2Uml.EnumAttributeTypeToPropertyType__Marker> { }
+class EnumFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.EnumFinalToFinal__Marker> { }
+class EnumPrivateToPrivate__Marker_object extends GenericObjectActor<Java2Uml.EnumPrivateToPrivate__Marker> { }
+class EnumProtectedToProtected__Marker_object extends GenericObjectActor<Java2Uml.EnumProtectedToProtected__Marker> { }
+class EnumPublicToPublic__Marker_object extends GenericObjectActor<Java2Uml.EnumPublicToPublic__Marker> { }
+class EnumToUmlEnum__Marker_object extends GenericObjectActor<Java2Uml.EnumToUmlEnum__Marker> { }
+class ExistingClassImplementToClassImplement__Marker_object extends GenericObjectActor<Java2Uml.ExistingClassImplementToClassImplement__Marker> { }
+class ExistingSuperClassToSuperClass__Marker_object extends GenericObjectActor<Java2Uml.ExistingSuperClassToSuperClass__Marker> { }
+class Classifier_1_object extends GenericObjectActor<uml.Classifier> { }
+class ExistingSuperInterfaceToSuperInterface__Marker_object extends GenericObjectActor<Java2Uml.ExistingSuperInterfaceToSuperInterface__Marker> { }
+class FieldFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.FieldFinalToFinal__Marker> { }
+class Static_object extends GenericObjectActor<org.emftext.language.java.modifiers.Static> { }
+class FieldStaticToStatic__Marker_object extends GenericObjectActor<Java2Uml.FieldStaticToStatic__Marker> { }
+class InterfaceAbstractToAbstract__Marker_object extends GenericObjectActor<Java2Uml.InterfaceAbstractToAbstract__Marker> { }
+class InterfaceAttributeTypeToPropertyType__Marker_object extends GenericObjectActor<Java2Uml.InterfaceAttributeTypeToPropertyType__Marker> { }
+class InterfaceConstructorToConstructor__Marker_object extends GenericObjectActor<Java2Uml.InterfaceConstructorToConstructor__Marker> { }
+class InterfaceFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.InterfaceFinalToFinal__Marker> { }
+class InterfaceMethodToMethod__Marker_object extends GenericObjectActor<Java2Uml.InterfaceMethodToMethod__Marker> { }
+class InterfacePrivateToPrivate__Marker_object extends GenericObjectActor<Java2Uml.InterfacePrivateToPrivate__Marker> { }
+class InterfaceProtectedToProtected__Marker_object extends GenericObjectActor<Java2Uml.InterfaceProtectedToProtected__Marker> { }
+class InterfacePublicToPublic__Marker_object extends GenericObjectActor<Java2Uml.InterfacePublicToPublic__Marker> { }
+class InterfaceToUmlInterface__Marker_object extends GenericObjectActor<Java2Uml.InterfaceToUmlInterface__Marker> { }
+class Model_object extends GenericObjectActor<uml.Model> { }
+class JavaCompilationUnitToUmlModel_object extends GenericObjectActor<Java2Uml.JavaCompilationUnitToUmlModel> { }
+class JavaCompilationUnitToExistingUmlModel__Marker_object extends GenericObjectActor<Java2Uml.JavaCompilationUnitToExistingUmlModel__Marker> { }
+class PrimitiveType_object extends GenericObjectActor<uml.PrimitiveType> { }
+class JavaFirstCompilationUnitToUmlModel__Marker_object extends GenericObjectActor<Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker> { }
+class MethodAbstractToAbstract__Marker_object extends GenericObjectActor<Java2Uml.MethodAbstractToAbstract__Marker> { }
+class MethodClassParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.MethodClassParamTypeToParamType__Marker> { }
+class JavaTypeReferenceToUmlReturnParameter_object extends GenericObjectActor<Java2Uml.JavaTypeReferenceToUmlReturnParameter> { }
+class MethodClassReturnTypeToReturnType__Marker_object extends GenericObjectActor<Java2Uml.MethodClassReturnTypeToReturnType__Marker> { }
+class MethodEnumParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.MethodEnumParamTypeToParamType__Marker> { }
+class MethodEnumReturnTypeToReturnType__Marker_object extends GenericObjectActor<Java2Uml.MethodEnumReturnTypeToReturnType__Marker> { }
+class MethodFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.MethodFinalToFinal__Marker> { }
+class MethodInterfaceParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.MethodInterfaceParamTypeToParamType__Marker> { }
+class MethodInterfaceReturnTypeToReturnType__Marker_object extends GenericObjectActor<Java2Uml.MethodInterfaceReturnTypeToReturnType__Marker> { }
+class MethodStaticToStatic__Marker_object extends GenericObjectActor<Java2Uml.MethodStaticToStatic__Marker> { }
+class OrdinaryParameter_object extends GenericObjectActor<org.emftext.language.java.parameters.OrdinaryParameter> { }
+class OrdinaryConstructorParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.OrdinaryConstructorParameterToParameter__Marker> { }
+class OrdinaryMethodParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.OrdinaryMethodParameterToParameter__Marker> { }
+class RootJavaPackageToUmlPackage__Marker_object extends GenericObjectActor<Java2Uml.RootJavaPackageToUmlPackage__Marker> { }
+class Type_object extends GenericObjectActor<uml.Type> { }
+class JavaClassifierReferenceToUmlGeneralization_object extends GenericObjectActor<Java2Uml.JavaClassifierReferenceToUmlGeneralization> { }
+class SuperClassToSuperClass__Marker_object extends GenericObjectActor<Java2Uml.SuperClassToSuperClass__Marker> { }
+class SuperInterfaceToSuperInterface__Marker_object extends GenericObjectActor<Java2Uml.SuperInterfaceToSuperInterface__Marker> { }
+class VariableLengthParameter_object extends GenericObjectActor<org.emftext.language.java.parameters.VariableLengthParameter> { }
+class LiteralUnlimitedNatural_object extends GenericObjectActor<uml.LiteralUnlimitedNatural> { }
+class VariableLengthConstructorParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.VariableLengthConstructorParameterToParameter__Marker> { }
+class VariableLengthMethodParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.VariableLengthMethodParameterToParameter__Marker> { }
+class Class_object_SP0 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP1 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP3 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP4 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP5 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP6 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP7 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP8 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Class_object_SP9 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
+class Abstract_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Abstract> { }
+class Abstract_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Abstract> { }
+class Class_1_object_SP0 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP1 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP2 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP3 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP4 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP5 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP6 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP7 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP8 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP9 extends GenericObjectActor<uml.Class> { }
+class JavaClassifierToUmlClassifier_object_SP0 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP1 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP2 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP3 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP4 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP5 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP6 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP7 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP8 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP9 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP10 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP11 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP12 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP13 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP14 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP15 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP16 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP17 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP18 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP19 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class JavaClassifierToUmlClassifier_object_SP20 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
+class Field_object_SP0 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
+class Field_object_SP1 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
+class Field_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
+class Field_object_SP3 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
+class Property_object_SP0 extends GenericObjectActor<uml.Property> { }
+class Property_object_SP1 extends GenericObjectActor<uml.Property> { }
+class Property_object_SP2 extends GenericObjectActor<uml.Property> { }
+class Property_object_SP3 extends GenericObjectActor<uml.Property> { }
+class JavaAttributeToUmlProperty_object_SP0 extends GenericObjectActor<Java2Uml.JavaAttributeToUmlProperty> { }
+class JavaAttributeToUmlProperty_object_SP1 extends GenericObjectActor<Java2Uml.JavaAttributeToUmlProperty> { }
+class JavaAttributeToUmlProperty_object_SP2 extends GenericObjectActor<Java2Uml.JavaAttributeToUmlProperty> { }
+class ClassifierReference_object_SP0 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP1 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP2 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP3 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP4 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP5 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP6 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP7 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP8 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP9 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP10 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP11 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP12 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class ClassifierReference_object_SP13 extends GenericObjectActor<org.emftext.language.java.types.ClassifierReference> { }
+class Classifier_object_SP0 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
+class Classifier_object_SP1 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
+class Classifier_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
+class Classifier_object_SP3 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
+class Classifier_object_SP4 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
+class Constructor_object_SP0 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
+class Constructor_object_SP1 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
+class Constructor_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
+class Constructor_object_SP3 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
+class Operation_object_SP0 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP1 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP2 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP3 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP4 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP5 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP6 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP7 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP8 extends GenericObjectActor<uml.Operation> { }
+class Operation_object_SP9 extends GenericObjectActor<uml.Operation> { }
+class JavaConstructorToOperation_object_SP0 extends GenericObjectActor<Java2Uml.JavaConstructorToOperation> { }
+class JavaConstructorToOperation_object_SP1 extends GenericObjectActor<Java2Uml.JavaConstructorToOperation> { }
+class JavaConstructorToOperation_object_SP2 extends GenericObjectActor<Java2Uml.JavaConstructorToOperation> { }
+class Interface_object_SP0 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP1 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP2 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP3 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP4 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP5 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP6 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP7 extends GenericObjectActor<uml.Interface> { }
+class Interface_object_SP8 extends GenericObjectActor<uml.Interface> { }
+class Final_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Final> { }
+class Final_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Final> { }
+class Final_object_SP2 extends GenericObjectActor<org.emftext.language.java.modifiers.Final> { }
+class Interface_1_object_SP0 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP1 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP3 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP4 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP5 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP6 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP7 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP8 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class Interface_1_object_SP9 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
+class ClassMethod_object_SP0 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class ClassMethod_object_SP1 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class ClassMethod_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class ClassMethod_object_SP3 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class ClassMethod_object_SP4 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class ClassMethod_object_SP5 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class ClassMethod_object_SP6 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
+class JavaMethodToOperation_object_SP0 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
+class JavaMethodToOperation_object_SP1 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
+class JavaMethodToOperation_object_SP2 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
+class JavaMethodToOperation_object_SP3 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
+class JavaMethodToOperation_object_SP4 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
+class JavaMethodToOperation_object_SP5 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
+class Private_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Private> { }
+class Private_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Private> { }
+class Protected_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Protected> { }
+class Protected_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Protected> { }
+class Public_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Public> { }
+class Public_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Public> { }
+class CompilationUnit_object_SP0 extends GenericObjectActor<org.emftext.language.java.containers.CompilationUnit> { }
+class CompilationUnit_object_SP1 extends GenericObjectActor<org.emftext.language.java.containers.CompilationUnit> { }
+class CompilationUnit_object_SP2 extends GenericObjectActor<org.emftext.language.java.containers.CompilationUnit> { }
+class Package_object_SP0 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }
+class Package_object_SP1 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }
+class Package_object_SP2 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }
+class Package_1_object_SP0 extends GenericObjectActor<uml.Package> { }
+class Package_1_object_SP1 extends GenericObjectActor<uml.Package> { }
+class JavaPackageToUmlPackage_object_SP0 extends GenericObjectActor<Java2Uml.JavaPackageToUmlPackage> { }
+class JavaPackageToUmlPackage_object_SP1 extends GenericObjectActor<Java2Uml.JavaPackageToUmlPackage> { }
+class Parameter_object_SP0 extends GenericObjectActor<org.emftext.language.java.parameters.Parameter> { }
+class Parameter_object_SP1 extends GenericObjectActor<org.emftext.language.java.parameters.Parameter> { }
+class Parameter_object_SP2 extends GenericObjectActor<org.emftext.language.java.parameters.Parameter> { }
+class Parameter_1_object_SP0 extends GenericObjectActor<uml.Parameter> { }
+class Parameter_1_object_SP1 extends GenericObjectActor<uml.Parameter> { }
+class Parameter_1_object_SP2 extends GenericObjectActor<uml.Parameter> { }
+class Parameter_1_object_SP3 extends GenericObjectActor<uml.Parameter> { }
+class Parameter_1_object_SP4 extends GenericObjectActor<uml.Parameter> { }
+class JavaParameterToParameter_object_SP0 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
+class JavaParameterToParameter_object_SP1 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
+class JavaParameterToParameter_object_SP2 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
+class JavaParameterToParameter_object_SP3 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
+class Enumeration_object_SP0 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_object_SP1 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_object_SP3 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_object_SP4 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_object_SP5 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_object_SP6 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
+class Enumeration_1_object_SP0 extends GenericObjectActor<uml.Enumeration> { }
+class Enumeration_1_object_SP1 extends GenericObjectActor<uml.Enumeration> { }
+class Enumeration_1_object_SP2 extends GenericObjectActor<uml.Enumeration> { }
+class Enumeration_1_object_SP3 extends GenericObjectActor<uml.Enumeration> { }
+class Enumeration_1_object_SP4 extends GenericObjectActor<uml.Enumeration> { }
+class Enumeration_1_object_SP5 extends GenericObjectActor<uml.Enumeration> { }
+class Generalization_object_SP0 extends GenericObjectActor<uml.Generalization> { }
+class Generalization_object_SP1 extends GenericObjectActor<uml.Generalization> { }
+
+

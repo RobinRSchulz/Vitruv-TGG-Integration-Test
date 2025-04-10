@@ -1,0 +1,44 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule ClassifierConstructorToConstructor #with Java2Uml
+	#source { 
+		javaConcreteClassifier:java.classifiers.ConcreteClassifier {
+			++ -members->constructor
+		}
+		++constructor:java.members.Constructor
+	}
+	#target {
+		umlClassifier:uml.Classifier {
+		}
+		++umlOperation:uml.Operation
+	}
+	#correspondence {
+		j:JavaClassifierToUmlClassifier {
+			#src->javaConcreteClassifier
+			#trg->umlClassifier
+		}
+		++javaConstructorToOperation:JavaConstructorToOperation {
+			#src->constructor
+			#trg->umlOperation
+		}
+	}
+	#attributeConditions {
+		eq_string(constructor.name, umlOperation.name)
+		//TODO visibility
+//		eq_string(umlOperation.visibility)
+	}
+	#rule ClassConstructorToConstructor #extends ClassifierConstructorToConstructor #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Class }
+		#target {
+			umlClassifier:uml.Class {
+				++ -ownedOperation->umlOperation
+			}
+		}
+	#rule InterfaceConstructorToConstructor #extends ClassifierConstructorToConstructor #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#target {
+			umlClassifier:uml.Interface {
+				++ -ownedOperation->umlOperation
+			}
+		}

@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Java2Uml" nsURI="platform:/resource/Java2Uml/model/Java2Uml.ecore"
+    nsPrefix="Java2Uml">
+  <eClassifiers xsi:type="ecore:EClass" name="JavaClassifierToUmlClassifier" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaCompilationUnitToUmlModel" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaPackageToUmlPackage" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaAttributeToUmlProperty" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaClassifierReferenceToUmlGeneralization"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaMethodToOperation" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaConstructorToOperation" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaParameterToParameter" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaTypeReferenceToUmlReturnParameter"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaClassifierReferenceToUmlInterfaceRealization"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassAbstractToAbstract__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassAttributeToProperty__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__field" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__property"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__attributeToProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__classToUmlClass"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassAttributeTypeToPropertyType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__field" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__property"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__attributeToProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassConstructorToConstructor__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__constructor"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__j" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassFinalToFinal__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassImplementToClassImplement__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__interface"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__interfaceTypeRef"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaClass"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClass"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlInterface"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlInterfaceRealization"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaSuperClassifierToUmlSuperClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassMethodToMethod__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__method" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__j" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassPrivateToPrivate__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassProtectedToProtected__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassPublicToPublic__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassToUmlClass__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__compilationUnit"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaClassToUmlClass"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaPackToUmlPack"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstructorClassParamTypeToParamType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstructorEnumParamTypeToParamType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstructorInterfaceParamTypeToParamType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumAbstractToAbstract__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumAttributeToProperty__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__field" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__property"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__attributeToProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__classToUmlClass"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumAttributeTypeToPropertyType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__field" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__property"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__attributeToProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumFinalToFinal__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumPrivateToPrivate__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumProtectedToProtected__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumPublicToPublic__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumToUmlEnum__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__compilationUnit"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaClassToUmlClass"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaPackToUmlPack"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistingClassImplementToClassImplement__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__interface"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__interfaceTypeRef"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaClass"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClass"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlInterface"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlInterfaceRealization"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaSuperClassifierToUmlSuperClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistingSuperClassToSuperClass__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__superclassTypeRef"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__superclassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__generalization"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlGeneralClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaSuperClassifierToUmlSuperClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistingSuperInterfaceToSuperInterface__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__superclassTypeRef"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__superclassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__generalization"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlGeneralClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaSuperClassifierToUmlSuperClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldFinalToFinal__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaField"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlProperty"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldStaticToStatic__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaField"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlProperty"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceAbstractToAbstract__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceAttributeTypeToPropertyType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__field" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__property"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__attributeToProperty"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceConstructorToConstructor__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__constructor"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__j" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceFinalToFinal__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceMethodToMethod__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__method" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__j" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfacePrivateToPrivate__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceProtectedToProtected__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfacePublicToPublic__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceToUmlInterface__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__compilationUnit"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaClassToUmlClass"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaPackToUmlPack"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaCompilationUnitToExistingUmlModel__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__compilationUnit"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__newCompilationUnit"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlModel"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaCompUnitToUmlModel"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__newJavaCompUnitToUmlModel"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaFirstCompilationUnitToUmlModel__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__compilationUnit"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__booleanType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__byteType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__charType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__doubleType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__floatType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__intType" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__longType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__shortType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__stringType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlModel"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__voidType"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaCompUnitToUmlModel"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodAbstractToAbstract__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaMethod"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodClassParamTypeToParamType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodClassReturnTypeToReturnType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaMethod"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlReturnParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaTypeReferenceToUmlReturnParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodEnumParamTypeToParamType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodEnumReturnTypeToReturnType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaMethod"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlReturnParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaTypeReferenceToUmlReturnParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodFinalToFinal__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaMethod"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodInterfaceParamTypeToParamType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodInterfaceReturnTypeToReturnType__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__classifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaMethod"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__typeReference"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlReturnParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaTypeReferenceToUmlReturnParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodStaticToStatic__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaMethod"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__modifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinaryConstructorParameterToParameter__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/OrdinaryParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinaryMethodParameterToParameter__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/OrdinaryParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RootJavaPackageToUmlPackage__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__javaPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlPackage"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaPackageToUmlPackage"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperClassToSuperClass__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__superclassTypeRef"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__superclassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__generalization"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlGeneralClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__classRefToGeneralization"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaSuperClassifierToUmlSuperClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperInterfaceToSuperInterface__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__superclassTypeRef"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__superclassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__generalization"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlGeneralClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__classRefToGeneralization"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaSuperClassifierToUmlSuperClassifier"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableLengthConstructorParameterToParameter__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/VariableLengthParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__upperValue"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaConstructorToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableLengthMethodParameterToParameter__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaParametrizable"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__parameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/VariableLengthParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlOperation"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlParameter"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__upperValue"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaMethodToOperation"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__parameterToParameter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,2909 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Java2Uml">
+  <src href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_WosmsNz1Ed2bJ_pQViWxFg"/>
+  <trg href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#/"/>
+  <rules name="ClassifierMethodToMethod" abstract="true">
+    <nodes name="javaConcreteClassifier" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.4" incomingCorrsSource="//@rules.0/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </nodes>
+    <nodes name="method" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2 //@rules.0/@edges.4" incomingCorrsSource="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.0/@edges.1" incomingCorrsTarget="//@rules.0/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.3" incomingCorrsTarget="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="j" domainType="CORR" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaMethodToOperation" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.2 //@rules.0/@edges.3" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <edges name="j__source__javaConcreteClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="j__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaMethodToOperation__source__method_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges name="javaMethodToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges name="javaConcreteClassifier__members__method_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0 //@rules.0/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassMethodToMethod" refines="//@rules.0">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.1/@edges.1" outgoingEdges="//@rules.1/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0" outgoingEdges="//@rules.1/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class/ownedOperation"/>
+    </edges>
+    <edges name="umlOperation__class__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation/class"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceMethodToMethod" refines="//@rules.0">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.2/@edges.1" outgoingEdges="//@rules.2/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.0" outgoingEdges="//@rules.2/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.1" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface/ownedOperation"/>
+    </edges>
+    <edges name="umlOperation__interface__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation/interface"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierToUmlClassifier" abstract="true">
+    <nodes name="javaPackage" incomingEdges="//@rules.3/@edges.0" outgoingEdges="//@rules.3/@edges.4" incomingCorrsSource="//@rules.3/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes name="compilationUnit" incomingEdges="//@rules.3/@edges.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="classifier" bindingType="CREATE" incomingEdges="//@rules.3/@edges.2" incomingCorrsSource="//@rules.3/@nodes.6">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="umlPackage" domainType="TRG" incomingEdges="//@rules.3/@edges.1" incomingCorrsTarget="//@rules.3/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.3" incomingCorrsTarget="//@rules.3/@nodes.6">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaPackToUmlPack" domainType="CORR" outgoingEdges="//@rules.3/@edges.0 //@rules.3/@edges.1" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassToUmlClass" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.3/@edges.2 //@rules.3/@edges.3" source="//@rules.3/@nodes.2" target="//@rules.3/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaPackToUmlPack__source__javaPackage_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.5" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/source"/>
+    </edges>
+    <edges name="javaPackToUmlPack__target__umlPackage_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.5" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/target"/>
+    </edges>
+    <edges name="javaClassToUmlClass__source__classifier_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.6" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassToUmlClass__target__umlClassifier_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.6" trgNode="//@rules.3/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaPackage__compilationUnits__compilationUnit_eMoflonEdge" srcNode="//@rules.3/@nodes.0" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.0 //@rules.3/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.2">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.3/@nodes.4">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassToUmlClass" refines="//@rules.3">
+    <nodes name="classifier" bindingType="CREATE" incomingEdges="//@rules.4/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="compilationUnit" outgoingEdges="//@rules.4/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="umlPackage" domainType="TRG" outgoingEdges="//@rules.4/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <edges name="compilationUnit__classifiers__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.4/@nodes.1" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit/classifiers"/>
+    </edges>
+    <edges name="umlPackage__packagedElement__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.2" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/packagedElement"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceToUmlInterface" refines="//@rules.3">
+    <nodes name="classifier" bindingType="CREATE" incomingEdges="//@rules.5/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="compilationUnit" outgoingEdges="//@rules.5/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="umlPackage" domainType="TRG" outgoingEdges="//@rules.5/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <edges name="compilationUnit__classifiers__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.5/@nodes.1" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit/classifiers"/>
+    </edges>
+    <edges name="umlPackage__packagedElement__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.2" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/packagedElement"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumToUmlEnum" refines="//@rules.3">
+    <nodes name="classifier" bindingType="CREATE" incomingEdges="//@rules.6/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="compilationUnit" outgoingEdges="//@rules.6/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="umlPackage" domainType="TRG" outgoingEdges="//@rules.6/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <edges name="compilationUnit__classifiers__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.6/@nodes.1" trgNode="//@rules.6/@nodes.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit/classifiers"/>
+    </edges>
+    <edges name="umlPackage__packagedElement__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.2" trgNode="//@rules.6/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/packagedElement"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="JavaCompilationUnitToExistingUmlModel">
+    <nodes name="javaPackage" outgoingEdges="//@rules.7/@edges.4 //@rules.7/@edges.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes name="compilationUnit" incomingEdges="//@rules.7/@edges.0 //@rules.7/@edges.4" incomingCorrsSource="//@rules.7/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="newCompilationUnit" bindingType="CREATE" incomingEdges="//@rules.7/@edges.2 //@rules.7/@edges.5" incomingCorrsSource="//@rules.7/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="umlModel" domainType="TRG" incomingEdges="//@rules.7/@edges.1 //@rules.7/@edges.3" incomingCorrsTarget="//@rules.7/@nodes.4 //@rules.7/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaCompUnitToUmlModel" domainType="CORR" outgoingEdges="//@rules.7/@edges.0 //@rules.7/@edges.1" source="//@rules.7/@nodes.1" target="//@rules.7/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="newJavaCompUnitToUmlModel" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.7/@edges.2 //@rules.7/@edges.3" source="//@rules.7/@nodes.2" target="//@rules.7/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+    </nodes>
+    <edges name="javaCompUnitToUmlModel__source__compilationUnit_eMoflonEdge" domainType="CORR" srcNode="//@rules.7/@nodes.4" trgNode="//@rules.7/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/source"/>
+    </edges>
+    <edges name="javaCompUnitToUmlModel__target__umlModel_eMoflonEdge" domainType="CORR" srcNode="//@rules.7/@nodes.4" trgNode="//@rules.7/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/target"/>
+    </edges>
+    <edges name="newJavaCompUnitToUmlModel__source__newCompilationUnit_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.7/@nodes.5" trgNode="//@rules.7/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/source"/>
+    </edges>
+    <edges name="newJavaCompUnitToUmlModel__target__umlModel_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.7/@nodes.5" trgNode="//@rules.7/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/target"/>
+    </edges>
+    <edges name="javaPackage__compilationUnits__compilationUnit_eMoflonEdge" srcNode="//@rules.7/@nodes.0" trgNode="//@rules.7/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <edges name="javaPackage__compilationUnits__newCompilationUnit_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.7/@nodes.0" trgNode="//@rules.7/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.7/@attributeConditionLibrary/@parameterValues.0 //@rules.7/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" value="&quot;UML_MODEL&quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.7/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodModifierToModifier" abstract="true">
+    <nodes name="javaMethod" incomingEdges="//@rules.8/@edges.0" outgoingEdges="//@rules.8/@edges.2" incomingCorrsSource="//@rules.8/@nodes.3">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE" incomingEdges="//@rules.8/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" incomingEdges="//@rules.8/@edges.1" incomingCorrsTarget="//@rules.8/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaMethodToOperation" domainType="CORR" outgoingEdges="//@rules.8/@edges.0 //@rules.8/@edges.1" source="//@rules.8/@nodes.0" target="//@rules.8/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <edges name="javaMethodToOperation__source__javaMethod_eMoflonEdge" domainType="CORR" srcNode="//@rules.8/@nodes.3" trgNode="//@rules.8/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges name="javaMethodToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.8/@nodes.3" trgNode="//@rules.8/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges name="javaMethod__annotationsAndModifiers__modifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.8/@nodes.0" trgNode="//@rules.8/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodAbstractToAbstract" refines="//@rules.8">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.9/@attributeConditionLibrary/@parameterValues.0 //@rules.9/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.9/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/isAbstract"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodStaticToStatic" refines="//@rules.8">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.10/@attributeConditionLibrary/@parameterValues.0 //@rules.10/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.10/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Feature/isStatic"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodFinalToFinal" refines="//@rules.8">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.11/@attributeConditionLibrary/@parameterValues.0 //@rules.11/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.11/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//RedefinableElement/isLeaf"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodPrivateToPrivate" refines="//@rules.8" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.12/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.12/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodProtectedToProtected" refines="//@rules.8" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.13/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.13/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodPublicToPublic" refines="//@rules.8" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.14/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.14/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassifierModifierToModifier" abstract="true">
+    <nodes name="javaConcreteClassifier" incomingEdges="//@rules.15/@edges.0" outgoingEdges="//@rules.15/@edges.2" incomingCorrsSource="//@rules.15/@nodes.3">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE" incomingEdges="//@rules.15/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.15/@edges.1" incomingCorrsTarget="//@rules.15/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.15/@edges.0 //@rules.15/@edges.1" source="//@rules.15/@nodes.0" target="//@rules.15/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__javaConcreteClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.15/@nodes.3" trgNode="//@rules.15/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.15/@nodes.3" trgNode="//@rules.15/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaConcreteClassifier__annotationsAndModifiers__modifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.15/@nodes.0" trgNode="//@rules.15/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierFinalToFinal" refines="//@rules.15" abstract="true">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.16/@attributeConditionLibrary/@parameterValues.0 //@rules.16/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.16/@nodes.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isFinalSpecialization"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassFinalToFinal" refines="//@rules.16">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumFinalToFinal" refines="//@rules.16">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceFinalToFinal" refines="//@rules.16">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierAbstractToAbstract" refines="//@rules.15" abstract="true">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.20/@attributeConditionLibrary/@parameterValues.0 //@rules.20/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.20/@nodes.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isAbstract"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassAbstractToAbstract" refines="//@rules.20">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumAbstractToAbstract" refines="//@rules.20">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceAbstractToAbstract" refines="//@rules.20">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierStaticToStatic" refines="//@rules.15" abstract="true">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierPrivateToPrivate" refines="//@rules.15" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.25/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.25/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassPrivateToPrivate" refines="//@rules.25">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumPrivateToPrivate" refines="//@rules.25">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfacePrivateToPrivate" refines="//@rules.25">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierProtectedToProtected" refines="//@rules.15" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.29/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.29/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassProtectedToProtected" refines="//@rules.29">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumProtectedToProtected" refines="//@rules.29">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceProtectedToProtected" refines="//@rules.29">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassifierPublicToPublic" refines="//@rules.15" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.33/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.33/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassPublicToPublic" refines="//@rules.33">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumPublicToPublic" refines="//@rules.33">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfacePublicToPublic" refines="//@rules.33">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ParameterToParameter" abstract="true">
+    <nodes name="javaParametrizable" outgoingEdges="//@rules.37/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable"/>
+    </nodes>
+    <nodes name="parameter" bindingType="CREATE" incomingEdges="//@rules.37/@edges.0 //@rules.37/@edges.2" incomingCorrsSource="//@rules.37/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" incomingEdges="//@rules.38/@edges.1 //@rules.41/@edges.1" outgoingEdges="//@rules.37/@edges.3" incomingCorrsTarget="//@rules.38/@nodes.1 //@rules.41/@nodes.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes name="umlParameter" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.37/@edges.1 //@rules.37/@edges.3" incomingCorrsTarget="//@rules.37/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="parameterToParameter" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.37/@edges.0 //@rules.37/@edges.1" source="//@rules.37/@nodes.1" target="//@rules.37/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <edges name="parameterToParameter__source__parameter_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.37/@nodes.4" trgNode="//@rules.37/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges name="parameterToParameter__target__umlParameter_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.37/@nodes.4" trgNode="//@rules.37/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges name="javaParametrizable__parameters__parameter_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.37/@nodes.0" trgNode="//@rules.37/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges name="umlOperation__ownedParameter__umlParameter_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.37/@nodes.2" trgNode="//@rules.37/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.37/@attributeConditionLibrary/@parameterValues.0 //@rules.37/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.37/@nodes.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.37/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ConstructorParameterToParameter" refines="//@rules.37" abstract="true">
+    <nodes name="javaParametrizable" incomingEdges="//@rules.38/@edges.0" incomingCorrsSource="//@rules.38/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaConstructorToOperation" domainType="CORR" outgoingEdges="//@rules.38/@edges.0 //@rules.38/@edges.1" source="//@rules.38/@nodes.0" target="//@rules.37/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <edges name="javaConstructorToOperation__source__javaParametrizable_eMoflonEdge" domainType="CORR" srcNode="//@rules.38/@nodes.1" trgNode="//@rules.38/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges name="javaConstructorToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.38/@nodes.1" trgNode="//@rules.37/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="OrdinaryConstructorParameterToParameter" refines="//@rules.38">
+    <nodes name="parameter" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/OrdinaryParameter"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="VariableLengthConstructorParameterToParameter" refines="//@rules.38">
+    <nodes name="parameter" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/VariableLengthParameter"/>
+    </nodes>
+    <nodes name="umlParameter" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.40/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes name="upperValue" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.40/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural"/>
+    </nodes>
+    <edges name="umlParameter__upperValue__upperValue_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.40/@nodes.1" trgNode="//@rules.40/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/upperValue"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5" parameters="//@rules.40/@attributeConditionLibrary/@parameterValues.0 //@rules.40/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5" parameters="//@rules.40/@attributeConditionLibrary/@parameterValues.2 //@rules.40/@attributeConditionLibrary/@parameterValues.3"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.0" value="0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.1" objectVar="//@rules.40/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/lower"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.0" value="-1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.1" objectVar="//@rules.40/@nodes.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural/value"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodParameterToParameter" refines="//@rules.37" abstract="true">
+    <nodes name="javaParametrizable" incomingEdges="//@rules.41/@edges.0" incomingCorrsSource="//@rules.41/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaMethodToOperation" domainType="CORR" outgoingEdges="//@rules.41/@edges.0 //@rules.41/@edges.1" source="//@rules.41/@nodes.0" target="//@rules.37/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <edges name="javaMethodToOperation__source__javaParametrizable_eMoflonEdge" domainType="CORR" srcNode="//@rules.41/@nodes.1" trgNode="//@rules.41/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges name="javaMethodToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.41/@nodes.1" trgNode="//@rules.37/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="OrdinaryMethodParameterToParameter" refines="//@rules.41">
+    <nodes name="parameter" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/OrdinaryParameter"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="VariableLengthMethodParameterToParameter" refines="//@rules.41">
+    <nodes name="parameter" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/VariableLengthParameter"/>
+    </nodes>
+    <nodes name="umlParameter" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.43/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes name="upperValue" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.43/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural"/>
+    </nodes>
+    <edges name="umlParameter__upperValue__upperValue_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.43/@nodes.1" trgNode="//@rules.43/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/upperValue"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5" parameters="//@rules.43/@attributeConditionLibrary/@parameterValues.0 //@rules.43/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5" parameters="//@rules.43/@attributeConditionLibrary/@parameterValues.2 //@rules.43/@attributeConditionLibrary/@parameterValues.3"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.0" value="0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.1" objectVar="//@rules.43/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/lower"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.0" value="-1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.1" objectVar="//@rules.43/@nodes.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural/value"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="AttributeToProperty" abstract="true">
+    <nodes name="classifier" incomingEdges="//@rules.44/@edges.0" incomingCorrsSource="//@rules.44/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="field" bindingType="CREATE" incomingEdges="//@rules.44/@edges.2" incomingCorrsSource="//@rules.44/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.44/@edges.1" incomingCorrsTarget="//@rules.44/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes name="property" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.44/@edges.3" incomingCorrsTarget="//@rules.44/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="classToUmlClass" domainType="CORR" outgoingEdges="//@rules.44/@edges.0 //@rules.44/@edges.1" source="//@rules.44/@nodes.0" target="//@rules.44/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="attributeToProperty" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.44/@edges.2 //@rules.44/@edges.3" source="//@rules.44/@nodes.1" target="//@rules.44/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <edges name="classToUmlClass__source__classifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.44/@nodes.4" trgNode="//@rules.44/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="classToUmlClass__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.44/@nodes.4" trgNode="//@rules.44/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="attributeToProperty__source__field_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.44/@nodes.5" trgNode="//@rules.44/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges name="attributeToProperty__target__property_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.44/@nodes.5" trgNode="//@rules.44/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.44/@attributeConditionLibrary/@parameterValues.0 //@rules.44/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.44/@nodes.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.44/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassAttributeToProperty" refines="//@rules.44">
+    <nodes name="classifier" outgoingEdges="//@rules.45/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="field" bindingType="CREATE" incomingEdges="//@rules.45/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" outgoingEdges="//@rules.45/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="property" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.45/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <edges name="classifier__members__field_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.45/@nodes.0" trgNode="//@rules.45/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+    </edges>
+    <edges name="umlClassifier__ownedAttribute__property_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.45/@nodes.2" trgNode="//@rules.45/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//StructuredClassifier/ownedAttribute"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumAttributeToProperty" refines="//@rules.44">
+    <nodes name="classifier" outgoingEdges="//@rules.46/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="field" bindingType="CREATE" incomingEdges="//@rules.46/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.46/@edges.2" outgoingEdges="//@rules.46/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes name="property" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.46/@edges.1" outgoingEdges="//@rules.46/@edges.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <edges name="classifier__members__field_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.46/@nodes.0" trgNode="//@rules.46/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+    </edges>
+    <edges name="umlClassifier__ownedAttribute__property_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.46/@nodes.2" trgNode="//@rules.46/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//DataType/ownedAttribute"/>
+    </edges>
+    <edges name="property__datatype__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.46/@nodes.3" trgNode="//@rules.46/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property/datatype"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ConstructorModifierToModifier" abstract="true">
+    <nodes name="javaConstructor" incomingEdges="//@rules.47/@edges.0" outgoingEdges="//@rules.47/@edges.2" incomingCorrsSource="//@rules.47/@nodes.3">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE" incomingEdges="//@rules.47/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" incomingEdges="//@rules.47/@edges.1" incomingCorrsTarget="//@rules.47/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaConstructorToOperation" domainType="CORR" outgoingEdges="//@rules.47/@edges.0 //@rules.47/@edges.1" source="//@rules.47/@nodes.0" target="//@rules.47/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <edges name="javaConstructorToOperation__source__javaConstructor_eMoflonEdge" domainType="CORR" srcNode="//@rules.47/@nodes.3" trgNode="//@rules.47/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges name="javaConstructorToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.47/@nodes.3" trgNode="//@rules.47/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges name="javaConstructor__annotationsAndModifiers__modifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.47/@nodes.0" trgNode="//@rules.47/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ConstructorPrivateToPrivate" refines="//@rules.47" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.48/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.48/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ConstructorProtectedToProtected" refines="//@rules.47" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.49/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.49/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ConstructorPublicToPublic" refines="//@rules.47" abstract="true">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.50/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.50/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="FieldModifierToModifier" abstract="true">
+    <nodes name="javaField" incomingEdges="//@rules.51/@edges.0" outgoingEdges="//@rules.51/@edges.2" incomingCorrsSource="//@rules.51/@nodes.3">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes name="modifier" bindingType="CREATE" incomingEdges="//@rules.51/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlProperty" domainType="TRG" incomingEdges="//@rules.51/@edges.1" incomingCorrsTarget="//@rules.51/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlProperty" domainType="CORR" outgoingEdges="//@rules.51/@edges.0 //@rules.51/@edges.1" source="//@rules.51/@nodes.0" target="//@rules.51/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <edges name="javaClassifierToUmlProperty__source__javaField_eMoflonEdge" domainType="CORR" srcNode="//@rules.51/@nodes.3" trgNode="//@rules.51/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlProperty__target__umlProperty_eMoflonEdge" domainType="CORR" srcNode="//@rules.51/@nodes.3" trgNode="//@rules.51/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <edges name="javaField__annotationsAndModifiers__modifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.51/@nodes.0" trgNode="//@rules.51/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="FieldFinalToFinal" refines="//@rules.51">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlProperty" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.52/@attributeConditionLibrary/@parameterValues.0 //@rules.52/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.52/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature/isReadOnly"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="FieldStaticToStatic" refines="//@rules.51">
+    <nodes name="modifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlProperty" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10" parameters="//@rules.53/@attributeConditionLibrary/@parameterValues.0 //@rules.53/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.0" value="true"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.10/@parameterDefinitions.1" objectVar="//@rules.53/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Feature/isStatic"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="RootJavaPackageToUmlPackage">
+    <nodes name="javaPackage" bindingType="CREATE" incomingEdges="//@rules.54/@edges.0" incomingCorrsSource="//@rules.54/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes name="umlPackage" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.54/@edges.1" incomingCorrsTarget="//@rules.54/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaPackageToUmlPackage" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.54/@edges.0 //@rules.54/@edges.1" source="//@rules.54/@nodes.0" target="//@rules.54/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+    </nodes>
+    <edges name="javaPackageToUmlPackage__source__javaPackage_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.54/@nodes.2" trgNode="//@rules.54/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/source"/>
+    </edges>
+    <edges name="javaPackageToUmlPackage__target__umlPackage_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.54/@nodes.2" trgNode="//@rules.54/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/target"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.54/@attributeConditionLibrary/@parameterValues.0 //@rules.54/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.54/@nodes.0">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.54/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="AttributeTypeToPropertyType" abstract="true">
+    <nodes name="field" incomingEdges="//@rules.55/@edges.0" incomingCorrsSource="//@rules.55/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes name="property" domainType="TRG" incomingEdges="//@rules.55/@edges.1" incomingCorrsTarget="//@rules.55/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="attributeToProperty" domainType="CORR" outgoingEdges="//@rules.55/@edges.0 //@rules.55/@edges.1" source="//@rules.55/@nodes.0" target="//@rules.55/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <edges name="attributeToProperty__source__field_eMoflonEdge" domainType="CORR" srcNode="//@rules.55/@nodes.2" trgNode="//@rules.55/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges name="attributeToProperty__target__property_eMoflonEdge" domainType="CORR" srcNode="//@rules.55/@nodes.2" trgNode="//@rules.55/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.55/@attributeConditionLibrary/@parameterValues.0 //@rules.55/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.55/@nodes.0">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.55/@nodes.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassifierAttributeTypeToPropertyType" refines="//@rules.55" abstract="true">
+    <nodes name="field" outgoingEdges="//@rules.56/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes name="typeReference" bindingType="CREATE" incomingEdges="//@rules.56/@edges.2" outgoingEdges="//@rules.56/@edges.3">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="classifier" incomingEdges="//@rules.56/@edges.0 //@rules.56/@edges.3" incomingCorrsSource="//@rules.56/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="property" domainType="TRG" outgoingEdges="//@rules.56/@edges.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.56/@edges.1 //@rules.56/@edges.4" incomingCorrsTarget="//@rules.56/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.56/@edges.0 //@rules.56/@edges.1" source="//@rules.56/@nodes.2" target="//@rules.56/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__classifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.56/@nodes.5" trgNode="//@rules.56/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.56/@nodes.5" trgNode="//@rules.56/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="field__typeReference__typeReference_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.56/@nodes.0" trgNode="//@rules.56/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZQdz1Ed2bJ_pQViWxFg"/>
+    </edges>
+    <edges name="typeReference__target__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.56/@nodes.1" trgNode="//@rules.56/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="property__type__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.56/@nodes.3" trgNode="//@rules.56/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassAttributeTypeToPropertyType" refines="//@rules.56">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceAttributeTypeToPropertyType" refines="//@rules.56">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="EnumAttributeTypeToPropertyType" refines="//@rules.56">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="SuperClassifierToSuperClassifier" abstract="true">
+    <nodes name="javaConcreteClassifier" incomingEdges="//@rules.60/@edges.0" incomingCorrsSource="//@rules.60/@nodes.6">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </nodes>
+    <nodes name="superclassTypeRef" bindingType="CREATE" incomingEdges="//@rules.60/@edges.2" outgoingEdges="//@rules.60/@edges.6" incomingCorrsSource="//@rules.60/@nodes.7">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="superclassifier" bindingType="CREATE" incomingEdges="//@rules.60/@edges.4 //@rules.60/@edges.6" incomingCorrsSource="//@rules.60/@nodes.8">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.60/@edges.1 //@rules.60/@edges.9" outgoingEdges="//@rules.60/@edges.7" incomingCorrsTarget="//@rules.60/@nodes.6">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes name="generalization" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.60/@edges.3 //@rules.60/@edges.7" outgoingEdges="//@rules.60/@edges.8 //@rules.60/@edges.9" incomingCorrsTarget="//@rules.60/@nodes.7">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    </nodes>
+    <nodes name="umlGeneralClassifier" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.60/@edges.5 //@rules.60/@edges.8" incomingCorrsTarget="//@rules.60/@nodes.8">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.60/@edges.0 //@rules.60/@edges.1" source="//@rules.60/@nodes.0" target="//@rules.60/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="classRefToGeneralization" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.60/@edges.2 //@rules.60/@edges.3" source="//@rules.60/@nodes.1" target="//@rules.60/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaSuperClassifierToUmlSuperClassifier" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.60/@edges.4 //@rules.60/@edges.5" source="//@rules.60/@nodes.2" target="//@rules.60/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__javaConcreteClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.60/@nodes.6" trgNode="//@rules.60/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.60/@nodes.6" trgNode="//@rules.60/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="classRefToGeneralization__source__superclassTypeRef_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.60/@nodes.7" trgNode="//@rules.60/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization/source"/>
+    </edges>
+    <edges name="classRefToGeneralization__target__generalization_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.60/@nodes.7" trgNode="//@rules.60/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization/target"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__source__superclassifier_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.60/@nodes.8" trgNode="//@rules.60/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__target__umlGeneralClassifier_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.60/@nodes.8" trgNode="//@rules.60/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="superclassTypeRef__target__superclassifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.60/@nodes.1" trgNode="//@rules.60/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlClassifier__generalization__generalization_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.60/@nodes.3" trgNode="//@rules.60/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/generalization"/>
+    </edges>
+    <edges name="generalization__general__umlGeneralClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.60/@nodes.4" trgNode="//@rules.60/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization/general"/>
+    </edges>
+    <edges name="generalization__specific__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.60/@nodes.4" trgNode="//@rules.60/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization/specific"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.60/@attributeConditionLibrary/@parameterValues.0 //@rules.60/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.60/@nodes.2">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.60/@nodes.5">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="SuperClassToSuperClass" refines="//@rules.60">
+    <nodes name="javaConcreteClassifier" outgoingEdges="//@rules.61/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="superclassTypeRef" bindingType="CREATE" incomingEdges="//@rules.61/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="superclassifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="umlGeneralClassifier" domainType="TRG" bindingType="CREATE">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <edges name="javaConcreteClassifier__extends__superclassTypeRef_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.61/@nodes.0" trgNode="//@rules.61/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class/extends"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="SuperInterfaceToSuperInterface" refines="//@rules.60">
+    <nodes name="javaConcreteClassifier" outgoingEdges="//@rules.62/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="superclassTypeRef" bindingType="CREATE" incomingEdges="//@rules.62/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="superclassifier" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes name="umlGeneralClassifier" domainType="TRG" bindingType="CREATE">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <edges name="javaConcreteClassifier__extends__superclassTypeRef_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.62/@nodes.0" trgNode="//@rules.62/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface/extends"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ExistingSuperClassifierToSuperClassifier" abstract="true">
+    <nodes name="javaConcreteClassifier" incomingEdges="//@rules.63/@edges.0" incomingCorrsSource="//@rules.63/@nodes.6">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </nodes>
+    <nodes name="superclassTypeRef" bindingType="CREATE" outgoingEdges="//@rules.63/@edges.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="superclassifier" incomingEdges="//@rules.63/@edges.2 //@rules.63/@edges.4" incomingCorrsSource="//@rules.63/@nodes.7">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.63/@edges.1 //@rules.63/@edges.7" outgoingEdges="//@rules.63/@edges.5" incomingCorrsTarget="//@rules.63/@nodes.6">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes name="generalization" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.63/@edges.5" outgoingEdges="//@rules.63/@edges.6 //@rules.63/@edges.7">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    </nodes>
+    <nodes name="umlGeneralClassifier" domainType="TRG" incomingEdges="//@rules.63/@edges.3 //@rules.63/@edges.6" incomingCorrsTarget="//@rules.63/@nodes.7">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.63/@edges.0 //@rules.63/@edges.1" source="//@rules.63/@nodes.0" target="//@rules.63/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaSuperClassifierToUmlSuperClassifier" domainType="CORR" outgoingEdges="//@rules.63/@edges.2 //@rules.63/@edges.3" source="//@rules.63/@nodes.2" target="//@rules.63/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__javaConcreteClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.63/@nodes.6" trgNode="//@rules.63/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.63/@nodes.6" trgNode="//@rules.63/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__source__superclassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.63/@nodes.7" trgNode="//@rules.63/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__target__umlGeneralClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.63/@nodes.7" trgNode="//@rules.63/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="superclassTypeRef__target__superclassifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.63/@nodes.1" trgNode="//@rules.63/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlClassifier__generalization__generalization_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.63/@nodes.3" trgNode="//@rules.63/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/generalization"/>
+    </edges>
+    <edges name="generalization__general__umlGeneralClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.63/@nodes.4" trgNode="//@rules.63/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization/general"/>
+    </edges>
+    <edges name="generalization__specific__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.63/@nodes.4" trgNode="//@rules.63/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization/specific"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ExistingSuperClassToSuperClass" refines="//@rules.63">
+    <nodes name="javaConcreteClassifier" outgoingEdges="//@rules.64/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="superclassTypeRef" bindingType="CREATE" incomingEdges="//@rules.64/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="superclassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="umlGeneralClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <edges name="javaConcreteClassifier__extends__superclassTypeRef_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.64/@nodes.0" trgNode="//@rules.64/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class/extends"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ExistingSuperInterfaceToSuperInterface" refines="//@rules.63">
+    <nodes name="javaConcreteClassifier" outgoingEdges="//@rules.65/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="superclassTypeRef" bindingType="CREATE" incomingEdges="//@rules.65/@edges.0">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="superclassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes name="umlGeneralClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <edges name="javaConcreteClassifier__extends__superclassTypeRef_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.65/@nodes.0" trgNode="//@rules.65/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface/extends"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ClassImplementToClassImplement">
+    <nodes name="javaClass" incomingEdges="//@rules.66/@edges.0" outgoingEdges="//@rules.66/@edges.4" incomingCorrsSource="//@rules.66/@nodes.6">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="interfaceTypeRef" bindingType="CREATE" incomingEdges="//@rules.66/@edges.4" outgoingEdges="//@rules.66/@edges.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="interface" bindingType="CREATE" incomingEdges="//@rules.66/@edges.2 //@rules.66/@edges.5" incomingCorrsSource="//@rules.66/@nodes.7">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClass" domainType="TRG" incomingEdges="//@rules.66/@edges.1 //@rules.66/@edges.8" outgoingEdges="//@rules.66/@edges.6" incomingCorrsTarget="//@rules.66/@nodes.6">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="umlInterfaceRealization" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.66/@edges.6" outgoingEdges="//@rules.66/@edges.7 //@rules.66/@edges.8">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+    </nodes>
+    <nodes name="umlInterface" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.66/@edges.3 //@rules.66/@edges.7" incomingCorrsTarget="//@rules.66/@nodes.7">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.66/@edges.0 //@rules.66/@edges.1" source="//@rules.66/@nodes.0" target="//@rules.66/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaSuperClassifierToUmlSuperClassifier" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.66/@edges.2 //@rules.66/@edges.3" source="//@rules.66/@nodes.2" target="//@rules.66/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__javaClass_eMoflonEdge" domainType="CORR" srcNode="//@rules.66/@nodes.6" trgNode="//@rules.66/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClass_eMoflonEdge" domainType="CORR" srcNode="//@rules.66/@nodes.6" trgNode="//@rules.66/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__source__interface_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.66/@nodes.7" trgNode="//@rules.66/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__target__umlInterface_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.66/@nodes.7" trgNode="//@rules.66/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaClass__implements__interfaceTypeRef_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.66/@nodes.0" trgNode="//@rules.66/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Implementor/implements"/>
+    </edges>
+    <edges name="interfaceTypeRef__target__interface_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.66/@nodes.1" trgNode="//@rules.66/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlClass__interfaceRealization__umlInterfaceRealization_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.66/@nodes.3" trgNode="//@rules.66/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioredClassifier/interfaceRealization"/>
+    </edges>
+    <edges name="umlInterfaceRealization__contract__umlInterface_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.66/@nodes.4" trgNode="//@rules.66/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization/contract"/>
+    </edges>
+    <edges name="umlInterfaceRealization__implementingClassifier__umlClass_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.66/@nodes.4" trgNode="//@rules.66/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization/implementingClassifier"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ExistingClassImplementToClassImplement">
+    <nodes name="javaClass" incomingEdges="//@rules.67/@edges.0" outgoingEdges="//@rules.67/@edges.4" incomingCorrsSource="//@rules.67/@nodes.6">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="interfaceTypeRef" bindingType="CREATE" incomingEdges="//@rules.67/@edges.4" outgoingEdges="//@rules.67/@edges.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="interface" incomingEdges="//@rules.67/@edges.2 //@rules.67/@edges.5" incomingCorrsSource="//@rules.67/@nodes.7">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClass" domainType="TRG" incomingEdges="//@rules.67/@edges.1 //@rules.67/@edges.8" outgoingEdges="//@rules.67/@edges.6" incomingCorrsTarget="//@rules.67/@nodes.6">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="umlInterfaceRealization" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.67/@edges.6" outgoingEdges="//@rules.67/@edges.7 //@rules.67/@edges.8">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+    </nodes>
+    <nodes name="umlInterface" domainType="TRG" incomingEdges="//@rules.67/@edges.3 //@rules.67/@edges.7" incomingCorrsTarget="//@rules.67/@nodes.7">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.67/@edges.0 //@rules.67/@edges.1" source="//@rules.67/@nodes.0" target="//@rules.67/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaSuperClassifierToUmlSuperClassifier" domainType="CORR" outgoingEdges="//@rules.67/@edges.2 //@rules.67/@edges.3" source="//@rules.67/@nodes.2" target="//@rules.67/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__javaClass_eMoflonEdge" domainType="CORR" srcNode="//@rules.67/@nodes.6" trgNode="//@rules.67/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClass_eMoflonEdge" domainType="CORR" srcNode="//@rules.67/@nodes.6" trgNode="//@rules.67/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__source__interface_eMoflonEdge" domainType="CORR" srcNode="//@rules.67/@nodes.7" trgNode="//@rules.67/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaSuperClassifierToUmlSuperClassifier__target__umlInterface_eMoflonEdge" domainType="CORR" srcNode="//@rules.67/@nodes.7" trgNode="//@rules.67/@nodes.5">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaClass__implements__interfaceTypeRef_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.67/@nodes.0" trgNode="//@rules.67/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Implementor/implements"/>
+    </edges>
+    <edges name="interfaceTypeRef__target__interface_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.67/@nodes.1" trgNode="//@rules.67/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlClass__interfaceRealization__umlInterfaceRealization_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.67/@nodes.3" trgNode="//@rules.67/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioredClassifier/interfaceRealization"/>
+    </edges>
+    <edges name="umlInterfaceRealization__contract__umlInterface_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.67/@nodes.4" trgNode="//@rules.67/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization/contract"/>
+    </edges>
+    <edges name="umlInterfaceRealization__implementingClassifier__umlClass_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.67/@nodes.4" trgNode="//@rules.67/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization/implementingClassifier"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodReturnTypeToReturnType" abstract="true">
+    <nodes name="javaMethod" incomingEdges="//@rules.68/@edges.0" outgoingEdges="//@rules.68/@edges.2" incomingCorrsSource="//@rules.68/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes name="typeReference" bindingType="CREATE" incomingEdges="//@rules.68/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" incomingEdges="//@rules.68/@edges.1" outgoingEdges="//@rules.68/@edges.3" incomingCorrsTarget="//@rules.68/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes name="umlReturnParameter" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.68/@edges.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaMethodToOperation" domainType="CORR" outgoingEdges="//@rules.68/@edges.0 //@rules.68/@edges.1" source="//@rules.68/@nodes.0" target="//@rules.68/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <edges name="javaMethodToOperation__source__javaMethod_eMoflonEdge" domainType="CORR" srcNode="//@rules.68/@nodes.4" trgNode="//@rules.68/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges name="javaMethodToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.68/@nodes.4" trgNode="//@rules.68/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges name="javaMethod__typeReference__typeReference_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.68/@nodes.0" trgNode="//@rules.68/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZQdz1Ed2bJ_pQViWxFg"/>
+    </edges>
+    <edges name="umlOperation__ownedParameter__umlReturnParameter_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.68/@nodes.2" trgNode="//@rules.68/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.68/@attributeConditionLibrary/@parameterValues.0 //@rules.68/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5" parameters="//@rules.68/@attributeConditionLibrary/@parameterValues.2 //@rules.68/@attributeConditionLibrary/@parameterValues.3"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" value="&quot;returnParameter&quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.68/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.0" value="3"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.1" objectVar="//@rules.68/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter/direction"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="MethodClassifierReturnTypeToReturnType" refines="//@rules.68" abstract="true">
+    <nodes name="typeReference" bindingType="CREATE" incomingEdges="//@rules.69/@edges.2" outgoingEdges="//@rules.69/@edges.4" incomingCorrsSource="//@rules.69/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="classifier" incomingEdges="//@rules.69/@edges.0 //@rules.69/@edges.4" incomingCorrsSource="//@rules.69/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="umlReturnParameter" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.69/@edges.3" outgoingEdges="//@rules.69/@edges.5" incomingCorrsTarget="//@rules.69/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.69/@edges.1 //@rules.69/@edges.5" incomingCorrsTarget="//@rules.69/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.69/@edges.0 //@rules.69/@edges.1" source="//@rules.69/@nodes.1" target="//@rules.69/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaTypeReferenceToUmlReturnParameter" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.69/@edges.2 //@rules.69/@edges.3" source="//@rules.69/@nodes.0" target="//@rules.69/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__classifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.69/@nodes.4" trgNode="//@rules.69/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.69/@nodes.4" trgNode="//@rules.69/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaTypeReferenceToUmlReturnParameter__source__typeReference_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.69/@nodes.5" trgNode="//@rules.69/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter/source"/>
+    </edges>
+    <edges name="javaTypeReferenceToUmlReturnParameter__target__umlReturnParameter_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.69/@nodes.5" trgNode="//@rules.69/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter/target"/>
+    </edges>
+    <edges name="typeReference__target__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.69/@nodes.0" trgNode="//@rules.69/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlReturnParameter__type__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.69/@nodes.2" trgNode="//@rules.69/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodClassReturnTypeToReturnType" refines="//@rules.69">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodInterfaceReturnTypeToReturnType" refines="//@rules.69">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodEnumReturnTypeToReturnType" refines="//@rules.69">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="JavaFirstCompilationUnitToUmlModel">
+    <nodes name="javaPackage" outgoingEdges="//@rules.73/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes name="compilationUnit" bindingType="CREATE" incomingEdges="//@rules.73/@edges.0 //@rules.73/@edges.2" incomingCorrsSource="//@rules.73/@nodes.13">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes name="umlModel" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.1 //@rules.73/@edges.13 //@rules.73/@edges.14 //@rules.73/@edges.15 //@rules.73/@edges.16 //@rules.73/@edges.17 //@rules.73/@edges.18 //@rules.73/@edges.19 //@rules.73/@edges.20 //@rules.73/@edges.21 //@rules.73/@edges.22" outgoingEdges="//@rules.73/@edges.3 //@rules.73/@edges.4 //@rules.73/@edges.5 //@rules.73/@edges.6 //@rules.73/@edges.7 //@rules.73/@edges.8 //@rules.73/@edges.9 //@rules.73/@edges.10 //@rules.73/@edges.11 //@rules.73/@edges.12" incomingCorrsTarget="//@rules.73/@nodes.13">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    </nodes>
+    <nodes name="booleanType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.3" outgoingEdges="//@rules.73/@edges.13">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="byteType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.4" outgoingEdges="//@rules.73/@edges.14">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="charType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.5" outgoingEdges="//@rules.73/@edges.15">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="floatType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.6" outgoingEdges="//@rules.73/@edges.16">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="doubleType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.7" outgoingEdges="//@rules.73/@edges.17">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="intType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.8" outgoingEdges="//@rules.73/@edges.18">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="longType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.9" outgoingEdges="//@rules.73/@edges.19">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="shortType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.10" outgoingEdges="//@rules.73/@edges.20">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="stringType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.11" outgoingEdges="//@rules.73/@edges.21">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes name="voidType" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.73/@edges.12" outgoingEdges="//@rules.73/@edges.22">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaCompUnitToUmlModel" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.73/@edges.0 //@rules.73/@edges.1" source="//@rules.73/@nodes.1" target="//@rules.73/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+    </nodes>
+    <edges name="javaCompUnitToUmlModel__source__compilationUnit_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.73/@nodes.13" trgNode="//@rules.73/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/source"/>
+    </edges>
+    <edges name="javaCompUnitToUmlModel__target__umlModel_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.73/@nodes.13" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/target"/>
+    </edges>
+    <edges name="javaPackage__compilationUnits__compilationUnit_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.73/@nodes.0" trgNode="//@rules.73/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <edges name="umlModel__ownedType__booleanType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__byteType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__charType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__floatType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.6">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__doubleType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.7">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__intType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.8">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__longType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.9">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__shortType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.10">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__stringType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.11">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="umlModel__ownedType__voidType_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.2" trgNode="//@rules.73/@nodes.12">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+    </edges>
+    <edges name="booleanType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.3" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="byteType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.4" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="charType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.5" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="floatType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.6" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="doubleType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.7" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="intType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.8" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="longType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.9" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="shortType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.10" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="stringType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.11" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <edges name="voidType__package__umlModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.73/@nodes.12" trgNode="//@rules.73/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Type/package"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.0 //@rules.73/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.4"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.5"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.6"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.7"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.8"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.9"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.10"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.11"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.73/@attributeConditionLibrary/@parameterValues.2 //@rules.73/@attributeConditionLibrary/@parameterValues.12"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" value="&quot;UML_MODEL&quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" value="&quot;boolean&quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.4">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.5">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.6">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.7">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.8">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.9">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.10">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.11">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.73/@nodes.12">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassifierConstructorToConstructor" abstract="true">
+    <nodes name="javaConcreteClassifier" incomingEdges="//@rules.74/@edges.0" outgoingEdges="//@rules.74/@edges.4" incomingCorrsSource="//@rules.74/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </nodes>
+    <nodes name="constructor" bindingType="CREATE" incomingEdges="//@rules.74/@edges.2 //@rules.74/@edges.4" incomingCorrsSource="//@rules.74/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.74/@edges.1" incomingCorrsTarget="//@rules.74/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.74/@edges.3" incomingCorrsTarget="//@rules.74/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="j" domainType="CORR" outgoingEdges="//@rules.74/@edges.0 //@rules.74/@edges.1" source="//@rules.74/@nodes.0" target="//@rules.74/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaConstructorToOperation" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.74/@edges.2 //@rules.74/@edges.3" source="//@rules.74/@nodes.1" target="//@rules.74/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <edges name="j__source__javaConcreteClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.74/@nodes.4" trgNode="//@rules.74/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="j__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.74/@nodes.4" trgNode="//@rules.74/@nodes.2">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="javaConstructorToOperation__source__constructor_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.74/@nodes.5" trgNode="//@rules.74/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges name="javaConstructorToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.74/@nodes.5" trgNode="//@rules.74/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges name="javaConcreteClassifier__members__constructor_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.74/@nodes.0" trgNode="//@rules.74/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.74/@attributeConditionLibrary/@parameterValues.0 //@rules.74/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.74/@nodes.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.74/@nodes.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ClassConstructorToConstructor" refines="//@rules.74">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.75/@edges.1" outgoingEdges="//@rules.75/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.75/@edges.0" outgoingEdges="//@rules.75/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.75/@nodes.1" trgNode="//@rules.75/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class/ownedOperation"/>
+    </edges>
+    <edges name="umlOperation__class__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.75/@nodes.2" trgNode="//@rules.75/@nodes.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation/class"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="InterfaceConstructorToConstructor" refines="//@rules.74">
+    <nodes name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.76/@edges.1" outgoingEdges="//@rules.76/@edges.0">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.76/@edges.0" outgoingEdges="//@rules.76/@edges.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.76/@nodes.1" trgNode="//@rules.76/@nodes.2">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface/ownedOperation"/>
+    </edges>
+    <edges name="umlOperation__interface__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.76/@nodes.2" trgNode="//@rules.76/@nodes.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation/interface"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ParameterTypeToParameterType" abstract="true">
+    <nodes name="javaParametrizable" outgoingEdges="//@rules.77/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable"/>
+    </nodes>
+    <nodes name="parameter" incomingEdges="//@rules.77/@edges.0 //@rules.77/@edges.2" outgoingEdges="//@rules.77/@edges.3" incomingCorrsSource="//@rules.77/@nodes.5">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes name="typeReference" bindingType="CREATE" incomingEdges="//@rules.77/@edges.3">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+    </nodes>
+    <nodes name="umlOperation" domainType="TRG" incomingEdges="//@rules.78/@edges.1 //@rules.83/@edges.1" outgoingEdges="//@rules.77/@edges.4" incomingCorrsTarget="//@rules.78/@nodes.1 //@rules.83/@nodes.1">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes name="umlParameter" domainType="TRG" incomingEdges="//@rules.77/@edges.1 //@rules.77/@edges.4" incomingCorrsTarget="//@rules.77/@nodes.5">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="parameterToParameter" domainType="CORR" outgoingEdges="//@rules.77/@edges.0 //@rules.77/@edges.1" source="//@rules.77/@nodes.1" target="//@rules.77/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <edges name="parameterToParameter__source__parameter_eMoflonEdge" domainType="CORR" srcNode="//@rules.77/@nodes.5" trgNode="//@rules.77/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges name="parameterToParameter__target__umlParameter_eMoflonEdge" domainType="CORR" srcNode="//@rules.77/@nodes.5" trgNode="//@rules.77/@nodes.4">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges name="javaParametrizable__parameters__parameter_eMoflonEdge" srcNode="//@rules.77/@nodes.0" trgNode="//@rules.77/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges name="parameter__typeReference__typeReference_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.77/@nodes.1" trgNode="//@rules.77/@nodes.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZQdz1Ed2bJ_pQViWxFg"/>
+    </edges>
+    <edges name="umlOperation__ownedParameter__umlParameter_eMoflonEdge" domainType="TRG" srcNode="//@rules.77/@nodes.3" trgNode="//@rules.77/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.77/@attributeConditionLibrary/@parameterValues.0 //@rules.77/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.77/@nodes.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.1" objectVar="//@rules.77/@nodes.4">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ConstructorParamTypeToParamType" refines="//@rules.77" abstract="true">
+    <nodes name="javaParametrizable" incomingEdges="//@rules.78/@edges.0" incomingCorrsSource="//@rules.78/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaConstructorToOperation" domainType="CORR" outgoingEdges="//@rules.78/@edges.0 //@rules.78/@edges.1" source="//@rules.78/@nodes.0" target="//@rules.77/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <edges name="javaConstructorToOperation__source__javaParametrizable_eMoflonEdge" domainType="CORR" srcNode="//@rules.78/@nodes.1" trgNode="//@rules.78/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges name="javaConstructorToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.78/@nodes.1" trgNode="//@rules.77/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ConstructorClassifierParamTypeToParamType" refines="//@rules.78" abstract="true">
+    <nodes name="typeReference" bindingType="CREATE" outgoingEdges="//@rules.79/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="classifier" incomingEdges="//@rules.79/@edges.0 //@rules.79/@edges.2" incomingCorrsSource="//@rules.79/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="umlParameter" domainType="TRG" outgoingEdges="//@rules.79/@edges.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.79/@edges.1 //@rules.79/@edges.3" incomingCorrsTarget="//@rules.79/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.79/@edges.0 //@rules.79/@edges.1" source="//@rules.79/@nodes.1" target="//@rules.79/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__classifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.79/@nodes.4" trgNode="//@rules.79/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.79/@nodes.4" trgNode="//@rules.79/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="typeReference__target__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.79/@nodes.0" trgNode="//@rules.79/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlParameter__type__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.79/@nodes.2" trgNode="//@rules.79/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ConstructorClassParamTypeToParamType" refines="//@rules.79">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ConstructorInterfaceParamTypeToParamType" refines="//@rules.79">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ConstructorEnumParamTypeToParamType" refines="//@rules.79">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodParamTypeToParamType" refines="//@rules.77" abstract="true">
+    <nodes name="javaParametrizable" incomingEdges="//@rules.83/@edges.0" incomingCorrsSource="//@rules.83/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaConstructorToOperation" domainType="CORR" outgoingEdges="//@rules.83/@edges.0 //@rules.83/@edges.1" source="//@rules.83/@nodes.0" target="//@rules.77/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <edges name="javaConstructorToOperation__source__javaParametrizable_eMoflonEdge" domainType="CORR" srcNode="//@rules.83/@nodes.1" trgNode="//@rules.83/@nodes.0">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges name="javaConstructorToOperation__target__umlOperation_eMoflonEdge" domainType="CORR" srcNode="//@rules.83/@nodes.1" trgNode="//@rules.77/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodClassifierParamTypeToParamType" refines="//@rules.83" abstract="true">
+    <nodes name="typeReference" bindingType="CREATE" outgoingEdges="//@rules.84/@edges.2">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+    </nodes>
+    <nodes name="classifier" incomingEdges="//@rules.84/@edges.0 //@rules.84/@edges.2" incomingCorrsSource="//@rules.84/@nodes.4">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </nodes>
+    <nodes name="umlParameter" domainType="TRG" outgoingEdges="//@rules.84/@edges.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.84/@edges.1 //@rules.84/@edges.3" incomingCorrsTarget="//@rules.84/@nodes.4">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="javaClassifierToUmlClassifier" domainType="CORR" outgoingEdges="//@rules.84/@edges.0 //@rules.84/@edges.1" source="//@rules.84/@nodes.1" target="//@rules.84/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <edges name="javaClassifierToUmlClassifier__source__classifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.84/@nodes.4" trgNode="//@rules.84/@nodes.1">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges name="javaClassifierToUmlClassifier__target__umlClassifier_eMoflonEdge" domainType="CORR" srcNode="//@rules.84/@nodes.4" trgNode="//@rules.84/@nodes.3">
+      <type href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges name="typeReference__target__classifier_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.84/@nodes.0" trgNode="//@rules.84/@nodes.1">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+    </edges>
+    <edges name="umlParameter__type__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.84/@nodes.2" trgNode="//@rules.84/@nodes.3">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodClassParamTypeToParamType" refines="//@rules.84">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodInterfaceParamTypeToParamType" refines="//@rules.84">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="MethodEnumParamTypeToParamType" refines="//@rules.84">
+    <nodes name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes name="umlClassifier" domainType="TRG">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="expectPrivate">
+      <parameterDefinitions name="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="expectProtected">
+      <parameterDefinitions name="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="expectPublic">
+      <parameterDefinitions name="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="expectPackage">
+      <parameterDefinitions name="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_string" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_int" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_float" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_double" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_long" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_char" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_boolean" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addPrefix" userDefined="false">
+      <parameterDefinitions name="prefix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addSuffix" userDefined="false">
+      <parameterDefinitions name="suffix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="concat" userDefined="false">
+      <parameterDefinitions name="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultString" userDefined="false">
+      <parameterDefinitions name="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultNumber" userDefined="false">
+      <parameterDefinitions name="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToDouble" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="doubleValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToInt" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="multiply" userDefined="false">
+      <parameterDefinitions name="operand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="operand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="divide" userDefined="false">
+      <parameterDefinitions name="numerator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="denominator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="add" userDefined="false">
+      <parameterDefinitions name="summand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="summand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="sub" userDefined="false">
+      <parameterDefinitions name="minuend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="subtrahend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="max" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="max">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="smallerOrEqual" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setRandomString" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
+</language:TGG>

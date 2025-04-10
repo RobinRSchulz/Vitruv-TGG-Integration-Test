@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IBeXPatternModel:IBeXModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXPatternModel="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore java://org.emoflon.ibex.patternmodel.IBeXPatternModel.IBeXPatternModelPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
+  <patternSet xmi:type="IBeXPatternModel:IBeXPatternSet">
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassAbstractToAbstract__GEN" localEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.53" signatureNodes="//@nodeSet/@nodes.33 //@nodeSet/@nodes.69 //@nodeSet/@nodes.156">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.156">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isAbstract"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassAttributeToProperty__GEN" localEdges="//@edgeSet/@edges.6 //@edgeSet/@edges.8" signatureNodes="//@nodeSet/@nodes.3 //@nodeSet/@nodes.5 //@nodeSet/@nodes.157"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassAttributeTypeToPropertyType__GEN" localEdges="//@edgeSet/@edges.0 //@edgeSet/@edges.3 //@edgeSet/@edges.18 //@edgeSet/@edges.54" signatureNodes="//@nodeSet/@nodes.0 //@nodeSet/@nodes.6 //@nodeSet/@nodes.23 //@nodeSet/@nodes.34 //@nodeSet/@nodes.149 //@nodeSet/@nodes.158">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.23">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.149">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassConstructorToConstructor__GEN" localEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.14" signatureNodes="//@nodeSet/@nodes.27 //@nodeSet/@nodes.70 //@nodeSet/@nodes.159"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassFinalToFinal__GEN" localEdges="//@edgeSet/@edges.33 //@edgeSet/@edges.55" signatureNodes="//@nodeSet/@nodes.35 //@nodeSet/@nodes.71 //@nodeSet/@nodes.160">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.160">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isFinalSpecialization"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassImplementToClassImplement__GEN" localEdges="//@edgeSet/@edges.30 //@edgeSet/@edges.51" signatureNodes="//@nodeSet/@nodes.31 //@nodeSet/@nodes.36 //@nodeSet/@nodes.154"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassMethodToMethod__GEN" localEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.15" signatureNodes="//@nodeSet/@nodes.28 //@nodeSet/@nodes.72 //@nodeSet/@nodes.161"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassPrivateToPrivate__GEN" localEdges="//@edgeSet/@edges.34 //@edgeSet/@edges.56" signatureNodes="//@nodeSet/@nodes.37 //@nodeSet/@nodes.73 //@nodeSet/@nodes.162">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectPrivate" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.162">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassProtectedToProtected__GEN" localEdges="//@edgeSet/@edges.35 //@edgeSet/@edges.57" signatureNodes="//@nodeSet/@nodes.38 //@nodeSet/@nodes.74 //@nodeSet/@nodes.163">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectProtected" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.163">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassPublicToPublic__GEN" localEdges="//@edgeSet/@edges.36 //@edgeSet/@edges.58" signatureNodes="//@nodeSet/@nodes.39 //@nodeSet/@nodes.75 //@nodeSet/@nodes.164">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectPublic" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.164">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ClassToUmlClass__GEN" localEdges="//@edgeSet/@edges.122 //@edgeSet/@edges.125 //@edgeSet/@edges.128" signatureNodes="//@nodeSet/@nodes.19 //@nodeSet/@nodes.116 //@nodeSet/@nodes.119 //@nodeSet/@nodes.213"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ConstructorClassParamTypeToParamType__GEN" localEdges="//@edgeSet/@edges.19 //@edgeSet/@edges.59 //@edgeSet/@edges.90 //@edgeSet/@edges.98 //@edgeSet/@edges.132 //@edgeSet/@edges.144 //@edgeSet/@edges.150 //@edgeSet/@edges.156" signatureNodes="//@nodeSet/@nodes.7 //@nodeSet/@nodes.40 //@nodeSet/@nodes.92 //@nodeSet/@nodes.124 //@nodeSet/@nodes.137 //@nodeSet/@nodes.143 //@nodeSet/@nodes.165 //@nodeSet/@nodes.197 //@nodeSet/@nodes.216">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.137">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.216">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ConstructorEnumParamTypeToParamType__GEN" localEdges="//@edgeSet/@edges.20 //@edgeSet/@edges.60 //@edgeSet/@edges.91 //@edgeSet/@edges.99 //@edgeSet/@edges.133 //@edgeSet/@edges.145 //@edgeSet/@edges.151 //@edgeSet/@edges.157" signatureNodes="//@nodeSet/@nodes.8 //@nodeSet/@nodes.41 //@nodeSet/@nodes.93 //@nodeSet/@nodes.125 //@nodeSet/@nodes.138 //@nodeSet/@nodes.144 //@nodeSet/@nodes.166 //@nodeSet/@nodes.198 //@nodeSet/@nodes.217">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.138">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.217">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ConstructorInterfaceParamTypeToParamType__GEN" localEdges="//@edgeSet/@edges.21 //@edgeSet/@edges.61 //@edgeSet/@edges.92 //@edgeSet/@edges.100 //@edgeSet/@edges.134 //@edgeSet/@edges.146 //@edgeSet/@edges.152 //@edgeSet/@edges.158" signatureNodes="//@nodeSet/@nodes.9 //@nodeSet/@nodes.42 //@nodeSet/@nodes.94 //@nodeSet/@nodes.126 //@nodeSet/@nodes.139 //@nodeSet/@nodes.145 //@nodeSet/@nodes.167 //@nodeSet/@nodes.199 //@nodeSet/@nodes.218">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.139">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.218">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumAbstractToAbstract__GEN" localEdges="//@edgeSet/@edges.37 //@edgeSet/@edges.62" signatureNodes="//@nodeSet/@nodes.43 //@nodeSet/@nodes.76 //@nodeSet/@nodes.168">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.168">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isAbstract"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumAttributeToProperty__GEN" localEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.9" signatureNodes="//@nodeSet/@nodes.4 //@nodeSet/@nodes.10 //@nodeSet/@nodes.169"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumAttributeTypeToPropertyType__GEN" localEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.4 //@edgeSet/@edges.22 //@edgeSet/@edges.63" signatureNodes="//@nodeSet/@nodes.1 //@nodeSet/@nodes.11 //@nodeSet/@nodes.24 //@nodeSet/@nodes.44 //@nodeSet/@nodes.150 //@nodeSet/@nodes.170">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.24">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.150">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumFinalToFinal__GEN" localEdges="//@edgeSet/@edges.38 //@edgeSet/@edges.64" signatureNodes="//@nodeSet/@nodes.45 //@nodeSet/@nodes.77 //@nodeSet/@nodes.171">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.171">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isFinalSpecialization"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumPrivateToPrivate__GEN" localEdges="//@edgeSet/@edges.39 //@edgeSet/@edges.65" signatureNodes="//@nodeSet/@nodes.46 //@nodeSet/@nodes.78 //@nodeSet/@nodes.172">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectPrivate" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.172">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumProtectedToProtected__GEN" localEdges="//@edgeSet/@edges.40 //@edgeSet/@edges.66" signatureNodes="//@nodeSet/@nodes.47 //@nodeSet/@nodes.79 //@nodeSet/@nodes.173">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectProtected" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.173">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumPublicToPublic__GEN" localEdges="//@edgeSet/@edges.41 //@edgeSet/@edges.67" signatureNodes="//@nodeSet/@nodes.48 //@nodeSet/@nodes.80 //@nodeSet/@nodes.174">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectPublic" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.174">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="EnumToUmlEnum__GEN" localEdges="//@edgeSet/@edges.123 //@edgeSet/@edges.126 //@edgeSet/@edges.129" signatureNodes="//@nodeSet/@nodes.20 //@nodeSet/@nodes.117 //@nodeSet/@nodes.120 //@nodeSet/@nodes.214"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ExistingClassImplementToClassImplement__GEN" localEdges="//@edgeSet/@edges.31 //@edgeSet/@edges.52 //@edgeSet/@edges.138 //@edgeSet/@edges.143" signatureNodes="//@nodeSet/@nodes.26 //@nodeSet/@nodes.32 //@nodeSet/@nodes.49 //@nodeSet/@nodes.134 //@nodeSet/@nodes.155 //@nodeSet/@nodes.195">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.49 //@nodeSet/@nodes.134"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ExistingSuperClassToSuperClass__GEN" localEdges="//@edgeSet/@edges.42 //@edgeSet/@edges.68 //@edgeSet/@edges.139 //@edgeSet/@edges.141" signatureNodes="//@nodeSet/@nodes.50 //@nodeSet/@nodes.81 //@nodeSet/@nodes.135 //@nodeSet/@nodes.152 //@nodeSet/@nodes.175 //@nodeSet/@nodes.193">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.81 //@nodeSet/@nodes.152"/>
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.175 //@nodeSet/@nodes.193"/>
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.50 //@nodeSet/@nodes.135"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ExistingSuperInterfaceToSuperInterface__GEN" localEdges="//@edgeSet/@edges.43 //@edgeSet/@edges.69 //@edgeSet/@edges.140 //@edgeSet/@edges.142" signatureNodes="//@nodeSet/@nodes.51 //@nodeSet/@nodes.82 //@nodeSet/@nodes.136 //@nodeSet/@nodes.153 //@nodeSet/@nodes.176 //@nodeSet/@nodes.194">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.82 //@nodeSet/@nodes.153"/>
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.176 //@nodeSet/@nodes.194"/>
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.51 //@nodeSet/@nodes.136"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="FieldFinalToFinal__GEN" localEdges="//@edgeSet/@edges.84 //@edgeSet/@edges.86" signatureNodes="//@nodeSet/@nodes.66 //@nodeSet/@nodes.100 //@nodeSet/@nodes.222">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.222">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature/isReadOnly"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="FieldStaticToStatic__GEN" localEdges="//@edgeSet/@edges.85 //@edgeSet/@edges.87" signatureNodes="//@nodeSet/@nodes.67 //@nodeSet/@nodes.101 //@nodeSet/@nodes.223">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.223">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Feature/isStatic"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceAbstractToAbstract__GEN" localEdges="//@edgeSet/@edges.44 //@edgeSet/@edges.70" signatureNodes="//@nodeSet/@nodes.52 //@nodeSet/@nodes.83 //@nodeSet/@nodes.177">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.177">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isAbstract"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceAttributeTypeToPropertyType__GEN" localEdges="//@edgeSet/@edges.2 //@edgeSet/@edges.5 //@edgeSet/@edges.23 //@edgeSet/@edges.71" signatureNodes="//@nodeSet/@nodes.2 //@nodeSet/@nodes.12 //@nodeSet/@nodes.25 //@nodeSet/@nodes.53 //@nodeSet/@nodes.151 //@nodeSet/@nodes.178">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.25">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.151">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceConstructorToConstructor__GEN" localEdges="//@edgeSet/@edges.12 //@edgeSet/@edges.16" signatureNodes="//@nodeSet/@nodes.29 //@nodeSet/@nodes.84 //@nodeSet/@nodes.179"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceFinalToFinal__GEN" localEdges="//@edgeSet/@edges.45 //@edgeSet/@edges.72" signatureNodes="//@nodeSet/@nodes.54 //@nodeSet/@nodes.85 //@nodeSet/@nodes.180">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.180">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isFinalSpecialization"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceMethodToMethod__GEN" localEdges="//@edgeSet/@edges.13 //@edgeSet/@edges.17" signatureNodes="//@nodeSet/@nodes.30 //@nodeSet/@nodes.86 //@nodeSet/@nodes.181"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfacePrivateToPrivate__GEN" localEdges="//@edgeSet/@edges.46 //@edgeSet/@edges.73" signatureNodes="//@nodeSet/@nodes.55 //@nodeSet/@nodes.87 //@nodeSet/@nodes.182">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectPrivate" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.182">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceProtectedToProtected__GEN" localEdges="//@edgeSet/@edges.47 //@edgeSet/@edges.74" signatureNodes="//@nodeSet/@nodes.56 //@nodeSet/@nodes.88 //@nodeSet/@nodes.183">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectProtected" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.183">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfacePublicToPublic__GEN" localEdges="//@edgeSet/@edges.48 //@edgeSet/@edges.75" signatureNodes="//@nodeSet/@nodes.57 //@nodeSet/@nodes.89 //@nodeSet/@nodes.184">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_expectPublic" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.java2uml">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.184">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="InterfaceToUmlInterface__GEN" localEdges="//@edgeSet/@edges.124 //@edgeSet/@edges.127 //@edgeSet/@edges.130" signatureNodes="//@nodeSet/@nodes.21 //@nodeSet/@nodes.118 //@nodeSet/@nodes.121 //@nodeSet/@nodes.215"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="JavaCompilationUnitToExistingUmlModel__GEN" localEdges="//@edgeSet/@edges.88 //@edgeSet/@edges.89 //@edgeSet/@edges.131" signatureNodes="//@nodeSet/@nodes.22 //@nodeSet/@nodes.68 //@nodeSet/@nodes.122 //@nodeSet/@nodes.196">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000B22554D4C5F4D4F44454C22" stringValue="&quot;UML_MODEL&quot;"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.196">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="JavaFirstCompilationUnitToUmlModel__GEN" signatureNodes="//@nodeSet/@nodes.123"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodAbstractToAbstract__GEN" localEdges="//@edgeSet/@edges.106 //@edgeSet/@edges.114" signatureNodes="//@nodeSet/@nodes.102 //@nodeSet/@nodes.108 //@nodeSet/@nodes.200">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.200">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/isAbstract"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodClassParamTypeToParamType__GEN" localEdges="//@edgeSet/@edges.24 //@edgeSet/@edges.76 //@edgeSet/@edges.93 //@edgeSet/@edges.101 //@edgeSet/@edges.135 //@edgeSet/@edges.147 //@edgeSet/@edges.153 //@edgeSet/@edges.159" signatureNodes="//@nodeSet/@nodes.13 //@nodeSet/@nodes.58 //@nodeSet/@nodes.95 //@nodeSet/@nodes.127 //@nodeSet/@nodes.140 //@nodeSet/@nodes.146 //@nodeSet/@nodes.185 //@nodeSet/@nodes.201 //@nodeSet/@nodes.219">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.140">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.219">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodClassReturnTypeToReturnType__GEN" localEdges="//@edgeSet/@edges.25 //@edgeSet/@edges.77 //@edgeSet/@edges.107 //@edgeSet/@edges.115" signatureNodes="//@nodeSet/@nodes.14 //@nodeSet/@nodes.59 //@nodeSet/@nodes.103 //@nodeSet/@nodes.109 //@nodeSet/@nodes.186 //@nodeSet/@nodes.202"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodEnumParamTypeToParamType__GEN" localEdges="//@edgeSet/@edges.26 //@edgeSet/@edges.78 //@edgeSet/@edges.94 //@edgeSet/@edges.102 //@edgeSet/@edges.136 //@edgeSet/@edges.148 //@edgeSet/@edges.154 //@edgeSet/@edges.160" signatureNodes="//@nodeSet/@nodes.15 //@nodeSet/@nodes.60 //@nodeSet/@nodes.96 //@nodeSet/@nodes.128 //@nodeSet/@nodes.141 //@nodeSet/@nodes.147 //@nodeSet/@nodes.187 //@nodeSet/@nodes.203 //@nodeSet/@nodes.220">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.141">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.220">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodEnumReturnTypeToReturnType__GEN" localEdges="//@edgeSet/@edges.27 //@edgeSet/@edges.79 //@edgeSet/@edges.108 //@edgeSet/@edges.116" signatureNodes="//@nodeSet/@nodes.16 //@nodeSet/@nodes.61 //@nodeSet/@nodes.104 //@nodeSet/@nodes.110 //@nodeSet/@nodes.188 //@nodeSet/@nodes.204"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodFinalToFinal__GEN" localEdges="//@edgeSet/@edges.109 //@edgeSet/@edges.117" signatureNodes="//@nodeSet/@nodes.105 //@nodeSet/@nodes.111 //@nodeSet/@nodes.205">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.205">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//RedefinableElement/isLeaf"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodInterfaceParamTypeToParamType__GEN" localEdges="//@edgeSet/@edges.28 //@edgeSet/@edges.80 //@edgeSet/@edges.95 //@edgeSet/@edges.103 //@edgeSet/@edges.137 //@edgeSet/@edges.149 //@edgeSet/@edges.155 //@edgeSet/@edges.161" signatureNodes="//@nodeSet/@nodes.17 //@nodeSet/@nodes.62 //@nodeSet/@nodes.97 //@nodeSet/@nodes.129 //@nodeSet/@nodes.142 //@nodeSet/@nodes.148 //@nodeSet/@nodes.189 //@nodeSet/@nodes.206 //@nodeSet/@nodes.221">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_string" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.142">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.221">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodInterfaceReturnTypeToReturnType__GEN" localEdges="//@edgeSet/@edges.29 //@edgeSet/@edges.81 //@edgeSet/@edges.110 //@edgeSet/@edges.118" signatureNodes="//@nodeSet/@nodes.18 //@nodeSet/@nodes.63 //@nodeSet/@nodes.106 //@nodeSet/@nodes.112 //@nodeSet/@nodes.190 //@nodeSet/@nodes.207"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="MethodStaticToStatic__GEN" localEdges="//@edgeSet/@edges.111 //@edgeSet/@edges.119" signatureNodes="//@nodeSet/@nodes.107 //@nodeSet/@nodes.113 //@nodeSet/@nodes.208">
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_boolean" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXConstant" value="ACED000574000474727565" stringValue="true"/>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.208">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Feature/isStatic"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="OrdinaryConstructorParameterToParameter__GEN" localEdges="//@edgeSet/@edges.96 //@edgeSet/@edges.104" signatureNodes="//@nodeSet/@nodes.98 //@nodeSet/@nodes.130 //@nodeSet/@nodes.209"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="OrdinaryMethodParameterToParameter__GEN" localEdges="//@edgeSet/@edges.112 //@edgeSet/@edges.120" signatureNodes="//@nodeSet/@nodes.114 //@nodeSet/@nodes.131 //@nodeSet/@nodes.210"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="SuperClassToSuperClass__GEN" localEdges="//@edgeSet/@edges.49 //@edgeSet/@edges.82" signatureNodes="//@nodeSet/@nodes.64 //@nodeSet/@nodes.90 //@nodeSet/@nodes.191"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="SuperInterfaceToSuperInterface__GEN" localEdges="//@edgeSet/@edges.50 //@edgeSet/@edges.83" signatureNodes="//@nodeSet/@nodes.65 //@nodeSet/@nodes.91 //@nodeSet/@nodes.192"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="VariableLengthConstructorParameterToParameter__GEN" localEdges="//@edgeSet/@edges.97 //@edgeSet/@edges.105" signatureNodes="//@nodeSet/@nodes.99 //@nodeSet/@nodes.132 //@nodeSet/@nodes.211"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="VariableLengthMethodParameterToParameter__GEN" localEdges="//@edgeSet/@edges.113 //@edgeSet/@edges.121" signatureNodes="//@nodeSet/@nodes.115 //@nodeSet/@nodes.133 //@nodeSet/@nodes.212"/>
+  </patternSet>
+  <nodeSet xmi:type="IBeXPatternModel:IBeXNodeSet">
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="attributeToProperty" outgoingEdges="//@edgeSet/@edges.0 //@edgeSet/@edges.3">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="attributeToProperty" outgoingEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.4">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="attributeToProperty" outgoingEdges="//@edgeSet/@edges.2 //@edgeSet/@edges.5">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classToUmlClass" outgoingEdges="//@edgeSet/@edges.6 //@edgeSet/@edges.8">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classToUmlClass" outgoingEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.9">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.6">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.18">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.19">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.20">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.21">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.7">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.22">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.23">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.24">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.25">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.26">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.27">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.28">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="classifier" incomingEdges="//@edgeSet/@edges.29">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="compilationUnit" incomingEdges="//@edgeSet/@edges.128">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="compilationUnit" incomingEdges="//@edgeSet/@edges.129">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="compilationUnit" incomingEdges="//@edgeSet/@edges.130">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="compilationUnit" incomingEdges="//@edgeSet/@edges.88 //@edgeSet/@edges.131">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="field" incomingEdges="//@edgeSet/@edges.0">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="field" incomingEdges="//@edgeSet/@edges.1">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="field" incomingEdges="//@edgeSet/@edges.2">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="interface" incomingEdges="//@edgeSet/@edges.138">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="j" outgoingEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.14">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="j" outgoingEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.15">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="j" outgoingEdges="//@edgeSet/@edges.12 //@edgeSet/@edges.16">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="j" outgoingEdges="//@edgeSet/@edges.13 //@edgeSet/@edges.17">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClass" incomingEdges="//@edgeSet/@edges.30">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClass" incomingEdges="//@edgeSet/@edges.31">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.53">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.18 //@edgeSet/@edges.54">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.33 //@edgeSet/@edges.55">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.30 //@edgeSet/@edges.51">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.34 //@edgeSet/@edges.56">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.35 //@edgeSet/@edges.57">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.36 //@edgeSet/@edges.58">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.19 //@edgeSet/@edges.59">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.20 //@edgeSet/@edges.60">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.21 //@edgeSet/@edges.61">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.37 //@edgeSet/@edges.62">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.22 //@edgeSet/@edges.63">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.38 //@edgeSet/@edges.64">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.39 //@edgeSet/@edges.65">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.40 //@edgeSet/@edges.66">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.41 //@edgeSet/@edges.67">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.31 //@edgeSet/@edges.52">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.42 //@edgeSet/@edges.68">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.43 //@edgeSet/@edges.69">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.44 //@edgeSet/@edges.70">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.23 //@edgeSet/@edges.71">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.45 //@edgeSet/@edges.72">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.46 //@edgeSet/@edges.73">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.47 //@edgeSet/@edges.74">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.48 //@edgeSet/@edges.75">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.24 //@edgeSet/@edges.76">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.25 //@edgeSet/@edges.77">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.26 //@edgeSet/@edges.78">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.27 //@edgeSet/@edges.79">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.28 //@edgeSet/@edges.80">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.29 //@edgeSet/@edges.81">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.49 //@edgeSet/@edges.82">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlClassifier" outgoingEdges="//@edgeSet/@edges.50 //@edgeSet/@edges.83">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlProperty" outgoingEdges="//@edgeSet/@edges.84 //@edgeSet/@edges.86">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaClassifierToUmlProperty" outgoingEdges="//@edgeSet/@edges.85 //@edgeSet/@edges.87">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaCompUnitToUmlModel" outgoingEdges="//@edgeSet/@edges.88 //@edgeSet/@edges.89">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.32">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.10">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.33">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.11">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.34">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.35">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.36">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.37">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.38">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.39">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.40">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.41">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.42">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.43">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.44">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.12">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.45">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.13">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.46">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.47">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.48">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.49">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConcreteClassifier" incomingEdges="//@edgeSet/@edges.50">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.90 //@edgeSet/@edges.98">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.91 //@edgeSet/@edges.99">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.92 //@edgeSet/@edges.100">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.93 //@edgeSet/@edges.101">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.94 //@edgeSet/@edges.102">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.95 //@edgeSet/@edges.103">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.96 //@edgeSet/@edges.104">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaConstructorToOperation" outgoingEdges="//@edgeSet/@edges.97 //@edgeSet/@edges.105">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaField" incomingEdges="//@edgeSet/@edges.84">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaField" incomingEdges="//@edgeSet/@edges.85">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethod" incomingEdges="//@edgeSet/@edges.106">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethod" incomingEdges="//@edgeSet/@edges.107">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethod" incomingEdges="//@edgeSet/@edges.108">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethod" incomingEdges="//@edgeSet/@edges.109">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethod" incomingEdges="//@edgeSet/@edges.110">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethod" incomingEdges="//@edgeSet/@edges.111">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.106 //@edgeSet/@edges.114">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.107 //@edgeSet/@edges.115">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.108 //@edgeSet/@edges.116">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.109 //@edgeSet/@edges.117">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.110 //@edgeSet/@edges.118">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.111 //@edgeSet/@edges.119">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.112 //@edgeSet/@edges.120">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaMethodToOperation" outgoingEdges="//@edgeSet/@edges.113 //@edgeSet/@edges.121">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackToUmlPack" outgoingEdges="//@edgeSet/@edges.122 //@edgeSet/@edges.125">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackToUmlPack" outgoingEdges="//@edgeSet/@edges.123 //@edgeSet/@edges.126">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackToUmlPack" outgoingEdges="//@edgeSet/@edges.124 //@edgeSet/@edges.127">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackage" incomingEdges="//@edgeSet/@edges.122" outgoingEdges="//@edgeSet/@edges.128">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackage" incomingEdges="//@edgeSet/@edges.123" outgoingEdges="//@edgeSet/@edges.129">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackage" incomingEdges="//@edgeSet/@edges.124" outgoingEdges="//@edgeSet/@edges.130">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackage" outgoingEdges="//@edgeSet/@edges.131">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaPackage">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.90" outgoingEdges="//@edgeSet/@edges.132">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.91" outgoingEdges="//@edgeSet/@edges.133">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.92" outgoingEdges="//@edgeSet/@edges.134">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.93" outgoingEdges="//@edgeSet/@edges.135">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.94" outgoingEdges="//@edgeSet/@edges.136">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.95" outgoingEdges="//@edgeSet/@edges.137">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.96">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.112">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.97">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaParametrizable" incomingEdges="//@edgeSet/@edges.113">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaSuperClassifierToUmlSuperClassifier" outgoingEdges="//@edgeSet/@edges.138 //@edgeSet/@edges.143">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaSuperClassifierToUmlSuperClassifier" outgoingEdges="//@edgeSet/@edges.139 //@edgeSet/@edges.141">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="javaSuperClassifierToUmlSuperClassifier" outgoingEdges="//@edgeSet/@edges.140 //@edgeSet/@edges.142">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameter" incomingEdges="//@edgeSet/@edges.132 //@edgeSet/@edges.144">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameter" incomingEdges="//@edgeSet/@edges.133 //@edgeSet/@edges.145">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameter" incomingEdges="//@edgeSet/@edges.134 //@edgeSet/@edges.146">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameter" incomingEdges="//@edgeSet/@edges.135 //@edgeSet/@edges.147">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameter" incomingEdges="//@edgeSet/@edges.136 //@edgeSet/@edges.148">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameter" incomingEdges="//@edgeSet/@edges.137 //@edgeSet/@edges.149">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameterToParameter" outgoingEdges="//@edgeSet/@edges.144 //@edgeSet/@edges.150">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameterToParameter" outgoingEdges="//@edgeSet/@edges.145 //@edgeSet/@edges.151">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameterToParameter" outgoingEdges="//@edgeSet/@edges.146 //@edgeSet/@edges.152">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameterToParameter" outgoingEdges="//@edgeSet/@edges.147 //@edgeSet/@edges.153">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameterToParameter" outgoingEdges="//@edgeSet/@edges.148 //@edgeSet/@edges.154">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="parameterToParameter" outgoingEdges="//@edgeSet/@edges.149 //@edgeSet/@edges.155">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="property" incomingEdges="//@edgeSet/@edges.3">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="property" incomingEdges="//@edgeSet/@edges.4">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="property" incomingEdges="//@edgeSet/@edges.5">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="superclassifier" incomingEdges="//@edgeSet/@edges.139">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="superclassifier" incomingEdges="//@edgeSet/@edges.140">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClass" incomingEdges="//@edgeSet/@edges.51">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClass" incomingEdges="//@edgeSet/@edges.52">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.53">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.8">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.54">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.14">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.55">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.15">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.56">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.57">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.58">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.59">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.60">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.61">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.62">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.9">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.63">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.64">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.65">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.66">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.67">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.68">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.69">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.70">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.71">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.16">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.72">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.17">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.73">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.74">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.75">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.76">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.77">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.78">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.79">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.80">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.81">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.82">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlClassifier" incomingEdges="//@edgeSet/@edges.83">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlGeneralClassifier" incomingEdges="//@edgeSet/@edges.141">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlGeneralClassifier" incomingEdges="//@edgeSet/@edges.142">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlInterface" incomingEdges="//@edgeSet/@edges.143">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlModel" incomingEdges="//@edgeSet/@edges.89">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.98" outgoingEdges="//@edgeSet/@edges.156">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.99" outgoingEdges="//@edgeSet/@edges.157">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.100" outgoingEdges="//@edgeSet/@edges.158">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.114">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.101" outgoingEdges="//@edgeSet/@edges.159">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.115">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.102" outgoingEdges="//@edgeSet/@edges.160">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.116">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.117">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.103" outgoingEdges="//@edgeSet/@edges.161">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.118">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.119">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.104">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.120">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.105">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlOperation" incomingEdges="//@edgeSet/@edges.121">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlPackage" incomingEdges="//@edgeSet/@edges.125">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlPackage" incomingEdges="//@edgeSet/@edges.126">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlPackage" incomingEdges="//@edgeSet/@edges.127">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlParameter" incomingEdges="//@edgeSet/@edges.150 //@edgeSet/@edges.156">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlParameter" incomingEdges="//@edgeSet/@edges.151 //@edgeSet/@edges.157">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlParameter" incomingEdges="//@edgeSet/@edges.152 //@edgeSet/@edges.158">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlParameter" incomingEdges="//@edgeSet/@edges.153 //@edgeSet/@edges.159">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlParameter" incomingEdges="//@edgeSet/@edges.154 //@edgeSet/@edges.160">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlParameter" incomingEdges="//@edgeSet/@edges.155 //@edgeSet/@edges.161">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlProperty" incomingEdges="//@edgeSet/@edges.86">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="umlProperty" incomingEdges="//@edgeSet/@edges.87">
+      <type xmi:type="ecore:EClass" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </nodes>
+  </nodeSet>
+  <edgeSet xmi:type="IBeXPatternModel:IBeXEdgeSet">
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="attributeToProperty->field" sourceNode="//@nodeSet/@nodes.0" targetNode="//@nodeSet/@nodes.23">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="attributeToProperty->field" sourceNode="//@nodeSet/@nodes.1" targetNode="//@nodeSet/@nodes.24">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="attributeToProperty->field" sourceNode="//@nodeSet/@nodes.2" targetNode="//@nodeSet/@nodes.25">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="attributeToProperty->property" sourceNode="//@nodeSet/@nodes.0" targetNode="//@nodeSet/@nodes.149">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="attributeToProperty->property" sourceNode="//@nodeSet/@nodes.1" targetNode="//@nodeSet/@nodes.150">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="attributeToProperty->property" sourceNode="//@nodeSet/@nodes.2" targetNode="//@nodeSet/@nodes.151">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="classToUmlClass->classifier" sourceNode="//@nodeSet/@nodes.3" targetNode="//@nodeSet/@nodes.5">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="classToUmlClass->classifier" sourceNode="//@nodeSet/@nodes.4" targetNode="//@nodeSet/@nodes.10">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="classToUmlClass->umlClassifier" sourceNode="//@nodeSet/@nodes.3" targetNode="//@nodeSet/@nodes.157">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="classToUmlClass->umlClassifier" sourceNode="//@nodeSet/@nodes.4" targetNode="//@nodeSet/@nodes.169">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.27" targetNode="//@nodeSet/@nodes.70">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.28" targetNode="//@nodeSet/@nodes.72">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.29" targetNode="//@nodeSet/@nodes.84">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.30" targetNode="//@nodeSet/@nodes.86">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->umlClassifier" sourceNode="//@nodeSet/@nodes.27" targetNode="//@nodeSet/@nodes.159">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->umlClassifier" sourceNode="//@nodeSet/@nodes.28" targetNode="//@nodeSet/@nodes.161">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->umlClassifier" sourceNode="//@nodeSet/@nodes.29" targetNode="//@nodeSet/@nodes.179">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="j->umlClassifier" sourceNode="//@nodeSet/@nodes.30" targetNode="//@nodeSet/@nodes.181">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.34" targetNode="//@nodeSet/@nodes.6">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.40" targetNode="//@nodeSet/@nodes.7">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.41" targetNode="//@nodeSet/@nodes.8">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.42" targetNode="//@nodeSet/@nodes.9">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.44" targetNode="//@nodeSet/@nodes.11">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.53" targetNode="//@nodeSet/@nodes.12">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.58" targetNode="//@nodeSet/@nodes.13">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.59" targetNode="//@nodeSet/@nodes.14">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.60" targetNode="//@nodeSet/@nodes.15">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.61" targetNode="//@nodeSet/@nodes.16">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.62" targetNode="//@nodeSet/@nodes.17">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->classifier" sourceNode="//@nodeSet/@nodes.63" targetNode="//@nodeSet/@nodes.18">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaClass" sourceNode="//@nodeSet/@nodes.36" targetNode="//@nodeSet/@nodes.31">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaClass" sourceNode="//@nodeSet/@nodes.49" targetNode="//@nodeSet/@nodes.32">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.33" targetNode="//@nodeSet/@nodes.69">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.35" targetNode="//@nodeSet/@nodes.71">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.37" targetNode="//@nodeSet/@nodes.73">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.38" targetNode="//@nodeSet/@nodes.74">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.39" targetNode="//@nodeSet/@nodes.75">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.43" targetNode="//@nodeSet/@nodes.76">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.45" targetNode="//@nodeSet/@nodes.77">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.46" targetNode="//@nodeSet/@nodes.78">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.47" targetNode="//@nodeSet/@nodes.79">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.48" targetNode="//@nodeSet/@nodes.80">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.50" targetNode="//@nodeSet/@nodes.81">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.51" targetNode="//@nodeSet/@nodes.82">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.52" targetNode="//@nodeSet/@nodes.83">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.54" targetNode="//@nodeSet/@nodes.85">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.55" targetNode="//@nodeSet/@nodes.87">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.56" targetNode="//@nodeSet/@nodes.88">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.57" targetNode="//@nodeSet/@nodes.89">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.64" targetNode="//@nodeSet/@nodes.90">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->javaConcreteClassifier" sourceNode="//@nodeSet/@nodes.65" targetNode="//@nodeSet/@nodes.91">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClass" sourceNode="//@nodeSet/@nodes.36" targetNode="//@nodeSet/@nodes.154">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClass" sourceNode="//@nodeSet/@nodes.49" targetNode="//@nodeSet/@nodes.155">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.33" targetNode="//@nodeSet/@nodes.156">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.34" targetNode="//@nodeSet/@nodes.158">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.35" targetNode="//@nodeSet/@nodes.160">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.37" targetNode="//@nodeSet/@nodes.162">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.38" targetNode="//@nodeSet/@nodes.163">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.39" targetNode="//@nodeSet/@nodes.164">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.40" targetNode="//@nodeSet/@nodes.165">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.41" targetNode="//@nodeSet/@nodes.166">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.42" targetNode="//@nodeSet/@nodes.167">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.43" targetNode="//@nodeSet/@nodes.168">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.44" targetNode="//@nodeSet/@nodes.170">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.45" targetNode="//@nodeSet/@nodes.171">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.46" targetNode="//@nodeSet/@nodes.172">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.47" targetNode="//@nodeSet/@nodes.173">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.48" targetNode="//@nodeSet/@nodes.174">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.50" targetNode="//@nodeSet/@nodes.175">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.51" targetNode="//@nodeSet/@nodes.176">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.52" targetNode="//@nodeSet/@nodes.177">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.53" targetNode="//@nodeSet/@nodes.178">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.54" targetNode="//@nodeSet/@nodes.180">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.55" targetNode="//@nodeSet/@nodes.182">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.56" targetNode="//@nodeSet/@nodes.183">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.57" targetNode="//@nodeSet/@nodes.184">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.58" targetNode="//@nodeSet/@nodes.185">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.59" targetNode="//@nodeSet/@nodes.186">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.60" targetNode="//@nodeSet/@nodes.187">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.61" targetNode="//@nodeSet/@nodes.188">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.62" targetNode="//@nodeSet/@nodes.189">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.63" targetNode="//@nodeSet/@nodes.190">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.64" targetNode="//@nodeSet/@nodes.191">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlClassifier->umlClassifier" sourceNode="//@nodeSet/@nodes.65" targetNode="//@nodeSet/@nodes.192">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlProperty->javaField" sourceNode="//@nodeSet/@nodes.66" targetNode="//@nodeSet/@nodes.100">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlProperty->javaField" sourceNode="//@nodeSet/@nodes.67" targetNode="//@nodeSet/@nodes.101">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlProperty->umlProperty" sourceNode="//@nodeSet/@nodes.66" targetNode="//@nodeSet/@nodes.222">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaClassifierToUmlProperty->umlProperty" sourceNode="//@nodeSet/@nodes.67" targetNode="//@nodeSet/@nodes.223">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaCompUnitToUmlModel->compilationUnit" sourceNode="//@nodeSet/@nodes.68" targetNode="//@nodeSet/@nodes.22">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaCompUnitToUmlModel->umlModel" sourceNode="//@nodeSet/@nodes.68" targetNode="//@nodeSet/@nodes.196">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaCompilationUnitToUmlModel/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.92" targetNode="//@nodeSet/@nodes.124">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.93" targetNode="//@nodeSet/@nodes.125">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.94" targetNode="//@nodeSet/@nodes.126">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.95" targetNode="//@nodeSet/@nodes.127">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.96" targetNode="//@nodeSet/@nodes.128">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.97" targetNode="//@nodeSet/@nodes.129">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.98" targetNode="//@nodeSet/@nodes.130">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.99" targetNode="//@nodeSet/@nodes.132">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.92" targetNode="//@nodeSet/@nodes.197">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.93" targetNode="//@nodeSet/@nodes.198">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.94" targetNode="//@nodeSet/@nodes.199">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.95" targetNode="//@nodeSet/@nodes.201">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.96" targetNode="//@nodeSet/@nodes.203">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.97" targetNode="//@nodeSet/@nodes.206">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.98" targetNode="//@nodeSet/@nodes.209">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaConstructorToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.99" targetNode="//@nodeSet/@nodes.211">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaMethod" sourceNode="//@nodeSet/@nodes.108" targetNode="//@nodeSet/@nodes.102">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaMethod" sourceNode="//@nodeSet/@nodes.109" targetNode="//@nodeSet/@nodes.103">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaMethod" sourceNode="//@nodeSet/@nodes.110" targetNode="//@nodeSet/@nodes.104">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaMethod" sourceNode="//@nodeSet/@nodes.111" targetNode="//@nodeSet/@nodes.105">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaMethod" sourceNode="//@nodeSet/@nodes.112" targetNode="//@nodeSet/@nodes.106">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaMethod" sourceNode="//@nodeSet/@nodes.113" targetNode="//@nodeSet/@nodes.107">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.114" targetNode="//@nodeSet/@nodes.131">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->javaParametrizable" sourceNode="//@nodeSet/@nodes.115" targetNode="//@nodeSet/@nodes.133">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.108" targetNode="//@nodeSet/@nodes.200">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.109" targetNode="//@nodeSet/@nodes.202">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.110" targetNode="//@nodeSet/@nodes.204">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.111" targetNode="//@nodeSet/@nodes.205">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.112" targetNode="//@nodeSet/@nodes.207">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.113" targetNode="//@nodeSet/@nodes.208">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.114" targetNode="//@nodeSet/@nodes.210">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaMethodToOperation->umlOperation" sourceNode="//@nodeSet/@nodes.115" targetNode="//@nodeSet/@nodes.212">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackToUmlPack->javaPackage" sourceNode="//@nodeSet/@nodes.116" targetNode="//@nodeSet/@nodes.119">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackToUmlPack->javaPackage" sourceNode="//@nodeSet/@nodes.117" targetNode="//@nodeSet/@nodes.120">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackToUmlPack->javaPackage" sourceNode="//@nodeSet/@nodes.118" targetNode="//@nodeSet/@nodes.121">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackToUmlPack->umlPackage" sourceNode="//@nodeSet/@nodes.116" targetNode="//@nodeSet/@nodes.213">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackToUmlPack->umlPackage" sourceNode="//@nodeSet/@nodes.117" targetNode="//@nodeSet/@nodes.214">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackToUmlPack->umlPackage" sourceNode="//@nodeSet/@nodes.118" targetNode="//@nodeSet/@nodes.215">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaPackageToUmlPackage/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackage->compilationUnit" sourceNode="//@nodeSet/@nodes.119" targetNode="//@nodeSet/@nodes.19">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackage->compilationUnit" sourceNode="//@nodeSet/@nodes.120" targetNode="//@nodeSet/@nodes.20">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackage->compilationUnit" sourceNode="//@nodeSet/@nodes.121" targetNode="//@nodeSet/@nodes.21">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaPackage->compilationUnit" sourceNode="//@nodeSet/@nodes.122" targetNode="//@nodeSet/@nodes.22">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaParametrizable->parameter" sourceNode="//@nodeSet/@nodes.124" targetNode="//@nodeSet/@nodes.137">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaParametrizable->parameter" sourceNode="//@nodeSet/@nodes.125" targetNode="//@nodeSet/@nodes.138">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaParametrizable->parameter" sourceNode="//@nodeSet/@nodes.126" targetNode="//@nodeSet/@nodes.139">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaParametrizable->parameter" sourceNode="//@nodeSet/@nodes.127" targetNode="//@nodeSet/@nodes.140">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaParametrizable->parameter" sourceNode="//@nodeSet/@nodes.128" targetNode="//@nodeSet/@nodes.141">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaParametrizable->parameter" sourceNode="//@nodeSet/@nodes.129" targetNode="//@nodeSet/@nodes.142">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaSuperClassifierToUmlSuperClassifier->interface" sourceNode="//@nodeSet/@nodes.134" targetNode="//@nodeSet/@nodes.26">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaSuperClassifierToUmlSuperClassifier->superclassifier" sourceNode="//@nodeSet/@nodes.135" targetNode="//@nodeSet/@nodes.152">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaSuperClassifierToUmlSuperClassifier->superclassifier" sourceNode="//@nodeSet/@nodes.136" targetNode="//@nodeSet/@nodes.153">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaSuperClassifierToUmlSuperClassifier->umlGeneralClassifier" sourceNode="//@nodeSet/@nodes.135" targetNode="//@nodeSet/@nodes.193">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaSuperClassifierToUmlSuperClassifier->umlGeneralClassifier" sourceNode="//@nodeSet/@nodes.136" targetNode="//@nodeSet/@nodes.194">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="javaSuperClassifierToUmlSuperClassifier->umlInterface" sourceNode="//@nodeSet/@nodes.134" targetNode="//@nodeSet/@nodes.195">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->parameter" sourceNode="//@nodeSet/@nodes.143" targetNode="//@nodeSet/@nodes.137">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->parameter" sourceNode="//@nodeSet/@nodes.144" targetNode="//@nodeSet/@nodes.138">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->parameter" sourceNode="//@nodeSet/@nodes.145" targetNode="//@nodeSet/@nodes.139">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->parameter" sourceNode="//@nodeSet/@nodes.146" targetNode="//@nodeSet/@nodes.140">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->parameter" sourceNode="//@nodeSet/@nodes.147" targetNode="//@nodeSet/@nodes.141">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->parameter" sourceNode="//@nodeSet/@nodes.148" targetNode="//@nodeSet/@nodes.142">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->umlParameter" sourceNode="//@nodeSet/@nodes.143" targetNode="//@nodeSet/@nodes.216">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->umlParameter" sourceNode="//@nodeSet/@nodes.144" targetNode="//@nodeSet/@nodes.217">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->umlParameter" sourceNode="//@nodeSet/@nodes.145" targetNode="//@nodeSet/@nodes.218">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->umlParameter" sourceNode="//@nodeSet/@nodes.146" targetNode="//@nodeSet/@nodes.219">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->umlParameter" sourceNode="//@nodeSet/@nodes.147" targetNode="//@nodeSet/@nodes.220">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="parameterToParameter->umlParameter" sourceNode="//@nodeSet/@nodes.148" targetNode="//@nodeSet/@nodes.221">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="umlOperation->umlParameter" sourceNode="//@nodeSet/@nodes.197" targetNode="//@nodeSet/@nodes.216">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="umlOperation->umlParameter" sourceNode="//@nodeSet/@nodes.198" targetNode="//@nodeSet/@nodes.217">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="umlOperation->umlParameter" sourceNode="//@nodeSet/@nodes.199" targetNode="//@nodeSet/@nodes.218">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="umlOperation->umlParameter" sourceNode="//@nodeSet/@nodes.201" targetNode="//@nodeSet/@nodes.219">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="umlOperation->umlParameter" sourceNode="//@nodeSet/@nodes.203" targetNode="//@nodeSet/@nodes.220">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="umlOperation->umlParameter" sourceNode="//@nodeSet/@nodes.206" targetNode="//@nodeSet/@nodes.221">
+      <type xmi:type="ecore:EReference" href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+    </edges>
+  </edgeSet>
+</IBeXPatternModel:IBeXModel>

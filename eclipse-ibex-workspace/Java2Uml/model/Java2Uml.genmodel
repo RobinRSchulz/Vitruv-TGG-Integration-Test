@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="Java2Uml/gen/" modelPluginID="Java2Uml" modelName="Java2Uml"
+    generateSchema="true" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/org.emftext.language.java/metamodel/java.genmodel#//java platform:/plugin/org.emftext.language.java/metamodel/java.genmodel#//java platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.genmodel#//runtime platform:/plugin/org.eclipse.uml2.uml/model/UML.genmodel#//uml platform:/plugin/org.emftext.language.java/metamodel/java.genmodel#//java platform:/plugin/org.emftext.language.java/metamodel/java.genmodel#//java platform:/plugin/org.emftext.language.java/metamodel/java.genmodel#//java platform:/plugin/org.emftext.language.java/metamodel/java.genmodel#//java platform:/plugin/org.emftext.commons.layout/metamodel/layout.genmodel#//layout platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.uml2.types/model/Types.genmodel#//types"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Java2Uml.ecore</foreignModel>
+  <genPackages prefix="Java2Uml" disposableProviderFactory="true" ecorePackage="Java2Uml.ecore#/">
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaClassifierToUmlClassifier">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaClassifierToUmlClassifier/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaClassifierToUmlClassifier/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaCompilationUnitToUmlModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToUmlModel/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToUmlModel/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaPackageToUmlPackage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaPackageToUmlPackage/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaPackageToUmlPackage/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaAttributeToUmlProperty">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaAttributeToUmlProperty/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaAttributeToUmlProperty/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaClassifierReferenceToUmlGeneralization/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaMethodToOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaMethodToOperation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaMethodToOperation/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaConstructorToOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaConstructorToOperation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaConstructorToOperation/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaParameterToParameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaParameterToParameter/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaParameterToParameter/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaTypeReferenceToUmlReturnParameter/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaClassifierReferenceToUmlInterfaceRealization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaClassifierReferenceToUmlInterfaceRealization/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaClassifierReferenceToUmlInterfaceRealization/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassAbstractToAbstract__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAbstractToAbstract__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAbstractToAbstract__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAbstractToAbstract__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAbstractToAbstract__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassAttributeToProperty__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeToProperty__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeToProperty__Marker/CREATE__SRC__field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeToProperty__Marker/CREATE__TRG__property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeToProperty__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeToProperty__Marker/CREATE__CORR__attributeToProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeToProperty__Marker/CONTEXT__CORR__classToUmlClass"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CONTEXT__SRC__field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CONTEXT__TRG__property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CONTEXT__CORR__attributeToProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassAttributeTypeToPropertyType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassConstructorToConstructor__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassConstructorToConstructor__Marker/CREATE__SRC__constructor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassConstructorToConstructor__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassConstructorToConstructor__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassConstructorToConstructor__Marker/CREATE__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassConstructorToConstructor__Marker/CONTEXT__CORR__j"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassConstructorToConstructor__Marker/CREATE__CORR__javaConstructorToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassFinalToFinal__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassFinalToFinal__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassFinalToFinal__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassFinalToFinal__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassFinalToFinal__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassImplementToClassImplement__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CREATE__SRC__interface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CREATE__SRC__interfaceTypeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CONTEXT__SRC__javaClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CONTEXT__TRG__umlClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CREATE__TRG__umlInterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CREATE__TRG__umlInterfaceRealization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassImplementToClassImplement__Marker/CREATE__CORR__javaSuperClassifierToUmlSuperClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassMethodToMethod__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassMethodToMethod__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassMethodToMethod__Marker/CREATE__SRC__method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassMethodToMethod__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassMethodToMethod__Marker/CREATE__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassMethodToMethod__Marker/CONTEXT__CORR__j"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassMethodToMethod__Marker/CREATE__CORR__javaMethodToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassPrivateToPrivate__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPrivateToPrivate__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPrivateToPrivate__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPrivateToPrivate__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPrivateToPrivate__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassProtectedToProtected__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassProtectedToProtected__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassProtectedToProtected__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassProtectedToProtected__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassProtectedToProtected__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassPublicToPublic__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPublicToPublic__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPublicToPublic__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPublicToPublic__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassPublicToPublic__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ClassToUmlClass__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CREATE__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CONTEXT__SRC__compilationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CONTEXT__SRC__javaPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CREATE__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CONTEXT__TRG__umlPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CREATE__CORR__javaClassToUmlClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ClassToUmlClass__Marker/CONTEXT__CORR__javaPackToUmlPack"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorClassParamTypeToParamType__Marker/CONTEXT__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorEnumParamTypeToParamType__Marker/CONTEXT__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ConstructorInterfaceParamTypeToParamType__Marker/CONTEXT__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumAbstractToAbstract__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAbstractToAbstract__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAbstractToAbstract__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAbstractToAbstract__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAbstractToAbstract__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumAttributeToProperty__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeToProperty__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeToProperty__Marker/CREATE__SRC__field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeToProperty__Marker/CREATE__TRG__property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeToProperty__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeToProperty__Marker/CREATE__CORR__attributeToProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeToProperty__Marker/CONTEXT__CORR__classToUmlClass"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CONTEXT__SRC__field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CONTEXT__TRG__property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CONTEXT__CORR__attributeToProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumAttributeTypeToPropertyType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumFinalToFinal__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumFinalToFinal__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumFinalToFinal__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumFinalToFinal__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumFinalToFinal__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumPrivateToPrivate__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPrivateToPrivate__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPrivateToPrivate__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPrivateToPrivate__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPrivateToPrivate__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumProtectedToProtected__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumProtectedToProtected__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumProtectedToProtected__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumProtectedToProtected__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumProtectedToProtected__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumPublicToPublic__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPublicToPublic__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPublicToPublic__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPublicToPublic__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumPublicToPublic__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//EnumToUmlEnum__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CREATE__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CONTEXT__SRC__compilationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CONTEXT__SRC__javaPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CREATE__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CONTEXT__TRG__umlPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CREATE__CORR__javaClassToUmlClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//EnumToUmlEnum__Marker/CONTEXT__CORR__javaPackToUmlPack"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CONTEXT__SRC__interface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CREATE__SRC__interfaceTypeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CONTEXT__SRC__javaClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CONTEXT__TRG__umlClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CONTEXT__TRG__umlInterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CREATE__TRG__umlInterfaceRealization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingClassImplementToClassImplement__Marker/CONTEXT__CORR__javaSuperClassifierToUmlSuperClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CREATE__SRC__superclassTypeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CONTEXT__SRC__superclassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CREATE__TRG__generalization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CONTEXT__TRG__umlGeneralClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperClassToSuperClass__Marker/CONTEXT__CORR__javaSuperClassifierToUmlSuperClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CREATE__SRC__superclassTypeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CONTEXT__SRC__superclassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CREATE__TRG__generalization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CONTEXT__TRG__umlGeneralClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//ExistingSuperInterfaceToSuperInterface__Marker/CONTEXT__CORR__javaSuperClassifierToUmlSuperClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//FieldFinalToFinal__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldFinalToFinal__Marker/CONTEXT__SRC__javaField"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldFinalToFinal__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldFinalToFinal__Marker/CONTEXT__TRG__umlProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldFinalToFinal__Marker/CONTEXT__CORR__javaClassifierToUmlProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//FieldStaticToStatic__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldStaticToStatic__Marker/CONTEXT__SRC__javaField"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldStaticToStatic__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldStaticToStatic__Marker/CONTEXT__TRG__umlProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//FieldStaticToStatic__Marker/CONTEXT__CORR__javaClassifierToUmlProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceAbstractToAbstract__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAbstractToAbstract__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAbstractToAbstract__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAbstractToAbstract__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAbstractToAbstract__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CONTEXT__SRC__field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CONTEXT__TRG__property"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CONTEXT__CORR__attributeToProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceAttributeTypeToPropertyType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker/CREATE__SRC__constructor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker/CREATE__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker/CONTEXT__CORR__j"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceConstructorToConstructor__Marker/CREATE__CORR__javaConstructorToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceFinalToFinal__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceFinalToFinal__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceFinalToFinal__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceFinalToFinal__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceFinalToFinal__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceMethodToMethod__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceMethodToMethod__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceMethodToMethod__Marker/CREATE__SRC__method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceMethodToMethod__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceMethodToMethod__Marker/CREATE__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceMethodToMethod__Marker/CONTEXT__CORR__j"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceMethodToMethod__Marker/CREATE__CORR__javaMethodToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfacePrivateToPrivate__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePrivateToPrivate__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePrivateToPrivate__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePrivateToPrivate__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePrivateToPrivate__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceProtectedToProtected__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceProtectedToProtected__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceProtectedToProtected__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceProtectedToProtected__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceProtectedToProtected__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfacePublicToPublic__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePublicToPublic__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePublicToPublic__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePublicToPublic__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfacePublicToPublic__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//InterfaceToUmlInterface__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CREATE__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CONTEXT__SRC__compilationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CONTEXT__SRC__javaPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CREATE__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CONTEXT__TRG__umlPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CREATE__CORR__javaClassToUmlClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//InterfaceToUmlInterface__Marker/CONTEXT__CORR__javaPackToUmlPack"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker/CONTEXT__SRC__compilationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker/CONTEXT__SRC__javaPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker/CREATE__SRC__newCompilationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker/CONTEXT__TRG__umlModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker/CONTEXT__CORR__javaCompUnitToUmlModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaCompilationUnitToExistingUmlModel__Marker/CREATE__CORR__newJavaCompUnitToUmlModel"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__SRC__compilationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CONTEXT__SRC__javaPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__booleanType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__byteType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__charType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__doubleType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__floatType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__intType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__longType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__shortType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__stringType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__umlModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__TRG__voidType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//JavaFirstCompilationUnitToUmlModel__Marker/CREATE__CORR__javaCompUnitToUmlModel"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodAbstractToAbstract__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodAbstractToAbstract__Marker/CONTEXT__SRC__javaMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodAbstractToAbstract__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodAbstractToAbstract__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodAbstractToAbstract__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassParamTypeToParamType__Marker/CONTEXT__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CONTEXT__SRC__javaMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CREATE__TRG__umlReturnParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodClassReturnTypeToReturnType__Marker/CREATE__CORR__javaTypeReferenceToUmlReturnParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumParamTypeToParamType__Marker/CONTEXT__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CONTEXT__SRC__javaMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CREATE__TRG__umlReturnParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodEnumReturnTypeToReturnType__Marker/CREATE__CORR__javaTypeReferenceToUmlReturnParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodFinalToFinal__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodFinalToFinal__Marker/CONTEXT__SRC__javaMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodFinalToFinal__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodFinalToFinal__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodFinalToFinal__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceParamTypeToParamType__Marker/CONTEXT__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CONTEXT__SRC__classifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CONTEXT__SRC__javaMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CREATE__SRC__typeReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CREATE__TRG__umlReturnParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodInterfaceReturnTypeToReturnType__Marker/CREATE__CORR__javaTypeReferenceToUmlReturnParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//MethodStaticToStatic__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodStaticToStatic__Marker/CONTEXT__SRC__javaMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodStaticToStatic__Marker/CREATE__SRC__modifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodStaticToStatic__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//MethodStaticToStatic__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker/CREATE__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker/CREATE__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryConstructorParameterToParameter__Marker/CREATE__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker/CREATE__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker/CREATE__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//OrdinaryMethodParameterToParameter__Marker/CREATE__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//RootJavaPackageToUmlPackage__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//RootJavaPackageToUmlPackage__Marker/CREATE__SRC__javaPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//RootJavaPackageToUmlPackage__Marker/CREATE__TRG__umlPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//RootJavaPackageToUmlPackage__Marker/CREATE__CORR__javaPackageToUmlPackage"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//SuperClassToSuperClass__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CREATE__SRC__superclassTypeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CREATE__SRC__superclassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CREATE__TRG__generalization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CREATE__TRG__umlGeneralClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CREATE__CORR__classRefToGeneralization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperClassToSuperClass__Marker/CREATE__CORR__javaSuperClassifierToUmlSuperClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CONTEXT__SRC__javaConcreteClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CREATE__SRC__superclassTypeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CREATE__SRC__superclassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CREATE__TRG__generalization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CONTEXT__TRG__umlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CREATE__TRG__umlGeneralClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CREATE__CORR__classRefToGeneralization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CONTEXT__CORR__javaClassifierToUmlClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//SuperInterfaceToSuperInterface__Marker/CREATE__CORR__javaSuperClassifierToUmlSuperClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CREATE__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CREATE__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CREATE__TRG__upperValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CONTEXT__CORR__javaConstructorToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthConstructorParameterToParameter__Marker/CREATE__CORR__parameterToParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CONTEXT__SRC__javaParametrizable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CREATE__SRC__parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CONTEXT__TRG__umlOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CREATE__TRG__umlParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CREATE__TRG__upperValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CONTEXT__CORR__javaMethodToOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Java2Uml.ecore#//VariableLengthMethodParameterToParameter__Marker/CREATE__CORR__parameterToParameter"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

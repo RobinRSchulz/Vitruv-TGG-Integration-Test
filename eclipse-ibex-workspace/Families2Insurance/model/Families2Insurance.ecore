@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Families2Insurance" nsURI="platform:/resource/Families2Insurance/model/Families2Insurance.ecore"
+    nsPrefix="Families2Insurance">
+  <eClassifiers xsi:type="ecore:EClass" name="FamilyRegisterToInsuranceDatabase" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FamilyToInsuranceClient" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MemberToInsuranceClient" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DaughterToInsuranceClient__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__daughter"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__family" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__insuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__familyRegisterToInsuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__familyToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__memberToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FamilyRegisterToInsuranceDatabase__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceDb"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__famRegToInsDb"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FatherNewFamilyToNewInsuranceClient__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__family" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__father" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__insuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__familyRegisterToInsuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__familyToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__memberToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FatherToInsuranceClient__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__family" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__father" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__insuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__familyRegisterToInsuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__familyToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__memberToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MotherNewFamilyToNewInsuranceClient__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__family" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__mother" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__insuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__familyRegisterToInsuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__familyToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__memberToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MotherToInsuranceClient__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__family" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__mother" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__insuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__familyRegisterToInsuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__familyToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__memberToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SonToInsuranceClient__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__family" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Family"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__familyRegister"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families/model/families.ecore#//FamilyRegister"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__son" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Families/model/families.ecore#//Member"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__insuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__insuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Insurance/model/insurance.ecore#//InsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__familyRegisterToInsuranceDB"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyRegisterToInsuranceDatabase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__familyToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//FamilyToInsuranceClient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__memberToInsuranceClient"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Families2Insurance/model/Families2Insurance.ecore#//MemberToInsuranceClient"/>
+  </eClassifiers>
+</ecore:EPackage>

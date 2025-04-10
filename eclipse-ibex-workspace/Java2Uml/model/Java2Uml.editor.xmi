@@ -1,0 +1,2662 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.emoflon.org/ibex/tgg/editor/TGG">
+  <imports name="platform:/plugin/org.emftext.language.java/metamodel/java.ecore"/>
+  <imports name="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore"/>
+  <schema name="Java2Uml">
+    <sourceTypes href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_WosmsNz1Ed2bJ_pQViWxFg"/>
+    <targetTypes href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#/"/>
+    <correspondenceTypes name="JavaClassifierToUmlClassifier">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaCompilationUnitToUmlModel">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaPackageToUmlPackage">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaAttributeToUmlProperty">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaClassifierReferenceToUmlGeneralization">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaMethodToOperation">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Method"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaConstructorToOperation">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaParameterToParameter">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaTypeReferenceToUmlReturnParameter">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="JavaClassifierReferenceToUmlInterfaceRealization">
+      <source href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+      <target href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+    </correspondenceTypes>
+    <attributeCondDefs name="expectPrivate" userDefined="true">
+      <params paramName="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="expectProtected" userDefined="true">
+      <params paramName="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="expectPublic" userDefined="true">
+      <params paramName="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="expectPackage" userDefined="true">
+      <params paramName="visibilityKind">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//VisibilityKind"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_string">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_int">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_float">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_double">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_long">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_char">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_boolean">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="addPrefix">
+      <params paramName="prefix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="addSuffix">
+      <params paramName="suffix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="concat">
+      <params paramName="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setDefaultString">
+      <params paramName="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setDefaultNumber">
+      <params paramName="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="stringToDouble">
+      <params paramName="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="doubleValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="stringToInt">
+      <params paramName="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="multiply">
+      <params paramName="operand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="operand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="divide">
+      <params paramName="numerator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="denominator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="add">
+      <params paramName="summand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="summand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="sub">
+      <params paramName="minuend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="subtrahend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="max">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="max">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="smallerOrEqual">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setRandomString">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+  </schema>
+  <rules name="ClassifierMethodToMethod" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="method">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <targetPatterns name="umlOperation">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <correspondencePatterns name="j" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0"/>
+    <correspondencePatterns name="javaMethodToOperation" type="//@schema/@correspondenceTypes.5" source="//@rules.0/@sourcePatterns.1" target="//@rules.0/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassMethodToMethod" supertypes="//@rules.0" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class/ownedOperation"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceMethodToMethod" supertypes="//@rules.0" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface/ownedOperation"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassifierToUmlClassifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaPackage">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.1">
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="compilationUnit">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </sourcePatterns>
+    <sourcePatterns name="classifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="umlPackage">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaPackToUmlPack" type="//@schema/@correspondenceTypes.2" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.0"/>
+    <correspondencePatterns name="javaClassToUmlClass" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourcePatterns.2" target="//@rules.3/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.2">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassToUmlClass" supertypes="//@rules.3" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <sourcePatterns name="compilationUnit">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+      <linkVariablePatterns target="//@rules.4/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit/classifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="umlPackage">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/packagedElement"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceToUmlInterface" supertypes="//@rules.3" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <sourcePatterns name="compilationUnit">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+      <linkVariablePatterns target="//@rules.5/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit/classifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="umlPackage">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/packagedElement"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumToUmlEnum" supertypes="//@rules.3" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <sourcePatterns name="compilationUnit">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit/classifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="umlPackage">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/packagedElement"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="JavaCompilationUnitToExistingUmlModel" schema="//@schema">
+    <sourcePatterns name="javaPackage">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.1">
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="compilationUnit">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </sourcePatterns>
+    <sourcePatterns name="newCompilationUnit">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </sourcePatterns>
+    <targetPatterns name="umlModel">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaCompUnitToUmlModel" type="//@schema/@correspondenceTypes.1" source="//@rules.7/@sourcePatterns.1" target="//@rules.7/@targetPatterns.0"/>
+    <correspondencePatterns name="newJavaCompUnitToUmlModel" type="//@schema/@correspondenceTypes.1" source="//@rules.7/@sourcePatterns.2" target="//@rules.7/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;UML_MODEL&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodModifierToModifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaMethod">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaMethodToOperation" type="//@schema/@correspondenceTypes.5" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.0"/>
+  </rules>
+  <rules name="MethodAbstractToAbstract" supertypes="//@rules.8" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/isAbstract"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodStaticToStatic" supertypes="//@rules.8" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Feature/isStatic"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodFinalToFinal" supertypes="//@rules.8" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.11/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//RedefinableElement/isLeaf"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodPrivateToPrivate" abstractRule="true" supertypes="//@rules.8" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.12/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodProtectedToProtected" abstractRule="true" supertypes="//@rules.8" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodPublicToPublic" abstractRule="true" supertypes="//@rules.8" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.2">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.14/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassifierModifierToModifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+      <linkVariablePatterns target="//@rules.15/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.15/@sourcePatterns.0" target="//@rules.15/@targetPatterns.0"/>
+  </rules>
+  <rules name="ClassifierFinalToFinal" abstractRule="true" supertypes="//@rules.15" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.16/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isFinalSpecialization"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassFinalToFinal" supertypes="//@rules.16" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumFinalToFinal" supertypes="//@rules.16" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceFinalToFinal" supertypes="//@rules.16" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassifierAbstractToAbstract" abstractRule="true" supertypes="//@rules.15" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yt9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.20/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/isAbstract"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassAbstractToAbstract" supertypes="//@rules.20" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumAbstractToAbstract" supertypes="//@rules.20" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceAbstractToAbstract" supertypes="//@rules.20" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassifierStaticToStatic" abstractRule="true" supertypes="//@rules.15" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassifierPrivateToPrivate" abstractRule="true" supertypes="//@rules.15" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.25/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassPrivateToPrivate" supertypes="//@rules.25" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumPrivateToPrivate" supertypes="//@rules.25" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfacePrivateToPrivate" supertypes="//@rules.25" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassifierProtectedToProtected" abstractRule="true" supertypes="//@rules.15" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.29/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassProtectedToProtected" supertypes="//@rules.29" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumProtectedToProtected" supertypes="//@rules.29" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceProtectedToProtected" supertypes="//@rules.29" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassifierPublicToPublic" abstractRule="true" supertypes="//@rules.15" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.2">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.33/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassPublicToPublic" supertypes="//@rules.33" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumPublicToPublic" supertypes="//@rules.33" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfacePublicToPublic" supertypes="//@rules.33" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ParameterToParameter" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaParametrizable">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable"/>
+      <linkVariablePatterns target="//@rules.37/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="parameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+      <linkVariablePatterns target="//@rules.37/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlParameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </targetPatterns>
+    <correspondencePatterns name="parameterToParameter" type="//@schema/@correspondenceTypes.7" source="//@rules.37/@sourcePatterns.1" target="//@rules.37/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.37/@sourcePatterns.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.37/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConstructorParameterToParameter" abstractRule="true" supertypes="//@rules.37" schema="//@schema">
+    <sourcePatterns name="javaParametrizable">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </sourcePatterns>
+    <correspondencePatterns name="javaConstructorToOperation" type="//@schema/@correspondenceTypes.6" source="//@rules.38/@sourcePatterns.0" target="//@rules.37/@targetPatterns.0"/>
+  </rules>
+  <rules name="OrdinaryConstructorParameterToParameter" supertypes="//@rules.38" schema="//@schema">
+    <sourcePatterns name="parameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/OrdinaryParameter"/>
+    </sourcePatterns>
+  </rules>
+  <rules name="VariableLengthConstructorParameterToParameter" supertypes="//@rules.38" schema="//@schema">
+    <sourcePatterns name="parameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/VariableLengthParameter"/>
+    </sourcePatterns>
+    <targetPatterns name="umlParameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+      <linkVariablePatterns target="//@rules.40/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/upperValue"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="upperValue">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:LiteralExpression" value="0"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.40/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/lower"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:LiteralExpression" value="-1"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.40/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural/value"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodParameterToParameter" abstractRule="true" supertypes="//@rules.37" schema="//@schema">
+    <sourcePatterns name="javaParametrizable">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </sourcePatterns>
+    <correspondencePatterns name="javaMethodToOperation" type="//@schema/@correspondenceTypes.5" source="//@rules.41/@sourcePatterns.0" target="//@rules.37/@targetPatterns.0"/>
+  </rules>
+  <rules name="OrdinaryMethodParameterToParameter" supertypes="//@rules.41" schema="//@schema">
+    <sourcePatterns name="parameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/OrdinaryParameter"/>
+    </sourcePatterns>
+  </rules>
+  <rules name="VariableLengthMethodParameterToParameter" supertypes="//@rules.41" schema="//@schema">
+    <sourcePatterns name="parameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/VariableLengthParameter"/>
+    </sourcePatterns>
+    <targetPatterns name="umlParameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+      <linkVariablePatterns target="//@rules.43/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/upperValue"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="upperValue">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:LiteralExpression" value="0"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.43/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//MultiplicityElement/lower"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:LiteralExpression" value="-1"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.43/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//LiteralUnlimitedNatural/value"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="AttributeToProperty" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <sourcePatterns name="field">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <targetPatterns name="property">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </targetPatterns>
+    <correspondencePatterns name="classToUmlClass" type="//@schema/@correspondenceTypes.0" source="//@rules.44/@sourcePatterns.0" target="//@rules.44/@targetPatterns.0"/>
+    <correspondencePatterns name="attributeToProperty" type="//@schema/@correspondenceTypes.3" source="//@rules.44/@sourcePatterns.1" target="//@rules.44/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.44/@sourcePatterns.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.44/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassAttributeToProperty" supertypes="//@rules.44" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+      <linkVariablePatterns target="//@rules.44/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <linkVariablePatterns target="//@rules.44/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//StructuredClassifier/ownedAttribute"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumAttributeToProperty" supertypes="//@rules.44" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+      <linkVariablePatterns target="//@rules.44/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+      <linkVariablePatterns target="//@rules.44/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//DataType/ownedAttribute"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+  </rules>
+  <rules name="ConstructorModifierToModifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaConstructor">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+      <linkVariablePatterns target="//@rules.47/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaConstructorToOperation" type="//@schema/@correspondenceTypes.6" source="//@rules.47/@sourcePatterns.0" target="//@rules.47/@targetPatterns.0"/>
+  </rules>
+  <rules name="ConstructorPrivateToPrivate" abstractRule="true" supertypes="//@rules.47" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yu9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.48/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConstructorProtectedToProtected" abstractRule="true" supertypes="//@rules.47" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yudz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.49/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConstructorPublicToPublic" abstractRule="true" supertypes="//@rules.47" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ytdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.2">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.50/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/visibility"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="FieldModifierToModifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaField">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+      <linkVariablePatterns target="//@rules.51/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//modifiers/AnnotableAndModifiable/annotationsAndModifiers"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Ys9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlProperty">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlProperty" type="//@schema/@correspondenceTypes.3" source="//@rules.51/@sourcePatterns.0" target="//@rules.51/@targetPatterns.0"/>
+  </rules>
+  <rules name="FieldFinalToFinal" supertypes="//@rules.51" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yvdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlProperty">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.52/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//StructuralFeature/isReadOnly"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="FieldStaticToStatic" supertypes="//@rules.51" schema="//@schema">
+    <sourcePatterns name="modifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2Yv9z1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlProperty">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </targetPatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.10">
+      <values xsi:type="tgg:LiteralExpression" value="true"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.53/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Feature/isStatic"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="RootJavaPackageToUmlPackage" schema="//@schema">
+    <sourcePatterns name="javaPackage">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+    </sourcePatterns>
+    <targetPatterns name="umlPackage">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaPackageToUmlPackage" type="//@schema/@correspondenceTypes.2" source="//@rules.54/@sourcePatterns.0" target="//@rules.54/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.54/@sourcePatterns.0">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.54/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="AttributeTypeToPropertyType" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="field">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+    </sourcePatterns>
+    <targetPatterns name="property">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </targetPatterns>
+    <correspondencePatterns name="attributeToProperty" type="//@schema/@correspondenceTypes.3" source="//@rules.55/@sourcePatterns.0" target="//@rules.55/@targetPatterns.0"/>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.55/@sourcePatterns.0">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.55/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassifierAttributeTypeToPropertyType" abstractRule="true" supertypes="//@rules.55" schema="//@schema">
+    <sourcePatterns name="field">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Field"/>
+      <linkVariablePatterns target="//@rules.56/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZQdz1Ed2bJ_pQViWxFg"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="typeReference">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.56/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="property">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+      <linkVariablePatterns target="//@rules.56/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.56/@sourcePatterns.2" target="//@rules.56/@targetPatterns.1"/>
+  </rules>
+  <rules name="ClassAttributeTypeToPropertyType" supertypes="//@rules.56" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceAttributeTypeToPropertyType" supertypes="//@rules.56" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="EnumAttributeTypeToPropertyType" supertypes="//@rules.56" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="SuperClassifierToSuperClassifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </sourcePatterns>
+    <sourcePatterns name="superclassTypeRef">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.60/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="superclassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+      <linkVariablePatterns target="//@rules.60/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/generalization"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="generalization">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+      <linkVariablePatterns target="//@rules.60/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization/general"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlGeneralClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.60/@sourcePatterns.0" target="//@rules.60/@targetPatterns.0"/>
+    <correspondencePatterns name="classRefToGeneralization" type="//@schema/@correspondenceTypes.4" source="//@rules.60/@sourcePatterns.1" target="//@rules.60/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="javaSuperClassifierToUmlSuperClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.60/@sourcePatterns.2" target="//@rules.60/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.60/@sourcePatterns.2">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.60/@targetPatterns.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="SuperClassToSuperClass" supertypes="//@rules.60" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+      <linkVariablePatterns target="//@rules.60/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class/extends"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="superclassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+    <targetPatterns name="umlGeneralClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="SuperInterfaceToSuperInterface" supertypes="//@rules.60" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+      <linkVariablePatterns target="//@rules.60/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface/extends"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="superclassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+    <targetPatterns name="umlGeneralClassifier">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ExistingSuperClassifierToSuperClassifier" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+    </sourcePatterns>
+    <sourcePatterns name="superclassTypeRef">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.63/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="superclassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+      <linkVariablePatterns target="//@rules.63/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier/generalization"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="generalization">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization"/>
+      <linkVariablePatterns target="//@rules.63/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Generalization/general"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlGeneralClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.63/@sourcePatterns.0" target="//@rules.63/@targetPatterns.0"/>
+    <correspondencePatterns name="javaSuperClassifierToUmlSuperClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.63/@sourcePatterns.2" target="//@rules.63/@targetPatterns.2"/>
+  </rules>
+  <rules name="ExistingSuperClassToSuperClass" supertypes="//@rules.63" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+      <linkVariablePatterns target="//@rules.63/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class/extends"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="superclassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+    <targetPatterns name="umlGeneralClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ExistingSuperInterfaceToSuperInterface" supertypes="//@rules.63" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+      <linkVariablePatterns target="//@rules.63/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface/extends"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="superclassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+    <targetPatterns name="umlGeneralClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ClassImplementToClassImplement" schema="//@schema">
+    <sourcePatterns name="javaClass">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+      <linkVariablePatterns target="//@rules.66/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Implementor/implements"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="interfaceTypeRef">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.66/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="interface">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClass">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <linkVariablePatterns target="//@rules.66/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioredClassifier/interfaceRealization"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlInterfaceRealization">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+      <linkVariablePatterns target="//@rules.66/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization/contract"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlInterface">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.66/@sourcePatterns.0" target="//@rules.66/@targetPatterns.0"/>
+    <correspondencePatterns name="javaSuperClassifierToUmlSuperClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.66/@sourcePatterns.2" target="//@rules.66/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="ExistingClassImplementToClassImplement" schema="//@schema">
+    <sourcePatterns name="javaClass">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+      <linkVariablePatterns target="//@rules.67/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Implementor/implements"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="interfaceTypeRef">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.67/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="interface">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClass">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <linkVariablePatterns target="//@rules.67/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioredClassifier/interfaceRealization"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlInterfaceRealization">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
+      <linkVariablePatterns target="//@rules.67/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization/contract"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlInterface">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.67/@sourcePatterns.0" target="//@rules.67/@targetPatterns.0"/>
+    <correspondencePatterns name="javaSuperClassifierToUmlSuperClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.67/@sourcePatterns.2" target="//@rules.67/@targetPatterns.2"/>
+  </rules>
+  <rules name="MethodReturnTypeToReturnType" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaMethod">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+      <linkVariablePatterns target="//@rules.68/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZQdz1Ed2bJ_pQViWxFg"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="typeReference">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+      <linkVariablePatterns target="//@rules.68/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlReturnParameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaMethodToOperation" type="//@schema/@correspondenceTypes.5" source="//@rules.68/@sourcePatterns.0" target="//@rules.68/@targetPatterns.0"/>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;returnParameter&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.68/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:LiteralExpression" value="3"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.68/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter/direction"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="MethodClassifierReturnTypeToReturnType" abstractRule="true" supertypes="//@rules.68" schema="//@schema">
+    <sourcePatterns name="typeReference">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.69/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="umlReturnParameter">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+      <linkVariablePatterns target="//@rules.69/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.69/@sourcePatterns.1" target="//@rules.69/@targetPatterns.1"/>
+    <correspondencePatterns name="javaTypeReferenceToUmlReturnParameter" type="//@schema/@correspondenceTypes.8" source="//@rules.69/@sourcePatterns.0" target="//@rules.69/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="MethodClassReturnTypeToReturnType" supertypes="//@rules.69" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="MethodInterfaceReturnTypeToReturnType" supertypes="//@rules.69" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="MethodEnumReturnTypeToReturnType" supertypes="//@rules.69" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="JavaFirstCompilationUnitToUmlModel" schema="//@schema">
+    <sourcePatterns name="javaPackage">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package"/>
+      <linkVariablePatterns target="//@rules.73/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/Package/compilationUnits"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="compilationUnit">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//containers/CompilationUnit"/>
+    </sourcePatterns>
+    <targetPatterns name="umlModel">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.6">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.7">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.8">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.9">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.73/@targetPatterns.10">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Package/ownedType"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="booleanType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="byteType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="charType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="floatType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="doubleType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="intType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="longType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="shortType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="stringType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <targetPatterns name="voidType">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//PrimitiveType"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaCompUnitToUmlModel" type="//@schema/@correspondenceTypes.1" source="//@rules.73/@sourcePatterns.1" target="//@rules.73/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;UML_MODEL&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.0">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.2">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.3">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.4">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.5">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.6">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.7">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.8">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.9">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:LiteralExpression" value="&quot;boolean&quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.73/@targetPatterns.10">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassifierConstructorToConstructor" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
+      <linkVariablePatterns target="//@rules.74/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/MemberContainer/members"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="constructor">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <targetPatterns name="umlOperation">
+      <op value="++"/>
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </targetPatterns>
+    <correspondencePatterns name="j" type="//@schema/@correspondenceTypes.0" source="//@rules.74/@sourcePatterns.0" target="//@rules.74/@targetPatterns.0"/>
+    <correspondencePatterns name="javaConstructorToOperation" type="//@schema/@correspondenceTypes.6" source="//@rules.74/@sourcePatterns.1" target="//@rules.74/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.74/@sourcePatterns.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.74/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ClassConstructorToConstructor" supertypes="//@rules.74" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <linkVariablePatterns target="//@rules.74/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class/ownedOperation"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+  </rules>
+  <rules name="InterfaceConstructorToConstructor" supertypes="//@rules.74" schema="//@schema">
+    <sourcePatterns name="javaConcreteClassifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+      <linkVariablePatterns target="//@rules.74/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface/ownedOperation"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+  </rules>
+  <rules name="ParameterTypeToParameterType" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="javaParametrizable">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable"/>
+      <linkVariablePatterns target="//@rules.77/@sourcePatterns.1">
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parametrizable/parameters"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="parameter">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//parameters/Parameter"/>
+      <linkVariablePatterns target="//@rules.77/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZQdz1Ed2bJ_pQViWxFg"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="typeReference">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
+    </sourcePatterns>
+    <targetPatterns name="umlOperation">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+      <linkVariablePatterns target="//@rules.77/@targetPatterns.1">
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//BehavioralFeature/ownedParameter"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlParameter">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+    </targetPatterns>
+    <correspondencePatterns name="parameterToParameter" type="//@schema/@correspondenceTypes.7" source="//@rules.77/@sourcePatterns.1" target="//@rules.77/@targetPatterns.1"/>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.77/@sourcePatterns.1">
+        <attribute href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//commons/NamedElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.77/@targetPatterns.1">
+        <attribute href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//NamedElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ConstructorParamTypeToParamType" abstractRule="true" supertypes="//@rules.77" schema="//@schema">
+    <sourcePatterns name="javaParametrizable">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Constructor"/>
+    </sourcePatterns>
+    <correspondencePatterns name="javaConstructorToOperation" type="//@schema/@correspondenceTypes.6" source="//@rules.78/@sourcePatterns.0" target="//@rules.77/@targetPatterns.0"/>
+  </rules>
+  <rules name="ConstructorClassifierParamTypeToParamType" abstractRule="true" supertypes="//@rules.78" schema="//@schema">
+    <sourcePatterns name="typeReference">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.79/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="umlParameter">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+      <linkVariablePatterns target="//@rules.79/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.79/@sourcePatterns.1" target="//@rules.79/@targetPatterns.1"/>
+  </rules>
+  <rules name="ConstructorClassParamTypeToParamType" supertypes="//@rules.79" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ConstructorInterfaceParamTypeToParamType" supertypes="//@rules.79" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="ConstructorEnumParamTypeToParamType" supertypes="//@rules.79" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+  <rules name="MethodParamTypeToParamType" abstractRule="true" supertypes="//@rules.77" schema="//@schema">
+    <sourcePatterns name="javaParametrizable">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </sourcePatterns>
+    <correspondencePatterns name="javaConstructorToOperation" type="//@schema/@correspondenceTypes.5" source="//@rules.83/@sourcePatterns.0" target="//@rules.77/@targetPatterns.0"/>
+  </rules>
+  <rules name="MethodClassifierParamTypeToParamType" abstractRule="true" supertypes="//@rules.83" schema="//@schema">
+    <sourcePatterns name="typeReference">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference"/>
+      <linkVariablePatterns target="//@rules.84/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//types/ClassifierReference/target"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Classifier"/>
+    </sourcePatterns>
+    <targetPatterns name="umlParameter">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Parameter"/>
+      <linkVariablePatterns target="//@rules.84/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//TypedElement/type"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
+    </targetPatterns>
+    <correspondencePatterns name="javaClassifierToUmlClassifier" type="//@schema/@correspondenceTypes.0" source="//@rules.84/@sourcePatterns.1" target="//@rules.84/@targetPatterns.1"/>
+  </rules>
+  <rules name="MethodClassParamTypeToParamType" supertypes="//@rules.84" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </targetPatterns>
+  </rules>
+  <rules name="MethodInterfaceParamTypeToParamType" supertypes="//@rules.84" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
+    </targetPatterns>
+  </rules>
+  <rules name="MethodEnumParamTypeToParamType" supertypes="//@rules.84" schema="//@schema">
+    <sourcePatterns name="classifier">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    </sourcePatterns>
+    <targetPatterns name="umlClassifier">
+      <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    </targetPatterns>
+  </rules>
+</tgg:TripleGraphGrammarFile>

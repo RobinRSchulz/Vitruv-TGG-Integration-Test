@@ -1,0 +1,200 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Covers Classes, Interfaces, ... and modifiers like final, static, ...
+ * 
+ */
+#abstract #rule ClassifierModifierToModifier #with Java2Uml
+	#source { 
+		javaConcreteClassifier:java.classifiers.ConcreteClassifier {
+			++ -annotationsAndModifiers->modifier
+		}
+		++modifier:java.modifiers.Modifier
+	}
+	#target {
+		umlClassifier:uml.Classifier {
+			/* 
+			 * Here, modifiers are represented as boolean attributes!
+			 * We need attribute conditions to represent that.
+			 * 
+			 * Ideal function:
+			 * Assume we have created umlClassifier:Classifier with the according rule R1.
+			 * We then apply ClassifierFinalToFinal (:=R2), 
+			 * enforcing the attribute condition on that.
+			 * That shouldn't break R1.
+			 * Afterwards, we apply StaticToStatic (:=R2).
+			 * That shouldn't break R1 nor R2.
+			 */
+		}
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier{
+			#src->javaConcreteClassifier
+			#trg->umlClassifier
+		}
+	}
+
+#abstract #rule ClassifierFinalToFinal #extends ClassifierModifierToModifier #with Java2Uml
+	#source {
+		javaConcreteClassifier:java.classifiers.Classifier
+		++modifier:java.modifiers.Final
+	}
+	#target {
+		umlClassifier:uml.Classifier
+	}
+	#attributeConditions {
+		eq_boolean(true, umlClassifier.isFinalSpecialization)
+	}
+
+	#rule ClassFinalToFinal #extends ClassifierFinalToFinal #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule EnumFinalToFinal #extends ClassifierFinalToFinal #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+	#rule InterfaceFinalToFinal #extends ClassifierFinalToFinal #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }
+
+#abstract #rule ClassifierAbstractToAbstract #extends ClassifierModifierToModifier #with Java2Uml
+	#source {
+		javaConcreteClassifier:java.classifiers.Classifier
+		++modifier:java.modifiers.Abstract
+	}
+	#target {
+		umlClassifier:uml.Classifier
+	}
+	#attributeConditions {
+		eq_boolean(true, umlClassifier.isAbstract)
+	}
+
+	#rule ClassAbstractToAbstract #extends ClassifierAbstractToAbstract #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule EnumAbstractToAbstract #extends ClassifierAbstractToAbstract #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+	#rule InterfaceAbstractToAbstract #extends ClassifierAbstractToAbstract #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }
+
+/**
+ * This has no concrete subclasses, since that is not represented in UML2.
+ */
+#abstract #rule ClassifierStaticToStatic #extends ClassifierModifierToModifier #with Java2Uml
+	#source {
+		javaConcreteClassifier:java.classifiers.Classifier
+		++modifier:java.modifiers.Static
+	}
+	#target {
+		umlClassifier:uml.Classifier
+	}
+	
+	
+/*
+ * -----------------------------------------------
+ *             VISIBILITY
+ * -----------------------------------------------
+ */
+
+#abstract #rule ClassifierPrivateToPrivate #extends ClassifierModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Private
+	}
+	#target {
+		umlClassifier:uml.Classifier
+	}
+	#attributeConditions {
+		expectPrivate(umlClassifier.visibility)
+	}
+
+	#rule ClassPrivateToPrivate #extends ClassifierPrivateToPrivate #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule EnumPrivateToPrivate #extends ClassifierPrivateToPrivate #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+	#rule InterfacePrivateToPrivate #extends ClassifierPrivateToPrivate #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }
+		
+#abstract #rule ClassifierProtectedToProtected #extends ClassifierModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Protected
+	}
+	#target {
+		umlClassifier:uml.Classifier
+	}
+	#attributeConditions {
+		expectProtected(umlClassifier.visibility)
+	}
+
+	#rule ClassProtectedToProtected #extends ClassifierProtectedToProtected #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule EnumProtectedToProtected #extends ClassifierProtectedToProtected #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+	#rule InterfaceProtectedToProtected #extends ClassifierProtectedToProtected #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }		
+		
+#abstract #rule ClassifierPublicToPublic #extends ClassifierModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Public
+	}
+	#target {
+		umlClassifier:uml.Classifier
+	}
+	#attributeConditions {
+		expectPublic(umlClassifier.visibility)
+	}
+
+	#rule ClassPublicToPublic #extends ClassifierPublicToPublic #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule EnumPublicToPublic #extends ClassifierPublicToPublic #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+	#rule InterfacePublicToPublic #extends ClassifierPublicToPublic #with Java2Uml
+		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }
+				
+// This is done implicitly in ClassifierToUmlClassifier
+//#abstract #rule ClassifierPackageToPackage #extends ClassifierModifierToModifier #with Java2Uml
+//
+//	#source {
+//		// TODO would need NACs for those
+////		++modifier:java.modifiers.Private
+////		++modifier:java.modifiers.Public
+////		++modifier:java.modifiers.Protected
+//		//TODO further problem: this would require not extending ClassifierModifierToModifier.
+//		// and not creating any green edges or nodes and thus not being matched....
+//	}
+//	#target {
+//		umlClassifier:uml.Classifier
+//	}
+//	#attributeConditions {
+//		expectPackage(umlClassifier.visibility)
+//	}
+//
+//	#rule ClassPackageToPackage #extends ClassifierPackageToPackage #with Java2Uml
+//		#source { javaConcreteClassifier:java.classifiers.Class }
+//		#target { umlClassifier:uml.Class }
+//	#rule EnumPackageToPackage #extends ClassifierPackageToPackage #with Java2Uml
+//		#source { javaConcreteClassifier:java.classifiers.Enumeration }
+//		#target { umlClassifier:uml.Enumeration }
+//	#rule InterfacePackageToPackage #extends ClassifierPackageToPackage #with Java2Uml
+//		#source { javaConcreteClassifier:java.classifiers.Interface }
+//		#target { umlClassifier:uml.Interface }
+
+//This doesn't work, "#nac" is a keyword but doesn't get recognized
+//#nac NeitherPrivateNorPublicNorProtected #for ClassPackageToPackage
+//	#source {
+//		javaConcreteClassifier:java.classifiers.ConcreteClassifier {
+//			modifier:java.modifiers.Private
+//			modifier:java.modifiers.Public
+//			modifier:java.modifiers.Protected
+//		}
+//	}

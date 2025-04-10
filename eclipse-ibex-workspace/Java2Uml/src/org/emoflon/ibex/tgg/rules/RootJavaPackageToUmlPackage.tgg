@@ -1,0 +1,33 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Package depth seems to be implemented by the namespaces list.
+ */
+#rule RootJavaPackageToUmlPackage #with Java2Uml
+
+#source { 
+	++javaPackage:java.containers.Package {
+		
+	}	
+}
+
+#target {
+	++umlPackage:uml.Package {
+		
+	}
+}
+
+#correspondence {
+	++javaPackageToUmlPackage:JavaPackageToUmlPackage {
+		#src->javaPackage
+		#trg->umlPackage
+	}
+}
+
+#attributeConditions {
+	//TODO name and other conditions
+	// mit bissle Glück geht's so:
+	eq_string(javaPackage.name, umlPackage.name)
+//	eq_string(javaPackage.namespaces, umlPackage.URI
+}
