@@ -14,6 +14,7 @@ import org.emftext.language.java.classifiers.Interface;
 import org.emftext.language.java.containers.CompilationUnit;
 import org.emftext.language.java.containers.ContainersFactory;
 import org.emftext.language.java.containers.Package;
+import org.emftext.language.java.members.EnumConstant;
 import org.emftext.language.java.members.Field;
 import org.emftext.language.java.members.MembersFactory;
 import org.emftext.language.java.modifiers.Final;
@@ -502,6 +503,43 @@ public class Java2UmlEvaluationTest extends AbstractTest {
               <packagedElement xsi:type="uml:Interface" name="interfees"/>
               <packagedElement xsi:type="uml:Class" name="kless">
                 <interfaceRealization client="/0/kless" supplier="/0/interfees" contract="/0/interfees"/>
+              </packagedElement>
+            </uml:Package>""");
+    }
+
+    @Test
+    void testEnumConstantToEnumLiteral() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("java_instance.model").toString()));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Enumeration javaEnum = ClassifiersFactory.eINSTANCE.createEnumeration();
+            javaEnum.setName("ehnumm");
+            compilationUnit.getClassifiers().add(javaEnum);
+
+            EnumConstant enumConstant = MembersFactory.eINSTANCE.createEnumConstant();
+            enumConstant.setName("ehnummKonschtant");
+            javaEnum.getConstants().add(enumConstant);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(4, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch">
+              <packagedElement xsi:type="uml:Enumeration" name="ehnumm">
+                <ownedLiteral name="ehnummKonschtant" classifier="/0/ehnumm"/>
               </packagedElement>
             </uml:Package>""");
     }

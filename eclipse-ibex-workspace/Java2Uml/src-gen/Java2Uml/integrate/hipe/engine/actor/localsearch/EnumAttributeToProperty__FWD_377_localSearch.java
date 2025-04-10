@@ -93,7 +93,7 @@ public class EnumAttributeToProperty__FWD_377_localSearch extends GenericLocalSe
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "JavaClassifierToUmlClassifier_object_SP13": 
+			case "JavaClassifierToUmlClassifier_object_SP12": 
 				{
 					edge_explorer.registerSourceObject(objs[0]);
 					edge_explorer_3.registerSourceObject(objs[0]);
@@ -104,7 +104,7 @@ public class EnumAttributeToProperty__FWD_377_localSearch extends GenericLocalSe
 					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
-			case "Enumeration_1_object_SP0": 
+			case "Enumeration_1_object_SP7": 
 				{
 					if(!lazy_initialization) {
 						
@@ -141,10 +141,10 @@ public class EnumAttributeToProperty__FWD_377_localSearch extends GenericLocalSe
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "JavaClassifierToUmlClassifier_object_SP13": 
+			case "JavaClassifierToUmlClassifier_object_SP12": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "Enumeration_1_object_SP0": 
+			case "Enumeration_1_object_SP7": 
 				removeMatchesUsedBy(match.getNodes()[0], 2);
 				break;
 			case "EnumAttributeToProperty__SRC_374_localSearch": 

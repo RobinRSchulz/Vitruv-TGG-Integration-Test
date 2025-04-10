@@ -101,7 +101,7 @@ public class EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__
 					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
-			case "Enumeration_object_SP3": 
+			case "Enumeration_object_SP2": 
 				{
 					if(!lazy_initialization) {
 						
@@ -138,7 +138,7 @@ public class EnumAttributeTypeToPropertyType_typeReference_target_outgoing_SRC__
 			case "ClassifierReference_object_SP2": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "Enumeration_object_SP3": 
+			case "Enumeration_object_SP2": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			case "Classifier_object_SP0": 

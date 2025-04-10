@@ -31,10 +31,10 @@ public class JavaFirstCompilationUnitToUmlModel__CC_323_junction extends Generic
 	
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, JunctionNode node) {
-		constraints.add(this::check_constraint_60);
+		constraints.add(this::check_constraint_80);
 		
 		ports = new LinkedList<>();
-		ports.add(new PortJunctionRight(node.getPorts().getPort().get(0), getSelf(), name2actor.get("JavaFirstCompilationUnitToUmlModel__CC_320_junction"), this::returnTrue , 0  , false ));
+		ports.add(new PortJunctionRight(node.getPorts().getPort().get(0), getSelf(), name2actor.get("JavaFirstCompilationUnitToUmlModel__CC_321_junction"), this::returnTrue , 0  , false ));
 	}
 	
 	@Override
@@ -55,10 +55,18 @@ public class JavaFirstCompilationUnitToUmlModel__CC_323_junction extends Generic
 		message.initialMessage.decrement();
 	}
 	
-	public boolean check_constraint_60(HMatch match, int index) {
-		uml.PrimitiveType longType = (uml.PrimitiveType) match.getNodes()[0];
-		uml.PrimitiveType shortType = (uml.PrimitiveType) match.getNodes()[2];
-		boolean predicate = !longType.equals(shortType);
+	public boolean check_constraint_80(HMatch match, int index) {
+		uml.PrimitiveType floatType = (uml.PrimitiveType) match.getNodes()[0];
+		uml.PrimitiveType byteType = (uml.PrimitiveType) match.getNodes()[8];
+		uml.PrimitiveType shortType = (uml.PrimitiveType) match.getNodes()[4];
+		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
+		uml.PrimitiveType stringType = (uml.PrimitiveType) match.getNodes()[5];
+		uml.PrimitiveType booleanType = (uml.PrimitiveType) match.getNodes()[7];
+		uml.PrimitiveType charType = (uml.PrimitiveType) match.getNodes()[9];
+		uml.PrimitiveType doubleType = (uml.PrimitiveType) match.getNodes()[10];
+		uml.PrimitiveType voidType = (uml.PrimitiveType) match.getNodes()[6];
+		uml.PrimitiveType longType = (uml.PrimitiveType) match.getNodes()[3];
+		boolean predicate = !booleanType.equals(floatType) && !booleanType.equals(intType) && !booleanType.equals(longType) && !booleanType.equals(shortType) && !byteType.equals(floatType) && !byteType.equals(intType) && !byteType.equals(longType) && !byteType.equals(shortType) && !charType.equals(floatType) && !charType.equals(intType) && !charType.equals(longType) && !charType.equals(shortType) && !doubleType.equals(floatType) && !doubleType.equals(intType) && !doubleType.equals(longType) && !doubleType.equals(shortType) && !floatType.equals(stringType) && !floatType.equals(voidType) && !intType.equals(stringType) && !intType.equals(voidType) && !longType.equals(stringType) && !longType.equals(voidType) && !shortType.equals(stringType) && !shortType.equals(voidType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;
 	}

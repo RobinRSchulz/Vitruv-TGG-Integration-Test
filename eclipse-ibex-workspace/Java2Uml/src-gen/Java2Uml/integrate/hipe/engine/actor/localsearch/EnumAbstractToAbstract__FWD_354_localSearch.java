@@ -96,7 +96,7 @@ public class EnumAbstractToAbstract__FWD_354_localSearch extends GenericLocalSea
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "JavaClassifierToUmlClassifier_object_SP10": 
+			case "JavaClassifierToUmlClassifier_object_SP9": 
 				{
 					edge_explorer.registerSourceObject(objs[0]);
 					edge_explorer_3.registerSourceObject(objs[0]);
@@ -144,7 +144,7 @@ public class EnumAbstractToAbstract__FWD_354_localSearch extends GenericLocalSea
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "JavaClassifierToUmlClassifier_object_SP10": 
+			case "JavaClassifierToUmlClassifier_object_SP9": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
 			case "Enumeration_1_object_SP4": 

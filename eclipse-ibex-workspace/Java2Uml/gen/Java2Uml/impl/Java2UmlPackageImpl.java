@@ -10,6 +10,7 @@ import Java2Uml.JavaConstructorToOperation;
 import Java2Uml.JavaParameterToParameter;
 import Java2Uml.JavaTypeReferenceToUmlReturnParameter;
 import Java2Uml.JavaClassifierReferenceToUmlInterfaceRealization;
+import Java2Uml.JavaEnumConstantToUmlEnumLiteral;
 import Java2Uml.ClassAbstractToAbstract__Marker;
 import Java2Uml.ClassAttributeToProperty__Marker;
 import Java2Uml.ClassAttributeTypeToPropertyType__Marker;
@@ -27,6 +28,7 @@ import Java2Uml.ConstructorInterfaceParamTypeToParamType__Marker;
 import Java2Uml.EnumAbstractToAbstract__Marker;
 import Java2Uml.EnumAttributeToProperty__Marker;
 import Java2Uml.EnumAttributeTypeToPropertyType__Marker;
+import Java2Uml.EnumConstantToEnumConstant__Marker;
 import Java2Uml.EnumFinalToFinal__Marker;
 import Java2Uml.EnumPrivateToPrivate__Marker;
 import Java2Uml.EnumProtectedToProtected__Marker;
@@ -69,14 +71,14 @@ import Java2Uml.VariableLengthMethodParameterToParameter__Marker;
 import Java2Uml.Java2UmlFactory;
 import Java2Uml.Java2UmlPackage;
 
-import runtime.RuntimePackage;
-import org.emftext.language.java.containers.ContainersPackage;
-import org.emftext.language.java.types.TypesPackage;
-import org.emftext.language.java.classifiers.ClassifiersPackage;
 import org.emftext.language.java.parameters.ParametersPackage;
-import org.emftext.language.java.modifiers.ModifiersPackage;
+import org.emftext.language.java.classifiers.ClassifiersPackage;
+import org.emftext.language.java.containers.ContainersPackage;
 import org.eclipse.uml2.uml.UMLPackage;
+import org.emftext.language.java.types.TypesPackage;
+import runtime.RuntimePackage;
 import org.emftext.language.java.members.MembersPackage;
+import org.emftext.language.java.modifiers.ModifiersPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -123,6 +125,9 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 	private EClass javaClassifierReferenceToUmlInterfaceRealizationEClass = null;
 	private EReference javaClassifierReferenceToUmlInterfaceRealization_sourceEReference = null;
 	private EReference javaClassifierReferenceToUmlInterfaceRealization_targetEReference = null;
+	private EClass javaEnumConstantToUmlEnumLiteralEClass = null;
+	private EReference javaEnumConstantToUmlEnumLiteral_sourceEReference = null;
+	private EReference javaEnumConstantToUmlEnumLiteral_targetEReference = null;
 	private EClass classAbstractToAbstract__MarkerEClass = null;
 	private EReference classAbstractToAbstract__Marker_cONTEXT__SRC__javaConcreteClassifierEReference = null;
 	private EReference classAbstractToAbstract__Marker_cREATE__SRC__modifierEReference = null;
@@ -247,6 +252,13 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 	private EReference enumAttributeTypeToPropertyType__Marker_cONTEXT__TRG__umlClassifierEReference = null;
 	private EReference enumAttributeTypeToPropertyType__Marker_cONTEXT__CORR__attributeToPropertyEReference = null;
 	private EReference enumAttributeTypeToPropertyType__Marker_cONTEXT__CORR__javaClassifierToUmlClassifierEReference = null;
+	private EClass enumConstantToEnumConstant__MarkerEClass = null;
+	private EReference enumConstantToEnumConstant__Marker_cREATE__SRC__javaConstantEReference = null;
+	private EReference enumConstantToEnumConstant__Marker_cONTEXT__SRC__javaEnumEReference = null;
+	private EReference enumConstantToEnumConstant__Marker_cONTEXT__TRG__umlEnumEReference = null;
+	private EReference enumConstantToEnumConstant__Marker_cREATE__TRG__umlLiteralEReference = null;
+	private EReference enumConstantToEnumConstant__Marker_cONTEXT__CORR__jEReference = null;
+	private EReference enumConstantToEnumConstant__Marker_cREATE__CORR__javaEnumConstantToUmlEnumLiteralEReference = null;
 	private EClass enumFinalToFinal__MarkerEClass = null;
 	private EReference enumFinalToFinal__Marker_cONTEXT__SRC__javaConcreteClassifierEReference = null;
 	private EReference enumFinalToFinal__Marker_cREATE__SRC__modifierEReference = null;
@@ -687,6 +699,18 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 	@Override
 	public EReference getJavaClassifierReferenceToUmlInterfaceRealization_Target() {
 		return javaClassifierReferenceToUmlInterfaceRealization_targetEReference;	
+	}
+	@Override
+	public EClass getJavaEnumConstantToUmlEnumLiteral() {
+		return javaEnumConstantToUmlEnumLiteralEClass;
+	}
+	@Override
+	public EReference getJavaEnumConstantToUmlEnumLiteral_Source() {
+		return javaEnumConstantToUmlEnumLiteral_sourceEReference;	
+	}
+	@Override
+	public EReference getJavaEnumConstantToUmlEnumLiteral_Target() {
+		return javaEnumConstantToUmlEnumLiteral_targetEReference;	
 	}
 	@Override
 	public EClass getClassAbstractToAbstract__Marker() {
@@ -1183,6 +1207,34 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 	@Override
 	public EReference getEnumAttributeTypeToPropertyType__Marker_CONTEXT__CORR__javaClassifierToUmlClassifier() {
 		return enumAttributeTypeToPropertyType__Marker_cONTEXT__CORR__javaClassifierToUmlClassifierEReference;	
+	}
+	@Override
+	public EClass getEnumConstantToEnumConstant__Marker() {
+		return enumConstantToEnumConstant__MarkerEClass;
+	}
+	@Override
+	public EReference getEnumConstantToEnumConstant__Marker_CREATE__SRC__javaConstant() {
+		return enumConstantToEnumConstant__Marker_cREATE__SRC__javaConstantEReference;	
+	}
+	@Override
+	public EReference getEnumConstantToEnumConstant__Marker_CONTEXT__SRC__javaEnum() {
+		return enumConstantToEnumConstant__Marker_cONTEXT__SRC__javaEnumEReference;	
+	}
+	@Override
+	public EReference getEnumConstantToEnumConstant__Marker_CONTEXT__TRG__umlEnum() {
+		return enumConstantToEnumConstant__Marker_cONTEXT__TRG__umlEnumEReference;	
+	}
+	@Override
+	public EReference getEnumConstantToEnumConstant__Marker_CREATE__TRG__umlLiteral() {
+		return enumConstantToEnumConstant__Marker_cREATE__TRG__umlLiteralEReference;	
+	}
+	@Override
+	public EReference getEnumConstantToEnumConstant__Marker_CONTEXT__CORR__j() {
+		return enumConstantToEnumConstant__Marker_cONTEXT__CORR__jEReference;	
+	}
+	@Override
+	public EReference getEnumConstantToEnumConstant__Marker_CREATE__CORR__javaEnumConstantToUmlEnumLiteral() {
+		return enumConstantToEnumConstant__Marker_cREATE__CORR__javaEnumConstantToUmlEnumLiteralEReference;	
 	}
 	@Override
 	public EClass getEnumFinalToFinal__Marker() {
@@ -2359,6 +2411,12 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		createEReference(javaClassifierReferenceToUmlInterfaceRealizationEClass, JAVA_CLASSIFIER_REFERENCE_TO_UML_INTERFACE_REALIZATION__TARGET);
 		javaClassifierReferenceToUmlInterfaceRealization_targetEReference = (EReference) javaClassifierReferenceToUmlInterfaceRealizationEClass.getEStructuralFeatures().get(1);
 		
+		javaEnumConstantToUmlEnumLiteralEClass = createEClass(JAVA_ENUM_CONSTANT_TO_UML_ENUM_LITERAL);
+		createEReference(javaEnumConstantToUmlEnumLiteralEClass, JAVA_ENUM_CONSTANT_TO_UML_ENUM_LITERAL__SOURCE);
+		javaEnumConstantToUmlEnumLiteral_sourceEReference = (EReference) javaEnumConstantToUmlEnumLiteralEClass.getEStructuralFeatures().get(0);
+		createEReference(javaEnumConstantToUmlEnumLiteralEClass, JAVA_ENUM_CONSTANT_TO_UML_ENUM_LITERAL__TARGET);
+		javaEnumConstantToUmlEnumLiteral_targetEReference = (EReference) javaEnumConstantToUmlEnumLiteralEClass.getEStructuralFeatures().get(1);
+		
 		classAbstractToAbstract__MarkerEClass = createEClass(CLASS_ABSTRACT_TO_ABSTRACT___MARKER);
 		createEReference(classAbstractToAbstract__MarkerEClass, CLASS_ABSTRACT_TO_ABSTRACT___MARKER__CONTEX_T__SR_C__JAVA_CONCRETE_CLASSIFIER);
 		classAbstractToAbstract__Marker_cONTEXT__SRC__javaConcreteClassifierEReference = (EReference) classAbstractToAbstract__MarkerEClass.getEStructuralFeatures().get(0);
@@ -2606,6 +2664,20 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		enumAttributeTypeToPropertyType__Marker_cONTEXT__CORR__attributeToPropertyEReference = (EReference) enumAttributeTypeToPropertyType__MarkerEClass.getEStructuralFeatures().get(5);
 		createEReference(enumAttributeTypeToPropertyType__MarkerEClass, ENUM_ATTRIBUTE_TYPE_TO_PROPERTY_TYPE___MARKER__CONTEX_T__COR_R__JAVA_CLASSIFIER_TO_UML_CLASSIFIER);
 		enumAttributeTypeToPropertyType__Marker_cONTEXT__CORR__javaClassifierToUmlClassifierEReference = (EReference) enumAttributeTypeToPropertyType__MarkerEClass.getEStructuralFeatures().get(6);
+		
+		enumConstantToEnumConstant__MarkerEClass = createEClass(ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER);
+		createEReference(enumConstantToEnumConstant__MarkerEClass, ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER__CREAT_E__SR_C__JAVA_CONSTANT);
+		enumConstantToEnumConstant__Marker_cREATE__SRC__javaConstantEReference = (EReference) enumConstantToEnumConstant__MarkerEClass.getEStructuralFeatures().get(0);
+		createEReference(enumConstantToEnumConstant__MarkerEClass, ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER__CONTEX_T__SR_C__JAVA_ENUM);
+		enumConstantToEnumConstant__Marker_cONTEXT__SRC__javaEnumEReference = (EReference) enumConstantToEnumConstant__MarkerEClass.getEStructuralFeatures().get(1);
+		createEReference(enumConstantToEnumConstant__MarkerEClass, ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER__CONTEX_T__TR_G__UML_ENUM);
+		enumConstantToEnumConstant__Marker_cONTEXT__TRG__umlEnumEReference = (EReference) enumConstantToEnumConstant__MarkerEClass.getEStructuralFeatures().get(2);
+		createEReference(enumConstantToEnumConstant__MarkerEClass, ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER__CREAT_E__TR_G__UML_LITERAL);
+		enumConstantToEnumConstant__Marker_cREATE__TRG__umlLiteralEReference = (EReference) enumConstantToEnumConstant__MarkerEClass.getEStructuralFeatures().get(3);
+		createEReference(enumConstantToEnumConstant__MarkerEClass, ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER__CONTEX_T__COR_R__J);
+		enumConstantToEnumConstant__Marker_cONTEXT__CORR__jEReference = (EReference) enumConstantToEnumConstant__MarkerEClass.getEStructuralFeatures().get(4);
+		createEReference(enumConstantToEnumConstant__MarkerEClass, ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER__CREAT_E__COR_R__JAVA_ENUM_CONSTANT_TO_UML_ENUM_LITERAL);
+		enumConstantToEnumConstant__Marker_cREATE__CORR__javaEnumConstantToUmlEnumLiteralEReference = (EReference) enumConstantToEnumConstant__MarkerEClass.getEStructuralFeatures().get(5);
 		
 		enumFinalToFinal__MarkerEClass = createEClass(ENUM_FINAL_TO_FINAL___MARKER);
 		createEReference(enumFinalToFinal__MarkerEClass, ENUM_FINAL_TO_FINAL___MARKER__CONTEX_T__SR_C__JAVA_CONCRETE_CLASSIFIER);
@@ -3171,14 +3243,14 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		setNsURI(eNS_URI);
 		
 		// Obtain other dependent packages
-		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
-		ContainersPackage theContainersPackagePackage = ContainersPackage.eINSTANCE;
-		TypesPackage theTypesPackagePackage = TypesPackage.eINSTANCE;
-		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
 		ParametersPackage theParametersPackagePackage = ParametersPackage.eINSTANCE;
-		ModifiersPackage theModifiersPackagePackage = ModifiersPackage.eINSTANCE;
+		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
+		ContainersPackage theContainersPackagePackage = ContainersPackage.eINSTANCE;
 		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
+		TypesPackage theTypesPackagePackage = TypesPackage.eINSTANCE;
+		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
 		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
+		ModifiersPackage theModifiersPackagePackage = ModifiersPackage.eINSTANCE;
 
 		// Create type parameters
 
@@ -3195,6 +3267,7 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		javaParameterToParameterEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getCorrespondenceNode());
 		javaTypeReferenceToUmlReturnParameterEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getCorrespondenceNode());
 		javaClassifierReferenceToUmlInterfaceRealizationEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getCorrespondenceNode());
+		javaEnumConstantToUmlEnumLiteralEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getCorrespondenceNode());
 		classAbstractToAbstract__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		classAttributeToProperty__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		classAttributeTypeToPropertyType__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
@@ -3212,6 +3285,7 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		enumAbstractToAbstract__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		enumAttributeToProperty__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		enumAttributeTypeToPropertyType__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
+		enumConstantToEnumConstant__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		enumFinalToFinal__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		enumPrivateToPrivate__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
 		enumProtectedToProtected__MarkerEClass.getESuperTypes().add(RuntimePackage.eINSTANCE.getTGGRuleApplication());
@@ -3339,6 +3413,15 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getJavaClassifierReferenceToUmlInterfaceRealization_Target(), UMLPackage.eINSTANCE.getInterfaceRealization(),  null, 
 			"target", null, 0, 1, JavaClassifierReferenceToUmlInterfaceRealization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				
+		initEClass(javaEnumConstantToUmlEnumLiteralEClass, JavaEnumConstantToUmlEnumLiteral.class, "JavaEnumConstantToUmlEnumLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+			IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getJavaEnumConstantToUmlEnumLiteral_Source(), MembersPackage.eINSTANCE.getEnumConstant(),  null, 
+			"source", null, 0, 1, JavaEnumConstantToUmlEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJavaEnumConstantToUmlEnumLiteral_Target(), UMLPackage.eINSTANCE.getEnumerationLiteral(),  null, 
+			"target", null, 0, 1, JavaEnumConstantToUmlEnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 				
 		initEClass(classAbstractToAbstract__MarkerEClass, ClassAbstractToAbstract__Marker.class, "ClassAbstractToAbstract__Marker", !IS_ABSTRACT, !IS_INTERFACE,
@@ -3711,6 +3794,27 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnumAttributeTypeToPropertyType__Marker_CONTEXT__CORR__javaClassifierToUmlClassifier(), this.getJavaClassifierToUmlClassifier(),  null, 
 			"CONTEXT__CORR__javaClassifierToUmlClassifier", null, 1, 1, EnumAttributeTypeToPropertyType__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				
+		initEClass(enumConstantToEnumConstant__MarkerEClass, EnumConstantToEnumConstant__Marker.class, "EnumConstantToEnumConstant__Marker", !IS_ABSTRACT, !IS_INTERFACE,
+			IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEnumConstantToEnumConstant__Marker_CREATE__SRC__javaConstant(), MembersPackage.eINSTANCE.getEnumConstant(),  null, 
+			"CREATE__SRC__javaConstant", null, 1, 1, EnumConstantToEnumConstant__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumConstantToEnumConstant__Marker_CONTEXT__SRC__javaEnum(), ClassifiersPackage.eINSTANCE.getEnumeration(),  null, 
+			"CONTEXT__SRC__javaEnum", null, 1, 1, EnumConstantToEnumConstant__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumConstantToEnumConstant__Marker_CONTEXT__TRG__umlEnum(), UMLPackage.eINSTANCE.getEnumeration(),  null, 
+			"CONTEXT__TRG__umlEnum", null, 1, 1, EnumConstantToEnumConstant__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumConstantToEnumConstant__Marker_CREATE__TRG__umlLiteral(), UMLPackage.eINSTANCE.getEnumerationLiteral(),  null, 
+			"CREATE__TRG__umlLiteral", null, 1, 1, EnumConstantToEnumConstant__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumConstantToEnumConstant__Marker_CONTEXT__CORR__j(), this.getJavaClassifierToUmlClassifier(),  null, 
+			"CONTEXT__CORR__j", null, 1, 1, EnumConstantToEnumConstant__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnumConstantToEnumConstant__Marker_CREATE__CORR__javaEnumConstantToUmlEnumLiteral(), this.getJavaEnumConstantToUmlEnumLiteral(),  null, 
+			"CREATE__CORR__javaEnumConstantToUmlEnumLiteral", null, 1, 1, EnumConstantToEnumConstant__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 				
 		initEClass(enumFinalToFinal__MarkerEClass, EnumFinalToFinal__Marker.class, "EnumFinalToFinal__Marker", !IS_ABSTRACT, !IS_INTERFACE,

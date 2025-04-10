@@ -79,7 +79,7 @@ public class EnumAttributeToProperty__SRC_374_localSearch extends GenericLocalSe
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "Enumeration_object_SP0": 
+			case "Enumeration_object_SP8": 
 				{
 					
 					// classifier
@@ -111,7 +111,7 @@ public class EnumAttributeToProperty__SRC_374_localSearch extends GenericLocalSe
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "Enumeration_object_SP0": 
+			case "Enumeration_object_SP8": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
 			case "Field_object_SP1": 

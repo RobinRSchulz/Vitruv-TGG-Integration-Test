@@ -43,8 +43,8 @@ import org.eclipse.emf.ecore.EObject;
 
 public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLocalSearchActor{
 	ConstraintChecker constraint_checker;
-	CachedEdgeExplorer edge_explorer;
-	EdgeExplorer edge_explorer_3;
+	EdgeExplorer edge_explorer;
+	CachedEdgeExplorer edge_explorer_3;
 	CachedEdgeExplorer edge_explorer_4;
 	CachedEdgeExplorer edge_explorer_5;
 	CachedEdgeExplorer edge_explorer_6;
@@ -56,8 +56,8 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 	SearchOrchestration edge_explorer_2_orchestration;
 	SearchOrchestration edge_explorer_3_0_orchestration;
 	SearchOrchestration edge_explorer_3_1_orchestration;
-	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
+	SearchOrchestration edge_explorer_4_1_orchestration;
 	SearchOrchestration edge_explorer_5_0_orchestration;
 	SearchOrchestration edge_explorer_6_0_orchestration;
 	SearchOrchestration edge_explorer_6_1_orchestration;
@@ -70,17 +70,17 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> ((Java2Uml.ClassPublicToPublic__Marker) o).getCONTEXT__CORR__javaClassifierToUmlClassifier();
-						edge_explorer = new CachedEdgeExplorer(this, 4, 3, edge_explorer_methods);
+						edge_explorer_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Public).collect(Collectors.toList());
+						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.classifiers.Class) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer = new EdgeExplorer(this, 0, 1, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Public).collect(Collectors.toList());
-						edge_explorer_3_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.classifiers.Class) return edge_explorer_3_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_3 = new EdgeExplorer(this, 0, 1, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.ClassPublicToPublic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Public ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.ClassPublicToPublic__Marker) o).getCONTEXT__SRC__javaConcreteClassifier(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> ((Java2Uml.ClassPublicToPublic__Marker) o).getCONTEXT__CORR__javaClassifierToUmlClassifier();
+						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
 						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
@@ -95,8 +95,8 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 						edge_explorer_7 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_7_methods);
 		name2explorer.put("edge_explorer_7", edge_explorer_7);
 		EdgeLookupMethods edge_explorer_8_methods = new EdgeLookupMethods();
-						edge_explorer_8_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.ClassPublicToPublic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Public ? result : null);};
-						edge_explorer_8 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_8_methods);
+						edge_explorer_8_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.ClassPublicToPublic__Marker) o).getCONTEXT__SRC__javaConcreteClassifier(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
+						edge_explorer_8 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_8_methods);
 		name2explorer.put("edge_explorer_8", edge_explorer_8);
 	}
 	
@@ -107,8 +107,8 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 		edge_explorer_2_orchestration = initializeOrchestration(node.getOrchestrations().get(2).getPlan());
 		edge_explorer_3_0_orchestration = initializeOrchestration(node.getOrchestrations().get(3).getPlan());
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
-		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
-		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
+		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
+		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
 		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
 		edge_explorer_6_0_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
 		edge_explorer_6_1_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
@@ -135,7 +135,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					// javaConcreteClassifier
 					HMatch match_0 = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_3_1_orchestration, match_0);
+					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
 			case "Public_object_SP0": 
@@ -145,7 +145,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 						// modifier
 						HMatch match_1 = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_3_2_orchestration, match_1);
+						start(edge_explorer_2_orchestration, match_1);
 					}
 				}
 				break;
@@ -168,12 +168,12 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					// javaClassifierToUmlClassifier
 					HMatch match_3 = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
 					match_3.getNodes()[3] = objs[0];
-					start(edge_explorer_2_orchestration, match_3);
+					start(edge_explorer_4_1_orchestration, match_3);
 				}
 				break;
 			case "ClassPublicToPublic__Marker_object": 
 				{
-					edge_explorer.registerSourceObject(objs[0]);
+					edge_explorer_3.registerSourceObject(objs[0]);
 					edge_explorer_4.registerSourceObject(objs[0]);
 					edge_explorer_6.registerSourceObject(objs[0]);
 					edge_explorer_8.registerSourceObject(objs[0]);
@@ -181,7 +181,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					// ClassPublicToPublic_eMoflon_ProtocolNode
 					HMatch match_4 = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
 					match_4.getNodes()[4] = objs[0];
-					start(edge_explorer_1_orchestration, match_4);
+					start(edge_explorer_3_1_orchestration, match_4);
 				}
 				break;
 			default: throw new RuntimeException("Detected unknown match from " + msg.input.creator);
@@ -222,43 +222,6 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__CORR__javaClassifierToUmlClassifier_JavaClassifierToUmlClassifier": 
-			if(!lazy_initialization) {
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[3] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[3] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[3] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				
-			}
-			break;
 		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
 			if(!lazy_initialization) {
 				if(msg.source instanceof org.emftext.language.java.classifiers.Class) {
@@ -269,7 +232,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					objs[0] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -283,7 +246,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					objs[0] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -297,7 +260,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					objs[0] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -305,19 +268,58 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 				
 			}
 			break;
-		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Class": 
+		case "Java2Uml.ClassPublicToPublic__Marker_CREATE__SRC__modifier_Public": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
+				{
+					edge_explorer_3.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_3_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
+				{
+					edge_explorer_3.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_3_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__CORR__javaClassifierToUmlClassifier_JavaClassifierToUmlClassifier": 
+			if(!lazy_initialization) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
+				
+				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[3] = msg.target;
+					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
 				}
 				
 			}
@@ -386,15 +388,15 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 				
 			}
 			break;
-		case "Java2Uml.ClassPublicToPublic__Marker_CREATE__SRC__modifier_Public": 
+		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Class": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
 				{
 					edge_explorer_8.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__CONSISTENCY_166_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_8_0_orchestration, match);
 					currentDepth--;
@@ -413,37 +415,34 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__CORR__javaClassifierToUmlClassifier_JavaClassifierToUmlClassifier": 
-				edge_explorer.deregisterEdge(msg.source, msg.target);
+		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_0);
 					}
 				}
-				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_1 = obj2matches.get(msg.source);
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_1);
 					}
 				}
-				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_2 = obj2matches.get(msg.source);
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -451,7 +450,8 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					}
 				}
 				break;
-		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
+		case "Java2Uml.ClassPublicToPublic__Marker_CREATE__SRC__modifier_Public": 
+				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
@@ -463,6 +463,7 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 						sendDeletedMatches(toBeRemoved_3);
 					}
 				}
+				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_4 = obj2matches.get(msg.source);
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
@@ -474,25 +475,26 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 						sendDeletedMatches(toBeRemoved_4);
 					}
 				}
+				break;
+		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__CORR__javaClassifierToUmlClassifier_JavaClassifierToUmlClassifier": 
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_5);
 					}
 				}
-				break;
-		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Class": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
@@ -554,13 +556,13 @@ public class ClassPublicToPublic__CONSISTENCY_166_localSearch extends GenericLoc
 					}
 				}
 				break;
-		case "Java2Uml.ClassPublicToPublic__Marker_CREATE__SRC__modifier_Public": 
+		case "Java2Uml.ClassPublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Class": 
 				edge_explorer_8.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_11 = obj2matches.get(msg.source);
 				if(matches_11 != null && !matches_11.isEmpty()) {
 					Collection<HMatch> toBeRemoved_11 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_11) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_11.add(m);
 					}
 					if(!toBeRemoved_11.isEmpty()) {

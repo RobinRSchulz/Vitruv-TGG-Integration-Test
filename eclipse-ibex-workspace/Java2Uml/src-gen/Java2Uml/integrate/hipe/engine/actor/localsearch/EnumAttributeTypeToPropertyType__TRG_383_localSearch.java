@@ -88,7 +88,7 @@ public class EnumAttributeTypeToPropertyType__TRG_383_localSearch extends Generi
 					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
-			case "Enumeration_1_object_SP1": 
+			case "Enumeration_1_object_SP0": 
 				{
 					if(!lazy_initialization) {
 						
@@ -114,7 +114,7 @@ public class EnumAttributeTypeToPropertyType__TRG_383_localSearch extends Generi
 			case "Property_object_SP4": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "Enumeration_1_object_SP1": 
+			case "Enumeration_1_object_SP0": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			default: throw new RuntimeException("Detected unknown match from " + msg.input.creator);

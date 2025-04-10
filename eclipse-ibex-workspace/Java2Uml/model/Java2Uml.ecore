@@ -45,6 +45,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#_Wo2ZPdz1Ed2bJ_pQViWxFg"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//InterfaceRealization"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaEnumConstantToUmlEnumLiteral" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/EnumConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//EnumerationLiteral"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassAbstractToAbstract__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
     <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"
         lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
@@ -299,6 +303,21 @@
         lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaAttributeToUmlProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__javaClassifierToUmlClassifier"
         lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumConstantToEnumConstant__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__javaConstant"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/EnumConstant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaEnum"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__umlEnum"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Enumeration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__umlLiteral"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//EnumerationLiteral"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__j" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaClassifierToUmlClassifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__javaEnumConstantToUmlEnumLiteral"
+        lowerBound="1" eType="ecore:EClass platform:/resource/Java2Uml/model/Java2Uml.ecore#//JavaEnumConstantToUmlEnumLiteral"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnumFinalToFinal__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
     <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__javaConcreteClassifier"

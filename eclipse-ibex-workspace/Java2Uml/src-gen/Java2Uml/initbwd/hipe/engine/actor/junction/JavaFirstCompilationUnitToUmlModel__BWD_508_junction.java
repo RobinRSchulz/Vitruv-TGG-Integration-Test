@@ -31,10 +31,10 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_508_junction extends Generi
 	
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, JunctionNode node) {
-		constraints.add(this::check_constraint_83);
+		constraints.add(this::check_constraint_87);
 		
 		ports = new LinkedList<>();
-		ports.add(new PortJunctionRight(node.getPorts().getPort().get(0), getSelf(), name2actor.get("JavaFirstCompilationUnitToUmlModel__BWD_500_junction"), this::returnTrue , 0  , false ));
+		ports.add(new PortJunctionLeft(node.getPorts().getPort().get(0), getSelf(), name2actor.get("JavaFirstCompilationUnitToUmlModel__BWD_507_junction"), this::returnTrue , 0  , false ));
 	}
 	
 	@Override
@@ -55,10 +55,12 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_508_junction extends Generi
 		message.initialMessage.decrement();
 	}
 	
-	public boolean check_constraint_83(HMatch match, int index) {
-		uml.PrimitiveType doubleType = (uml.PrimitiveType) match.getNodes()[2];
-		uml.PrimitiveType charType = (uml.PrimitiveType) match.getNodes()[0];
-		boolean predicate = !charType.equals(doubleType);
+	public boolean check_constraint_87(HMatch match, int index) {
+		uml.PrimitiveType floatType = (uml.PrimitiveType) match.getNodes()[0];
+		uml.PrimitiveType shortType = (uml.PrimitiveType) match.getNodes()[4];
+		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
+		uml.PrimitiveType longType = (uml.PrimitiveType) match.getNodes()[3];
+		boolean predicate = !floatType.equals(longType) && !floatType.equals(shortType) && !intType.equals(longType) && !intType.equals(shortType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;
 	}

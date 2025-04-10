@@ -28,39 +28,39 @@ public class Model_object_SP3 extends GenericObjectActor<uml.Model> {
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, ObjectNode node) {
 		ports = new LinkedList<>();
-		ports.add(new PortNodeRight<uml.Model>(node.getPorts().getPort().get(0), getSelf(), name2actor.get("PrimitiveType_package_0_reference"), this::check_constraint_129 , 0   ));
-		ports.add(new PortNodeRight<uml.Model>(node.getPorts().getPort().get(1), getSelf(), name2actor.get("PrimitiveType_package_4_reference"), this::check_constraint_139 , 1   ));
-		ports.add(new PortNodeRight<uml.Model>(node.getPorts().getPort().get(2), getSelf(), name2actor.get("PrimitiveType_package_8_reference"), this::check_constraint_147 , 2   ));
+		ports.add(new PortNodeRight<uml.Model>(node.getPorts().getPort().get(0), getSelf(), name2actor.get("PrimitiveType_package_0_reference"), this::check_constraint_131 , 0   ));
+		ports.add(new PortNodeRight<uml.Model>(node.getPorts().getPort().get(1), getSelf(), name2actor.get("PrimitiveType_package_4_reference"), this::check_constraint_141 , 1   ));
+		ports.add(new PortNodeRight<uml.Model>(node.getPorts().getPort().get(2), getSelf(), name2actor.get("PrimitiveType_package_8_reference"), this::check_constraint_149 , 2   ));
 	}
 	
-	public boolean check_constraint_129(uml.Model umlModel, int index) {
+	public boolean check_constraint_131(uml.Model umlModel, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_118 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_118.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "UML_MODEL", "java.lang.String"));
-		csp_118.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, umlModel.getName(), "java.lang.String"));
-		csp_118.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_120 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_120.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "UML_MODEL", "java.lang.String"));
+		csp_120.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, umlModel.getName(), "java.lang.String"));
+		csp_120.solve();
 		
-		return csp_118.isSatisfied();
+		return csp_120.isSatisfied();
 	}
 	
-	public boolean check_constraint_139(uml.Model umlModel, int index) {
+	public boolean check_constraint_141(uml.Model umlModel, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_118 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_118.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "UML_MODEL", "java.lang.String"));
-		csp_118.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, umlModel.getName(), "java.lang.String"));
-		csp_118.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_120 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_120.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "UML_MODEL", "java.lang.String"));
+		csp_120.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, umlModel.getName(), "java.lang.String"));
+		csp_120.solve();
 		
-		return csp_118.isSatisfied();
+		return csp_120.isSatisfied();
 	}
 	
-	public boolean check_constraint_147(uml.Model umlModel, int index) {
+	public boolean check_constraint_149(uml.Model umlModel, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_118 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_118.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "UML_MODEL", "java.lang.String"));
-		csp_118.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, umlModel.getName(), "java.lang.String"));
-		csp_118.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_120 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_120.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "UML_MODEL", "java.lang.String"));
+		csp_120.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, umlModel.getName(), "java.lang.String"));
+		csp_120.solve();
 		
-		return csp_118.isSatisfied();
+		return csp_120.isSatisfied();
 	}
 	
 }

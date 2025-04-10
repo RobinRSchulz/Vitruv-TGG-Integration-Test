@@ -28,39 +28,39 @@ public class PrimitiveType_object_SP1 extends GenericObjectActor<uml.PrimitiveTy
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, ObjectNode node) {
 		ports = new LinkedList<>();
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(0), getSelf(), name2actor.get("PrimitiveType_package_1_reference"), this::check_constraint_53 , 0   ));
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(1), getSelf(), name2actor.get("PrimitiveType_package_4_reference"), this::check_constraint_61 , 1   ));
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(2), getSelf(), name2actor.get("PrimitiveType_package_7_reference"), this::check_constraint_67 , 2   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(0), getSelf(), name2actor.get("PrimitiveType_package_1_reference"), this::check_constraint_54 , 0   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(1), getSelf(), name2actor.get("PrimitiveType_package_4_reference"), this::check_constraint_62 , 1   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(2), getSelf(), name2actor.get("PrimitiveType_package_7_reference"), this::check_constraint_68 , 2   ));
 	}
 	
-	public boolean check_constraint_53(uml.PrimitiveType intType, int index) {
+	public boolean check_constraint_54(uml.PrimitiveType intType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_39 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_39.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_39.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, intType.getName(), "java.lang.String"));
-		csp_39.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_40 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_40.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_40.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, intType.getName(), "java.lang.String"));
+		csp_40.solve();
 		
-		return csp_39.isSatisfied();
+		return csp_40.isSatisfied();
 	}
 	
-	public boolean check_constraint_61(uml.PrimitiveType stringType, int index) {
+	public boolean check_constraint_62(uml.PrimitiveType stringType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_42 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_42.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_42.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, stringType.getName(), "java.lang.String"));
-		csp_42.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_43 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_43.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_43.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, stringType.getName(), "java.lang.String"));
+		csp_43.solve();
 		
-		return csp_42.isSatisfied();
+		return csp_43.isSatisfied();
 	}
 	
-	public boolean check_constraint_67(uml.PrimitiveType byteType, int index) {
+	public boolean check_constraint_68(uml.PrimitiveType byteType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_35 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_35.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_35.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, byteType.getName(), "java.lang.String"));
-		csp_35.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_36 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_36.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_36.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, byteType.getName(), "java.lang.String"));
+		csp_36.solve();
 		
-		return csp_35.isSatisfied();
+		return csp_36.isSatisfied();
 	}
 	
 }

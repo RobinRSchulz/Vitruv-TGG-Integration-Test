@@ -53,6 +53,10 @@
 		#src->java.types.TypeReference
 		#trg->uml.InterfaceRealization
 	}
+	JavaEnumConstantToUmlEnumLiteral {
+		#src->java.members.EnumConstant
+		#trg->uml.EnumerationLiteral
+	}
 }
 
 #attributeConditions {

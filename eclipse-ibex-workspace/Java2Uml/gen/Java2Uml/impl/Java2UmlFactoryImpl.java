@@ -10,6 +10,7 @@ import Java2Uml.JavaConstructorToOperation;
 import Java2Uml.JavaParameterToParameter;
 import Java2Uml.JavaTypeReferenceToUmlReturnParameter;
 import Java2Uml.JavaClassifierReferenceToUmlInterfaceRealization;
+import Java2Uml.JavaEnumConstantToUmlEnumLiteral;
 import Java2Uml.ClassAbstractToAbstract__Marker;
 import Java2Uml.ClassAttributeToProperty__Marker;
 import Java2Uml.ClassAttributeTypeToPropertyType__Marker;
@@ -27,6 +28,7 @@ import Java2Uml.ConstructorInterfaceParamTypeToParamType__Marker;
 import Java2Uml.EnumAbstractToAbstract__Marker;
 import Java2Uml.EnumAttributeToProperty__Marker;
 import Java2Uml.EnumAttributeTypeToPropertyType__Marker;
+import Java2Uml.EnumConstantToEnumConstant__Marker;
 import Java2Uml.EnumFinalToFinal__Marker;
 import Java2Uml.EnumPrivateToPrivate__Marker;
 import Java2Uml.EnumProtectedToProtected__Marker;
@@ -120,6 +122,8 @@ public class Java2UmlFactoryImpl extends EFactoryImpl implements Java2Uml.Java2U
 			return createJavaTypeReferenceToUmlReturnParameter();
 		case Java2UmlPackage.JAVA_CLASSIFIER_REFERENCE_TO_UML_INTERFACE_REALIZATION:
 			return createJavaClassifierReferenceToUmlInterfaceRealization();
+		case Java2UmlPackage.JAVA_ENUM_CONSTANT_TO_UML_ENUM_LITERAL:
+			return createJavaEnumConstantToUmlEnumLiteral();
 		case Java2UmlPackage.CLASS_ABSTRACT_TO_ABSTRACT___MARKER:
 			return createClassAbstractToAbstract__Marker();
 		case Java2UmlPackage.CLASS_ATTRIBUTE_TO_PROPERTY___MARKER:
@@ -154,6 +158,8 @@ public class Java2UmlFactoryImpl extends EFactoryImpl implements Java2Uml.Java2U
 			return createEnumAttributeToProperty__Marker();
 		case Java2UmlPackage.ENUM_ATTRIBUTE_TYPE_TO_PROPERTY_TYPE___MARKER:
 			return createEnumAttributeTypeToPropertyType__Marker();
+		case Java2UmlPackage.ENUM_CONSTANT_TO_ENUM_CONSTANT___MARKER:
+			return createEnumConstantToEnumConstant__Marker();
 		case Java2UmlPackage.ENUM_FINAL_TO_FINAL___MARKER:
 			return createEnumFinalToFinal__Marker();
 		case Java2UmlPackage.ENUM_PRIVATE_TO_PRIVATE___MARKER:
@@ -285,6 +291,11 @@ public class Java2UmlFactoryImpl extends EFactoryImpl implements Java2Uml.Java2U
 		return javaClassifierReferenceToUmlInterfaceRealization;
 	}
 	@Override
+	public Java2Uml.JavaEnumConstantToUmlEnumLiteral createJavaEnumConstantToUmlEnumLiteral() {
+		JavaEnumConstantToUmlEnumLiteralImpl javaEnumConstantToUmlEnumLiteral = new JavaEnumConstantToUmlEnumLiteralImpl();
+		return javaEnumConstantToUmlEnumLiteral;
+	}
+	@Override
 	public Java2Uml.ClassAbstractToAbstract__Marker createClassAbstractToAbstract__Marker() {
 		ClassAbstractToAbstract__MarkerImpl classAbstractToAbstract__Marker = new ClassAbstractToAbstract__MarkerImpl();
 		return classAbstractToAbstract__Marker;
@@ -368,6 +379,11 @@ public class Java2UmlFactoryImpl extends EFactoryImpl implements Java2Uml.Java2U
 	public Java2Uml.EnumAttributeTypeToPropertyType__Marker createEnumAttributeTypeToPropertyType__Marker() {
 		EnumAttributeTypeToPropertyType__MarkerImpl enumAttributeTypeToPropertyType__Marker = new EnumAttributeTypeToPropertyType__MarkerImpl();
 		return enumAttributeTypeToPropertyType__Marker;
+	}
+	@Override
+	public Java2Uml.EnumConstantToEnumConstant__Marker createEnumConstantToEnumConstant__Marker() {
+		EnumConstantToEnumConstant__MarkerImpl enumConstantToEnumConstant__Marker = new EnumConstantToEnumConstant__MarkerImpl();
+		return enumConstantToEnumConstant__Marker;
 	}
 	@Override
 	public Java2Uml.EnumFinalToFinal__Marker createEnumFinalToFinal__Marker() {

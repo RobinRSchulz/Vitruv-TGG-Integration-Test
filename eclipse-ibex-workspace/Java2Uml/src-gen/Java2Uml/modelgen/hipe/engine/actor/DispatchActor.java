@@ -63,66 +63,14 @@ public class DispatchActor extends AbstractActor {
 	}
 	
 	private void initializeAdd() {
-		type2addConsumer.put(org.emftext.language.java.members.MembersPackage.eINSTANCE.getClassMethod(), obj -> {
-			org.emftext.language.java.members.ClassMethod _classmethod = (org.emftext.language.java.members.ClassMethod) obj;
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getBehavior(), obj -> {
+			uml.Behavior _behavior = (uml.Behavior) obj;
 			incUtil.newMessage();
-			name2actor.get("ClassMethod_object_SP0").tell(new ObjectAdded<org.emftext.language.java.members.ClassMethod>(incUtil, _classmethod), getSelf());
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _behavior), getSelf());
 			incUtil.newMessage();
-			name2actor.get("ClassMethod_object_SP1").tell(new ObjectAdded<org.emftext.language.java.members.ClassMethod>(incUtil, _classmethod), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getStateMachine(), obj -> {
-			uml.StateMachine _statemachine = (uml.StateMachine) obj;
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _behavior), getSelf());
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _statemachine), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _statemachine), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _statemachine), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getClass(), obj -> {
-			org.emftext.language.java.classifiers.Class _class = (org.emftext.language.java.classifiers.Class) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_object_SP0").tell(new ObjectAdded<org.emftext.language.java.classifiers.Class>(incUtil, _class), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_object_SP1").tell(new ObjectAdded<org.emftext.language.java.classifiers.Class>(incUtil, _class), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_object_SP2").tell(new ObjectAdded<org.emftext.language.java.classifiers.Class>(incUtil, _class), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getModel(), obj -> {
-			uml.Model _model = (uml.Model) obj;
-			incUtil.newMessage();
-			name2actor.get("Model_object").tell(new ObjectAdded<uml.Model>(incUtil, _model), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Package_1_object").tell(new ObjectAdded<uml.Package>(incUtil, _model), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getProperty(), obj -> {
-			uml.Property _property = (uml.Property) obj;
-			incUtil.newMessage();
-			name2actor.get("Property_object").tell(new ObjectAdded<uml.Property>(incUtil, _property), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getInterface(), obj -> {
-			org.emftext.language.java.classifiers.Interface _interface = (org.emftext.language.java.classifiers.Interface) obj;
-			incUtil.newMessage();
-			name2actor.get("Interface_object_SP0").tell(new ObjectAdded<org.emftext.language.java.classifiers.Interface>(incUtil, _interface), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Interface_object_SP1").tell(new ObjectAdded<org.emftext.language.java.classifiers.Interface>(incUtil, _interface), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Interface_object_SP2").tell(new ObjectAdded<org.emftext.language.java.classifiers.Interface>(incUtil, _interface), getSelf());
-		});
-		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage(), obj -> {
-			Java2Uml.JavaPackageToUmlPackage _javapackagetoumlpackage = (Java2Uml.JavaPackageToUmlPackage) obj;
-			incUtil.newMessage();
-			name2actor.get("JavaPackageToUmlPackage_object").tell(new ObjectAdded<Java2Uml.JavaPackageToUmlPackage>(incUtil, _javapackagetoumlpackage), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getVariableLengthParameter(), obj -> {
-			org.emftext.language.java.parameters.VariableLengthParameter _variablelengthparameter = (org.emftext.language.java.parameters.VariableLengthParameter) obj;
-			incUtil.newMessage();
-			name2actor.get("Parameter_1_object").tell(new ObjectAdded<org.emftext.language.java.parameters.Parameter>(incUtil, _variablelengthparameter), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getPort(), obj -> {
-			uml.Port _port = (uml.Port) obj;
-			incUtil.newMessage();
-			name2actor.get("Property_object").tell(new ObjectAdded<uml.Property>(incUtil, _port), getSelf());
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _behavior), getSelf());
 		});
 		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getProtocolStateMachine(), obj -> {
 			uml.ProtocolStateMachine _protocolstatemachine = (uml.ProtocolStateMachine) obj;
@@ -133,30 +81,154 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _protocolstatemachine), getSelf());
 		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getInteraction(), obj -> {
-			uml.Interaction _interaction = (uml.Interaction) obj;
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getPackage(), obj -> {
+			uml.Package _package = (uml.Package) obj;
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _interaction), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _interaction), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _interaction), getSelf());
+			name2actor.get("Package_1_object").tell(new ObjectAdded<uml.Package>(incUtil, _package), getSelf());
 		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getBehavior(), obj -> {
-			uml.Behavior _behavior = (uml.Behavior) obj;
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getStateMachine(), obj -> {
+			uml.StateMachine _statemachine = (uml.StateMachine) obj;
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _behavior), getSelf());
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _statemachine), getSelf());
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _behavior), getSelf());
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _statemachine), getSelf());
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _behavior), getSelf());
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _statemachine), getSelf());
 		});
-		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation(), obj -> {
-			Java2Uml.JavaMethodToOperation _javamethodtooperation = (Java2Uml.JavaMethodToOperation) obj;
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getEnumeration(), obj -> {
+			uml.Enumeration _enumeration = (uml.Enumeration) obj;
 			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_object_SP0").tell(new ObjectAdded<Java2Uml.JavaMethodToOperation>(incUtil, _javamethodtooperation), getSelf());
+			name2actor.get("Enumeration_1_object_SP0").tell(new ObjectAdded<uml.Enumeration>(incUtil, _enumeration), getSelf());
 			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_object_SP1").tell(new ObjectAdded<Java2Uml.JavaMethodToOperation>(incUtil, _javamethodtooperation), getSelf());
+			name2actor.get("Enumeration_1_object_SP1").tell(new ObjectAdded<uml.Enumeration>(incUtil, _enumeration), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getClass(), obj -> {
+			org.emftext.language.java.classifiers.Class _class = (org.emftext.language.java.classifiers.Class) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_object_SP0").tell(new ObjectAdded<org.emftext.language.java.classifiers.Class>(incUtil, _class), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_object_SP1").tell(new ObjectAdded<org.emftext.language.java.classifiers.Class>(incUtil, _class), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_object_SP2").tell(new ObjectAdded<org.emftext.language.java.classifiers.Class>(incUtil, _class), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getInterface(), obj -> {
+			uml.Interface _interface = (uml.Interface) obj;
+			incUtil.newMessage();
+			name2actor.get("Interface_1_object_SP0").tell(new ObjectAdded<uml.Interface>(incUtil, _interface), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Interface_1_object_SP1").tell(new ObjectAdded<uml.Interface>(incUtil, _interface), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Interface_1_object_SP2").tell(new ObjectAdded<uml.Interface>(incUtil, _interface), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getEnumeration(), obj -> {
+			org.emftext.language.java.classifiers.Enumeration _enumeration = (org.emftext.language.java.classifiers.Enumeration) obj;
+			incUtil.newMessage();
+			name2actor.get("Enumeration_object_SP0").tell(new ObjectAdded<org.emftext.language.java.classifiers.Enumeration>(incUtil, _enumeration), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Enumeration_object_SP1").tell(new ObjectAdded<org.emftext.language.java.classifiers.Enumeration>(incUtil, _enumeration), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getProfile(), obj -> {
+			uml.Profile _profile = (uml.Profile) obj;
+			incUtil.newMessage();
+			name2actor.get("Package_1_object").tell(new ObjectAdded<uml.Package>(incUtil, _profile), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.members.MembersPackage.eINSTANCE.getField(), obj -> {
+			org.emftext.language.java.members.Field _field = (org.emftext.language.java.members.Field) obj;
+			incUtil.newMessage();
+			name2actor.get("Field_object").tell(new ObjectAdded<org.emftext.language.java.members.Field>(incUtil, _field), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getInterface(), obj -> {
+			org.emftext.language.java.classifiers.Interface _interface = (org.emftext.language.java.classifiers.Interface) obj;
+			incUtil.newMessage();
+			name2actor.get("Interface_object_SP0").tell(new ObjectAdded<org.emftext.language.java.classifiers.Interface>(incUtil, _interface), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Interface_object_SP1").tell(new ObjectAdded<org.emftext.language.java.classifiers.Interface>(incUtil, _interface), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Interface_object_SP2").tell(new ObjectAdded<org.emftext.language.java.classifiers.Interface>(incUtil, _interface), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getParameter(), obj -> {
+			uml.Parameter _parameter = (uml.Parameter) obj;
+			incUtil.newMessage();
+			name2actor.get("Parameter_object").tell(new ObjectAdded<uml.Parameter>(incUtil, _parameter), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getPort(), obj -> {
+			uml.Port _port = (uml.Port) obj;
+			incUtil.newMessage();
+			name2actor.get("Property_object").tell(new ObjectAdded<uml.Property>(incUtil, _port), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getFunctionBehavior(), obj -> {
+			uml.FunctionBehavior _functionbehavior = (uml.FunctionBehavior) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _functionbehavior), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _functionbehavior), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _functionbehavior), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getCompilationUnit(), obj -> {
+			org.emftext.language.java.containers.CompilationUnit _compilationunit = (org.emftext.language.java.containers.CompilationUnit) obj;
+			incUtil.newMessage();
+			name2actor.get("CompilationUnit_object").tell(new ObjectAdded<org.emftext.language.java.containers.CompilationUnit>(incUtil, _compilationunit), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getStereotype(), obj -> {
+			uml.Stereotype _stereotype = (uml.Stereotype) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _stereotype), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _stereotype), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _stereotype), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getProperty(), obj -> {
+			uml.Property _property = (uml.Property) obj;
+			incUtil.newMessage();
+			name2actor.get("Property_object").tell(new ObjectAdded<uml.Property>(incUtil, _property), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getDevice(), obj -> {
+			uml.Device _device = (uml.Device) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _device), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _device), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _device), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getOpaqueBehavior(), obj -> {
+			uml.OpaqueBehavior _opaquebehavior = (uml.OpaqueBehavior) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _opaquebehavior), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _opaquebehavior), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _opaquebehavior), getSelf());
+		});
+		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty(), obj -> {
+			Java2Uml.JavaAttributeToUmlProperty _javaattributetoumlproperty = (Java2Uml.JavaAttributeToUmlProperty) obj;
+			incUtil.newMessage();
+			name2actor.get("JavaAttributeToUmlProperty_object").tell(new ObjectAdded<Java2Uml.JavaAttributeToUmlProperty>(incUtil, _javaattributetoumlproperty), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getExecutionEnvironment(), obj -> {
+			uml.ExecutionEnvironment _executionenvironment = (uml.ExecutionEnvironment) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _executionenvironment), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _executionenvironment), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _executionenvironment), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getNode(), obj -> {
+			uml.Node _node = (uml.Node) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _node), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _node), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _node), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.members.MembersPackage.eINSTANCE.getConstructor(), obj -> {
+			org.emftext.language.java.members.Constructor _constructor = (org.emftext.language.java.members.Constructor) obj;
+			incUtil.newMessage();
+			name2actor.get("Constructor_object").tell(new ObjectAdded<org.emftext.language.java.members.Constructor>(incUtil, _constructor), getSelf());
 		});
 		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaClassifierToUmlClassifier(), obj -> {
 			Java2Uml.JavaClassifierToUmlClassifier _javaclassifiertoumlclassifier = (Java2Uml.JavaClassifierToUmlClassifier) obj;
@@ -177,16 +249,6 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("JavaClassifierToUmlClassifier_object_SP7").tell(new ObjectAdded<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, _javaclassifiertoumlclassifier), getSelf());
 		});
-		type2addConsumer.put(org.emftext.language.java.members.MembersPackage.eINSTANCE.getConstructor(), obj -> {
-			org.emftext.language.java.members.Constructor _constructor = (org.emftext.language.java.members.Constructor) obj;
-			incUtil.newMessage();
-			name2actor.get("Constructor_object").tell(new ObjectAdded<org.emftext.language.java.members.Constructor>(incUtil, _constructor), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getOrdinaryParameter(), obj -> {
-			org.emftext.language.java.parameters.OrdinaryParameter _ordinaryparameter = (org.emftext.language.java.parameters.OrdinaryParameter) obj;
-			incUtil.newMessage();
-			name2actor.get("Parameter_1_object").tell(new ObjectAdded<org.emftext.language.java.parameters.Parameter>(incUtil, _ordinaryparameter), getSelf());
-		});
 		type2addConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getPackage(), obj -> {
 			org.emftext.language.java.containers.Package _package = (org.emftext.language.java.containers.Package) obj;
 			incUtil.newMessage();
@@ -194,154 +256,19 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("Package_object_SP1").tell(new ObjectAdded<org.emftext.language.java.containers.Package>(incUtil, _package), getSelf());
 		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getPackage(), obj -> {
-			uml.Package _package = (uml.Package) obj;
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getInteraction(), obj -> {
+			uml.Interaction _interaction = (uml.Interaction) obj;
 			incUtil.newMessage();
-			name2actor.get("Package_1_object").tell(new ObjectAdded<uml.Package>(incUtil, _package), getSelf());
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _interaction), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _interaction), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _interaction), getSelf());
 		});
 		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getExtensionEnd(), obj -> {
 			uml.ExtensionEnd _extensionend = (uml.ExtensionEnd) obj;
 			incUtil.newMessage();
 			name2actor.get("Property_object").tell(new ObjectAdded<uml.Property>(incUtil, _extensionend), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getStereotype(), obj -> {
-			uml.Stereotype _stereotype = (uml.Stereotype) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _stereotype), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _stereotype), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _stereotype), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getOperation(), obj -> {
-			uml.Operation _operation = (uml.Operation) obj;
-			incUtil.newMessage();
-			name2actor.get("Operation_object_SP0").tell(new ObjectAdded<uml.Operation>(incUtil, _operation), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Operation_object_SP1").tell(new ObjectAdded<uml.Operation>(incUtil, _operation), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Operation_object_SP2").tell(new ObjectAdded<uml.Operation>(incUtil, _operation), getSelf());
-		});
-		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel(), obj -> {
-			Java2Uml.JavaCompilationUnitToUmlModel _javacompilationunittoumlmodel = (Java2Uml.JavaCompilationUnitToUmlModel) obj;
-			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToUmlModel_object").tell(new ObjectAdded<Java2Uml.JavaCompilationUnitToUmlModel>(incUtil, _javacompilationunittoumlmodel), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getEnumeration(), obj -> {
-			org.emftext.language.java.classifiers.Enumeration _enumeration = (org.emftext.language.java.classifiers.Enumeration) obj;
-			incUtil.newMessage();
-			name2actor.get("Enumeration_object_SP0").tell(new ObjectAdded<org.emftext.language.java.classifiers.Enumeration>(incUtil, _enumeration), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Enumeration_object_SP1").tell(new ObjectAdded<org.emftext.language.java.classifiers.Enumeration>(incUtil, _enumeration), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getExecutionEnvironment(), obj -> {
-			uml.ExecutionEnvironment _executionenvironment = (uml.ExecutionEnvironment) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _executionenvironment), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _executionenvironment), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _executionenvironment), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getParameter(), obj -> {
-			org.emftext.language.java.parameters.Parameter _parameter = (org.emftext.language.java.parameters.Parameter) obj;
-			incUtil.newMessage();
-			name2actor.get("Parameter_1_object").tell(new ObjectAdded<org.emftext.language.java.parameters.Parameter>(incUtil, _parameter), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getEnumeration(), obj -> {
-			uml.Enumeration _enumeration = (uml.Enumeration) obj;
-			incUtil.newMessage();
-			name2actor.get("Enumeration_1_object_SP0").tell(new ObjectAdded<uml.Enumeration>(incUtil, _enumeration), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Enumeration_1_object_SP1").tell(new ObjectAdded<uml.Enumeration>(incUtil, _enumeration), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getFunctionBehavior(), obj -> {
-			uml.FunctionBehavior _functionbehavior = (uml.FunctionBehavior) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _functionbehavior), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _functionbehavior), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _functionbehavior), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getProfile(), obj -> {
-			uml.Profile _profile = (uml.Profile) obj;
-			incUtil.newMessage();
-			name2actor.get("Package_1_object").tell(new ObjectAdded<uml.Package>(incUtil, _profile), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getActivity(), obj -> {
-			uml.Activity _activity = (uml.Activity) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _activity), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _activity), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _activity), getSelf());
-		});
-		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation(), obj -> {
-			Java2Uml.JavaConstructorToOperation _javaconstructortooperation = (Java2Uml.JavaConstructorToOperation) obj;
-			incUtil.newMessage();
-			name2actor.get("JavaConstructorToOperation_object").tell(new ObjectAdded<Java2Uml.JavaConstructorToOperation>(incUtil, _javaconstructortooperation), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getParameter(), obj -> {
-			uml.Parameter _parameter = (uml.Parameter) obj;
-			incUtil.newMessage();
-			name2actor.get("Parameter_object").tell(new ObjectAdded<uml.Parameter>(incUtil, _parameter), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getAssociationClass(), obj -> {
-			uml.AssociationClass _associationclass = (uml.AssociationClass) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _associationclass), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _associationclass), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _associationclass), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getDevice(), obj -> {
-			uml.Device _device = (uml.Device) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _device), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _device), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _device), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getNode(), obj -> {
-			uml.Node _node = (uml.Node) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _node), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _node), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _node), getSelf());
-		});
-		type2addConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getCompilationUnit(), obj -> {
-			org.emftext.language.java.containers.CompilationUnit _compilationunit = (org.emftext.language.java.containers.CompilationUnit) obj;
-			incUtil.newMessage();
-			name2actor.get("CompilationUnit_object").tell(new ObjectAdded<org.emftext.language.java.containers.CompilationUnit>(incUtil, _compilationunit), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getInterface(), obj -> {
-			uml.Interface _interface = (uml.Interface) obj;
-			incUtil.newMessage();
-			name2actor.get("Interface_1_object_SP0").tell(new ObjectAdded<uml.Interface>(incUtil, _interface), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Interface_1_object_SP1").tell(new ObjectAdded<uml.Interface>(incUtil, _interface), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Interface_1_object_SP2").tell(new ObjectAdded<uml.Interface>(incUtil, _interface), getSelf());
-		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getComponent(), obj -> {
-			uml.Component _component = (uml.Component) obj;
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _component), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _component), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _component), getSelf());
-		});
-		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty(), obj -> {
-			Java2Uml.JavaAttributeToUmlProperty _javaattributetoumlproperty = (Java2Uml.JavaAttributeToUmlProperty) obj;
-			incUtil.newMessage();
-			name2actor.get("JavaAttributeToUmlProperty_object").tell(new ObjectAdded<Java2Uml.JavaAttributeToUmlProperty>(incUtil, _javaattributetoumlproperty), getSelf());
 		});
 		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getClass(), obj -> {
 			uml.Class _class = (uml.Class) obj;
@@ -352,19 +279,92 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _class), getSelf());
 		});
-		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getOpaqueBehavior(), obj -> {
-			uml.OpaqueBehavior _opaquebehavior = (uml.OpaqueBehavior) obj;
+		type2addConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getVariableLengthParameter(), obj -> {
+			org.emftext.language.java.parameters.VariableLengthParameter _variablelengthparameter = (org.emftext.language.java.parameters.VariableLengthParameter) obj;
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _opaquebehavior), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _opaquebehavior), getSelf());
-			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _opaquebehavior), getSelf());
+			name2actor.get("Parameter_1_object").tell(new ObjectAdded<org.emftext.language.java.parameters.Parameter>(incUtil, _variablelengthparameter), getSelf());
 		});
-		type2addConsumer.put(org.emftext.language.java.members.MembersPackage.eINSTANCE.getField(), obj -> {
-			org.emftext.language.java.members.Field _field = (org.emftext.language.java.members.Field) obj;
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getAssociationClass(), obj -> {
+			uml.AssociationClass _associationclass = (uml.AssociationClass) obj;
 			incUtil.newMessage();
-			name2actor.get("Field_object").tell(new ObjectAdded<org.emftext.language.java.members.Field>(incUtil, _field), getSelf());
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _associationclass), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _associationclass), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _associationclass), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getComponent(), obj -> {
+			uml.Component _component = (uml.Component) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _component), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _component), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _component), getSelf());
+		});
+		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel(), obj -> {
+			Java2Uml.JavaCompilationUnitToUmlModel _javacompilationunittoumlmodel = (Java2Uml.JavaCompilationUnitToUmlModel) obj;
+			incUtil.newMessage();
+			name2actor.get("JavaCompilationUnitToUmlModel_object").tell(new ObjectAdded<Java2Uml.JavaCompilationUnitToUmlModel>(incUtil, _javacompilationunittoumlmodel), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.members.MembersPackage.eINSTANCE.getClassMethod(), obj -> {
+			org.emftext.language.java.members.ClassMethod _classmethod = (org.emftext.language.java.members.ClassMethod) obj;
+			incUtil.newMessage();
+			name2actor.get("ClassMethod_object_SP0").tell(new ObjectAdded<org.emftext.language.java.members.ClassMethod>(incUtil, _classmethod), getSelf());
+			incUtil.newMessage();
+			name2actor.get("ClassMethod_object_SP1").tell(new ObjectAdded<org.emftext.language.java.members.ClassMethod>(incUtil, _classmethod), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getModel(), obj -> {
+			uml.Model _model = (uml.Model) obj;
+			incUtil.newMessage();
+			name2actor.get("Model_object").tell(new ObjectAdded<uml.Model>(incUtil, _model), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Package_1_object").tell(new ObjectAdded<uml.Package>(incUtil, _model), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getOperation(), obj -> {
+			uml.Operation _operation = (uml.Operation) obj;
+			incUtil.newMessage();
+			name2actor.get("Operation_object_SP0").tell(new ObjectAdded<uml.Operation>(incUtil, _operation), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Operation_object_SP1").tell(new ObjectAdded<uml.Operation>(incUtil, _operation), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Operation_object_SP2").tell(new ObjectAdded<uml.Operation>(incUtil, _operation), getSelf());
+		});
+		type2addConsumer.put(uml.UmlPackage.eINSTANCE.getActivity(), obj -> {
+			uml.Activity _activity = (uml.Activity) obj;
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP0").tell(new ObjectAdded<uml.Class>(incUtil, _activity), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP1").tell(new ObjectAdded<uml.Class>(incUtil, _activity), getSelf());
+			incUtil.newMessage();
+			name2actor.get("Class_1_object_SP2").tell(new ObjectAdded<uml.Class>(incUtil, _activity), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getParameter(), obj -> {
+			org.emftext.language.java.parameters.Parameter _parameter = (org.emftext.language.java.parameters.Parameter) obj;
+			incUtil.newMessage();
+			name2actor.get("Parameter_1_object").tell(new ObjectAdded<org.emftext.language.java.parameters.Parameter>(incUtil, _parameter), getSelf());
+		});
+		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage(), obj -> {
+			Java2Uml.JavaPackageToUmlPackage _javapackagetoumlpackage = (Java2Uml.JavaPackageToUmlPackage) obj;
+			incUtil.newMessage();
+			name2actor.get("JavaPackageToUmlPackage_object").tell(new ObjectAdded<Java2Uml.JavaPackageToUmlPackage>(incUtil, _javapackagetoumlpackage), getSelf());
+		});
+		type2addConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getOrdinaryParameter(), obj -> {
+			org.emftext.language.java.parameters.OrdinaryParameter _ordinaryparameter = (org.emftext.language.java.parameters.OrdinaryParameter) obj;
+			incUtil.newMessage();
+			name2actor.get("Parameter_1_object").tell(new ObjectAdded<org.emftext.language.java.parameters.Parameter>(incUtil, _ordinaryparameter), getSelf());
+		});
+		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation(), obj -> {
+			Java2Uml.JavaConstructorToOperation _javaconstructortooperation = (Java2Uml.JavaConstructorToOperation) obj;
+			incUtil.newMessage();
+			name2actor.get("JavaConstructorToOperation_object").tell(new ObjectAdded<Java2Uml.JavaConstructorToOperation>(incUtil, _javaconstructortooperation), getSelf());
+		});
+		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation(), obj -> {
+			Java2Uml.JavaMethodToOperation _javamethodtooperation = (Java2Uml.JavaMethodToOperation) obj;
+			incUtil.newMessage();
+			name2actor.get("JavaMethodToOperation_object_SP0").tell(new ObjectAdded<Java2Uml.JavaMethodToOperation>(incUtil, _javamethodtooperation), getSelf());
+			incUtil.newMessage();
+			name2actor.get("JavaMethodToOperation_object_SP1").tell(new ObjectAdded<Java2Uml.JavaMethodToOperation>(incUtil, _javamethodtooperation), getSelf());
 		});
 		type2addConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter(), obj -> {
 			Java2Uml.JavaParameterToParameter _javaparametertoparameter = (Java2Uml.JavaParameterToParameter) obj;
@@ -374,46 +374,7 @@ public class DispatchActor extends AbstractActor {
 	}
 	
 	private void initializeSet() {
-		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getClassifier_IsFinalSpecialization(), notification -> {
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-		});
-		
 		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getFeature_IsStatic(), notification -> {
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.Feature>(incUtil, (uml.Feature) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
 			if(notification.getNotifier() instanceof uml.Property) {
 				incUtil.newMessage();
 				name2actor.get("Property_object").tell(new AttributeChanged<uml.Feature>(incUtil, (uml.Feature) notification.getNotifier(), notification.getOldValue()), getSelf());
@@ -426,6 +387,108 @@ public class DispatchActor extends AbstractActor {
 				incUtil.newMessage();
 				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.Feature>(incUtil, (uml.Feature) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
+			if(notification.getNotifier() instanceof uml.Operation) {
+				incUtil.newMessage();
+				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.Feature>(incUtil, (uml.Feature) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+		});
+		
+		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getNamedElement_Visibility(), notification -> {
+			if(notification.getNotifier() instanceof uml.Model) {
+				incUtil.newMessage();
+				name2actor.get("Model_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Parameter) {
+				incUtil.newMessage();
+				name2actor.get("Parameter_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Property) {
+				incUtil.newMessage();
+				name2actor.get("Property_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Operation) {
+				incUtil.newMessage();
+				name2actor.get("Operation_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Package) {
+				incUtil.newMessage();
+				name2actor.get("Package_1_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Operation) {
+				incUtil.newMessage();
+				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Operation) {
+				incUtil.newMessage();
+				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+		});
+		
+		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getClassifier_IsAbstract(), notification -> {
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
 		});
 		
 		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getStructuralFeature_IsReadOnly(), notification -> {
@@ -435,187 +498,25 @@ public class DispatchActor extends AbstractActor {
 			}
 		});
 		
-		feature2setConsumer.put(org.emftext.language.java.commons.CommonsPackage.eINSTANCE.getNamedElement_Name(), notification -> {
-			if(notification.getNotifier() instanceof org.emftext.language.java.members.ClassMethod) {
+		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getBehavioralFeature_IsAbstract(), notification -> {
+			if(notification.getNotifier() instanceof uml.Operation) {
 				incUtil.newMessage();
-				name2actor.get("ClassMethod_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.containers.CompilationUnit) {
-				incUtil.newMessage();
-				name2actor.get("CompilationUnit_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.parameters.Parameter) {
-				incUtil.newMessage();
-				name2actor.get("Parameter_1_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.members.Constructor) {
-				incUtil.newMessage();
-				name2actor.get("Constructor_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_object_SP2").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.containers.Package) {
-				incUtil.newMessage();
-				name2actor.get("Package_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.members.ClassMethod) {
-				incUtil.newMessage();
-				name2actor.get("ClassMethod_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_object_SP2").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.containers.Package) {
-				incUtil.newMessage();
-				name2actor.get("Package_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof org.emftext.language.java.members.Field) {
-				incUtil.newMessage();
-				name2actor.get("Field_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-		});
-		
-		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getClassifier_IsAbstract(), notification -> {
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-		});
-		
-		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getNamedElement_Visibility(), notification -> {
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Operation_object_SP1").tell(new AttributeChanged<uml.BehavioralFeature>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Operation) {
 				incUtil.newMessage();
-				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Parameter) {
-				incUtil.newMessage();
-				name2actor.get("Parameter_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Model) {
-				incUtil.newMessage();
-				name2actor.get("Model_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Property) {
-				incUtil.newMessage();
-				name2actor.get("Property_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.BehavioralFeature>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Operation) {
 				incUtil.newMessage();
-				name2actor.get("Operation_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Package) {
-				incUtil.newMessage();
-				name2actor.get("Package_1_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.BehavioralFeature>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 		});
 		
 		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getRedefinableElement_IsLeaf(), notification -> {
 			if(notification.getNotifier() instanceof uml.Interface) {
 				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
-				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Class) {
-				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Property) {
 				incUtil.newMessage();
@@ -625,13 +526,21 @@ public class DispatchActor extends AbstractActor {
 				incUtil.newMessage();
 				name2actor.get("Operation_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
+			if(notification.getNotifier() instanceof uml.Operation) {
+				incUtil.newMessage();
+				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
 			if(notification.getNotifier() instanceof uml.Enumeration) {
 				incUtil.newMessage();
 				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
 			if(notification.getNotifier() instanceof uml.Operation) {
 				incUtil.newMessage();
-				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Class) {
 				incUtil.newMessage();
@@ -639,7 +548,11 @@ public class DispatchActor extends AbstractActor {
 			}
 			if(notification.getNotifier() instanceof uml.Class) {
 				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Interface) {
 				incUtil.newMessage();
@@ -647,22 +560,124 @@ public class DispatchActor extends AbstractActor {
 			}
 			if(notification.getNotifier() instanceof uml.Interface) {
 				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.RedefinableElement>(incUtil, (uml.RedefinableElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+		});
+		
+		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getClassifier_IsFinalSpecialization(), notification -> {
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.Classifier>(incUtil, (uml.Classifier) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+		});
+		
+		feature2setConsumer.put(org.emftext.language.java.commons.CommonsPackage.eINSTANCE.getNamedElement_Name(), notification -> {
+			if(notification.getNotifier() instanceof org.emftext.language.java.containers.Package) {
+				incUtil.newMessage();
+				name2actor.get("Package_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.containers.Package) {
+				incUtil.newMessage();
+				name2actor.get("Package_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.members.ClassMethod) {
+				incUtil.newMessage();
+				name2actor.get("ClassMethod_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_object_SP2").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_object_SP2").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.containers.CompilationUnit) {
+				incUtil.newMessage();
+				name2actor.get("CompilationUnit_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.members.ClassMethod) {
+				incUtil.newMessage();
+				name2actor.get("ClassMethod_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_object_SP0").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.parameters.Parameter) {
+				incUtil.newMessage();
+				name2actor.get("Parameter_1_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.classifiers.Class) {
+				incUtil.newMessage();
+				name2actor.get("Class_object_SP1").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.members.Field) {
+				incUtil.newMessage();
+				name2actor.get("Field_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof org.emftext.language.java.members.Constructor) {
+				incUtil.newMessage();
+				name2actor.get("Constructor_object").tell(new AttributeChanged<org.emftext.language.java.commons.NamedElement>(incUtil, (org.emftext.language.java.commons.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 		});
 		
 		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getNamedElement_Name(), notification -> {
+			if(notification.getNotifier() instanceof uml.Model) {
+				incUtil.newMessage();
+				name2actor.get("Model_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
 			if(notification.getNotifier() instanceof uml.Interface) {
 				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Enumeration) {
 				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Parameter) {
 				incUtil.newMessage();
@@ -670,15 +685,19 @@ public class DispatchActor extends AbstractActor {
 			}
 			if(notification.getNotifier() instanceof uml.Class) {
 				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Model) {
-				incUtil.newMessage();
-				name2actor.get("Model_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Class) {
 				incUtil.newMessage();
 				name2actor.get("Class_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Enumeration) {
+				incUtil.newMessage();
+				name2actor.get("Enumeration_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+			}
+			if(notification.getNotifier() instanceof uml.Interface) {
+				incUtil.newMessage();
+				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Property) {
 				incUtil.newMessage();
@@ -688,9 +707,9 @@ public class DispatchActor extends AbstractActor {
 				incUtil.newMessage();
 				name2actor.get("Operation_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
-			if(notification.getNotifier() instanceof uml.Enumeration) {
+			if(notification.getNotifier() instanceof uml.Package) {
 				incUtil.newMessage();
-				name2actor.get("Enumeration_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Package_1_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Operation) {
 				incUtil.newMessage();
@@ -698,140 +717,21 @@ public class DispatchActor extends AbstractActor {
 			}
 			if(notification.getNotifier() instanceof uml.Class) {
 				incUtil.newMessage();
-				name2actor.get("Class_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Class_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
-			if(notification.getNotifier() instanceof uml.Package) {
+			if(notification.getNotifier() instanceof uml.Operation) {
 				incUtil.newMessage();
-				name2actor.get("Package_1_object").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 			if(notification.getNotifier() instanceof uml.Interface) {
 				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP0").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Interface) {
-				incUtil.newMessage();
-				name2actor.get("Interface_1_object_SP1").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-		});
-		
-		feature2setConsumer.put(uml.UmlPackage.eINSTANCE.getBehavioralFeature_IsAbstract(), notification -> {
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP0").tell(new AttributeChanged<uml.BehavioralFeature>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP1").tell(new AttributeChanged<uml.BehavioralFeature>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), notification.getOldValue()), getSelf());
-			}
-			if(notification.getNotifier() instanceof uml.Operation) {
-				incUtil.newMessage();
-				name2actor.get("Operation_object_SP2").tell(new AttributeChanged<uml.BehavioralFeature>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), notification.getOldValue()), getSelf());
+				name2actor.get("Interface_1_object_SP2").tell(new AttributeChanged<uml.NamedElement>(incUtil, (uml.NamedElement) notification.getNotifier(), notification.getOldValue()), getSelf());
 			}
 		});
 		
 	}
 	
 	private void initializeAddEdge() {
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaParameterToParameter_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaParameterToParameter, org.emftext.language.java.parameters.Parameter>(incUtil,(Java2Uml.JavaParameterToParameter) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getNewValue(), "Java2Uml.JavaParameterToParameter_source_Parameter"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaAttributeToUmlProperty_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldFinalToFinal__GEN_208_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldStaticToStatic__GEN_212_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaAttributeToUmlProperty_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldFinalToFinal__GEN_208_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldStaticToStatic__GEN_212_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
-		});
-		feature2addEdgeConsumer.put(uml.UmlPackage.eINSTANCE.getBehavioralFeature_OwnedParameter(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("Operation_ownedParameter_0_reference").tell(new ReferenceAdded<uml.BehavioralFeature, uml.Parameter>(incUtil,(uml.BehavioralFeature) notification.getNotifier(), (uml.Parameter) notification.getNewValue(), "uml.BehavioralFeature_ownedParameter_Parameter"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaConstructorToOperation_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_391_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_407_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_262_localSearch").tell(new ReferenceAdded<Java2Uml.JavaCompilationUnitToUmlModel, org.emftext.language.java.containers.CompilationUnit>(incUtil,(Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit"), getSelf());
-		});
-		feature2addEdgeConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getParametrizable_Parameters(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("Constructor_parameters_0_reference").tell(new ReferenceAdded<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil,(org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getNewValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("ClassMethod_parameters_1_reference").tell(new ReferenceAdded<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil,(org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getNewValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
-		});
-		feature2addEdgeConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getPackage_CompilationUnits(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("EnumToUmlEnum__GEN_164_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("InterfaceToUmlInterface__GEN_257_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_262_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaParameterToParameter_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaParameterToParameter, uml.Parameter>(incUtil,(Java2Uml.JavaParameterToParameter) notification.getNotifier(), (uml.Parameter) notification.getNewValue(), "Java2Uml.JavaParameterToParameter_target_Parameter"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodAbstractToAbstract__GEN_268_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodFinalToFinal__GEN_346_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodStaticToStatic__GEN_387_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryMethodParameterToParameter__GEN_395_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthMethodParameterToParameter__GEN_411_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodAbstractToAbstract__GEN_268_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodFinalToFinal__GEN_346_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodStaticToStatic__GEN_387_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryMethodParameterToParameter__GEN_395_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthMethodParameterToParameter__GEN_411_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("EnumToUmlEnum__GEN_164_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("InterfaceToUmlInterface__GEN_257_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
-		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaConstructorToOperation_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_391_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_407_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
-		});
 		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaClassifierToUmlClassifier_Source(), notification -> {
 			incUtil.newMessage();
 			name2actor.get("JavaClassifierToUmlClassifier_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
@@ -862,35 +762,137 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("EnumAttributeToProperty__GEN_131_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumFinalToFinal__GEN_148_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumConstantToEnumConstant__GEN_148_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPrivateToPrivate__GEN_152_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumFinalToFinal__GEN_152_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumProtectedToProtected__GEN_156_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumPrivateToPrivate__GEN_156_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPublicToPublic__GEN_160_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumProtectedToProtected__GEN_160_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceAbstractToAbstract__GEN_216_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumPublicToPublic__GEN_164_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceConstructorToConstructor__GEN_233_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceAbstractToAbstract__GEN_220_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceFinalToFinal__GEN_237_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceConstructorToConstructor__GEN_237_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceMethodToMethod__GEN_241_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceFinalToFinal__GEN_241_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePrivateToPrivate__GEN_245_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceMethodToMethod__GEN_245_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceProtectedToProtected__GEN_249_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfacePrivateToPrivate__GEN_249_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePublicToPublic__GEN_253_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceProtectedToProtected__GEN_253_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperClassToSuperClass__GEN_399_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfacePublicToPublic__GEN_257_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperInterfaceToSuperInterface__GEN_403_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("SuperClassToSuperClass__GEN_403_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("SuperInterfaceToSuperInterface__GEN_407_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("EnumToUmlEnum__GEN_168_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("InterfaceToUmlInterface__GEN_261_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaConstructorToOperation_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_395_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_411_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaAttributeToUmlProperty_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldFinalToFinal__GEN_212_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldStaticToStatic__GEN_216_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaAttributeToUmlProperty_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldFinalToFinal__GEN_212_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldStaticToStatic__GEN_216_localSearch").tell(new ReferenceAdded<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil,(Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getNewValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaConstructorToOperation_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_395_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_411_localSearch").tell(new ReferenceAdded<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil,(Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getNewValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaMethodToOperation_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodAbstractToAbstract__GEN_272_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodFinalToFinal__GEN_350_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodStaticToStatic__GEN_391_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryMethodParameterToParameter__GEN_399_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthMethodParameterToParameter__GEN_415_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("EnumToUmlEnum__GEN_168_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("InterfaceToUmlInterface__GEN_261_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
 		});
 		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel_Target(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_262_localSearch").tell(new ReferenceAdded<Java2Uml.JavaCompilationUnitToUmlModel, uml.Model>(incUtil,(Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (uml.Model) notification.getNewValue(), "Java2Uml.JavaCompilationUnitToUmlModel_target_Model"), getSelf());
+			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_266_localSearch").tell(new ReferenceAdded<Java2Uml.JavaCompilationUnitToUmlModel, uml.Model>(incUtil,(Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (uml.Model) notification.getNewValue(), "Java2Uml.JavaCompilationUnitToUmlModel_target_Model"), getSelf());
+		});
+		feature2addEdgeConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getPackage_CompilationUnits(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("EnumToUmlEnum__GEN_168_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("InterfaceToUmlInterface__GEN_261_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_266_localSearch").tell(new ReferenceAdded<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil,(org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaParameterToParameter_source_0_reference").tell(new ReferenceAdded<Java2Uml.JavaParameterToParameter, org.emftext.language.java.parameters.Parameter>(incUtil,(Java2Uml.JavaParameterToParameter) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getNewValue(), "Java2Uml.JavaParameterToParameter_source_Parameter"), getSelf());
+		});
+		feature2addEdgeConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getParametrizable_Parameters(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("Constructor_parameters_0_reference").tell(new ReferenceAdded<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil,(org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getNewValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("ClassMethod_parameters_1_reference").tell(new ReferenceAdded<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil,(org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getNewValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaParameterToParameter_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaParameterToParameter, uml.Parameter>(incUtil,(Java2Uml.JavaParameterToParameter) notification.getNotifier(), (uml.Parameter) notification.getNewValue(), "Java2Uml.JavaParameterToParameter_target_Parameter"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaMethodToOperation_target_0_reference").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodAbstractToAbstract__GEN_272_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodFinalToFinal__GEN_350_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodStaticToStatic__GEN_391_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryMethodParameterToParameter__GEN_399_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthMethodParameterToParameter__GEN_415_localSearch").tell(new ReferenceAdded<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil,(Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getNewValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
 		});
 		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaClassifierToUmlClassifier_Target(), notification -> {
 			incUtil.newMessage();
@@ -922,143 +924,45 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("EnumAttributeToProperty__GEN_131_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumFinalToFinal__GEN_148_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumConstantToEnumConstant__GEN_148_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPrivateToPrivate__GEN_152_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumFinalToFinal__GEN_152_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumProtectedToProtected__GEN_156_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumPrivateToPrivate__GEN_156_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPublicToPublic__GEN_160_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumProtectedToProtected__GEN_160_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceAbstractToAbstract__GEN_216_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumPublicToPublic__GEN_164_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceConstructorToConstructor__GEN_233_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceAbstractToAbstract__GEN_220_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceFinalToFinal__GEN_237_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceConstructorToConstructor__GEN_237_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceMethodToMethod__GEN_241_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceFinalToFinal__GEN_241_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePrivateToPrivate__GEN_245_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceMethodToMethod__GEN_245_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceProtectedToProtected__GEN_249_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfacePrivateToPrivate__GEN_249_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePublicToPublic__GEN_253_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceProtectedToProtected__GEN_253_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperClassToSuperClass__GEN_399_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfacePublicToPublic__GEN_257_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperInterfaceToSuperInterface__GEN_403_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("SuperClassToSuperClass__GEN_403_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("SuperInterfaceToSuperInterface__GEN_407_localSearch").tell(new ReferenceAdded<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil,(Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getNewValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 		});
-		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Source(), notification -> {
+		feature2addEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel_Source(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_266_localSearch").tell(new ReferenceAdded<Java2Uml.JavaCompilationUnitToUmlModel, org.emftext.language.java.containers.CompilationUnit>(incUtil,(Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getNewValue(), "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit"), getSelf());
+		});
+		feature2addEdgeConsumer.put(uml.UmlPackage.eINSTANCE.getBehavioralFeature_OwnedParameter(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("EnumToUmlEnum__GEN_164_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("InterfaceToUmlInterface__GEN_257_localSearch").tell(new ReferenceAdded<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil,(Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getNewValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			name2actor.get("Operation_ownedParameter_0_reference").tell(new ReferenceAdded<uml.BehavioralFeature, uml.Parameter>(incUtil,(uml.BehavioralFeature) notification.getNotifier(), (uml.Parameter) notification.getNewValue(), "uml.BehavioralFeature_ownedParameter_Parameter"), getSelf());
 		});
 	}
 	
 	private void initializeRemoveEdge() {
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaParameterToParameter_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaParameterToParameter, org.emftext.language.java.parameters.Parameter>(incUtil, (Java2Uml.JavaParameterToParameter) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getOldValue(), "Java2Uml.JavaParameterToParameter_source_Parameter"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaAttributeToUmlProperty_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldFinalToFinal__GEN_208_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldStaticToStatic__GEN_212_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaAttributeToUmlProperty_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldFinalToFinal__GEN_208_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FieldStaticToStatic__GEN_212_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(uml.UmlPackage.eINSTANCE.getBehavioralFeature_OwnedParameter(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("Operation_ownedParameter_0_reference").tell(new ReferenceDeleted<uml.BehavioralFeature, uml.Parameter>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), (uml.Parameter) notification.getOldValue(), "uml.BehavioralFeature_ownedParameter_Parameter"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaConstructorToOperation_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_391_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_407_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_262_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaCompilationUnitToUmlModel, org.emftext.language.java.containers.CompilationUnit>(incUtil, (Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getParametrizable_Parameters(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("Constructor_parameters_0_reference").tell(new ReferenceDeleted<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil, (org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getOldValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("ClassMethod_parameters_1_reference").tell(new ReferenceDeleted<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil, (org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getOldValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getPackage_CompilationUnits(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("EnumToUmlEnum__GEN_164_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("InterfaceToUmlInterface__GEN_257_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_262_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaParameterToParameter_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaParameterToParameter, uml.Parameter>(incUtil, (Java2Uml.JavaParameterToParameter) notification.getNotifier(), (uml.Parameter) notification.getOldValue(), "Java2Uml.JavaParameterToParameter_target_Parameter"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodAbstractToAbstract__GEN_268_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodFinalToFinal__GEN_346_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodStaticToStatic__GEN_387_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryMethodParameterToParameter__GEN_395_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthMethodParameterToParameter__GEN_411_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodAbstractToAbstract__GEN_268_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodFinalToFinal__GEN_346_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MethodStaticToStatic__GEN_387_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryMethodParameterToParameter__GEN_395_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthMethodParameterToParameter__GEN_411_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("EnumToUmlEnum__GEN_164_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("InterfaceToUmlInterface__GEN_257_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
-		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Source(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("JavaConstructorToOperation_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_391_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_407_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
-		});
 		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaClassifierToUmlClassifier_Source(), notification -> {
 			incUtil.newMessage();
 			name2actor.get("JavaClassifierToUmlClassifier_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
@@ -1089,35 +993,137 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("EnumAttributeToProperty__GEN_131_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumFinalToFinal__GEN_148_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumConstantToEnumConstant__GEN_148_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPrivateToPrivate__GEN_152_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumFinalToFinal__GEN_152_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumProtectedToProtected__GEN_156_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumPrivateToPrivate__GEN_156_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPublicToPublic__GEN_160_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumProtectedToProtected__GEN_160_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceAbstractToAbstract__GEN_216_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("EnumPublicToPublic__GEN_164_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceConstructorToConstructor__GEN_233_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceAbstractToAbstract__GEN_220_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceFinalToFinal__GEN_237_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceConstructorToConstructor__GEN_237_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceMethodToMethod__GEN_241_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceFinalToFinal__GEN_241_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePrivateToPrivate__GEN_245_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceMethodToMethod__GEN_245_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceProtectedToProtected__GEN_249_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfacePrivateToPrivate__GEN_249_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePublicToPublic__GEN_253_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfaceProtectedToProtected__GEN_253_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperClassToSuperClass__GEN_399_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("InterfacePublicToPublic__GEN_257_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperInterfaceToSuperInterface__GEN_403_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			name2actor.get("SuperClassToSuperClass__GEN_403_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("SuperInterfaceToSuperInterface__GEN_407_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, org.emftext.language.java.classifiers.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (org.emftext.language.java.classifiers.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("EnumToUmlEnum__GEN_168_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("InterfaceToUmlInterface__GEN_261_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaConstructorToOperation_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_395_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_411_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, uml.Operation>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_target_Operation"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaAttributeToUmlProperty_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldFinalToFinal__GEN_212_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldStaticToStatic__GEN_216_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, org.emftext.language.java.members.Field>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (org.emftext.language.java.members.Field) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_source_Field"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaAttributeToUmlProperty_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaAttributeToUmlProperty_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldFinalToFinal__GEN_212_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FieldStaticToStatic__GEN_216_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaAttributeToUmlProperty, uml.Property>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) notification.getNotifier(), (uml.Property) notification.getOldValue(), "Java2Uml.JavaAttributeToUmlProperty_target_Property"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaConstructorToOperation_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaConstructorToOperation_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryConstructorParameterToParameter__GEN_395_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthConstructorParameterToParameter__GEN_411_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaConstructorToOperation, org.emftext.language.java.members.Constructor>(incUtil, (Java2Uml.JavaConstructorToOperation) notification.getNotifier(), (org.emftext.language.java.members.Constructor) notification.getOldValue(), "Java2Uml.JavaConstructorToOperation_source_Constructor"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaMethodToOperation_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodAbstractToAbstract__GEN_272_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodFinalToFinal__GEN_350_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodStaticToStatic__GEN_391_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryMethodParameterToParameter__GEN_399_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthMethodParameterToParameter__GEN_415_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, org.emftext.language.java.members.Method>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (org.emftext.language.java.members.Method) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_source_Method"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("EnumToUmlEnum__GEN_168_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("InterfaceToUmlInterface__GEN_261_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, uml.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (uml.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_target_Package"), getSelf());
 		});
 		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel_Target(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_262_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaCompilationUnitToUmlModel, uml.Model>(incUtil, (Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (uml.Model) notification.getOldValue(), "Java2Uml.JavaCompilationUnitToUmlModel_target_Model"), getSelf());
+			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_266_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaCompilationUnitToUmlModel, uml.Model>(incUtil, (Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (uml.Model) notification.getOldValue(), "Java2Uml.JavaCompilationUnitToUmlModel_target_Model"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getPackage_CompilationUnits(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("EnumToUmlEnum__GEN_168_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("InterfaceToUmlInterface__GEN_261_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_266_localSearch").tell(new ReferenceDeleted<org.emftext.language.java.containers.Package, org.emftext.language.java.containers.CompilationUnit>(incUtil, (org.emftext.language.java.containers.Package) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaParameterToParameter_source_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaParameterToParameter, org.emftext.language.java.parameters.Parameter>(incUtil, (Java2Uml.JavaParameterToParameter) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getOldValue(), "Java2Uml.JavaParameterToParameter_source_Parameter"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(org.emftext.language.java.parameters.ParametersPackage.eINSTANCE.getParametrizable_Parameters(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("Constructor_parameters_0_reference").tell(new ReferenceDeleted<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil, (org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getOldValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("ClassMethod_parameters_1_reference").tell(new ReferenceDeleted<org.emftext.language.java.parameters.Parametrizable, org.emftext.language.java.parameters.Parameter>(incUtil, (org.emftext.language.java.parameters.Parametrizable) notification.getNotifier(), (org.emftext.language.java.parameters.Parameter) notification.getOldValue(), "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaParameterToParameter_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaParameterToParameter_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaParameterToParameter, uml.Parameter>(incUtil, (Java2Uml.JavaParameterToParameter) notification.getNotifier(), (uml.Parameter) notification.getOldValue(), "Java2Uml.JavaParameterToParameter_target_Parameter"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaMethodToOperation_Target(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("JavaMethodToOperation_target_0_reference").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodAbstractToAbstract__GEN_272_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodFinalToFinal__GEN_350_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MethodStaticToStatic__GEN_391_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("OrdinaryMethodParameterToParameter__GEN_399_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("VariableLengthMethodParameterToParameter__GEN_415_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaMethodToOperation, uml.Operation>(incUtil, (Java2Uml.JavaMethodToOperation) notification.getNotifier(), (uml.Operation) notification.getOldValue(), "Java2Uml.JavaMethodToOperation_target_Operation"), getSelf());
 		});
 		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaClassifierToUmlClassifier_Target(), notification -> {
 			incUtil.newMessage();
@@ -1149,39 +1155,41 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("EnumAttributeToProperty__GEN_131_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumFinalToFinal__GEN_148_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumConstantToEnumConstant__GEN_148_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPrivateToPrivate__GEN_152_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumFinalToFinal__GEN_152_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumProtectedToProtected__GEN_156_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumPrivateToPrivate__GEN_156_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("EnumPublicToPublic__GEN_160_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumProtectedToProtected__GEN_160_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceAbstractToAbstract__GEN_216_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("EnumPublicToPublic__GEN_164_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceConstructorToConstructor__GEN_233_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceAbstractToAbstract__GEN_220_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceFinalToFinal__GEN_237_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceConstructorToConstructor__GEN_237_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceMethodToMethod__GEN_241_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceFinalToFinal__GEN_241_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePrivateToPrivate__GEN_245_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceMethodToMethod__GEN_245_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfaceProtectedToProtected__GEN_249_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfacePrivateToPrivate__GEN_249_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("InterfacePublicToPublic__GEN_253_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfaceProtectedToProtected__GEN_253_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperClassToSuperClass__GEN_399_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("InterfacePublicToPublic__GEN_257_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SuperInterfaceToSuperInterface__GEN_403_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			name2actor.get("SuperClassToSuperClass__GEN_403_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("SuperInterfaceToSuperInterface__GEN_407_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaClassifierToUmlClassifier, uml.Classifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) notification.getNotifier(), (uml.Classifier) notification.getOldValue(), "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier"), getSelf());
 		});
-		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaPackageToUmlPackage_Source(), notification -> {
+		feature2removeEdgeConsumer.put(Java2Uml.Java2UmlPackage.eINSTANCE.getJavaCompilationUnitToUmlModel_Source(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("ClassToUmlClass__GEN_50_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			name2actor.get("JavaCompilationUnitToExistingUmlModel__GEN_266_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaCompilationUnitToUmlModel, org.emftext.language.java.containers.CompilationUnit>(incUtil, (Java2Uml.JavaCompilationUnitToUmlModel) notification.getNotifier(), (org.emftext.language.java.containers.CompilationUnit) notification.getOldValue(), "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(uml.UmlPackage.eINSTANCE.getBehavioralFeature_OwnedParameter(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("EnumToUmlEnum__GEN_164_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("InterfaceToUmlInterface__GEN_257_localSearch").tell(new ReferenceDeleted<Java2Uml.JavaPackageToUmlPackage, org.emftext.language.java.containers.Package>(incUtil, (Java2Uml.JavaPackageToUmlPackage) notification.getNotifier(), (org.emftext.language.java.containers.Package) notification.getOldValue(), "Java2Uml.JavaPackageToUmlPackage_source_Package"), getSelf());
+			name2actor.get("Operation_ownedParameter_0_reference").tell(new ReferenceDeleted<uml.BehavioralFeature, uml.Parameter>(incUtil, (uml.BehavioralFeature) notification.getNotifier(), (uml.Parameter) notification.getOldValue(), "uml.BehavioralFeature_ownedParameter_Parameter"), getSelf());
 		});
 	}
 
@@ -1279,65 +1287,65 @@ public class DispatchActor extends AbstractActor {
 	
 	private void handleRemoveAdapter(Notification notification) {
 		Object node = notification.getNotifier();
-		if (node instanceof Java2Uml.JavaAttributeToUmlProperty) {
+		if (node instanceof uml.Property) {
 			incUtil.newMessage();
-			name2actor.get("JavaAttributeToUmlProperty_object").tell(new ObjectDeleted<Java2Uml.JavaAttributeToUmlProperty>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) node), getSelf());
+			name2actor.get("Property_object").tell(new ObjectDeleted<uml.Property>(incUtil, (uml.Property) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaPackageToUmlPackage) {
+		if (node instanceof uml.Package) {
 			incUtil.newMessage();
-			name2actor.get("JavaPackageToUmlPackage_object").tell(new ObjectDeleted<Java2Uml.JavaPackageToUmlPackage>(incUtil, (Java2Uml.JavaPackageToUmlPackage) node), getSelf());
+			name2actor.get("Package_1_object").tell(new ObjectDeleted<uml.Package>(incUtil, (uml.Package) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaParameterToParameter) {
+		if (node instanceof uml.Parameter) {
 			incUtil.newMessage();
-			name2actor.get("JavaParameterToParameter_object").tell(new ObjectDeleted<Java2Uml.JavaParameterToParameter>(incUtil, (Java2Uml.JavaParameterToParameter) node), getSelf());
+			name2actor.get("Parameter_object").tell(new ObjectDeleted<uml.Parameter>(incUtil, (uml.Parameter) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaConstructorToOperation) {
+		if (node instanceof uml.Model) {
 			incUtil.newMessage();
-			name2actor.get("JavaConstructorToOperation_object").tell(new ObjectDeleted<Java2Uml.JavaConstructorToOperation>(incUtil, (Java2Uml.JavaConstructorToOperation) node), getSelf());
+			name2actor.get("Model_object").tell(new ObjectDeleted<uml.Model>(incUtil, (uml.Model) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaCompilationUnitToUmlModel) {
+		if (node instanceof uml.Class) {
 			incUtil.newMessage();
-			name2actor.get("JavaCompilationUnitToUmlModel_object").tell(new ObjectDeleted<Java2Uml.JavaCompilationUnitToUmlModel>(incUtil, (Java2Uml.JavaCompilationUnitToUmlModel) node), getSelf());
+			name2actor.get("Class_1_object_SP0").tell(new ObjectDeleted<uml.Class>(incUtil, (uml.Class) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Class) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP0").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Class_1_object_SP1").tell(new ObjectDeleted<uml.Class>(incUtil, (uml.Class) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Class) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP1").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Class_1_object_SP2").tell(new ObjectDeleted<uml.Class>(incUtil, (uml.Class) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Operation) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP2").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Operation_object_SP0").tell(new ObjectDeleted<uml.Operation>(incUtil, (uml.Operation) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Operation) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP3").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Operation_object_SP1").tell(new ObjectDeleted<uml.Operation>(incUtil, (uml.Operation) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Operation) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP4").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Operation_object_SP2").tell(new ObjectDeleted<uml.Operation>(incUtil, (uml.Operation) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Enumeration) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP5").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Enumeration_1_object_SP0").tell(new ObjectDeleted<uml.Enumeration>(incUtil, (uml.Enumeration) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Enumeration) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP6").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Enumeration_1_object_SP1").tell(new ObjectDeleted<uml.Enumeration>(incUtil, (uml.Enumeration) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
+		if (node instanceof uml.Interface) {
 			incUtil.newMessage();
-			name2actor.get("JavaClassifierToUmlClassifier_object_SP7").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
+			name2actor.get("Interface_1_object_SP0").tell(new ObjectDeleted<uml.Interface>(incUtil, (uml.Interface) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaMethodToOperation) {
+		if (node instanceof uml.Interface) {
 			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_object_SP0").tell(new ObjectDeleted<Java2Uml.JavaMethodToOperation>(incUtil, (Java2Uml.JavaMethodToOperation) node), getSelf());
+			name2actor.get("Interface_1_object_SP1").tell(new ObjectDeleted<uml.Interface>(incUtil, (uml.Interface) node), getSelf());
 		}
-		if (node instanceof Java2Uml.JavaMethodToOperation) {
+		if (node instanceof uml.Interface) {
 			incUtil.newMessage();
-			name2actor.get("JavaMethodToOperation_object_SP1").tell(new ObjectDeleted<Java2Uml.JavaMethodToOperation>(incUtil, (Java2Uml.JavaMethodToOperation) node), getSelf());
+			name2actor.get("Interface_1_object_SP2").tell(new ObjectDeleted<uml.Interface>(incUtil, (uml.Interface) node), getSelf());
 		}
 		if (node instanceof org.emftext.language.java.annotations.Annotable) {
 			org.emftext.language.java.annotations.Annotable _annotable = (org.emftext.language.java.annotations.Annotable) node;
@@ -2180,65 +2188,65 @@ public class DispatchActor extends AbstractActor {
 		if (node instanceof org.emftext.language.java.variables.AdditionalLocalVariable) {
 			org.emftext.language.java.variables.AdditionalLocalVariable _additionallocalvariable = (org.emftext.language.java.variables.AdditionalLocalVariable) node;
 		}
-		if (node instanceof uml.Property) {
+		if (node instanceof Java2Uml.JavaAttributeToUmlProperty) {
 			incUtil.newMessage();
-			name2actor.get("Property_object").tell(new ObjectDeleted<uml.Property>(incUtil, (uml.Property) node), getSelf());
+			name2actor.get("JavaAttributeToUmlProperty_object").tell(new ObjectDeleted<Java2Uml.JavaAttributeToUmlProperty>(incUtil, (Java2Uml.JavaAttributeToUmlProperty) node), getSelf());
 		}
-		if (node instanceof uml.Package) {
+		if (node instanceof Java2Uml.JavaPackageToUmlPackage) {
 			incUtil.newMessage();
-			name2actor.get("Package_1_object").tell(new ObjectDeleted<uml.Package>(incUtil, (uml.Package) node), getSelf());
+			name2actor.get("JavaPackageToUmlPackage_object").tell(new ObjectDeleted<Java2Uml.JavaPackageToUmlPackage>(incUtil, (Java2Uml.JavaPackageToUmlPackage) node), getSelf());
 		}
-		if (node instanceof uml.Parameter) {
+		if (node instanceof Java2Uml.JavaParameterToParameter) {
 			incUtil.newMessage();
-			name2actor.get("Parameter_object").tell(new ObjectDeleted<uml.Parameter>(incUtil, (uml.Parameter) node), getSelf());
+			name2actor.get("JavaParameterToParameter_object").tell(new ObjectDeleted<Java2Uml.JavaParameterToParameter>(incUtil, (Java2Uml.JavaParameterToParameter) node), getSelf());
 		}
-		if (node instanceof uml.Model) {
+		if (node instanceof Java2Uml.JavaConstructorToOperation) {
 			incUtil.newMessage();
-			name2actor.get("Model_object").tell(new ObjectDeleted<uml.Model>(incUtil, (uml.Model) node), getSelf());
+			name2actor.get("JavaConstructorToOperation_object").tell(new ObjectDeleted<Java2Uml.JavaConstructorToOperation>(incUtil, (Java2Uml.JavaConstructorToOperation) node), getSelf());
 		}
-		if (node instanceof uml.Class) {
+		if (node instanceof Java2Uml.JavaCompilationUnitToUmlModel) {
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP0").tell(new ObjectDeleted<uml.Class>(incUtil, (uml.Class) node), getSelf());
+			name2actor.get("JavaCompilationUnitToUmlModel_object").tell(new ObjectDeleted<Java2Uml.JavaCompilationUnitToUmlModel>(incUtil, (Java2Uml.JavaCompilationUnitToUmlModel) node), getSelf());
 		}
-		if (node instanceof uml.Class) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP1").tell(new ObjectDeleted<uml.Class>(incUtil, (uml.Class) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP0").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Class) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Class_1_object_SP2").tell(new ObjectDeleted<uml.Class>(incUtil, (uml.Class) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP1").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Operation) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Operation_object_SP0").tell(new ObjectDeleted<uml.Operation>(incUtil, (uml.Operation) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP2").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Operation) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Operation_object_SP1").tell(new ObjectDeleted<uml.Operation>(incUtil, (uml.Operation) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP3").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Operation) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Operation_object_SP2").tell(new ObjectDeleted<uml.Operation>(incUtil, (uml.Operation) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP4").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Enumeration) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Enumeration_1_object_SP0").tell(new ObjectDeleted<uml.Enumeration>(incUtil, (uml.Enumeration) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP5").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Enumeration) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Enumeration_1_object_SP1").tell(new ObjectDeleted<uml.Enumeration>(incUtil, (uml.Enumeration) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP6").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Interface) {
+		if (node instanceof Java2Uml.JavaClassifierToUmlClassifier) {
 			incUtil.newMessage();
-			name2actor.get("Interface_1_object_SP0").tell(new ObjectDeleted<uml.Interface>(incUtil, (uml.Interface) node), getSelf());
+			name2actor.get("JavaClassifierToUmlClassifier_object_SP7").tell(new ObjectDeleted<Java2Uml.JavaClassifierToUmlClassifier>(incUtil, (Java2Uml.JavaClassifierToUmlClassifier) node), getSelf());
 		}
-		if (node instanceof uml.Interface) {
+		if (node instanceof Java2Uml.JavaMethodToOperation) {
 			incUtil.newMessage();
-			name2actor.get("Interface_1_object_SP1").tell(new ObjectDeleted<uml.Interface>(incUtil, (uml.Interface) node), getSelf());
+			name2actor.get("JavaMethodToOperation_object_SP0").tell(new ObjectDeleted<Java2Uml.JavaMethodToOperation>(incUtil, (Java2Uml.JavaMethodToOperation) node), getSelf());
 		}
-		if (node instanceof uml.Interface) {
+		if (node instanceof Java2Uml.JavaMethodToOperation) {
 			incUtil.newMessage();
-			name2actor.get("Interface_1_object_SP2").tell(new ObjectDeleted<uml.Interface>(incUtil, (uml.Interface) node), getSelf());
+			name2actor.get("JavaMethodToOperation_object_SP1").tell(new ObjectDeleted<Java2Uml.JavaMethodToOperation>(incUtil, (Java2Uml.JavaMethodToOperation) node), getSelf());
 		}
 	}
 }

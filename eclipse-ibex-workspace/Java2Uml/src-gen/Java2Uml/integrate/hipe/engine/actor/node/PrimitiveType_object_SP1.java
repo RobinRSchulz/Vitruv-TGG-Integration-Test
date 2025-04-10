@@ -28,50 +28,50 @@ public class PrimitiveType_object_SP1 extends GenericObjectActor<uml.PrimitiveTy
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, ObjectNode node) {
 		ports = new LinkedList<>();
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(0), getSelf(), name2actor.get("PrimitiveType_package_0_reference"), this::check_constraint_128 , 0   ));
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(1), getSelf(), name2actor.get("PrimitiveType_package_3_reference"), this::check_constraint_134 , 1   ));
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(2), getSelf(), name2actor.get("PrimitiveType_package_6_reference"), this::check_constraint_142 , 2   ));
-		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(3), getSelf(), name2actor.get("PrimitiveType_package_9_reference"), this::check_constraint_148 , 3   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(0), getSelf(), name2actor.get("PrimitiveType_package_0_reference"), this::check_constraint_130 , 0   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(1), getSelf(), name2actor.get("PrimitiveType_package_3_reference"), this::check_constraint_136 , 1   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(2), getSelf(), name2actor.get("PrimitiveType_package_6_reference"), this::check_constraint_144 , 2   ));
+		ports.add(new PortNodeLeft<uml.PrimitiveType>(node.getPorts().getPort().get(3), getSelf(), name2actor.get("PrimitiveType_package_9_reference"), this::check_constraint_150 , 3   ));
 	}
 	
-	public boolean check_constraint_128(uml.PrimitiveType floatType, int index) {
+	public boolean check_constraint_130(uml.PrimitiveType floatType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_122 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_122.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_122.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, floatType.getName(), "java.lang.String"));
-		csp_122.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_124 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_124.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_124.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, floatType.getName(), "java.lang.String"));
+		csp_124.solve();
 		
-		return csp_122.isSatisfied();
+		return csp_124.isSatisfied();
 	}
 	
-	public boolean check_constraint_134(uml.PrimitiveType shortType, int index) {
+	public boolean check_constraint_136(uml.PrimitiveType shortType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_126 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_126.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_126.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, shortType.getName(), "java.lang.String"));
-		csp_126.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_128 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_128.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_128.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, shortType.getName(), "java.lang.String"));
+		csp_128.solve();
 		
-		return csp_126.isSatisfied();
+		return csp_128.isSatisfied();
 	}
 	
-	public boolean check_constraint_142(uml.PrimitiveType booleanType, int index) {
+	public boolean check_constraint_144(uml.PrimitiveType booleanType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_119 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_119.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_119.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, booleanType.getName(), "java.lang.String"));
-		csp_119.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_121 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_121.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_121.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, booleanType.getName(), "java.lang.String"));
+		csp_121.solve();
 		
-		return csp_119.isSatisfied();
+		return csp_121.isSatisfied();
 	}
 	
-	public boolean check_constraint_148(uml.PrimitiveType doubleType, int index) {
+	public boolean check_constraint_150(uml.PrimitiveType doubleType, int index) {
 		
-		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_123 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
-		csp_123.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
-		csp_123.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, doubleType.getName(), "java.lang.String"));
-		csp_123.solve();
+		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_125 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
+		csp_125.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, "boolean", "java.lang.String"));
+		csp_125.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, doubleType.getName(), "java.lang.String"));
+		csp_125.solve();
 		
-		return csp_123.isSatisfied();
+		return csp_125.isSatisfied();
 	}
 	
 }
