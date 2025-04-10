@@ -15,7 +15,34 @@
 
     <name>Vsum</name>
     <description />
+    <properties>
+<!--        <eclipserepo.version>202303151000</eclipserepo.version>-->
+    </properties>
 
+    <repositories>
+        <!-- Maven Central should have priority -->
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>eclipse</id>
+            <name>download.eclipse.org</name>
+            <layout>p2</layout>
+            <url>https://download.eclipse.org/releases/2023-03/202303151000</url>
+        </repository>
+        <repository>
+            <id>emftext</id>
+            <name>update.emftext.org</name>
+            <layout>p2</layout>
+            <url>http://update.emftext.org/release</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- project dependencies -->
@@ -61,10 +88,23 @@
             <groupId>tools.vitruv</groupId>
             <artifactId>tools.vitruv.tgg.emoflon-integration</artifactId>
         </dependency>
+        <!--Metamodels: Families, Insurance, Persons-->
         <dependency>
             <groupId>tools.vitruv</groupId>
             <artifactId>tools.vitruv.dsls.demo.sdq-demo-metamodels-wrapper</artifactId>
             <version>3.2.0-SNAPSHOT</version>
+        </dependency>
+        <!--TODO Metamodels: Java, UML-->
+        <dependency>
+            <groupId>eclipse</groupId>
+            <artifactId>org.eclipse.uml2.uml</artifactId>
+            <version>5.5.0.v20221116-1811</version>
+        </dependency>
+        <dependency>
+            <groupId>emftext</groupId>
+            <artifactId>org.emftext.language.java</artifactId>
+<!--            <version>1.4.1.v201901100335</version>-->
+            <version>1.4.0.v201207310007</version>
         </dependency>
 
         <!-- external dependencies -->

@@ -84,9 +84,11 @@ public class InsuranceFamiliesBasicTest {
                     URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("families_instance.model").toString()));
 
             Family family = FamiliesFactory.eINSTANCE.createFamily();
+            family.setLastName("Schmitz");
             familyRegister.getFamilies().add(family);
 
             Member father = FamiliesFactory.eINSTANCE.createMember();
+            father.setFirstName("Adalbert");
             father.setFamilyFather(family);
             family.setFather(father);
 
@@ -94,11 +96,16 @@ public class InsuranceFamiliesBasicTest {
             son.setFamilySon(family);
             family.getSons().add(son); //TODO necessary?
 
+            Member daughter = FamiliesFactory.eINSTANCE.createMember();
+            daughter.setFirstName("Berta");
+            daughter.setFamilyDaughter(family);
+            family.getDaughters().add(daughter);
+
         });
         view.update();
         view.close();
         assertEquals(1, tggCps.getVitruviusTGGChangePropagationResults().size()); // one run has been made
-        assertEquals(5, tggCps.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(7, tggCps.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
         logger.info("after testTRGToSRC()");

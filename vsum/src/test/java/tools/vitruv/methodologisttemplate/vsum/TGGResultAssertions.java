@@ -9,12 +9,57 @@ import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagati
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGIbexRedInterpreter.RevokedCorrespondenceNodeWrapper;
 
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TGGResultAssertions {
+
+    public static void assertFileContainsLines(Path filePath, String string) {
+        try {
+//            String fileString = Files.readString(filePath, StandardCharsets.UTF_8);
+            String[] testLines = string.trim().split("\n|\r\n");
+            List<String> fileLines = Files.readAllLines(filePath, StandardCharsets.UTF_8);
+
+//            System.out.println("fileLines------------------");
+//            fileLines.forEach(line -> System.out.println(line));
+//            System.out.println("\n\ntestLines------------------");
+//            Arrays.asList(testLines).forEach(line -> System.out.println(line));
+//
+//            System.out.println("MÄTSCGHING--------------");
+            int linesIndex = 0;
+            String currentTestLine = testLines[0].trim();
+            boolean found = false;
+            for (String line : fileLines) {
+//                System.out.println(" matching " + currentTestLine + " AGAINST " + line);
+                if (line.trim().equals(currentTestLine)) {
+                    //start matching
+                    if (linesIndex == testLines.length-1) {
+                        //found the match
+                        found = true;
+                        break;
+                    }
+                    currentTestLine = testLines[++linesIndex].trim();
+                } else {
+                    if (linesIndex == testLines.length-1) {
+                        //matching failed --> reset
+                        linesIndex = 0;
+                        currentTestLine = testLines[0].trim();
+                    }
+                }
+            }
+            assertTrue(found);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void assertStructure(VitruviusTGGChangePropagationResult actual, CPSResultExpectation expected) {
         expected.assertMatches(actual);
