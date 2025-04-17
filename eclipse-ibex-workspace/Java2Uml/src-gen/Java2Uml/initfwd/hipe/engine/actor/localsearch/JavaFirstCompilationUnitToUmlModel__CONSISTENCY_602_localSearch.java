@@ -106,25 +106,25 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 	EdgeExplorer edge_explorer_7;
 	CachedEdgeExplorer edge_explorer_8;
 	CachedEdgeExplorer edge_explorer_9;
-	EdgeExplorer edge_explorer_10;
-	EdgeExplorer edge_explorer_11;
+	CachedEdgeExplorer edge_explorer_10;
+	CachedEdgeExplorer edge_explorer_11;
 	CachedEdgeExplorer edge_explorer_12;
-	EdgeExplorer edge_explorer_13;
+	CachedEdgeExplorer edge_explorer_13;
 	CachedEdgeExplorer edge_explorer_14;
 	CachedEdgeExplorer edge_explorer_15;
 	CachedEdgeExplorer edge_explorer_16;
 	EdgeExplorer edge_explorer_17;
-	CachedEdgeExplorer edge_explorer_18;
+	EdgeExplorer edge_explorer_18;
 	CachedEdgeExplorer edge_explorer_19;
 	CachedEdgeExplorer edge_explorer_20;
 	CachedEdgeExplorer edge_explorer_21;
-	CachedEdgeExplorer edge_explorer_22;
+	EdgeExplorer edge_explorer_22;
 	EdgeExplorer edge_explorer_23;
-	EdgeExplorer edge_explorer_24;
+	CachedEdgeExplorer edge_explorer_24;
 	CachedEdgeExplorer edge_explorer_25;
-	CachedEdgeExplorer edge_explorer_26;
+	EdgeExplorer edge_explorer_26;
 	CachedEdgeExplorer edge_explorer_27;
-	CachedEdgeExplorer edge_explorer_28;
+	EdgeExplorer edge_explorer_28;
 	
 	SearchOrchestration edge_explorer_0_orchestration;
 	SearchOrchestration edge_explorer_1_orchestration;
@@ -140,11 +140,9 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 	SearchOrchestration edge_explorer_6_1_orchestration;
 	SearchOrchestration edge_explorer_7_0_orchestration;
 	SearchOrchestration edge_explorer_7_1_orchestration;
-	SearchOrchestration edge_explorer_7_2_orchestration;
 	SearchOrchestration edge_explorer_8_0_orchestration;
 	SearchOrchestration edge_explorer_8_1_orchestration;
 	SearchOrchestration edge_explorer_9_0_orchestration;
-	SearchOrchestration edge_explorer_9_1_orchestration;
 	SearchOrchestration edge_explorer_10_0_orchestration;
 	SearchOrchestration edge_explorer_11_0_orchestration;
 	SearchOrchestration edge_explorer_11_1_orchestration;
@@ -158,7 +156,9 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 	SearchOrchestration edge_explorer_17_0_orchestration;
 	SearchOrchestration edge_explorer_17_1_orchestration;
 	SearchOrchestration edge_explorer_18_0_orchestration;
+	SearchOrchestration edge_explorer_18_1_orchestration;
 	SearchOrchestration edge_explorer_19_0_orchestration;
+	SearchOrchestration edge_explorer_19_1_orchestration;
 	SearchOrchestration edge_explorer_20_0_orchestration;
 	SearchOrchestration edge_explorer_21_0_orchestration;
 	SearchOrchestration edge_explorer_22_0_orchestration;
@@ -287,121 +287,121 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
 						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
 						edge_explorer_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer = new EdgeExplorer(this, 8, 11, edge_explorer_methods);
+						edge_explorer = new EdgeExplorer(this, 12, 11, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
 						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
 						edge_explorer_3_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_3 = new EdgeExplorer(this, 12, 11, edge_explorer_3_methods);
+						edge_explorer_3 = new EdgeExplorer(this, 9, 11, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__byteType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 14, 3, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaCompilationUnitToUmlModel) o).getSource(); return (result instanceof org.emftext.language.java.containers.CompilationUnit ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 13, 0, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_5_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_5 = new EdgeExplorer(this, 4, 11, edge_explorer_5_methods);
+						edge_explorer_5_methods.multi_lookup = (o) -> ((org.emftext.language.java.containers.Package) o).getCompilationUnits();
+						edge_explorer_5_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.containers.Package) return edge_explorer_5_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_5 = new EdgeExplorer(this, 1, 0, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
 						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
 						edge_explorer_6_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_6 = new EdgeExplorer(this, 6, 11, edge_explorer_6_methods);
+						edge_explorer_6 = new EdgeExplorer(this, 2, 11, edge_explorer_6_methods);
 		name2explorer.put("edge_explorer_6", edge_explorer_6);
 		EdgeLookupMethods edge_explorer_7_methods = new EdgeLookupMethods();
-						edge_explorer_7_methods.multi_lookup = (o) -> ((org.emftext.language.java.containers.Package) o).getCompilationUnits();
-						edge_explorer_7_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.containers.Package) return edge_explorer_7_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_7 = new EdgeExplorer(this, 1, 0, edge_explorer_7_methods);
+						edge_explorer_7_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_7_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
+						edge_explorer_7 = new EdgeExplorer(this, 5, 11, edge_explorer_7_methods);
 		name2explorer.put("edge_explorer_7", edge_explorer_7);
 		EdgeLookupMethods edge_explorer_8_methods = new EdgeLookupMethods();
-						edge_explorer_8_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__intType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_8 = new CachedEdgeExplorer(this, 14, 7, edge_explorer_8_methods);
+						edge_explorer_8_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__doubleType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_8 = new CachedEdgeExplorer(this, 14, 5, edge_explorer_8_methods);
 		name2explorer.put("edge_explorer_8", edge_explorer_8);
 		EdgeLookupMethods edge_explorer_9_methods = new EdgeLookupMethods();
-						edge_explorer_9_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaCompilationUnitToUmlModel) o).getTarget(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_9 = new CachedEdgeExplorer(this, 13, 11, edge_explorer_9_methods);
+						edge_explorer_9_methods.unique_lookup = (o) -> ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__CORR__javaCompUnitToUmlModel();
+						edge_explorer_9 = new CachedEdgeExplorer(this, 14, 13, edge_explorer_9_methods);
 		name2explorer.put("edge_explorer_9", edge_explorer_9);
 		EdgeLookupMethods edge_explorer_10_methods = new EdgeLookupMethods();
-						edge_explorer_10_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_10_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_10 = new EdgeExplorer(this, 3, 11, edge_explorer_10_methods);
+						edge_explorer_10_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__voidType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_10 = new CachedEdgeExplorer(this, 14, 12, edge_explorer_10_methods);
 		name2explorer.put("edge_explorer_10", edge_explorer_10);
 		EdgeLookupMethods edge_explorer_11_methods = new EdgeLookupMethods();
-						edge_explorer_11_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_11_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_11 = new EdgeExplorer(this, 10, 11, edge_explorer_11_methods);
+						edge_explorer_11_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__intType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_11 = new CachedEdgeExplorer(this, 14, 7, edge_explorer_11_methods);
 		name2explorer.put("edge_explorer_11", edge_explorer_11);
 		EdgeLookupMethods edge_explorer_12_methods = new EdgeLookupMethods();
-						edge_explorer_12_methods.unique_lookup = (o) -> ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__CORR__javaCompUnitToUmlModel();
-						edge_explorer_12 = new CachedEdgeExplorer(this, 14, 13, edge_explorer_12_methods);
+						edge_explorer_12_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__booleanType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_12 = new CachedEdgeExplorer(this, 14, 2, edge_explorer_12_methods);
 		name2explorer.put("edge_explorer_12", edge_explorer_12);
 		EdgeLookupMethods edge_explorer_13_methods = new EdgeLookupMethods();
-						edge_explorer_13_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_13_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_13 = new EdgeExplorer(this, 9, 11, edge_explorer_13_methods);
+						edge_explorer_13_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__byteType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_13 = new CachedEdgeExplorer(this, 14, 3, edge_explorer_13_methods);
 		name2explorer.put("edge_explorer_13", edge_explorer_13);
 		EdgeLookupMethods edge_explorer_14_methods = new EdgeLookupMethods();
-						edge_explorer_14_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__doubleType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_14 = new CachedEdgeExplorer(this, 14, 5, edge_explorer_14_methods);
+						edge_explorer_14_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__longType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_14 = new CachedEdgeExplorer(this, 14, 8, edge_explorer_14_methods);
 		name2explorer.put("edge_explorer_14", edge_explorer_14);
 		EdgeLookupMethods edge_explorer_15_methods = new EdgeLookupMethods();
-						edge_explorer_15_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCONTEXT__SRC__javaPackage(); return (result instanceof org.emftext.language.java.containers.Package ? result : null);};
-						edge_explorer_15 = new CachedEdgeExplorer(this, 14, 1, edge_explorer_15_methods);
+						edge_explorer_15_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaCompilationUnitToUmlModel) o).getTarget(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_15 = new CachedEdgeExplorer(this, 13, 11, edge_explorer_15_methods);
 		name2explorer.put("edge_explorer_15", edge_explorer_15);
 		EdgeLookupMethods edge_explorer_16_methods = new EdgeLookupMethods();
-						edge_explorer_16_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__floatType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_16 = new CachedEdgeExplorer(this, 14, 6, edge_explorer_16_methods);
+						edge_explorer_16_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__umlModel(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_16 = new CachedEdgeExplorer(this, 14, 11, edge_explorer_16_methods);
 		name2explorer.put("edge_explorer_16", edge_explorer_16);
 		EdgeLookupMethods edge_explorer_17_methods = new EdgeLookupMethods();
 						edge_explorer_17_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
 						edge_explorer_17_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_17 = new EdgeExplorer(this, 2, 11, edge_explorer_17_methods);
+						edge_explorer_17 = new EdgeExplorer(this, 10, 11, edge_explorer_17_methods);
 		name2explorer.put("edge_explorer_17", edge_explorer_17);
 		EdgeLookupMethods edge_explorer_18_methods = new EdgeLookupMethods();
-						edge_explorer_18_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaCompilationUnitToUmlModel) o).getSource(); return (result instanceof org.emftext.language.java.containers.CompilationUnit ? result : null);};
-						edge_explorer_18 = new CachedEdgeExplorer(this, 13, 0, edge_explorer_18_methods);
+						edge_explorer_18_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_18_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
+						edge_explorer_18 = new EdgeExplorer(this, 6, 11, edge_explorer_18_methods);
 		name2explorer.put("edge_explorer_18", edge_explorer_18);
 		EdgeLookupMethods edge_explorer_19_methods = new EdgeLookupMethods();
-						edge_explorer_19_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__SRC__compilationUnit(); return (result instanceof org.emftext.language.java.containers.CompilationUnit ? result : null);};
-						edge_explorer_19 = new CachedEdgeExplorer(this, 14, 0, edge_explorer_19_methods);
+						edge_explorer_19_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__charType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_19 = new CachedEdgeExplorer(this, 14, 4, edge_explorer_19_methods);
 		name2explorer.put("edge_explorer_19", edge_explorer_19);
 		EdgeLookupMethods edge_explorer_20_methods = new EdgeLookupMethods();
-						edge_explorer_20_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__longType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_20 = new CachedEdgeExplorer(this, 14, 8, edge_explorer_20_methods);
+						edge_explorer_20_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__floatType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_20 = new CachedEdgeExplorer(this, 14, 6, edge_explorer_20_methods);
 		name2explorer.put("edge_explorer_20", edge_explorer_20);
 		EdgeLookupMethods edge_explorer_21_methods = new EdgeLookupMethods();
 						edge_explorer_21_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__shortType(); return (result instanceof uml.PrimitiveType ? result : null);};
 						edge_explorer_21 = new CachedEdgeExplorer(this, 14, 9, edge_explorer_21_methods);
 		name2explorer.put("edge_explorer_21", edge_explorer_21);
 		EdgeLookupMethods edge_explorer_22_methods = new EdgeLookupMethods();
-						edge_explorer_22_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__voidType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_22 = new CachedEdgeExplorer(this, 14, 12, edge_explorer_22_methods);
+						edge_explorer_22_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_22_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
+						edge_explorer_22 = new EdgeExplorer(this, 4, 11, edge_explorer_22_methods);
 		name2explorer.put("edge_explorer_22", edge_explorer_22);
 		EdgeLookupMethods edge_explorer_23_methods = new EdgeLookupMethods();
 						edge_explorer_23_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
 						edge_explorer_23_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_23 = new EdgeExplorer(this, 7, 11, edge_explorer_23_methods);
+						edge_explorer_23 = new EdgeExplorer(this, 8, 11, edge_explorer_23_methods);
 		name2explorer.put("edge_explorer_23", edge_explorer_23);
 		EdgeLookupMethods edge_explorer_24_methods = new EdgeLookupMethods();
-						edge_explorer_24_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_24_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
-						edge_explorer_24 = new EdgeExplorer(this, 5, 11, edge_explorer_24_methods);
+						edge_explorer_24_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__SRC__compilationUnit(); return (result instanceof org.emftext.language.java.containers.CompilationUnit ? result : null);};
+						edge_explorer_24 = new CachedEdgeExplorer(this, 14, 0, edge_explorer_24_methods);
 		name2explorer.put("edge_explorer_24", edge_explorer_24);
 		EdgeLookupMethods edge_explorer_25_methods = new EdgeLookupMethods();
-						edge_explorer_25_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__booleanType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_25 = new CachedEdgeExplorer(this, 14, 2, edge_explorer_25_methods);
+						edge_explorer_25_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__stringType(); return (result instanceof uml.PrimitiveType ? result : null);};
+						edge_explorer_25 = new CachedEdgeExplorer(this, 14, 10, edge_explorer_25_methods);
 		name2explorer.put("edge_explorer_25", edge_explorer_25);
 		EdgeLookupMethods edge_explorer_26_methods = new EdgeLookupMethods();
-						edge_explorer_26_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__stringType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_26 = new CachedEdgeExplorer(this, 14, 10, edge_explorer_26_methods);
+						edge_explorer_26_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_26_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
+						edge_explorer_26 = new EdgeExplorer(this, 7, 11, edge_explorer_26_methods);
 		name2explorer.put("edge_explorer_26", edge_explorer_26);
 		EdgeLookupMethods edge_explorer_27_methods = new EdgeLookupMethods();
-						edge_explorer_27_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__umlModel(); return (result instanceof uml.Model ? result : null);};
-						edge_explorer_27 = new CachedEdgeExplorer(this, 14, 11, edge_explorer_27_methods);
+						edge_explorer_27_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCONTEXT__SRC__javaPackage(); return (result instanceof org.emftext.language.java.containers.Package ? result : null);};
+						edge_explorer_27 = new CachedEdgeExplorer(this, 14, 1, edge_explorer_27_methods);
 		name2explorer.put("edge_explorer_27", edge_explorer_27);
 		EdgeLookupMethods edge_explorer_28_methods = new EdgeLookupMethods();
-						edge_explorer_28_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker) o).getCREATE__TRG__charType(); return (result instanceof uml.PrimitiveType ? result : null);};
-						edge_explorer_28 = new CachedEdgeExplorer(this, 14, 4, edge_explorer_28_methods);
+						edge_explorer_28_methods.unique_lookup = (o) -> {EObject result = ((uml.Type) o).getPackage(); return (result instanceof uml.Model ? result : null);};
+						edge_explorer_28_methods.multi_opposite_lookup = (o) -> ((uml.Package) o).getOwnedType().stream().filter(obj -> obj instanceof uml.PrimitiveType).collect(Collectors.toList());
+						edge_explorer_28 = new EdgeExplorer(this, 3, 11, edge_explorer_28_methods);
 		name2explorer.put("edge_explorer_28", edge_explorer_28);
 	}
 	
@@ -421,25 +421,25 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 		edge_explorer_6_1_orchestration = initializeOrchestration(node.getOrchestrations().get(11).getPlan());
 		edge_explorer_7_0_orchestration = initializeOrchestration(node.getOrchestrations().get(12).getPlan());
 		edge_explorer_7_1_orchestration = initializeOrchestration(node.getOrchestrations().get(13).getPlan());
-		edge_explorer_7_2_orchestration = initializeOrchestration(node.getOrchestrations().get(14).getPlan());
-		edge_explorer_8_0_orchestration = initializeOrchestration(node.getOrchestrations().get(15).getPlan());
-		edge_explorer_8_1_orchestration = initializeOrchestration(node.getOrchestrations().get(16).getPlan());
-		edge_explorer_9_0_orchestration = initializeOrchestration(node.getOrchestrations().get(17).getPlan());
-		edge_explorer_9_1_orchestration = initializeOrchestration(node.getOrchestrations().get(18).getPlan());
-		edge_explorer_10_0_orchestration = initializeOrchestration(node.getOrchestrations().get(19).getPlan());
-		edge_explorer_11_0_orchestration = initializeOrchestration(node.getOrchestrations().get(20).getPlan());
-		edge_explorer_11_1_orchestration = initializeOrchestration(node.getOrchestrations().get(21).getPlan());
-		edge_explorer_12_0_orchestration = initializeOrchestration(node.getOrchestrations().get(22).getPlan());
-		edge_explorer_13_0_orchestration = initializeOrchestration(node.getOrchestrations().get(23).getPlan());
-		edge_explorer_13_1_orchestration = initializeOrchestration(node.getOrchestrations().get(24).getPlan());
-		edge_explorer_14_0_orchestration = initializeOrchestration(node.getOrchestrations().get(25).getPlan());
-		edge_explorer_14_1_orchestration = initializeOrchestration(node.getOrchestrations().get(26).getPlan());
-		edge_explorer_15_0_orchestration = initializeOrchestration(node.getOrchestrations().get(27).getPlan());
-		edge_explorer_16_0_orchestration = initializeOrchestration(node.getOrchestrations().get(28).getPlan());
-		edge_explorer_17_0_orchestration = initializeOrchestration(node.getOrchestrations().get(29).getPlan());
-		edge_explorer_17_1_orchestration = initializeOrchestration(node.getOrchestrations().get(30).getPlan());
-		edge_explorer_18_0_orchestration = initializeOrchestration(node.getOrchestrations().get(31).getPlan());
-		edge_explorer_19_0_orchestration = initializeOrchestration(node.getOrchestrations().get(32).getPlan());
+		edge_explorer_8_0_orchestration = initializeOrchestration(node.getOrchestrations().get(14).getPlan());
+		edge_explorer_8_1_orchestration = initializeOrchestration(node.getOrchestrations().get(15).getPlan());
+		edge_explorer_9_0_orchestration = initializeOrchestration(node.getOrchestrations().get(16).getPlan());
+		edge_explorer_10_0_orchestration = initializeOrchestration(node.getOrchestrations().get(17).getPlan());
+		edge_explorer_11_0_orchestration = initializeOrchestration(node.getOrchestrations().get(18).getPlan());
+		edge_explorer_11_1_orchestration = initializeOrchestration(node.getOrchestrations().get(19).getPlan());
+		edge_explorer_12_0_orchestration = initializeOrchestration(node.getOrchestrations().get(20).getPlan());
+		edge_explorer_13_0_orchestration = initializeOrchestration(node.getOrchestrations().get(21).getPlan());
+		edge_explorer_13_1_orchestration = initializeOrchestration(node.getOrchestrations().get(22).getPlan());
+		edge_explorer_14_0_orchestration = initializeOrchestration(node.getOrchestrations().get(23).getPlan());
+		edge_explorer_14_1_orchestration = initializeOrchestration(node.getOrchestrations().get(24).getPlan());
+		edge_explorer_15_0_orchestration = initializeOrchestration(node.getOrchestrations().get(25).getPlan());
+		edge_explorer_16_0_orchestration = initializeOrchestration(node.getOrchestrations().get(26).getPlan());
+		edge_explorer_17_0_orchestration = initializeOrchestration(node.getOrchestrations().get(27).getPlan());
+		edge_explorer_17_1_orchestration = initializeOrchestration(node.getOrchestrations().get(28).getPlan());
+		edge_explorer_18_0_orchestration = initializeOrchestration(node.getOrchestrations().get(29).getPlan());
+		edge_explorer_18_1_orchestration = initializeOrchestration(node.getOrchestrations().get(30).getPlan());
+		edge_explorer_19_0_orchestration = initializeOrchestration(node.getOrchestrations().get(31).getPlan());
+		edge_explorer_19_1_orchestration = initializeOrchestration(node.getOrchestrations().get(32).getPlan());
 		edge_explorer_20_0_orchestration = initializeOrchestration(node.getOrchestrations().get(33).getPlan());
 		edge_explorer_21_0_orchestration = initializeOrchestration(node.getOrchestrations().get(34).getPlan());
 		edge_explorer_22_0_orchestration = initializeOrchestration(node.getOrchestrations().get(35).getPlan());
@@ -470,7 +470,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					// compilationUnit
 					HMatch match_0 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_7_2_orchestration, match_0);
+					start(edge_explorer_4_2_orchestration, match_0);
 				}
 				break;
 			case "Package_object_SP2": 
@@ -480,7 +480,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 						// javaPackage
 						HMatch match_1 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_7_1_orchestration, match_1);
+						start(edge_explorer_5_1_orchestration, match_1);
 					}
 				}
 				break;
@@ -491,52 +491,52 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 						// booleanType
 						HMatch match_2 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_17_1_orchestration, match_2);
+						start(edge_explorer_6_1_orchestration, match_2);
 						
 						// byteType
 						HMatch match_3 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_3.getNodes()[3] = objs[0];
-						start(edge_explorer_4_2_orchestration, match_3);
+						start(edge_explorer_13_1_orchestration, match_3);
 						
 						// charType
 						HMatch match_4 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_4.getNodes()[4] = objs[0];
-						start(edge_explorer_5_1_orchestration, match_4);
+						start(edge_explorer_19_1_orchestration, match_4);
 						
 						// doubleType
 						HMatch match_5 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_5.getNodes()[5] = objs[0];
-						start(edge_explorer_14_1_orchestration, match_5);
+						start(edge_explorer_7_1_orchestration, match_5);
 						
 						// floatType
 						HMatch match_6 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_6.getNodes()[6] = objs[0];
-						start(edge_explorer_6_1_orchestration, match_6);
+						start(edge_explorer_18_1_orchestration, match_6);
 						
 						// intType
 						HMatch match_7 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_7.getNodes()[7] = objs[0];
-						start(edge_explorer_8_1_orchestration, match_7);
+						start(edge_explorer_11_1_orchestration, match_7);
 						
 						// longType
 						HMatch match_8 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_8.getNodes()[8] = objs[0];
-						start(edge_explorer_1_orchestration, match_8);
+						start(edge_explorer_14_1_orchestration, match_8);
 						
 						// shortType
 						HMatch match_9 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_9.getNodes()[9] = objs[0];
-						start(edge_explorer_13_1_orchestration, match_9);
+						start(edge_explorer_3_1_orchestration, match_9);
 						
 						// stringType
 						HMatch match_10 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_10.getNodes()[10] = objs[0];
-						start(edge_explorer_11_1_orchestration, match_10);
+						start(edge_explorer_17_1_orchestration, match_10);
 						
 						// voidType
 						HMatch match_12 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 						match_12.getNodes()[12] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_12);
+						start(edge_explorer_1_orchestration, match_12);
 					}
 				}
 				break;
@@ -553,36 +553,36 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				break;
 			case "JavaCompilationUnitToUmlModel_object": 
 				{
-					edge_explorer_9.registerSourceObject(objs[0]);
-					edge_explorer_18.registerSourceObject(objs[0]);
+					edge_explorer_4.registerSourceObject(objs[0]);
+					edge_explorer_15.registerSourceObject(objs[0]);
 					
 					// javaCompUnitToUmlModel
 					HMatch match_13 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					match_13.getNodes()[13] = objs[0];
-					start(edge_explorer_9_1_orchestration, match_13);
+					start(edge_explorer_4_1_orchestration, match_13);
 				}
 				break;
 			case "JavaFirstCompilationUnitToUmlModel__Marker_object": 
 				{
-					edge_explorer_4.registerSourceObject(objs[0]);
 					edge_explorer_8.registerSourceObject(objs[0]);
+					edge_explorer_9.registerSourceObject(objs[0]);
+					edge_explorer_10.registerSourceObject(objs[0]);
+					edge_explorer_11.registerSourceObject(objs[0]);
 					edge_explorer_12.registerSourceObject(objs[0]);
+					edge_explorer_13.registerSourceObject(objs[0]);
 					edge_explorer_14.registerSourceObject(objs[0]);
-					edge_explorer_15.registerSourceObject(objs[0]);
 					edge_explorer_16.registerSourceObject(objs[0]);
 					edge_explorer_19.registerSourceObject(objs[0]);
 					edge_explorer_20.registerSourceObject(objs[0]);
 					edge_explorer_21.registerSourceObject(objs[0]);
-					edge_explorer_22.registerSourceObject(objs[0]);
+					edge_explorer_24.registerSourceObject(objs[0]);
 					edge_explorer_25.registerSourceObject(objs[0]);
-					edge_explorer_26.registerSourceObject(objs[0]);
 					edge_explorer_27.registerSourceObject(objs[0]);
-					edge_explorer_28.registerSourceObject(objs[0]);
 					
 					// JavaFirstCompilationUnitToUmlModel_eMoflon_ProtocolNode
 					HMatch match_14 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					match_14.getNodes()[14] = objs[0];
-					start(edge_explorer_4_1_orchestration, match_14);
+					start(edge_explorer_8_1_orchestration, match_14);
 				}
 				break;
 			default: throw new RuntimeException("Detected unknown match from " + msg.input.creator);
@@ -642,35 +642,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				{
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
-					objs[8] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[8] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[8] = msg.source;
+					objs[12] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
@@ -687,7 +659,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[12] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -701,6 +673,20 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[12] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[9] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
@@ -712,122 +698,10 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				{
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[6] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_6_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[6] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_6_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[3] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_10_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[10] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_11_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[10] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_11_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
 					objs[9] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
-					start(edge_explorer_13_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[9] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_13_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -841,7 +715,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[2] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
-					start(edge_explorer_17_0_orchestration, match);
+					start(edge_explorer_6_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -855,21 +729,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[2] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
-					start(edge_explorer_17_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.PrimitiveType) {
-				if(msg.target instanceof uml.Model) {
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[7] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_23_0_orchestration, match);
+					start(edge_explorer_6_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -883,7 +743,133 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[5] = msg.source;
 					objs[11] = msg.target;
 					currentDepth++;
-					start(edge_explorer_24_0_orchestration, match);
+					start(edge_explorer_7_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[5] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_7_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[10] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_17_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[10] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_17_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[6] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_18_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[6] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_18_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_22_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[8] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_23_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[7] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_26_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.PrimitiveType) {
+				if(msg.target instanceof uml.Model) {
+				{
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[3] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_28_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -891,41 +877,41 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				
 			}
 			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__byteType_PrimitiveType": 
+		case "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.PrimitiveType) {
+				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[3] = msg.target;
+					objs[13] = msg.source;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.PrimitiveType) {
+				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[3] = msg.target;
+					objs[13] = msg.source;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.PrimitiveType) {
+				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[3] = msg.target;
+					objs[13] = msg.source;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
@@ -942,7 +928,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[1] = msg.source;
 					objs[0] = msg.target;
 					currentDepth++;
-					start(edge_explorer_7_0_orchestration, match);
+					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
 				}
 				
@@ -952,92 +938,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					objs[1] = msg.source;
 					objs[0] = msg.target;
 					currentDepth++;
-					start(edge_explorer_7_0_orchestration, match);
-					currentDepth--;
-				}
-				
-				{
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[0] = msg.target;
-					currentDepth++;
-					start(edge_explorer_7_0_orchestration, match);
-					currentDepth--;
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__intType_PrimitiveType": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.PrimitiveType) {
-				{
-					edge_explorer_8.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[7] = msg.target;
-					currentDepth++;
-					start(edge_explorer_8_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.PrimitiveType) {
-				{
-					edge_explorer_8.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[7] = msg.target;
-					currentDepth++;
-					start(edge_explorer_8_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaCompilationUnitToUmlModel_target_Model": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Model) {
-				{
-					edge_explorer_9.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[13] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_9_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.Model) {
-				{
-					edge_explorer_9.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[13] = msg.source;
-					objs[11] = msg.target;
-					currentDepth++;
-					start(edge_explorer_9_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__CORR__javaCompUnitToUmlModel_JavaCompilationUnitToUmlModel": 
-			if(!lazy_initialization) {
-				{
-					edge_explorer_12.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[13] = msg.target;
-					currentDepth++;
-					start(edge_explorer_12_0_orchestration, match);
+					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
 				}
 				
@@ -1047,94 +948,135 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_14.registerEdge(msg.source, msg.target);
+					edge_explorer_8.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
 					objs[5] = msg.target;
 					currentDepth++;
-					start(edge_explorer_14_0_orchestration, match);
+					start(edge_explorer_8_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_14.registerEdge(msg.source, msg.target);
+					edge_explorer_8.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
 					objs[5] = msg.target;
 					currentDepth++;
-					start(edge_explorer_14_0_orchestration, match);
+					start(edge_explorer_8_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 			}
 			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CONTEXT__SRC__javaPackage_Package": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__CORR__javaCompUnitToUmlModel_JavaCompilationUnitToUmlModel": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.containers.Package) {
 				{
-					edge_explorer_15.registerEdge(msg.source, msg.target);
+					edge_explorer_9.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
-					objs[1] = msg.target;
+					objs[13] = msg.target;
 					currentDepth++;
-					start(edge_explorer_15_0_orchestration, match);
+					start(edge_explorer_9_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				
 			}
 			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__floatType_PrimitiveType": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__voidType_PrimitiveType": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_16.registerEdge(msg.source, msg.target);
+					edge_explorer_10.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
-					objs[6] = msg.target;
+					objs[12] = msg.target;
 					currentDepth++;
-					start(edge_explorer_16_0_orchestration, match);
+					start(edge_explorer_10_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 			}
 			break;
-		case "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__intType_PrimitiveType": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
+				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_18.registerEdge(msg.source, msg.target);
+					edge_explorer_11.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
-					objs[13] = msg.source;
-					objs[0] = msg.target;
+					objs[14] = msg.source;
+					objs[7] = msg.target;
 					currentDepth++;
-					start(edge_explorer_18_0_orchestration, match);
+					start(edge_explorer_11_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_11.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[7] = msg.target;
+					currentDepth++;
+					start(edge_explorer_11_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 			}
 			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__SRC__compilationUnit_CompilationUnit": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__booleanType_PrimitiveType": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
+				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_19.registerEdge(msg.source, msg.target);
+					edge_explorer_12.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
-					objs[0] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_19_0_orchestration, match);
+					start(edge_explorer_12_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__byteType_PrimitiveType": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_13.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[3] = msg.target;
+					currentDepth++;
+					start(edge_explorer_13_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_13.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[3] = msg.target;
+					currentDepth++;
+					start(edge_explorer_13_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -1145,11 +1087,105 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_20.registerEdge(msg.source, msg.target);
+					edge_explorer_14.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
 					objs[8] = msg.target;
+					currentDepth++;
+					start(edge_explorer_14_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_14.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[8] = msg.target;
+					currentDepth++;
+					start(edge_explorer_14_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaCompilationUnitToUmlModel_target_Model": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.Model) {
+				{
+					edge_explorer_15.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[13] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_15_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__umlModel_Model": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.Model) {
+				{
+					edge_explorer_16.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[11] = msg.target;
+					currentDepth++;
+					start(edge_explorer_16_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__charType_PrimitiveType": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_19.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[4] = msg.target;
+					currentDepth++;
+					start(edge_explorer_19_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_19.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[4] = msg.target;
+					currentDepth++;
+					start(edge_explorer_19_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__floatType_PrimitiveType": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.PrimitiveType) {
+				{
+					edge_explorer_20.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
+					Object[] objs = match.getNodes();
+					objs[14] = msg.source;
+					objs[6] = msg.target;
 					currentDepth++;
 					start(edge_explorer_20_0_orchestration, match);
 					currentDepth--;
@@ -1175,34 +1211,17 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				
 			}
 			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__voidType_PrimitiveType": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__SRC__compilationUnit_CompilationUnit": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.PrimitiveType) {
+				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
 				{
-					edge_explorer_22.registerEdge(msg.source, msg.target);
+					edge_explorer_24.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
-					objs[12] = msg.target;
+					objs[0] = msg.target;
 					currentDepth++;
-					start(edge_explorer_22_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__booleanType_PrimitiveType": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.PrimitiveType) {
-				{
-					edge_explorer_25.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_25_0_orchestration, match);
+					start(edge_explorer_24_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -1213,47 +1232,30 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.PrimitiveType) {
 				{
-					edge_explorer_26.registerEdge(msg.source, msg.target);
+					edge_explorer_25.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
 					objs[10] = msg.target;
 					currentDepth++;
-					start(edge_explorer_26_0_orchestration, match);
+					start(edge_explorer_25_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 			}
 			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__umlModel_Model": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CONTEXT__SRC__javaPackage_Package": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Model) {
+				if(msg.target instanceof org.emftext.language.java.containers.Package) {
 				{
 					edge_explorer_27.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 					Object[] objs = match.getNodes();
 					objs[14] = msg.source;
-					objs[11] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_27_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__charType_PrimitiveType": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.PrimitiveType) {
-				{
-					edge_explorer_28.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
-					Object[] objs = match.getNodes();
-					objs[14] = msg.source;
-					objs[4] = msg.target;
-					currentDepth++;
-					start(edge_explorer_28_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -1458,25 +1460,26 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 						sendDeletedMatches(toBeRemoved_16);
 					}
 				}
+				break;
+		case "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit": 
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_17 = obj2matches.get(msg.source);
 				if(matches_17 != null && !matches_17.isEmpty()) {
 					Collection<HMatch> toBeRemoved_17 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_17) {
-						if(m.getNodes()[11].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_17.add(m);
 					}
 					if(!toBeRemoved_17.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_17);
 					}
 				}
-				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__byteType_PrimitiveType": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_18 = obj2matches.get(msg.source);
 				if(matches_18 != null && !matches_18.isEmpty()) {
 					Collection<HMatch> toBeRemoved_18 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_18) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_18.add(m);
 					}
 					if(!toBeRemoved_18.isEmpty()) {
@@ -1488,27 +1491,26 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				if(matches_19 != null && !matches_19.isEmpty()) {
 					Collection<HMatch> toBeRemoved_19 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_19) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_19.add(m);
 					}
 					if(!toBeRemoved_19.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_19);
 					}
 				}
-				edge_explorer_4.deregisterEdge(msg.source, msg.target);
+				break;
+		case "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit": 
 				Collection<HMatch> matches_20 = obj2matches.get(msg.source);
 				if(matches_20 != null && !matches_20.isEmpty()) {
 					Collection<HMatch> toBeRemoved_20 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_20) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_20.add(m);
 					}
 					if(!toBeRemoved_20.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_20);
 					}
 				}
-				break;
-		case "org.emftext.language.java.containers.Package_compilationUnits_CompilationUnit": 
 				Collection<HMatch> matches_21 = obj2matches.get(msg.source);
 				if(matches_21 != null && !matches_21.isEmpty()) {
 					Collection<HMatch> toBeRemoved_21 = HiPEMultiUtil.createSet();
@@ -1520,22 +1522,26 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 						sendDeletedMatches(toBeRemoved_21);
 					}
 				}
+				break;
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__doubleType_PrimitiveType": 
+				edge_explorer_8.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_22 = obj2matches.get(msg.source);
 				if(matches_22 != null && !matches_22.isEmpty()) {
 					Collection<HMatch> toBeRemoved_22 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_22) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[5].equals(msg.target))
 							toBeRemoved_22.add(m);
 					}
 					if(!toBeRemoved_22.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_22);
 					}
 				}
+				edge_explorer_8.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_23 = obj2matches.get(msg.source);
 				if(matches_23 != null && !matches_23.isEmpty()) {
 					Collection<HMatch> toBeRemoved_23 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_23) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[5].equals(msg.target))
 							toBeRemoved_23.add(m);
 					}
 					if(!toBeRemoved_23.isEmpty()) {
@@ -1543,25 +1549,27 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__intType_PrimitiveType": 
-				edge_explorer_8.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__CORR__javaCompUnitToUmlModel_JavaCompilationUnitToUmlModel": 
+				edge_explorer_9.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_24 = obj2matches.get(msg.source);
 				if(matches_24 != null && !matches_24.isEmpty()) {
 					Collection<HMatch> toBeRemoved_24 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_24) {
-						if(m.getNodes()[7].equals(msg.target))
+						if(m.getNodes()[13].equals(msg.target))
 							toBeRemoved_24.add(m);
 					}
 					if(!toBeRemoved_24.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_24);
 					}
 				}
-				edge_explorer_8.deregisterEdge(msg.source, msg.target);
+				break;
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__voidType_PrimitiveType": 
+				edge_explorer_10.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_25 = obj2matches.get(msg.source);
 				if(matches_25 != null && !matches_25.isEmpty()) {
 					Collection<HMatch> toBeRemoved_25 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_25) {
-						if(m.getNodes()[7].equals(msg.target))
+						if(m.getNodes()[12].equals(msg.target))
 							toBeRemoved_25.add(m);
 					}
 					if(!toBeRemoved_25.isEmpty()) {
@@ -1569,25 +1577,25 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaCompilationUnitToUmlModel_target_Model": 
-				edge_explorer_9.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__intType_PrimitiveType": 
+				edge_explorer_11.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_26 = obj2matches.get(msg.source);
 				if(matches_26 != null && !matches_26.isEmpty()) {
 					Collection<HMatch> toBeRemoved_26 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_26) {
-						if(m.getNodes()[11].equals(msg.target))
+						if(m.getNodes()[7].equals(msg.target))
 							toBeRemoved_26.add(m);
 					}
 					if(!toBeRemoved_26.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_26);
 					}
 				}
-				edge_explorer_9.deregisterEdge(msg.source, msg.target);
+				edge_explorer_11.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_27 = obj2matches.get(msg.source);
 				if(matches_27 != null && !matches_27.isEmpty()) {
 					Collection<HMatch> toBeRemoved_27 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_27) {
-						if(m.getNodes()[11].equals(msg.target))
+						if(m.getNodes()[7].equals(msg.target))
 							toBeRemoved_27.add(m);
 					}
 					if(!toBeRemoved_27.isEmpty()) {
@@ -1595,13 +1603,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__CORR__javaCompUnitToUmlModel_JavaCompilationUnitToUmlModel": 
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__booleanType_PrimitiveType": 
 				edge_explorer_12.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_28 = obj2matches.get(msg.source);
 				if(matches_28 != null && !matches_28.isEmpty()) {
 					Collection<HMatch> toBeRemoved_28 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_28) {
-						if(m.getNodes()[13].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_28.add(m);
 					}
 					if(!toBeRemoved_28.isEmpty()) {
@@ -1609,25 +1617,25 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__doubleType_PrimitiveType": 
-				edge_explorer_14.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__byteType_PrimitiveType": 
+				edge_explorer_13.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_29 = obj2matches.get(msg.source);
 				if(matches_29 != null && !matches_29.isEmpty()) {
 					Collection<HMatch> toBeRemoved_29 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_29) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_29.add(m);
 					}
 					if(!toBeRemoved_29.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_29);
 					}
 				}
-				edge_explorer_14.deregisterEdge(msg.source, msg.target);
+				edge_explorer_13.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_30 = obj2matches.get(msg.source);
 				if(matches_30 != null && !matches_30.isEmpty()) {
 					Collection<HMatch> toBeRemoved_30 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_30) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_30.add(m);
 					}
 					if(!toBeRemoved_30.isEmpty()) {
@@ -1635,27 +1643,25 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CONTEXT__SRC__javaPackage_Package": 
-				edge_explorer_15.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__longType_PrimitiveType": 
+				edge_explorer_14.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_31 = obj2matches.get(msg.source);
 				if(matches_31 != null && !matches_31.isEmpty()) {
 					Collection<HMatch> toBeRemoved_31 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_31) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[8].equals(msg.target))
 							toBeRemoved_31.add(m);
 					}
 					if(!toBeRemoved_31.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_31);
 					}
 				}
-				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__floatType_PrimitiveType": 
-				edge_explorer_16.deregisterEdge(msg.source, msg.target);
+				edge_explorer_14.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_32 = obj2matches.get(msg.source);
 				if(matches_32 != null && !matches_32.isEmpty()) {
 					Collection<HMatch> toBeRemoved_32 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_32) {
-						if(m.getNodes()[6].equals(msg.target))
+						if(m.getNodes()[8].equals(msg.target))
 							toBeRemoved_32.add(m);
 					}
 					if(!toBeRemoved_32.isEmpty()) {
@@ -1663,13 +1669,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit": 
-				edge_explorer_18.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaCompilationUnitToUmlModel_target_Model": 
+				edge_explorer_15.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_33 = obj2matches.get(msg.source);
 				if(matches_33 != null && !matches_33.isEmpty()) {
 					Collection<HMatch> toBeRemoved_33 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_33) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[11].equals(msg.target))
 							toBeRemoved_33.add(m);
 					}
 					if(!toBeRemoved_33.isEmpty()) {
@@ -1677,13 +1683,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__SRC__compilationUnit_CompilationUnit": 
-				edge_explorer_19.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__umlModel_Model": 
+				edge_explorer_16.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_34 = obj2matches.get(msg.source);
 				if(matches_34 != null && !matches_34.isEmpty()) {
 					Collection<HMatch> toBeRemoved_34 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_34) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[11].equals(msg.target))
 							toBeRemoved_34.add(m);
 					}
 					if(!toBeRemoved_34.isEmpty()) {
@@ -1691,27 +1697,25 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__longType_PrimitiveType": 
-				edge_explorer_20.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__charType_PrimitiveType": 
+				edge_explorer_19.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_35 = obj2matches.get(msg.source);
 				if(matches_35 != null && !matches_35.isEmpty()) {
 					Collection<HMatch> toBeRemoved_35 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_35) {
-						if(m.getNodes()[8].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_35.add(m);
 					}
 					if(!toBeRemoved_35.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_35);
 					}
 				}
-				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__shortType_PrimitiveType": 
-				edge_explorer_21.deregisterEdge(msg.source, msg.target);
+				edge_explorer_19.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_36 = obj2matches.get(msg.source);
 				if(matches_36 != null && !matches_36.isEmpty()) {
 					Collection<HMatch> toBeRemoved_36 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_36) {
-						if(m.getNodes()[9].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_36.add(m);
 					}
 					if(!toBeRemoved_36.isEmpty()) {
@@ -1719,13 +1723,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__voidType_PrimitiveType": 
-				edge_explorer_22.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__floatType_PrimitiveType": 
+				edge_explorer_20.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_37 = obj2matches.get(msg.source);
 				if(matches_37 != null && !matches_37.isEmpty()) {
 					Collection<HMatch> toBeRemoved_37 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_37) {
-						if(m.getNodes()[12].equals(msg.target))
+						if(m.getNodes()[6].equals(msg.target))
 							toBeRemoved_37.add(m);
 					}
 					if(!toBeRemoved_37.isEmpty()) {
@@ -1733,13 +1737,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__booleanType_PrimitiveType": 
-				edge_explorer_25.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__shortType_PrimitiveType": 
+				edge_explorer_21.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_38 = obj2matches.get(msg.source);
 				if(matches_38 != null && !matches_38.isEmpty()) {
 					Collection<HMatch> toBeRemoved_38 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_38) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[9].equals(msg.target))
 							toBeRemoved_38.add(m);
 					}
 					if(!toBeRemoved_38.isEmpty()) {
@@ -1747,13 +1751,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__stringType_PrimitiveType": 
-				edge_explorer_26.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__SRC__compilationUnit_CompilationUnit": 
+				edge_explorer_24.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_39 = obj2matches.get(msg.source);
 				if(matches_39 != null && !matches_39.isEmpty()) {
 					Collection<HMatch> toBeRemoved_39 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_39) {
-						if(m.getNodes()[10].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_39.add(m);
 					}
 					if(!toBeRemoved_39.isEmpty()) {
@@ -1761,13 +1765,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__umlModel_Model": 
-				edge_explorer_27.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__stringType_PrimitiveType": 
+				edge_explorer_25.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_40 = obj2matches.get(msg.source);
 				if(matches_40 != null && !matches_40.isEmpty()) {
 					Collection<HMatch> toBeRemoved_40 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_40) {
-						if(m.getNodes()[11].equals(msg.target))
+						if(m.getNodes()[10].equals(msg.target))
 							toBeRemoved_40.add(m);
 					}
 					if(!toBeRemoved_40.isEmpty()) {
@@ -1775,13 +1779,13 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 					}
 				}
 				break;
-		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CREATE__TRG__charType_PrimitiveType": 
-				edge_explorer_28.deregisterEdge(msg.source, msg.target);
+		case "Java2Uml.JavaFirstCompilationUnitToUmlModel__Marker_CONTEXT__SRC__javaPackage_Package": 
+				edge_explorer_27.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_41 = obj2matches.get(msg.source);
 				if(matches_41 != null && !matches_41.isEmpty()) {
 					Collection<HMatch> toBeRemoved_41 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_41) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_41.add(m);
 					}
 					if(!toBeRemoved_41.isEmpty()) {
@@ -2048,7 +2052,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_17_1_orchestration, match_2);
+			start(edge_explorer_6_1_orchestration, match_2);
 			HMatch match_3 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_3.getNodes()[3] = obj;
 			Collection<HMatch> formerMatches_3 = obj2matches.get(obj);
@@ -2057,7 +2061,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_3);
 			}
-			start(edge_explorer_4_2_orchestration, match_3);
+			start(edge_explorer_13_1_orchestration, match_3);
 			HMatch match_4 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_4.getNodes()[4] = obj;
 			Collection<HMatch> formerMatches_4 = obj2matches.get(obj);
@@ -2066,7 +2070,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_4 = formerMatches_4.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_4);
 			}
-			start(edge_explorer_5_1_orchestration, match_4);
+			start(edge_explorer_19_1_orchestration, match_4);
 			HMatch match_5 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_5.getNodes()[5] = obj;
 			Collection<HMatch> formerMatches_5 = obj2matches.get(obj);
@@ -2075,7 +2079,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_5 = formerMatches_5.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_5);
 			}
-			start(edge_explorer_14_1_orchestration, match_5);
+			start(edge_explorer_7_1_orchestration, match_5);
 			HMatch match_6 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_6.getNodes()[6] = obj;
 			Collection<HMatch> formerMatches_6 = obj2matches.get(obj);
@@ -2084,7 +2088,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_6 = formerMatches_6.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_6);
 			}
-			start(edge_explorer_6_1_orchestration, match_6);
+			start(edge_explorer_18_1_orchestration, match_6);
 			HMatch match_7 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_7.getNodes()[7] = obj;
 			Collection<HMatch> formerMatches_7 = obj2matches.get(obj);
@@ -2093,7 +2097,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_7 = formerMatches_7.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_7);
 			}
-			start(edge_explorer_8_1_orchestration, match_7);
+			start(edge_explorer_11_1_orchestration, match_7);
 			HMatch match_8 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_8.getNodes()[8] = obj;
 			Collection<HMatch> formerMatches_8 = obj2matches.get(obj);
@@ -2102,7 +2106,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_8 = formerMatches_8.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_8);
 			}
-			start(edge_explorer_1_orchestration, match_8);
+			start(edge_explorer_14_1_orchestration, match_8);
 			HMatch match_9 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_9.getNodes()[9] = obj;
 			Collection<HMatch> formerMatches_9 = obj2matches.get(obj);
@@ -2111,7 +2115,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_9 = formerMatches_9.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_9);
 			}
-			start(edge_explorer_13_1_orchestration, match_9);
+			start(edge_explorer_3_1_orchestration, match_9);
 			HMatch match_10 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_10.getNodes()[10] = obj;
 			Collection<HMatch> formerMatches_10 = obj2matches.get(obj);
@@ -2120,7 +2124,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_10 = formerMatches_10.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_10);
 			}
-			start(edge_explorer_11_1_orchestration, match_10);
+			start(edge_explorer_17_1_orchestration, match_10);
 			HMatch match_12 = new LocalSearchMatch("JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch", 15);
 			match_12.getNodes()[12] = obj;
 			Collection<HMatch> formerMatches_12 = obj2matches.get(obj);
@@ -2129,7 +2133,7 @@ public class JavaFirstCompilationUnitToUmlModel__CONSISTENCY_602_localSearch ext
 				formerMatches_12 = formerMatches_12.stream().filter(m -> !constraint_checker_0.check(m) || !constraint_checker_1.check(m) || !constraint_checker_2.check(m) || !constraint_checker_3.check(m) || !constraint_checker_4.check(m) || !constraint_checker_5.check(m) || !constraint_checker_6.check(m) || !constraint_checker_7.check(m) || !constraint_checker_8.check(m) || !constraint_checker_9.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_12);
 			}
-			start(edge_explorer_3_1_orchestration, match_12);
+			start(edge_explorer_1_orchestration, match_12);
 		}
 		
 		message.initialMessage.decrement();

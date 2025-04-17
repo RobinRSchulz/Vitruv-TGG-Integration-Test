@@ -28,8 +28,8 @@ import hipe.generic.actor.junction.GenericJunctionActor;
 import hipe.network.JunctionNode;
 
 public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctionActor{
-	private Map<Object, Collection<HMatch>> namedElement_46_AttrMap = HiPEMultiUtil.createMap();
-	private Map<Object, Collection<HMatch>> namedElement_47_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_22_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_23_AttrMap = HiPEMultiUtil.createMap();
 	
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, JunctionNode node) {
@@ -42,18 +42,18 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 	@Override
 	protected void registerMatchForAttributeChanges(HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> namedElement_1_Matches = namedElement_46_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> namedElement_1_Matches = namedElement_22_AttrMap.get(matchObjects[1]);
 		if(namedElement_1_Matches == null) {
 			namedElement_1_Matches = new LinkedList<>();
-			namedElement_46_AttrMap.put(matchObjects[1], namedElement_1_Matches);
+			namedElement_22_AttrMap.put(matchObjects[1], namedElement_1_Matches);
 		}
 		
 		namedElement_1_Matches.add(match);
 		
-		Collection<HMatch> namedElement_0_Matches = namedElement_47_AttrMap.get(matchObjects[0]);
+		Collection<HMatch> namedElement_0_Matches = namedElement_23_AttrMap.get(matchObjects[0]);
 		if(namedElement_0_Matches == null) {
 			namedElement_0_Matches = new LinkedList<>();
-			namedElement_47_AttrMap.put(matchObjects[0], namedElement_0_Matches);
+			namedElement_23_AttrMap.put(matchObjects[0], namedElement_0_Matches);
 		}
 		
 		namedElement_0_Matches.add(match);
@@ -63,11 +63,11 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 	@Override
 	protected void deregisterMatchForAttributeChanges(Set<HMatch> matches, HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> matches_0 = namedElement_46_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> matches_0 = namedElement_22_AttrMap.get(matchObjects[1]);
 		if(matches_0 != null) {
 			matches_0.remove(match);
 		}
-		Collection<HMatch> matches_1 = namedElement_47_AttrMap.get(matchObjects[0]);
+		Collection<HMatch> matches_1 = namedElement_23_AttrMap.get(matchObjects[0]);
 		if(matches_1 != null) {
 			matches_1.remove(match);
 		}
@@ -81,8 +81,8 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 		}
 		Object obj = message.node;
 		if(obj instanceof uml.NamedElement) {
-			if(namedElement_46_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_46_AttrMap.get(obj)) {
+			if(namedElement_22_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_22_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;
@@ -100,8 +100,8 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 			}
 		}
 		if(obj instanceof org.emftext.language.java.commons.NamedElement) {
-			if(namedElement_47_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_47_AttrMap.get(obj)) {
+			if(namedElement_23_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_23_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;
@@ -123,8 +123,8 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 	}
 	
 	public boolean check_constraint_98(HMatch match, int index) {
-		org.emftext.language.java.containers.Package javaPackage = (org.emftext.language.java.containers.Package) match.getNodes()[0];
 		uml.Package umlPackage = (uml.Package) match.getNodes()[1];
+		org.emftext.language.java.containers.Package javaPackage = (org.emftext.language.java.containers.Package) match.getNodes()[0];
 		
 		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_59 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
 		csp_59.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, javaPackage.getName(), "java.lang.String"));

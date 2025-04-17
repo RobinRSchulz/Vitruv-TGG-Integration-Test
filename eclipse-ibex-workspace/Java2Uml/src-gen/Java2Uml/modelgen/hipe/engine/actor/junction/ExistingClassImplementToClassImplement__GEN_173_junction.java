@@ -56,8 +56,8 @@ public class ExistingClassImplementToClassImplement__GEN_173_junction extends Ge
 	}
 	
 	public boolean check_constraint_16(HMatch match, int index) {
-		Java2Uml.JavaClassifierToUmlClassifier javaSuperClassifierToUmlSuperClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[3];
 		Java2Uml.JavaClassifierToUmlClassifier javaClassifierToUmlClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[0];
+		Java2Uml.JavaClassifierToUmlClassifier javaSuperClassifierToUmlSuperClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[3];
 		boolean predicate = !javaClassifierToUmlClassifier.equals(javaSuperClassifierToUmlSuperClassifier);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

@@ -436,17 +436,6 @@ public class VariableLengthConstructorParameterToParameter__BWD_1275_localSearch
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof uml.Parameter) {
-			HMatch match_3 = new LocalSearchMatch("VariableLengthConstructorParameterToParameter__BWD_1275_localSearch", 5);
-			match_3.getNodes()[3] = obj;
-			Collection<HMatch> formerMatches_3 = obj2matches.get(obj);
-			if(formerMatches_3 != null) {
-				
-				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_3);
-			}
-			start(pac_explorer_orchestration, match_3);
-		}
 		if(obj instanceof uml.LiteralUnlimitedNatural) {
 			HMatch match_4 = new LocalSearchMatch("VariableLengthConstructorParameterToParameter__BWD_1275_localSearch", 5);
 			match_4.getNodes()[4] = obj;
@@ -457,6 +446,17 @@ public class VariableLengthConstructorParameterToParameter__BWD_1275_localSearch
 				sendDeletedMatches(formerMatches_4);
 			}
 			start(pac_explorer_orchestration, match_4);
+		}
+		if(obj instanceof uml.Parameter) {
+			HMatch match_3 = new LocalSearchMatch("VariableLengthConstructorParameterToParameter__BWD_1275_localSearch", 5);
+			match_3.getNodes()[3] = obj;
+			Collection<HMatch> formerMatches_3 = obj2matches.get(obj);
+			if(formerMatches_3 != null) {
+				
+				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_3);
+			}
+			start(pac_explorer_orchestration, match_3);
 		}
 		
 		message.initialMessage.decrement();

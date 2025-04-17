@@ -71,16 +71,16 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 						edge_explorer = new CachedEdgeExplorer(this, 4, 2, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldStaticToStatic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Static ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> ((Java2Uml.FieldStaticToStatic__Marker) o).getCONTEXT__CORR__javaClassifierToUmlProperty();
+						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
 						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldStaticToStatic__Marker) o).getCONTEXT__SRC__javaField(); return (result instanceof org.emftext.language.java.members.Field ? result : null);};
 						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> ((Java2Uml.FieldStaticToStatic__Marker) o).getCONTEXT__CORR__javaClassifierToUmlProperty();
-						edge_explorer_5 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldStaticToStatic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Static ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		pac_explorer = new PACExplorer(this, Arrays.asList(new Integer[] {0,1,2,3}), node.getAllOverlaps().get(0));
 		name2explorer.put("pac_explorer", pac_explorer);
@@ -227,32 +227,28 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 				
 			}
 			break;
-		case "Java2Uml.FieldStaticToStatic__Marker_CREATE__SRC__modifier_Static": 
+		case "Java2Uml.FieldStaticToStatic__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldStaticToStatic__CONSISTENCY_646_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldStaticToStatic__CONSISTENCY_646_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				
 			}
@@ -287,28 +283,32 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 				
 			}
 			break;
-		case "Java2Uml.FieldStaticToStatic__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
+		case "Java2Uml.FieldStaticToStatic__Marker_CREATE__SRC__modifier_Static": 
 			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
 				{
 					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldStaticToStatic__CONSISTENCY_646_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[3] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
 				}
+				}
 				
+				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
 				{
 					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldStaticToStatic__CONSISTENCY_646_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[3] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
+				}
 				}
 				
 			}
@@ -361,13 +361,13 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 					}
 				}
 				break;
-		case "Java2Uml.FieldStaticToStatic__Marker_CREATE__SRC__modifier_Static": 
+		case "Java2Uml.FieldStaticToStatic__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -379,7 +379,7 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -413,13 +413,13 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 					}
 				}
 				break;
-		case "Java2Uml.FieldStaticToStatic__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
+		case "Java2Uml.FieldStaticToStatic__Marker_CREATE__SRC__modifier_Static": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
@@ -431,7 +431,7 @@ public class FieldStaticToStatic__CONSISTENCY_646_localSearch extends GenericLoc
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_8) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_8.add(m);
 					}
 					if(!toBeRemoved_8.isEmpty()) {

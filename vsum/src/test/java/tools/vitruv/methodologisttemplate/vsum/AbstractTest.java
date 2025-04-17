@@ -1,7 +1,6 @@
 package tools.vitruv.methodologisttemplate.vsum;
 
 import org.apache.log4j.Logger;
-import org.eclipse.emf.ecore.EReference;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
 import tools.vitruv.change.testutils.TestUserInteraction;
 import tools.vitruv.framework.views.CommittableView;
@@ -17,16 +16,16 @@ public class AbstractTest {
     static Logger logger = Logger.getLogger(AbstractTest.class);
 
     public final String VITRUVIUS_PROJECT_NAME;
-    public final Path VITRUVIUS_PROJECT_PATH;
+    public final Path VITRUVIUS_PROJECTS_PATH;
 
     public AbstractTest(String vitruviusProjectName) {
         VITRUVIUS_PROJECT_NAME = vitruviusProjectName;
-        VITRUVIUS_PROJECT_PATH = Path.of("target/vsumexample/" + VITRUVIUS_PROJECT_NAME);
+        VITRUVIUS_PROJECTS_PATH = Path.of("target/vsumexample/" + VITRUVIUS_PROJECT_NAME);
     }
 
-    public VirtualModel createVirtualModel(ChangePropagationSpecification cps) {
+    public VirtualModel createVirtualModel(ChangePropagationSpecification cps, Path vitruviusProjectPath) {
         return new VirtualModelBuilder()
-                .withStorageFolder(VITRUVIUS_PROJECT_PATH)
+                .withStorageFolder(vitruviusProjectPath)
                 .withUserInteractorForResultProvider(new TestUserInteraction.ResultProvider(new TestUserInteraction()))
                 .withChangePropagationSpecifications(cps)
                 .buildAndInitialize();

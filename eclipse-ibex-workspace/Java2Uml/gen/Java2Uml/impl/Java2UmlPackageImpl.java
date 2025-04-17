@@ -71,14 +71,14 @@ import Java2Uml.VariableLengthMethodParameterToParameter__Marker;
 import Java2Uml.Java2UmlFactory;
 import Java2Uml.Java2UmlPackage;
 
-import org.emftext.language.java.parameters.ParametersPackage;
-import org.emftext.language.java.classifiers.ClassifiersPackage;
-import org.emftext.language.java.containers.ContainersPackage;
-import org.eclipse.uml2.uml.UMLPackage;
 import org.emftext.language.java.types.TypesPackage;
-import runtime.RuntimePackage;
-import org.emftext.language.java.members.MembersPackage;
+import org.emftext.language.java.classifiers.ClassifiersPackage;
 import org.emftext.language.java.modifiers.ModifiersPackage;
+import org.eclipse.uml2.uml.UMLPackage;
+import org.emftext.language.java.members.MembersPackage;
+import org.emftext.language.java.parameters.ParametersPackage;
+import runtime.RuntimePackage;
+import org.emftext.language.java.containers.ContainersPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -3243,14 +3243,14 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		setNsURI(eNS_URI);
 		
 		// Obtain other dependent packages
-		ParametersPackage theParametersPackagePackage = ParametersPackage.eINSTANCE;
-		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
-		ContainersPackage theContainersPackagePackage = ContainersPackage.eINSTANCE;
-		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
 		TypesPackage theTypesPackagePackage = TypesPackage.eINSTANCE;
-		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
-		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
+		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
 		ModifiersPackage theModifiersPackagePackage = ModifiersPackage.eINSTANCE;
+		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
+		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
+		ParametersPackage theParametersPackagePackage = ParametersPackage.eINSTANCE;
+		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
+		ContainersPackage theContainersPackagePackage = ContainersPackage.eINSTANCE;
 
 		// Create type parameters
 

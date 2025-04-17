@@ -56,8 +56,8 @@ public class JavaFirstCompilationUnitToUmlModel__CC_328_junction extends Generic
 	}
 	
 	public boolean check_constraint_60(HMatch match, int index) {
-		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
 		uml.PrimitiveType floatType = (uml.PrimitiveType) match.getNodes()[0];
+		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
 		boolean predicate = !floatType.equals(intType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

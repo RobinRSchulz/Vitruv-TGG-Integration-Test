@@ -61,14 +61,14 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 		constraint_checker_0 = new ConstraintChecker(this, this::constraint_checker_0_method);
 		name2explorer.put("constraint_checker_0", constraint_checker_0);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.multi_lookup = (o) -> ((uml.BehavioralFeature) o).getOwnedParameter();
-						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Operation) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer = new EdgeExplorer(this, 0, 1, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((uml.MultiplicityElement) o).getUpperValue(); return (result instanceof uml.LiteralUnlimitedNatural ? result : null);};
+						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Parameter) return o.equals(edge_explorer_methods.unique_lookup.apply(result)) ? result : null; else return null;};
+						edge_explorer = new EdgeExplorer(this, 1, 2, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((uml.MultiplicityElement) o).getUpperValue(); return (result instanceof uml.LiteralUnlimitedNatural ? result : null);};
-						edge_explorer_3_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Parameter) return o.equals(edge_explorer_3_methods.unique_lookup.apply(result)) ? result : null; else return null;};
-						edge_explorer_3 = new EdgeExplorer(this, 1, 2, edge_explorer_3_methods);
+						edge_explorer_3_methods.multi_lookup = (o) -> ((uml.BehavioralFeature) o).getOwnedParameter();
+						edge_explorer_3_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Operation) return edge_explorer_3_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_3 = new EdgeExplorer(this, 0, 1, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 	}
 	
@@ -101,7 +101,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 					// umlOperation
 					HMatch match_0 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_1_orchestration, match_0);
+					start(edge_explorer_3_1_orchestration, match_0);
 				}
 				break;
 			case "Parameter_1_object_SP6": 
@@ -111,7 +111,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 						// umlParameter
 						HMatch match_1 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_2_orchestration, match_1);
+						start(edge_explorer_1_orchestration, match_1);
 					}
 				}
 				break;
@@ -122,7 +122,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 						// upperValue
 						HMatch match_2 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_2);
+						start(edge_explorer_2_orchestration, match_2);
 					}
 				}
 				break;
@@ -158,46 +158,6 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "uml.BehavioralFeature_ownedParameter_Parameter": 
-			if(!lazy_initialization) {
-				if(msg.source instanceof uml.Operation) {
-				{
-					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.source instanceof uml.Operation) {
-				{
-					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.source instanceof uml.Operation) {
-				{
-					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
 		case "uml.MultiplicityElement_upperValue_ValueSpecification": 
 			if(!lazy_initialization) {
 				if(msg.source instanceof uml.Parameter) {
@@ -208,7 +168,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 					objs[1] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -222,9 +182,51 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 					objs[1] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof uml.Parameter) {
+				if(msg.target instanceof uml.LiteralUnlimitedNatural) {
+				{
+					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
+					Object[] objs = match.getNodes();
+					objs[1] = msg.source;
+					objs[2] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+			}
+			break;
+		case "uml.BehavioralFeature_ownedParameter_Parameter": 
+			if(!lazy_initialization) {
+				if(msg.source instanceof uml.Operation) {
+				{
+					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
+				}
+				
+				if(msg.source instanceof uml.Operation) {
+				{
+					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_3_0_orchestration, match);
+					currentDepth--;
 				}
 				}
 				
@@ -240,12 +242,12 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "uml.BehavioralFeature_ownedParameter_Parameter": 
+		case "uml.MultiplicityElement_upperValue_ValueSpecification": 
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -256,7 +258,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -267,7 +269,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -275,12 +277,12 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 					}
 				}
 				break;
-		case "uml.MultiplicityElement_upperValue_ValueSpecification": 
+		case "uml.BehavioralFeature_ownedParameter_Parameter": 
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -291,7 +293,7 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -370,17 +372,6 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof uml.Parameter) {
-			HMatch match_1 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
-			match_1.getNodes()[1] = obj;
-			Collection<HMatch> formerMatches_1 = obj2matches.get(obj);
-			if(formerMatches_1 != null) {
-				
-				formerMatches_1 = formerMatches_1.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_1);
-			}
-			start(edge_explorer_2_orchestration, match_1);
-		}
 		if(obj instanceof uml.LiteralUnlimitedNatural) {
 			HMatch match_2 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
 			match_2.getNodes()[2] = obj;
@@ -390,7 +381,18 @@ public class VariableLengthMethodParameterToParameter__TRG_1294_localSearch exte
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker_0.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_3_1_orchestration, match_2);
+			start(edge_explorer_2_orchestration, match_2);
+		}
+		if(obj instanceof uml.Parameter) {
+			HMatch match_1 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__TRG_1294_localSearch", 3);
+			match_1.getNodes()[1] = obj;
+			Collection<HMatch> formerMatches_1 = obj2matches.get(obj);
+			if(formerMatches_1 != null) {
+				
+				formerMatches_1 = formerMatches_1.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_1);
+			}
+			start(edge_explorer_1_orchestration, match_1);
 		}
 		
 		message.initialMessage.decrement();

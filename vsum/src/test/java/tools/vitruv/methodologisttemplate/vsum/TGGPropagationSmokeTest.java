@@ -42,9 +42,9 @@ import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.assert
  * This class provides an example how to define and use a VSUM.
  */
 public class TGGPropagationSmokeTest {
-  public static final Path IBEX_PROJECT_ROOT = Path.of("C:\\Users\\XPS-15\\IdeaProjects\\Vitruv-TGG-Integration-Test\\eclipse-ibex-workspace\\Something2Else");
-  public static final Path CORR_RELATIVE_PATH =     Path.of("instances\\corr.xmi");
-  public static final Path PROTOCOL_RELATIVE_PATH = Path.of("instances\\protocol.xmi");
+  public static final Path IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Something2Else");
+  public static final Path CORR_RELATIVE_PATH =     Path.of("instances/corr.xmi");
+  public static final Path PROTOCOL_RELATIVE_PATH = Path.of("instances/protocol.xmi");
   static Logger logger = Logger.getLogger(TGGPropagationSmokeTest.class);
 
   final Path VITRUVIUS_PROJECT_PATH = Path.of("target/vsumexample/" + this.getClass().getSimpleName());

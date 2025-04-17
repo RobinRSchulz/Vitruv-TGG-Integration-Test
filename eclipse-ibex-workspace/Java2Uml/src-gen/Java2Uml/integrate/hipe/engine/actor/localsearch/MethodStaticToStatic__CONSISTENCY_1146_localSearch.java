@@ -67,16 +67,16 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.MethodStaticToStatic__Marker) o).getCONTEXT__TRG__umlOperation(); return (result instanceof uml.Operation ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 4, 2, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.MethodStaticToStatic__Marker) o).getCONTEXT__SRC__javaMethod(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
+						edge_explorer = new CachedEdgeExplorer(this, 4, 0, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.MethodStaticToStatic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Static ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.MethodStaticToStatic__Marker) o).getCONTEXT__TRG__umlOperation(); return (result instanceof uml.Operation ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.MethodStaticToStatic__Marker) o).getCONTEXT__SRC__javaMethod(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.MethodStaticToStatic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Static ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
 						edge_explorer_5_methods.unique_lookup = (o) -> ((Java2Uml.MethodStaticToStatic__Marker) o).getCONTEXT__CORR__javaMethodToOperation();
@@ -184,43 +184,73 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
+		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__SRC__javaMethod_ClassMethod": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				{
+					edge_explorer.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				{
+					edge_explorer.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				{
+					edge_explorer.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
 		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__TRG__umlOperation_Operation": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Operation) {
 				{
-					edge_explorer.registerEdge(msg.source, msg.target);
+					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 				if(msg.target instanceof uml.Operation) {
 				{
-					edge_explorer.registerEdge(msg.source, msg.target);
+					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.Operation) {
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -231,54 +261,24 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 			if(!lazy_initialization) {
 				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
 				{
-					edge_explorer_3.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
-				{
-					edge_explorer_3.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__SRC__javaMethod_ClassMethod": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
-				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Static) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodStaticToStatic__CONSISTENCY_1146_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
@@ -323,13 +323,13 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__TRG__umlOperation_Operation": 
+		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__SRC__javaMethod_ClassMethod": 
 				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -341,7 +341,7 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -353,7 +353,7 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -361,13 +361,13 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 					}
 				}
 				break;
-		case "Java2Uml.MethodStaticToStatic__Marker_CREATE__SRC__modifier_Static": 
+		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__TRG__umlOperation_Operation": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -379,7 +379,7 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -387,13 +387,13 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 					}
 				}
 				break;
-		case "Java2Uml.MethodStaticToStatic__Marker_CONTEXT__SRC__javaMethod_ClassMethod": 
+		case "Java2Uml.MethodStaticToStatic__Marker_CREATE__SRC__modifier_Static": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
@@ -405,7 +405,7 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
@@ -531,7 +531,7 @@ public class MethodStaticToStatic__CONSISTENCY_1146_localSearch extends GenericL
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_2_orchestration, match_2);
+			start(edge_explorer_3_1_orchestration, match_2);
 		}
 		
 		message.initialMessage.decrement();

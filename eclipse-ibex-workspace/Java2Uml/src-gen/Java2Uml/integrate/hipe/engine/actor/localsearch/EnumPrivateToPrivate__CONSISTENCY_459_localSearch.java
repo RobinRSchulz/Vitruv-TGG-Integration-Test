@@ -67,20 +67,20 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCONTEXT__TRG__umlClassifier(); return (result instanceof uml.Enumeration ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 4, 2, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Private ? result : null);};
+						edge_explorer = new CachedEdgeExplorer(this, 4, 1, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Private ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCONTEXT__SRC__javaConcreteClassifier(); return (result instanceof org.emftext.language.java.classifiers.Enumeration ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
 						edge_explorer_4_methods.unique_lookup = (o) -> ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCONTEXT__CORR__javaClassifierToUmlClassifier();
 						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCONTEXT__SRC__javaConcreteClassifier(); return (result instanceof org.emftext.language.java.classifiers.Enumeration ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.EnumPrivateToPrivate__Marker) o).getCONTEXT__TRG__umlClassifier(); return (result instanceof uml.Enumeration ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 4, 2, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		pac_explorer = new PACExplorer(this, Arrays.asList(new Integer[] {0,1,2,3}), node.getAllOverlaps().get(0));
 		name2explorer.put("pac_explorer", pac_explorer);
@@ -184,41 +184,41 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__TRG__umlClassifier_Enumeration": 
+		case "Java2Uml.EnumPrivateToPrivate__Marker_CREATE__SRC__modifier_Private": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Enumeration) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Private) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[2] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.Enumeration) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Private) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[2] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.Enumeration) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Private) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[2] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
@@ -227,28 +227,28 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				
 			}
 			break;
-		case "Java2Uml.EnumPrivateToPrivate__Marker_CREATE__SRC__modifier_Private": 
+		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__SRC__javaConcreteClassifier_Enumeration": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.modifiers.Private) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.modifiers.Private) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
@@ -283,28 +283,28 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				
 			}
 			break;
-		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__SRC__javaConcreteClassifier_Enumeration": 
+		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__TRG__umlClassifier_Enumeration": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
+				if(msg.target instanceof uml.Enumeration) {
 				{
 					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
+				if(msg.target instanceof uml.Enumeration) {
 				{
 					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumPrivateToPrivate__CONSISTENCY_459_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
@@ -323,13 +323,13 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__TRG__umlClassifier_Enumeration": 
+		case "Java2Uml.EnumPrivateToPrivate__Marker_CREATE__SRC__modifier_Private": 
 				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -341,7 +341,7 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -353,7 +353,7 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -361,13 +361,13 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 					}
 				}
 				break;
-		case "Java2Uml.EnumPrivateToPrivate__Marker_CREATE__SRC__modifier_Private": 
+		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__SRC__javaConcreteClassifier_Enumeration": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -379,7 +379,7 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -413,13 +413,13 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 					}
 				}
 				break;
-		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__SRC__javaConcreteClassifier_Enumeration": 
+		case "Java2Uml.EnumPrivateToPrivate__Marker_CONTEXT__TRG__umlClassifier_Enumeration": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
@@ -431,7 +431,7 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_8) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_8.add(m);
 					}
 					if(!toBeRemoved_8.isEmpty()) {
@@ -531,7 +531,7 @@ public class EnumPrivateToPrivate__CONSISTENCY_459_localSearch extends GenericLo
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_2_orchestration, match_2);
+			start(edge_explorer_5_1_orchestration, match_2);
 		}
 		
 		message.initialMessage.decrement();

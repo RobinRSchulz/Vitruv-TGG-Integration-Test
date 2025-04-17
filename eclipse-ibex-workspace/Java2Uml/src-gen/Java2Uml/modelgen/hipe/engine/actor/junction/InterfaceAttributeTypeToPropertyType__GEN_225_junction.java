@@ -28,8 +28,8 @@ import hipe.generic.actor.junction.GenericJunctionActor;
 import hipe.network.JunctionNode;
 
 public class InterfaceAttributeTypeToPropertyType__GEN_225_junction extends GenericJunctionActor{
-	private Map<Object, Collection<HMatch>> namedElement_40_AttrMap = HiPEMultiUtil.createMap();
-	private Map<Object, Collection<HMatch>> namedElement_41_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_24_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_25_AttrMap = HiPEMultiUtil.createMap();
 	
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, JunctionNode node) {
@@ -42,18 +42,18 @@ public class InterfaceAttributeTypeToPropertyType__GEN_225_junction extends Gene
 	@Override
 	protected void registerMatchForAttributeChanges(HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> namedElement_2_Matches = namedElement_40_AttrMap.get(matchObjects[2]);
+		Collection<HMatch> namedElement_2_Matches = namedElement_24_AttrMap.get(matchObjects[2]);
 		if(namedElement_2_Matches == null) {
 			namedElement_2_Matches = new LinkedList<>();
-			namedElement_40_AttrMap.put(matchObjects[2], namedElement_2_Matches);
+			namedElement_24_AttrMap.put(matchObjects[2], namedElement_2_Matches);
 		}
 		
 		namedElement_2_Matches.add(match);
 		
-		Collection<HMatch> namedElement_1_Matches = namedElement_41_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> namedElement_1_Matches = namedElement_25_AttrMap.get(matchObjects[1]);
 		if(namedElement_1_Matches == null) {
 			namedElement_1_Matches = new LinkedList<>();
-			namedElement_41_AttrMap.put(matchObjects[1], namedElement_1_Matches);
+			namedElement_25_AttrMap.put(matchObjects[1], namedElement_1_Matches);
 		}
 		
 		namedElement_1_Matches.add(match);
@@ -63,11 +63,11 @@ public class InterfaceAttributeTypeToPropertyType__GEN_225_junction extends Gene
 	@Override
 	protected void deregisterMatchForAttributeChanges(Set<HMatch> matches, HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> matches_0 = namedElement_40_AttrMap.get(matchObjects[2]);
+		Collection<HMatch> matches_0 = namedElement_24_AttrMap.get(matchObjects[2]);
 		if(matches_0 != null) {
 			matches_0.remove(match);
 		}
-		Collection<HMatch> matches_1 = namedElement_41_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> matches_1 = namedElement_25_AttrMap.get(matchObjects[1]);
 		if(matches_1 != null) {
 			matches_1.remove(match);
 		}
@@ -81,8 +81,8 @@ public class InterfaceAttributeTypeToPropertyType__GEN_225_junction extends Gene
 		}
 		Object obj = message.node;
 		if(obj instanceof uml.NamedElement) {
-			if(namedElement_40_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_40_AttrMap.get(obj)) {
+			if(namedElement_24_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_24_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;
@@ -100,8 +100,8 @@ public class InterfaceAttributeTypeToPropertyType__GEN_225_junction extends Gene
 			}
 		}
 		if(obj instanceof org.emftext.language.java.commons.NamedElement) {
-			if(namedElement_41_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_41_AttrMap.get(obj)) {
+			if(namedElement_25_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_25_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;

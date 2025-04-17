@@ -61,12 +61,12 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 1, 0, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getTarget(); return (result instanceof uml.Operation ? result : null);};
+						edge_explorer = new CachedEdgeExplorer(this, 1, 2, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getTarget(); return (result instanceof uml.Operation ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 1, 2, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 1, 0, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
 						edge_explorer_4_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Final).collect(Collectors.toList());
@@ -105,7 +105,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 					// javaMethod
 					HMatch match_0 = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_2_orchestration, match_0);
+					start(edge_explorer_3_1_orchestration, match_0);
 				}
 				break;
 			case "JavaMethodToOperation_object_SP2": 
@@ -126,7 +126,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 						// umlOperation
 						HMatch match_2 = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_2);
+						start(edge_explorer_2_orchestration, match_2);
 					}
 				}
 				break;
@@ -176,41 +176,41 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaMethodToOperation_source_Method": 
+		case "Java2Uml.JavaMethodToOperation_target_Operation": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof uml.Operation) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[0] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof uml.Operation) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[0] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof uml.Operation) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[0] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
@@ -219,28 +219,28 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 				
 			}
 			break;
-		case "Java2Uml.JavaMethodToOperation_target_Operation": 
+		case "Java2Uml.JavaMethodToOperation_source_Method": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Operation) {
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[2] = msg.target;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.Operation) {
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodFinalToFinal__CC_416_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[2] = msg.target;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
@@ -291,13 +291,13 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaMethodToOperation_source_Method": 
+		case "Java2Uml.JavaMethodToOperation_target_Operation": 
 				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -309,7 +309,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -321,7 +321,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -329,13 +329,13 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 					}
 				}
 				break;
-		case "Java2Uml.JavaMethodToOperation_target_Operation": 
+		case "Java2Uml.JavaMethodToOperation_source_Method": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -347,7 +347,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -473,7 +473,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_3_1_orchestration, match_2);
+			start(edge_explorer_2_orchestration, match_2);
 		}
 		
 		message.initialMessage.decrement();

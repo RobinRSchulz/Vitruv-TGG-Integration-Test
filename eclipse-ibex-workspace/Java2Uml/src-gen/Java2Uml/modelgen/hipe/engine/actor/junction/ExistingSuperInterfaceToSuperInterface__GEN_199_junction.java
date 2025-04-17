@@ -56,11 +56,11 @@ public class ExistingSuperInterfaceToSuperInterface__GEN_199_junction extends Ge
 	}
 	
 	public boolean check_constraint_18(HMatch match, int index) {
+		Java2Uml.JavaClassifierToUmlClassifier javaClassifierToUmlClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[0];
+		org.emftext.language.java.classifiers.Interface javaConcreteClassifier = (org.emftext.language.java.classifiers.Interface) match.getNodes()[1];
 		org.emftext.language.java.classifiers.Interface superclassifier = (org.emftext.language.java.classifiers.Interface) match.getNodes()[4];
 		uml.Interface umlClassifier = (uml.Interface) match.getNodes()[2];
-		Java2Uml.JavaClassifierToUmlClassifier javaClassifierToUmlClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[0];
 		uml.Interface umlGeneralClassifier = (uml.Interface) match.getNodes()[5];
-		org.emftext.language.java.classifiers.Interface javaConcreteClassifier = (org.emftext.language.java.classifiers.Interface) match.getNodes()[1];
 		Java2Uml.JavaClassifierToUmlClassifier javaSuperClassifierToUmlSuperClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[3];
 		boolean predicate = !javaConcreteClassifier.equals(superclassifier) && !umlClassifier.equals(umlGeneralClassifier) && !javaClassifierToUmlClassifier.equals(javaSuperClassifierToUmlSuperClassifier);
 		match.setConstraintSatisfied(index, predicate);

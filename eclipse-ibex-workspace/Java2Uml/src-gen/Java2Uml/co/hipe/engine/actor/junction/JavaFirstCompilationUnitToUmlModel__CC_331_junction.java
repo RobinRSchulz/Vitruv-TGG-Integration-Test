@@ -56,10 +56,10 @@ public class JavaFirstCompilationUnitToUmlModel__CC_331_junction extends Generic
 	}
 	
 	public boolean check_constraint_77(HMatch match, int index) {
-		uml.PrimitiveType byteType = (uml.PrimitiveType) match.getNodes()[2];
 		uml.PrimitiveType booleanType = (uml.PrimitiveType) match.getNodes()[0];
-		uml.PrimitiveType charType = (uml.PrimitiveType) match.getNodes()[3];
 		uml.PrimitiveType doubleType = (uml.PrimitiveType) match.getNodes()[4];
+		uml.PrimitiveType charType = (uml.PrimitiveType) match.getNodes()[3];
+		uml.PrimitiveType byteType = (uml.PrimitiveType) match.getNodes()[2];
 		boolean predicate = !booleanType.equals(charType) && !booleanType.equals(doubleType) && !byteType.equals(charType) && !byteType.equals(doubleType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

@@ -42,9 +42,9 @@ import hipe.generic.actor.local.search.misc.*;
 import org.eclipse.emf.ecore.EObject;
 
 public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends GenericLocalSearchActor{
-	CachedEdgeExplorer edge_explorer;
+	EdgeExplorer edge_explorer;
 	CachedEdgeExplorer edge_explorer_3;
-	EdgeExplorer edge_explorer_4;
+	CachedEdgeExplorer edge_explorer_4;
 	CachedEdgeExplorer edge_explorer_5;
 	NACExplorer nac_checker;
 	
@@ -64,21 +64,21 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 	@Override
 	protected void initializeSearchComponents() {
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Interface ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 0, 2, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((uml.Generalization) o).getSpecific(); return (result instanceof uml.Interface ? result : null);};
+						edge_explorer_methods.multi_opposite_lookup = (o) -> ((uml.Classifier) o).getGeneralization();
+						edge_explorer = new EdgeExplorer(this, 3, 2, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((uml.Generalization) o).getGeneral(); return (result instanceof uml.Interface ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 3, 4, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((uml.Generalization) o).getSpecific(); return (result instanceof uml.Interface ? result : null);};
-						edge_explorer_4_methods.multi_opposite_lookup = (o) -> ((uml.Classifier) o).getGeneralization();
-						edge_explorer_4 = new EdgeExplorer(this, 3, 2, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Interface ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((uml.Generalization) o).getGeneral(); return (result instanceof uml.Interface ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 4, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		nac_checker = new NACExplorer(this, Arrays.asList(new Integer[] {3,4}), node.getAllOverlaps().get(0));
 		name2explorer.put("nac_checker", nac_checker);
@@ -113,13 +113,13 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 		switch(match.creator) {
 			case "JavaClassifierToUmlClassifier_object_SP15": 
 				{
-					edge_explorer.registerSourceObject(objs[0]);
-					edge_explorer_3.registerSourceObject(objs[0]);
+					edge_explorer_4.registerSourceObject(objs[0]);
+					edge_explorer_5.registerSourceObject(objs[0]);
 					
 					// javaClassifierToUmlClassifier
 					HMatch match_0 = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_1_orchestration, match_0);
+					start(edge_explorer_4_1_orchestration, match_0);
 				}
 				break;
 			case "Interface_1_object_SP3": 
@@ -129,7 +129,7 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 						// javaConcreteClassifier
 						HMatch match_1 = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_1);
+						start(edge_explorer_5_1_orchestration, match_1);
 					}
 				}
 				break;
@@ -145,18 +145,18 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 						// umlGeneralClassifier
 						HMatch match_4 = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
 						match_4.getNodes()[4] = objs[0];
-						start(edge_explorer_5_1_orchestration, match_4);
+						start(edge_explorer_3_1_orchestration, match_4);
 					}
 				}
 				break;
 			case "Generalization_object_SP0": 
 				{
-					edge_explorer_5.registerSourceObject(objs[0]);
+					edge_explorer_3.registerSourceObject(objs[0]);
 					
 					// generalization
 					HMatch match_3 = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
 					match_3.getNodes()[3] = objs[0];
-					start(edge_explorer_4_1_orchestration, match_3);
+					start(edge_explorer_1_orchestration, match_3);
 				}
 				break;
 			case "SuperInterfaceToSuperInterface_generalization_general_outgoing_TRG__FILTER_NAC_TRG_779_localSearch": 
@@ -221,79 +221,6 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Interface) {
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.Interface) {
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.Interface) {
-				{
-					edge_explorer.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
-				{
-					edge_explorer_3.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
-				{
-					edge_explorer_3.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
 		case "uml.Generalization_specific_Classifier": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Interface) {
@@ -303,7 +230,7 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 					objs[3] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -315,7 +242,19 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 					objs[3] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.Interface) {
+				{
+					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[3] = msg.source;
+					objs[2] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -326,24 +265,84 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Interface) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
+					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
 					objs[4] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 				if(msg.target instanceof uml.Interface) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
+					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
 					objs[4] = msg.target;
+					currentDepth++;
+					start(edge_explorer_3_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.Interface) {
+				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[2] = msg.target;
+					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.Interface) {
+				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[2] = msg.target;
+					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("SuperInterfaceToSuperInterface__BWD_783_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
@@ -362,8 +361,7 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
-				edge_explorer.deregisterEdge(msg.source, msg.target);
+		case "uml.Generalization_specific_Classifier": 
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
@@ -375,7 +373,6 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 						sendDeletedMatches(toBeRemoved_0);
 					}
 				}
-				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_1 = obj2matches.get(msg.source);
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
@@ -387,7 +384,6 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 						sendDeletedMatches(toBeRemoved_1);
 					}
 				}
-				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_2 = obj2matches.get(msg.source);
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
@@ -400,13 +396,13 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 					}
 				}
 				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+		case "uml.Generalization_general_Classifier": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -418,7 +414,7 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -426,7 +422,8 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 					}
 				}
 				break;
-		case "uml.Generalization_specific_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
@@ -438,6 +435,7 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 						sendDeletedMatches(toBeRemoved_5);
 					}
 				}
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
@@ -450,13 +448,13 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 					}
 				}
 				break;
-		case "uml.Generalization_general_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
@@ -468,7 +466,7 @@ public class SuperInterfaceToSuperInterface__BWD_783_localSearch extends Generic
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_8) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_8.add(m);
 					}
 					if(!toBeRemoved_8.isEmpty()) {

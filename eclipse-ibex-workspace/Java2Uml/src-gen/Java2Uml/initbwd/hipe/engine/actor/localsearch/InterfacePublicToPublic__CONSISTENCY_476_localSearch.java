@@ -74,24 +74,24 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 						edge_explorer = new CachedEdgeExplorer(this, 4, 3, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.InterfacePublicToPublic__Marker) o).getCONTEXT__TRG__umlClassifier(); return (result instanceof uml.Interface ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 2, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Interface ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
 						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.InterfacePublicToPublic__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Public ? result : null);};
 						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Interface ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.InterfacePublicToPublic__Marker) o).getCONTEXT__TRG__umlClassifier(); return (result instanceof uml.Interface ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 4, 2, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
-						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.InterfacePublicToPublic__Marker) o).getCONTEXT__SRC__javaConcreteClassifier(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
-						edge_explorer_6 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_6_methods);
+						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
+						edge_explorer_6 = new CachedEdgeExplorer(this, 3, 0, edge_explorer_6_methods);
 		name2explorer.put("edge_explorer_6", edge_explorer_6);
 		EdgeLookupMethods edge_explorer_7_methods = new EdgeLookupMethods();
-						edge_explorer_7_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
-						edge_explorer_7 = new CachedEdgeExplorer(this, 3, 0, edge_explorer_7_methods);
+						edge_explorer_7_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.InterfacePublicToPublic__Marker) o).getCONTEXT__SRC__javaConcreteClassifier(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
+						edge_explorer_7 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_7_methods);
 		name2explorer.put("edge_explorer_7", edge_explorer_7);
 		EdgeLookupMethods edge_explorer_8_methods = new EdgeLookupMethods();
 						edge_explorer_8_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Public).collect(Collectors.toList());
@@ -162,8 +162,8 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 				break;
 			case "JavaClassifierToUmlClassifier_object_SP16": 
 				{
-					edge_explorer_5.registerSourceObject(objs[0]);
-					edge_explorer_7.registerSourceObject(objs[0]);
+					edge_explorer_3.registerSourceObject(objs[0]);
+					edge_explorer_6.registerSourceObject(objs[0]);
 					
 					// javaClassifierToUmlClassifier
 					HMatch match_3 = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
@@ -174,9 +174,9 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 			case "InterfacePublicToPublic__Marker_object": 
 				{
 					edge_explorer.registerSourceObject(objs[0]);
-					edge_explorer_3.registerSourceObject(objs[0]);
 					edge_explorer_4.registerSourceObject(objs[0]);
-					edge_explorer_6.registerSourceObject(objs[0]);
+					edge_explorer_5.registerSourceObject(objs[0]);
+					edge_explorer_7.registerSourceObject(objs[0]);
 					
 					// InterfacePublicToPublic_eMoflon_ProtocolNode
 					HMatch match_4 = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
@@ -259,14 +259,14 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 				
 			}
 			break;
-		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__TRG__umlClassifier_Interface": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Interface) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
 					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
+					objs[3] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
@@ -279,7 +279,7 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
 					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
+					objs[3] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
@@ -319,47 +319,17 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 				
 			}
 			break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__TRG__umlClassifier_Interface": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Interface) {
 				{
 					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
 					Object[] objs = match.getNodes();
-					objs[3] = msg.source;
+					objs[4] = msg.source;
 					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Interface": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
-				{
-					edge_explorer_6.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[0] = msg.target;
-					currentDepth++;
-					start(edge_explorer_6_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
-				{
-					edge_explorer_6.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[0] = msg.target;
-					currentDepth++;
-					start(edge_explorer_6_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -370,10 +340,40 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 			if(!lazy_initialization) {
 				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
 				{
-					edge_explorer_7.registerEdge(msg.source, msg.target);
+					edge_explorer_6.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_6_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
+				{
+					edge_explorer_6.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[3] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_6_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Interface": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
+				{
+					edge_explorer_7.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("InterfacePublicToPublic__CONSISTENCY_476_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
 					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_7_0_orchestration, match);
@@ -449,7 +449,7 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 					}
 				}
 				break;
-		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__TRG__umlClassifier_Interface": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
@@ -501,7 +501,7 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 					}
 				}
 				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__TRG__umlClassifier_Interface": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
@@ -515,7 +515,7 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 					}
 				}
 				break;
-		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Interface": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
 				edge_explorer_6.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
@@ -541,7 +541,7 @@ public class InterfacePublicToPublic__CONSISTENCY_476_localSearch extends Generi
 					}
 				}
 				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+		case "Java2Uml.InterfacePublicToPublic__Marker_CONTEXT__SRC__javaConcreteClassifier_Interface": 
 				edge_explorer_7.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_10 = obj2matches.get(msg.source);
 				if(matches_10 != null && !matches_10.isEmpty()) {

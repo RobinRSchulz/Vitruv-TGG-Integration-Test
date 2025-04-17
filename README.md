@@ -114,5 +114,13 @@ Building steps, that should produce a build state that is usable for Vitruv-TGG:
 6. Refresh Project
 7. Mark your project and click the green hammer in the icon bar, titled "Build selected projects incrementally"
 
+It is unpredictable, whether the eclipse project can be built or not and the steps to solve folders 
+and/ or files not being there or not being cleaed or overwritten are always different.
+The following can help:
+* Repeating the described build steps multiple times, possibly leaving out the clean step.
+* restarting eclipse
+* wiping the "Problems" tab (?)
+* deleting the model or the src-gen or the gen folder
+
 If the following conditions apply, your project most likely has been built successfully:
-  * the `gen` folder exists and has no
+  * the file sync/hipe/engine/ibex-patterns.xmi exists.
