@@ -588,17 +588,6 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_833_localSearch extends Ge
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof org.emftext.language.java.containers.Package) {
-			HMatch match_0 = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_833_localSearch", 4);
-			match_0.getNodes()[0] = obj;
-			Collection<HMatch> formerMatches_0 = obj2matches.get(obj);
-			if(formerMatches_0 != null) {
-				
-				formerMatches_0 = formerMatches_0.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_0);
-			}
-			start(edge_explorer_2_orchestration, match_0);
-		}
 		if(obj instanceof uml.Package) {
 			HMatch match_1 = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_833_localSearch", 4);
 			match_1.getNodes()[1] = obj;
@@ -609,6 +598,17 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_833_localSearch extends Ge
 				sendDeletedMatches(formerMatches_1);
 			}
 			start(edge_explorer_3_1_orchestration, match_1);
+		}
+		if(obj instanceof org.emftext.language.java.containers.Package) {
+			HMatch match_0 = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_833_localSearch", 4);
+			match_0.getNodes()[0] = obj;
+			Collection<HMatch> formerMatches_0 = obj2matches.get(obj);
+			if(formerMatches_0 != null) {
+				
+				formerMatches_0 = formerMatches_0.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_0);
+			}
+			start(edge_explorer_2_orchestration, match_0);
 		}
 		
 		message.initialMessage.decrement();

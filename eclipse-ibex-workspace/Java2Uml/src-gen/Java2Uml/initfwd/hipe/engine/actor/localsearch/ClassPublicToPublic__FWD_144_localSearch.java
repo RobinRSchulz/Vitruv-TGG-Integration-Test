@@ -43,17 +43,17 @@ import org.eclipse.emf.ecore.EObject;
 
 public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearchActor{
 	ConstraintChecker constraint_checker;
-	CachedEdgeExplorer edge_explorer;
+	EdgeExplorer edge_explorer;
 	CachedEdgeExplorer edge_explorer_3;
-	EdgeExplorer edge_explorer_4;
+	CachedEdgeExplorer edge_explorer_4;
 	
 	SearchOrchestration edge_explorer_0_orchestration;
 	SearchOrchestration edge_explorer_1_orchestration;
 	SearchOrchestration edge_explorer_2_orchestration;
 	SearchOrchestration edge_explorer_3_0_orchestration;
 	SearchOrchestration edge_explorer_3_1_orchestration;
+	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
-	SearchOrchestration edge_explorer_4_1_orchestration;
 	
 	
 	@Override
@@ -61,17 +61,17 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 0, 1, edge_explorer_methods);
+						edge_explorer_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Public).collect(Collectors.toList());
+						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.classifiers.Class) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer = new EdgeExplorer(this, 1, 3, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
 						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Class ? result : null);};
 						edge_explorer_3 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Public).collect(Collectors.toList());
-						edge_explorer_4_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.classifiers.Class) return edge_explorer_4_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_4 = new EdgeExplorer(this, 1, 3, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 	}
 	
@@ -82,8 +82,8 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 		edge_explorer_2_orchestration = initializeOrchestration(node.getOrchestrations().get(2).getPlan());
 		edge_explorer_3_0_orchestration = initializeOrchestration(node.getOrchestrations().get(3).getPlan());
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
-		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
-		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
+		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
+		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
 	}
 	
 	@Override
@@ -101,13 +101,13 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 		switch(match.creator) {
 			case "JavaClassifierToUmlClassifier_object_SP19": 
 				{
-					edge_explorer.registerSourceObject(objs[0]);
 					edge_explorer_3.registerSourceObject(objs[0]);
+					edge_explorer_4.registerSourceObject(objs[0]);
 					
 					// javaClassifierToUmlClassifier
 					HMatch match_0 = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_1_orchestration, match_0);
+					start(edge_explorer_3_1_orchestration, match_0);
 				}
 				break;
 			case "Class_object_SP0": 
@@ -117,7 +117,7 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 						// javaConcreteClassifier
 						HMatch match_1 = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_2_orchestration, match_1);
+						start(edge_explorer_1_orchestration, match_1);
 					}
 				}
 				break;
@@ -128,7 +128,7 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 						// umlClassifier
 						HMatch match_2 = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_2);
+						start(edge_explorer_3_2_orchestration, match_2);
 					}
 				}
 				break;
@@ -139,7 +139,7 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 						// modifier
 						HMatch match_3 = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 						match_3.getNodes()[3] = objs[0];
-						start(edge_explorer_4_1_orchestration, match_3);
+						start(edge_explorer_2_orchestration, match_3);
 					}
 				}
 				break;
@@ -178,44 +178,47 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.source instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
 				{
-					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
+					objs[1] = msg.source;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
+				}
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.source instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
 				{
-					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
+					objs[1] = msg.source;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
+				}
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.source instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
 				{
-					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
+					objs[1] = msg.source;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
+				}
 				}
 				}
 				
@@ -249,35 +252,33 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 				}
 				}
 				
-			}
-			break;
-		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
-			if(!lazy_initialization) {
-				if(msg.source instanceof org.emftext.language.java.classifiers.Class) {
-				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
+				if(msg.target instanceof uml.Class) {
 				{
+					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[0] = msg.source;
+					objs[2] = msg.target;
 					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				}
 				
-				if(msg.source instanceof org.emftext.language.java.classifiers.Class) {
-				if(msg.target instanceof org.emftext.language.java.modifiers.Public) {
+			}
+			break;
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
 				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassPublicToPublic__FWD_144_localSearch", 4);
 					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[0] = msg.source;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				}
 				
@@ -293,37 +294,34 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
-				edge_explorer.deregisterEdge(msg.source, msg.target);
+		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_0);
 					}
 				}
-				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_1 = obj2matches.get(msg.source);
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_1);
 					}
 				}
-				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_2 = obj2matches.get(msg.source);
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -356,24 +354,26 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 						sendDeletedMatches(toBeRemoved_4);
 					}
 				}
-				break;
-		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
+				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_5);
 					}
 				}
+				break;
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
@@ -475,7 +475,7 @@ public class ClassPublicToPublic__FWD_144_localSearch extends GenericLocalSearch
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_3_1_orchestration, match_2);
+			start(edge_explorer_3_2_orchestration, match_2);
 		}
 		
 		message.initialMessage.decrement();

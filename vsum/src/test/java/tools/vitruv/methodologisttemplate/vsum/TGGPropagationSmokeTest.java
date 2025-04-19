@@ -108,14 +108,14 @@ public class TGGPropagationSmokeTest {
             new CPSResultExpectation()
                     .expectAddedCorrs(
                             new CorrExpectation("LinkToEntity",
-                                    new EObjectExpectation(ModelPackage.eINSTANCE.getLink()),
-                                    new EObjectExpectation(Model2Package.eINSTANCE.getEntity())))
+                                    new CPSResultEObjectExpectation(ModelPackage.eINSTANCE.getLink()),
+                                    new CPSResultEObjectExpectation(Model2Package.eINSTANCE.getEntity())))
                     .expectRemovedCorrs(
                             new CorrExpectation("LinkToEntity",
-                                    new EObjectExpectation(ModelPackage.eINSTANCE.getLink()),
-                                    new EObjectExpectation(Model2Package.eINSTANCE.getEntity())))
+                                    new CPSResultEObjectExpectation(ModelPackage.eINSTANCE.getLink()),
+                                    new CPSResultEObjectExpectation(Model2Package.eINSTANCE.getEntity())))
                     .expectRevokedModelNodes(
-                            new EObjectExpectation(Model2Package.eINSTANCE.getEntity()))
+                            new CPSResultEObjectExpectation(Model2Package.eINSTANCE.getEntity()))
     );
   }
 
@@ -127,10 +127,10 @@ public class TGGPropagationSmokeTest {
                     .expectAddedCorrs() // no added corrs expected
                     .expectRemovedCorrs(
                             new CorrExpectation("LinkToEntity",
-                                    new EObjectExpectation(ModelPackage.eINSTANCE.getLink()),
-                                    new EObjectExpectation(Model2Package.eINSTANCE.getEntity())))
+                                    new CPSResultEObjectExpectation(ModelPackage.eINSTANCE.getLink()),
+                                    new CPSResultEObjectExpectation(Model2Package.eINSTANCE.getEntity())))
                     .expectRevokedModelNodes(
-                            new EObjectExpectation(Model2Package.eINSTANCE.getEntity()))
+                            new CPSResultEObjectExpectation(Model2Package.eINSTANCE.getEntity()))
     );
   }
 

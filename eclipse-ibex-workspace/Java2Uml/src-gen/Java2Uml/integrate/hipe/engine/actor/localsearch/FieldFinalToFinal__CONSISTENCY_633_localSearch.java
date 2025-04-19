@@ -67,16 +67,16 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Final ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 4, 1, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__CORR__javaClassifierToUmlProperty();
+						edge_explorer = new CachedEdgeExplorer(this, 4, 3, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
 						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__SRC__javaField(); return (result instanceof org.emftext.language.java.members.Field ? result : null);};
 						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__CORR__javaClassifierToUmlProperty();
-						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Final ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
 						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__TRG__umlProperty(); return (result instanceof uml.Property ? result : null);};
@@ -184,45 +184,39 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.FieldFinalToFinal__Marker_CREATE__SRC__modifier_Final": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.modifiers.Final) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_633_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.modifiers.Final) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_633_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.modifiers.Final) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_633_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[1] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				
 			}
@@ -257,28 +251,32 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 				
 			}
 			break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CREATE__SRC__modifier_Final": 
 			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.modifiers.Final) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_633_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[3] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
+				}
 				
+				if(msg.target instanceof org.emftext.language.java.modifiers.Final) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_633_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
-					objs[3] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
+				}
 				}
 				
 			}
@@ -323,13 +321,13 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.FieldFinalToFinal__Marker_CREATE__SRC__modifier_Final": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
 				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -341,7 +339,7 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -353,7 +351,7 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -387,13 +385,13 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 					}
 				}
 				break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CREATE__SRC__modifier_Final": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
@@ -405,7 +403,7 @@ public class FieldFinalToFinal__CONSISTENCY_633_localSearch extends GenericLocal
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {

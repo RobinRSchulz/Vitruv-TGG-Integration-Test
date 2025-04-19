@@ -1067,7 +1067,7 @@
     </sourcePatterns>
     <sourcePatterns name="method">
       <op value="++"/>
-      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Method"/>
     </sourcePatterns>
     <targetPatterns name="umlClassifier">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
@@ -1093,6 +1093,10 @@
     <sourcePatterns name="javaConcreteClassifier">
       <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
     </sourcePatterns>
+    <sourcePatterns name="method">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </sourcePatterns>
     <targetPatterns name="umlClassifier">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
       <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
@@ -1104,6 +1108,10 @@
   <rules name="InterfaceMethodToMethod" supertypes="//@rules.0" schema="//@schema">
     <sourcePatterns name="javaConcreteClassifier">
       <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
+    </sourcePatterns>
+    <sourcePatterns name="method">
+      <op value="++"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/InterfaceMethod"/>
     </sourcePatterns>
     <targetPatterns name="umlClassifier">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>

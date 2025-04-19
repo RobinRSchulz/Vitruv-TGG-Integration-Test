@@ -22,9 +22,9 @@ public interface InterfaceMethodToMethod__Marker extends EObject, runtime.TGGRul
     
     public void setCONTEXT__SRC__javaConcreteClassifier(org.emftext.language.java.classifiers.Interface value);
     
-    public org.emftext.language.java.members.ClassMethod getCREATE__SRC__method();
+    public org.emftext.language.java.members.InterfaceMethod getCREATE__SRC__method();
     
-    public void setCREATE__SRC__method(org.emftext.language.java.members.ClassMethod value);
+    public void setCREATE__SRC__method(org.emftext.language.java.members.InterfaceMethod value);
     
     public org.eclipse.uml2.uml.Interface getCONTEXT__TRG__umlClassifier();
     

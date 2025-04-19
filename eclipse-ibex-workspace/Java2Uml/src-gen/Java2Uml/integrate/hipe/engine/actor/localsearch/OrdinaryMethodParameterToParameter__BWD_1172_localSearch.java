@@ -104,7 +104,7 @@ public class OrdinaryMethodParameterToParameter__BWD_1172_localSearch extends Ge
 					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
-			case "ClassMethod_object_SP1": 
+			case "ClassMethod_object_SP2": 
 				{
 					if(!lazy_initialization) {
 						
@@ -144,7 +144,7 @@ public class OrdinaryMethodParameterToParameter__BWD_1172_localSearch extends Ge
 			case "JavaMethodToOperation_object_SP2": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "ClassMethod_object_SP1": 
+			case "ClassMethod_object_SP2": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			case "OrdinaryMethodParameterToParameter__TRG_1169_localSearch": 

@@ -625,6 +625,7 @@ public class HiPEEngine extends IHiPEEngine{
 		classes.put("InterfaceAttributeTypeToPropertyType__Marker_object",InterfaceAttributeTypeToPropertyType__Marker_object.class);
 		classes.put("InterfaceConstructorToConstructor__Marker_object",InterfaceConstructorToConstructor__Marker_object.class);
 		classes.put("InterfaceFinalToFinal__Marker_object",InterfaceFinalToFinal__Marker_object.class);
+		classes.put("InterfaceMethod_object",InterfaceMethod_object.class);
 		classes.put("InterfaceMethodToMethod__Marker_object",InterfaceMethodToMethod__Marker_object.class);
 		classes.put("InterfacePrivateToPrivate__Marker_object",InterfacePrivateToPrivate__Marker_object.class);
 		classes.put("InterfaceProtectedToProtected__Marker_object",InterfaceProtectedToProtected__Marker_object.class);
@@ -758,7 +759,6 @@ public class HiPEEngine extends IHiPEEngine{
 		classes.put("ClassMethod_object_SP2",ClassMethod_object_SP2.class);
 		classes.put("ClassMethod_object_SP3",ClassMethod_object_SP3.class);
 		classes.put("ClassMethod_object_SP4",ClassMethod_object_SP4.class);
-		classes.put("ClassMethod_object_SP5",ClassMethod_object_SP5.class);
 		classes.put("JavaMethodToOperation_object_SP0",JavaMethodToOperation_object_SP0.class);
 		classes.put("JavaMethodToOperation_object_SP1",JavaMethodToOperation_object_SP1.class);
 		classes.put("JavaMethodToOperation_object_SP2",JavaMethodToOperation_object_SP2.class);
@@ -870,6 +870,7 @@ class InterfaceAbstractToAbstract__Marker_object extends GenericObjectActor<Java
 class InterfaceAttributeTypeToPropertyType__Marker_object extends GenericObjectActor<Java2Uml.InterfaceAttributeTypeToPropertyType__Marker> { }
 class InterfaceConstructorToConstructor__Marker_object extends GenericObjectActor<Java2Uml.InterfaceConstructorToConstructor__Marker> { }
 class InterfaceFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.InterfaceFinalToFinal__Marker> { }
+class InterfaceMethod_object extends GenericObjectActor<org.emftext.language.java.members.InterfaceMethod> { }
 class InterfaceMethodToMethod__Marker_object extends GenericObjectActor<Java2Uml.InterfaceMethodToMethod__Marker> { }
 class InterfacePrivateToPrivate__Marker_object extends GenericObjectActor<Java2Uml.InterfacePrivateToPrivate__Marker> { }
 class InterfaceProtectedToProtected__Marker_object extends GenericObjectActor<Java2Uml.InterfaceProtectedToProtected__Marker> { }
@@ -1003,7 +1004,6 @@ class ClassMethod_object_SP1 extends GenericObjectActor<org.emftext.language.jav
 class ClassMethod_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
 class ClassMethod_object_SP3 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
 class ClassMethod_object_SP4 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
-class ClassMethod_object_SP5 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
 class JavaMethodToOperation_object_SP0 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
 class JavaMethodToOperation_object_SP1 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }
 class JavaMethodToOperation_object_SP2 extends GenericObjectActor<Java2Uml.JavaMethodToOperation> { }

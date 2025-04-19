@@ -99,7 +99,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "ClassMethod_object_SP3": 
+			case "ClassMethod_object_SP0": 
 				{
 					
 					// javaMethod
@@ -153,7 +153,7 @@ public class MethodFinalToFinal__CC_416_localSearch extends GenericLocalSearchAc
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "ClassMethod_object_SP3": 
+			case "ClassMethod_object_SP0": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
 			case "JavaMethodToOperation_object_SP2": 

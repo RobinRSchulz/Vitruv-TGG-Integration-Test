@@ -6,7 +6,7 @@
 		javaConcreteClassifier:java.classifiers.ConcreteClassifier {
 			++ -members->method
 		}
-		++method:java.members.ClassMethod
+		++method:java.members.Method
 	}
 	#target {
 		umlClassifier:uml.Classifier {
@@ -28,14 +28,20 @@
 		eq_string(method.name, umlOperation.name)
 	}
 	#rule ClassMethodToMethod #extends ClassifierMethodToMethod #with Java2Uml
-		#source { javaConcreteClassifier:java.classifiers.Class }
+		#source { 
+			javaConcreteClassifier:java.classifiers.Class
+			++method:java.members.ClassMethod
+		}
 		#target {
 			umlClassifier:uml.Class {
 				++ -ownedOperation->umlOperation
 			}
 		}
 	#rule InterfaceMethodToMethod #extends ClassifierMethodToMethod #with Java2Uml
-		#source { javaConcreteClassifier:java.classifiers.Interface }
+		#source { 
+			javaConcreteClassifier:java.classifiers.Interface
+			++method:java.members.InterfaceMethod
+		}
 		#target {
 			umlClassifier:uml.Interface {
 				++ -ownedOperation->umlOperation

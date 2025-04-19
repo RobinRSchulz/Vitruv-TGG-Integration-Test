@@ -457,6 +457,7 @@ public class HiPEEngine extends IHiPEEngine{
 		classes.put("EnumerationLiteral_object",EnumerationLiteral_object.class);
 		classes.put("Classifier_1_object",Classifier_1_object.class);
 		classes.put("Static_object",Static_object.class);
+		classes.put("InterfaceMethod_object",InterfaceMethod_object.class);
 		classes.put("JavaCompilationUnitToUmlModel_object",JavaCompilationUnitToUmlModel_object.class);
 		classes.put("OrdinaryParameter_object",OrdinaryParameter_object.class);
 		classes.put("Type_object",Type_object.class);
@@ -530,7 +531,6 @@ public class HiPEEngine extends IHiPEEngine{
 		classes.put("ClassMethod_object_SP0",ClassMethod_object_SP0.class);
 		classes.put("ClassMethod_object_SP1",ClassMethod_object_SP1.class);
 		classes.put("ClassMethod_object_SP2",ClassMethod_object_SP2.class);
-		classes.put("ClassMethod_object_SP3",ClassMethod_object_SP3.class);
 		classes.put("CompilationUnit_object_SP0",CompilationUnit_object_SP0.class);
 		classes.put("CompilationUnit_object_SP1",CompilationUnit_object_SP1.class);
 		classes.put("Package_object_SP0",Package_object_SP0.class);
@@ -596,6 +596,7 @@ class EnumConstant_object extends GenericObjectActor<org.emftext.language.java.m
 class EnumerationLiteral_object extends GenericObjectActor<uml.EnumerationLiteral> { }
 class Classifier_1_object extends GenericObjectActor<uml.Classifier> { }
 class Static_object extends GenericObjectActor<org.emftext.language.java.modifiers.Static> { }
+class InterfaceMethod_object extends GenericObjectActor<org.emftext.language.java.members.InterfaceMethod> { }
 class JavaCompilationUnitToUmlModel_object extends GenericObjectActor<Java2Uml.JavaCompilationUnitToUmlModel> { }
 class OrdinaryParameter_object extends GenericObjectActor<org.emftext.language.java.parameters.OrdinaryParameter> { }
 class Type_object extends GenericObjectActor<uml.Type> { }
@@ -669,7 +670,6 @@ class Interface_1_object_SP5 extends GenericObjectActor<org.emftext.language.jav
 class ClassMethod_object_SP0 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
 class ClassMethod_object_SP1 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
 class ClassMethod_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
-class ClassMethod_object_SP3 extends GenericObjectActor<org.emftext.language.java.members.ClassMethod> { }
 class CompilationUnit_object_SP0 extends GenericObjectActor<org.emftext.language.java.containers.CompilationUnit> { }
 class CompilationUnit_object_SP1 extends GenericObjectActor<org.emftext.language.java.containers.CompilationUnit> { }
 class Package_object_SP0 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }

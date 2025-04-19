@@ -23,7 +23,7 @@ public class InterfaceMethodToMethod__MarkerImpl extends SmartObject implements 
 
     protected runtime.Protocol protocol = null;
     protected org.emftext.language.java.classifiers.Interface CONTEXT__SRC__javaConcreteClassifier = null;
-    protected org.emftext.language.java.members.ClassMethod CREATE__SRC__method = null;
+    protected org.emftext.language.java.members.InterfaceMethod CREATE__SRC__method = null;
     protected org.eclipse.uml2.uml.Interface CONTEXT__TRG__umlClassifier = null;
     protected org.eclipse.uml2.uml.Operation CREATE__TRG__umlOperation = null;
     protected Java2Uml.JavaClassifierToUmlClassifier CONTEXT__CORR__j = null;
@@ -129,12 +129,12 @@ public class InterfaceMethodToMethod__MarkerImpl extends SmartObject implements 
     
     
     @Override
-    public org.emftext.language.java.members.ClassMethod getCREATE__SRC__method() {
+    public org.emftext.language.java.members.InterfaceMethod getCREATE__SRC__method() {
     	return this.CREATE__SRC__method;
     }
     
     @Override
-    public void setCREATE__SRC__method(org.emftext.language.java.members.ClassMethod value) {
+    public void setCREATE__SRC__method(org.emftext.language.java.members.InterfaceMethod value) {
     	
     	Object oldValue = this.CREATE__SRC__method;
     	
@@ -314,7 +314,7 @@ public class InterfaceMethodToMethod__MarkerImpl extends SmartObject implements 
     		return;
     	}
     	if (Java2UmlPackage.Literals.INTERFACE_METHOD_TO_METHOD___MARKER__CREAT_E__SR_C__METHOD.equals(eFeature)) {
-    		setCREATE__SRC__method((org.emftext.language.java.members.ClassMethod) newValue); 
+    		setCREATE__SRC__method((org.emftext.language.java.members.InterfaceMethod) newValue); 
     		return;
     	}
     	if (Java2UmlPackage.Literals.INTERFACE_METHOD_TO_METHOD___MARKER__CONTEX_T__TR_G__UML_CLASSIFIER.equals(eFeature)) {
@@ -347,7 +347,7 @@ public class InterfaceMethodToMethod__MarkerImpl extends SmartObject implements 
     		return;
     	}
     	if (Java2UmlPackage.Literals.INTERFACE_METHOD_TO_METHOD___MARKER__CREAT_E__SR_C__METHOD.equals(eFeature)) {
-    		setCREATE__SRC__method((org.emftext.language.java.members.ClassMethod)null); 
+    		setCREATE__SRC__method((org.emftext.language.java.members.InterfaceMethod)null); 
     		return;
     	}
     	if (Java2UmlPackage.Literals.INTERFACE_METHOD_TO_METHOD___MARKER__CONTEX_T__TR_G__UML_CLASSIFIER.equals(eFeature)) {

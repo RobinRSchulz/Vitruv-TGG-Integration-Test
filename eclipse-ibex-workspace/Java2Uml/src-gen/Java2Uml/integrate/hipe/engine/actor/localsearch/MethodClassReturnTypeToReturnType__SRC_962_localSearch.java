@@ -103,7 +103,7 @@ public class MethodClassReturnTypeToReturnType__SRC_962_localSearch extends Gene
 					start(edge_explorer_3_1_orchestration, match_0);
 				}
 				break;
-			case "ClassMethod_object_SP2": 
+			case "ClassMethod_object_SP1": 
 				{
 					if(!lazy_initialization) {
 						
@@ -155,7 +155,7 @@ public class MethodClassReturnTypeToReturnType__SRC_962_localSearch extends Gene
 			case "Class_object_SP7": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "ClassMethod_object_SP2": 
+			case "ClassMethod_object_SP1": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			case "ClassifierReference_object_SP7": 

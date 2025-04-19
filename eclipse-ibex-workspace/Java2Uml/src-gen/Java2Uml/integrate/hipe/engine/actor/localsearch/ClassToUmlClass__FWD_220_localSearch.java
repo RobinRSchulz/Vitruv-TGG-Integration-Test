@@ -58,12 +58,12 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 	@Override
 	protected void initializeSearchComponents() {
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaPackageToUmlPackage) o).getSource(); return (result instanceof org.emftext.language.java.containers.Package ? result : null);};
-						edge_explorer = new CachedEdgeExplorer(this, 1, 2, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaPackageToUmlPackage) o).getTarget(); return (result instanceof uml.Package ? result : null);};
+						edge_explorer = new CachedEdgeExplorer(this, 1, 3, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaPackageToUmlPackage) o).getTarget(); return (result instanceof uml.Package ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 1, 3, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaPackageToUmlPackage) o).getSource(); return (result instanceof org.emftext.language.java.containers.Package ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 1, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		pac_explorer = new PACExplorer(this, Arrays.asList(new Integer[] {0,2,4}), node.getAllOverlaps().get(0));
 		name2explorer.put("pac_explorer", pac_explorer);
@@ -111,7 +111,7 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 						// umlPackage
 						HMatch match_3 = new LocalSearchMatch("ClassToUmlClass__FWD_220_localSearch", 5);
 						match_3.getNodes()[3] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_3);
+						start(edge_explorer_2_orchestration, match_3);
 					}
 				}
 				break;
@@ -174,41 +174,41 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaPackageToUmlPackage_source_Package": 
+		case "Java2Uml.JavaPackageToUmlPackage_target_Package": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.containers.Package) {
+				if(msg.target instanceof uml.Package) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassToUmlClass__FWD_220_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[2] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.containers.Package) {
+				if(msg.target instanceof uml.Package) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassToUmlClass__FWD_220_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[2] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.containers.Package) {
+				if(msg.target instanceof uml.Package) {
 				{
 					edge_explorer.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassToUmlClass__FWD_220_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[2] = msg.target;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
@@ -217,28 +217,28 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 				
 			}
 			break;
-		case "Java2Uml.JavaPackageToUmlPackage_target_Package": 
+		case "Java2Uml.JavaPackageToUmlPackage_source_Package": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Package) {
+				if(msg.target instanceof org.emftext.language.java.containers.Package) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassToUmlClass__FWD_220_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.Package) {
+				if(msg.target instanceof org.emftext.language.java.containers.Package) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("ClassToUmlClass__FWD_220_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
@@ -257,13 +257,13 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Java2Uml.JavaPackageToUmlPackage_source_Package": 
+		case "Java2Uml.JavaPackageToUmlPackage_target_Package": 
 				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -275,7 +275,7 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -287,7 +287,7 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -295,13 +295,13 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 					}
 				}
 				break;
-		case "Java2Uml.JavaPackageToUmlPackage_target_Package": 
+		case "Java2Uml.JavaPackageToUmlPackage_source_Package": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -313,7 +313,7 @@ public class ClassToUmlClass__FWD_220_localSearch extends GenericLocalSearchActo
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {

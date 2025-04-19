@@ -79,7 +79,7 @@ public class OrdinaryMethodParameterToParameter__SRC_1181_localSearch extends Ge
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "ClassMethod_object_SP3": 
+			case "ClassMethod_object_SP4": 
 				{
 					
 					// javaParametrizable
@@ -111,7 +111,7 @@ public class OrdinaryMethodParameterToParameter__SRC_1181_localSearch extends Ge
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "ClassMethod_object_SP3": 
+			case "ClassMethod_object_SP4": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
 			case "OrdinaryParameter_object": 

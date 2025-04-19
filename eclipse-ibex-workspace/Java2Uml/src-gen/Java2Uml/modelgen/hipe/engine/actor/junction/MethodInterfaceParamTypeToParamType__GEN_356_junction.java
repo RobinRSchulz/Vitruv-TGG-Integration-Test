@@ -28,8 +28,8 @@ import hipe.generic.actor.junction.GenericJunctionActor;
 import hipe.network.JunctionNode;
 
 public class MethodInterfaceParamTypeToParamType__GEN_356_junction extends GenericJunctionActor{
-	private Map<Object, Collection<HMatch>> namedElement_24_AttrMap = HiPEMultiUtil.createMap();
-	private Map<Object, Collection<HMatch>> namedElement_25_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_36_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_37_AttrMap = HiPEMultiUtil.createMap();
 	
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, JunctionNode node) {
@@ -42,18 +42,18 @@ public class MethodInterfaceParamTypeToParamType__GEN_356_junction extends Gener
 	@Override
 	protected void registerMatchForAttributeChanges(HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> namedElement_1_Matches = namedElement_24_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> namedElement_1_Matches = namedElement_36_AttrMap.get(matchObjects[1]);
 		if(namedElement_1_Matches == null) {
 			namedElement_1_Matches = new LinkedList<>();
-			namedElement_24_AttrMap.put(matchObjects[1], namedElement_1_Matches);
+			namedElement_36_AttrMap.put(matchObjects[1], namedElement_1_Matches);
 		}
 		
 		namedElement_1_Matches.add(match);
 		
-		Collection<HMatch> namedElement_5_Matches = namedElement_25_AttrMap.get(matchObjects[5]);
+		Collection<HMatch> namedElement_5_Matches = namedElement_37_AttrMap.get(matchObjects[5]);
 		if(namedElement_5_Matches == null) {
 			namedElement_5_Matches = new LinkedList<>();
-			namedElement_25_AttrMap.put(matchObjects[5], namedElement_5_Matches);
+			namedElement_37_AttrMap.put(matchObjects[5], namedElement_5_Matches);
 		}
 		
 		namedElement_5_Matches.add(match);
@@ -63,11 +63,11 @@ public class MethodInterfaceParamTypeToParamType__GEN_356_junction extends Gener
 	@Override
 	protected void deregisterMatchForAttributeChanges(Set<HMatch> matches, HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> matches_0 = namedElement_24_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> matches_0 = namedElement_36_AttrMap.get(matchObjects[1]);
 		if(matches_0 != null) {
 			matches_0.remove(match);
 		}
-		Collection<HMatch> matches_1 = namedElement_25_AttrMap.get(matchObjects[5]);
+		Collection<HMatch> matches_1 = namedElement_37_AttrMap.get(matchObjects[5]);
 		if(matches_1 != null) {
 			matches_1.remove(match);
 		}
@@ -81,8 +81,8 @@ public class MethodInterfaceParamTypeToParamType__GEN_356_junction extends Gener
 		}
 		Object obj = message.node;
 		if(obj instanceof uml.NamedElement) {
-			if(namedElement_24_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_24_AttrMap.get(obj)) {
+			if(namedElement_36_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_36_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;
@@ -100,8 +100,8 @@ public class MethodInterfaceParamTypeToParamType__GEN_356_junction extends Gener
 			}
 		}
 		if(obj instanceof org.emftext.language.java.commons.NamedElement) {
-			if(namedElement_25_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_25_AttrMap.get(obj)) {
+			if(namedElement_37_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_37_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;
@@ -123,8 +123,8 @@ public class MethodInterfaceParamTypeToParamType__GEN_356_junction extends Gener
 	}
 	
 	public boolean check_constraint_32(HMatch match, int index) {
-		uml.Parameter umlParameter = (uml.Parameter) match.getNodes()[1];
 		org.emftext.language.java.parameters.Parameter parameter = (org.emftext.language.java.parameters.Parameter) match.getNodes()[5];
+		uml.Parameter umlParameter = (uml.Parameter) match.getNodes()[1];
 		
 		org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_28 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();
 		csp_28.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, parameter.getName(), "java.lang.String"));

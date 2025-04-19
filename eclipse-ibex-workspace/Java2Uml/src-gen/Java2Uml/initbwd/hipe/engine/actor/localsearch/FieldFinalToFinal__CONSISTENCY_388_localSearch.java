@@ -45,8 +45,8 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 	ConstraintChecker constraint_checker;
 	CachedEdgeExplorer edge_explorer;
 	CachedEdgeExplorer edge_explorer_3;
-	CachedEdgeExplorer edge_explorer_4;
-	EdgeExplorer edge_explorer_5;
+	EdgeExplorer edge_explorer_4;
+	CachedEdgeExplorer edge_explorer_5;
 	CachedEdgeExplorer edge_explorer_6;
 	CachedEdgeExplorer edge_explorer_7;
 	CachedEdgeExplorer edge_explorer_8;
@@ -74,29 +74,29 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 						edge_explorer = new CachedEdgeExplorer(this, 3, 0, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__SRC__javaField(); return (result instanceof org.emftext.language.java.members.Field ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaAttributeToUmlProperty) o).getTarget(); return (result instanceof uml.Property ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__TRG__umlProperty(); return (result instanceof uml.Property ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 4, 2, edge_explorer_4_methods);
+						edge_explorer_4_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Final).collect(Collectors.toList());
+						edge_explorer_4_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.members.Field) return edge_explorer_4_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_4 = new EdgeExplorer(this, 0, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.multi_lookup = (o) -> ((org.emftext.language.java.modifiers.AnnotableAndModifiable) o).getAnnotationsAndModifiers().stream().filter(obj -> obj instanceof org.emftext.language.java.modifiers.Final).collect(Collectors.toList());
-						edge_explorer_5_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.members.Field) return edge_explorer_5_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_5 = new EdgeExplorer(this, 0, 1, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__SRC__javaField(); return (result instanceof org.emftext.language.java.members.Field ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 4, 0, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
 						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCREATE__SRC__modifier(); return (result instanceof org.emftext.language.java.modifiers.Final ? result : null);};
 						edge_explorer_6 = new CachedEdgeExplorer(this, 4, 1, edge_explorer_6_methods);
 		name2explorer.put("edge_explorer_6", edge_explorer_6);
 		EdgeLookupMethods edge_explorer_7_methods = new EdgeLookupMethods();
-						edge_explorer_7_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaAttributeToUmlProperty) o).getTarget(); return (result instanceof uml.Property ? result : null);};
-						edge_explorer_7 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_7_methods);
+						edge_explorer_7_methods.unique_lookup = (o) -> ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__CORR__javaClassifierToUmlProperty();
+						edge_explorer_7 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_7_methods);
 		name2explorer.put("edge_explorer_7", edge_explorer_7);
 		EdgeLookupMethods edge_explorer_8_methods = new EdgeLookupMethods();
-						edge_explorer_8_methods.unique_lookup = (o) -> ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__CORR__javaClassifierToUmlProperty();
-						edge_explorer_8 = new CachedEdgeExplorer(this, 4, 3, edge_explorer_8_methods);
+						edge_explorer_8_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.FieldFinalToFinal__Marker) o).getCONTEXT__TRG__umlProperty(); return (result instanceof uml.Property ? result : null);};
+						edge_explorer_8 = new CachedEdgeExplorer(this, 4, 2, edge_explorer_8_methods);
 		name2explorer.put("edge_explorer_8", edge_explorer_8);
 	}
 	
@@ -145,7 +145,7 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 						// modifier
 						HMatch match_1 = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_5_1_orchestration, match_1);
+						start(edge_explorer_4_1_orchestration, match_1);
 					}
 				}
 				break;
@@ -156,14 +156,14 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 						// umlProperty
 						HMatch match_2 = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_4_1_orchestration, match_2);
+						start(edge_explorer_3_1_orchestration, match_2);
 					}
 				}
 				break;
 			case "JavaAttributeToUmlProperty_object_SP0": 
 				{
 					edge_explorer.registerSourceObject(objs[0]);
-					edge_explorer_7.registerSourceObject(objs[0]);
+					edge_explorer_3.registerSourceObject(objs[0]);
 					
 					// javaClassifierToUmlProperty
 					HMatch match_3 = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
@@ -173,15 +173,15 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 				break;
 			case "FieldFinalToFinal__Marker_object": 
 				{
-					edge_explorer_3.registerSourceObject(objs[0]);
-					edge_explorer_4.registerSourceObject(objs[0]);
+					edge_explorer_5.registerSourceObject(objs[0]);
 					edge_explorer_6.registerSourceObject(objs[0]);
+					edge_explorer_7.registerSourceObject(objs[0]);
 					edge_explorer_8.registerSourceObject(objs[0]);
 					
 					// FieldFinalToFinal_eMoflon_ProtocolNode
 					HMatch match_4 = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
 					match_4.getNodes()[4] = objs[0];
-					start(edge_explorer_3_1_orchestration, match_4);
+					start(edge_explorer_5_1_orchestration, match_4);
 				}
 				break;
 			default: throw new RuntimeException("Detected unknown match from " + msg.input.creator);
@@ -265,60 +265,30 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 				
 			}
 			break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__SRC__javaField_Field": 
+		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.members.Field) {
+				if(msg.target instanceof uml.Property) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
 					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[3] = msg.source;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof org.emftext.language.java.members.Field) {
+				if(msg.target instanceof uml.Property) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
 					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[0] = msg.target;
+					objs[3] = msg.source;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__TRG__umlProperty_Property": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Property) {
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.Property) {
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -335,7 +305,7 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					objs[0] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -349,9 +319,39 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					objs[0] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__SRC__javaField_Field": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.members.Field) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
 				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.members.Field) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
 				}
 				}
 				
@@ -374,34 +374,34 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 				
 			}
 			break;
-		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Property) {
-				{
-					edge_explorer_7.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[3] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_7_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
 		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
 			if(!lazy_initialization) {
 				{
-					edge_explorer_8.registerEdge(msg.source, msg.target);
+					edge_explorer_7.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[4] = msg.source;
 					objs[3] = msg.target;
 					currentDepth++;
+					start(edge_explorer_7_0_orchestration, match);
+					currentDepth--;
+				}
+				
+			}
+			break;
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__TRG__umlProperty_Property": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.Property) {
+				{
+					edge_explorer_8.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("FieldFinalToFinal__CONSISTENCY_388_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[4] = msg.source;
+					objs[2] = msg.target;
+					currentDepth++;
 					start(edge_explorer_8_0_orchestration, match);
 					currentDepth--;
+				}
 				}
 				
 			}
@@ -454,13 +454,13 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					}
 				}
 				break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__SRC__javaField_Field": 
+		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -472,7 +472,7 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -480,25 +480,23 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					}
 				}
 				break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__TRG__umlProperty_Property": 
-				edge_explorer_4.deregisterEdge(msg.source, msg.target);
+		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_5);
 					}
 				}
-				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
@@ -506,23 +504,25 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					}
 				}
 				break;
-		case "org.emftext.language.java.modifiers.AnnotableAndModifiable_annotationsAndModifiers_AnnotationInstanceOrModifier": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__SRC__javaField_Field": 
+				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_7);
 					}
 				}
+				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_8) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_8.add(m);
 					}
 					if(!toBeRemoved_8.isEmpty()) {
@@ -544,13 +544,13 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					}
 				}
 				break;
-		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
 				edge_explorer_7.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_10 = obj2matches.get(msg.source);
 				if(matches_10 != null && !matches_10.isEmpty()) {
 					Collection<HMatch> toBeRemoved_10 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_10) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_10.add(m);
 					}
 					if(!toBeRemoved_10.isEmpty()) {
@@ -558,13 +558,13 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 					}
 				}
 				break;
-		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__CORR__javaClassifierToUmlProperty_JavaAttributeToUmlProperty": 
+		case "Java2Uml.FieldFinalToFinal__Marker_CONTEXT__TRG__umlProperty_Property": 
 				edge_explorer_8.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_11 = obj2matches.get(msg.source);
 				if(matches_11 != null && !matches_11.isEmpty()) {
 					Collection<HMatch> toBeRemoved_11 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_11) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_11.add(m);
 					}
 					if(!toBeRemoved_11.isEmpty()) {
@@ -680,7 +680,7 @@ public class FieldFinalToFinal__CONSISTENCY_388_localSearch extends GenericLocal
 				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_2);
 			}
-			start(edge_explorer_4_1_orchestration, match_2);
+			start(edge_explorer_3_1_orchestration, match_2);
 		}
 		
 		message.initialMessage.decrement();

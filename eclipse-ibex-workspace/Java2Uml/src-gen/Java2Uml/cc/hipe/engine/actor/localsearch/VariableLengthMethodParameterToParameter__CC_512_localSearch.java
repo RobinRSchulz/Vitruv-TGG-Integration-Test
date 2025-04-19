@@ -47,8 +47,8 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 	ConstraintChecker constraint_checker_1;
 	EdgeExplorer edge_explorer;
 	CachedEdgeExplorer edge_explorer_3;
-	CachedEdgeExplorer edge_explorer_4;
-	EdgeExplorer edge_explorer_5;
+	EdgeExplorer edge_explorer_4;
+	CachedEdgeExplorer edge_explorer_5;
 	EdgeExplorer edge_explorer_6;
 	
 	SearchOrchestration edge_explorer_0_orchestration;
@@ -56,12 +56,12 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 	SearchOrchestration edge_explorer_2_orchestration;
 	SearchOrchestration edge_explorer_3_0_orchestration;
 	SearchOrchestration edge_explorer_3_1_orchestration;
-	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
+	SearchOrchestration edge_explorer_4_1_orchestration;
 	SearchOrchestration edge_explorer_5_0_orchestration;
 	SearchOrchestration edge_explorer_5_1_orchestration;
-	SearchOrchestration edge_explorer_5_2_orchestration;
 	SearchOrchestration edge_explorer_6_0_orchestration;
+	SearchOrchestration edge_explorer_6_1_orchestration;
 	
 	
 	@Override
@@ -73,27 +73,27 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 		constraint_checker_1 = new ConstraintChecker(this, this::constraint_checker_1_method);
 		name2explorer.put("constraint_checker_1", constraint_checker_1);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.multi_lookup = (o) -> ((org.emftext.language.java.parameters.Parametrizable) o).getParameters().stream().filter(obj -> obj instanceof org.emftext.language.java.parameters.VariableLengthParameter).collect(Collectors.toList());
-						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.members.ClassMethod) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer = new EdgeExplorer(this, 1, 3, edge_explorer_methods);
+						edge_explorer_methods.multi_lookup = (o) -> ((uml.BehavioralFeature) o).getOwnedParameter();
+						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Operation) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer = new EdgeExplorer(this, 2, 4, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
 						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getTarget(); return (result instanceof uml.Operation ? result : null);};
 						edge_explorer_3 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((uml.MultiplicityElement) o).getUpperValue(); return (result instanceof uml.LiteralUnlimitedNatural ? result : null);};
+						edge_explorer_4_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Parameter) return o.equals(edge_explorer_4_methods.unique_lookup.apply(result)) ? result : null; else return null;};
+						edge_explorer_4 = new EdgeExplorer(this, 4, 5, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((uml.MultiplicityElement) o).getUpperValue(); return (result instanceof uml.LiteralUnlimitedNatural ? result : null);};
-						edge_explorer_5_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Parameter) return o.equals(edge_explorer_5_methods.unique_lookup.apply(result)) ? result : null; else return null;};
-						edge_explorer_5 = new EdgeExplorer(this, 4, 5, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
-						edge_explorer_6_methods.multi_lookup = (o) -> ((uml.BehavioralFeature) o).getOwnedParameter();
-						edge_explorer_6_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Operation) return edge_explorer_6_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_6 = new EdgeExplorer(this, 2, 4, edge_explorer_6_methods);
+						edge_explorer_6_methods.multi_lookup = (o) -> ((org.emftext.language.java.parameters.Parametrizable) o).getParameters().stream().filter(obj -> obj instanceof org.emftext.language.java.parameters.VariableLengthParameter).collect(Collectors.toList());
+						edge_explorer_6_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.members.ClassMethod) return edge_explorer_6_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_6 = new EdgeExplorer(this, 1, 3, edge_explorer_6_methods);
 		name2explorer.put("edge_explorer_6", edge_explorer_6);
 	}
 	
@@ -104,12 +104,12 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 		edge_explorer_2_orchestration = initializeOrchestration(node.getOrchestrations().get(2).getPlan());
 		edge_explorer_3_0_orchestration = initializeOrchestration(node.getOrchestrations().get(3).getPlan());
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
-		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
-		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
+		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
+		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
 		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
 		edge_explorer_5_1_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
-		edge_explorer_5_2_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
-		edge_explorer_6_0_orchestration = initializeOrchestration(node.getOrchestrations().get(10).getPlan());
+		edge_explorer_6_0_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
+		edge_explorer_6_1_orchestration = initializeOrchestration(node.getOrchestrations().get(10).getPlan());
 	}
 	
 	@Override
@@ -128,7 +128,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 			case "JavaMethodToOperation_object_SP1": 
 				{
 					edge_explorer_3.registerSourceObject(objs[0]);
-					edge_explorer_4.registerSourceObject(objs[0]);
+					edge_explorer_5.registerSourceObject(objs[0]);
 					
 					// javaMethodToOperation
 					HMatch match_0 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
@@ -136,14 +136,14 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 					start(edge_explorer_3_1_orchestration, match_0);
 				}
 				break;
-			case "ClassMethod_object_SP0": 
+			case "ClassMethod_object_SP2": 
 				{
 					if(!lazy_initialization) {
 						
 						// javaParametrizable
 						HMatch match_1 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_1_orchestration, match_1);
+						start(edge_explorer_5_1_orchestration, match_1);
 					}
 				}
 				break;
@@ -154,7 +154,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 						// umlOperation
 						HMatch match_2 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_3_2_orchestration, match_2);
+						start(edge_explorer_1_orchestration, match_2);
 					}
 				}
 				break;
@@ -165,7 +165,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 						// parameter
 						HMatch match_3 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 						match_3.getNodes()[3] = objs[0];
-						start(edge_explorer_2_orchestration, match_3);
+						start(edge_explorer_6_1_orchestration, match_3);
 					}
 				}
 				break;
@@ -176,7 +176,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 						// umlParameter
 						HMatch match_4 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 						match_4.getNodes()[4] = objs[0];
-						start(edge_explorer_5_1_orchestration, match_4);
+						start(edge_explorer_2_orchestration, match_4);
 					}
 				}
 				break;
@@ -187,7 +187,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 						// upperValue
 						HMatch match_5 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 						match_5.getNodes()[5] = objs[0];
-						start(edge_explorer_5_2_orchestration, match_5);
+						start(edge_explorer_4_1_orchestration, match_5);
 					}
 				}
 				break;
@@ -206,7 +206,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 			case "JavaMethodToOperation_object_SP1": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "ClassMethod_object_SP0": 
+			case "ClassMethod_object_SP2": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			case "Operation_object_SP5": 
@@ -232,47 +232,41 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
+		case "uml.BehavioralFeature_ownedParameter_Parameter": 
 			if(!lazy_initialization) {
-				if(msg.source instanceof org.emftext.language.java.members.ClassMethod) {
-				if(msg.target instanceof org.emftext.language.java.parameters.VariableLengthParameter) {
+				if(msg.source instanceof uml.Operation) {
 				{
 					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[2] = msg.source;
+					objs[4] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				}
 				
-				if(msg.source instanceof org.emftext.language.java.members.ClassMethod) {
-				if(msg.target instanceof org.emftext.language.java.parameters.VariableLengthParameter) {
+				if(msg.source instanceof uml.Operation) {
 				{
 					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[2] = msg.source;
+					objs[4] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				}
 				
-				if(msg.source instanceof org.emftext.language.java.members.ClassMethod) {
-				if(msg.target instanceof org.emftext.language.java.parameters.VariableLengthParameter) {
+				if(msg.source instanceof uml.Operation) {
 				{
 					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
+					objs[2] = msg.source;
+					objs[4] = msg.target;
 					currentDepth++;
 					start(edge_explorer_0_orchestration, match);
 					currentDepth--;
-				}
 				}
 				}
 				
@@ -306,36 +300,6 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 				}
 				}
 				
-				if(msg.target instanceof uml.Operation) {
-				{
-					edge_explorer_3.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "Java2Uml.JavaMethodToOperation_source_Method": 
-			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
 			}
 			break;
 		case "uml.MultiplicityElement_upperValue_ValueSpecification": 
@@ -348,7 +312,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 					objs[4] = msg.source;
 					objs[5] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -362,21 +326,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 					objs[4] = msg.source;
 					objs[5] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof uml.Parameter) {
-				if(msg.target instanceof uml.LiteralUnlimitedNatural) {
-				{
-					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
-					Object[] objs = match.getNodes();
-					objs[4] = msg.source;
-					objs[5] = msg.target;
-					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -384,17 +334,63 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 				
 			}
 			break;
-		case "uml.BehavioralFeature_ownedParameter_Parameter": 
+		case "Java2Uml.JavaMethodToOperation_source_Method": 
 			if(!lazy_initialization) {
-				if(msg.source instanceof uml.Operation) {
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
+			if(!lazy_initialization) {
+				if(msg.source instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof org.emftext.language.java.parameters.VariableLengthParameter) {
 				{
 					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 					Object[] objs = match.getNodes();
-					objs[2] = msg.source;
-					objs[4] = msg.target;
+					objs[1] = msg.source;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_6_0_orchestration, match);
 					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof org.emftext.language.java.parameters.VariableLengthParameter) {
+				{
+					HMatch match = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
+					Object[] objs = match.getNodes();
+					objs[1] = msg.source;
+					objs[3] = msg.target;
+					currentDepth++;
+					start(edge_explorer_6_0_orchestration, match);
+					currentDepth--;
+				}
 				}
 				}
 				
@@ -410,12 +406,12 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
+		case "uml.BehavioralFeature_ownedParameter_Parameter": 
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
@@ -426,7 +422,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
@@ -437,7 +433,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -470,26 +466,24 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 						sendDeletedMatches(toBeRemoved_4);
 					}
 				}
-				edge_explorer_3.deregisterEdge(msg.source, msg.target);
+				break;
+		case "uml.MultiplicityElement_upperValue_ValueSpecification": 
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[5].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_5);
 					}
 				}
-				break;
-		case "Java2Uml.JavaMethodToOperation_source_Method": 
-				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[5].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
@@ -497,47 +491,49 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 					}
 				}
 				break;
-		case "uml.MultiplicityElement_upperValue_ValueSpecification": 
+		case "Java2Uml.JavaMethodToOperation_source_Method": 
+				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_7);
 					}
 				}
+				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_8) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_8.add(m);
 					}
 					if(!toBeRemoved_8.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_8);
 					}
 				}
+				break;
+		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
 				Collection<HMatch> matches_9 = obj2matches.get(msg.source);
 				if(matches_9 != null && !matches_9.isEmpty()) {
 					Collection<HMatch> toBeRemoved_9 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_9) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_9.add(m);
 					}
 					if(!toBeRemoved_9.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_9);
 					}
 				}
-				break;
-		case "uml.BehavioralFeature_ownedParameter_Parameter": 
 				Collection<HMatch> matches_10 = obj2matches.get(msg.source);
 				if(matches_10 != null && !matches_10.isEmpty()) {
 					Collection<HMatch> toBeRemoved_10 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_10) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_10.add(m);
 					}
 					if(!toBeRemoved_10.isEmpty()) {
@@ -658,6 +654,17 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
+		if(obj instanceof uml.Parameter) {
+			HMatch match_4 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
+			match_4.getNodes()[4] = obj;
+			Collection<HMatch> formerMatches_4 = obj2matches.get(obj);
+			if(formerMatches_4 != null) {
+				
+				formerMatches_4 = formerMatches_4.stream().filter(m -> !constraint_checker.check(m) || !constraint_checker_1.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_4);
+			}
+			start(edge_explorer_2_orchestration, match_4);
+		}
 		if(obj instanceof uml.LiteralUnlimitedNatural) {
 			HMatch match_5 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
 			match_5.getNodes()[5] = obj;
@@ -667,7 +674,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 				formerMatches_5 = formerMatches_5.stream().filter(m -> !constraint_checker_0.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_5);
 			}
-			start(edge_explorer_5_2_orchestration, match_5);
+			start(edge_explorer_4_1_orchestration, match_5);
 		}
 		if(obj instanceof org.emftext.language.java.parameters.VariableLengthParameter) {
 			HMatch match_3 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
@@ -678,18 +685,7 @@ public class VariableLengthMethodParameterToParameter__CC_512_localSearch extend
 				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker_1.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_3);
 			}
-			start(edge_explorer_2_orchestration, match_3);
-		}
-		if(obj instanceof uml.Parameter) {
-			HMatch match_4 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__CC_512_localSearch", 6);
-			match_4.getNodes()[4] = obj;
-			Collection<HMatch> formerMatches_4 = obj2matches.get(obj);
-			if(formerMatches_4 != null) {
-				
-				formerMatches_4 = formerMatches_4.stream().filter(m -> !constraint_checker.check(m) || !constraint_checker_1.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_4);
-			}
-			start(edge_explorer_5_1_orchestration, match_4);
+			start(edge_explorer_6_1_orchestration, match_3);
 		}
 		
 		message.initialMessage.decrement();

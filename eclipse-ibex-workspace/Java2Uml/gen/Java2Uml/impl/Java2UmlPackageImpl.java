@@ -71,14 +71,14 @@ import Java2Uml.VariableLengthMethodParameterToParameter__Marker;
 import Java2Uml.Java2UmlFactory;
 import Java2Uml.Java2UmlPackage;
 
-import org.emftext.language.java.types.TypesPackage;
-import org.emftext.language.java.classifiers.ClassifiersPackage;
-import org.emftext.language.java.modifiers.ModifiersPackage;
-import org.eclipse.uml2.uml.UMLPackage;
-import org.emftext.language.java.members.MembersPackage;
-import org.emftext.language.java.parameters.ParametersPackage;
 import runtime.RuntimePackage;
+import org.emftext.language.java.classifiers.ClassifiersPackage;
+import org.eclipse.uml2.uml.UMLPackage;
 import org.emftext.language.java.containers.ContainersPackage;
+import org.emftext.language.java.members.MembersPackage;
+import org.emftext.language.java.types.TypesPackage;
+import org.emftext.language.java.modifiers.ModifiersPackage;
+import org.emftext.language.java.parameters.ParametersPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -3243,14 +3243,14 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		setNsURI(eNS_URI);
 		
 		// Obtain other dependent packages
-		TypesPackage theTypesPackagePackage = TypesPackage.eINSTANCE;
-		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
-		ModifiersPackage theModifiersPackagePackage = ModifiersPackage.eINSTANCE;
-		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
-		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
-		ParametersPackage theParametersPackagePackage = ParametersPackage.eINSTANCE;
 		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
+		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
+		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
 		ContainersPackage theContainersPackagePackage = ContainersPackage.eINSTANCE;
+		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
+		TypesPackage theTypesPackagePackage = TypesPackage.eINSTANCE;
+		ModifiersPackage theModifiersPackagePackage = ModifiersPackage.eINSTANCE;
+		ParametersPackage theParametersPackagePackage = ParametersPackage.eINSTANCE;
 
 		// Create type parameters
 
@@ -4092,7 +4092,7 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		initEReference(getInterfaceMethodToMethod__Marker_CONTEXT__SRC__javaConcreteClassifier(), ClassifiersPackage.eINSTANCE.getInterface(),  null, 
 			"CONTEXT__SRC__javaConcreteClassifier", null, 1, 1, InterfaceMethodToMethod__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInterfaceMethodToMethod__Marker_CREATE__SRC__method(), MembersPackage.eINSTANCE.getClassMethod(),  null, 
+		initEReference(getInterfaceMethodToMethod__Marker_CREATE__SRC__method(), MembersPackage.eINSTANCE.getInterfaceMethod(),  null, 
 			"CREATE__SRC__method", null, 1, 1, InterfaceMethodToMethod__Marker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 			!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInterfaceMethodToMethod__Marker_CONTEXT__TRG__umlClassifier(), UMLPackage.eINSTANCE.getInterface(),  null, 

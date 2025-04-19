@@ -52,7 +52,7 @@ public class InterfaceMethodToMethod__SRC_744_localSearch extends GenericLocalSe
 	@Override
 	protected void initializeSearchComponents() {
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.multi_lookup = (o) -> ((org.emftext.language.java.members.MemberContainer) o).getMembers().stream().filter(obj -> obj instanceof org.emftext.language.java.members.ClassMethod).collect(Collectors.toList());
+						edge_explorer_methods.multi_lookup = (o) -> ((org.emftext.language.java.members.MemberContainer) o).getMembers().stream().filter(obj -> obj instanceof org.emftext.language.java.members.InterfaceMethod).collect(Collectors.toList());
 						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.classifiers.Interface) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
 						edge_explorer = new EdgeExplorer(this, 0, 1, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
@@ -88,7 +88,7 @@ public class InterfaceMethodToMethod__SRC_744_localSearch extends GenericLocalSe
 					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
-			case "ClassMethod_object_SP3": 
+			case "InterfaceMethod_object": 
 				{
 					if(!lazy_initialization) {
 						
@@ -114,7 +114,7 @@ public class InterfaceMethodToMethod__SRC_744_localSearch extends GenericLocalSe
 			case "Interface_1_object_SP2": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "ClassMethod_object_SP3": 
+			case "InterfaceMethod_object": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			default: throw new RuntimeException("Detected unknown match from " + msg.input.creator);
@@ -131,7 +131,7 @@ public class InterfaceMethodToMethod__SRC_744_localSearch extends GenericLocalSe
 		case "org.emftext.language.java.members.MemberContainer_members_Member": 
 			if(!lazy_initialization) {
 				if(msg.source instanceof org.emftext.language.java.classifiers.Interface) {
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof org.emftext.language.java.members.InterfaceMethod) {
 				{
 					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__SRC_744_localSearch", 2);
 					Object[] objs = match.getNodes();
@@ -145,7 +145,7 @@ public class InterfaceMethodToMethod__SRC_744_localSearch extends GenericLocalSe
 				}
 				
 				if(msg.source instanceof org.emftext.language.java.classifiers.Interface) {
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof org.emftext.language.java.members.InterfaceMethod) {
 				{
 					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__SRC_744_localSearch", 2);
 					Object[] objs = match.getNodes();
@@ -159,7 +159,7 @@ public class InterfaceMethodToMethod__SRC_744_localSearch extends GenericLocalSe
 				}
 				
 				if(msg.source instanceof org.emftext.language.java.classifiers.Interface) {
-				if(msg.target instanceof org.emftext.language.java.members.ClassMethod) {
+				if(msg.target instanceof org.emftext.language.java.members.InterfaceMethod) {
 				{
 					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__SRC_744_localSearch", 2);
 					Object[] objs = match.getNodes();

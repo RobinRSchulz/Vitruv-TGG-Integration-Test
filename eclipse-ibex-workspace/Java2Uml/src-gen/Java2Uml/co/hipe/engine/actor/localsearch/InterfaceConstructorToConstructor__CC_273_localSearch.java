@@ -602,17 +602,6 @@ public class InterfaceConstructorToConstructor__CC_273_localSearch extends Gener
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof org.emftext.language.java.members.Constructor) {
-			HMatch match_3 = new LocalSearchMatch("InterfaceConstructorToConstructor__CC_273_localSearch", 5);
-			match_3.getNodes()[3] = obj;
-			Collection<HMatch> formerMatches_3 = obj2matches.get(obj);
-			if(formerMatches_3 != null) {
-				
-				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_3);
-			}
-			start(edge_explorer_2_orchestration, match_3);
-		}
 		if(obj instanceof uml.Operation) {
 			HMatch match_4 = new LocalSearchMatch("InterfaceConstructorToConstructor__CC_273_localSearch", 5);
 			match_4.getNodes()[4] = obj;
@@ -623,6 +612,17 @@ public class InterfaceConstructorToConstructor__CC_273_localSearch extends Gener
 				sendDeletedMatches(formerMatches_4);
 			}
 			start(edge_explorer_5_1_orchestration, match_4);
+		}
+		if(obj instanceof org.emftext.language.java.members.Constructor) {
+			HMatch match_3 = new LocalSearchMatch("InterfaceConstructorToConstructor__CC_273_localSearch", 5);
+			match_3.getNodes()[3] = obj;
+			Collection<HMatch> formerMatches_3 = obj2matches.get(obj);
+			if(formerMatches_3 != null) {
+				
+				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_3);
+			}
+			start(edge_explorer_2_orchestration, match_3);
 		}
 		
 		message.initialMessage.decrement();

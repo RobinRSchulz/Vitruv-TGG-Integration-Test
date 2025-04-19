@@ -50,6 +50,10 @@ public class AbstractTest {
         view.commitChanges();
     }
 
+    void onlyView(View view, Consumer<View> viewFunction) {
+        viewFunction.accept(view);
+    }
+
     public void sleepKSeconds(long seconds, String message) {
         logger.info("Sleeping " + seconds + " seconds:" + message);
         try {

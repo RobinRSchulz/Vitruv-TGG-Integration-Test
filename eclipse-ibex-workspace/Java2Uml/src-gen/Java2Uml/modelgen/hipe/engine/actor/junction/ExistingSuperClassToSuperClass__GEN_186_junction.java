@@ -56,12 +56,12 @@ public class ExistingSuperClassToSuperClass__GEN_186_junction extends GenericJun
 	}
 	
 	public boolean check_constraint_17(HMatch match, int index) {
-		uml.Class umlClassifier = (uml.Class) match.getNodes()[2];
 		uml.Class umlGeneralClassifier = (uml.Class) match.getNodes()[5];
-		org.emftext.language.java.classifiers.Class javaConcreteClassifier = (org.emftext.language.java.classifiers.Class) match.getNodes()[1];
-		org.emftext.language.java.classifiers.Class superclassifier = (org.emftext.language.java.classifiers.Class) match.getNodes()[4];
+		uml.Class umlClassifier = (uml.Class) match.getNodes()[2];
 		Java2Uml.JavaClassifierToUmlClassifier javaClassifierToUmlClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[0];
 		Java2Uml.JavaClassifierToUmlClassifier javaSuperClassifierToUmlSuperClassifier = (Java2Uml.JavaClassifierToUmlClassifier) match.getNodes()[3];
+		org.emftext.language.java.classifiers.Class superclassifier = (org.emftext.language.java.classifiers.Class) match.getNodes()[4];
+		org.emftext.language.java.classifiers.Class javaConcreteClassifier = (org.emftext.language.java.classifiers.Class) match.getNodes()[1];
 		boolean predicate = !javaConcreteClassifier.equals(superclassifier) && !umlClassifier.equals(umlGeneralClassifier) && !javaClassifierToUmlClassifier.equals(javaSuperClassifierToUmlSuperClassifier);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

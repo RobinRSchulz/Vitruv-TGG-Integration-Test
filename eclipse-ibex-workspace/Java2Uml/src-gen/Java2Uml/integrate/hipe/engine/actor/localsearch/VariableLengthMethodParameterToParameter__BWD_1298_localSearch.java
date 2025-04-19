@@ -110,7 +110,7 @@ public class VariableLengthMethodParameterToParameter__BWD_1298_localSearch exte
 					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
-			case "ClassMethod_object_SP4": 
+			case "ClassMethod_object_SP5": 
 				{
 					if(!lazy_initialization) {
 						
@@ -151,7 +151,7 @@ public class VariableLengthMethodParameterToParameter__BWD_1298_localSearch exte
 			case "JavaMethodToOperation_object_SP5": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
-			case "ClassMethod_object_SP4": 
+			case "ClassMethod_object_SP5": 
 				removeMatchesUsedBy(match.getNodes()[0], 1);
 				break;
 			case "VariableLengthMethodParameterToParameter__TRG_1294_localSearch": 
@@ -436,17 +436,6 @@ public class VariableLengthMethodParameterToParameter__BWD_1298_localSearch exte
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof uml.LiteralUnlimitedNatural) {
-			HMatch match_4 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__BWD_1298_localSearch", 5);
-			match_4.getNodes()[4] = obj;
-			Collection<HMatch> formerMatches_4 = obj2matches.get(obj);
-			if(formerMatches_4 != null) {
-				
-				formerMatches_4 = formerMatches_4.stream().filter(m -> !constraint_checker_0.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_4);
-			}
-			start(pac_explorer_orchestration, match_4);
-		}
 		if(obj instanceof uml.Parameter) {
 			HMatch match_3 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__BWD_1298_localSearch", 5);
 			match_3.getNodes()[3] = obj;
@@ -457,6 +446,17 @@ public class VariableLengthMethodParameterToParameter__BWD_1298_localSearch exte
 				sendDeletedMatches(formerMatches_3);
 			}
 			start(pac_explorer_orchestration, match_3);
+		}
+		if(obj instanceof uml.LiteralUnlimitedNatural) {
+			HMatch match_4 = new LocalSearchMatch("VariableLengthMethodParameterToParameter__BWD_1298_localSearch", 5);
+			match_4.getNodes()[4] = obj;
+			Collection<HMatch> formerMatches_4 = obj2matches.get(obj);
+			if(formerMatches_4 != null) {
+				
+				formerMatches_4 = formerMatches_4.stream().filter(m -> !constraint_checker_0.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_4);
+			}
+			start(pac_explorer_orchestration, match_4);
 		}
 		
 		message.initialMessage.decrement();

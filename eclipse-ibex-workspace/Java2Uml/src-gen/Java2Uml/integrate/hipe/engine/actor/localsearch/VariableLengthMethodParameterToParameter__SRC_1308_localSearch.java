@@ -79,7 +79,7 @@ public class VariableLengthMethodParameterToParameter__SRC_1308_localSearch exte
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "ClassMethod_object_SP6": 
+			case "ClassMethod_object_SP7": 
 				{
 					
 					// javaParametrizable
@@ -111,7 +111,7 @@ public class VariableLengthMethodParameterToParameter__SRC_1308_localSearch exte
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "ClassMethod_object_SP6": 
+			case "ClassMethod_object_SP7": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
 			case "VariableLengthParameter_object": 

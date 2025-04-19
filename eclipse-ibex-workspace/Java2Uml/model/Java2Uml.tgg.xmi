@@ -7,7 +7,7 @@
       <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/ConcreteClassifier"/>
     </nodes>
     <nodes name="method" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2 //@rules.0/@edges.4" incomingCorrsSource="//@rules.0/@nodes.5">
-      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/Method"/>
     </nodes>
     <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.0/@edges.1" incomingCorrsTarget="//@rules.0/@nodes.4">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Classifier"/>
@@ -50,16 +50,19 @@
     <nodes name="javaConcreteClassifier">
       <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Class"/>
     </nodes>
+    <nodes name="method" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/ClassMethod"/>
+    </nodes>
     <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.1/@edges.1" outgoingEdges="//@rules.1/@edges.0">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
     </nodes>
     <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0" outgoingEdges="//@rules.1/@edges.1">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
     </nodes>
-    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.2">
+    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.3">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Class/ownedOperation"/>
     </edges>
-    <edges name="umlOperation__class__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.1">
+    <edges name="umlOperation__class__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.2">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation/class"/>
     </edges>
     <attributeConditionLibrary/>
@@ -68,16 +71,19 @@
     <nodes name="javaConcreteClassifier">
       <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//classifiers/Interface"/>
     </nodes>
+    <nodes name="method" bindingType="CREATE">
+      <type href="platform:/plugin/org.emftext.language.java/metamodel/java.ecore#//members/InterfaceMethod"/>
+    </nodes>
     <nodes name="umlClassifier" domainType="TRG" incomingEdges="//@rules.2/@edges.1" outgoingEdges="//@rules.2/@edges.0">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface"/>
     </nodes>
     <nodes name="umlOperation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.0" outgoingEdges="//@rules.2/@edges.1">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
     </nodes>
-    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.1" trgNode="//@rules.2/@nodes.2">
+    <edges name="umlClassifier__ownedOperation__umlOperation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.3">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Interface/ownedOperation"/>
     </edges>
-    <edges name="umlOperation__interface__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.1">
+    <edges name="umlOperation__interface__umlClassifier_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.2">
       <type href="platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore#//Operation/interface"/>
     </edges>
     <attributeConditionLibrary/>

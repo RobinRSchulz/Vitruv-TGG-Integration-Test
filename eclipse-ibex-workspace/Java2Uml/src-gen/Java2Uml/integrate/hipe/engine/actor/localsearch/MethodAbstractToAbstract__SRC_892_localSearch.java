@@ -79,7 +79,7 @@ public class MethodAbstractToAbstract__SRC_892_localSearch extends GenericLocalS
 		HMatch match = msg.input;
 		Object[] objs = match.getNodes();
 		switch(match.creator) {
-			case "ClassMethod_object_SP5": 
+			case "ClassMethod_object_SP3": 
 				{
 					
 					// javaMethod
@@ -111,7 +111,7 @@ public class MethodAbstractToAbstract__SRC_892_localSearch extends GenericLocalS
 
 		HMatch match = msg.input;
 		switch(match.creator) {
-			case "ClassMethod_object_SP5": 
+			case "ClassMethod_object_SP3": 
 				removeMatchesUsedBy(match.getNodes()[0], 0);
 				break;
 			case "Abstract_object_SP1": 

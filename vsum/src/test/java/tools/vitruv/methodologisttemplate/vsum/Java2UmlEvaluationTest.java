@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.uml2.uml.UMLFactory;
+import org.eclipse.uml2.uml.Parameter;
 import org.eclipse.uml2.uml.UMLPackage;
 import org.emftext.language.java.classifiers.Class;
 import org.emftext.language.java.classifiers.ClassifiersFactory;
@@ -13,17 +13,15 @@ import org.emftext.language.java.classifiers.Interface;
 import org.emftext.language.java.containers.CompilationUnit;
 import org.emftext.language.java.containers.ContainersFactory;
 import org.emftext.language.java.containers.Package;
-import org.emftext.language.java.members.EnumConstant;
-import org.emftext.language.java.members.Field;
-import org.emftext.language.java.members.MembersFactory;
+import org.emftext.language.java.members.*;
 import org.emftext.language.java.modifiers.Final;
 import org.emftext.language.java.modifiers.ModifiersFactory;
+import org.emftext.language.java.parameters.OrdinaryParameter;
+import org.emftext.language.java.parameters.ParametersFactory;
+import org.emftext.language.java.parameters.VariableLengthParameter;
 import org.emftext.language.java.types.ClassifierReference;
 import org.emftext.language.java.types.TypesFactory;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.*;
 import tools.vitruv.dsls.tgg.emoflonintegration.TGGChangePropagationSpecification;
 import tools.vitruv.framework.views.CommittableView;
 import tools.vitruv.framework.vsum.VirtualModel;
@@ -35,6 +33,9 @@ import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.assertFileContainsLines;
+import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.assertView;
+
+import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.*;
 
 /**
  * This represents (parts of) the evaluation, which for convenience, is implemented with junit.
@@ -49,20 +50,6 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         super("Java2UmlEvaluation");
     }
 
-    public void testBasicEvaluation() {
-//        Model2Factory.eINSTANCE.createEntity().
-//        UMLPackage.Literals.MODEL
-//        JavaFactory
-//        MembersFactory.eINSTANCE.createField()
-//        ClassifiersFactory.eINSTANCE.createClass().getAnnotationsAndModifiers();
-//        UMLFactory.eINSTANCE.createClass().createGeneralization(null);
-        UMLFactory.eINSTANCE.createParameter().getUpper();
-        UMLFactory.eINSTANCE.createLiteralBoolean();
-        UMLPackage.eINSTANCE.getPackage();
-    }
-
-
-//    public static final Path IBEX_PROJECT_ROOT = Path.of("C:\\Users\\XPS-15\\IdeaProjects\\Vitruv-TGG-Integration-Test\\eclipse-ibex-workspace\\Java2Uml");
     public static final Path IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Java2Uml");
     public static final Path CORR_RELATIVE_PATH =     Path.of("instances/corr.xmi");
     public static final Path PROTOCOL_RELATIVE_PATH = Path.of("instances/protocol.xmi");
@@ -71,6 +58,8 @@ public class Java2UmlEvaluationTest extends AbstractTest {
 
     private TGGChangePropagationSpecification currentCPS;
     private VirtualModel currentVsum;
+
+    private static final UMLPackage UML = UMLPackage.eINSTANCE;
 
     @BeforeAll
     static void setup() {
@@ -102,7 +91,7 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         SOURCE_MODEL_PATH_STRING = vitruviusProjectPath.resolve("java_instance.model").toString();
         currentCPS = new JavaToUmlCPS(
                 IBEX_PROJECT_ROOT.toFile(),
-                UMLPackage.eINSTANCE.getPackage(),
+                UML.getPackage(),
                 URI.createURI(TARGET_MODEL_PATH.toString()));
         currentVsum = createVirtualModel(currentCPS, vitruviusProjectPath);
     }
@@ -126,8 +115,11 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
-
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" name="peketsch"/>
+            """);
     }
+
     @Test
     void testJavaCompilationUnitToUmlModel() throws Exception {
         CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
@@ -149,7 +141,21 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
-
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch"/>""");
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Model name="UML_MODEL">
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+                <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+            </uml:Model>""");
     }
 
     @Test
@@ -178,6 +184,11 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(3, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch">
+                <packagedElement xsi:type="uml:Class" name="kless"/>
+            </uml:Package>""");
     }
     @Test
     void testInterfaceToUmlInterface() throws Exception {
@@ -197,7 +208,6 @@ public class Java2UmlEvaluationTest extends AbstractTest {
             Interface javaInterface = ClassifiersFactory.eINSTANCE.createInterface();
             javaInterface.setName("interfees");
             compilationUnit.getClassifiers().add(javaInterface);
-
         });
         view.update();
         view.close();
@@ -205,6 +215,10 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(3, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+                <uml:Package name="peketsch">
+                    <packagedElement xsi:type="uml:Interface" name="interfees"/>
+                </uml:Package>""");
     }
     @Test
     void testEnumToUmlEnum() throws Exception {
@@ -232,6 +246,10 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(3, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch">
+                <packagedElement xsi:type="uml:Enumeration" name="ehnumm"/>
+            </uml:Package>""");
     }
 
     @Test
@@ -266,6 +284,14 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        // split because serialization is not deterministic...
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch">
+                <packagedElement xsi:type="uml:Class" name="kless">""");
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+                    <ownedAttribute name="myField2"/>""");
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+                    <ownedAttribute name="myField"/>""");
     }
 
     @Test
@@ -300,6 +326,14 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        // split because serialization is not deterministic...
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch">
+                <packagedElement xsi:type="uml:Enumeration" name="ehnumm">""");
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+                    <ownedAttribute name="myField2"/>""");
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+                    <ownedAttribute name="myField"/>""");
     }
 
     @Test
@@ -468,12 +502,35 @@ public class Java2UmlEvaluationTest extends AbstractTest {
 //              </packagedElement>
 //              <packagedElement xsi:type="uml:Interface" name="superInterfees"/>
 //            </uml:Package>""");
-        assertFileContainsLines(TARGET_MODEL_PATH, """
-              <packagedElement xsi:type="uml:Interface" name="interfees">
-                <generalization general="/0/superInterfees"/>
-              </packagedElement>""");
-        assertFileContainsLines(TARGET_MODEL_PATH, """
-              <packagedElement xsi:type="uml:Interface" name="superInterfees"/>""");
+//        assertFileContainsLines(TARGET_MODEL_PATH, """
+//              <packagedElement xsi:type="uml:Interface" name="interfees">
+//                <generalization general="/0/superInterfees"/>
+//              </packagedElement>""");
+//        assertFileContainsLines(TARGET_MODEL_PATH, """
+//              <packagedElement xsi:type="uml:Interface" name="superInterfees"/>""");
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getInterface())
+                                            .expectFields(new FieldExpectation("name").expectValue("interfees"))
+                                            .expectChildren(new StrucFeatExpectation("generalization")
+                                                    .expectValues(new EObjectExpectation(UML.getGeneralization())
+                                                            .expectChildren(new StrucFeatExpectation("general")
+                                                                    .expectValues(new EObjectExpectation(UML.getInterface())
+                                                                            .expectFields(new FieldExpectation("name").expectValue("superInterfees"))
+                                                                    )
+
+                                                            )
+                                                    )
+                                            ),
+                                        new EObjectExpectation(UML.getInterface())
+                                                .expectFields(new FieldExpectation("name").expectValue("superInterfees"))
+                                )
+                        )
+        );
+        //TODO hat vor needs_paranoid_modifications=true noch funktioniert...
     }
 
     @Test
@@ -526,6 +583,27 @@ public class Java2UmlEvaluationTest extends AbstractTest {
               </packagedElement>""");
         assertFileContainsLines(TARGET_MODEL_PATH, """
               <packagedElement xsi:type="uml:Interface" name="interfees"/>""");
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getClass_())
+                                                .expectFields(new FieldExpectation("name").expectValue("kless"))
+                                                .expectChildren(new StrucFeatExpectation("interfaceRealization")
+                                                        .expectValues(new EObjectExpectation(UML.getInterfaceRealization())
+                                                                .expectChildren(new StrucFeatExpectation("contract")
+                                                                        .expectValues(new EObjectExpectation(UML.getInterface())
+                                                                                .expectFields(new FieldExpectation("name").expectValue("interfees"))
+                                                                        )
+
+                                                                )
+                                                        )
+                                                ),
+                                        new EObjectExpectation(UML.getInterface())
+                                                .expectFields(new FieldExpectation("name").expectValue("interfees"))
+                                )
+                        )
+        );
     }
 
     @Test
@@ -557,11 +635,781 @@ public class Java2UmlEvaluationTest extends AbstractTest {
         assertEquals(4, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+
+//        onlyView(getDefaultView(currentVsum), (View v) -> {
+//            //TODO make lib out of that...
+//
+//            org.eclipse.uml2.uml.Package umlPackage = (org.eclipse.uml2.uml.Package) v.getRootObjects().stream()
+//                    .filter(eObject -> eObject instanceof org.eclipse.uml2.uml.Package)
+//                    .findFirst().orElseThrow();
+//
+//            org.eclipse.uml2.uml.Enumeration umlEnum = (org.eclipse.uml2.uml.Enumeration) umlPackage.getPackagedElement("ehnumm");
+//            assertNotNull(umlEnum);
+//
+//            EnumerationLiteral enumerationLiteral = umlEnum.getOwnedLiteral("ehnummKonschtant");
+//            assertNotNull(enumerationLiteral);
+//        });
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(new EObjectExpectation(UML.getEnumeration())
+                                        .expectFields(new FieldExpectation("name").expectValue("ehnumm"))
+                                        .expectChildren(new StrucFeatExpectation("ownedLiteral")
+                                                .expectValues(new EObjectExpectation(UML.getEnumerationLiteral())
+                                                        .expectFields(new FieldExpectation("name").expectValue("ehnummKonschtant"))
+                                                )
+                                        )
+                                )
+                        )
+        );
+    }
+
+    @Test
+    void testClassMethodToMethod() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Method javaMethod = MembersFactory.eINSTANCE.createClassMethod();
+            javaMethod.setName("methed");
+            javaClass.getMembers().add(javaMethod);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(4, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
         assertFileContainsLines(TARGET_MODEL_PATH, """
-            <uml:Package name="peketsch">
-              <packagedElement xsi:type="uml:Enumeration" name="ehnumm">
-                <ownedLiteral name="ehnummKonschtant" classifier="/0/ehnumm"/>
-              </packagedElement>
-            </uml:Package>""");
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="methed"/>
+            </packagedElement>
+        </uml:Package>""");
+    }
+
+    @Test
+    void testInterfaceMethodToMethod() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Interface javaInterface = ClassifiersFactory.eINSTANCE.createInterface();
+            javaInterface.setName("interfees");
+            compilationUnit.getClassifiers().add(javaInterface);
+
+            Method javaMethod = MembersFactory.eINSTANCE.createInterfaceMethod();
+            javaMethod.setName("methed");
+            javaInterface.getMembers().add(javaMethod);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(4, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Interface" name="interfees">
+                <ownedOperation name="methed"/>
+            </packagedElement>
+        </uml:Package>""");
+    }
+
+    @Test
+    void testClassConstructorToConstructor() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Constructor javaConstructor = MembersFactory.eINSTANCE.createConstructor();
+            javaConstructor.setName("constructer");
+            javaClass.getMembers().add(javaConstructor);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(4, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="constructer"/>
+            </packagedElement>
+        </uml:Package>""");
+    }
+
+    @Test
+    void testVariableLengthConstructorParameter() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Constructor javaConstructor = MembersFactory.eINSTANCE.createConstructor();
+            javaConstructor.setName("constructer");
+            javaClass.getMembers().add(javaConstructor);
+
+            VariableLengthParameter parameter = ParametersFactory.eINSTANCE.createVariableLengthParameter();
+            parameter.setName("parrametr");
+            javaConstructor.getParameters().add(parameter);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="constructer">
+                    <ownedParameter name="parrametr">
+                        <lowerValue xsi:type="uml:LiteralInteger"/>
+                        <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+                    </ownedParameter>
+                </ownedOperation>
+            </packagedElement>
+          </uml:Package>""");
+    }
+
+    @Test
+    void testVariableLengthMethodParameter() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Method javaMethod = MembersFactory.eINSTANCE.createClassMethod();
+            javaMethod.setName("methed");
+            javaClass.getMembers().add(javaMethod);
+
+            VariableLengthParameter parameter = ParametersFactory.eINSTANCE.createVariableLengthParameter();
+            parameter.setName("parrametr");
+            javaMethod.getParameters().add(parameter);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="methed">
+                    <ownedParameter name="parrametr">
+                        <lowerValue xsi:type="uml:LiteralInteger"/>
+                        <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+                    </ownedParameter>
+                </ownedOperation>
+            </packagedElement>
+          </uml:Package>""");
+    }
+
+    @Test
+    void testOrdinaryConstructorParameter() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Constructor javaConstructor = MembersFactory.eINSTANCE.createConstructor();
+            javaConstructor.setName("constructer");
+            javaClass.getMembers().add(javaConstructor);
+
+            OrdinaryParameter parameter = ParametersFactory.eINSTANCE.createOrdinaryParameter();
+            parameter.setName("parrametr");
+            javaConstructor.getParameters().add(parameter);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="constructer">
+                    <ownedParameter name="parrametr"/>
+                </ownedOperation>
+            </packagedElement>
+          </uml:Package>""");
+    }
+
+    @Test
+    void testOrdinaryMethodParameter() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Method javaMethod = MembersFactory.eINSTANCE.createClassMethod();
+            javaMethod.setName("methed");
+            javaClass.getMembers().add(javaMethod);
+
+            OrdinaryParameter parameter = ParametersFactory.eINSTANCE.createOrdinaryParameter();
+            parameter.setName("parrametr");
+            javaMethod.getParameters().add(parameter);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="methed">
+                    <ownedParameter name="parrametr"/>
+                </ownedOperation>
+            </packagedElement>
+          </uml:Package>""");
+    }
+
+    @Test
+    void testConstructorClassParamType() throws Exception {
+        fail("EReference \"typeReference\" of Parameter (which extends TypedElement) only shows up as a proxy and cannot be resolved!");
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Constructor javaConstructor = MembersFactory.eINSTANCE.createConstructor();
+            javaConstructor.setName("constructer");
+            javaClass.getMembers().add(javaConstructor);
+
+            OrdinaryParameter parameter = ParametersFactory.eINSTANCE.createOrdinaryParameter();
+            parameter.setName("parrametr");
+            javaConstructor.getParameters().add(parameter);
+
+            ClassifierReference typeReference = TypesFactory.eINSTANCE.createClassifierReference();
+            parameter.setTypeReference(typeReference);
+            typeReference.setTarget(javaClass);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+        <uml:Package name="peketsch">
+            <packagedElement xsi:type="uml:Class" name="kless">
+                <ownedOperation name="constructer">
+                    <ownedParameter name="parrametr"/>
+                    TODO
+                </ownedOperation>
+            </packagedElement>
+          </uml:Package>""");
+    }
+
+    /*
+        --------------------------------------------------------------------------------------------------------------------------------------------------
+        -------------------------------------------- Subtractive Changes Test Cases ----------------------------------------------------------------------
+        --------------------------------------------------------------------------------------------------------------------------------------------------
+     */
+
+    /**
+     * Create a Package with a Class that contains
+     * <ul>
+     *     <li> a constructor with one parameter
+     *     <li> a method with one parameter
+     *     <li> a field
+     * </ul>
+     */
+    void setupSubtractiveClassTestCaseBaseExample() throws Exception {
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            // should trigger RootJavaPackageToUmlPackage + ClassToUmlClass
+            Package javaPackage = ContainersFactory.eINSTANCE.createPackage();
+            javaPackage.setName("peketsch");
+            v.registerRoot(
+                    javaPackage,
+                    URI.createURI(SOURCE_MODEL_PATH_STRING));
+            CompilationUnit compilationUnit = ContainersFactory.eINSTANCE.createCompilationUnit();
+            javaPackage.getCompilationUnits().add(compilationUnit);
+
+            Class javaClass = ClassifiersFactory.eINSTANCE.createClass();
+            javaClass.setName("kless");
+            compilationUnit.getClassifiers().add(javaClass);
+
+            Constructor javaConstructor = MembersFactory.eINSTANCE.createConstructor();
+            javaConstructor.setName("constructer");
+            javaClass.getMembers().add(javaConstructor);
+
+            OrdinaryParameter constructorParameter = ParametersFactory.eINSTANCE.createOrdinaryParameter();
+            constructorParameter.setName("parrametr");
+            javaConstructor.getParameters().add(constructorParameter);
+
+            Method javaMethod = MembersFactory.eINSTANCE.createClassMethod();
+            javaMethod.setName("methed");
+            javaClass.getMembers().add(javaMethod);
+
+            OrdinaryParameter methodParameter = ParametersFactory.eINSTANCE.createOrdinaryParameter();
+            constructorParameter.setName("parrametr");
+            javaMethod.getParameters().add(methodParameter);
+
+            Field field = MembersFactory.eINSTANCE.createField();
+            field.setName("myField");
+            javaClass.getMembers().add(field);
+        });
+        view.update();
+        view.close();
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(8, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+    }
+
+    @Test
+    void testJavaCompilationUnitDeleted() throws Exception {
+        setupSubtractiveClassTestCaseBaseExample();
+
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            javaPackage.getCompilationUnits().remove(0);
+        });
+        view.update();
+        view.close();
+        assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(7, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(7, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" name="peketsch"/>"""); // no idea but makes no real difference...
+    }
+
+    @Test
+    void testJavaClassDeleted() throws Exception {
+        setupSubtractiveClassTestCaseBaseExample();
+
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+            compilationUnit.getClassifiers().remove(0);
+        });
+        view.update();
+        view.close();
+        assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(6, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(6, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+        assertFileContainsLines(TARGET_MODEL_PATH, """
+            <uml:Package name="peketsch"/>""");
+    }
+
+    @Test
+    void testJavaClassImplementRemoved() throws Exception {
+        testClassImplementToClassImplement();
+
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+            Class javaClass = (Class) compilationUnit.getClassifiers().get(0);
+
+            javaClass.getImplements().remove(0);
+        });
+        view.update();
+        view.close();
+        assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getClass_())
+                                                .expectFields(new FieldExpectation("name").expectValue("kless")),
+                                        new EObjectExpectation(UML.getInterface())
+                                                .expectFields(new FieldExpectation("name").expectValue("interfees"))
+                                )
+                        )
+        );
+    }
+
+    @Test
+    void testSuperInterfaceRemoved() throws Exception {
+        testSuperInterfaceToSuperInterface();
+
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+
+            Interface javaInterface = (Interface) compilationUnit.getClassifiers().get(0);
+            javaInterface.getExtends().remove(0);
+
+        });
+        view.update();
+        view.close();
+        assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getInterface())
+                                                .expectFields(new FieldExpectation("name").expectValue("interfees"))
+                                                .expectChildren(new StrucFeatExpectation("generalization")
+                                                        //this is the interesting part
+                                                        .expectValuesNotPresent(new EObjectExpectation(UML.getGeneralization())
+                                                                .expectChildren(new StrucFeatExpectation("general")
+                                                                        .expectValues(new EObjectExpectation(UML.getInterface())
+                                                                                .expectFields(new FieldExpectation("name").expectValue("superInterfees"))
+                                                                        )
+
+                                                                )
+                                                        )
+                                                ),
+                                        new EObjectExpectation(UML.getInterface())
+                                                .expectFields(new FieldExpectation("name").expectValue("superInterfees"))
+                                )
+                        )
+        );
+    }
+
+    @Test
+    void testEnumConstantDeleted() throws Exception {
+        testEnumConstantToEnumLiteral();
+
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+
+            Enumeration javaEnum = (Enumeration) compilationUnit.getClassifiers().get(0);
+            javaEnum.getConstants().remove(0);
+
+        });
+        view.update();
+        view.close();
+        assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+//        assertFileContainsLines(TARGET_MODEL_PATH, """
+//            <uml:Package name="peketsch"/>""");
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(new EObjectExpectation(UML.getEnumeration())
+                                        .expectFields(new FieldExpectation("name").expectValue("ehnumm"))
+                                        .expectChildren(new StrucFeatExpectation("ownedLiteral")
+                                                .expectValuesNotPresent(new EObjectExpectation(UML.getEnumerationLiteral())
+                                                        .expectFields(new FieldExpectation("name").expectValue("ehnummKonschtant"))
+                                                )
+                                        )
+                                )
+                        )
+        );
+    }
+    @Test
+    void testEnumConstantRenamed() throws Exception {
+        testEnumConstantToEnumLiteral();
+
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+
+            Enumeration javaEnum = (Enumeration) compilationUnit.getClassifiers().get(0);
+            javaEnum.getConstants().get(0).setName("aCompletelyDifferentName");
+
+        });
+        view.update();
+        view.close();
+        assertEquals(2, currentCPS.getVitruviusTGGChangePropagationResults().size()); // one run has been made
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
+        assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
+//        assertFileContainsLines(TARGET_MODEL_PATH, """
+//            <uml:Package name="peketsch"/>""");
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(new EObjectExpectation(UML.getEnumeration())
+                                        .expectFields(new FieldExpectation("name").expectValue("ehnumm"))
+                                        .expectChildren(new StrucFeatExpectation("ownedLiteral")
+                                                .expectValues(new EObjectExpectation(UML.getEnumerationLiteral())
+                                                        .expectFields(new FieldExpectation("name").expectValue("aCompletelyDifferentName"))
+                                                )
+                                        )
+                                )
+                        )
+        );
+    }
+
+    @Test
+    void testJavaMemberDeleted() throws Exception {
+        setupSubtractiveClassTestCaseBaseExample();
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+
+            Class javaClass = (Class) compilationUnit.getClassifiers().get(0);
+            Field javaField = (Field) javaClass.getMembers().stream().filter(member -> member.getName().equals("myField")).findFirst().get();
+            javaClass.getMembers().remove(javaField);
+        });
+        view.update();
+        view.close();
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getClass_())
+                                                .expectFields(new FieldExpectation("name").expectValue("kless"))
+                                                .expectChildren(new StrucFeatExpectation("ownedOperation")
+                                                        .expectValuesNotPresent(new EObjectExpectation(UML.getProperty())
+                                                                .expectFields(new FieldExpectation("name").expectValue("myField"))
+                                                        )
+                                                        .expectValues(
+                                                                new EObjectExpectation(UML.getOperation())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("constructer")),
+                                                                new EObjectExpectation(UML.getOperation())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("methed"))
+                                                        )
+                                                )
+                                )
+                        )
+        );
+    }
+
+    @Test
+    void testJavaMemberDeletedComplex() throws Exception {
+        setupSubtractiveClassTestCaseBaseExample();
+
+        //TODO Problem (lässt sich hier beheben aber sollte man aufschreiben.)
+        /**
+         * Folgende Situation:
+         * Java-Modell:
+             <classifiers xsi:type="classifiers:Class" name="kless">
+                 <members xsi:type="members:Constructor" name="constructer">
+                    <parameters xsi:type="parameters:OrdinaryParameter" name="parrametr"/>
+                 </members>
+                 <members xsi:type="members:ClassMethod" name="methed">
+                    <parameters xsi:type="parameters:OrdinaryParameter"/>
+                 </members>
+                 <members xsi:type="members:Field" name="myField"/>
+             </classifiers>
+         * CORR-Modell:
+             <Java2Uml:JavaConstructorToOperation>
+                 <target xsi:type="uml:Operation" href="target\vsumexample\Java2UmlEvaluation\testJavaMemberDeleted\\uml_instance.model#/0/@packagedElement.0/@ownedOperation.0" />
+                 <source xsi:type="members:Constructor" href="target\vsumexample\Java2UmlEvaluation\testJavaMemberDeleted\java_instance.model#//@compilationUnits.0/@classifiers.0/@members.0" />
+             </Java2Uml:JavaConstructorToOperation>
+         *
+         * Wenn Man nun "constructer" löscht, versucht iBeX, die Korrespondenz, die zu constructor besteht, zu laden, und versucht,
+         * da einfach nur stumpf über @compilationUnits.0/@classifiers.0/@members.0 referenziert wird,
+         * die Methode methed als Constructor zu laden, was scheitert.
+         *
+         * Wären die beiden vom selben Typ, wäre die Correspondence jetzt verrutscht. --> Kapitaler Fehler in der Serialisierung der Korrespondenzen bei
+         */
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+
+            Class javaClass = (Class) compilationUnit.getClassifiers().get(0);
+            Constructor javaConstructor = (Constructor) javaClass.getMembers().stream().filter(member -> member.getName().equals("constructer")).findFirst().get();
+            javaClass.getMembers().remove(javaConstructor);
+        });
+        view.update();
+        view.close();
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getClass_())
+                                                .expectFields(new FieldExpectation("name").expectValue("kless"))
+                                                .expectChildren(new StrucFeatExpectation("ownedOperation")
+                                                        .expectValuesNotPresent(new EObjectExpectation(UML.getOperation())
+                                                                .expectFields(new FieldExpectation("name").expectValue("constructer"))
+                                                        )
+                                                        .expectValues(
+                                                                new EObjectExpectation(UML.getOperation())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("methed")),
+                                                                new EObjectExpectation(UML.getProperty())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("myField"))
+                                                        )
+                                                )
+                                )
+                        )
+        );
+    }
+
+    @Test
+    void testJavaParameterDeleted() throws Exception {
+        setupSubtractiveClassTestCaseBaseExample();
+        CommittableView view = getDefaultView(currentVsum).withChangeRecordingTrait();
+        // create changes and trigger change propagation
+        modifyView(view, (CommittableView v) -> {
+
+            Package javaPackage = (Package) v.getRootObjects().stream().findAny().orElseThrow();
+            CompilationUnit compilationUnit = javaPackage.getCompilationUnits().get(0);
+
+            Class javaClass = (Class) compilationUnit.getClassifiers().get(0);
+            Constructor javaConstructor = (Constructor) javaClass.getMembers().stream().filter(member -> member.getName().equals("constructer")).findFirst().get();
+
+            javaConstructor.getParameters().remove(0);
+        });
+        view.update();
+        view.close();
+
+        assertView(currentVsum,
+                new EObjectExpectation(UML.getPackage())
+                        .expectChildren(new StrucFeatExpectation("packagedElement")
+                                .expectValues(
+                                        new EObjectExpectation(UML.getClass_())
+                                                .expectFields(new FieldExpectation("name").expectValue("kless"))
+                                                .expectChildren(new StrucFeatExpectation("ownedOperation")
+                                                        .expectValuesNotPresent(
+                                                        )
+                                                        .expectValues(
+                                                                new EObjectExpectation(UML.getOperation())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("constructer"))
+                                                                        .expectChildren(new StrucFeatExpectation("ownedParameter")
+                                                                                // here is the interesting part
+                                                                                .expectValuesNotPresent(new EObjectExpectation(UML.getParameter())
+                                                                                        .expectFields(new FieldExpectation("name").expectValue("parrametr"))
+                                                                                )
+                                                                        ),
+                                                                new EObjectExpectation(UML.getOperation())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("methed")),
+                                                                new EObjectExpectation(UML.getProperty())
+                                                                        .expectFields(new FieldExpectation("name").expectValue("myField"))
+                                                        )
+                                                )
+                                )
+                        )
+        );
     }
 }
