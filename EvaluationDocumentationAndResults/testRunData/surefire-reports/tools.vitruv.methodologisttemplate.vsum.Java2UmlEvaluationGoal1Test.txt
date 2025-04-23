@@ -1,0 +1,101 @@
+-------------------------------------------------------------------------------
+Test set: tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test
+-------------------------------------------------------------------------------
+Tests run: 31, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 35.81 s <<< FAILURE! -- in tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test
+tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testAttributeTypeToPropertyType -- Time elapsed: 0.038 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: EReference "typeReference" of Field (which extends TypedElement) only shows up as a proxy and cannot be resolved!
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testAttributeTypeToPropertyType(Java2UmlEvaluationGoal1Test.java:289)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	Suppressed: java.nio.file.NoSuchFileException: ..\eclipse-ibex-workspace\Java2Uml\instances\corr.xmi
+		at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+		at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:108)
+		at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:282)
+		at java.base/java.nio.file.Files.copy(Files.java:1305)
+		at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.storeEvalData(AbstractEvaluationTest.java:104)
+		... 3 more
+	Suppressed: java.util.NoSuchElementException
+		at java.base/java.util.ArrayList.getLast(ArrayList.java:455)
+		at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.storeGlobalEvalData(AbstractEvaluationTest.java:114)
+		... 3 more
+
+tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testConstructorClassParamType -- Time elapsed: 0.022 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: EReference "typeReference" of Parameter (which extends TypedElement) only shows up as a proxy and cannot be resolved!
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testConstructorClassParamType(Java2UmlEvaluationGoal1Test.java:906)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	Suppressed: java.nio.file.NoSuchFileException: ..\eclipse-ibex-workspace\Java2Uml\instances\corr.xmi
+		at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+		at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:108)
+		at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:282)
+		at java.base/java.nio.file.Files.copy(Files.java:1305)
+		at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.storeEvalData(AbstractEvaluationTest.java:104)
+		... 3 more
+	Suppressed: java.util.NoSuchElementException
+		at java.base/java.util.ArrayList.getLast(ArrayList.java:455)
+		at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.storeGlobalEvalData(AbstractEvaluationTest.java:114)
+		... 3 more
+
+tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testJavaMemberDeletedComplex -- Time elapsed: 0.493 s <<< ERROR!
+java.lang.RuntimeException: Resource could not be loaded: If the following message is an Indexing error, the problem most likely is that some resource has not been loaded.Use the debugger and set a breakpoint in JDOMXmiParser::indexForeignResource. Original message:The value of type 'org.eclipse.emf.ecore.impl.EClassImpl@6f3f0fae (name: Field) (instanceClassName: null) (abstract: false, interface: false)' must be of type 'org.eclipse.emf.ecore.impl.EClassImpl@7428de63 (name: Method) (instanceClassName: null) (abstract: true, interface: false)' -- stacktrace above
+	at tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGResourceHandler.loadModels(VitruviusTGGResourceHandler.java:103)
+	at org.emoflon.ibex.tgg.operational.strategies.modules.TGGResourceHandler.loadRelevantModels(TGGResourceHandler.java:287)
+	at org.emoflon.ibex.tgg.operational.strategies.modules.TGGResourceHandler.initialize(TGGResourceHandler.java:94)
+	at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.initializeBasicModules(OperationalStrategy.java:88)
+	at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.<init>(OperationalStrategy.java:69)
+	at org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy.<init>(OperationalStrategy.java:64)
+	at org.emoflon.ibex.tgg.operational.strategies.PropagatingOperationalStrategy.<init>(PropagatingOperationalStrategy.java:30)
+	at org.emoflon.ibex.tgg.operational.strategies.sync.SYNC.<init>(SYNC.java:29)
+	at tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagationIbexEntrypoint.<init>(VitruviusTGGChangePropagationIbexEntrypoint.java:30)
+	at tools.vitruv.dsls.tgg.emoflonintegration.TGGChangePropagationSpecification.propagateChangesHandlingTargetModelRetrieval(TGGChangePropagationSpecification.java:248)
+	at tools.vitruv.dsls.tgg.emoflonintegration.TGGChangePropagationSpecification.propagateNonAtomicChange(TGGChangePropagationSpecification.java:149)
+	at tools.vitruv.change.propagation.impl.ChangePropagator$ChangePropagation.lambda$propagateNonAtomicChangeForChangePropagationSpecification$21(ChangePropagator.java:320)
+	at tools.vitruv.framework.vsum.internal.ResourceRepositoryImpl.recordChanges(ResourceRepositoryImpl.java:179)
+	at tools.vitruv.change.propagation.impl.ChangePropagator$ChangePropagation.propagateNonAtomicChangeForChangePropagationSpecification(ChangePropagator.java:323)
+	at tools.vitruv.change.propagation.impl.ChangePropagator$ChangePropagation.lambda$propagateNonAtomicChange$7(ChangePropagator.java:101)
+	at edu.kit.ipd.sdq.commons.util.java.lang.IterableUtil.flatMapFixedTo(IterableUtil.java:60)
+	at edu.kit.ipd.sdq.commons.util.java.lang.IterableUtil.flatMapFixed(IterableUtil.java:55)
+	at tools.vitruv.change.propagation.impl.ChangePropagator$ChangePropagation.propagateNonAtomicChange(ChangePropagator.java:103)
+	at tools.vitruv.change.propagation.impl.ChangePropagator$ChangePropagation.propagateChanges(ChangePropagator.java:63)
+	at tools.vitruv.change.propagation.impl.ChangePropagator.propagateChange(ChangePropagator.java:503)
+	at tools.vitruv.framework.vsum.internal.VirtualModelImpl.propagateChange(VirtualModelImpl.java:89)
+	at tools.vitruv.framework.views.impl.IdentityMappingViewType.commitViewChanges(IdentityMappingViewType.java:78)
+	at tools.vitruv.framework.views.impl.ChangeRecordingView.commitChanges(ChangeRecordingView.java:70)
+	at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.modifyView(AbstractEvaluationTest.java:166)
+	at tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testJavaMemberDeletedComplex(Java2UmlEvaluationGoal1Test.java:1283)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testFieldFinalToFinal -- Time elapsed: 0.017 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: EClass Final cannot be loaded because of a proxy resolution bug in eMoflon
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at tools.vitruv.methodologisttemplate.vsum.Java2UmlEvaluationGoal1Test.testFieldFinalToFinal(Java2UmlEvaluationGoal1Test.java:325)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	Suppressed: java.nio.file.NoSuchFileException: ..\eclipse-ibex-workspace\Java2Uml\instances\corr.xmi
+		at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+		at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+		at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:108)
+		at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:282)
+		at java.base/java.nio.file.Files.copy(Files.java:1305)
+		at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.storeEvalData(AbstractEvaluationTest.java:104)
+		... 3 more
+	Suppressed: java.util.NoSuchElementException
+		at java.base/java.util.ArrayList.getLast(ArrayList.java:455)
+		at tools.vitruv.methodologisttemplate.vsum.AbstractEvaluationTest.storeGlobalEvalData(AbstractEvaluationTest.java:114)
+		... 3 more
+

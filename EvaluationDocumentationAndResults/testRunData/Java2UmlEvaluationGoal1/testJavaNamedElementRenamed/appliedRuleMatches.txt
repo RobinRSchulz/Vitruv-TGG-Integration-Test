@@ -1,0 +1,59 @@
+============================================= [Change Propagation run 1] =============================================
+[JavaFirstCompilationUnitToUmlModel]: 
+  - EChanges: 
+    - [CreateEObject] AE=CompilationUnit:414b2df5, name=null
+    - [InsertEReference] AE=Package:1d91fa02, name=peketsch
+[OrdinaryMethodParameterToParameter]: 
+  - EChanges: 
+    - [CreateEObject] AE=OrdinaryParameter:2f15a964, name=null
+    - [InsertEReference] AE=ClassMethod:3e9beef2, name=methed
+[RootJavaPackageToUmlPackage]: 
+  - EChanges: 
+    - [CreateEObject] AE=Package:1d91fa02, name=peketsch
+    - [InsertRootEObject] AE=Package:1d91fa02, name=peketsch
+[ClassToUmlClass]: 
+  - EChanges: 
+    - [CreateEObject] AE=Class:9e30f9a, name=kless_new_name
+    - [InsertEReference] AE=CompilationUnit:414b2df5, name=null
+[ClassAttributeToProperty]: 
+  - EChanges: 
+    - [CreateEObject] AE=Field:3111631d, name=myField
+    - [InsertEReference] AE=Class:9e30f9a, name=kless_new_name
+[ClassConstructorToConstructor]: 
+  - EChanges: 
+    - [InsertEReference] AE=Class:9e30f9a, name=kless_new_name
+    - [CreateEObject] AE=Constructor:1b30a54e, name=constructer
+[ClassMethodToMethod]: 
+  - EChanges: 
+    - [InsertEReference] AE=Class:9e30f9a, name=kless_new_name
+    - [CreateEObject] AE=ClassMethod:3e9beef2, name=methed
+[OrdinaryConstructorParameterToParameter]: 
+  - EChanges: 
+    - [CreateEObject] AE=OrdinaryParameter:26275b46, name=parrametr_new_name
+    - [InsertEReference] AE=Constructor:1b30a54e, name=constructer
+
+============================================= [Change Propagation run 2] =============================================
+[ClassAttributeToProperty]: 
+  - EChanges: 
+    - [CreateEObject] AE=Field:3111631d, name=myField
+    - [InsertEReference] AE=Class:9e30f9a, name=kless_new_name
+[OrdinaryMethodParameterToParameter]: 
+  - EChanges: 
+    - [CreateEObject] AE=OrdinaryParameter:2f15a964, name=null
+    - [InsertEReference] AE=ClassMethod:3e9beef2, name=methed
+[ClassConstructorToConstructor]: 
+  - EChanges: 
+    - [CreateEObject] AE=Constructor:1b30a54e, name=constructer
+    - [InsertEReference] AE=Class:9e30f9a, name=kless_new_name
+[ClassMethodToMethod]: 
+  - EChanges: 
+    - [CreateEObject] AE=ClassMethod:3e9beef2, name=methed
+    - [InsertEReference] AE=Class:9e30f9a, name=kless_new_name
+[OrdinaryConstructorParameterToParameter]: 
+  - EChanges: 
+    - [CreateEObject] AE=OrdinaryParameter:26275b46, name=parrametr_new_name
+    - [InsertEReference] AE=Constructor:1b30a54e, name=constructer
+[ClassToUmlClass]: 
+  - EChanges: 
+    - [InsertEReference] AE=CompilationUnit:414b2df5, name=null
+    - [CreateEObject] AE=Class:9e30f9a, name=kless_new_name

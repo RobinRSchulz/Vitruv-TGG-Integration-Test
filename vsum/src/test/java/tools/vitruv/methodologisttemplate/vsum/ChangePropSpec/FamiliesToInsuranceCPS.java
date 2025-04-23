@@ -38,7 +38,7 @@ public class FamiliesToInsuranceCPS extends TGGChangePropagationSpecification {
         super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
-                ibexProjectPath, targetRootEclass, targetRootURI);
+                ibexProjectPath, Set.of(targetRootEclass), targetRootURI);
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 FamiliesPackageImpl.eNS_URI,
                 FamiliesPackageImpl.eINSTANCE

@@ -1,0 +1,35 @@
+============================================= [Change Propagation run 1] =============================================
+[JavaFirstCompilationUnitToUmlModel]: 
+  - EChanges: 
+    - [CreateEObject] AE=CompilationUnit:15c5c99, name=null
+    - [InsertEReference] AE=Package:4d2cd74, name=peketsch
+[ClassToUmlClass]: 
+  - EChanges: 
+    - [InsertEReference] AE=CompilationUnit:15c5c99, name=null
+    - [CreateEObject] AE=Class:32cbb8c6, name=kless
+[ClassConstructorToConstructor]: 
+  - EChanges: 
+    - [InsertEReference] AE=Class:32cbb8c6, name=kless
+    - [CreateEObject] AE=Constructor:20e06a86, name=constructer
+[RootJavaPackageToUmlPackage]: 
+  - EChanges: 
+    - [CreateEObject] AE=Package:4d2cd74, name=peketsch
+    - [InsertRootEObject] AE=Package:4d2cd74, name=peketsch
+[ClassAttributeToProperty]: 
+  - EChanges: 
+    - [CreateEObject] AE=Field:639f7054, name=myField
+    - [InsertEReference] AE=Class:32cbb8c6, name=kless
+[OrdinaryConstructorParameterToParameter]: 
+  - EChanges: 
+    - [InsertEReference] AE=Constructor:20e06a86, name=constructer
+    - [CreateEObject] AE=OrdinaryParameter:4c3133a1, name=parrametr
+[ClassMethodToMethod]: 
+  - EChanges: 
+    - [CreateEObject] AE=ClassMethod:2fea162a, name=methed
+    - [InsertEReference] AE=Class:32cbb8c6, name=kless
+[OrdinaryMethodParameterToParameter]: 
+  - EChanges: 
+    - [InsertEReference] AE=ClassMethod:2fea162a, name=methed
+    - [CreateEObject] AE=OrdinaryParameter:40889699, name=null
+
+============================================= [Change Propagation run 2] =============================================

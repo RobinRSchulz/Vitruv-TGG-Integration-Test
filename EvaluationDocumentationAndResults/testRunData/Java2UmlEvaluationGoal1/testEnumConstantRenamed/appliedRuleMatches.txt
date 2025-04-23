@@ -1,0 +1,23 @@
+============================================= [Change Propagation run 1] =============================================
+[EnumConstantToEnumConstant]: 
+  - EChanges: 
+    - [InsertEReference] AE=Enumeration:165634aa, name=ehnumm
+    - [CreateEObject] AE=EnumConstant:1c2503d2, name=aCompletelyDifferentName
+[JavaFirstCompilationUnitToUmlModel]: 
+  - EChanges: 
+    - [InsertEReference] AE=Package:7f9ebcfe, name=peketsch
+    - [CreateEObject] AE=CompilationUnit:712adc04, name=null
+[EnumToUmlEnum]: 
+  - EChanges: 
+    - [CreateEObject] AE=Enumeration:165634aa, name=ehnumm
+    - [InsertEReference] AE=CompilationUnit:712adc04, name=null
+[RootJavaPackageToUmlPackage]: 
+  - EChanges: 
+    - [InsertRootEObject] AE=Package:7f9ebcfe, name=peketsch
+    - [CreateEObject] AE=Package:7f9ebcfe, name=peketsch
+
+============================================= [Change Propagation run 2] =============================================
+[EnumConstantToEnumConstant]: 
+  - EChanges: 
+    - [CreateEObject] AE=EnumConstant:1c2503d2, name=aCompletelyDifferentName
+    - [InsertEReference] AE=Enumeration:165634aa, name=ehnumm

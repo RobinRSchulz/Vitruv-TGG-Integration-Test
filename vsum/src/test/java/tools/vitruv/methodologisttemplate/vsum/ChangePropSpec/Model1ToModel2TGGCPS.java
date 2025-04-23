@@ -37,7 +37,7 @@ public class Model1ToModel2TGGCPS extends TGGChangePropagationSpecification {
         super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
-                ibexProjectPath, targetRootEclass, targetRootURI);
+                ibexProjectPath, Set.of(targetRootEclass), targetRootURI);
         logger.debug("In Constructor for Model1Model2TGGChangePropagationSpecification.");
         logger.debug("Ensuring Metamodels being registered: \n  - src NS_URI: "
                 + tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI

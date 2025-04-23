@@ -35,7 +35,7 @@ public class Model2ToModel1TGGCPS extends TGGChangePropagationSpecification {
         super(TRGMetamodelDescriptor, SRCMetamodelDescriptor,  //we propagate from model2 to model1!
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 targetMetamodelPlatformUri, sourceMetamodelPlatformUri,
-                ibexProjectPath, targetRootEclass, targetRootURI);
+                ibexProjectPath, Set.of(targetRootEclass), targetRootURI);
 
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI,

@@ -14,6 +14,10 @@ Since this depends on eMoflon, we need at least a Java-21-SDK
     ```
     mvnw clean install
     ```
+* Reproduce the evaluation results (Build will be green although test failures are present, to be able to generate the surefire report site (evaluationReport.html))
+    ```
+    mvnw clean test -Dtest=Java2UmlEvaluationGoal2Test -Dmaven.test.failure.ignore=true
+    ```
 * Debug with IntelliJ
   1. Set a breakpoint
   2. Make sure to debug the forked surefire process, not the maven process. 

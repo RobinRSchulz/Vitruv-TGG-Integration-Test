@@ -1,0 +1,21 @@
+============================================= [Change Propagation run 1] =============================================
+[ClassConstructorToConstructor]: 
+  - EChanges: 
+    - [CreateEObject] AE=Constructor:42ec207f, name=constructer
+    - [InsertEReference] AE=Class:42f7523d, name=kless
+[VariableLengthConstructorParameterToParameter]: 
+  - EChanges: 
+    - [CreateEObject] AE=VariableLengthParameter:580cb668, name=parrametr
+    - [InsertEReference] AE=Constructor:42ec207f, name=constructer
+[RootJavaPackageToUmlPackage]: 
+  - EChanges: 
+    - [CreateEObject] AE=Package:450897d, name=peketsch
+    - [InsertRootEObject] AE=Package:450897d, name=peketsch
+[JavaFirstCompilationUnitToUmlModel]: 
+  - EChanges: 
+    - [CreateEObject] AE=CompilationUnit:23497000, name=null
+    - [InsertEReference] AE=Package:450897d, name=peketsch
+[ClassToUmlClass]: 
+  - EChanges: 
+    - [CreateEObject] AE=Class:42f7523d, name=kless
+    - [InsertEReference] AE=CompilationUnit:23497000, name=null

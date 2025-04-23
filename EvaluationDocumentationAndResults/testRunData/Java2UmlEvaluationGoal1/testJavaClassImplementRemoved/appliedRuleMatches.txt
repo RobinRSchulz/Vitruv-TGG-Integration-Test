@@ -1,0 +1,28 @@
+============================================= [Change Propagation run 1] =============================================
+[RootJavaPackageToUmlPackage]: 
+  - EChanges: 
+    - [CreateEObject] AE=Package:665e18d5, name=peketsch
+    - [InsertRootEObject] AE=Package:665e18d5, name=peketsch
+[JavaFirstCompilationUnitToUmlModel]: 
+  - EChanges: 
+    - [CreateEObject] AE=CompilationUnit:40874f54, name=null
+    - [InsertEReference] AE=Package:665e18d5, name=peketsch
+[ClassToUmlClass]: 
+  - EChanges: 
+    - [CreateEObject] AE=Class:56897de0, name=kless
+    - [InsertEReference] AE=CompilationUnit:5c8859b4, name=null
+[JavaFirstCompilationUnitToUmlModel]: 
+  - EChanges: 
+    - [CreateEObject] AE=CompilationUnit:5c8859b4, name=null
+    - [InsertEReference] AE=Package:665e18d5, name=peketsch
+[InterfaceToUmlInterface]: 
+  - EChanges: 
+    - [InsertEReference] AE=CompilationUnit:40874f54, name=null
+    - [CreateEObject] AE=Interface:2bc21edd, name=interfees
+[ExistingClassImplementToClassImplement]: 
+  - EChanges: 
+    - [InsertEReference] AE=ClassifierReference:3599b7e8
+    - [InsertEReference] AE=Class:56897de0, name=kless
+    - [CreateEObject] AE=ClassifierReference:3599b7e8
+
+============================================= [Change Propagation run 2] =============================================
