@@ -28,8 +28,8 @@ import hipe.generic.actor.junction.GenericJunctionActor;
 import hipe.network.JunctionNode;
 
 public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctionActor{
-	private Map<Object, Collection<HMatch>> namedElement_42_AttrMap = HiPEMultiUtil.createMap();
-	private Map<Object, Collection<HMatch>> namedElement_43_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_6_AttrMap = HiPEMultiUtil.createMap();
+	private Map<Object, Collection<HMatch>> namedElement_7_AttrMap = HiPEMultiUtil.createMap();
 	
 	@Override
 	protected void initializePorts(Map<String, ActorRef> name2actor, JunctionNode node) {
@@ -42,32 +42,32 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 	@Override
 	protected void registerMatchForAttributeChanges(HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> namedElement_1_Matches = namedElement_42_AttrMap.get(matchObjects[1]);
-		if(namedElement_1_Matches == null) {
-			namedElement_1_Matches = new LinkedList<>();
-			namedElement_42_AttrMap.put(matchObjects[1], namedElement_1_Matches);
-		}
-		
-		namedElement_1_Matches.add(match);
-		
-		Collection<HMatch> namedElement_0_Matches = namedElement_43_AttrMap.get(matchObjects[0]);
+		Collection<HMatch> namedElement_0_Matches = namedElement_6_AttrMap.get(matchObjects[0]);
 		if(namedElement_0_Matches == null) {
 			namedElement_0_Matches = new LinkedList<>();
-			namedElement_43_AttrMap.put(matchObjects[0], namedElement_0_Matches);
+			namedElement_6_AttrMap.put(matchObjects[0], namedElement_0_Matches);
 		}
 		
 		namedElement_0_Matches.add(match);
+		
+		Collection<HMatch> namedElement_1_Matches = namedElement_7_AttrMap.get(matchObjects[1]);
+		if(namedElement_1_Matches == null) {
+			namedElement_1_Matches = new LinkedList<>();
+			namedElement_7_AttrMap.put(matchObjects[1], namedElement_1_Matches);
+		}
+		
+		namedElement_1_Matches.add(match);
 		
 	}
 	
 	@Override
 	protected void deregisterMatchForAttributeChanges(Set<HMatch> matches, HMatch match) {
 		Object[] matchObjects = match.getNodes();
-		Collection<HMatch> matches_0 = namedElement_42_AttrMap.get(matchObjects[1]);
+		Collection<HMatch> matches_0 = namedElement_6_AttrMap.get(matchObjects[0]);
 		if(matches_0 != null) {
 			matches_0.remove(match);
 		}
-		Collection<HMatch> matches_1 = namedElement_43_AttrMap.get(matchObjects[0]);
+		Collection<HMatch> matches_1 = namedElement_7_AttrMap.get(matchObjects[1]);
 		if(matches_1 != null) {
 			matches_1.remove(match);
 		}
@@ -80,9 +80,9 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof uml.NamedElement) {
-			if(namedElement_42_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_42_AttrMap.get(obj)) {
+		if(obj instanceof org.emftext.language.java.commons.NamedElement) {
+			if(namedElement_6_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_6_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;
@@ -99,9 +99,9 @@ public class RootJavaPackageToUmlPackage__CC_469_junction extends GenericJunctio
 				}
 			}
 		}
-		if(obj instanceof org.emftext.language.java.commons.NamedElement) {
-			if(namedElement_43_AttrMap.containsKey(obj)) {
-				for(HMatch attr_match : namedElement_43_AttrMap.get(obj)) {
+		if(obj instanceof uml.NamedElement) {
+			if(namedElement_7_AttrMap.containsKey(obj)) {
+				for(HMatch attr_match : namedElement_7_AttrMap.get(obj)) {
 					for(int i=0; i<ports.size(); i++) {
 						Port<HMatch> port = ports.get(i);
 						HMatch match = attr_match;

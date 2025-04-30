@@ -25,10 +25,10 @@ import java.nio.file.Path;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.assertFileContainsLines;
-import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.assertView;
+import static tools.vitruv.methodologisttemplate.vsum.util.TGGResultAssertions.assertFileContainsLines;
+import static tools.vitruv.methodologisttemplate.vsum.util.TGGResultAssertions.assertView;
 
-import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.*;
+import static tools.vitruv.methodologisttemplate.vsum.util.TGGResultAssertions.*;
 
 /**
  * This represents (parts of) the evaluation, which for convenience, is implemented with junit.
@@ -37,7 +37,7 @@ import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.*;
 public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
     static Logger logger = Logger.getLogger(Java2UmlEvaluationGoal1Test.class);
 
-    public Java2UmlEvaluationGoal1Test() {
+    public Java2UmlEvaluationGoal1Test() throws InterruptedException {
         super("Java2UmlEvaluationGoal1", Set.of(UML.getPackage()));
         IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Java2Uml");
     }

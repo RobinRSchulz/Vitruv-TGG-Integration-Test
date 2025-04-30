@@ -632,17 +632,6 @@ public class ClassToUmlClass__CC_81_localSearch extends GenericLocalSearchActor{
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof uml.Class) {
-			HMatch match_5 = new LocalSearchMatch("ClassToUmlClass__CC_81_localSearch", 6);
-			match_5.getNodes()[5] = obj;
-			Collection<HMatch> formerMatches_5 = obj2matches.get(obj);
-			if(formerMatches_5 != null) {
-				
-				formerMatches_5 = formerMatches_5.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_5);
-			}
-			start(edge_explorer_5_2_orchestration, match_5);
-		}
 		if(obj instanceof org.emftext.language.java.classifiers.Class) {
 			HMatch match_4 = new LocalSearchMatch("ClassToUmlClass__CC_81_localSearch", 6);
 			match_4.getNodes()[4] = obj;
@@ -653,6 +642,17 @@ public class ClassToUmlClass__CC_81_localSearch extends GenericLocalSearchActor{
 				sendDeletedMatches(formerMatches_4);
 			}
 			start(edge_explorer_2_orchestration, match_4);
+		}
+		if(obj instanceof uml.Class) {
+			HMatch match_5 = new LocalSearchMatch("ClassToUmlClass__CC_81_localSearch", 6);
+			match_5.getNodes()[5] = obj;
+			Collection<HMatch> formerMatches_5 = obj2matches.get(obj);
+			if(formerMatches_5 != null) {
+				
+				formerMatches_5 = formerMatches_5.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_5);
+			}
+			start(edge_explorer_5_2_orchestration, match_5);
 		}
 		
 		message.initialMessage.decrement();

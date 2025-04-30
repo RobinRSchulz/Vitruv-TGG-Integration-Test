@@ -63,24 +63,12 @@ public class DispatchActor extends AbstractActor {
 	}
 	
 	private void initializeAdd() {
-		type2addConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamilyRegister(), obj -> {
-			edu.kit.ipd.sdq.metamodels.families.FamilyRegister _familyregister = (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) obj;
+		type2addConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase(), obj -> {
+			Families2Insurance.FamilyRegisterToInsuranceDatabase _familyregistertoinsurancedatabase = (Families2Insurance.FamilyRegisterToInsuranceDatabase) obj;
 			incUtil.newMessage();
-			name2actor.get("FamilyRegister_object_SP0").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, _familyregister), getSelf());
+			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP0").tell(new ObjectAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase>(incUtil, _familyregistertoinsurancedatabase), getSelf());
 			incUtil.newMessage();
-			name2actor.get("FamilyRegister_object_SP1").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, _familyregister), getSelf());
-		});
-		type2addConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamily(), obj -> {
-			edu.kit.ipd.sdq.metamodels.families.Family _family = (edu.kit.ipd.sdq.metamodels.families.Family) obj;
-			incUtil.newMessage();
-			name2actor.get("Family_object").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.families.Family>(incUtil, _family), getSelf());
-		});
-		type2addConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase(), obj -> {
-			Something2Else.FamilyRegisterToInsuranceDatabase _familyregistertoinsurancedatabase = (Something2Else.FamilyRegisterToInsuranceDatabase) obj;
-			incUtil.newMessage();
-			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP0").tell(new ObjectAdded<Something2Else.FamilyRegisterToInsuranceDatabase>(incUtil, _familyregistertoinsurancedatabase), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP1").tell(new ObjectAdded<Something2Else.FamilyRegisterToInsuranceDatabase>(incUtil, _familyregistertoinsurancedatabase), getSelf());
+			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP1").tell(new ObjectAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase>(incUtil, _familyregistertoinsurancedatabase), getSelf());
 		});
 		type2addConsumer.put(edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage.eINSTANCE.getInsuranceDatabase(), obj -> {
 			edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase _insurancedatabase = (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) obj;
@@ -89,26 +77,24 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("InsuranceDatabase_object_SP1").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, _insurancedatabase), getSelf());
 		});
+		type2addConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamily(), obj -> {
+			edu.kit.ipd.sdq.metamodels.families.Family _family = (edu.kit.ipd.sdq.metamodels.families.Family) obj;
+			incUtil.newMessage();
+			name2actor.get("Family_object").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.families.Family>(incUtil, _family), getSelf());
+		});
+		type2addConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamilyRegister(), obj -> {
+			edu.kit.ipd.sdq.metamodels.families.FamilyRegister _familyregister = (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) obj;
+			incUtil.newMessage();
+			name2actor.get("FamilyRegister_object_SP0").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, _familyregister), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FamilyRegister_object_SP1").tell(new ObjectAdded<edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, _familyregister), getSelf());
+		});
 	}
 	
 	private void initializeSet() {
 	}
 	
 	private void initializeAddEdge() {
-		feature2addEdgeConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-		});
 		feature2addEdgeConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamilyRegister_Families(), notification -> {
 			incUtil.newMessage();
 			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceAdded<edu.kit.ipd.sdq.metamodels.families.FamilyRegister, edu.kit.ipd.sdq.metamodels.families.Family>(incUtil,(edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.Family) notification.getNewValue(), "edu.kit.ipd.sdq.metamodels.families.FamilyRegister_families_Family"), getSelf());
@@ -119,37 +105,37 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceAdded<edu.kit.ipd.sdq.metamodels.families.FamilyRegister, edu.kit.ipd.sdq.metamodels.families.Family>(incUtil,(edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.Family) notification.getNewValue(), "edu.kit.ipd.sdq.metamodels.families.FamilyRegister_families_Family"), getSelf());
 		});
-		feature2addEdgeConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Source(), notification -> {
+		feature2addEdgeConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Target(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceAdded<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
+		});
+		feature2addEdgeConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceAdded<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil,(Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNewValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
 		});
 	}
 	
 	private void initializeRemoveEdge() {
-		feature2removeEdgeConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Target(), notification -> {
-			incUtil.newMessage();
-			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-			incUtil.newMessage();
-			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
-		});
 		feature2removeEdgeConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamilyRegister_Families(), notification -> {
 			incUtil.newMessage();
 			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceDeleted<edu.kit.ipd.sdq.metamodels.families.FamilyRegister, edu.kit.ipd.sdq.metamodels.families.Family>(incUtil, (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.Family) notification.getOldValue(), "edu.kit.ipd.sdq.metamodels.families.FamilyRegister_families_Family"), getSelf());
@@ -160,19 +146,33 @@ public class DispatchActor extends AbstractActor {
 			incUtil.newMessage();
 			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceDeleted<edu.kit.ipd.sdq.metamodels.families.FamilyRegister, edu.kit.ipd.sdq.metamodels.families.Family>(incUtil, (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.Family) notification.getOldValue(), "edu.kit.ipd.sdq.metamodels.families.FamilyRegister_families_Family"), getSelf());
 		});
-		feature2removeEdgeConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Source(), notification -> {
+		feature2removeEdgeConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Target(), notification -> {
 			incUtil.newMessage();
-			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
 			incUtil.newMessage();
-			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceDeleted<Something2Else.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase"), getSelf());
+		});
+		feature2removeEdgeConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase_Source(), notification -> {
+			incUtil.newMessage();
+			name2actor.get("DaughterToInsuranceClient__GEN_1_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FatherNewFamilyToNewInsuranceClient__GEN_6_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("FatherToInsuranceClient__GEN_10_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MotherNewFamilyToNewInsuranceClient__GEN_15_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("MotherToInsuranceClient__GEN_19_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
+			incUtil.newMessage();
+			name2actor.get("SonToInsuranceClient__GEN_24_localSearch").tell(new ReferenceDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase, edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) notification.getNotifier(), (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) notification.getOldValue(), "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister"), getSelf());
 		});
 	}
 
@@ -270,13 +270,21 @@ public class DispatchActor extends AbstractActor {
 	
 	private void handleRemoveAdapter(Notification notification) {
 		Object node = notification.getNotifier();
-		if (node instanceof Something2Else.FamilyRegisterToInsuranceDatabase) {
+		if (node instanceof Families2Insurance.FamilyRegisterToInsuranceDatabase) {
 			incUtil.newMessage();
-			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP0").tell(new ObjectDeleted<Something2Else.FamilyRegisterToInsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) node), getSelf());
+			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP0").tell(new ObjectDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) node), getSelf());
 		}
-		if (node instanceof Something2Else.FamilyRegisterToInsuranceDatabase) {
+		if (node instanceof Families2Insurance.FamilyRegisterToInsuranceDatabase) {
 			incUtil.newMessage();
-			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP1").tell(new ObjectDeleted<Something2Else.FamilyRegisterToInsuranceDatabase>(incUtil, (Something2Else.FamilyRegisterToInsuranceDatabase) node), getSelf());
+			name2actor.get("FamilyRegisterToInsuranceDatabase_object_SP1").tell(new ObjectDeleted<Families2Insurance.FamilyRegisterToInsuranceDatabase>(incUtil, (Families2Insurance.FamilyRegisterToInsuranceDatabase) node), getSelf());
+		}
+		if (node instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) {
+			incUtil.newMessage();
+			name2actor.get("InsuranceDatabase_object_SP0").tell(new ObjectDeleted<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) node), getSelf());
+		}
+		if (node instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) {
+			incUtil.newMessage();
+			name2actor.get("InsuranceDatabase_object_SP1").tell(new ObjectDeleted<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) node), getSelf());
 		}
 		if (node instanceof edu.kit.ipd.sdq.metamodels.families.Family) {
 			incUtil.newMessage();
@@ -289,14 +297,6 @@ public class DispatchActor extends AbstractActor {
 		if (node instanceof edu.kit.ipd.sdq.metamodels.families.FamilyRegister) {
 			incUtil.newMessage();
 			name2actor.get("FamilyRegister_object_SP1").tell(new ObjectDeleted<edu.kit.ipd.sdq.metamodels.families.FamilyRegister>(incUtil, (edu.kit.ipd.sdq.metamodels.families.FamilyRegister) node), getSelf());
-		}
-		if (node instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) {
-			incUtil.newMessage();
-			name2actor.get("InsuranceDatabase_object_SP0").tell(new ObjectDeleted<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) node), getSelf());
-		}
-		if (node instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) {
-			incUtil.newMessage();
-			name2actor.get("InsuranceDatabase_object_SP1").tell(new ObjectDeleted<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase>(incUtil, (edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) node), getSelf());
 		}
 	}
 }

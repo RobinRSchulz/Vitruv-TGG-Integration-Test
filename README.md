@@ -128,3 +128,14 @@ The following can help:
 
 If the following conditions apply, your project most likely has been built successfully:
   * the file sync/hipe/engine/ibex-patterns.xmi exists.
+
+### Modelgen
+For modelgen to work, HiPEEngine.java must be compileable. In the Java2Uml case, this is achieved by
+1. add the following imports (the explicit ones MUST be because of ambiguity):
+   import org.eclipse.uml2.uml.*;
+   import org.eclipse.uml2.uml.Class;
+   import org.eclipse.uml2.uml.Package;
+
+2. Replace "uml." with "" (CASE SENSITIVE!)
+3. Refresh project
+4. "Perform incremental build" (green hammer)

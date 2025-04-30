@@ -28,17 +28,18 @@ public class FamiliesToInsuranceCPS extends TGGChangePropagationSpecification {
                 "platform:/resource/Insurance/model/insurance.ecore",
                 ibexProjectPath,
                 target,
-                targetRootURI);
+                targetRootURI,
+                false);
     }
 
     public FamiliesToInsuranceCPS(MetamodelDescriptor sourceMetamodelDescriptor, MetamodelDescriptor targetMetamodelDescriptor,
                                   MetamodelDescriptor SRCMetamodelDescriptor, MetamodelDescriptor TRGMetamodelDescriptor,
                                   String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri, File ibexProjectPath,
-                                  EClass targetRootEclass, URI targetRootURI) {
+                                  EClass targetRootEclass, URI targetRootURI, boolean useShortcutRules) {
         super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
-                ibexProjectPath, Set.of(targetRootEclass), targetRootURI);
+                ibexProjectPath, Set.of(targetRootEclass), targetRootURI, useShortcutRules);
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 FamiliesPackageImpl.eNS_URI,
                 FamiliesPackageImpl.eINSTANCE

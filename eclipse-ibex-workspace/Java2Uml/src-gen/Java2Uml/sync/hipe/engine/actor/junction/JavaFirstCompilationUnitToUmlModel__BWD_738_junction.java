@@ -56,16 +56,16 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_738_junction extends Generi
 	}
 	
 	public boolean check_constraint_116(HMatch match, int index) {
-		uml.PrimitiveType shortType = (uml.PrimitiveType) match.getNodes()[4];
-		uml.PrimitiveType doubleType = (uml.PrimitiveType) match.getNodes()[10];
-		uml.PrimitiveType booleanType = (uml.PrimitiveType) match.getNodes()[7];
-		uml.PrimitiveType longType = (uml.PrimitiveType) match.getNodes()[3];
-		uml.PrimitiveType floatType = (uml.PrimitiveType) match.getNodes()[0];
-		uml.PrimitiveType voidType = (uml.PrimitiveType) match.getNodes()[6];
-		uml.PrimitiveType byteType = (uml.PrimitiveType) match.getNodes()[8];
-		uml.PrimitiveType stringType = (uml.PrimitiveType) match.getNodes()[5];
-		uml.PrimitiveType charType = (uml.PrimitiveType) match.getNodes()[9];
-		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
+		org.eclipse.uml2.uml.PrimitiveType floatType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[0];
+		org.eclipse.uml2.uml.PrimitiveType longType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[3];
+		org.eclipse.uml2.uml.PrimitiveType byteType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[8];
+		org.eclipse.uml2.uml.PrimitiveType charType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[9];
+		org.eclipse.uml2.uml.PrimitiveType intType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[2];
+		org.eclipse.uml2.uml.PrimitiveType booleanType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[7];
+		org.eclipse.uml2.uml.PrimitiveType shortType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[4];
+		org.eclipse.uml2.uml.PrimitiveType doubleType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[10];
+		org.eclipse.uml2.uml.PrimitiveType stringType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[5];
+		org.eclipse.uml2.uml.PrimitiveType voidType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[6];
 		boolean predicate = !booleanType.equals(floatType) && !booleanType.equals(intType) && !booleanType.equals(longType) && !booleanType.equals(shortType) && !byteType.equals(floatType) && !byteType.equals(intType) && !byteType.equals(longType) && !byteType.equals(shortType) && !charType.equals(floatType) && !charType.equals(intType) && !charType.equals(longType) && !charType.equals(shortType) && !doubleType.equals(floatType) && !doubleType.equals(intType) && !doubleType.equals(longType) && !doubleType.equals(shortType) && !floatType.equals(stringType) && !floatType.equals(voidType) && !intType.equals(stringType) && !intType.equals(voidType) && !longType.equals(stringType) && !longType.equals(voidType) && !shortType.equals(stringType) && !shortType.equals(voidType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

@@ -239,13 +239,13 @@ public class HiPEEngine extends IHiPEEngine{
 	}
 }
 
-class DaughterToInsuranceClient__Marker_object extends GenericObjectActor<Something2Else.DaughterToInsuranceClient__Marker> { }
-class FamilyRegisterToInsuranceDatabase__Marker_object extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase__Marker> { }
-class FatherNewFamilyToNewInsuranceClient__Marker_object extends GenericObjectActor<Something2Else.FatherNewFamilyToNewInsuranceClient__Marker> { }
-class FatherToInsuranceClient__Marker_object extends GenericObjectActor<Something2Else.FatherToInsuranceClient__Marker> { }
-class MotherNewFamilyToNewInsuranceClient__Marker_object extends GenericObjectActor<Something2Else.MotherNewFamilyToNewInsuranceClient__Marker> { }
-class MotherToInsuranceClient__Marker_object extends GenericObjectActor<Something2Else.MotherToInsuranceClient__Marker> { }
-class SonToInsuranceClient__Marker_object extends GenericObjectActor<Something2Else.SonToInsuranceClient__Marker> { }
+class DaughterToInsuranceClient__Marker_object extends GenericObjectActor<Families2Insurance.DaughterToInsuranceClient__Marker> { }
+class FamilyRegisterToInsuranceDatabase__Marker_object extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase__Marker> { }
+class FatherNewFamilyToNewInsuranceClient__Marker_object extends GenericObjectActor<Families2Insurance.FatherNewFamilyToNewInsuranceClient__Marker> { }
+class FatherToInsuranceClient__Marker_object extends GenericObjectActor<Families2Insurance.FatherToInsuranceClient__Marker> { }
+class MotherNewFamilyToNewInsuranceClient__Marker_object extends GenericObjectActor<Families2Insurance.MotherNewFamilyToNewInsuranceClient__Marker> { }
+class MotherToInsuranceClient__Marker_object extends GenericObjectActor<Families2Insurance.MotherToInsuranceClient__Marker> { }
+class SonToInsuranceClient__Marker_object extends GenericObjectActor<Families2Insurance.SonToInsuranceClient__Marker> { }
 class Family_object_SP0 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Family> { }
 class Family_object_SP1 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Family> { }
 class Family_object_SP2 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Family> { }
@@ -257,10 +257,10 @@ class FamilyRegister_object_SP0 extends GenericObjectActor<edu.kit.ipd.sdq.metam
 class FamilyRegister_object_SP1 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.FamilyRegister> { }
 class FamilyRegister_object_SP2 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.FamilyRegister> { }
 class FamilyRegister_object_SP3 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.FamilyRegister> { }
-class FamilyRegisterToInsuranceDatabase_object_SP0 extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase> { }
-class FamilyRegisterToInsuranceDatabase_object_SP1 extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase> { }
-class FamilyRegisterToInsuranceDatabase_object_SP2 extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase> { }
-class FamilyRegisterToInsuranceDatabase_object_SP3 extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase> { }
+class FamilyRegisterToInsuranceDatabase_object_SP0 extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase> { }
+class FamilyRegisterToInsuranceDatabase_object_SP1 extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase> { }
+class FamilyRegisterToInsuranceDatabase_object_SP2 extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase> { }
+class FamilyRegisterToInsuranceDatabase_object_SP3 extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase> { }
 class InsuranceDatabase_object_SP0 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase> { }
 class InsuranceDatabase_object_SP1 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase> { }
 class InsuranceDatabase_object_SP2 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase> { }
@@ -274,9 +274,9 @@ class Member_object_SP2 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.fa
 class Member_object_SP3 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Member> { }
 class Member_object_SP4 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Member> { }
 class Member_object_SP5 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Member> { }
-class FamilyToInsuranceClient_object_SP0 extends GenericObjectActor<Something2Else.FamilyToInsuranceClient> { }
-class FamilyToInsuranceClient_object_SP1 extends GenericObjectActor<Something2Else.FamilyToInsuranceClient> { }
-class MemberToInsuranceClient_object_SP0 extends GenericObjectActor<Something2Else.MemberToInsuranceClient> { }
-class MemberToInsuranceClient_object_SP1 extends GenericObjectActor<Something2Else.MemberToInsuranceClient> { }
+class FamilyToInsuranceClient_object_SP0 extends GenericObjectActor<Families2Insurance.FamilyToInsuranceClient> { }
+class FamilyToInsuranceClient_object_SP1 extends GenericObjectActor<Families2Insurance.FamilyToInsuranceClient> { }
+class MemberToInsuranceClient_object_SP0 extends GenericObjectActor<Families2Insurance.MemberToInsuranceClient> { }
+class MemberToInsuranceClient_object_SP1 extends GenericObjectActor<Families2Insurance.MemberToInsuranceClient> { }
 
 

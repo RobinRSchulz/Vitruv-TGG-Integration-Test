@@ -76,12 +76,12 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 						edge_explorer_3 = new CachedEdgeExplorer(this, 2, 1, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> ((Java2Uml.RootJavaPackageToUmlPackage__Marker) o).getCREATE__CORR__javaPackageToUmlPackage();
-						edge_explorer_4 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.RootJavaPackageToUmlPackage__Marker) o).getCREATE__TRG__umlPackage(); return (result instanceof uml.Package ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 3, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.RootJavaPackageToUmlPackage__Marker) o).getCREATE__TRG__umlPackage(); return (result instanceof uml.Package ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 1, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> ((Java2Uml.RootJavaPackageToUmlPackage__Marker) o).getCREATE__CORR__javaPackageToUmlPackage();
+						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 2, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
 						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.RootJavaPackageToUmlPackage__Marker) o).getCREATE__SRC__javaPackage(); return (result instanceof org.emftext.language.java.containers.Package ? result : null);};
@@ -293,45 +293,47 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 				
 			}
 			break;
-		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__CORR__javaPackageToUmlPackage_JavaPackageToUmlPackage": 
-			if(!lazy_initialization) {
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
-					Object[] objs = match.getNodes();
-					objs[3] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
-					Object[] objs = match.getNodes();
-					objs[3] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				
-			}
-			break;
 		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__TRG__umlPackage_Package": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Package) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
+					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
+				}
+				
+				if(msg.target instanceof uml.Package) {
+				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
+					Object[] objs = match.getNodes();
+					objs[3] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__CORR__javaPackageToUmlPackage_JavaPackageToUmlPackage": 
+			if(!lazy_initialization) {
+				{
+					edge_explorer_5.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
+					Object[] objs = match.getNodes();
+					objs[3] = msg.source;
+					objs[2] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
 				}
 				
 			}
@@ -427,13 +429,13 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 					}
 				}
 				break;
-		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__CORR__javaPackageToUmlPackage_JavaPackageToUmlPackage": 
+		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__TRG__umlPackage_Package": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
@@ -445,7 +447,7 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
@@ -453,13 +455,13 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 					}
 				}
 				break;
-		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__TRG__umlPackage_Package": 
+		case "Java2Uml.RootJavaPackageToUmlPackage__Marker_CREATE__CORR__javaPackageToUmlPackage_JavaPackageToUmlPackage": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
@@ -586,17 +588,6 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof org.emftext.language.java.containers.Package) {
-			HMatch match_0 = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
-			match_0.getNodes()[0] = obj;
-			Collection<HMatch> formerMatches_0 = obj2matches.get(obj);
-			if(formerMatches_0 != null) {
-				
-				formerMatches_0 = formerMatches_0.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_0);
-			}
-			start(edge_explorer_2_orchestration, match_0);
-		}
 		if(obj instanceof uml.Package) {
 			HMatch match_1 = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
 			match_1.getNodes()[1] = obj;
@@ -607,6 +598,17 @@ public class RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch extends G
 				sendDeletedMatches(formerMatches_1);
 			}
 			start(edge_explorer_3_1_orchestration, match_1);
+		}
+		if(obj instanceof org.emftext.language.java.containers.Package) {
+			HMatch match_0 = new LocalSearchMatch("RootJavaPackageToUmlPackage__CONSISTENCY_1065_localSearch", 4);
+			match_0.getNodes()[0] = obj;
+			Collection<HMatch> formerMatches_0 = obj2matches.get(obj);
+			if(formerMatches_0 != null) {
+				
+				formerMatches_0 = formerMatches_0.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_0);
+			}
+			start(edge_explorer_2_orchestration, match_0);
 		}
 		
 		message.initialMessage.decrement();

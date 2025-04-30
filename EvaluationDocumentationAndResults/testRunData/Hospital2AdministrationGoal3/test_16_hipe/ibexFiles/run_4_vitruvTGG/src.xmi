@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="44174" name="Felix Perez" level="PENDING" />
+      <waits patientID="44175" name="Finn Miller" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Nurse" staffID="83562" name="Theresa Miller" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="83563" name="Alexander Hill" works="/0/@department.1" />
+    <department dID="2351" maxRoomCount="10" />
+    <department staff="/0/@staff.0 /0/@staff.1" dID="2352" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Theresa" lastName="Miller" staffID="83562" salary="1748.44" dInt="2352">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alexander" lastName="Hill" staffID="83563" salary="4705.78" dInt="2352">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Finn" lastName="Miller" patientID="44175" />
+    <patient firstName="Felix" lastName="Perez" patientID="44174" />
+  </AdministrationExample:Administration>
+  <AdministrationExample:Administration>
+    <staff firstName="Alexander" lastName="Hill" staffID="83563" salary="4895.01" dInt="2352">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Theresa" lastName="Miller" staffID="83562" salary="5412.41" dInt="2352">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Felix" lastName="Perez" patientID="44174" />
+    <patient firstName="Finn" lastName="Miller" patientID="44175" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

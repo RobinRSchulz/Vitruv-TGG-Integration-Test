@@ -42,6 +42,13 @@
             <layout>p2</layout>
             <url>http://update.emftext.org/release</url>
         </repository>
+
+        <repository>
+            <!--For models from emoflon (Administration and Hospital)-->
+            <id>TestRepo</id>
+            <name>TestRepo</name>
+            <url>file://${project.basedir}/src/test/resources/libs</url>
+        </repository>
     </repositories>
     <build>
         <plugins>
@@ -135,6 +142,45 @@
             <artifactId>log4j</artifactId>
         </dependency>
 
+        <!-- needed for short-cut rules to work -->
+<!--        <dependency>-->
+<!--            <groupId>org.sat4j</groupId>-->
+<!--            <artifactId>org.sat4j.core</artifactId>-->
+<!--            <version>2.3.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.sat4j</groupId>-->
+<!--            <artifactId>org.sat4j.pb</artifactId>-->
+<!--            <version>2.3.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.ow2.sat4j</groupId>
+            <artifactId>org.ow2.sat4j.sat</artifactId>
+            <version>2.3.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.sat4j</groupId>
+            <artifactId>org.ow2.sat4j.pb</artifactId>
+            <version>2.3.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.sat4j</groupId>
+            <artifactId>org.ow2.sat4j.core</artifactId>
+            <version>2.3.6</version>
+            <scope>test</scope>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.sat4j</groupId>-->
+<!--            <artifactId>org.sat4j.csp</artifactId>-->
+<!--            <version>2.3.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -151,5 +197,18 @@
             <version>3.5.3</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.emoflon.examples.models</groupId>
+            <artifactId>administration</artifactId>
+            <version>1.0.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.emoflon.examples.models</groupId>
+            <artifactId>hospital</artifactId>
+            <version>1.0.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>

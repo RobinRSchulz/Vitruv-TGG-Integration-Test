@@ -108,8 +108,8 @@ public class HiPEEngine extends IHiPEEngine{
 class Family_object extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.Family> { }
 class FamilyRegister_object_SP0 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.FamilyRegister> { }
 class FamilyRegister_object_SP1 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.families.FamilyRegister> { }
-class FamilyRegisterToInsuranceDatabase_object_SP0 extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase> { }
-class FamilyRegisterToInsuranceDatabase_object_SP1 extends GenericObjectActor<Something2Else.FamilyRegisterToInsuranceDatabase> { }
+class FamilyRegisterToInsuranceDatabase_object_SP0 extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase> { }
+class FamilyRegisterToInsuranceDatabase_object_SP1 extends GenericObjectActor<Families2Insurance.FamilyRegisterToInsuranceDatabase> { }
 class InsuranceDatabase_object_SP0 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase> { }
 class InsuranceDatabase_object_SP1 extends GenericObjectActor<edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase> { }
 

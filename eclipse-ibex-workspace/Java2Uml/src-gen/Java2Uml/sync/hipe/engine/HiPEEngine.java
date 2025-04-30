@@ -204,6 +204,10 @@ import hipe.generic.actor.junction.*;
 
 import hipe.network.*;
 
+import org.eclipse.uml2.uml.*;
+import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Package;
+
 public class HiPEEngine extends IHiPEEngine{
 	
 	public HiPEEngine(HiPENetwork network) {
@@ -1101,21 +1105,21 @@ public class HiPEEngine extends IHiPEEngine{
 	
 	@Override
 	public void initializeReferenceNodes() {
-		name2initRefGen.put("PrimitiveType_package_0_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_0_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_1_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_1_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_2_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_2_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_3_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_3_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_4_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_4_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_5_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_5_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_6_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_6_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_7_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_7_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_8_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_8_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
-		name2initRefGen.put("PrimitiveType_package_9_reference", new InitGenReferenceActor<uml.Type,uml.Package>(name2actor, name2node.get("PrimitiveType_package_9_reference"), (o) -> o instanceof uml.Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_0_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_0_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_1_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_1_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_2_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_2_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_3_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_3_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_4_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_4_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_5_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_5_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_6_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_6_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_7_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_7_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_8_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_8_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
+		name2initRefGen.put("PrimitiveType_package_9_reference", new InitGenReferenceActor<Type,Package>(name2actor, name2node.get("PrimitiveType_package_9_reference"), (o) -> o instanceof Type, (o) -> o.getPackage(), null, false, prodUtil, incUtil));
 	}
 }
 
 class ClassAbstractToAbstract__Marker_object extends GenericObjectActor<Java2Uml.ClassAbstractToAbstract__Marker> { }
-class DataType_object extends GenericObjectActor<uml.DataType> { }
+class DataType_object extends GenericObjectActor<DataType> { }
 class ClassAttributeToProperty__Marker_object extends GenericObjectActor<Java2Uml.ClassAttributeToProperty__Marker> { }
 class ClassAttributeTypeToPropertyType__Marker_object extends GenericObjectActor<Java2Uml.ClassAttributeTypeToPropertyType__Marker> { }
 class ClassConstructorToConstructor__Marker_object extends GenericObjectActor<Java2Uml.ClassConstructorToConstructor__Marker> { }
@@ -1130,10 +1134,10 @@ class ConstructorClassParamTypeToParamType__Marker_object extends GenericObjectA
 class ConstructorEnumParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.ConstructorEnumParamTypeToParamType__Marker> { }
 class ConstructorInterfaceParamTypeToParamType__Marker_object extends GenericObjectActor<Java2Uml.ConstructorInterfaceParamTypeToParamType__Marker> { }
 class EnumAbstractToAbstract__Marker_object extends GenericObjectActor<Java2Uml.EnumAbstractToAbstract__Marker> { }
-class StructuredClassifier_object extends GenericObjectActor<uml.StructuredClassifier> { }
+class StructuredClassifier_object extends GenericObjectActor<StructuredClassifier> { }
 class EnumAttributeToProperty__Marker_object extends GenericObjectActor<Java2Uml.EnumAttributeToProperty__Marker> { }
 class EnumAttributeTypeToPropertyType__Marker_object extends GenericObjectActor<Java2Uml.EnumAttributeTypeToPropertyType__Marker> { }
-class EnumerationLiteral_object extends GenericObjectActor<uml.EnumerationLiteral> { }
+class EnumerationLiteral_object extends GenericObjectActor<EnumerationLiteral> { }
 class EnumConstant_object extends GenericObjectActor<org.emftext.language.java.members.EnumConstant> { }
 class JavaEnumConstantToUmlEnumLiteral_object extends GenericObjectActor<Java2Uml.JavaEnumConstantToUmlEnumLiteral> { }
 class EnumConstantToEnumConstant__Marker_object extends GenericObjectActor<Java2Uml.EnumConstantToEnumConstant__Marker> { }
@@ -1143,7 +1147,7 @@ class EnumProtectedToProtected__Marker_object extends GenericObjectActor<Java2Um
 class EnumPublicToPublic__Marker_object extends GenericObjectActor<Java2Uml.EnumPublicToPublic__Marker> { }
 class EnumToUmlEnum__Marker_object extends GenericObjectActor<Java2Uml.EnumToUmlEnum__Marker> { }
 class ExistingClassImplementToClassImplement__Marker_object extends GenericObjectActor<Java2Uml.ExistingClassImplementToClassImplement__Marker> { }
-class Classifier_1_object extends GenericObjectActor<uml.Classifier> { }
+class Classifier_1_object extends GenericObjectActor<Classifier> { }
 class ExistingSuperClassToSuperClass__Marker_object extends GenericObjectActor<Java2Uml.ExistingSuperClassToSuperClass__Marker> { }
 class ExistingSuperInterfaceToSuperInterface__Marker_object extends GenericObjectActor<Java2Uml.ExistingSuperInterfaceToSuperInterface__Marker> { }
 class FieldFinalToFinal__Marker_object extends GenericObjectActor<Java2Uml.FieldFinalToFinal__Marker> { }
@@ -1175,12 +1179,12 @@ class MethodStaticToStatic__Marker_object extends GenericObjectActor<Java2Uml.Me
 class OrdinaryParameter_object extends GenericObjectActor<org.emftext.language.java.parameters.OrdinaryParameter> { }
 class OrdinaryConstructorParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.OrdinaryConstructorParameterToParameter__Marker> { }
 class OrdinaryMethodParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.OrdinaryMethodParameterToParameter__Marker> { }
-class Type_object extends GenericObjectActor<uml.Type> { }
+class Type_object extends GenericObjectActor<Type> { }
 class RootJavaPackageToUmlPackage__Marker_object extends GenericObjectActor<Java2Uml.RootJavaPackageToUmlPackage__Marker> { }
 class JavaClassifierReferenceToUmlGeneralization_object extends GenericObjectActor<Java2Uml.JavaClassifierReferenceToUmlGeneralization> { }
 class SuperClassToSuperClass__Marker_object extends GenericObjectActor<Java2Uml.SuperClassToSuperClass__Marker> { }
 class SuperInterfaceToSuperInterface__Marker_object extends GenericObjectActor<Java2Uml.SuperInterfaceToSuperInterface__Marker> { }
-class LiteralUnlimitedNatural_object extends GenericObjectActor<uml.LiteralUnlimitedNatural> { }
+class LiteralUnlimitedNatural_object extends GenericObjectActor<LiteralUnlimitedNatural> { }
 class VariableLengthParameter_object extends GenericObjectActor<org.emftext.language.java.parameters.VariableLengthParameter> { }
 class VariableLengthConstructorParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.VariableLengthConstructorParameterToParameter__Marker> { }
 class VariableLengthMethodParameterToParameter__Marker_object extends GenericObjectActor<Java2Uml.VariableLengthMethodParameterToParameter__Marker> { }
@@ -1199,19 +1203,19 @@ class Class_object_SP11 extends GenericObjectActor<org.emftext.language.java.cla
 class Class_object_SP12 extends GenericObjectActor<org.emftext.language.java.classifiers.Class> { }
 class Abstract_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Abstract> { }
 class Abstract_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Abstract> { }
-class Class_1_object_SP0 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP1 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP2 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP3 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP4 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP5 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP6 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP7 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP8 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP9 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP10 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP11 extends GenericObjectActor<uml.Class> { }
-class Class_1_object_SP12 extends GenericObjectActor<uml.Class> { }
+class Class_1_object_SP0 extends GenericObjectActor<Class> { }
+class Class_1_object_SP1 extends GenericObjectActor<Class> { }
+class Class_1_object_SP2 extends GenericObjectActor<Class> { }
+class Class_1_object_SP3 extends GenericObjectActor<Class> { }
+class Class_1_object_SP4 extends GenericObjectActor<Class> { }
+class Class_1_object_SP5 extends GenericObjectActor<Class> { }
+class Class_1_object_SP6 extends GenericObjectActor<Class> { }
+class Class_1_object_SP7 extends GenericObjectActor<Class> { }
+class Class_1_object_SP8 extends GenericObjectActor<Class> { }
+class Class_1_object_SP9 extends GenericObjectActor<Class> { }
+class Class_1_object_SP10 extends GenericObjectActor<Class> { }
+class Class_1_object_SP11 extends GenericObjectActor<Class> { }
+class Class_1_object_SP12 extends GenericObjectActor<Class> { }
 class JavaClassifierToUmlClassifier_object_SP0 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
 class JavaClassifierToUmlClassifier_object_SP1 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
 class JavaClassifierToUmlClassifier_object_SP2 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
@@ -1239,11 +1243,11 @@ class JavaClassifierToUmlClassifier_object_SP23 extends GenericObjectActor<Java2
 class JavaClassifierToUmlClassifier_object_SP24 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
 class JavaClassifierToUmlClassifier_object_SP25 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
 class JavaClassifierToUmlClassifier_object_SP26 extends GenericObjectActor<Java2Uml.JavaClassifierToUmlClassifier> { }
-class Property_object_SP0 extends GenericObjectActor<uml.Property> { }
-class Property_object_SP1 extends GenericObjectActor<uml.Property> { }
-class Property_object_SP2 extends GenericObjectActor<uml.Property> { }
-class Property_object_SP3 extends GenericObjectActor<uml.Property> { }
-class Property_object_SP4 extends GenericObjectActor<uml.Property> { }
+class Property_object_SP0 extends GenericObjectActor<Property> { }
+class Property_object_SP1 extends GenericObjectActor<Property> { }
+class Property_object_SP2 extends GenericObjectActor<Property> { }
+class Property_object_SP3 extends GenericObjectActor<Property> { }
+class Property_object_SP4 extends GenericObjectActor<Property> { }
 class Field_object_SP0 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
 class Field_object_SP1 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
 class Field_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.Field> { }
@@ -1272,33 +1276,33 @@ class Classifier_object_SP1 extends GenericObjectActor<org.emftext.language.java
 class Classifier_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
 class Classifier_object_SP3 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
 class Classifier_object_SP4 extends GenericObjectActor<org.emftext.language.java.classifiers.Classifier> { }
-class Operation_object_SP0 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP1 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP2 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP3 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP4 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP5 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP6 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP7 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP8 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP9 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP10 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP11 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP12 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP13 extends GenericObjectActor<uml.Operation> { }
-class Operation_object_SP14 extends GenericObjectActor<uml.Operation> { }
-class Interface_object_SP0 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP1 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP2 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP3 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP4 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP5 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP6 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP7 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP8 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP9 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP10 extends GenericObjectActor<uml.Interface> { }
-class Interface_object_SP11 extends GenericObjectActor<uml.Interface> { }
+class Operation_object_SP0 extends GenericObjectActor<Operation> { }
+class Operation_object_SP1 extends GenericObjectActor<Operation> { }
+class Operation_object_SP2 extends GenericObjectActor<Operation> { }
+class Operation_object_SP3 extends GenericObjectActor<Operation> { }
+class Operation_object_SP4 extends GenericObjectActor<Operation> { }
+class Operation_object_SP5 extends GenericObjectActor<Operation> { }
+class Operation_object_SP6 extends GenericObjectActor<Operation> { }
+class Operation_object_SP7 extends GenericObjectActor<Operation> { }
+class Operation_object_SP8 extends GenericObjectActor<Operation> { }
+class Operation_object_SP9 extends GenericObjectActor<Operation> { }
+class Operation_object_SP10 extends GenericObjectActor<Operation> { }
+class Operation_object_SP11 extends GenericObjectActor<Operation> { }
+class Operation_object_SP12 extends GenericObjectActor<Operation> { }
+class Operation_object_SP13 extends GenericObjectActor<Operation> { }
+class Operation_object_SP14 extends GenericObjectActor<Operation> { }
+class Interface_object_SP0 extends GenericObjectActor<Interface> { }
+class Interface_object_SP1 extends GenericObjectActor<Interface> { }
+class Interface_object_SP2 extends GenericObjectActor<Interface> { }
+class Interface_object_SP3 extends GenericObjectActor<Interface> { }
+class Interface_object_SP4 extends GenericObjectActor<Interface> { }
+class Interface_object_SP5 extends GenericObjectActor<Interface> { }
+class Interface_object_SP6 extends GenericObjectActor<Interface> { }
+class Interface_object_SP7 extends GenericObjectActor<Interface> { }
+class Interface_object_SP8 extends GenericObjectActor<Interface> { }
+class Interface_object_SP9 extends GenericObjectActor<Interface> { }
+class Interface_object_SP10 extends GenericObjectActor<Interface> { }
+class Interface_object_SP11 extends GenericObjectActor<Interface> { }
 class Constructor_object_SP0 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
 class Constructor_object_SP1 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
 class Constructor_object_SP2 extends GenericObjectActor<org.emftext.language.java.members.Constructor> { }
@@ -1312,8 +1316,8 @@ class JavaConstructorToOperation_object_SP4 extends GenericObjectActor<Java2Uml.
 class Final_object_SP0 extends GenericObjectActor<org.emftext.language.java.modifiers.Final> { }
 class Final_object_SP1 extends GenericObjectActor<org.emftext.language.java.modifiers.Final> { }
 class Final_object_SP2 extends GenericObjectActor<org.emftext.language.java.modifiers.Final> { }
-class InterfaceRealization_object_SP0 extends GenericObjectActor<uml.InterfaceRealization> { }
-class InterfaceRealization_object_SP1 extends GenericObjectActor<uml.InterfaceRealization> { }
+class InterfaceRealization_object_SP0 extends GenericObjectActor<InterfaceRealization> { }
+class InterfaceRealization_object_SP1 extends GenericObjectActor<InterfaceRealization> { }
 class Interface_1_object_SP0 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
 class Interface_1_object_SP1 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
 class Interface_1_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Interface> { }
@@ -1360,9 +1364,9 @@ class Package_object_SP0 extends GenericObjectActor<org.emftext.language.java.co
 class Package_object_SP1 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }
 class Package_object_SP2 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }
 class Package_object_SP3 extends GenericObjectActor<org.emftext.language.java.containers.Package> { }
-class Package_1_object_SP0 extends GenericObjectActor<uml.Package> { }
-class Package_1_object_SP1 extends GenericObjectActor<uml.Package> { }
-class Package_1_object_SP2 extends GenericObjectActor<uml.Package> { }
+class Package_1_object_SP0 extends GenericObjectActor<Package> { }
+class Package_1_object_SP1 extends GenericObjectActor<Package> { }
+class Package_1_object_SP2 extends GenericObjectActor<Package> { }
 class Parameter_object_SP0 extends GenericObjectActor<org.emftext.language.java.parameters.Parameter> { }
 class Parameter_object_SP1 extends GenericObjectActor<org.emftext.language.java.parameters.Parameter> { }
 class Parameter_object_SP2 extends GenericObjectActor<org.emftext.language.java.parameters.Parameter> { }
@@ -1374,14 +1378,14 @@ class JavaParameterToParameter_object_SP2 extends GenericObjectActor<Java2Uml.Ja
 class JavaParameterToParameter_object_SP3 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
 class JavaParameterToParameter_object_SP4 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
 class JavaParameterToParameter_object_SP5 extends GenericObjectActor<Java2Uml.JavaParameterToParameter> { }
-class Parameter_1_object_SP0 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP1 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP2 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP3 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP4 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP5 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP6 extends GenericObjectActor<uml.Parameter> { }
-class Parameter_1_object_SP7 extends GenericObjectActor<uml.Parameter> { }
+class Parameter_1_object_SP0 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP1 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP2 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP3 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP4 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP5 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP6 extends GenericObjectActor<Parameter> { }
+class Parameter_1_object_SP7 extends GenericObjectActor<Parameter> { }
 class Enumeration_object_SP0 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
 class Enumeration_object_SP1 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
 class Enumeration_object_SP2 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
@@ -1391,26 +1395,26 @@ class Enumeration_object_SP5 extends GenericObjectActor<org.emftext.language.jav
 class Enumeration_object_SP6 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
 class Enumeration_object_SP7 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
 class Enumeration_object_SP8 extends GenericObjectActor<org.emftext.language.java.classifiers.Enumeration> { }
-class Enumeration_1_object_SP0 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP1 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP2 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP3 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP4 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP5 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP6 extends GenericObjectActor<uml.Enumeration> { }
-class Enumeration_1_object_SP7 extends GenericObjectActor<uml.Enumeration> { }
-class Generalization_object_SP0 extends GenericObjectActor<uml.Generalization> { }
-class Generalization_object_SP1 extends GenericObjectActor<uml.Generalization> { }
-class Generalization_object_SP2 extends GenericObjectActor<uml.Generalization> { }
+class Enumeration_1_object_SP0 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP1 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP2 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP3 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP4 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP5 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP6 extends GenericObjectActor<Enumeration> { }
+class Enumeration_1_object_SP7 extends GenericObjectActor<Enumeration> { }
+class Generalization_object_SP0 extends GenericObjectActor<Generalization> { }
+class Generalization_object_SP1 extends GenericObjectActor<Generalization> { }
+class Generalization_object_SP2 extends GenericObjectActor<Generalization> { }
 
-class PrimitiveType_package_0_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_1_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_2_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_3_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_4_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_5_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_6_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_7_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_8_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
-class PrimitiveType_package_9_reference extends GenericReferenceActor<uml.Type, uml.Package> { }
+class PrimitiveType_package_0_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_1_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_2_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_3_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_4_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_5_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_6_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_7_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_8_reference extends GenericReferenceActor<Type, Package> { }
+class PrimitiveType_package_9_reference extends GenericReferenceActor<Type, Package> { }
 

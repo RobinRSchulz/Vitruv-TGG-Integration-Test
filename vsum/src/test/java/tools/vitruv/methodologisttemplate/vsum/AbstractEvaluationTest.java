@@ -10,6 +10,7 @@ import org.junit.jupiter.api.*;
 import tools.vitruv.change.propagation.ChangePropagationSpecification;
 import tools.vitruv.change.testutils.TestUserInteraction;
 import tools.vitruv.dsls.tgg.emoflonintegration.TGGChangePropagationSpecification;
+import tools.vitruv.dsls.tgg.emoflonintegration.Timer;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagationResult;
 import tools.vitruv.dsls.tgg.emoflonintegration.patternmatching.VitruviusBackwardConversionMatch;
 import tools.vitruv.framework.views.CommittableView;
@@ -22,7 +23,8 @@ import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.JavaToUmlCPS;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -91,7 +93,7 @@ public class AbstractEvaluationTest {
         int currentRun = 0;
         Files.writeString(ruleApplicationMatchesFile,
                 "============================================= [Change Propagation run " + ++currentRun + "] =============================================\n" +
-                        currentCPS.getVitruviusTGGChangePropagationResults()
+                        getCurrentChangePropagationResults()
                                 .stream().map(result ->
                                         result.getAppliedMatches().stream()
                                                 .map(VitruviusBackwardConversionMatch::toEvalString)
@@ -105,13 +107,74 @@ public class AbstractEvaluationTest {
         Files.copy(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH), ibexFilesPath.resolve("protocol.xmi"));
 
         //TODO time (?)
+        Path timeMeasurementsFile = vitruviusProjectPath.resolve("timeMeasurements");
+        currentRun = 0;
+        Files.writeString(timeMeasurementsFile,
+                "============================================= [Change Propagation run " + ++currentRun + "] =============================================\n" +
+                        getCurrentChangePropagationResults()
+                                .stream()
+                                .map(result -> result.getTimeMeasurements().entrySet().stream()
+                                        .sorted(Map.Entry.comparingByKey())
+                                        .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
+                                        .collect(Collectors.joining("\n"))
+                                )
+                                .collect(Collectors.joining("\n\n============================================= [Change Propagation run " + ++currentRun + "] =============================================\n"))
+                        + "\n\n============================================= [AVERAGE over all " + getCurrentChangePropagationResults().size() + " runs] =============================================\n"
+                        + getAverageTimesString()
+                        + "\n\n============================================= [MEDIAN over all " + getCurrentChangePropagationResults().size() + " runs] =============================================\n"
+                        + getMedianTimesString()
+        );
+
+    }
+
+    private String getAverageTimesString() {
+        Set<String> keys =  getCurrentChangePropagationResults().getLast().getTimeMeasurements().keySet();
+        Map<String, Timer> measurementKeyToAverageTimer = new HashMap<>();
+        for (String key : keys) {// add all timers
+            long summedNanos = getCurrentChangePropagationResults().stream()
+                    .map(result -> result.getTimeMeasurements().get(key))
+                    .reduce(Timer::add)
+                    .get().getTime(TimeUnit.NANOSECONDS);
+            measurementKeyToAverageTimer.put(key, new Timer(0, summedNanos / getCurrentChangePropagationResults().size()));
+        }
+        return measurementKeyToAverageTimer.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
+                .collect(Collectors.joining("\n"));
+    }
+
+    private String getMedianTimesString() {
+        Set<String> keys =  getCurrentChangePropagationResults().getLast().getTimeMeasurements().keySet();
+        Map<String, Timer> measurementKeyToAverageTimer = new HashMap<>();
+        for (String key : keys) {// add all timers
+            List<Long> sortedNanos = getCurrentChangePropagationResults().stream()
+                    .map(result -> result.getTimeMeasurements().get(key))
+                    .map(timer -> timer.getTime(TimeUnit.NANOSECONDS))
+                    .sorted()
+                    .toList();
+            int size = sortedNanos.size();
+            measurementKeyToAverageTimer.put(key, new Timer(
+                    0,
+                    (size % 2 == 0)
+                            ? (sortedNanos.get(size/2) + sortedNanos.get(size/2 - 1)) / 2
+                            : sortedNanos.get(size/2)
+            ));
+        }
+        return measurementKeyToAverageTimer.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
+                .collect(Collectors.joining("\n"));
+    }
+
+    List<VitruviusTGGChangePropagationResult> getCurrentChangePropagationResults() {
+        return currentCPS.getVitruviusTGGChangePropagationResults();
     }
 
     // no problem if written multiple times, is always the same...
     @AfterEach
     void storeGlobalEvalData() throws IOException {
         Path tggRulesInfoPath = VITRUVIUS_PROJECTS_PATH.resolve("tggRulesInfo.txt");
-        VitruviusTGGChangePropagationResult lastResult = currentCPS.getVitruviusTGGChangePropagationResults().getLast();
+        VitruviusTGGChangePropagationResult lastResult = getCurrentChangePropagationResults().getLast();
         String fileContent = "============================================= [ TGG Rule Info ] =============================================\n"
                 + "Number of intact rules:  " + lastResult.getIntactRules().size() + "\n"
                 + "Number of corrupt rules: " + lastResult.getCorruptRules().size() + "\n"

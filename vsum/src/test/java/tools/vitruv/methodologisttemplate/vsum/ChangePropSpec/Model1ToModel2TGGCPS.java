@@ -26,18 +26,19 @@ public class Model1ToModel2TGGCPS extends TGGChangePropagationSpecification {
                 "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore",
                 ibexProjectPath,
                 target,
-                targetRootURI);
+                targetRootURI,
+                false);
     }
 
     public Model1ToModel2TGGCPS(
             MetamodelDescriptor sourceMetamodelDescriptor, MetamodelDescriptor targetMetamodelDescriptor,
             MetamodelDescriptor SRCMetamodelDescriptor, MetamodelDescriptor TRGMetamodelDescriptor,
             String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri,
-            File ibexProjectPath, EClass targetRootEclass, URI targetRootURI) {
+            File ibexProjectPath, EClass targetRootEclass, URI targetRootURI, boolean useShortcutRules) {
         super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
-                ibexProjectPath, Set.of(targetRootEclass), targetRootURI);
+                ibexProjectPath, Set.of(targetRootEclass), targetRootURI, useShortcutRules);
         logger.debug("In Constructor for Model1Model2TGGChangePropagationSpecification.");
         logger.debug("Ensuring Metamodels being registered: \n  - src NS_URI: "
                 + tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI

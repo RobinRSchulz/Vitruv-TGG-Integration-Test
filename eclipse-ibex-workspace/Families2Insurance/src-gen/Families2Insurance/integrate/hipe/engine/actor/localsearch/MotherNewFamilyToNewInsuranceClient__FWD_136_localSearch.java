@@ -58,11 +58,11 @@ public class MotherNewFamilyToNewInsuranceClient__FWD_136_localSearch extends Ge
 	@Override
 	protected void initializeSearchComponents() {
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Something2Else.FamilyRegisterToInsuranceDatabase) o).getSource(); return (result instanceof edu.kit.ipd.sdq.metamodels.families.FamilyRegister ? result : null);};
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Families2Insurance.FamilyRegisterToInsuranceDatabase) o).getSource(); return (result instanceof edu.kit.ipd.sdq.metamodels.families.FamilyRegister ? result : null);};
 						edge_explorer = new CachedEdgeExplorer(this, 1, 0, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Something2Else.FamilyRegisterToInsuranceDatabase) o).getTarget(); return (result instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase ? result : null);};
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Families2Insurance.FamilyRegisterToInsuranceDatabase) o).getTarget(); return (result instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase ? result : null);};
 						edge_explorer_3 = new CachedEdgeExplorer(this, 1, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		pac_explorer = new PACExplorer(this, Arrays.asList(new Integer[] {0,3,4}), node.getAllOverlaps().get(0));
@@ -174,7 +174,7 @@ public class MotherNewFamilyToNewInsuranceClient__FWD_136_localSearch extends Ge
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister": 
+		case "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof edu.kit.ipd.sdq.metamodels.families.FamilyRegister) {
 				{
@@ -217,7 +217,7 @@ public class MotherNewFamilyToNewInsuranceClient__FWD_136_localSearch extends Ge
 				
 			}
 			break;
-		case "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase": 
+		case "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase": 
 			if(!lazy_initialization) {
 				if(msg.target instanceof edu.kit.ipd.sdq.metamodels.insurance.InsuranceDatabase) {
 				{
@@ -257,7 +257,7 @@ public class MotherNewFamilyToNewInsuranceClient__FWD_136_localSearch extends Ge
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "Something2Else.FamilyRegisterToInsuranceDatabase_source_FamilyRegister": 
+		case "Families2Insurance.FamilyRegisterToInsuranceDatabase_source_FamilyRegister": 
 				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
@@ -295,7 +295,7 @@ public class MotherNewFamilyToNewInsuranceClient__FWD_136_localSearch extends Ge
 					}
 				}
 				break;
-		case "Something2Else.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase": 
+		case "Families2Insurance.FamilyRegisterToInsuranceDatabase_target_InsuranceDatabase": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {

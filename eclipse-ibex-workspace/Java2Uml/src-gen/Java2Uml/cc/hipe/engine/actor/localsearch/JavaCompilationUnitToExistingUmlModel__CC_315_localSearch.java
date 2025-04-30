@@ -45,8 +45,8 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 	ConstraintChecker constraint_checker;
 	CachedEdgeExplorer edge_explorer;
 	EdgeExplorer edge_explorer_3;
-	EdgeExplorer edge_explorer_4;
-	CachedEdgeExplorer edge_explorer_5;
+	CachedEdgeExplorer edge_explorer_4;
+	EdgeExplorer edge_explorer_5;
 	
 	SearchOrchestration edge_explorer_0_orchestration;
 	SearchOrchestration edge_explorer_1_orchestration;
@@ -73,13 +73,13 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 						edge_explorer_3 = new EdgeExplorer(this, 2, 4, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.multi_lookup = (o) -> ((org.emftext.language.java.containers.Package) o).getCompilationUnits();
-						edge_explorer_4_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.containers.Package) return edge_explorer_4_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_4 = new EdgeExplorer(this, 2, 0, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaCompilationUnitToUmlModel) o).getSource(); return (result instanceof org.emftext.language.java.containers.CompilationUnit ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 1, 0, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaCompilationUnitToUmlModel) o).getSource(); return (result instanceof org.emftext.language.java.containers.CompilationUnit ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 1, 0, edge_explorer_5_methods);
+						edge_explorer_5_methods.multi_lookup = (o) -> ((org.emftext.language.java.containers.Package) o).getCompilationUnits();
+						edge_explorer_5_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.containers.Package) return edge_explorer_5_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_5 = new EdgeExplorer(this, 2, 0, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 	}
 	
@@ -126,7 +126,7 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 			case "JavaCompilationUnitToUmlModel_object": 
 				{
 					edge_explorer.registerSourceObject(objs[0]);
-					edge_explorer_5.registerSourceObject(objs[0]);
+					edge_explorer_4.registerSourceObject(objs[0]);
 					
 					// javaCompUnitToUmlModel
 					HMatch match_1 = new LocalSearchMatch("JavaCompilationUnitToExistingUmlModel__CC_315_localSearch", 5);
@@ -273,17 +273,7 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 					objs[2] = msg.source;
 					objs[0] = msg.target;
 					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				
-				{
-					HMatch match = new LocalSearchMatch("JavaCompilationUnitToExistingUmlModel__CC_315_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[2] = msg.source;
-					objs[0] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
+					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
 				}
 				
@@ -293,13 +283,26 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 			if(!lazy_initialization) {
 				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
+					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("JavaCompilationUnitToExistingUmlModel__CC_315_localSearch", 5);
 					Object[] objs = match.getNodes();
 					objs[1] = msg.source;
 					objs[0] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.containers.CompilationUnit) {
+				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("JavaCompilationUnitToExistingUmlModel__CC_315_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[1] = msg.source;
+					objs[0] = msg.target;
+					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -399,6 +402,9 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 						sendDeletedMatches(toBeRemoved_6);
 					}
 				}
+				break;
+		case "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit": 
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
@@ -410,9 +416,7 @@ public class JavaCompilationUnitToExistingUmlModel__CC_315_localSearch extends G
 						sendDeletedMatches(toBeRemoved_7);
 					}
 				}
-				break;
-		case "Java2Uml.JavaCompilationUnitToUmlModel_source_CompilationUnit": 
-				edge_explorer_5.deregisterEdge(msg.source, msg.target);
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();

@@ -57,11 +57,11 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 	SearchOrchestration edge_explorer_3_1_orchestration;
 	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
+	SearchOrchestration edge_explorer_4_1_orchestration;
 	SearchOrchestration edge_explorer_5_0_orchestration;
 	SearchOrchestration edge_explorer_5_1_orchestration;
 	SearchOrchestration edge_explorer_5_2_orchestration;
 	SearchOrchestration edge_explorer_6_0_orchestration;
-	SearchOrchestration edge_explorer_6_1_orchestration;
 	SearchOrchestration edge_explorer_7_0_orchestration;
 	SearchOrchestration nac_checker_orchestration;
 	
@@ -79,16 +79,16 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 						edge_explorer_3 = new EdgeExplorer(this, 2, 6, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((org.emftext.language.java.types.ClassifierReference) o).getTarget(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 6, 0, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Class ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 1, 4, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
 						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getTarget(); return (result instanceof uml.Operation ? result : null);};
 						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 5, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
-						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Class ? result : null);};
-						edge_explorer_6 = new CachedEdgeExplorer(this, 1, 4, edge_explorer_6_methods);
+						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((org.emftext.language.java.types.ClassifierReference) o).getTarget(); return (result instanceof org.emftext.language.java.classifiers.Class ? result : null);};
+						edge_explorer_6 = new CachedEdgeExplorer(this, 6, 0, edge_explorer_6_methods);
 		name2explorer.put("edge_explorer_6", edge_explorer_6);
 		EdgeLookupMethods edge_explorer_7_methods = new EdgeLookupMethods();
 						edge_explorer_7_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaMethodToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.ClassMethod ? result : null);};
@@ -107,11 +107,11 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
 		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
 		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
-		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
-		edge_explorer_5_1_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
-		edge_explorer_5_2_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
-		edge_explorer_6_0_orchestration = initializeOrchestration(node.getOrchestrations().get(10).getPlan());
-		edge_explorer_6_1_orchestration = initializeOrchestration(node.getOrchestrations().get(11).getPlan());
+		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
+		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
+		edge_explorer_5_1_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
+		edge_explorer_5_2_orchestration = initializeOrchestration(node.getOrchestrations().get(10).getPlan());
+		edge_explorer_6_0_orchestration = initializeOrchestration(node.getOrchestrations().get(11).getPlan());
 		edge_explorer_7_0_orchestration = initializeOrchestration(node.getOrchestrations().get(12).getPlan());
 		nac_checker_orchestration = initializeOrchestration(node.getOrchestrations().get(13).getPlan());
 	}
@@ -141,7 +141,7 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 			case "JavaClassifierToUmlClassifier_object_SP8": 
 				{
 					edge_explorer.registerSourceObject(objs[0]);
-					edge_explorer_6.registerSourceObject(objs[0]);
+					edge_explorer_4.registerSourceObject(objs[0]);
 					
 					// javaClassifierToUmlClassifier
 					HMatch match_1 = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
@@ -178,7 +178,7 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 						// umlClassifier
 						HMatch match_4 = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
 						match_4.getNodes()[4] = objs[0];
-						start(edge_explorer_6_1_orchestration, match_4);
+						start(edge_explorer_4_1_orchestration, match_4);
 					}
 				}
 				break;
@@ -195,7 +195,7 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 				break;
 			case "ClassifierReference_object_SP7": 
 				{
-					edge_explorer_4.registerSourceObject(objs[0]);
+					edge_explorer_6.registerSourceObject(objs[0]);
 					
 					// typeReference
 					HMatch match_6 = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
@@ -362,15 +362,28 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 				
 			}
 			break;
-		case "org.emftext.language.java.types.ClassifierReference_target_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
+				if(msg.target instanceof uml.Class) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
 					Object[] objs = match.getNodes();
-					objs[6] = msg.source;
-					objs[0] = msg.target;
+					objs[1] = msg.source;
+					objs[4] = msg.target;
+					currentDepth++;
+					start(edge_explorer_4_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof uml.Class) {
+				{
+					edge_explorer_4.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
+					Object[] objs = match.getNodes();
+					objs[1] = msg.source;
+					objs[4] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
@@ -422,28 +435,15 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 				
 			}
 			break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+		case "org.emftext.language.java.types.ClassifierReference_target_Classifier": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Class) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Class) {
 				{
 					edge_explorer_6.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
 					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[4] = msg.target;
-					currentDepth++;
-					start(edge_explorer_6_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof uml.Class) {
-				{
-					edge_explorer_6.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("MethodClassReturnTypeToReturnType__FWD_858_localSearch", 7);
-					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[4] = msg.target;
+					objs[6] = msg.source;
+					objs[0] = msg.target;
 					currentDepth++;
 					start(edge_explorer_6_0_orchestration, match);
 					currentDepth--;
@@ -552,33 +552,33 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 					}
 				}
 				break;
-		case "org.emftext.language.java.types.ClassifierReference_target_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[0].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_6);
 					}
 				}
-				break;
-		case "Java2Uml.JavaMethodToOperation_target_Operation": 
-				edge_explorer_5.deregisterEdge(msg.source, msg.target);
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_7);
 					}
 				}
+				break;
+		case "Java2Uml.JavaMethodToOperation_target_Operation": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
@@ -603,26 +603,26 @@ public class MethodClassReturnTypeToReturnType__FWD_858_localSearch extends Gene
 						sendDeletedMatches(toBeRemoved_9);
 					}
 				}
-				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
-				edge_explorer_6.deregisterEdge(msg.source, msg.target);
+				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_10 = obj2matches.get(msg.source);
 				if(matches_10 != null && !matches_10.isEmpty()) {
 					Collection<HMatch> toBeRemoved_10 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_10) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[5].equals(msg.target))
 							toBeRemoved_10.add(m);
 					}
 					if(!toBeRemoved_10.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_10);
 					}
 				}
+				break;
+		case "org.emftext.language.java.types.ClassifierReference_target_Classifier": 
 				edge_explorer_6.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_11 = obj2matches.get(msg.source);
 				if(matches_11 != null && !matches_11.isEmpty()) {
 					Collection<HMatch> toBeRemoved_11 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_11) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[0].equals(msg.target))
 							toBeRemoved_11.add(m);
 					}
 					if(!toBeRemoved_11.isEmpty()) {

@@ -18,25 +18,15 @@ public class NotificationActor extends GenericNotificationActor {
 	
 	@Override
 	protected void initializeExploration() {
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getDaughterToInsuranceClient__Marker(), obj -> {
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase__Marker(), obj -> {
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase__Marker(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFatherNewFamilyToNewInsuranceClient__Marker(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			return children;
-		});
-		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getProtocol(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			runtime.Protocol _protocol = (runtime.Protocol) obj;
-			children.addAll(_protocol.getSteps());
-			return children;
-		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getMotherNewFamilyToNewInsuranceClient__Marker(), obj -> {
+		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getTGGRuleApplication(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});
@@ -46,34 +36,10 @@ public class NotificationActor extends GenericNotificationActor {
 			children.addAll(_insurancedatabase.getInsuranceclient());
 			return children;
 		});
-		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getTempContainer(), obj -> {
+		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getProtocol(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
-			runtime.TempContainer _tempcontainer = (runtime.TempContainer) obj;
-			children.addAll(_tempcontainer.getObjects());
-			return children;
-		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyToInsuranceClient(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			return children;
-		});
-		explorationConsumer.put(edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage.eINSTANCE.getInsuranceClient(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			return children;
-		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getMemberToInsuranceClient(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			return children;
-		});
-		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getCorrespondenceNode(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			return children;
-		});
-		explorationConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getMember(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
-			return children;
-		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getSonToInsuranceClient__Marker(), obj -> {
-			Collection<EObject> children = new LinkedList<>();
+			runtime.Protocol _protocol = (runtime.Protocol) obj;
+			children.addAll(_protocol.getSteps());
 			return children;
 		});
 		explorationConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getFamily(), obj -> {
@@ -93,19 +59,53 @@ public class NotificationActor extends GenericNotificationActor {
 			children.addAll(_familyregister.getFamilies());
 			return children;
 		});
-		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getTGGRuleApplication(), obj -> {
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getDaughterToInsuranceClient__Marker(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFatherToInsuranceClient__Marker(), obj -> {
+		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getTempContainer(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			runtime.TempContainer _tempcontainer = (runtime.TempContainer) obj;
+			children.addAll(_tempcontainer.getObjects());
+			return children;
+		});
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFamilyToInsuranceClient(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getFamilyRegisterToInsuranceDatabase(), obj -> {
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getSonToInsuranceClient__Marker(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});
-		explorationConsumer.put(Something2Else.Families2InsurancePackage.eINSTANCE.getMotherToInsuranceClient__Marker(), obj -> {
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFatherToInsuranceClient__Marker(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getMotherNewFamilyToNewInsuranceClient__Marker(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getMotherToInsuranceClient__Marker(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(edu.kit.ipd.sdq.metamodels.families.FamiliesPackage.eINSTANCE.getMember(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getFatherNewFamilyToNewInsuranceClient__Marker(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage.eINSTANCE.getInsuranceClient(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(Families2Insurance.Families2InsurancePackage.eINSTANCE.getMemberToInsuranceClient(), obj -> {
+			Collection<EObject> children = new LinkedList<>();
+			return children;
+		});
+		explorationConsumer.put(runtime.impl.RuntimePackageImpl.eINSTANCE.getCorrespondenceNode(), obj -> {
 			Collection<EObject> children = new LinkedList<>();
 			return children;
 		});

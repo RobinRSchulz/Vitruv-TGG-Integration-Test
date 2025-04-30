@@ -56,10 +56,10 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_739_junction extends Generi
 	}
 	
 	public boolean check_constraint_114(HMatch match, int index) {
-		uml.PrimitiveType shortType = (uml.PrimitiveType) match.getNodes()[4];
-		uml.PrimitiveType longType = (uml.PrimitiveType) match.getNodes()[3];
-		uml.PrimitiveType floatType = (uml.PrimitiveType) match.getNodes()[0];
-		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
+		org.eclipse.uml2.uml.PrimitiveType floatType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[0];
+		org.eclipse.uml2.uml.PrimitiveType longType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[3];
+		org.eclipse.uml2.uml.PrimitiveType intType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[2];
+		org.eclipse.uml2.uml.PrimitiveType shortType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[4];
 		boolean predicate = !floatType.equals(longType) && !floatType.equals(shortType) && !intType.equals(longType) && !intType.equals(shortType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

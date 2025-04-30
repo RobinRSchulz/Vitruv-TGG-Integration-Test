@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="33013" name="Adrian Green" level="PENDING" />
+      <waits patientID="33014" name="Elisabeth Moore" level="PENDING" />
+      <waits patientID="33015" name="Friedrich Carter" level="PENDING" />
+      <waits patientID="33016" name="Jonas Nelson" level="PENDING" />
+      <waits patientID="33017" name="Juna Baker" level="PENDING" />
+      <waits patientID="33018" name="Elias Peterson" level="PENDING" />
+      <waits patientID="33019" name="Paulina Torres" level="PENDING" />
+      <waits patientID="33020" name="Altfried Jackson" level="PENDING" />
+      <waits patientID="33021" name="Asis Nguyen" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Doctor" staffID="64776" name="Annabelle Hill" patientCapacity="0" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64777" name="Abigail Miller" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="64778" name="Luise Adams" patientCapacity="0" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64779" name="Amos Roberts" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64780" name="Juna Brown" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64781" name="Paulina Walker" works="/0/@department.8" />
+    <department staff="/0/@staff.3 /0/@staff.4" dID="727" maxRoomCount="10" />
+    <department dID="728" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="729" maxRoomCount="10" />
+    <department staff="/0/@staff.1" dID="730" maxRoomCount="10" />
+    <department staff="/0/@staff.0 /0/@staff.2" dID="731" maxRoomCount="10" />
+    <department dID="732" maxRoomCount="10" />
+    <department dID="733" maxRoomCount="10" />
+    <department dID="734" maxRoomCount="10" />
+    <department staff="/0/@staff.5" dID="735" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Juna" lastName="Brown" staffID="64780" salary="3869.58" dInt="727">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Amos" lastName="Roberts" staffID="64779" salary="5815.79" dInt="727">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Annabelle" lastName="Hill" staffID="64776" salary="11143.25" dInt="731">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Luise" lastName="Adams" staffID="64778" salary="10497.79" dInt="731">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Paulina" lastName="Walker" staffID="64781" salary="2369.38" dInt="735">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Abigail" lastName="Miller" staffID="64777" salary="4471.83" dInt="730">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Elias" lastName="Peterson" patientID="33018" />
+    <patient firstName="Adrian" lastName="Green" patientID="33013" />
+    <patient firstName="Altfried" lastName="Jackson" patientID="33020" />
+    <patient firstName="Friedrich" lastName="Carter" patientID="33015" />
+    <patient firstName="Elisabeth" lastName="Moore" patientID="33014" />
+    <patient firstName="Asis" lastName="Nguyen" patientID="33021" />
+    <patient firstName="Paulina" lastName="Torres" patientID="33019" />
+    <patient firstName="Jonas" lastName="Nelson" patientID="33016" />
+    <patient firstName="Juna" lastName="Baker" patientID="33017" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

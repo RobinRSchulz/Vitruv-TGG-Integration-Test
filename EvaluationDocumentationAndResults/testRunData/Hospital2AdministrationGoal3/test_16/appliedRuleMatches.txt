@@ -1,0 +1,357 @@
+============================================= [Change Propagation run 1] =============================================
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:3d8bade1
+    - [CreateEObject] AE=Patient:300a03f1, name=Ake Lewis
+[RoomRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Room:6f2dd50b
+    - [InsertEReference] AE=Department:20143517
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Department:1d2f00a4
+    - [CreateEObject] AE=Nurse:404ab2, name=Ella Perez
+    - [InsertEReference] AE=Hospital:1df6425d
+    - [InsertEReference] AE=Nurse:404ab2, name=Ella Perez
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:3d8bade1
+    - [CreateEObject] AE=Patient:5df649f4, name=Romy Stewart
+[RoomRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Room:211029b3
+    - [InsertEReference] AE=Department:1d2f00a4
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Hospital:1df6425d
+    - [CreateEObject] AE=Reception:3d8bade1
+    - [InsertEReference] AE=Hospital:1df6425d
+    - [InsertRootEObject] AE=Hospital:1df6425d
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:1df6425d
+    - [CreateEObject] AE=Department:20143517
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:1df6425d
+    - [CreateEObject] AE=Department:1d2f00a4
+
+============================================= [Change Propagation run 2] =============================================
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Hospital:40bab138
+    - [InsertEReference] AE=Hospital:40bab138
+    - [InsertRootEObject] AE=Hospital:40bab138
+    - [CreateEObject] AE=Reception:3ca2bc7a
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:19b7b25f
+    - [InsertEReference] AE=Hospital:40bab138
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Nurse:3267735e, name=Maximilian Lewis
+    - [InsertEReference] AE=Hospital:40bab138
+    - [CreateEObject] AE=Nurse:3267735e, name=Maximilian Lewis
+    - [InsertEReference] AE=Department:19b7b25f
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:34ef0e01, name=Aglaia Murphy
+    - [InsertEReference] AE=Reception:3ca2bc7a
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Nurse:3e038172, name=Amelie Rodriguez
+    - [InsertEReference] AE=Hospital:40bab138
+    - [InsertEReference] AE=Department:19b7b25f
+    - [InsertEReference] AE=Nurse:3e038172, name=Amelie Rodriguez
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:40bab138
+    - [CreateEObject] AE=Department:1043de8a
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:3ca2bc7a
+    - [CreateEObject] AE=Patient:148b1344, name=Antke Gonzalez
+
+============================================= [Change Propagation run 2] =============================================
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:3763f752, name=Liam Miller
+    - [InsertEReference] AE=Reception:6a90c808
+[RoomRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Room:1f6ab60
+    - [InsertEReference] AE=Department:24b3df86
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:33f19128
+    - [InsertEReference] AE=Hospital:5e89d512
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Reception:6a90c808
+    - [InsertRootEObject] AE=Hospital:5e89d512
+    - [CreateEObject] AE=Hospital:5e89d512
+    - [InsertEReference] AE=Hospital:5e89d512
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:5e89d512
+    - [CreateEObject] AE=Department:24b3df86
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:5e89d512
+    - [CreateEObject] AE=Nurse:21b9e268, name=Leon Rivera
+    - [InsertEReference] AE=Department:33f19128
+    - [InsertEReference] AE=Nurse:21b9e268, name=Leon Rivera
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:5a0fbc22, name=Karl Hernandez
+    - [InsertEReference] AE=Reception:6a90c808
+
+============================================= [Change Propagation run 2] =============================================
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:677e09bf, name=Asis Garcia
+    - [InsertEReference] AE=Reception:52aae510
+[DocToStaffRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Doctor:334ecb02, name=Augusta Davis
+    - [InsertEReference] AE=Department:27d3fb38
+    - [InsertEReference] AE=Doctor:334ecb02, name=Augusta Davis
+    - [InsertEReference] AE=Hospital:53afedea
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:52aae510
+    - [CreateEObject] AE=Patient:51ddc961, name=Annabelle Nguyen
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:62a7072e
+    - [InsertEReference] AE=Hospital:53afedea
+[DocToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Department:27d3fb38
+    - [InsertEReference] AE=Hospital:53afedea
+    - [InsertEReference] AE=Doctor:f795903, name=Luis Davis
+    - [CreateEObject] AE=Doctor:f795903, name=Luis Davis
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:53afedea
+    - [CreateEObject] AE=Department:27d3fb38
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Hospital:53afedea
+    - [InsertEReference] AE=Hospital:53afedea
+    - [InsertRootEObject] AE=Hospital:53afedea
+    - [CreateEObject] AE=Reception:52aae510
+
+============================================= [Change Propagation run 2] =============================================
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Reception:192399a9
+    - [InsertRootEObject] AE=Hospital:62f64b17
+    - [CreateEObject] AE=Hospital:62f64b17
+    - [InsertEReference] AE=Hospital:62f64b17
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:463057a5, name=Annegret Phillips
+    - [InsertEReference] AE=Reception:192399a9
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:62f64b17
+    - [CreateEObject] AE=Department:336c2a1
+[RoomRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Room:8ae7010
+    - [InsertEReference] AE=Department:336c2a1
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:1a7502e3
+    - [InsertEReference] AE=Hospital:62f64b17
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:192399a9
+    - [CreateEObject] AE=Patient:1a388a45, name=Berenike Collins
+[DocToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Doctor:62b78430, name=Henry Rodriguez
+    - [InsertEReference] AE=Hospital:62f64b17
+    - [CreateEObject] AE=Doctor:62b78430, name=Henry Rodriguez
+    - [InsertEReference] AE=Department:1a7502e3
+
+============================================= [Change Propagation run 2] =============================================
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:2a2aef62
+    - [InsertEReference] AE=Hospital:4f163789
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Nurse:557992c9, name=Wilma Peterson
+    - [CreateEObject] AE=Nurse:557992c9, name=Wilma Peterson
+    - [InsertEReference] AE=Department:2a2aef62
+    - [InsertEReference] AE=Hospital:4f163789
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:2244ae6e
+    - [CreateEObject] AE=Patient:5d0d51c3, name=Alexander Stewart
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:5bccef6f, name=Anna Flores
+    - [InsertEReference] AE=Reception:2244ae6e
+[DocToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Department:33dcdf34
+    - [CreateEObject] AE=Doctor:50c48b93, name=Arik Carter
+    - [InsertEReference] AE=Hospital:4f163789
+    - [InsertEReference] AE=Doctor:50c48b93, name=Arik Carter
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Hospital:4f163789
+    - [CreateEObject] AE=Reception:2244ae6e
+    - [InsertRootEObject] AE=Hospital:4f163789
+    - [InsertEReference] AE=Hospital:4f163789
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:33dcdf34
+    - [InsertEReference] AE=Hospital:4f163789
+
+============================================= [Change Propagation run 2] =============================================
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:50fea67, name=Meike Cooper
+    - [InsertEReference] AE=Reception:ef7105b
+[RoomRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Department:593ba9d3
+    - [CreateEObject] AE=Room:79342408
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:248ae9a9
+    - [InsertEReference] AE=Hospital:31f36cb5
+[RoomRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Room:177c991
+    - [InsertEReference] AE=Department:248ae9a9
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:34a568e2, name=Juna Collins
+    - [InsertEReference] AE=Reception:ef7105b
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Hospital:31f36cb5
+    - [CreateEObject] AE=Reception:ef7105b
+    - [InsertRootEObject] AE=Hospital:31f36cb5
+    - [InsertEReference] AE=Hospital:31f36cb5
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:593ba9d3
+    - [InsertEReference] AE=Hospital:31f36cb5
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Nurse:29b3e8ec, name=Andreas Cook
+    - [InsertEReference] AE=Nurse:29b3e8ec, name=Andreas Cook
+    - [InsertEReference] AE=Hospital:31f36cb5
+    - [InsertEReference] AE=Department:593ba9d3
+
+============================================= [Change Propagation run 2] =============================================
+[DocToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:27579549
+    - [InsertEReference] AE=Doctor:7736e1b2, name=Adam Martinez
+    - [InsertEReference] AE=Department:2c0f965a
+    - [CreateEObject] AE=Doctor:7736e1b2, name=Adam Martinez
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Department:53fe9ce
+    - [CreateEObject] AE=Nurse:73eb5e45, name=Adam Harris
+    - [InsertEReference] AE=Hospital:27579549
+    - [InsertEReference] AE=Nurse:73eb5e45, name=Adam Harris
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:3c657483, name=Karl Martin
+    - [InsertEReference] AE=Reception:47ae1b15
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:2c0f965a
+    - [InsertEReference] AE=Hospital:27579549
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:27579549
+    - [CreateEObject] AE=Department:53fe9ce
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Hospital:27579549
+    - [InsertRootEObject] AE=Hospital:27579549
+    - [InsertEReference] AE=Hospital:27579549
+    - [CreateEObject] AE=Reception:47ae1b15
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:7c8baa67, name=Konstantin Harris
+    - [InsertEReference] AE=Reception:47ae1b15
+
+============================================= [Change Propagation run 2] =============================================
+[PatientInReception]: 
+  - EChanges: 
+    - [CreateEObject] AE=Patient:5eadf45b, name=Astrid Moore
+    - [InsertEReference] AE=Reception:536c916e
+[DocToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Doctor:52497309, name=Peter Wilson
+    - [CreateEObject] AE=Doctor:52497309, name=Peter Wilson
+    - [InsertEReference] AE=Hospital:5a28d37c
+    - [InsertEReference] AE=Department:1ab0d516
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:de75daa
+    - [InsertEReference] AE=Hospital:5a28d37c
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Reception:536c916e
+    - [CreateEObject] AE=Hospital:5a28d37c
+    - [InsertEReference] AE=Hospital:5a28d37c
+    - [InsertRootEObject] AE=Hospital:5a28d37c
+[RoomRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Department:de75daa
+    - [CreateEObject] AE=Room:55ab8cc3
+[DepartmentRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:5a28d37c
+    - [CreateEObject] AE=Department:1ab0d516
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:536c916e
+    - [CreateEObject] AE=Patient:5c86e360, name=Jonas Carter
+
+============================================= [Change Propagation run 2] =============================================
+[HospitaltoAdministrationRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:1f3f929b
+    - [CreateEObject] AE=Reception:3fb9d6a9
+    - [CreateEObject] AE=Hospital:1f3f929b
+    - [InsertRootEObject] AE=Hospital:1f3f929b
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:3fb9d6a9
+    - [CreateEObject] AE=Patient:56646ea0, name=Annegret Hill
+[PatientInReception]: 
+  - EChanges: 
+    - [InsertEReference] AE=Reception:3fb9d6a9
+    - [CreateEObject] AE=Patient:3347947e, name=Alba Carter
+[NurseToStaffRule]: 
+  - EChanges: 
+    - [InsertEReference] AE=Hospital:1f3f929b
+    - [InsertEReference] AE=Nurse:3174ed42, name=Henry Allen
+    - [InsertEReference] AE=Department:695aaf90
+    - [CreateEObject] AE=Nurse:3174ed42, name=Henry Allen
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:695aaf90
+    - [InsertEReference] AE=Hospital:1f3f929b
+[DocToStaffRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Doctor:20a0af0d, name=Meike Allen
+    - [InsertEReference] AE=Doctor:20a0af0d, name=Meike Allen
+    - [InsertEReference] AE=Hospital:1f3f929b
+    - [InsertEReference] AE=Department:695aaf90
+[DepartmentRule]: 
+  - EChanges: 
+    - [CreateEObject] AE=Department:4c27a9de
+    - [InsertEReference] AE=Hospital:1f3f929b

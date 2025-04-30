@@ -30,17 +30,20 @@ public class JavaToUmlCPS extends TGGChangePropagationSpecification {
                 "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore",
                 ibexProjectPath,
                 targetRootEclasses,
-                targetRootURI);
+                targetRootURI,
+//                true
+                false
+        );
     }
 
     public JavaToUmlCPS(MetamodelDescriptor sourceMetamodelDescriptor, MetamodelDescriptor targetMetamodelDescriptor,
                         MetamodelDescriptor SRCMetamodelDescriptor, MetamodelDescriptor TRGMetamodelDescriptor,
                         String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri, File ibexProjectPath,
-                        Set<EClass> targetRootEclasses, URI targetRootURI) {
+                        Set<EClass> targetRootEclasses, URI targetRootURI, boolean useShortcutRules) {
         super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
-                ibexProjectPath, targetRootEclasses, targetRootURI);
+                ibexProjectPath, targetRootEclasses, targetRootURI, useShortcutRules);
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 JavaPackageImpl.eNS_URI,
                 JavaPackageImpl.eINSTANCE

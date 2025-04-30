@@ -56,9 +56,9 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 	SearchOrchestration edge_explorer_3_1_orchestration;
 	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
+	SearchOrchestration edge_explorer_4_1_orchestration;
+	SearchOrchestration edge_explorer_4_2_orchestration;
 	SearchOrchestration edge_explorer_5_0_orchestration;
-	SearchOrchestration edge_explorer_5_1_orchestration;
-	SearchOrchestration edge_explorer_5_2_orchestration;
 	SearchOrchestration edge_explorer_6_0_orchestration;
 	
 	
@@ -75,16 +75,16 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 						edge_explorer_3 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaAttributeToUmlProperty) o).getTarget(); return (result instanceof uml.Property ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 4, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Enumeration ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 3, 1, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Enumeration ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 1, edge_explorer_5_methods);
+						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Enumeration ? result : null);};
+						edge_explorer_5 = new CachedEdgeExplorer(this, 3, 5, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 		EdgeLookupMethods edge_explorer_6_methods = new EdgeLookupMethods();
-						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Enumeration ? result : null);};
-						edge_explorer_6 = new CachedEdgeExplorer(this, 3, 5, edge_explorer_6_methods);
+						edge_explorer_6_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaAttributeToUmlProperty) o).getTarget(); return (result instanceof uml.Property ? result : null);};
+						edge_explorer_6 = new CachedEdgeExplorer(this, 0, 4, edge_explorer_6_methods);
 		name2explorer.put("edge_explorer_6", edge_explorer_6);
 	}
 	
@@ -97,9 +97,9 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
 		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
 		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
-		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
-		edge_explorer_5_1_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
-		edge_explorer_5_2_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
+		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
+		edge_explorer_4_2_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
+		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(9).getPlan());
 		edge_explorer_6_0_orchestration = initializeOrchestration(node.getOrchestrations().get(10).getPlan());
 	}
 	
@@ -119,7 +119,7 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 			case "JavaAttributeToUmlProperty_object_SP1": 
 				{
 					edge_explorer_3.registerSourceObject(objs[0]);
-					edge_explorer_4.registerSourceObject(objs[0]);
+					edge_explorer_6.registerSourceObject(objs[0]);
 					
 					// attributeToProperty
 					HMatch match_0 = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
@@ -134,7 +134,7 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 						// classifier
 						HMatch match_1 = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_5_2_orchestration, match_1);
+						start(edge_explorer_4_2_orchestration, match_1);
 					}
 				}
 				break;
@@ -151,13 +151,13 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 				break;
 			case "JavaClassifierToUmlClassifier_object_SP8": 
 				{
+					edge_explorer_4.registerSourceObject(objs[0]);
 					edge_explorer_5.registerSourceObject(objs[0]);
-					edge_explorer_6.registerSourceObject(objs[0]);
 					
 					// javaClassifierToUmlClassifier
 					HMatch match_3 = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 					match_3.getNodes()[3] = objs[0];
-					start(edge_explorer_5_1_orchestration, match_3);
+					start(edge_explorer_4_1_orchestration, match_3);
 				}
 				break;
 			case "Property_object_SP0": 
@@ -314,60 +314,43 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 				
 			}
 			break;
-		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Property) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[4] = msg.target;
+					objs[3] = msg.source;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-			}
-			break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
-			if(!lazy_initialization) {
 				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
+					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
 				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
+					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
 					objs[1] = msg.target;
 					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Enumeration) {
-				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
-					Object[] objs = match.getNodes();
-					objs[3] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_5_0_orchestration, match);
+					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -378,11 +361,28 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 			if(!lazy_initialization) {
 				if(msg.target instanceof uml.Enumeration) {
 				{
-					edge_explorer_6.registerEdge(msg.source, msg.target);
+					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 					Object[] objs = match.getNodes();
 					objs[3] = msg.source;
 					objs[5] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
+		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof uml.Property) {
+				{
+					edge_explorer_6.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[4] = msg.target;
 					currentDepth++;
 					start(edge_explorer_6_0_orchestration, match);
 					currentDepth--;
@@ -477,22 +477,20 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 					}
 				}
 				break;
-		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_6);
 					}
 				}
-				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
-				edge_explorer_5.deregisterEdge(msg.source, msg.target);
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
@@ -504,7 +502,7 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 						sendDeletedMatches(toBeRemoved_7);
 					}
 				}
-				edge_explorer_5.deregisterEdge(msg.source, msg.target);
+				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
@@ -516,12 +514,14 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 						sendDeletedMatches(toBeRemoved_8);
 					}
 				}
+				break;
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_9 = obj2matches.get(msg.source);
 				if(matches_9 != null && !matches_9.isEmpty()) {
 					Collection<HMatch> toBeRemoved_9 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_9) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[5].equals(msg.target))
 							toBeRemoved_9.add(m);
 					}
 					if(!toBeRemoved_9.isEmpty()) {
@@ -529,13 +529,13 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 					}
 				}
 				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+		case "Java2Uml.JavaAttributeToUmlProperty_target_Property": 
 				edge_explorer_6.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_10 = obj2matches.get(msg.source);
 				if(matches_10 != null && !matches_10.isEmpty()) {
 					Collection<HMatch> toBeRemoved_10 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_10) {
-						if(m.getNodes()[5].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_10.add(m);
 					}
 					if(!toBeRemoved_10.isEmpty()) {
@@ -656,17 +656,6 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 			port.forwardMessage(message);
 		}
 		Object obj = message.node;
-		if(obj instanceof org.emftext.language.java.members.Field) {
-			HMatch match_2 = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
-			match_2.getNodes()[2] = obj;
-			Collection<HMatch> formerMatches_2 = obj2matches.get(obj);
-			if(formerMatches_2 != null) {
-				
-				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
-				sendDeletedMatches(formerMatches_2);
-			}
-			start(edge_explorer_3_2_orchestration, match_2);
-		}
 		if(obj instanceof uml.Property) {
 			HMatch match_4 = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
 			match_4.getNodes()[4] = obj;
@@ -677,6 +666,17 @@ public class EnumAttributeTypeToPropertyType__BWD_238_localSearch extends Generi
 				sendDeletedMatches(formerMatches_4);
 			}
 			start(edge_explorer_1_orchestration, match_4);
+		}
+		if(obj instanceof org.emftext.language.java.members.Field) {
+			HMatch match_2 = new LocalSearchMatch("EnumAttributeTypeToPropertyType__BWD_238_localSearch", 6);
+			match_2.getNodes()[2] = obj;
+			Collection<HMatch> formerMatches_2 = obj2matches.get(obj);
+			if(formerMatches_2 != null) {
+				
+				formerMatches_2 = formerMatches_2.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
+				sendDeletedMatches(formerMatches_2);
+			}
+			start(edge_explorer_3_2_orchestration, match_2);
 		}
 		
 		message.initialMessage.decrement();

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="32789" name="Aglaia Murphy" level="PENDING" />
+      <waits patientID="32790" name="Antke Gonzalez" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Nurse" staffID="64612" name="Amelie Rodriguez" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64613" name="Maximilian Lewis" works="/0/@department.1" />
+    <department dID="615" maxRoomCount="10" />
+    <department staff="/0/@staff.0 /0/@staff.1" dID="616" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Maximilian" lastName="Lewis" staffID="64613" salary="4167.78" dInt="616">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Amelie" lastName="Rodriguez" staffID="64612" salary="4489.64" dInt="616">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Aglaia" lastName="Murphy" patientID="32789" />
+    <patient firstName="Antke" lastName="Gonzalez" patientID="32790" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

@@ -56,8 +56,8 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_741_junction extends Generi
 	}
 	
 	public boolean check_constraint_96(HMatch match, int index) {
-		uml.PrimitiveType floatType = (uml.PrimitiveType) match.getNodes()[0];
-		uml.PrimitiveType intType = (uml.PrimitiveType) match.getNodes()[2];
+		org.eclipse.uml2.uml.PrimitiveType floatType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[0];
+		org.eclipse.uml2.uml.PrimitiveType intType = (org.eclipse.uml2.uml.PrimitiveType) match.getNodes()[2];
 		boolean predicate = !floatType.equals(intType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

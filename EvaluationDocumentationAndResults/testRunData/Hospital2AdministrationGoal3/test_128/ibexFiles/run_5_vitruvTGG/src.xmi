@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="42590" name="Amy Jones" level="PENDING" />
+      <waits patientID="42591" name="Oskar Adams" level="PENDING" />
+      <waits patientID="42592" name="Berenike Campbell" level="PENDING" />
+      <waits patientID="42593" name="Augusta Harris" level="PENDING" />
+      <waits patientID="42594" name="Augusta Phillips" level="PENDING" />
+      <waits patientID="42595" name="Eva Martin" level="PENDING" />
+      <waits patientID="42596" name="Amos Baker" level="PENDING" />
+      <waits patientID="42597" name="Asis Baker" level="PENDING" />
+      <waits patientID="42598" name="Alma King" level="PENDING" />
+      <waits patientID="42599" name="Anette Morris" level="PENDING" />
+      <waits patientID="42600" name="Alma Hall" level="PENDING" />
+      <waits patientID="42601" name="Amos Hill" level="PENDING" />
+      <waits patientID="42602" name="Tim Anderson" level="PENDING" />
+      <waits patientID="42603" name="Theresa Hernandez" level="PENDING" />
+      <waits patientID="42604" name="Edda Wright" level="PENDING" />
+      <waits patientID="42605" name="Amy White" level="PENDING" />
+      <waits patientID="42606" name="Anisha Martin" level="PENDING" />
+      <waits patientID="42607" name="David Martin" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Doctor" staffID="81326" name="Konstantin Johnson" patientCapacity="0" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81327" name="Paulina Phillips" patientCapacity="0" works="/0/@department.8" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81328" name="Asis Carter" patientCapacity="0" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81329" name="Carla Hall" patientCapacity="0" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="81330" name="Luise Cook" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81331" name="Elisabeth Roberts" patientCapacity="0" works="/0/@department.14" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="81332" name="Quirin Murphy" works="/0/@department.9" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81333" name="Eva Rodriguez" patientCapacity="0" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81334" name="Anna Reed" patientCapacity="0" works="/0/@department.2" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="81335" name="Quentin Parker" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81336" name="Edda Scott" patientCapacity="0" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="81337" name="Altfried Miller" patientCapacity="0" works="/0/@department.7" />
+    <department staff="/0/@staff.0" dID="1689" maxRoomCount="10" />
+    <department dID="1690" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.8" dID="1691" maxRoomCount="10" />
+    <department dID="1692" maxRoomCount="10" />
+    <department staff="/0/@staff.3 /0/@staff.7" dID="1693" maxRoomCount="10" />
+    <department dID="1694" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="1695" maxRoomCount="10" />
+    <department staff="/0/@staff.2 /0/@staff.11" dID="1696" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.1" dID="1697" maxRoomCount="10" />
+    <department staff="/0/@staff.6" dID="1698" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.4 /0/@staff.9" dID="1699" maxRoomCount="10" />
+    <department dID="1700" maxRoomCount="10" />
+    <department dID="1701" maxRoomCount="10" />
+    <department dID="1702" maxRoomCount="10" />
+    <department staff="/0/@staff.5" dID="1703" maxRoomCount="10" />
+    <department dID="1704" maxRoomCount="10" />
+    <department staff="/0/@staff.10" dID="1705" maxRoomCount="10" />
+    <department dID="1706" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Asis" lastName="Carter" staffID="81328" salary="18873.38" dInt="1696">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Altfried" lastName="Miller" staffID="81337" salary="15263.61" dInt="1696">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Konstantin" lastName="Johnson" staffID="81326" salary="15486.8" dInt="1689">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Edda" lastName="Scott" staffID="81336" salary="17237.39" dInt="1705">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Eva" lastName="Rodriguez" staffID="81333" salary="14918.42" dInt="1693">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Carla" lastName="Hall" staffID="81329" salary="17921.69" dInt="1693">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Quentin" lastName="Parker" staffID="81335" salary="4905.42" dInt="1699">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Luise" lastName="Cook" staffID="81330" salary="5439.48" dInt="1699">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Quirin" lastName="Murphy" staffID="81332" salary="3979.9" dInt="1698">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elisabeth" lastName="Roberts" staffID="81331" salary="6862.52" dInt="1703">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Anna" lastName="Reed" staffID="81334" salary="8053.25" dInt="1691">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Paulina" lastName="Phillips" staffID="81327" salary="9409.27" dInt="1697">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Berenike" lastName="Campbell" patientID="42592" />
+    <patient firstName="Eva" lastName="Martin" patientID="42595" />
+    <patient firstName="Asis" lastName="Baker" patientID="42597" />
+    <patient firstName="Edda" lastName="Wright" patientID="42604" />
+    <patient firstName="Amos" lastName="Hill" patientID="42601" />
+    <patient firstName="Tim" lastName="Anderson" patientID="42602" />
+    <patient firstName="Augusta" lastName="Harris" patientID="42593" />
+    <patient firstName="Theresa" lastName="Hernandez" patientID="42603" />
+    <patient firstName="Anette" lastName="Morris" patientID="42599" />
+    <patient firstName="Amy" lastName="White" patientID="42605" />
+    <patient firstName="Amos" lastName="Baker" patientID="42596" />
+    <patient firstName="David" lastName="Martin" patientID="42607" />
+    <patient firstName="Augusta" lastName="Phillips" patientID="42594" />
+    <patient firstName="Anisha" lastName="Martin" patientID="42606" />
+    <patient firstName="Alma" lastName="Hall" patientID="42600" />
+    <patient firstName="Amy" lastName="Jones" patientID="42590" />
+    <patient firstName="Oskar" lastName="Adams" patientID="42591" />
+    <patient firstName="Alma" lastName="King" patientID="42598" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

@@ -25,17 +25,18 @@ public class Model2ToModel1TGGCPS extends TGGChangePropagationSpecification {
                 "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore",
                 ibexProjectPath,
                 target,
-                targetRootURI);
+                targetRootURI,
+                false);
     }
 
     public Model2ToModel1TGGCPS(
             MetamodelDescriptor SRCMetamodelDescriptor, MetamodelDescriptor TRGMetamodelDescriptor,
             String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri,
-            File ibexProjectPath, EClass targetRootEclass, URI targetRootURI) {
+            File ibexProjectPath, EClass targetRootEclass, URI targetRootURI, boolean useShortcutRules) {
         super(TRGMetamodelDescriptor, SRCMetamodelDescriptor,  //we propagate from model2 to model1!
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 targetMetamodelPlatformUri, sourceMetamodelPlatformUri,
-                ibexProjectPath, Set.of(targetRootEclass), targetRootURI);
+                ibexProjectPath, Set.of(targetRootEclass), targetRootURI, useShortcutRules);
 
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 tools.vitruv.methodologisttemplate.model.model.impl.ModelPackageImpl.eNS_URI,

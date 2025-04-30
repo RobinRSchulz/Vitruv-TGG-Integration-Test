@@ -27,6 +27,8 @@ import hipe.generic.actor.junction.GenericJunctionActor;
 
 import hipe.network.JunctionNode;
 
+import org.eclipse.uml2.uml.*;
+
 public class JavaFirstCompilationUnitToUmlModel__BWD_742_junction extends GenericJunctionActor{
 	
 	@Override
@@ -56,8 +58,8 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_742_junction extends Generi
 	}
 	
 	public boolean check_constraint_97(HMatch match, int index) {
-		uml.PrimitiveType shortType = (uml.PrimitiveType) match.getNodes()[2];
-		uml.PrimitiveType longType = (uml.PrimitiveType) match.getNodes()[0];
+		PrimitiveType longType = (PrimitiveType) match.getNodes()[0];
+		PrimitiveType shortType = (PrimitiveType) match.getNodes()[2];
 		boolean predicate = !longType.equals(shortType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

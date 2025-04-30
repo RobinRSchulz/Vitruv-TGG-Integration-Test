@@ -71,14 +71,14 @@ import Java2Uml.VariableLengthMethodParameterToParameter__Marker;
 import Java2Uml.Java2UmlFactory;
 import Java2Uml.Java2UmlPackage;
 
-import runtime.RuntimePackage;
-import org.emftext.language.java.classifiers.ClassifiersPackage;
-import org.eclipse.uml2.uml.UMLPackage;
 import org.emftext.language.java.containers.ContainersPackage;
-import org.emftext.language.java.members.MembersPackage;
 import org.emftext.language.java.types.TypesPackage;
 import org.emftext.language.java.modifiers.ModifiersPackage;
 import org.emftext.language.java.parameters.ParametersPackage;
+import org.emftext.language.java.members.MembersPackage;
+import org.eclipse.uml2.uml.UMLPackage;
+import org.emftext.language.java.classifiers.ClassifiersPackage;
+import runtime.RuntimePackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -3243,14 +3243,14 @@ public class Java2UmlPackageImpl extends SmartPackageImpl
 		setNsURI(eNS_URI);
 		
 		// Obtain other dependent packages
-		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
-		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
-		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
 		ContainersPackage theContainersPackagePackage = ContainersPackage.eINSTANCE;
-		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
 		TypesPackage theTypesPackagePackage = TypesPackage.eINSTANCE;
 		ModifiersPackage theModifiersPackagePackage = ModifiersPackage.eINSTANCE;
 		ParametersPackage theParametersPackagePackage = ParametersPackage.eINSTANCE;
+		MembersPackage theMembersPackagePackage = MembersPackage.eINSTANCE;
+		UMLPackage theUmlPackagePackage = UMLPackage.eINSTANCE;
+		ClassifiersPackage theClassifiersPackagePackage = ClassifiersPackage.eINSTANCE;
+		RuntimePackage theRuntimePackagePackage = RuntimePackage.eINSTANCE;
 
 		// Create type parameters
 

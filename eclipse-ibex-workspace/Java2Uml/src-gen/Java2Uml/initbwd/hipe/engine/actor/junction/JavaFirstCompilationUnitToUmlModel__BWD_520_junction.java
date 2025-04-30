@@ -56,8 +56,8 @@ public class JavaFirstCompilationUnitToUmlModel__BWD_520_junction extends Generi
 	}
 	
 	public boolean check_constraint_83(HMatch match, int index) {
-		uml.PrimitiveType booleanType = (uml.PrimitiveType) match.getNodes()[0];
 		uml.PrimitiveType byteType = (uml.PrimitiveType) match.getNodes()[2];
+		uml.PrimitiveType booleanType = (uml.PrimitiveType) match.getNodes()[0];
 		boolean predicate = !booleanType.equals(byteType);
 		match.setConstraintSatisfied(index, predicate);
 		return predicate;

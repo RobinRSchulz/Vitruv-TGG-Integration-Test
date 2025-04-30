@@ -43,10 +43,10 @@ import org.eclipse.emf.ecore.EObject;
 
 public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extends GenericLocalSearchActor{
 	ConstraintChecker constraint_checker;
-	EdgeExplorer edge_explorer;
+	CachedEdgeExplorer edge_explorer;
 	EdgeExplorer edge_explorer_3;
 	CachedEdgeExplorer edge_explorer_4;
-	CachedEdgeExplorer edge_explorer_5;
+	EdgeExplorer edge_explorer_5;
 	
 	SearchOrchestration edge_explorer_0_orchestration;
 	SearchOrchestration edge_explorer_1_orchestration;
@@ -55,8 +55,8 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 	SearchOrchestration edge_explorer_3_1_orchestration;
 	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
-	SearchOrchestration edge_explorer_4_1_orchestration;
 	SearchOrchestration edge_explorer_5_0_orchestration;
+	SearchOrchestration edge_explorer_5_1_orchestration;
 	
 	
 	@Override
@@ -64,22 +64,22 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 		constraint_checker = new ConstraintChecker(this, this::constraint_checker_method);
 		name2explorer.put("constraint_checker", constraint_checker);
 		EdgeLookupMethods edge_explorer_methods = new EdgeLookupMethods();
-						edge_explorer_methods.multi_lookup = (o) -> ((uml.BehavioralFeature) o).getOwnedParameter();
-						edge_explorer_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Operation) return edge_explorer_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer = new EdgeExplorer(this, 2, 4, edge_explorer_methods);
+						edge_explorer_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaConstructorToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.Constructor ? result : null);};
+						edge_explorer = new CachedEdgeExplorer(this, 0, 1, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.multi_lookup = (o) -> ((org.emftext.language.java.parameters.Parametrizable) o).getParameters().stream().filter(obj -> obj instanceof org.emftext.language.java.parameters.OrdinaryParameter).collect(Collectors.toList());
-						edge_explorer_3_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.members.Constructor) return edge_explorer_3_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
-						edge_explorer_3 = new EdgeExplorer(this, 1, 3, edge_explorer_3_methods);
+						edge_explorer_3_methods.multi_lookup = (o) -> ((uml.BehavioralFeature) o).getOwnedParameter();
+						edge_explorer_3_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof uml.Operation) return edge_explorer_3_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_3 = new EdgeExplorer(this, 2, 4, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
 						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaConstructorToOperation) o).getTarget(); return (result instanceof uml.Operation ? result : null);};
 						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		EdgeLookupMethods edge_explorer_5_methods = new EdgeLookupMethods();
-						edge_explorer_5_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaConstructorToOperation) o).getSource(); return (result instanceof org.emftext.language.java.members.Constructor ? result : null);};
-						edge_explorer_5 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_5_methods);
+						edge_explorer_5_methods.multi_lookup = (o) -> ((org.emftext.language.java.parameters.Parametrizable) o).getParameters().stream().filter(obj -> obj instanceof org.emftext.language.java.parameters.OrdinaryParameter).collect(Collectors.toList());
+						edge_explorer_5_methods.unique_opposite_lookup = (o) -> {EObject result = ((EObject) o).eContainer(); if(result instanceof org.emftext.language.java.members.Constructor) return edge_explorer_5_methods.multi_lookup.apply(result).contains(o) ? result : null; else return null;};
+						edge_explorer_5 = new EdgeExplorer(this, 1, 3, edge_explorer_5_methods);
 		name2explorer.put("edge_explorer_5", edge_explorer_5);
 	}
 	
@@ -92,8 +92,8 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
 		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
 		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
-		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
-		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
+		edge_explorer_5_0_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
+		edge_explorer_5_1_orchestration = initializeOrchestration(node.getOrchestrations().get(8).getPlan());
 	}
 	
 	@Override
@@ -111,13 +111,13 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 		switch(match.creator) {
 			case "JavaConstructorToOperation_object_SP2": 
 				{
+					edge_explorer.registerSourceObject(objs[0]);
 					edge_explorer_4.registerSourceObject(objs[0]);
-					edge_explorer_5.registerSourceObject(objs[0]);
 					
 					// javaConstructorToOperation
 					HMatch match_0 = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
 					match_0.getNodes()[0] = objs[0];
-					start(edge_explorer_4_1_orchestration, match_0);
+					start(edge_explorer_1_orchestration, match_0);
 				}
 				break;
 			case "Constructor_object_SP4": 
@@ -127,7 +127,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 						// javaParametrizable
 						HMatch match_1 = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_3_1_orchestration, match_1);
+						start(edge_explorer_2_orchestration, match_1);
 					}
 				}
 				break;
@@ -138,7 +138,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 						// umlOperation
 						HMatch match_2 = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
 						match_2.getNodes()[2] = objs[0];
-						start(edge_explorer_1_orchestration, match_2);
+						start(edge_explorer_3_1_orchestration, match_2);
 					}
 				}
 				break;
@@ -149,7 +149,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 						// parameter
 						HMatch match_3 = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
 						match_3.getNodes()[3] = objs[0];
-						start(edge_explorer_3_2_orchestration, match_3);
+						start(edge_explorer_5_1_orchestration, match_3);
 					}
 				}
 				break;
@@ -160,7 +160,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 						// umlParameter
 						HMatch match_4 = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
 						match_4.getNodes()[4] = objs[0];
-						start(edge_explorer_2_orchestration, match_4);
+						start(edge_explorer_3_2_orchestration, match_4);
 					}
 				}
 				break;
@@ -202,6 +202,49 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
+		case "Java2Uml.JavaConstructorToOperation_source_Constructor": 
+			if(!lazy_initialization) {
+				if(msg.target instanceof org.emftext.language.java.members.Constructor) {
+				{
+					edge_explorer.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.members.Constructor) {
+				{
+					edge_explorer.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.members.Constructor) {
+				{
+					edge_explorer.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+			}
+			break;
 		case "uml.BehavioralFeature_ownedParameter_Parameter": 
 			if(!lazy_initialization) {
 				if(msg.source instanceof uml.Operation) {
@@ -211,7 +254,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 					objs[2] = msg.source;
 					objs[4] = msg.target;
 					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -223,7 +266,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 					objs[2] = msg.source;
 					objs[4] = msg.target;
 					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
+					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
@@ -235,54 +278,8 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 					objs[2] = msg.source;
 					objs[4] = msg.target;
 					currentDepth++;
-					start(edge_explorer_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-			}
-			break;
-		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
-			if(!lazy_initialization) {
-				if(msg.source instanceof org.emftext.language.java.members.Constructor) {
-				if(msg.target instanceof org.emftext.language.java.parameters.OrdinaryParameter) {
-				{
-					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
-					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof org.emftext.language.java.members.Constructor) {
-				if(msg.target instanceof org.emftext.language.java.parameters.OrdinaryParameter) {
-				{
-					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				}
-				
-				if(msg.source instanceof org.emftext.language.java.members.Constructor) {
-				if(msg.target instanceof org.emftext.language.java.parameters.OrdinaryParameter) {
-				{
-					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[1] = msg.source;
-					objs[3] = msg.target;
-					currentDepth++;
-					start(edge_explorer_3_0_orchestration, match);
-					currentDepth--;
-				}
 				}
 				}
 				
@@ -303,33 +300,35 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 				}
 				}
 				
-				if(msg.target instanceof uml.Operation) {
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[2] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
 			}
 			break;
-		case "Java2Uml.JavaConstructorToOperation_source_Constructor": 
+		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.members.Constructor) {
+				if(msg.source instanceof org.emftext.language.java.members.Constructor) {
+				if(msg.target instanceof org.emftext.language.java.parameters.OrdinaryParameter) {
 				{
-					edge_explorer_5.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
 					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
+					objs[1] = msg.source;
+					objs[3] = msg.target;
 					currentDepth++;
 					start(edge_explorer_5_0_orchestration, match);
 					currentDepth--;
+				}
+				}
+				}
+				
+				if(msg.source instanceof org.emftext.language.java.members.Constructor) {
+				if(msg.target instanceof org.emftext.language.java.parameters.OrdinaryParameter) {
+				{
+					HMatch match = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
+					Object[] objs = match.getNodes();
+					objs[1] = msg.source;
+					objs[3] = msg.target;
+					currentDepth++;
+					start(edge_explorer_5_0_orchestration, match);
+					currentDepth--;
+				}
 				}
 				}
 				
@@ -345,34 +344,37 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 		initialMessage = msg.initialMessage;
 		
 		switch(msg.refName) {
-		case "uml.BehavioralFeature_ownedParameter_Parameter": 
+		case "Java2Uml.JavaConstructorToOperation_source_Constructor": 
+				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_0 = obj2matches.get(msg.source);
 				if(matches_0 != null && !matches_0.isEmpty()) {
 					Collection<HMatch> toBeRemoved_0 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_0) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_0.add(m);
 					}
 					if(!toBeRemoved_0.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_0);
 					}
 				}
+				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_1 = obj2matches.get(msg.source);
 				if(matches_1 != null && !matches_1.isEmpty()) {
 					Collection<HMatch> toBeRemoved_1 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_1) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_1.add(m);
 					}
 					if(!toBeRemoved_1.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_1);
 					}
 				}
+				edge_explorer.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_2 = obj2matches.get(msg.source);
 				if(matches_2 != null && !matches_2.isEmpty()) {
 					Collection<HMatch> toBeRemoved_2 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_2) {
-						if(m.getNodes()[4].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_2.add(m);
 					}
 					if(!toBeRemoved_2.isEmpty()) {
@@ -380,12 +382,12 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 					}
 				}
 				break;
-		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
+		case "uml.BehavioralFeature_ownedParameter_Parameter": 
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -396,7 +398,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
@@ -407,7 +409,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_5) {
-						if(m.getNodes()[3].equals(msg.target))
+						if(m.getNodes()[4].equals(msg.target))
 							toBeRemoved_5.add(m);
 					}
 					if(!toBeRemoved_5.isEmpty()) {
@@ -428,26 +430,24 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 						sendDeletedMatches(toBeRemoved_6);
 					}
 				}
-				edge_explorer_4.deregisterEdge(msg.source, msg.target);
+				break;
+		case "org.emftext.language.java.parameters.Parametrizable_parameters_Parameter": 
 				Collection<HMatch> matches_7 = obj2matches.get(msg.source);
 				if(matches_7 != null && !matches_7.isEmpty()) {
 					Collection<HMatch> toBeRemoved_7 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_7) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_7.add(m);
 					}
 					if(!toBeRemoved_7.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_7);
 					}
 				}
-				break;
-		case "Java2Uml.JavaConstructorToOperation_source_Constructor": 
-				edge_explorer_5.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_8 = obj2matches.get(msg.source);
 				if(matches_8 != null && !matches_8.isEmpty()) {
 					Collection<HMatch> toBeRemoved_8 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_8) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[3].equals(msg.target))
 							toBeRemoved_8.add(m);
 					}
 					if(!toBeRemoved_8.isEmpty()) {
@@ -563,7 +563,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 				formerMatches_4 = formerMatches_4.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_4);
 			}
-			start(edge_explorer_2_orchestration, match_4);
+			start(edge_explorer_3_2_orchestration, match_4);
 		}
 		if(obj instanceof org.emftext.language.java.parameters.OrdinaryParameter) {
 			HMatch match_3 = new LocalSearchMatch("OrdinaryConstructorParameterToParameter__CC_1154_localSearch", 5);
@@ -574,7 +574,7 @@ public class OrdinaryConstructorParameterToParameter__CC_1154_localSearch extend
 				formerMatches_3 = formerMatches_3.stream().filter(m -> !constraint_checker.check(m)).collect(Collectors.toList());
 				sendDeletedMatches(formerMatches_3);
 			}
-			start(edge_explorer_3_2_orchestration, match_3);
+			start(edge_explorer_5_1_orchestration, match_3);
 		}
 		
 		message.initialMessage.decrement();

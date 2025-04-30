@@ -52,8 +52,8 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 	SearchOrchestration edge_explorer_2_orchestration;
 	SearchOrchestration edge_explorer_3_0_orchestration;
 	SearchOrchestration edge_explorer_3_1_orchestration;
+	SearchOrchestration edge_explorer_3_2_orchestration;
 	SearchOrchestration edge_explorer_4_0_orchestration;
-	SearchOrchestration edge_explorer_4_1_orchestration;
 	SearchOrchestration nac_checker_orchestration;
 	
 	private Map<OverlapMatch, Collection<HMatch>> overlap2matches_0 = new HashMap<>();
@@ -66,12 +66,12 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 						edge_explorer = new EdgeExplorer(this, 2, 3, edge_explorer_methods);
 		name2explorer.put("edge_explorer", edge_explorer);
 		EdgeLookupMethods edge_explorer_3_methods = new EdgeLookupMethods();
-						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Interface ? result : null);};
-						edge_explorer_3 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_3_methods);
+						edge_explorer_3_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
+						edge_explorer_3 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_3_methods);
 		name2explorer.put("edge_explorer_3", edge_explorer_3);
 		EdgeLookupMethods edge_explorer_4_methods = new EdgeLookupMethods();
-						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getSource(); return (result instanceof org.emftext.language.java.classifiers.Interface ? result : null);};
-						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 1, edge_explorer_4_methods);
+						edge_explorer_4_methods.unique_lookup = (o) -> {EObject result = ((Java2Uml.JavaClassifierToUmlClassifier) o).getTarget(); return (result instanceof uml.Interface ? result : null);};
+						edge_explorer_4 = new CachedEdgeExplorer(this, 0, 2, edge_explorer_4_methods);
 		name2explorer.put("edge_explorer_4", edge_explorer_4);
 		nac_checker = new NACExplorer(this, Arrays.asList(new Integer[] {3}), node.getAllOverlaps().get(0));
 		name2explorer.put("nac_checker", nac_checker);
@@ -84,8 +84,8 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 		edge_explorer_2_orchestration = initializeOrchestration(node.getOrchestrations().get(2).getPlan());
 		edge_explorer_3_0_orchestration = initializeOrchestration(node.getOrchestrations().get(3).getPlan());
 		edge_explorer_3_1_orchestration = initializeOrchestration(node.getOrchestrations().get(4).getPlan());
-		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
-		edge_explorer_4_1_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
+		edge_explorer_3_2_orchestration = initializeOrchestration(node.getOrchestrations().get(5).getPlan());
+		edge_explorer_4_0_orchestration = initializeOrchestration(node.getOrchestrations().get(6).getPlan());
 		nac_checker_orchestration = initializeOrchestration(node.getOrchestrations().get(7).getPlan());
 	}
 	
@@ -120,7 +120,7 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 						// javaConcreteClassifier
 						HMatch match_1 = new LocalSearchMatch("InterfaceMethodToMethod__BWD_650_localSearch", 4);
 						match_1.getNodes()[1] = objs[0];
-						start(edge_explorer_4_1_orchestration, match_1);
+						start(edge_explorer_3_2_orchestration, match_1);
 					}
 				}
 				break;
@@ -239,28 +239,41 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 				
 			}
 			break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof uml.Interface) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__BWD_650_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[0] = msg.source;
-					objs[2] = msg.target;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
 				}
 				}
 				
-				if(msg.target instanceof uml.Interface) {
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
 				{
 					edge_explorer_3.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__BWD_650_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[0] = msg.source;
-					objs[2] = msg.target;
+					objs[1] = msg.target;
+					currentDepth++;
+					start(edge_explorer_3_0_orchestration, match);
+					currentDepth--;
+				}
+				}
+				
+				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
+				{
+					edge_explorer_3.registerEdge(msg.source, msg.target);
+					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__BWD_650_localSearch", 4);
+					Object[] objs = match.getNodes();
+					objs[0] = msg.source;
+					objs[1] = msg.target;
 					currentDepth++;
 					start(edge_explorer_3_0_orchestration, match);
 					currentDepth--;
@@ -269,28 +282,15 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 				
 			}
 			break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 			if(!lazy_initialization) {
-				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
+				if(msg.target instanceof uml.Interface) {
 				{
 					edge_explorer_4.registerEdge(msg.source, msg.target);
 					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__BWD_650_localSearch", 4);
 					Object[] objs = match.getNodes();
 					objs[0] = msg.source;
-					objs[1] = msg.target;
-					currentDepth++;
-					start(edge_explorer_4_0_orchestration, match);
-					currentDepth--;
-				}
-				}
-				
-				if(msg.target instanceof org.emftext.language.java.classifiers.Interface) {
-				{
-					edge_explorer_4.registerEdge(msg.source, msg.target);
-					HMatch match = new LocalSearchMatch("InterfaceMethodToMethod__BWD_650_localSearch", 4);
-					Object[] objs = match.getNodes();
-					objs[0] = msg.source;
-					objs[1] = msg.target;
+					objs[2] = msg.target;
 					currentDepth++;
 					start(edge_explorer_4_0_orchestration, match);
 					currentDepth--;
@@ -344,13 +344,13 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 					}
 				}
 				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
+		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
 				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_3 = obj2matches.get(msg.source);
 				if(matches_3 != null && !matches_3.isEmpty()) {
 					Collection<HMatch> toBeRemoved_3 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_3) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_3.add(m);
 					}
 					if(!toBeRemoved_3.isEmpty()) {
@@ -362,16 +362,14 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 				if(matches_4 != null && !matches_4.isEmpty()) {
 					Collection<HMatch> toBeRemoved_4 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_4) {
-						if(m.getNodes()[2].equals(msg.target))
+						if(m.getNodes()[1].equals(msg.target))
 							toBeRemoved_4.add(m);
 					}
 					if(!toBeRemoved_4.isEmpty()) {
 						sendDeletedMatches(toBeRemoved_4);
 					}
 				}
-				break;
-		case "Java2Uml.JavaClassifierToUmlClassifier_source_Classifier": 
-				edge_explorer_4.deregisterEdge(msg.source, msg.target);
+				edge_explorer_3.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_5 = obj2matches.get(msg.source);
 				if(matches_5 != null && !matches_5.isEmpty()) {
 					Collection<HMatch> toBeRemoved_5 = HiPEMultiUtil.createSet();
@@ -383,12 +381,14 @@ public class InterfaceMethodToMethod__BWD_650_localSearch extends GenericLocalSe
 						sendDeletedMatches(toBeRemoved_5);
 					}
 				}
+				break;
+		case "Java2Uml.JavaClassifierToUmlClassifier_target_Classifier": 
 				edge_explorer_4.deregisterEdge(msg.source, msg.target);
 				Collection<HMatch> matches_6 = obj2matches.get(msg.source);
 				if(matches_6 != null && !matches_6.isEmpty()) {
 					Collection<HMatch> toBeRemoved_6 = HiPEMultiUtil.createSet();
 					for(HMatch m : matches_6) {
-						if(m.getNodes()[1].equals(msg.target))
+						if(m.getNodes()[2].equals(msg.target))
 							toBeRemoved_6.add(m);
 					}
 					if(!toBeRemoved_6.isEmpty()) {

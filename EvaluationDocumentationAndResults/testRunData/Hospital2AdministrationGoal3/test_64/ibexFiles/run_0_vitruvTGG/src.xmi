@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="32905" name="Berenike Williams" level="PENDING" />
+      <waits patientID="32906" name="Lucy Collins" level="PENDING" />
+      <waits patientID="32907" name="Elias Hernandez" level="PENDING" />
+      <waits patientID="32908" name="Amos Phillips" level="PENDING" />
+      <waits patientID="32909" name="Felix White" level="PENDING" />
+      <waits patientID="32910" name="Felix Roberts" level="PENDING" />
+      <waits patientID="32911" name="Elisabeth Walker" level="PENDING" />
+      <waits patientID="32912" name="Abigail Harris" level="PENDING" />
+      <waits patientID="32913" name="Romy Sanchez" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Doctor" staffID="64708" name="Jonas Phillips" patientCapacity="0" works="/0/@department.5" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="64709" name="Astrid Young" patientCapacity="0" works="/0/@department.5" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64710" name="Lukas Johnson" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="64711" name="Liam Young" works="/0/@department.5" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="64712" name="Aaliyah Carter" patientCapacity="0" works="/0/@department.1" />
+    <department dID="673" maxRoomCount="10" />
+    <department staff="/0/@staff.4" dID="674" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="675" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="676" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.2" dID="677" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.0 /0/@staff.1 /0/@staff.3" dID="678" maxRoomCount="10" />
+    <department dID="679" maxRoomCount="10" />
+    <department dID="680" maxRoomCount="10" />
+    <department dID="681" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Aaliyah" lastName="Carter" staffID="64712" salary="12559.7" dInt="674">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Lukas" lastName="Johnson" staffID="64710" salary="5000.6" dInt="677">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Liam" lastName="Young" staffID="64711" salary="3462.1" dInt="678">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Astrid" lastName="Young" staffID="64709" salary="14103.19" dInt="678">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Jonas" lastName="Phillips" staffID="64708" salary="6376.0" dInt="678">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Lucy" lastName="Collins" patientID="32906" />
+    <patient firstName="Felix" lastName="White" patientID="32909" />
+    <patient firstName="Elias" lastName="Hernandez" patientID="32907" />
+    <patient firstName="Felix" lastName="Roberts" patientID="32910" />
+    <patient firstName="Berenike" lastName="Williams" patientID="32905" />
+    <patient firstName="Romy" lastName="Sanchez" patientID="32913" />
+    <patient firstName="Abigail" lastName="Harris" patientID="32912" />
+    <patient firstName="Elisabeth" lastName="Walker" patientID="32911" />
+    <patient firstName="Amos" lastName="Phillips" patientID="32908" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

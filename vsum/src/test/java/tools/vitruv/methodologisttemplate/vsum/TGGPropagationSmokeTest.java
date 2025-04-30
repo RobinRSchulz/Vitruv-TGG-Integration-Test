@@ -32,11 +32,11 @@ import tools.vitruv.methodologisttemplate.model.model2.Root;
 
 import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.Model1ToModel2TGGCPS;
 import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.Model2ToModel1TGGCPS;
-import tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.*;
+import tools.vitruv.methodologisttemplate.vsum.util.TGGResultAssertions.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static tools.vitruv.methodologisttemplate.vsum.TGGResultAssertions.assertStructure;
+import static tools.vitruv.methodologisttemplate.vsum.util.TGGResultAssertions.assertStructure;
 
 /**
  * This class provides an example how to define and use a VSUM.
