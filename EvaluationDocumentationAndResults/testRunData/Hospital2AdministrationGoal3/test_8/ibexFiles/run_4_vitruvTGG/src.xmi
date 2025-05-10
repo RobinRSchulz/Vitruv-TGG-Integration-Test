@@ -2,17 +2,17 @@
 <xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
   <HospitalExample:Hospital>
     <reception>
-      <waits patientID="44108" name="Paul Turner" level="PENDING" />
+      <waits patientID="83947" name="Augusta Adams" level="PENDING" />
     </reception>
-    <staff xsi:type="HospitalExample:Nurse" staffID="83526" name="Maya Smith" works="/0/@department.0" />
-    <department staff="/0/@staff.0" dID="2337" maxRoomCount="10" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="167392" name="Altfried Torres" works="/0/@department.0" />
+    <department staff="/0/@staff.0" dID="4697" maxRoomCount="10" />
   </HospitalExample:Hospital>
   <AdministrationExample:Administration>
-    <staff firstName="Maya" lastName="Smith" staffID="83526" salary="5846.57" dInt="2337">
+    <staff firstName="Altfried" lastName="Torres" staffID="167392" salary="1971.87" dInt="4697">
       <shiftPlan>
         <shifts time="night" />
       </shiftPlan>
     </staff>
-    <patient firstName="Paul" lastName="Turner" patientID="44108" />
+    <patient firstName="Augusta" lastName="Adams" patientID="83947" />
   </AdministrationExample:Administration>
 </xmi:XMI>

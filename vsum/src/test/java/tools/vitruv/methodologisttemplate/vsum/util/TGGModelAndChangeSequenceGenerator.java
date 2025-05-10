@@ -57,11 +57,7 @@ public class TGGModelAndChangeSequenceGenerator extends MODELGEN {
 
     public TGGModelAndChangeSequenceGenerator generateModels(int size, String rootRule, List<String> concreteNonRootRules) throws IOException {
         //TODO somehow generate EChange sequence out of this. IDEA maybe use protocol and my Vitruv-TGG stuff!
-        BasicConfigurator.configure();
-        Logger.getRootLogger().setLevel(Level.INFO);
-
         MODELGENStopCriterion stopCriterion = new MODELGENStopCriterion(this.getTGG());
-
         stopCriterion.setMaxSrcCount(size);
 
         // we use one root todo maybe change

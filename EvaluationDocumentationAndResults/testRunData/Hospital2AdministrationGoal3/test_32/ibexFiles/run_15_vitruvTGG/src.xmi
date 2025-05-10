@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="61840" name="Lukas Flores" level="PENDING" />
+      <waits patientID="61841" name="Asis Rivera" level="PENDING" />
+      <waits patientID="61842" name="Amy Cook" level="PENDING" />
+      <waits patientID="61843" name="Luis Hernandez" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Nurse" staffID="128932" name="Tim Davis" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="128933" name="Mia Mitchell" works="/0/@department.1" />
+    <department dID="1371" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.0 /0/@staff.1" dID="1372" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="1373" maxRoomCount="10" />
+    <department dID="1374" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Tim" lastName="Davis" staffID="128932" salary="2006.52" dInt="1372">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Mia" lastName="Mitchell" staffID="128933" salary="3055.29" dInt="1372">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Asis" lastName="Rivera" patientID="61841" />
+    <patient firstName="Lukas" lastName="Flores" patientID="61840" />
+    <patient firstName="Amy" lastName="Cook" patientID="61842" />
+    <patient firstName="Luis" lastName="Hernandez" patientID="61843" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

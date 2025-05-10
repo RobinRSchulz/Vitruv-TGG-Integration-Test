@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="61680" name="Mia Lewis" level="PENDING" />
+      <waits patientID="61681" name="Romy Turner" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Doctor" staffID="128812" name="Oskar Turner" patientCapacity="0" works="/0/@department.0" />
+    <department staff="/0/@staff.0" dID="1291" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="1292" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Oskar" lastName="Turner" staffID="128812" salary="14135.35" dInt="1291">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Romy" lastName="Turner" patientID="61681" />
+    <patient firstName="Mia" lastName="Lewis" patientID="61680" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

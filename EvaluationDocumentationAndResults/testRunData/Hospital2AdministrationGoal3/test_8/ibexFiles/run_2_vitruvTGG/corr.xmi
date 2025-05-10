@@ -8,4 +8,8 @@
     <target xsi:type="AdministrationExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@patient.0" />
     <source xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception/@waits.0" />
   </Hospital2AdministrationSolutions:PatientToPatient>
+  <Hospital2AdministrationSolutions:StaffToStaff>
+    <target xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.0" />
+    <source xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@staff.0" />
+  </Hospital2AdministrationSolutions:StaffToStaff>
 </xmi:XMI>

@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdministrationExample:Administration xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <staff firstName="Peter" lastName="Hall" staffID="33560" salary="16796.3" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Finn" lastName="Harris" staffID="33561" salary="5250.67" dInt="437">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Paulina" lastName="Garcia" staffID="33562" salary="1522.85" dInt="441">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Simone" lastName="Jones" staffID="33563" salary="9378.61" dInt="432" treatment="//@patient.50/@treatment">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Paulina" lastName="Hill" staffID="33564" salary="7794.51" dInt="426" treatment="//@patient.44/@treatment //@patient.53/@treatment //@patient.54/@treatment">
+    <shiftPlan covers="//@patient.44">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Flora" lastName="Robinson" staffID="33565" salary="1828.46" dInt="446">
+    <shiftPlan covers="//@patient.56">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Arthur" lastName="White" staffID="33566" salary="3256.38" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Wilma" lastName="Gonzalez" staffID="33567" salary="1951.55" dInt="440">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Liam" lastName="Brown" staffID="33568" salary="10774.3" dInt="445">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Konstantin" lastName="Garcia" staffID="33569" salary="14254.14" dInt="440">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Johannes" lastName="Scott" staffID="33570" salary="12111.62" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Theresa" lastName="Jones" staffID="33571" salary="12361.93" dInt="427">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Flora" lastName="Allen" staffID="33572" salary="736.14" dInt="430">
+    <shiftPlan covers="//@patient.35 //@patient.30">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Mia" lastName="Carter" staffID="33573" salary="12060.87" dInt="432" treatment="//@patient.46/@treatment //@patient.49/@treatment //@patient.52/@treatment">
+    <shiftPlan covers="//@patient.49">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Eva" lastName="Peterson" staffID="33574" salary="14633.18" dInt="438">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Arik" lastName="Thomas" staffID="33575" salary="6660.07" dInt="430" treatment="//@patient.35/@treatment //@patient.38/@treatment //@patient.30/@treatment //@patient.48/@treatment //@patient.55/@treatment //@patient.47/@treatment">
+    <shiftPlan covers="//@patient.35 //@patient.38 //@patient.30">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Linus" lastName="Rodriguez" staffID="33576" salary="17963.37" dInt="438" treatment="//@patient.28/@treatment">
+    <shiftPlan covers="//@patient.28">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Astrid" lastName="Moore" staffID="33577" salary="7345.49" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Carla" lastName="King" staffID="33578" salary="5595.18" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Philipp" lastName="Lee" staffID="33579" salary="14593.18" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ben" lastName="Wright" staffID="33580" salary="12385.95" dInt="430" treatment="//@patient.31/@treatment">
+    <shiftPlan covers="//@patient.31">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Karl" lastName="Clark" staffID="33581" salary="8811.02" dInt="446" treatment="//@patient.37/@treatment //@patient.51/@treatment">
+    <shiftPlan covers="//@patient.51">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Astrid" lastName="Roberts" staffID="33582" salary="2598.79" dInt="428">
+    <shiftPlan covers="//@patient.45">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Johannes" lastName="Reed" staffID="33583" salary="5593.96" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Liam" lastName="Lewis" staffID="33584" salary="2572.81" dInt="437">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Arthur" lastName="Walker" staffID="33585" salary="8960.51" dInt="428" treatment="//@patient.32/@treatment //@patient.68/@treatment">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Paulina" lastName="Sanchez" staffID="33586" salary="14527.27" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Alba" lastName="Turner" staffID="33587" salary="174.65" dInt="424">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Rosa" lastName="Miller" staffID="33588" salary="18530.95" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Andreas" lastName="Phillips" staffID="33589" salary="149.56" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Amy" lastName="Bailey" staffID="33590" salary="5581.34" dInt="425">
+    <shiftPlan covers="//@patient.26 //@patient.27">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Meike" lastName="Murphy" staffID="33591" salary="19416.35" dInt="425" treatment="//@patient.26/@treatment //@patient.62/@treatment">
+    <shiftPlan covers="//@patient.26 //@patient.62">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Niklas" lastName="Adams" staffID="33592" salary="4316.71" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Elisabeth" lastName="Jackson" staffID="33593" salary="14145.89" dInt="446" treatment="//@patient.41/@treatment //@patient.76/@treatment">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Selma" lastName="Martinez" staffID="33594" salary="13273.07" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Luis" lastName="Scott" staffID="33595" salary="8587.42" dInt="427">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Arthur" lastName="Rodriguez" staffID="33596" salary="16600.54" dInt="440">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Quentin" lastName="Murphy" staffID="33597" salary="9520.98" dInt="438">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Adam" lastName="Robinson" staffID="33598" salary="3849.27" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Altfried" lastName="Roberts" staffID="33599" salary="16468.49" dInt="442" treatment="//@patient.59/@treatment">
+    <shiftPlan covers="//@patient.59">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Carla" lastName="Gonzalez" staffID="33600" salary="883.26" dInt="428">
+    <shiftPlan covers="//@patient.77">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ella" lastName="Sanchez" staffID="33601" salary="1362.26" dInt="424">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Quirin" lastName="Jones" staffID="33602" salary="509.78" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Anna" lastName="Cook" staffID="33603" salary="5827.41" dInt="437">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Lukas" lastName="Perez" staffID="33604" salary="12342.19" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Leon" lastName="Clark" staffID="33605" salary="5719.01" dInt="441">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Annika" lastName="Phillips" staffID="33606" salary="3440.28" dInt="446">
+    <shiftPlan covers="//@patient.37 //@patient.74">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Karl" lastName="Parker" staffID="33607" salary="16258.89" dInt="446" treatment="//@patient.39/@treatment //@patient.40/@treatment //@patient.64/@treatment">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Luis" lastName="Martin" staffID="33608" salary="2119.53" dInt="443">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Anna" lastName="Rivera" staffID="33609" salary="3630.83" dInt="443">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Lukas" lastName="Collins" staffID="33610" salary="18730.94" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Maximilian" lastName="Brown" staffID="33611" salary="14927.87" dInt="431">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Selma" lastName="Adams" staffID="33612" salary="8472.62" dInt="445" treatment="//@patient.43/@treatment">
+    <shiftPlan covers="//@patient.43">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Friedrich" lastName="Green" staffID="33613" salary="5336.16" dInt="430">
+    <shiftPlan covers="//@patient.38">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Allessandro" lastName="Nguyen" staffID="33614" salary="12850.68" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Adam" lastName="Young" staffID="33615" salary="13459.72" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Edda" lastName="Parker" staffID="33616" salary="11583.86" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Amy" lastName="Hall" staffID="33617" salary="15692.14" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Finn" lastName="Moore" staffID="33618" salary="1857.92" dInt="432">
+    <shiftPlan covers="//@patient.46">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Susanne" lastName="Williams" staffID="33619" salary="14796.55" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Johannes" lastName="Cook" staffID="33620" salary="13752.92" dInt="436">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Jonas" lastName="Hernandez" staffID="33621" salary="2604.83" dInt="426">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Luis" lastName="Flores" staffID="33622" salary="2896.8" dInt="434">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Adrian" lastName="Smith" staffID="33623" salary="867.78" dInt="432">
+    <shiftPlan covers="//@patient.50 //@patient.49">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Katharina" lastName="Johnson" staffID="33624" salary="18909.1" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julia" lastName="Turner" staffID="33625" salary="1485.78" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ben" lastName="Hall" staffID="33626" salary="6751.14" dInt="449" treatment="//@patient.57/@treatment //@patient.69/@treatment">
+    <shiftPlan covers="//@patient.69">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Luis" lastName="Lewis" staffID="33627" salary="206.15" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Romy" lastName="Peterson" staffID="33628" salary="8124.07" dInt="425">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Annabelle" lastName="Scott" staffID="33629" salary="522.85" dInt="446">
+    <shiftPlan covers="//@patient.37">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Anisha" lastName="Baker" staffID="33630" salary="5766.0" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Aaliyah" lastName="Hall" staffID="33631" salary="271.93" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Quirin" lastName="Hill" staffID="33632" salary="999.81" dInt="424">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Adam" lastName="Cook" staffID="33633" salary="3733.6" dInt="441">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Edda" lastName="Thompson" staffID="33634" salary="14639.47" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julian" lastName="Martinez" staffID="33635" salary="4789.13" dInt="437">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Leon" lastName="Torres" staffID="33636" salary="9551.24" dInt="438">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Amy" lastName="Johnson" staffID="33637" salary="15210.85" dInt="445">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Konstantin" lastName="Edwards" staffID="33638" salary="18044.49" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Tim" lastName="Thompson" staffID="33639" salary="19247.59" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julia" lastName="Bailey" staffID="33640" salary="322.84" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="David" lastName="Flores" staffID="33641" salary="642.06" dInt="437">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Luise" lastName="Perez" staffID="33642" salary="4425.13" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Maya" lastName="Clark" staffID="33643" salary="12533.43" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Aras" lastName="Stewart" staffID="33644" salary="676.6" dInt="431">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Eva" lastName="Flores" staffID="33645" salary="5283.51" dInt="441">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Oskar" lastName="Hall" staffID="33646" salary="18309.31" dInt="447" treatment="//@patient.42/@treatment">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Susanne" lastName="Clark" staffID="33647" salary="3481.41" dInt="430">
+    <shiftPlan covers="//@patient.30">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ari" lastName="Collins" staffID="33648" salary="1325.03" dInt="431">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Elena" lastName="White" staffID="33649" salary="16559.65" dInt="430" treatment="//@patient.29/@treatment //@patient.60/@treatment">
+    <shiftPlan covers="//@patient.29">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Altfried" lastName="Collins" staffID="33650" salary="8223.49" dInt="435">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Amy" lastName="Davis" staffID="33651" salary="4709.33" dInt="441">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Aaliyah" lastName="King" staffID="33652" salary="19824.78" dInt="443">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Luis" lastName="Gonzalez" staffID="33653" salary="3798.48" dInt="449">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Oskar" lastName="Flores" staffID="33654" salary="19494.16" dInt="432">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Anton" lastName="Turner" staffID="33655" salary="2937.23" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Annabelle" lastName="Murphy" staffID="33656" salary="11948.75" dInt="434">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Annabelle" lastName="Bailey" staffID="33657" salary="144.4" dInt="448">
+    <shiftPlan covers="//@patient.33">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Berenike" lastName="Hernandez" staffID="33658" salary="2328.51" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Anton" lastName="Hall" staffID="33659" salary="14111.68" dInt="428">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julian" lastName="Davis" staffID="33660" salary="3405.63" dInt="451">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Asis" lastName="King" staffID="33661" salary="5002.79" dInt="439">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Adam" lastName="Martin" staffID="33662" salary="1514.43" dInt="445">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julian" lastName="Cook" staffID="33663" salary="15231.18" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Rosa" lastName="Anderson" staffID="33664" salary="4933.08" dInt="424">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Friedrich" lastName="Nguyen" staffID="33665" salary="17106.56" dInt="429">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Altfried" lastName="Murphy" staffID="33666" salary="482.61" dInt="449">
+    <shiftPlan covers="//@patient.57">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ella" lastName="Edwards" staffID="33667" salary="13416.64" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Friedrich" lastName="Mitchell" staffID="33668" salary="11486.54" dInt="425" treatment="//@patient.27/@treatment">
+    <shiftPlan covers="//@patient.27">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Peter" lastName="Edwards" staffID="33669" salary="18714.33" dInt="431" treatment="//@patient.58/@treatment">
+    <shiftPlan covers="//@patient.58">
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Maximilian" lastName="Collins" staffID="33670" salary="265.04" dInt="435">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Berenike" lastName="Green" staffID="33671" salary="3584.5" dInt="441">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Anna" lastName="White" staffID="33672" salary="4282.75" dInt="447">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Amy" lastName="Baker" staffID="33673" salary="292.33" dInt="425">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Lukas" lastName="Scott" staffID="33674" salary="4759.06" dInt="436">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Katharina" lastName="Rivera" staffID="33675" salary="14439.18" dInt="434">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Asis" lastName="Stewart" staffID="33676" salary="15560.41" dInt="428" treatment="//@patient.36/@treatment">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julia" lastName="Cooper" staffID="33677" salary="3560.45" dInt="436">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Elias" lastName="Jackson" staffID="33678" salary="2750.82" dInt="446">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Amelie" lastName="Baker" staffID="33679" salary="6831.07" dInt="427">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Noah" lastName="Nguyen" staffID="33680" salary="2462.27" dInt="442">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Emely" lastName="Roberts" staffID="33681" salary="6324.96" dInt="426">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Philipp" lastName="Hall" staffID="33682" salary="11175.21" dInt="425">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Berenike" lastName="Stewart" staffID="33683" salary="1766.9" dInt="426">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Susanne" lastName="Adams" staffID="33684" salary="382.15" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="David" lastName="Garcia" staffID="33685" salary="5504.41" dInt="447">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Wilma" lastName="Lopez" staffID="33686" salary="2354.98" dInt="426">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Maya" lastName="Murphy" staffID="33687" salary="15327.52" dInt="435">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Julian" lastName="Jackson" staffID="33688" salary="3873.94" dInt="447">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Lucy" lastName="Murphy" staffID="33689" salary="8066.72" dInt="432">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Maya" lastName="Garcia" staffID="33690" salary="3955.39" dInt="438">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Maximilian" lastName="Brown" staffID="33691" salary="10632.36" dInt="425">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Arik" lastName="Mitchell" staffID="33692" salary="3408.53" dInt="444">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Altfried" lastName="Flores" staffID="33693" salary="11703.92" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Felix" lastName="Campbell" staffID="33694" salary="19120.4" dInt="445">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Flora" lastName="Hill" staffID="33695" salary="2981.56" dInt="424">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Meike" lastName="White" staffID="33696" salary="8726.57" dInt="445">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Arian" lastName="Moore" staffID="33697" salary="17976.32" dInt="450">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Johannes" lastName="Lopez" staffID="33698" salary="12061.16" dInt="433">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ari" lastName="Davis" staffID="33699" salary="8175.4" dInt="442">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <patient firstName="Katharina" lastName="Miller" patientID="12015" />
+  <patient firstName="Annegret" lastName="Harris" patientID="12016" />
+  <patient firstName="Liam" lastName="Robinson" patientID="12017" />
+  <patient firstName="Arik" lastName="Cooper" patientID="12018" />
+  <patient firstName="Amelie" lastName="Jones" patientID="12019" />
+  <patient firstName="Lukas" lastName="Allen" patientID="12020" />
+  <patient firstName="Quentin" lastName="Baker" patientID="12021" />
+  <patient firstName="Elisabeth" lastName="Brown" patientID="12022" />
+  <patient firstName="Anton" lastName="Rodriguez" patientID="12023" />
+  <patient firstName="Paul" lastName="Phillips" patientID="12024" />
+  <patient firstName="Aras" lastName="Baker" patientID="12025" />
+  <patient firstName="Noah" lastName="Carter" patientID="12026" />
+  <patient firstName="Finja" lastName="Thompson" patientID="12027" />
+  <patient firstName="Abigail" lastName="Green" patientID="12028" />
+  <patient firstName="Aglaia" lastName="Brown" patientID="12029" />
+  <patient firstName="Amy" lastName="Hernandez" patientID="12030" />
+  <patient firstName="Linus" lastName="Evans" patientID="12031" />
+  <patient firstName="Andreas" lastName="Rivera" patientID="12032" />
+  <patient firstName="Astrid" lastName="Scott" patientID="12033" />
+  <patient firstName="Anton" lastName="Martin" patientID="12034" />
+  <patient firstName="Quentin" lastName="Martinez" patientID="12035" />
+  <patient firstName="Antke" lastName="Baker" patientID="12036" />
+  <patient firstName="Adam" lastName="White" patientID="12037" />
+  <patient firstName="Anna" lastName="Robinson" patientID="12038" />
+  <patient firstName="Johannes" lastName="Wilson" patientID="12039" />
+  <patient firstName="Abigail" lastName="Ramirez" patientID="12040" />
+  <patient coveredBy="//@staff.31/@shiftPlan //@staff.30/@shiftPlan" firstName="Niklas" lastName="Collins" patientID="12041">
+    <treatment medication="medium" />
+  </patient>
+  <patient coveredBy="//@staff.30/@shiftPlan //@staff.108/@shiftPlan" firstName="Alicia" lastName="Roberts" patientID="12042">
+    <treatment medication="weak" />
+  </patient>
+  <patient coveredBy="//@staff.16/@shiftPlan" firstName="Julian" lastName="Martinez" patientID="12043">
+    <treatment medication="medium" />
+  </patient>
+  <patient coveredBy="//@staff.89/@shiftPlan" firstName="Lukas" lastName="Lee" patientID="12044">
+    <treatment medication="medium" />
+  </patient>
+  <patient coveredBy="//@staff.15/@shiftPlan //@staff.12/@shiftPlan //@staff.87/@shiftPlan" firstName="Amy" lastName="Smith" patientID="12045">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.20/@shiftPlan" firstName="Asis" lastName="Evans" patientID="12046">
+    <treatment medication="weak" />
+  </patient>
+  <patient firstName="Andreas" lastName="Parker" patientID="12047">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.97/@shiftPlan" firstName="Antke" lastName="Bailey" patientID="12048" />
+  <patient firstName="David" lastName="Smith" patientID="12049" />
+  <patient coveredBy="//@staff.15/@shiftPlan //@staff.12/@shiftPlan" firstName="Konstantin" lastName="Anderson" patientID="12050">
+    <treatment medication="strong" />
+  </patient>
+  <patient firstName="Alicia" lastName="Sanchez" patientID="12051">
+    <treatment medication="weak" />
+  </patient>
+  <patient coveredBy="//@staff.46/@shiftPlan //@staff.69/@shiftPlan" firstName="Aras" lastName="Hall" patientID="12052">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.53/@shiftPlan //@staff.15/@shiftPlan" firstName="Ben" lastName="Bailey" patientID="12053">
+    <treatment medication="strong" />
+  </patient>
+  <patient firstName="Ben" lastName="Turner" patientID="12054">
+    <treatment medication="strong" />
+  </patient>
+  <patient firstName="Adrian" lastName="Phillips" patientID="12055">
+    <treatment medication="strong" />
+  </patient>
+  <patient firstName="Adam" lastName="Nguyen" patientID="12056">
+    <treatment medication="weak" />
+  </patient>
+  <patient firstName="Wilma" lastName="Martinez" patientID="12057">
+    <treatment medication="medium" />
+  </patient>
+  <patient coveredBy="//@staff.52/@shiftPlan" firstName="Lucy" lastName="Walker" patientID="12058">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.4/@shiftPlan" firstName="Astrid" lastName="Torres" patientID="12059">
+    <treatment medication="weak" />
+  </patient>
+  <patient coveredBy="//@staff.22/@shiftPlan" firstName="Alicia" lastName="Young" patientID="12060" />
+  <patient coveredBy="//@staff.58/@shiftPlan" firstName="Carla" lastName="Robinson" patientID="12061">
+    <treatment medication="medium" />
+  </patient>
+  <patient firstName="Philipp" lastName="Brown" patientID="12062">
+    <treatment medication="weak" />
+  </patient>
+  <patient firstName="Linus" lastName="Walker" patientID="12063">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.13/@shiftPlan //@staff.63/@shiftPlan" firstName="Paulina" lastName="Davis" patientID="12064">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.63/@shiftPlan" firstName="Luis" lastName="Jackson" patientID="12065">
+    <treatment medication="medium" />
+  </patient>
+  <patient coveredBy="//@staff.21/@shiftPlan" firstName="Romy" lastName="Miller" patientID="12066">
+    <treatment medication="weak" />
+  </patient>
+  <patient firstName="Alma" lastName="Lee" patientID="12067">
+    <treatment medication="strong" />
+  </patient>
+  <patient firstName="Paulina" lastName="Morris" patientID="12068">
+    <treatment medication="strong" />
+  </patient>
+  <patient firstName="Flora" lastName="Williams" patientID="12069">
+    <treatment medication="medium" />
+  </patient>
+  <patient firstName="Maya" lastName="Anderson" patientID="12070">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.5/@shiftPlan" firstName="Meike" lastName="Williams" patientID="12071" />
+  <patient coveredBy="//@staff.106/@shiftPlan" firstName="Lukas" lastName="Mitchell" patientID="12072">
+    <treatment medication="weak" />
+  </patient>
+  <patient coveredBy="//@staff.109/@shiftPlan" firstName="Adam" lastName="Turner" patientID="12073">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.39/@shiftPlan" firstName="Karl" lastName="Stewart" patientID="12074">
+    <treatment medication="medium" />
+  </patient>
+  <patient firstName="Anton" lastName="Wright" patientID="12075">
+    <treatment medication="medium" />
+  </patient>
+  <patient firstName="Aaliyah" lastName="Torres" patientID="12076" />
+  <patient coveredBy="//@staff.31/@shiftPlan" firstName="Annika" lastName="Wright" patientID="12077">
+    <treatment medication="medium" />
+  </patient>
+  <patient firstName="Linus" lastName="Green" patientID="12078" />
+  <patient firstName="Theresa" lastName="Mitchell" patientID="12079">
+    <treatment medication="weak" />
+  </patient>
+  <patient firstName="Arik" lastName="Thompson" patientID="12080" />
+  <patient firstName="Asis" lastName="Williams" patientID="12081" />
+  <patient firstName="Emely" lastName="Martin" patientID="12082" />
+  <patient firstName="Elisabeth" lastName="Clark" patientID="12083">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.66/@shiftPlan" firstName="Elena" lastName="Adams" patientID="12084">
+    <treatment medication="weak" />
+  </patient>
+  <patient firstName="Mia" lastName="Parker" patientID="12085" />
+  <patient firstName="Abigail" lastName="Allen" patientID="12086" />
+  <patient firstName="Amelie" lastName="Evans" patientID="12087" />
+  <patient firstName="Quirin" lastName="Walker" patientID="12088" />
+  <patient coveredBy="//@staff.46/@shiftPlan" firstName="David" lastName="Edwards" patientID="12089" />
+  <patient firstName="Maximilian" lastName="Clark" patientID="12090" />
+  <patient firstName="Felix" lastName="Flores" patientID="12091">
+    <treatment medication="strong" />
+  </patient>
+  <patient coveredBy="//@staff.40/@shiftPlan" firstName="Edda" lastName="Martin" patientID="12092" />
+  <patient firstName="Anton" lastName="Wilson" patientID="12093" />
+  <patient firstName="Elena" lastName="Carter" patientID="12094" />
+  <patient firstName="Henry" lastName="Davis" patientID="12095" />
+  <patient firstName="Aras" lastName="Rivera" patientID="12096" />
+  <patient firstName="Finn" lastName="Collins" patientID="12097" />
+  <patient firstName="Abigail" lastName="Collins" patientID="12098" />
+  <patient firstName="Ake" lastName="Davis" patientID="12099" />
+  <patient firstName="Ake" lastName="Lewis" patientID="12100" />
+  <patient firstName="Philipp" lastName="Wright" patientID="12101" />
+</AdministrationExample:Administration>

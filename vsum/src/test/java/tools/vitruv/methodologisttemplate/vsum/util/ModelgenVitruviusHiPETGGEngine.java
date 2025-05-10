@@ -166,16 +166,10 @@ public class ModelgenVitruviusHiPETGGEngine extends HiPETGGEngine {
             for(String patternName : extractData.keySet()) {
                 if (this.patterns.get(patternName) != null) {
                     String pName = this.patterns.get(patternName);
-                    logger.debug("In VitruviusHiPETGGEngine: pattern debug: patternName=" + patternName + ", pName=" + pName + ", productionMatchesNames: " +
-                            extractData.get(patternName).getNewMatches().stream().map(productionMatch -> productionMatch.patternName).collect(Collectors.joining(", ")));
 
                     Collection<ProductionMatch> matches = extractData.get(patternName).getNewMatches();
                     for (ProductionMatch m : matches) {
                         IMatch match = this.createMatch(m, pName);
-                        logger.debug("  - HIPE MATCH: [" + match.getPatternName() + "] params= ");
-                        for (String paramName : match.getParameterNames()) {
-                            logger.debug("    - " + paramName + "=" + Util.eObjectToString(match.get(paramName)));
-                        }
                     }
                 }
             }

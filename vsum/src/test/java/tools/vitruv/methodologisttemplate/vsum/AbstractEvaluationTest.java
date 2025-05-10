@@ -53,6 +53,12 @@ public class AbstractEvaluationTest {
     public static Path TARGET_MODEL_PATH;
     public static String SOURCE_MODEL_PATH_STRING;
 
+    /*
+     * TestClass -> testRunName -> TimerMap (Variable -> Timer)
+     */
+    private static final Map<Class<?>, Map<String,Map<String, Timer>>> testRun_averageTimers = new HashMap<>();
+    private static final Map<Class<?>, Map<String,Map<String, Timer>>> testRun_medianTimers = new HashMap<>();
+
     public Set<EClass> targetRootEClasses;
 
     public AbstractEvaluationTest(String vitruviusProjectName, Set<EClass> targetRootEClasses) {
@@ -87,7 +93,7 @@ public class AbstractEvaluationTest {
     }
 
     @AfterEach
-    void storeEvalData() throws IOException {
+    void storeEvalData(TestInfo testInfo) throws IOException {
         // rule matches --> appliedRuleMatches.txt
         Path ruleApplicationMatchesFile = vitruviusProjectPath.resolve("appliedRuleMatches.txt");
         int currentRun = 0;
@@ -109,6 +115,8 @@ public class AbstractEvaluationTest {
         //TODO time (?)
         Path timeMeasurementsFile = vitruviusProjectPath.resolve("timeMeasurements");
         currentRun = 0;
+
+
         Files.writeString(timeMeasurementsFile,
                 "============================================= [Change Propagation run " + ++currentRun + "] =============================================\n" +
                         getCurrentChangePropagationResults()
@@ -119,33 +127,39 @@ public class AbstractEvaluationTest {
                                         .collect(Collectors.joining("\n"))
                                 )
                                 .collect(Collectors.joining("\n\n============================================= [Change Propagation run " + ++currentRun + "] =============================================\n"))
-                        + "\n\n============================================= [AVERAGE over all " + getCurrentChangePropagationResults().size() + " runs] =============================================\n"
-                        + getAverageTimesString()
+                        + "\n\n=======================================================================================================================================\n"
+                        + "=======================================================================================================================================\n"
+                        + "\n============================================= [AVERAGE over all " + getCurrentChangePropagationResults().size() + " runs] =============================================\n"
+                        + setAverageTimesAndGetString(testInfo)
                         + "\n\n============================================= [MEDIAN over all " + getCurrentChangePropagationResults().size() + " runs] =============================================\n"
-                        + getMedianTimesString()
+                        + setMedianTimesAndGetString(testInfo)
+//                        + "\n\n============================================= [Standard Derivation over all " + getCurrentChangePropagationResults().size() + " runs] =============================================\n"
+//                        + getStdDerivationTimesString()
         );
 
     }
 
-    private String getAverageTimesString() {
+    private String setAverageTimesAndGetString(TestInfo testInfo) {
         Set<String> keys =  getCurrentChangePropagationResults().getLast().getTimeMeasurements().keySet();
         Map<String, Timer> measurementKeyToAverageTimer = new HashMap<>();
         for (String key : keys) {// add all timers
-            long summedNanos = getCurrentChangePropagationResults().stream()
-                    .map(result -> result.getTimeMeasurements().get(key))
-                    .reduce(Timer::add)
-                    .get().getTime(TimeUnit.NANOSECONDS);
-            measurementKeyToAverageTimer.put(key, new Timer(0, summedNanos / getCurrentChangePropagationResults().size()));
+//            long summedNanos = getCurrentChangePropagationResults().stream()
+//                    .map(result -> result.getTimeMeasurements().get(key))
+//                    .reduce(Timer::add)
+//                    .get().getTime(TimeUnit.NANOSECONDS);
+            measurementKeyToAverageTimer.put(key, new Timer(0, getAverageNanos(getCurrentChangePropagationResults(), key)));
         }
+        testRun_averageTimers.computeIfAbsent(testInfo.getTestClass().get(), testClass -> new HashMap<>())
+                .put(testInfo.getDisplayName(), measurementKeyToAverageTimer);
         return measurementKeyToAverageTimer.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
                 .collect(Collectors.joining("\n"));
     }
 
-    private String getMedianTimesString() {
+    private String setMedianTimesAndGetString(TestInfo testInfo) {
         Set<String> keys =  getCurrentChangePropagationResults().getLast().getTimeMeasurements().keySet();
-        Map<String, Timer> measurementKeyToAverageTimer = new HashMap<>();
+        Map<String, Timer> measurementKeyToMedianTimer = new HashMap<>();
         for (String key : keys) {// add all timers
             List<Long> sortedNanos = getCurrentChangePropagationResults().stream()
                     .map(result -> result.getTimeMeasurements().get(key))
@@ -153,17 +167,50 @@ public class AbstractEvaluationTest {
                     .sorted()
                     .toList();
             int size = sortedNanos.size();
-            measurementKeyToAverageTimer.put(key, new Timer(
+            measurementKeyToMedianTimer.put(key, new Timer(
                     0,
                     (size % 2 == 0)
                             ? (sortedNanos.get(size/2) + sortedNanos.get(size/2 - 1)) / 2
                             : sortedNanos.get(size/2)
             ));
         }
-        return measurementKeyToAverageTimer.entrySet().stream()
+        testRun_medianTimers.computeIfAbsent(testInfo.getTestClass().get(), testClass -> new HashMap<>())
+                .put(testInfo.getDisplayName(), measurementKeyToMedianTimer);
+        return measurementKeyToMedianTimer.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
                 .collect(Collectors.joining("\n"));
+    }
+
+    private String getStdDerivationTimesString() {
+
+        Set<String> keys =  getCurrentChangePropagationResults().getLast().getTimeMeasurements().keySet();
+        Map<String, Timer> measurementKeyToStdDerivationTimer = new HashMap<>();
+        for (String key : keys) {// add all timers
+            double divisor = getCurrentChangePropagationResults().size() - 1; // n - 1
+            long average = getAverageNanos(getCurrentChangePropagationResults(), key);
+            //
+            double dividend = getCurrentChangePropagationResults().stream()
+                    .map(result -> result.getTimeMeasurements().get(key).getTime(TimeUnit.NANOSECONDS))
+                    .map(nanos -> Math.pow((nanos - average), 2))
+                    .reduce(Double::sum).get();
+
+            measurementKeyToStdDerivationTimer.put(
+                    key, new Timer(0,
+                            (long) Math.sqrt(dividend/divisor)) // sqrt( SUM((x_i - avg)²) / (n - 1))
+            );
+        }
+        return measurementKeyToStdDerivationTimer.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
+                .collect(Collectors.joining("\n"));
+    }
+    private long getAverageNanos(List<VitruviusTGGChangePropagationResult> stichprobe, String key) {
+        long summedNanos = stichprobe.stream()
+                .map(result -> result.getTimeMeasurements().get(key))
+                .reduce(Timer::add)
+                .get().getTime(TimeUnit.NANOSECONDS);
+        return summedNanos / stichprobe.size();
     }
 
     List<VitruviusTGGChangePropagationResult> getCurrentChangePropagationResults() {
@@ -184,10 +231,61 @@ public class AbstractEvaluationTest {
                 +  "\n============================================= [Corrupt TGGRules] =============================================\n"
                 + lastResult.getCorruptRules().stream().map(TGGRule::getName).collect(Collectors.joining("\n"));
         Files.writeString(tggRulesInfoPath, fileContent);
-//        Path ibexFilesPath = vitruviusProjectPath.resolve("ibexFiles/");
-//        Files.createDirectories(ibexFilesPath);
-//        Files.copy(IBEX_PROJECT_ROOT.resolve(CORR_RELATIVE_PATH), ibexFilesPath.resolve("corr.xmi"));
-//        Files.copy(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH), ibexFilesPath.resolve("protocol.xmi"));
+
+    }
+
+    // no problem if written multiple times, the last one counts.
+    @AfterEach
+    void storeGlobalEvalDataAfterAll(TestInfo testInfo) throws IOException {
+        // AVERAGE overview
+        Path averageTimeMeasurementsAccumulationPath = VITRUVIUS_PROJECTS_PATH.resolve("averageTimeMeasurementsAccumulation.txt");
+        Map<String, Map<String,Timer>> averageTimersForClass = this.testRun_averageTimers.get(testInfo.getTestClass().get());
+        String averageTimeMeasurementsAcc_fileContent =
+                "============================================= [ AVERAGE Time Measurements ] =============================================\n"
+                        + averageTimersForClass.entrySet().stream()
+                        .sorted((a, b) -> getNumberOutOfString(a.getKey()).compareTo(getNumberOutOfString(b.getKey())))
+                        .map(testRunNameToTimersMap ->
+                                "\n--------------------------------------------- [ " + testRunNameToTimersMap.getKey() + " ] ---------------------------------------------\n"
+                                        + testRunNameToTimersMap.getValue().entrySet().stream()
+                                        .sorted(Map.Entry.comparingByKey())
+                                        .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
+                                        .collect(Collectors.joining("\n"))
+                        ).collect(Collectors.joining("\n"));
+        Files.writeString(averageTimeMeasurementsAccumulationPath, averageTimeMeasurementsAcc_fileContent);
+
+        // MEDIAN overview
+        Path medianTimeMeasurementsAccumulationPath = VITRUVIUS_PROJECTS_PATH.resolve("medianTimeMeasurementsAccumulation.txt");
+        Map<String, Map<String,Timer>> medianTimersForClass = this.testRun_medianTimers.get(testInfo.getTestClass().get());
+        String medianTimeMeasurementsAcc_fileContent =
+                "============================================= [ MEDIAN Time Measurements ] =============================================\n"
+                        + medianTimersForClass.entrySet().stream()
+                        .sorted((a, b) -> compareTestMethodNames(a.getKey(), b.getKey()))
+                        .map(testRunNameToTimersMap ->
+                                "\n--------------------------------------------- [ " + testRunNameToTimersMap.getKey() + " ] ---------------------------------------------\n"
+                                        + testRunNameToTimersMap.getValue().entrySet().stream()
+                                        .sorted(Map.Entry.comparingByKey())
+                                        .map(entry -> "  - " + entry.getKey() + ": " + entry.getValue())
+                                        .collect(Collectors.joining("\n"))
+                        ).collect(Collectors.joining("\n"));
+        Files.writeString(medianTimeMeasurementsAccumulationPath, medianTimeMeasurementsAcc_fileContent);
+    }
+
+    /**
+     * For sorting by size (and hipe or not hipe), not alphabetically
+     */
+    int compareTestMethodNames(String a, String b) {
+        String hipeString = "_hipe";
+        if (a.contains(hipeString) && !b.contains(hipeString)) {
+            return 1;
+        } else if (!a.contains(hipeString) && b.contains(hipeString)) {
+            return -1;
+        } else {
+            return getNumberOutOfString(a).compareTo(getNumberOutOfString(b));
+        }
+    }
+
+    Integer getNumberOutOfString(String s) {
+        return Integer.parseInt(s.replaceAll("[a-zA-Z()]|_",""));
     }
 
     void createNewCPSAndVSUM(TestInfo testInfo) {

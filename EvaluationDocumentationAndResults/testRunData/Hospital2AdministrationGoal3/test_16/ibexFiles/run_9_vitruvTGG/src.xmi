@@ -2,26 +2,26 @@
 <xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
   <HospitalExample:Hospital>
     <reception>
-      <waits patientID="32821" name="Alba Carter" level="PENDING" />
-      <waits patientID="32822" name="Annegret Hill" level="PENDING" />
+      <waits patientID="61676" name="Elias Miller" level="PENDING" />
+      <waits patientID="61677" name="Carla Adams" level="PENDING" />
     </reception>
-    <staff xsi:type="HospitalExample:Nurse" staffID="64636" name="Henry Allen" works="/0/@department.1" />
-    <staff xsi:type="HospitalExample:Doctor" staffID="64637" name="Meike Allen" patientCapacity="0" works="/0/@department.1" />
-    <department dID="631" maxRoomCount="10" />
-    <department staff="/0/@staff.0 /0/@staff.1" dID="632" maxRoomCount="10" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="128808" name="Asis Hall" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="128809" name="Annegret Martin" works="/0/@department.1" />
+    <department staff="/0/@staff.0" dID="1289" maxRoomCount="10" />
+    <department staff="/0/@staff.1" dID="1290" maxRoomCount="10" />
   </HospitalExample:Hospital>
   <AdministrationExample:Administration>
-    <staff firstName="Henry" lastName="Allen" staffID="64636" salary="3660.94" dInt="632">
+    <staff firstName="Asis" lastName="Hall" staffID="128808" salary="1071.76" dInt="1289">
       <shiftPlan>
         <shifts time="night" />
       </shiftPlan>
     </staff>
-    <staff firstName="Meike" lastName="Allen" staffID="64637" salary="13048.85" dInt="632">
+    <staff firstName="Annegret" lastName="Martin" staffID="128809" salary="332.99" dInt="1290">
       <shiftPlan>
         <shifts time="night" />
       </shiftPlan>
     </staff>
-    <patient firstName="Annegret" lastName="Hill" patientID="32822" />
-    <patient firstName="Alba" lastName="Carter" patientID="32821" />
+    <patient firstName="Elias" lastName="Miller" patientID="61676" />
+    <patient firstName="Carla" lastName="Adams" patientID="61677" />
   </AdministrationExample:Administration>
 </xmi:XMI>

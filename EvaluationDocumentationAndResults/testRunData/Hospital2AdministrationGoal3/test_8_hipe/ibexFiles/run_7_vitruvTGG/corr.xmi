@@ -5,8 +5,8 @@
     <target xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
   </Hospital2AdministrationSolutions:HospitalToAdministration>
   <Hospital2AdministrationSolutions:HospitalToAdministration>
-    <source xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/0" />
     <target xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/2" />
+    <source xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/0" />
   </Hospital2AdministrationSolutions:HospitalToAdministration>
   <Hospital2AdministrationSolutions:PatientToPatient>
     <source xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception/@waits.0" />
@@ -16,4 +16,12 @@
     <source xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/0/@reception/@waits.0" />
     <target xsi:type="AdministrationExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/2/@patient.0" />
   </Hospital2AdministrationSolutions:PatientToPatient>
+  <Hospital2AdministrationSolutions:StaffToStaff>
+    <target xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.0" />
+    <source xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@staff.0" />
+  </Hospital2AdministrationSolutions:StaffToStaff>
+  <Hospital2AdministrationSolutions:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/0/@staff.0" />
+    <target xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/2/@staff.0" />
+  </Hospital2AdministrationSolutions:StaffToStaff>
 </xmi:XMI>

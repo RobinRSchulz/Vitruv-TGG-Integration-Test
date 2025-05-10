@@ -2,40 +2,31 @@
 <xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
   <HospitalExample:Hospital>
     <reception>
-      <waits patientID="44174" name="Felix Perez" level="PENDING" />
-      <waits patientID="44175" name="Finn Miller" level="PENDING" />
+      <waits patientID="84032" name="Julia Parker" level="PENDING" />
+      <waits patientID="84033" name="Johannes Rodriguez" level="PENDING" />
     </reception>
-    <staff xsi:type="HospitalExample:Nurse" staffID="83562" name="Theresa Miller" works="/0/@department.1" />
-    <staff xsi:type="HospitalExample:Nurse" staffID="83563" name="Alexander Hill" works="/0/@department.1" />
-    <department dID="2351" maxRoomCount="10" />
-    <department staff="/0/@staff.0 /0/@staff.1" dID="2352" maxRoomCount="10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="167500" name="Alma Harris" patientCapacity="0" works="/0/@department.1" />
+    <department dID="4721" maxRoomCount="10" />
+    <department staff="/0/@staff.0" dID="4722" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
   </HospitalExample:Hospital>
   <AdministrationExample:Administration>
-    <staff firstName="Theresa" lastName="Miller" staffID="83562" salary="1748.44" dInt="2352">
+    <staff firstName="Alma" lastName="Harris" staffID="167500" salary="12151.84" dInt="4722">
       <shiftPlan>
         <shifts time="night" />
       </shiftPlan>
     </staff>
-    <staff firstName="Alexander" lastName="Hill" staffID="83563" salary="4705.78" dInt="2352">
-      <shiftPlan>
-        <shifts time="night" />
-      </shiftPlan>
-    </staff>
-    <patient firstName="Finn" lastName="Miller" patientID="44175" />
-    <patient firstName="Felix" lastName="Perez" patientID="44174" />
+    <patient firstName="Johannes" lastName="Rodriguez" patientID="84033" />
+    <patient firstName="Julia" lastName="Parker" patientID="84032" />
   </AdministrationExample:Administration>
   <AdministrationExample:Administration>
-    <staff firstName="Alexander" lastName="Hill" staffID="83563" salary="4895.01" dInt="2352">
+    <staff firstName="Alma" lastName="Harris" staffID="167500" salary="12191.96" dInt="4722">
       <shiftPlan>
         <shifts time="night" />
       </shiftPlan>
     </staff>
-    <staff firstName="Theresa" lastName="Miller" staffID="83562" salary="5412.41" dInt="2352">
-      <shiftPlan>
-        <shifts time="night" />
-      </shiftPlan>
-    </staff>
-    <patient firstName="Felix" lastName="Perez" patientID="44174" />
-    <patient firstName="Finn" lastName="Miller" patientID="44175" />
+    <patient firstName="Julia" lastName="Parker" patientID="84032" />
+    <patient firstName="Johannes" lastName="Rodriguez" patientID="84033" />
   </AdministrationExample:Administration>
 </xmi:XMI>

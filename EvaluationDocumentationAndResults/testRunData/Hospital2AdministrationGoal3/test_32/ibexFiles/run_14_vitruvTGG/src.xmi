@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="61832" name="Anisha Baker" level="PENDING" />
+      <waits patientID="61833" name="Arian Garcia" level="PENDING" />
+      <waits patientID="61834" name="Augusta Baker" level="PENDING" />
+      <waits patientID="61835" name="Adrian Robinson" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Doctor" staffID="128926" name="Eva Stewart" patientCapacity="0" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="128927" name="Aaliyah Turner" patientCapacity="0" works="/0/@department.2" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="128928" name="Felix Roberts" patientCapacity="0" works="/0/@department.2" />
+    <department dID="1367" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.0" dID="1368" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.1 /0/@staff.2" dID="1369" maxRoomCount="10" />
+    <department dID="1370" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Aaliyah" lastName="Turner" staffID="128927" salary="8268.88" dInt="1369">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Felix" lastName="Roberts" staffID="128928" salary="12832.47" dInt="1369">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Eva" lastName="Stewart" staffID="128926" salary="7390.28" dInt="1368">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Anisha" lastName="Baker" patientID="61832" />
+    <patient firstName="Adrian" lastName="Robinson" patientID="61835" />
+    <patient firstName="Augusta" lastName="Baker" patientID="61834" />
+    <patient firstName="Arian" lastName="Garcia" patientID="61833" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

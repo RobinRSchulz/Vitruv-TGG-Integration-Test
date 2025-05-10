@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <HospitalExample:Hospital>
+    <reception>
+      <waits patientID="83307" name="Anna Miller" level="PENDING" />
+      <waits patientID="83308" name="Frieda Rodriguez" level="PENDING" />
+      <waits patientID="83309" name="Maximilian Ramirez" level="PENDING" />
+      <waits patientID="83310" name="Adam Hernandez" level="PENDING" />
+      <waits patientID="83311" name="Anna Garcia" level="PENDING" />
+      <waits patientID="83312" name="Andreas Garcia" level="PENDING" />
+      <waits patientID="83313" name="Adrian Gonzalez" level="PENDING" />
+      <waits patientID="83314" name="Jonas Campbell" level="PENDING" />
+      <waits patientID="83315" name="Aglaia Thomas" level="PENDING" />
+      <waits patientID="83316" name="Alma Cooper" level="PENDING" />
+      <waits patientID="83317" name="Alma Peterson" level="PENDING" />
+      <waits patientID="83318" name="Maya Roberts" level="PENDING" />
+      <waits patientID="83319" name="Linus Turner" level="PENDING" />
+      <waits patientID="83320" name="Allessandro Allen" level="PENDING" />
+      <waits patientID="83321" name="Susanne Roberts" level="PENDING" />
+      <waits patientID="83322" name="Quirin Stewart" level="PENDING" />
+      <waits patientID="83323" name="Arik Gonzalez" level="PENDING" />
+      <waits patientID="83324" name="Alicia Martinez" level="PENDING" />
+      <waits patientID="83325" name="Adrian Sanchez" level="PENDING" />
+      <waits patientID="83326" name="Liam Brown" level="PENDING" />
+      <waits patientID="83327" name="Luis Clark" level="PENDING" />
+      <waits patientID="83328" name="Liam Martin" level="PENDING" />
+      <waits patientID="83329" name="Quirin Carter" level="PENDING" />
+      <waits patientID="83330" name="Julian Smith" level="PENDING" />
+      <waits patientID="83331" name="Aaliyah Sanchez" level="PENDING" />
+      <waits patientID="83332" name="Amos King" level="PENDING" />
+      <waits patientID="83333" name="Antke Stewart" level="PENDING" />
+      <waits patientID="83334" name="Leon Green" level="PENDING" />
+      <waits patientID="83335" name="Simone Campbell" level="PENDING" />
+      <waits patientID="83336" name="Alba Carter" level="PENDING" />
+      <waits patientID="83337" name="Philipp Martin" level="PENDING" />
+    </reception>
+    <staff xsi:type="HospitalExample:Doctor" staffID="166426" name="Luis Allen" patientCapacity="0" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166427" name="Philipp Hall" patientCapacity="0" works="/0/@department.12" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166428" name="Henry Rodriguez" works="/0/@department.14" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166429" name="Karl Turner" patientCapacity="0" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166430" name="Oskar Cooper" patientCapacity="0" works="/0/@department.15" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166431" name="Ella Bailey" patientCapacity="0" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166432" name="Theresa Taylor" works="/0/@department.8" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166433" name="Alba Davis" patientCapacity="0" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166434" name="Tim Robinson" works="/0/@department.20" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166435" name="Rosa Torres" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166436" name="Elisabeth Nguyen" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166437" name="Anna Davis" works="/0/@department.20" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166438" name="Anna Carter" works="/0/@department.18" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166439" name="Eva Lewis" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166440" name="Tim Garcia" patientCapacity="0" works="/0/@department.8" caresfor="/0/@department.8/@rooms.0/@lies.0 /0/@department.8/@rooms.0/@lies.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166441" name="Asis Robinson" patientCapacity="0" works="/0/@department.19" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166442" name="Annika Harris" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166443" name="Henry Phillips" patientCapacity="0" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166444" name="Emely Smith" patientCapacity="0" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166445" name="Peter White" patientCapacity="0" works="/0/@department.19" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166446" name="Elias Parker" works="/0/@department.13" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166447" name="Anton Brown" patientCapacity="0" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166448" name="Alba Torres" patientCapacity="0" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166449" name="Antke Taylor" works="/0/@department.9" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166450" name="Amos Scott" patientCapacity="0" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166451" name="Maya Hill" patientCapacity="0" works="/0/@department.5" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166452" name="Alba Clark" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166453" name="Emely Clark" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166454" name="Annegret Collins" patientCapacity="0" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166455" name="Noah Stewart" patientCapacity="0" works="/0/@department.19" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166456" name="Juna Sanchez" patientCapacity="0" works="/0/@department.11" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166457" name="Maya Hall" works="/0/@department.18" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166458" name="Anton Hernandez" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166459" name="Paul Anderson" patientCapacity="0" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166460" name="Finja Reed" patientCapacity="0" works="/0/@department.12" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166461" name="Konstantin Walker" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166462" name="Arik Ramirez" works="/0/@department.18" responsible="/0/@department.18/@rooms.0" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166463" name="Johannes Rivera" patientCapacity="0" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166464" name="Arian Rivera" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166465" name="Emely Brown" patientCapacity="0" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166466" name="Arthur Wright" patientCapacity="0" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166467" name="Oskar Carter" patientCapacity="0" works="/0/@department.8" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166468" name="Linus Stewart" patientCapacity="0" works="/0/@department.7" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166469" name="Elisabeth Harris" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166470" name="Adam Stewart" works="/0/@department.0" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166471" name="Alexander Baker" patientCapacity="0" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166472" name="Katharina Clark" patientCapacity="0" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166473" name="Alba Miller" works="/0/@department.0" responsible="/0/@department.0/@rooms.0" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166474" name="Liam Allen" patientCapacity="0" works="/0/@department.3" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166475" name="Elias Reed" patientCapacity="0" works="/0/@department.8" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166476" name="Allessandro Garcia" patientCapacity="0" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166477" name="Rosa Green" works="/0/@department.6" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166478" name="Adrian Rivera" works="/0/@department.6" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166479" name="Augusta Evans" patientCapacity="0" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166480" name="Julia Martinez" patientCapacity="0" works="/0/@department.7" caresfor="/0/@department.7/@rooms.0/@lies.0" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166481" name="Altfried Martinez" patientCapacity="0" works="/0/@department.9" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166482" name="Liam Brown" patientCapacity="0" works="/0/@department.1" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166483" name="Noah Stewart" patientCapacity="0" works="/0/@department.10" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166484" name="Luis Bailey" patientCapacity="0" works="/0/@department.19" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166485" name="Flora Scott" works="/0/@department.11" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166486" name="Astrid White" works="/0/@department.12" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166487" name="Elisabeth Lopez" patientCapacity="0" works="/0/@department.16" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166488" name="Emely Bailey" works="/0/@department.4" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166489" name="Quentin Lopez" patientCapacity="0" works="/0/@department.12" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166490" name="Arian Evans" patientCapacity="0" works="/0/@department.2" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166491" name="Friedrich Harris" works="/0/@department.5" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166492" name="Elisabeth Brown" patientCapacity="0" works="/0/@department.15" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166493" name="Tim Hill" works="/0/@department.11" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166494" name="Alexander Brown" patientCapacity="0" works="/0/@department.21" />
+    <staff xsi:type="HospitalExample:Doctor" staffID="166495" name="Quirin Phillips" patientCapacity="0" works="/0/@department.13" />
+    <staff xsi:type="HospitalExample:Nurse" staffID="166496" name="Ella Morris" works="/0/@department.10" />
+    <department staff="/0/@staff.10 /0/@staff.16 /0/@staff.44 /0/@staff.47" dID="4507" maxRoomCount="10">
+      <rooms nurses="/0/@staff.47" capacity="4" level="WEAK">
+        <lies patientID="83344" name="Antke Campbell" level="PENDING" />
+        <lies patientID="83349" name="Rosa Wright" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.0 /0/@staff.13 /0/@staff.21 /0/@staff.22 /0/@staff.27 /0/@staff.56" dID="4508" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.64" dID="4509" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.7 /0/@staff.9 /0/@staff.26 /0/@staff.39 /0/@staff.40 /0/@staff.48" dID="4510" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83347" name="Emely Robinson" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.35 /0/@staff.50 /0/@staff.62" dID="4511" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83353" name="Rosa Lee" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.25 /0/@staff.65" dID="4512" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.51 /0/@staff.52" dID="4513" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83351" name="Theresa Martin" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.5 /0/@staff.28 /0/@staff.33 /0/@staff.37 /0/@staff.38 /0/@staff.42 /0/@staff.54" dID="4514" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies doctor="/0/@staff.54" patientID="83345" name="Karl Flores" level="MEDIUM" />
+      </rooms>
+    </department>
+    <department staff="/0/@staff.6 /0/@staff.14 /0/@staff.41 /0/@staff.49" dID="4515" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies doctor="/0/@staff.14" patientID="83339" name="Eva Scott" level="WEAK" />
+        <lies doctor="/0/@staff.14" patientID="83340" name="Arian Garcia" level="STRONG" />
+      </rooms>
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83342" name="Altfried Mitchell" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.23 /0/@staff.55" dID="4516" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83341" name="Konstantin Hall" level="PENDING" />
+        <lies patientID="83352" name="David Thompson" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.3 /0/@staff.18 /0/@staff.45 /0/@staff.53 /0/@staff.57 /0/@staff.70" dID="4517" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.30 /0/@staff.59 /0/@staff.67" dID="4518" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.1 /0/@staff.34 /0/@staff.60 /0/@staff.63" dID="4519" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.20 /0/@staff.69" dID="4520" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83348" name="Liam Sanchez" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.2" dID="4521" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.4 /0/@staff.66" dID="4522" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.17 /0/@staff.24 /0/@staff.32 /0/@staff.43 /0/@staff.46 /0/@staff.61" dID="4523" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department dID="4524" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83354" name="Allessandro Torres" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83350" name="Philipp Lopez" level="PENDING" />
+      </rooms>
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.12 /0/@staff.31 /0/@staff.36" dID="4525" maxRoomCount="10">
+      <rooms nurses="/0/@staff.36" capacity="4" level="WEAK">
+        <lies patientID="83343" name="Felix Jackson" level="PENDING" />
+        <lies patientID="83346" name="Alexander Collins" level="PENDING" />
+      </rooms>
+    </department>
+    <department staff="/0/@staff.15 /0/@staff.19 /0/@staff.29 /0/@staff.58" dID="4526" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK" />
+    </department>
+    <department staff="/0/@staff.8 /0/@staff.11" dID="4527" maxRoomCount="10">
+      <rooms capacity="4" level="WEAK">
+        <lies patientID="83338" name="Julia Edwards" level="PENDING" />
+      </rooms>
+    </department>
+    <department staff="/0/@staff.68" dID="4528" maxRoomCount="10" />
+  </HospitalExample:Hospital>
+  <AdministrationExample:Administration>
+    <staff firstName="Flora" lastName="Scott" staffID="166485" salary="336.05" dInt="4518">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Juna" lastName="Sanchez" staffID="166456" salary="16578.48" dInt="4518">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Tim" lastName="Hill" staffID="166493" salary="3660.74" dInt="4518">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elisabeth" lastName="Lopez" staffID="166487" salary="18655.42" dInt="4523">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Anton" lastName="Hernandez" staffID="166458" salary="2773.94" dInt="4523">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Katharina" lastName="Clark" staffID="166472" salary="10762.51" dInt="4523">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Amos" lastName="Scott" staffID="166450" salary="16430.53" dInt="4523">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Henry" lastName="Phillips" staffID="166443" salary="15204.22" dInt="4523">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elisabeth" lastName="Harris" staffID="166469" salary="1511.85" dInt="4523">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Oskar" lastName="Carter" staffID="166467" salary="15245.5" dInt="4515">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Tim" lastName="Garcia" staffID="166440" salary="12705.41" dInt="4515">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elias" lastName="Reed" staffID="166475" salary="8164.97" dInt="4515">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Theresa" lastName="Taylor" staffID="166432" salary="682.03" dInt="4515">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Allessandro" lastName="Garcia" staffID="166476" salary="18139.61" dInt="4511">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Emely" lastName="Bailey" staffID="166488" salary="4219.75" dInt="4511">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Konstantin" lastName="Walker" staffID="166461" salary="3616.78" dInt="4511">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Ella" lastName="Morris" staffID="166496" salary="3535.99" dInt="4517">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Noah" lastName="Stewart" staffID="166483" salary="9126.65" dInt="4517">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Emely" lastName="Smith" staffID="166444" salary="17327.48" dInt="4517">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Karl" lastName="Turner" staffID="166429" salary="17846.24" dInt="4517">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Augusta" lastName="Evans" staffID="166479" salary="16489.83" dInt="4517">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alexander" lastName="Baker" staffID="166471" salary="7733.43" dInt="4517">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Arik" lastName="Ramirez" staffID="166462" salary="1513.63" dInt="4525">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Maya" lastName="Hall" staffID="166457" salary="2909.73" dInt="4525">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Anna" lastName="Carter" staffID="166438" salary="859.67" dInt="4525">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Henry" lastName="Rodriguez" staffID="166428" salary="3919.34" dInt="4521">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Anna" lastName="Davis" staffID="166437" salary="975.13" dInt="4527">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Tim" lastName="Robinson" staffID="166434" salary="2525.24" dInt="4527">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Linus" lastName="Stewart" staffID="166468" salary="7179.36" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Paul" lastName="Anderson" staffID="166459" salary="10998.3" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Johannes" lastName="Rivera" staffID="166463" salary="7655.09" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Annegret" lastName="Collins" staffID="166454" salary="14378.96" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Julia" lastName="Martinez" staffID="166480" salary="17961.32" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Arian" lastName="Rivera" staffID="166464" salary="3690.64" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Ella" lastName="Bailey" staffID="166431" salary="14408.61" dInt="4514">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Emely" lastName="Brown" staffID="166465" salary="8757.68" dInt="4510">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Rosa" lastName="Torres" staffID="166435" salary="3714.7" dInt="4510">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Liam" lastName="Allen" staffID="166474" salary="6250.25" dInt="4510">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Arthur" lastName="Wright" staffID="166466" salary="13109.29" dInt="4510">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alba" lastName="Clark" staffID="166452" salary="5693.05" dInt="4510">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alba" lastName="Davis" staffID="166433" salary="7511.53" dInt="4510">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Antke" lastName="Taylor" staffID="166449" salary="1297.57" dInt="4516">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Altfried" lastName="Martinez" staffID="166481" salary="8646.97" dInt="4516">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Adrian" lastName="Rivera" staffID="166478" salary="3416.14" dInt="4513">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Rosa" lastName="Green" staffID="166477" salary="3992.05" dInt="4513">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Astrid" lastName="White" staffID="166486" salary="1478.27" dInt="4519">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Philipp" lastName="Hall" staffID="166427" salary="18698.12" dInt="4519">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Finja" lastName="Reed" staffID="166460" salary="11644.7" dInt="4519">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Quentin" lastName="Lopez" staffID="166489" salary="11539.38" dInt="4519">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Quirin" lastName="Phillips" staffID="166495" salary="16747.39" dInt="4520">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elias" lastName="Parker" staffID="166446" salary="1714.88" dInt="4520">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alba" lastName="Torres" staffID="166448" salary="16297.4" dInt="4508">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Eva" lastName="Lewis" staffID="166439" salary="5745.31" dInt="4508">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Luis" lastName="Allen" staffID="166426" salary="10674.44" dInt="4508">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Emely" lastName="Clark" staffID="166453" salary="4926.02" dInt="4508">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Liam" lastName="Brown" staffID="166482" salary="16580.75" dInt="4508">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Anton" lastName="Brown" staffID="166447" salary="18538.93" dInt="4508">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alexander" lastName="Brown" staffID="166494" salary="10775.39" dInt="4528">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elisabeth" lastName="Brown" staffID="166492" salary="17583.12" dInt="4522">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Oskar" lastName="Cooper" staffID="166430" salary="11245.99" dInt="4522">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Noah" lastName="Stewart" staffID="166455" salary="10144.72" dInt="4526">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Peter" lastName="White" staffID="166445" salary="18663.06" dInt="4526">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Asis" lastName="Robinson" staffID="166441" salary="9370.37" dInt="4526">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Luis" lastName="Bailey" staffID="166484" salary="17025.73" dInt="4526">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Elisabeth" lastName="Nguyen" staffID="166436" salary="3756.94" dInt="4507">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Adam" lastName="Stewart" staffID="166470" salary="4684.7" dInt="4507">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Annika" lastName="Harris" staffID="166442" salary="3025.78" dInt="4507">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Alba" lastName="Miller" staffID="166473" salary="3922.56" dInt="4507">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Friedrich" lastName="Harris" staffID="166491" salary="431.92" dInt="4512">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Maya" lastName="Hill" staffID="166451" salary="13058.61" dInt="4512">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <staff firstName="Arian" lastName="Evans" staffID="166490" salary="14046.28" dInt="4509">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Arik" lastName="Gonzalez" patientID="83323" />
+    <patient firstName="Linus" lastName="Turner" patientID="83319" />
+    <patient firstName="Adrian" lastName="Gonzalez" patientID="83313" />
+    <patient firstName="Jonas" lastName="Campbell" patientID="83314" />
+    <patient firstName="Antke" lastName="Stewart" patientID="83333" />
+    <patient firstName="Allessandro" lastName="Allen" patientID="83320" />
+    <patient firstName="Aglaia" lastName="Thomas" patientID="83315" />
+    <patient firstName="Anna" lastName="Miller" patientID="83307" />
+    <patient firstName="Maya" lastName="Roberts" patientID="83318" />
+    <patient firstName="Philipp" lastName="Martin" patientID="83337" />
+    <patient firstName="Adam" lastName="Hernandez" patientID="83310" />
+    <patient firstName="Luis" lastName="Clark" patientID="83327" />
+    <patient firstName="Quirin" lastName="Stewart" patientID="83322" />
+    <patient firstName="Liam" lastName="Brown" patientID="83326" />
+    <patient firstName="Frieda" lastName="Rodriguez" patientID="83308" />
+    <patient firstName="Anna" lastName="Garcia" patientID="83311" />
+    <patient firstName="Adrian" lastName="Sanchez" patientID="83325" />
+    <patient firstName="Amos" lastName="King" patientID="83332" />
+    <patient firstName="Alba" lastName="Carter" patientID="83336" />
+    <patient firstName="Andreas" lastName="Garcia" patientID="83312" />
+    <patient firstName="Alma" lastName="Cooper" patientID="83316" />
+    <patient firstName="Maximilian" lastName="Ramirez" patientID="83309" />
+    <patient firstName="Quirin" lastName="Carter" patientID="83329" />
+    <patient firstName="Julian" lastName="Smith" patientID="83330" />
+    <patient firstName="Susanne" lastName="Roberts" patientID="83321" />
+    <patient firstName="Liam" lastName="Martin" patientID="83328" />
+    <patient firstName="Simone" lastName="Campbell" patientID="83335" />
+    <patient firstName="Alma" lastName="Peterson" patientID="83317" />
+    <patient firstName="Leon" lastName="Green" patientID="83334" />
+    <patient firstName="Aaliyah" lastName="Sanchez" patientID="83331" />
+    <patient firstName="Alicia" lastName="Martinez" patientID="83324" />
+    <patient firstName="Altfried" lastName="Mitchell" patientID="83342" />
+    <patient firstName="Eva" lastName="Scott" patientID="83339" />
+    <patient firstName="Arian" lastName="Garcia" patientID="83340" />
+    <patient firstName="Rosa" lastName="Lee" patientID="83353" />
+    <patient firstName="Alexander" lastName="Collins" patientID="83346" />
+    <patient firstName="Felix" lastName="Jackson" patientID="83343" />
+    <patient firstName="Julia" lastName="Edwards" patientID="83338" />
+    <patient firstName="Karl" lastName="Flores" patientID="83345" />
+    <patient firstName="Emely" lastName="Robinson" patientID="83347" />
+    <patient firstName="Konstantin" lastName="Hall" patientID="83341" />
+    <patient firstName="David" lastName="Thompson" patientID="83352" />
+    <patient firstName="Theresa" lastName="Martin" patientID="83351" />
+    <patient firstName="Liam" lastName="Sanchez" patientID="83348" />
+    <patient firstName="Allessandro" lastName="Torres" patientID="83354" />
+    <patient firstName="Philipp" lastName="Lopez" patientID="83350" />
+    <patient firstName="Antke" lastName="Campbell" patientID="83344" />
+    <patient firstName="Rosa" lastName="Wright" patientID="83349" />
+  </AdministrationExample:Administration>
+</xmi:XMI>

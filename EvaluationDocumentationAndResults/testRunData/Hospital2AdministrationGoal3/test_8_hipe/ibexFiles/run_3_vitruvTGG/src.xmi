@@ -2,16 +2,25 @@
 <xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
   <HospitalExample:Hospital>
     <reception>
-      <waits patientID="20" name="Antke Roberts" level="PENDING" />
+      <waits patientID="21" name="Peter Cooper" level="PENDING" />
     </reception>
-    <department dID="4" maxRoomCount="10">
-      <rooms capacity="4" level="WEAK" />
-    </department>
+    <staff xsi:type="HospitalExample:Doctor" staffID="31" name="Jonas Cooper" patientCapacity="0" works="/0/@department.0" />
+    <department staff="/0/@staff.0" dID="4" maxRoomCount="10" />
   </HospitalExample:Hospital>
   <AdministrationExample:Administration>
-    <patient firstName="Antke" lastName="Roberts" patientID="20" />
+    <staff firstName="Jonas" lastName="Cooper" staffID="31" salary="14112.13" dInt="4">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Peter" lastName="Cooper" patientID="21" />
   </AdministrationExample:Administration>
   <AdministrationExample:Administration>
-    <patient firstName="Antke" lastName="Roberts" patientID="20" />
+    <staff firstName="Jonas" lastName="Cooper" staffID="31" salary="17364.71" dInt="4">
+      <shiftPlan>
+        <shifts time="night" />
+      </shiftPlan>
+    </staff>
+    <patient firstName="Peter" lastName="Cooper" patientID="21" />
   </AdministrationExample:Administration>
 </xmi:XMI>

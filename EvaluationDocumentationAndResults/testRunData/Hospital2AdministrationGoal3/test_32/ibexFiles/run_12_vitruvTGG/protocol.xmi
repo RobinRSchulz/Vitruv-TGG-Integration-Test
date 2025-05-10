@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:Hospital2AdministrationSolutions="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <Hospital2AdministrationSolutions:HospitaltoAdministrationRule__Marker>
+    <CREATE__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CREATE__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__SRC__r xsi:type="HospitalExample:Reception" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception" />
+    <CREATE__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+  </Hospital2AdministrationSolutions:HospitaltoAdministrationRule__Marker>
+  <Hospital2AdministrationSolutions:DepartmentRule__Marker>
+    <CREATE__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+  </Hospital2AdministrationSolutions:DepartmentRule__Marker>
+  <Hospital2AdministrationSolutions:DepartmentRule__Marker>
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.2" />
+  </Hospital2AdministrationSolutions:DepartmentRule__Marker>
+  <Hospital2AdministrationSolutions:DepartmentRule__Marker>
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.3" />
+  </Hospital2AdministrationSolutions:DepartmentRule__Marker>
+  <Hospital2AdministrationSolutions:DepartmentRule__Marker>
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.1" />
+  </Hospital2AdministrationSolutions:DepartmentRule__Marker>
+  <Hospital2AdministrationSolutions:PatientInReception__Marker>
+    <CREATE__SRC__p1 xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception/@waits.0" />
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__TRG__p2 xsi:type="AdministrationExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@patient.0" />
+    <CREATE__CORR__pTop href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/1" />
+    <CONTEXT__SRC__r xsi:type="HospitalExample:Reception" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+  </Hospital2AdministrationSolutions:PatientInReception__Marker>
+  <Hospital2AdministrationSolutions:PatientInReception__Marker>
+    <CREATE__TRG__p2 xsi:type="AdministrationExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@patient.1" />
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__SRC__p1 xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception/@waits.2" />
+    <CONTEXT__SRC__r xsi:type="HospitalExample:Reception" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+    <CREATE__CORR__pTop href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/2" />
+  </Hospital2AdministrationSolutions:PatientInReception__Marker>
+  <Hospital2AdministrationSolutions:PatientInReception__Marker>
+    <CREATE__SRC__p1 xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception/@waits.1" />
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CREATE__TRG__p2 xsi:type="AdministrationExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@patient.2" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__CORR__pTop href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/3" />
+    <CONTEXT__SRC__r xsi:type="HospitalExample:Reception" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+  </Hospital2AdministrationSolutions:PatientInReception__Marker>
+  <Hospital2AdministrationSolutions:PatientInReception__Marker>
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__SRC__p1 xsi:type="HospitalExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception/@waits.3" />
+    <CREATE__TRG__p2 xsi:type="AdministrationExample:Patient" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@patient.3" />
+    <CONTEXT__SRC__r xsi:type="HospitalExample:Reception" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@reception" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+    <CREATE__CORR__pTop href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/4" />
+  </Hospital2AdministrationSolutions:PatientInReception__Marker>
+  <Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+    <CONTEXT__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.0" />
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__TRG__sp xsi:type="AdministrationExample:Shiftplan" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.0/@shiftPlan" />
+    <CREATE__SRC__s1 xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@staff.0" />
+    <CREATE__TRG__s2 xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.0" />
+    <CREATE__CORR__stot href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/5" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+    <CREATE__TRG__sh xsi:type="AdministrationExample:Shift" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.0/@shiftPlan/@shifts.0" />
+  </Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+  <Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__TRG__s2 xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.1" />
+    <CREATE__SRC__s1 xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@staff.3" />
+    <CREATE__CORR__stot href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/6" />
+    <CONTEXT__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.2" />
+    <CREATE__TRG__sp xsi:type="AdministrationExample:Shiftplan" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.1/@shiftPlan" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+    <CREATE__TRG__sh xsi:type="AdministrationExample:Shift" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.1/@shiftPlan/@shifts.0" />
+  </Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+  <Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+    <CREATE__SRC__s1 xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@staff.2" />
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CREATE__CORR__stot href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/7" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CREATE__TRG__s2 xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.2" />
+    <CONTEXT__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.2" />
+    <CREATE__TRG__sh xsi:type="AdministrationExample:Shift" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.2/@shiftPlan/@shifts.0" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+    <CREATE__TRG__sp xsi:type="AdministrationExample:Shiftplan" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.2/@shiftPlan" />
+  </Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+  <Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+    <CREATE__TRG__sh xsi:type="AdministrationExample:Shift" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.3/@shiftPlan/@shifts.0" />
+    <CONTEXT__CORR__htov href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/0" />
+    <CONTEXT__SRC__h xsi:type="HospitalExample:Hospital" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/" />
+    <CONTEXT__SRC__d xsi:type="HospitalExample:Department" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@department.2" />
+    <CREATE__SRC__s1 xsi:type="HospitalExample:Doctor" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#//@staff.1" />
+    <CREATE__TRG__sp xsi:type="AdministrationExample:Shiftplan" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.3/@shiftPlan" />
+    <CONTEXT__TRG__v xsi:type="AdministrationExample:Administration" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1" />
+    <CREATE__CORR__stot href="platform:/resource/Hospital2AdministrationSolutions/instances/corr.xmi#/8" />
+    <CREATE__TRG__s2 xsi:type="AdministrationExample:Staff" href="platform:/resource/Hospital2AdministrationSolutions/instances/src.xmi#/1/@staff.3" />
+  </Hospital2AdministrationSolutions:DocToStaffRule__Marker>
+</xmi:XMI>

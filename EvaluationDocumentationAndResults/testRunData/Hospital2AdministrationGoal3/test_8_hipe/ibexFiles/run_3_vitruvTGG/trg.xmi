@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AdministrationExample:Administration xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
-  <patient firstName="Antke" lastName="Roberts" patientID="20" />
+  <staff firstName="Jonas" lastName="Cooper" staffID="31" salary="14315.24" dInt="4">
+    <shiftPlan>
+      <shifts time="night" />
+    </shiftPlan>
+  </staff>
+  <patient firstName="Peter" lastName="Cooper" patientID="21" />
 </AdministrationExample:Administration>

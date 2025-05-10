@@ -22,7 +22,7 @@ import tools.vitruv.methodologisttemplate.vsum.util.ModelgenVitruviusHiPETGGEngi
 import tools.vitruv.methodologisttemplate.vsum.util.TGGModelAndChangeSequenceGenerator;
 import tools.vitruv.methodologisttemplate.vsum.util.TGGModelGenRegistrationHelper;
 
-import java.io.IOException;
+//import java.io.Exception;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.LinkedList;
@@ -69,7 +69,7 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
     }
 
     @BeforeEach
-    void prepareModelGen() throws IOException {
+    void prepareModelGen() throws Exception {
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(CORR_RELATIVE_PATH));
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH));
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(SOURCE_RELATIVE_PATH));
@@ -92,7 +92,7 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
     }
 
 
-    void testSingleRun(int size, boolean useHipe) throws IOException {
+    void testSingleRun(int size, boolean useHipe) throws Exception {
         VitruviusChange<EObject> vitruviusChange = modelAndChangeSequenceGenerator
                 .generateModels(size, "HospitaltoAdministrationRule", List.of(
                         "DepartmentRule",
@@ -126,9 +126,10 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
 
     }
 
-    void test(int size, boolean useHipe) throws IOException {
+    void test(int size, boolean useHipe) throws Exception {
         System.out.println("\n\n\n----[ Running " + Thread.currentThread().getStackTrace()[2].getMethodName() + " ]----");;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
+            Thread.sleep(300); // for quick tests to avoid external influences to overspan multiple runs, which defeats the purpose of multiple runs.
             prepareModelGen();
             testSingleRun(size, useHipe);
             Path ibexFilesPath = vitruviusProjectPath.resolve("ibexFiles/run_" + i + "_vitruvTGG/");
@@ -141,67 +142,64 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
     }
 
 //    @Test
-//    void test_001warmupIgnoreme() throws IOException { test(69); }
-
-    @Test
-    void test_8() throws IOException { test(8, false);  }
-    @Test
-    void test_8_hipe() throws IOException { test(8, true);  }
-
-    @Test
-    void test_16() throws IOException { test(16, false);  }
-    @Test
-    void test_16_hipe() throws IOException { test(16, true);  }
-
-    @Test
-    void test_32() throws IOException { test(32, false);  }
-    @Test
-    void test_32_hipe() throws IOException { test(32, true);  }
-
-    @Test
-    void test_64() throws IOException { test(64, false);  }
-    @Test
-    void test_64_hipe() throws IOException { test(64, true);  }
-
-    @Test
-    void test_128() throws IOException { test(128, false);  }
-    @Test
-    void test_128_hipe() throws IOException { test(128, true);  }
-
-    @Test
-    void test_256() throws IOException { test(256, false);  }
-    @Test
-    void test_256_hipe() throws IOException { test(256, true);  }
-
-    @Test
-    void test_512() throws IOException { test(512, false);  }
-    @Test
-    void test_512_hipe() throws IOException { test(512, true);  }
-
-    @Test
-    void test_1024() throws IOException { test(1024, false);  }
-    @Test
-    void test_1024_hipe() throws IOException { test(1024, true);  }
-
-    @Test
-    void test_2048() throws IOException { test(2048, false);  }
-    @Test
-    void test_2048_hipe() throws IOException { test(2048, true);  }
+//    void test_8() throws Exception { test(8, false);  }
+//    @Test
+//    void test_8_hipe() throws Exception { test(8, true);  }
+//
+//    @Test
+//    void test_16() throws Exception { test(16, false);  }
+//    @Test
+//    void test_16_hipe() throws Exception { test(16, true);  }
+//
+//    @Test
+//    void test_32() throws Exception { test(32, false);  }
+//    @Test
+//    void test_32_hipe() throws Exception { test(32, true);  }
+//
+//    @Test
+//    void test_64() throws Exception { test(64, false);  }
+//    @Test
+//    void test_64_hipe() throws Exception { test(64, true);  }
+//
+//    @Test
+//    void test_128() throws Exception { test(128, false);  }
+//    @Test
+//    void test_128_hipe() throws Exception { test(128, true);  }
+//
+//    @Test
+//    void test_256() throws Exception { test(256, false);  }
+//    @Test
+//    void test_256_hipe() throws Exception { test(256, true);  }
+//
+//    @Test
+//    void test_512() throws Exception { test(512, false);  }
+//    @Test
+//    void test_512_hipe() throws Exception { test(512, true);  }
+//
+//    @Test
+//    void test_1024() throws Exception { test(1024, false);  }
+//    @Test
+//    void test_1024_hipe() throws Exception { test(1024, true);  }
+//
+//    @Test
+//    void test_2048() throws Exception { test(2048, false);  }
+//    @Test
+//    void test_2048_hipe() throws Exception { test(2048, true);  }
 
     // takes too long. likely ~17 min per single rule, with 10 runs ~3h...
-    @Disabled("takes too long")
+//    @Disabled("takes too long")
     @Test
-    void test_4096() throws IOException { test(4096, false);  }
-    @Disabled("takes too long")
+    void test_4096() throws Exception { test(4096, false);  }
+//    @Disabled("takes too long")
     @Test
-    void test_4096_hipe() throws IOException { test(4096, true);  }
+    void test_4096_hipe() throws Exception { test(4096, true);  }
 
     @Override
     List<VitruviusTGGChangePropagationResult> getCurrentChangePropagationResults() {
         return changePropagationResults;
     }
 
-    private void wipeCorrProtocolAndTarget() throws IOException {
+    private void wipeCorrProtocolAndTarget() throws Exception {
         //TODO also wipe target if necessary...
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(CORR_RELATIVE_PATH));
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH));
