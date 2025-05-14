@@ -28,6 +28,10 @@
         <level value="INFO"/>
         <appender-ref ref="stdout"/>
     </logger>
+    <logger name="tools.vitruv.dsls.tgg.emoflonintegration.ibex.hipe.VitruviusHiPETGGEngine" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="stdout"/>
+    </logger>
 
     <!--vitruv change backend-->
 <!--    <logger name="tools.vitruv.change" additivity="false">-->
@@ -36,7 +40,7 @@
 <!--    </logger>-->
 
     <root>
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="stdout"/>
     </root>
 </log4j:configuration>

@@ -188,8 +188,8 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
 
     // takes too long. likely ~17 min per single rule, with 10 runs ~3h...
 //    @Disabled("takes too long")
-    @Test
-    void test_4096() throws Exception { test(4096, false);  }
+//    @Test
+//    void test_4096() throws Exception { test(4096, false);  }
 //    @Disabled("takes too long")
     @Test
     void test_4096_hipe() throws Exception { test(4096, true);  }

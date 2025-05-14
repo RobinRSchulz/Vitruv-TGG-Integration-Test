@@ -14,9 +14,14 @@ Since this depends on eMoflon, we need at least a Java-21-SDK
     ```
     mvnw clean install
     ```
-* Reproduce the evaluation results (Build will be green although test failures are present, to be able to generate the surefire report site (evaluationReport.html))
+* Reproduce the evaluation results for 
+  * Goal 2 (Build will be green although test failures are present, to be able to generate the surefire report site (evaluationReport.html))
     ```
     mvnw clean test -Dtest=Java2UmlEvaluationGoal2Test -Dmaven.test.failure.ignore=true
+    ```
+  * Goal 3 (build takes ~ 8 hours, comment-out/ disable 2048 and 4096 for quicker builds...)
+    ```
+    mvnw clean test -Dtest=Hospital2AdministrationGoal3Test
     ```
 * Debug with IntelliJ
   1. Set a breakpoint

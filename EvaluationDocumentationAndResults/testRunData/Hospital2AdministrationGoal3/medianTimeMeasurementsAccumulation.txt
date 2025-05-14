@@ -72,6 +72,14 @@
   - pattern conversion: (2 ms | 00.002s | 00:00 min)
   - total change propagation time: (117092 ms | 117.092s | 01:57 min)
 
+--------------------------------------------- [ test_4096() ] ---------------------------------------------
+  - Initializing preexisting consistency matches: (0 ms | 00.000s | 00:00 min)
+  - Main green forward matching: (8982 ms | 08.982s | 00:08 min)
+  - context matching total: (1056 ms | 01.056s | 00:01 min)
+  - coverage flattening total: (1325673 ms | 1325.673s | 22:05 min)
+  - pattern conversion: (7 ms | 00.007s | 00:00 min)
+  - total change propagation time: (1350937 ms | 1350.937s | 22:30 min)
+
 --------------------------------------------- [ test_8_hipe() ] ---------------------------------------------
   - total change propagation time: (39 ms | 00.039s | 00:00 min)
 
@@ -98,3 +106,6 @@
 
 --------------------------------------------- [ test_2048_hipe() ] ---------------------------------------------
   - total change propagation time: (2484 ms | 02.484s | 00:02 min)
+
+--------------------------------------------- [ test_4096_hipe() ] ---------------------------------------------
+  - total change propagation time: (7467 ms | 07.467s | 00:07 min)
