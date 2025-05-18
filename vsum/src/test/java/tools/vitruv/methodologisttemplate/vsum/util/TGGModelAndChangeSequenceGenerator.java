@@ -2,9 +2,6 @@ package tools.vitruv.methodologisttemplate.vsum.util;
 
 
 import com.google.common.base.Preconditions;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -28,9 +25,6 @@ import tools.vitruv.change.atomic.resolve.AtomicEChangeResolverHelper;
 import tools.vitruv.change.atomic.root.InsertRootEObject;
 import tools.vitruv.change.atomic.root.RemoveRootEObject;
 import tools.vitruv.change.composite.description.VitruviusChange;
-import tools.vitruv.change.composite.description.VitruviusChangeFactory;
-import tools.vitruv.change.composite.description.VitruviusChangeResolver;
-import tools.vitruv.framework.views.changederivation.DefaultStateBasedChangeResolutionStrategy;
 
 import java.io.IOException;
 import java.util.List;
@@ -77,7 +71,7 @@ public class TGGModelAndChangeSequenceGenerator extends MODELGEN {
         return this;
     }
 
-    public VitruviusChange<EObject> generateChangeSequence() throws IOException {
+    public VitruviusChange<EObject> generateChangeSequenceForCreated() throws IOException {
         Resource generatedModel = this.getResourceHandler()
                 .loadResource(this.options.project.path() + "/instances/src.xmi");
 

@@ -10,7 +10,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.emoflon.ibex.tgg.operational.strategies.PropagationDirectionHolder;
 import org.junit.jupiter.api.*;
-import tools.vitruv.change.composite.MetamodelDescriptor;
 import tools.vitruv.change.composite.description.VitruviusChange;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusBackwardConversionTGGEngine;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagationIbexEntrypoint;
@@ -103,7 +102,7 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
                         "PatientInRoom",
                         "RoomRule"
                 ))
-                .generateChangeSequence();
+                .generateChangeSequenceForCreated();
 
         wipeCorrProtocolAndTarget();
 
@@ -123,7 +122,6 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
                 .withTRGMetamodelPackage(ADMINISTRATION)
                 .withUseShortcutRules(false)
         ).propagateChanges());
-
     }
 
     void test(int size, boolean useHipe) throws Exception {

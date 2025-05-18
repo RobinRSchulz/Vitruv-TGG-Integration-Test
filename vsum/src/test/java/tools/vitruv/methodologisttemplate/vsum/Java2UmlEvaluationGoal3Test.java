@@ -1,43 +1,21 @@
 package tools.vitruv.methodologisttemplate.vsum;
 
-import AdministrationExample.AdministrationExamplePackage;
-import AdministrationExample.impl.AdministrationExamplePackageImpl;
-import HospitalExample.HospitalExamplePackage;
-import HospitalExample.impl.HospitalExamplePackageImpl;
-import edu.kit.ipd.sdq.metamodels.families.FamiliesPackage;
-import edu.kit.ipd.sdq.metamodels.families.impl.FamiliesPackageImpl;
-import edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage;
-import edu.kit.ipd.sdq.metamodels.insurance.impl.InsurancePackageImpl;
 import org.apache.log4j.Logger;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.uml2.uml.Interface;
 import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.internal.impl.UMLPackageImpl;
 import org.emftext.language.java.JavaPackage;
 import org.emftext.language.java.impl.JavaPackageImpl;
 import org.emoflon.ibex.tgg.operational.strategies.PropagationDirectionHolder;
-import org.emoflon.ibex.tgg.runtime.democles.DemoclesTGGEngine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
-import tools.vitruv.change.atomic.EChange;
-import tools.vitruv.change.atomic.TypeInferringAtomicEChangeFactory;
-import tools.vitruv.change.atomic.hid.HierarchicalId;
-import tools.vitruv.change.composite.MetamodelDescriptor;
 import tools.vitruv.change.composite.description.VitruviusChange;
-import tools.vitruv.change.composite.description.VitruviusChangeFactory;
-import tools.vitruv.dsls.tgg.emoflonintegration.Util;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusBackwardConversionTGGEngine;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagationIbexEntrypoint;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagationRegistrationHelper;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusTGGChangePropagationResult;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.hipe.VitruviusHiPETGGEngine;
-import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.FamiliesToInsuranceCPS;
-import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.HospitalToAdministrationCPS;
-import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.JavaToUmlCPS;
 import tools.vitruv.methodologisttemplate.vsum.util.ModelgenDemoclesTGGEngine;
-import tools.vitruv.methodologisttemplate.vsum.util.ModelgenVitruviusHiPETGGEngine;
 import tools.vitruv.methodologisttemplate.vsum.util.TGGModelAndChangeSequenceGenerator;
 import tools.vitruv.methodologisttemplate.vsum.util.TGGModelGenRegistrationHelper;
 
@@ -140,7 +118,7 @@ public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
                         "ClassConstructorToConstructor",
                         "EnumAttributeToProperty"
                 ))
-                .generateChangeSequence();
+                .generateChangeSequenceForCreated();
 
         wipeCorrProtocolAndTarget();
 
