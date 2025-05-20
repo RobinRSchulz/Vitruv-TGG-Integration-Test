@@ -443,19 +443,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
         assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//            <uml:Package name="peketsch">
-//              <packagedElement xsi:type="uml:Interface" name="interfees">
-//                <generalization general="/0/superInterfees"/>
-//              </packagedElement>
-//              <packagedElement xsi:type="uml:Interface" name="superInterfees"/>
-//            </uml:Package>""");
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//              <packagedElement xsi:type="uml:Interface" name="interfees">
-//                <generalization general="/0/superInterfees"/>
-//              </packagedElement>""");
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//              <packagedElement xsi:type="uml:Interface" name="superInterfees"/>""");
 
         assertView(currentVsum,
                 new EObjectExpectation(UML.getPackage())
@@ -478,7 +465,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
                                 )
                         )
         );
-        //TODO hat vor needs_paranoid_modifications=true noch funktioniert...
     }
 
     @Test
@@ -584,19 +570,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
 
-//        onlyView(getDefaultView(currentVsum), (View v) -> {
-//            //TODO make lib out of that...
-//
-//            org.eclipse.uml2.uml.Package umlPackage = (org.eclipse.uml2.uml.Package) v.getRootObjects().stream()
-//                    .filter(eObject -> eObject instanceof org.eclipse.uml2.uml.Package)
-//                    .findFirst().orElseThrow();
-//
-//            org.eclipse.uml2.uml.Enumeration umlEnum = (org.eclipse.uml2.uml.Enumeration) umlPackage.getPackagedElement("ehnumm");
-//            assertNotNull(umlEnum);
-//
-//            EnumerationLiteral enumerationLiteral = umlEnum.getOwnedLiteral("ehnummKonschtant");
-//            assertNotNull(enumerationLiteral);
-//        });
         assertView(currentVsum,
                 new EObjectExpectation(UML.getPackage())
                         .expectChildren(new StrucFeatExpectation("packagedElement")

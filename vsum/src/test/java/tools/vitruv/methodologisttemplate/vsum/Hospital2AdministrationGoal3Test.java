@@ -46,7 +46,7 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
 //        IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Java2Uml");
         super("Hospital2AdministrationGoal3", Set.of(InsurancePackage.eINSTANCE.getInsuranceDatabase()));
         this.changePropagationResults =  new LinkedList<>();
-        IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/git/emoflon-ibex-tutorial/Hospital2AdministrationSolutions"); //TODO irgendwo anders hinpacken evtl
+        IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/git/emoflon-ibex-tutorial/Hospital2AdministrationSolutions");
     }
 
     @Override
@@ -198,7 +198,6 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
     }
 
     private void wipeCorrProtocolAndTarget() throws Exception {
-        //TODO also wipe target if necessary...
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(CORR_RELATIVE_PATH));
         Files.deleteIfExists(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH));
     }

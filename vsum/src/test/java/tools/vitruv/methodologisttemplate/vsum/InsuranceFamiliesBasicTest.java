@@ -66,7 +66,7 @@ public class InsuranceFamiliesBasicTest {
     void testSRCtoTRG() throws Exception {
         TGGChangePropagationSpecification tggCps = new FamiliesToInsuranceCPS(
                 IBEX_PROJECT_ROOT.toFile(),
-                InsurancePackage.eINSTANCE.getInsuranceDatabase(), //TODO check if in metamodel (in
+                InsurancePackage.eINSTANCE.getInsuranceDatabase(),
                 URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("insurance_instance.model").toString()));
         VirtualModel vsum = createVirtualModel(tggCps);
         // since we can only access the models in the VSUM via views, we create a trivial view that represents the identity mapping.
@@ -94,7 +94,7 @@ public class InsuranceFamiliesBasicTest {
 
             Member son = FamiliesFactory.eINSTANCE.createMember();
             son.setFamilySon(family);
-            family.getSons().add(son); //TODO necessary?
+            family.getSons().add(son);
 
             Member daughter = FamiliesFactory.eINSTANCE.createMember();
             daughter.setFirstName("Berta");

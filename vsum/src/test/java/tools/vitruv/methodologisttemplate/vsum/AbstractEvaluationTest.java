@@ -112,7 +112,6 @@ public class AbstractEvaluationTest {
         Files.copy(IBEX_PROJECT_ROOT.resolve(CORR_RELATIVE_PATH), ibexFilesPath.resolve("corr.xmi"));
         Files.copy(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH), ibexFilesPath.resolve("protocol.xmi"));
 
-        //TODO time (?)
         Path timeMeasurementsFile = vitruviusProjectPath.resolve("timeMeasurements");
         currentRun = 0;
 
@@ -285,7 +284,8 @@ public class AbstractEvaluationTest {
     }
 
     Integer getNumberOutOfString(String s) {
-        return Integer.parseInt(s.replaceAll("[a-zA-Z()]|_",""));
+        String numberString = s.replaceAll("[a-zA-Z()]|_","");
+        return numberString.isEmpty() ? 0 : Integer.parseInt(numberString);
     }
 
     void createNewCPSAndVSUM(TestInfo testInfo) {

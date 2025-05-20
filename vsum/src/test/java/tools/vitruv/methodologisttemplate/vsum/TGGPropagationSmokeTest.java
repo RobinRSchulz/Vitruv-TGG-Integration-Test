@@ -72,7 +72,7 @@ public class TGGPropagationSmokeTest {
   void testTRGToSRC() throws Exception {
     TGGChangePropagationSpecification tggCps = new Model2ToModel1TGGCPS(
             IBEX_PROJECT_ROOT.toFile(),
-            ModelPackage.eINSTANCE.getSystem(), //TODO check if in metamodel (in
+            ModelPackage.eINSTANCE.getSystem(),
             URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("model_instance.model").toString()));
     VirtualModel vsum = createVirtualModel(tggCps);
     // since we can only access the models in the VSUM via views, we create a trivial view that represents the identity mapping.
@@ -89,7 +89,6 @@ public class TGGPropagationSmokeTest {
               root,
               URI.createURI(VITRUVIUS_PROJECT_PATH.resolve("model2_instance.model").toString()));
 
-      // multiple possibilities! what to do, i say! --> TODO need attribute condition support for such ambiguities??
       root.getEntities().add(Model2Factory.eINSTANCE.createEntity());
     });
     view.update();
@@ -200,9 +199,7 @@ public class TGGPropagationSmokeTest {
     // this counts all deleted nodes that the RedInterpreter deletes.
     // That explicitly doesn't encompass nodes deleted directly by the source change
     assertEquals(2, tggCps.getVitruviusTGGChangePropagationResults().getLast().getRevokedModelNodes().size());
-    //TODO assert deletion somehow! WE ALSO NEED THIS TO DELETE CORRESPONDENCES IN VITRUVIUS!
 
-    //TODO add checking number of markers (as assertion!)
     logger.info("##################################### third change commit: RemoveRootEChange!");
     CommittableView view3 = getDefaultView(vsum).withChangeRecordingTrait();
     modifyView(view3, (CommittableView v) -> {
@@ -211,7 +208,7 @@ public class TGGPropagationSmokeTest {
       Link link = root.getLinks().getFirst();
       link.getComponents().removeFirst();
 
-      //TODO remove SCR application test
+      // SCR application test
       if (withRepair) {
         link.getComponents().add(root.getComponents().getLast()); //sekend
       }

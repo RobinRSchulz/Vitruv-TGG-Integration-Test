@@ -50,13 +50,12 @@ public class TGGModelAndChangeSequenceGenerator extends MODELGEN {
 
 
     public TGGModelAndChangeSequenceGenerator generateModels(int size, String rootRule, List<String> concreteNonRootRules) throws IOException {
-        //TODO somehow generate EChange sequence out of this. IDEA maybe use protocol and my Vitruv-TGG stuff!
         MODELGENStopCriterion stopCriterion = new MODELGENStopCriterion(this.getTGG());
         stopCriterion.setMaxSrcCount(size);
 
-        // we use one root todo maybe change
+        // we use one root
         stopCriterion.setMaxRuleCount(rootRule, 1);
-        // we need to do it because the modelgenerator otherwise always applies the same rule...
+        // we need to do that because the modelgenerator otherwise always applies the same rule...
         concreteNonRootRules.forEach(rule -> stopCriterion.setMaxRuleCount(rule, (size-1)/(concreteNonRootRules.size())));
 
         this.setStopCriterion(stopCriterion);
