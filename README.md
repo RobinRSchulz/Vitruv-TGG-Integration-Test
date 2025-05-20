@@ -36,6 +36,10 @@ Since this depends on eMoflon, we need at least a Java-21-SDK
   4. Optionally attatch a profiler now.
   4. IntelliJ: CTRL+ALT+F5, choose not the maven wrapper process but the surefire one.
 
+## Push to Gitlab
+```
+    git push gitlabAbgabe master
+```
 Model
 -----
 This folder contains the model in the ecore format. When you do not use eclipse, please provide a genmodel of your ecore model so that code can be generated. 
