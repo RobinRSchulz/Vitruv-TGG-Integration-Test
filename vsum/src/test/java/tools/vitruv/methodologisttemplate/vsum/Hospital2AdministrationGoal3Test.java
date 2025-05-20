@@ -37,13 +37,11 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
     private TGGModelAndChangeSequenceGenerator modelAndChangeSequenceGenerator;
     private List<VitruviusTGGChangePropagationResult> changePropagationResults;
 
-    private String SOURCE_RELATIVE_PATH = "instances/src.xmi";
-    private String TARGET_RELATIVE_PATH = "instances/trg.xmi";
+    private final String SOURCE_RELATIVE_PATH = "instances/src.xmi";
+    private final String TARGET_RELATIVE_PATH = "instances/trg.xmi";
 
 
     public Hospital2AdministrationGoal3Test() {
-//        super("Java2UmlEvaluationGoal3", Set.of(UML.getPackage()));
-//        IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Java2Uml");
         super("Hospital2AdministrationGoal3", Set.of(InsurancePackage.eINSTANCE.getInsuranceDatabase()));
         this.changePropagationResults =  new LinkedList<>();
         IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/git/emoflon-ibex-tutorial/Hospital2AdministrationSolutions");
@@ -125,7 +123,7 @@ public class Hospital2AdministrationGoal3Test extends AbstractEvaluationTest {
     }
 
     void test(int size, boolean useHipe) throws Exception {
-        System.out.println("\n\n\n----[ Running " + Thread.currentThread().getStackTrace()[2].getMethodName() + " ]----");;
+        System.out.println("\n\n\n----[ Running " + Thread.currentThread().getStackTrace()[2].getMethodName() + " ]----");
         for (int i = 0; i < 20; i++) {
             Thread.sleep(300); // for quick tests to avoid external influences to overspan multiple runs, which defeats the purpose of multiple runs.
             prepareModelGen();

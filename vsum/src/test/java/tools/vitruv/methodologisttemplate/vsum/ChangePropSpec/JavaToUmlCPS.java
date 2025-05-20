@@ -20,7 +20,7 @@ public class JavaToUmlCPS extends TGGChangePropagationSpecification {
     private static final MetamodelDescriptor TRGMetamodelDescriptor = MetamodelDescriptor.with(Set.of(
             "http://www.eclipse.org/uml2/5.0.0/UML"));
 
-    public JavaToUmlCPS(File ibexProjectPath, Set<EClass> targetRootEclasses, URI targetRootURI) {
+    public JavaToUmlCPS(File ibexProjectPath, Set<EClass> targetRootEClasses, URI targetRootURI) {
         this(
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor, //we propagate from model1 to model2
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
@@ -29,7 +29,7 @@ public class JavaToUmlCPS extends TGGChangePropagationSpecification {
                 "platform:/plugin/org.emftext.language.java/metamodel/java.ecore",
                 "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore",
                 ibexProjectPath,
-                targetRootEclasses,
+                targetRootEClasses,
                 targetRootURI,
 //                true
                 false
@@ -39,11 +39,11 @@ public class JavaToUmlCPS extends TGGChangePropagationSpecification {
     public JavaToUmlCPS(MetamodelDescriptor sourceMetamodelDescriptor, MetamodelDescriptor targetMetamodelDescriptor,
                         MetamodelDescriptor SRCMetamodelDescriptor, MetamodelDescriptor TRGMetamodelDescriptor,
                         String sourceMetamodelPlatformUri, String targetMetamodelPlatformUri, File ibexProjectPath,
-                        Set<EClass> targetRootEclasses, URI targetRootURI, boolean useShortcutRules) {
+                        Set<EClass> targetRootEClasses, URI targetRootURI, boolean useShortcutRules) {
         super(sourceMetamodelDescriptor, targetMetamodelDescriptor,
                 SRCMetamodelDescriptor, TRGMetamodelDescriptor,
                 sourceMetamodelPlatformUri, targetMetamodelPlatformUri,
-                ibexProjectPath, targetRootEclasses, targetRootURI, useShortcutRules);
+                ibexProjectPath, targetRootEClasses, targetRootURI, useShortcutRules);
         org.eclipse.emf.ecore.EPackage.Registry.INSTANCE.putIfAbsent(
                 JavaPackageImpl.eNS_URI,
                 JavaPackageImpl.eINSTANCE

@@ -8,10 +8,7 @@ import org.emoflon.ibex.tgg.operational.IBlackInterpreter;
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.RuntimeTGGAttrConstraintFactory;
 import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
 import org.emoflon.ibex.tgg.operational.strategies.modules.IbexExecutable;
-import org.emoflon.ibex.tgg.runtime.democles.DemoclesTGGEngine;
-import org.emoflon.ibex.tgg.runtime.hipe.HiPETGGEngine;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.hipe.SimpleNameSupportingURLClassLoader;
-import tools.vitruv.dsls.tgg.emoflonintegration.ibex.hipe.VitruviusHiPETGGEngine;
 
 import java.io.File;
 import java.io.IOException;
@@ -66,12 +63,8 @@ public class TGGModelGenRegistrationHelper implements IRegistrationHelper {
     private void tryToFindAndAddUserDefinedAttributeConstraints(IbexOptions ibexOptions) {
         try {
             //class loader should have access to this CL's classes as well as the ibex project
-
             Class userDefinedConstraintFactoryClass =
                     SimpleNameSupportingURLClassLoader.getInstance(new URL[]{new File(ibexProjectPath, "/bin").toURI().toURL()})
-//                    new SimpleNameSupportingURLClassLoader(
-//                    new URL[]{new File(ibexProjectPath, "/bin").toURI().toURL()},
-//                    VitruviusHiPETGGEngine.class.getClassLoader()) //todo schöner machen
                     .loadClass("org.emoflon.ibex.tgg.operational.csp.constraints.factories." + ibexOptions.project.name().toLowerCase() + ".UserDefinedRuntimeTGGAttrConstraintFactory");
 
             ibexOptions.csp.userDefinedConstraints((RuntimeTGGAttrConstraintFactory) userDefinedConstraintFactoryClass.getConstructor().newInstance());

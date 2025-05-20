@@ -27,21 +27,13 @@ public class TGGResultAssertions {
 
     public static void assertFileContainsLines(Path filePath, String string) {
         try {
-//            String fileString = Files.readString(filePath, StandardCharsets.UTF_8);
             String[] testLines = string.trim().split("\n|\r\n");
             List<String> fileLines = Files.readAllLines(filePath, StandardCharsets.UTF_8);
 
-//            System.out.println("fileLines------------------");
-//            fileLines.forEach(line -> System.out.println(line));
-//            System.out.println("\n\ntestLines------------------");
-//            Arrays.asList(testLines).forEach(line -> System.out.println(line));
-//
-//            System.out.println("MÄTSCGHING--------------");
             int linesIndex = 0;
             String currentTestLine = testLines[0].trim();
             boolean found = false;
             for (String line : fileLines) {
-//                System.out.println(" matching " + currentTestLine + " AGAINST " + line);
                 if (line.trim().equals(currentTestLine)) {
                     //start matching
                     if (linesIndex == testLines.length-1) {
@@ -114,14 +106,6 @@ public class TGGResultAssertions {
             assertNotNull(actualEObject, "Expected to find an object. this: " + this);
             assertEquals(eClass, actualEObject.eClass());
             if (childExpectations != null) {
-
-//                for (StrucFeatExpectation childExpectation : childExpectations) {
-//                    try {
-//                        childExpectation.assertChildMatches(actualEObject);
-//                    } catch (AssertionError e) {
-//
-//                    }
-//                }
                 childExpectations.forEach(strucFeatExpectation -> {
                     strucFeatExpectation.assertChildMatches(actualEObject);
                 });

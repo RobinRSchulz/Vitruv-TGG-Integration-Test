@@ -142,10 +142,6 @@ public class AbstractEvaluationTest {
         Set<String> keys =  getCurrentChangePropagationResults().getLast().getTimeMeasurements().keySet();
         Map<String, Timer> measurementKeyToAverageTimer = new HashMap<>();
         for (String key : keys) {// add all timers
-//            long summedNanos = getCurrentChangePropagationResults().stream()
-//                    .map(result -> result.getTimeMeasurements().get(key))
-//                    .reduce(Timer::add)
-//                    .get().getTime(TimeUnit.NANOSECONDS);
             measurementKeyToAverageTimer.put(key, new Timer(0, getAverageNanos(getCurrentChangePropagationResults(), key)));
         }
         testRun_averageTimers.computeIfAbsent(testInfo.getTestClass().get(), testClass -> new HashMap<>())
@@ -238,7 +234,7 @@ public class AbstractEvaluationTest {
     void storeGlobalEvalDataAfterAll(TestInfo testInfo) throws IOException {
         // AVERAGE overview
         Path averageTimeMeasurementsAccumulationPath = VITRUVIUS_PROJECTS_PATH.resolve("averageTimeMeasurementsAccumulation.txt");
-        Map<String, Map<String,Timer>> averageTimersForClass = this.testRun_averageTimers.get(testInfo.getTestClass().get());
+        Map<String, Map<String,Timer>> averageTimersForClass = testRun_averageTimers.get(testInfo.getTestClass().get());
         String averageTimeMeasurementsAcc_fileContent =
                 "============================================= [ AVERAGE Time Measurements ] =============================================\n"
                         + averageTimersForClass.entrySet().stream()
@@ -254,7 +250,7 @@ public class AbstractEvaluationTest {
 
         // MEDIAN overview
         Path medianTimeMeasurementsAccumulationPath = VITRUVIUS_PROJECTS_PATH.resolve("medianTimeMeasurementsAccumulation.txt");
-        Map<String, Map<String,Timer>> medianTimersForClass = this.testRun_medianTimers.get(testInfo.getTestClass().get());
+        Map<String, Map<String,Timer>> medianTimersForClass = testRun_medianTimers.get(testInfo.getTestClass().get());
         String medianTimeMeasurementsAcc_fileContent =
                 "============================================= [ MEDIAN Time Measurements ] =============================================\n"
                         + medianTimersForClass.entrySet().stream()
@@ -307,9 +303,6 @@ public class AbstractEvaluationTest {
                 .withChangePropagationSpecifications(cps)
                 .buildAndInitialize();
     }
-//    private VirtualModel createDefaultVirtualModel() {
-//        return createVirtualModel(new Model2Model2ChangePropagationSpecification());
-//    }
 
     public View getDefaultView(VirtualModel vsum) {
         var selector = vsum.createSelector(ViewTypeFactory.createIdentityMappingViewType("default"));
@@ -319,24 +312,9 @@ public class AbstractEvaluationTest {
 
     /**
      * Applies modifications from the given modificationFunction and commits the changes afterwards, triggering the change propagation
-     * @param view
-     * @param modificationFunction
      */
     public void modifyView(CommittableView view, Consumer<CommittableView> modificationFunction) {
         modificationFunction.accept(view);
         view.commitChanges();
-    }
-
-    void onlyView(View view, Consumer<View> viewFunction) {
-        viewFunction.accept(view);
-    }
-
-    public void sleepKSeconds(long seconds, String message) {
-        logger.info("Sleeping " + seconds + " seconds:" + message);
-        try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

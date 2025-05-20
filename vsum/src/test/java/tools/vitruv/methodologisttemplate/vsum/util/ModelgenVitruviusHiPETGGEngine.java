@@ -19,7 +19,6 @@ import org.emoflon.ibex.tgg.operational.benchmark.Timer;
 import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
 import org.emoflon.ibex.tgg.operational.strategies.modules.IbexExecutable;
 import org.emoflon.ibex.tgg.runtime.hipe.HiPETGGEngine;
-import tools.vitruv.dsls.tgg.emoflonintegration.Util;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.hipe.SimpleNameSupportingURLClassLoader;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.hipe.VitruviusHiPETGGEngine;
 
@@ -31,12 +30,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * A Copy of {@link VitruviusHiPETGGEngine}. Extending wont work because of reflection superclass field acces...
+ * A Copy of {@link VitruviusHiPETGGEngine}. Extending won't work because of reflection superclass field access...
  */
 public class ModelgenVitruviusHiPETGGEngine extends HiPETGGEngine {
 
@@ -105,31 +103,6 @@ public class ModelgenVitruviusHiPETGGEngine extends HiPETGGEngine {
             try {
                 this.getClass().getClassLoader().loadClass("hipe.network.HiPENetwork");
                 engineClass = loadIbexProjectSpecificClass(new File(getProjectBinDirectory()), engineClassName);
-//                engineClass.getClassLoader().loadClass("hipe.network.HiPENetwork");
-//                engineClass.getClassLoader().loadClass("HiPENetwork");
-//                List<String> classesToLoad = List.of(
-//                        "akka.actor.ActorRef",
-//                        "akka.actor.Props",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.NotificationActor",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.DispatchActor",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.localsearch.DoctorShiftplanRule__GEN_10_localSearch",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.localsearch.DoctorToPatient__GEN_19_localSearch",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.localsearch.NurseShiftplanRule__GEN_28_localSearch",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.localsearch.NurseToRoomRule__GEN_38_localSearch",
-//                        "Hospital2AdministrationSolutions.modelgen.hipe.engine.actor.localsearch.PatientInReception__GEN_55_localSearch",
-//                        "hipe.engine.IHiPEEngine",
-//                        "hipe.engine.message.InitGenReferenceActor",
-//                        "hipe.generic.actor.GenericObjectActor",
-//                        "hipe.generic.actor.GenericReferenceActor",
-//                        "hipe.generic.actor.GenericProductionActor"
-//                );
-//                classesToLoad.forEach(classname -> {
-//                    try {
-//                        engineClass.getClassLoader().loadClass(classname);
-//                    } catch (ClassNotFoundException e) {
-//                        logger.error("class oculnd not be loaded: " + classname);
-//                    }
-//                });
             } catch (ClassNotFoundException e1) {
                 throw new RuntimeException(e1);
             }
@@ -186,9 +159,6 @@ public class ModelgenVitruviusHiPETGGEngine extends HiPETGGEngine {
         try {
             //class loader should have access to this CL's classes as well as the ibex project
             return SimpleNameSupportingURLClassLoader.getInstance(new URL[]{directory.toURI().toURL()})
-//            return new SimpleNameSupportingURLClassLoader(
-//                    new URL[]{directory.toURI().toURL()},
-//                    VitruviusHiPETGGEngine.class.getClassLoader())
                     .loadClass(className);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
@@ -207,11 +177,6 @@ public class ModelgenVitruviusHiPETGGEngine extends HiPETGGEngine {
 
     @Override
     protected String generateHiPEClassName() {
-//        return this.getOptions().project.name().replace("/", ".") + ".sync.hipe.engine.HiPEEngine";
         return this.getOptions().project.name().replace("/", ".") + ".modelgen.hipe.engine.HiPEEngine";
     }
-
-//    protected String genereteOtherClassName() {
-//
-//    }
 }

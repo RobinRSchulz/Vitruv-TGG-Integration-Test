@@ -245,13 +245,4 @@ public class TGGPropagationSmokeTest {
     modificationFunction.accept(view);
     view.commitChanges();
   }
-
-  private void sleepKSeconds(long seconds, String message) {
-    logger.info("Sleeping " + seconds + " seconds:" + message);
-      try {
-          Thread.sleep(seconds * 1000);
-      } catch (InterruptedException e) {
-          throw new RuntimeException(e);
-      }
-  }
 }

@@ -4,8 +4,6 @@ import AdministrationExample.AdministrationExamplePackage;
 import AdministrationExample.impl.AdministrationExamplePackageImpl;
 import HospitalExample.HospitalExamplePackage;
 import HospitalExample.impl.HospitalExamplePackageImpl;
-import edu.kit.ipd.sdq.metamodels.families.impl.FamiliesPackageImpl;
-import edu.kit.ipd.sdq.metamodels.insurance.impl.InsurancePackageImpl;
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;

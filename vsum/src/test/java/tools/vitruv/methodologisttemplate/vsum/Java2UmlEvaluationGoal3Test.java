@@ -8,6 +8,7 @@ import org.emftext.language.java.JavaPackage;
 import org.emftext.language.java.impl.JavaPackageImpl;
 import org.emoflon.ibex.tgg.operational.strategies.PropagationDirectionHolder;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import tools.vitruv.change.composite.description.VitruviusChange;
 import tools.vitruv.dsls.tgg.emoflonintegration.ibex.VitruviusBackwardConversionTGGEngine;
@@ -26,6 +27,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+@Disabled("Modelgen does not work, here...")
 public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
     static Logger logger = Logger.getLogger(Java2UmlEvaluationGoal3Test.class);
 
@@ -40,25 +42,10 @@ public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
 
 
     public Java2UmlEvaluationGoal3Test() {
-//        super("Java2UmlEvaluationGoal3", Set.of(UML.getPackage()));
-//        IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Java2Uml");
         super("Java2UmlEvaluationGoal3", Set.of(UML.getPackage()));
         this.changePropagationResults =  new LinkedList<>();
         IBEX_PROJECT_ROOT = Path.of("../eclipse-ibex-workspace/Java2Uml");
     }
-
-//    @Override
-//    void createNewCPSAndVSUM(TestInfo testInfo) {
-//        logger.info("setupCorrAndProtocol: Wiping corr.xmi and protocol.xmi");
-//        vitruviusProjectPath = VITRUVIUS_PROJECTS_PATH.resolve(testInfo.getDisplayName().replaceAll("\\(\\)", ""));
-//        TARGET_MODEL_PATH = vitruviusProjectPath.resolve("hospital_instance.model");
-//        SOURCE_MODEL_PATH_STRING = vitruviusProjectPath.resolve("administration_instance.model").toString();
-//        currentCPS = new JavaToUmlCPS(
-//                IBEX_PROJECT_ROOT.toFile(),
-//                AdministrationExamplePackage.eINSTANCE.getAdministration(),
-//                URI.createURI(TARGET_MODEL_PATH.toString()));
-//        currentVsum = createVirtualModel(currentCPS, vitruviusProjectPath);
-//    }
 
     @BeforeEach
     void wipeCPResults() {
@@ -122,7 +109,6 @@ public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
 
         wipeCorrProtocolAndTarget();
 
-//        currentCPS.propagateNonAtomicChange(vitruviusChange, null, null);
         changePropagationResults.add(new VitruviusTGGChangePropagationIbexEntrypoint(new VitruviusTGGChangePropagationRegistrationHelper()
                 .withPropagationDirection(PropagationDirectionHolder.PropagationDirection.FORWARD)
                 .withIbexProjectPath(IBEX_PROJECT_ROOT.toFile())
@@ -138,11 +124,10 @@ public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
                 .withTRGMetamodelPackage(UML)
                 .withUseShortcutRules(false)
         ).propagateChanges());
-
     }
 
     void test(int size, boolean useHipe) throws IOException {
-        System.out.println("\n\n\n----[ Running " + Thread.currentThread().getStackTrace()[2].getMethodName() + " ]----");;
+        System.out.println("\n\n\n----[ Running " + Thread.currentThread().getStackTrace()[2].getMethodName() + " ]----");
         for (int i = 0; i < 5; i++) {
             prepareModelGen();
             testSingleRun(size, useHipe);
@@ -154,9 +139,6 @@ public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
             Files.copy(IBEX_PROJECT_ROOT.resolve(PROTOCOL_RELATIVE_PATH), ibexFilesPath.resolve("protocol.xmi"));
         }
     }
-
-//    @Test
-//    void test_001warmupIgnoreme() throws IOException { test(69); }
 
     @Test
     void test_8() throws IOException { test(8, false);  }
@@ -192,19 +174,16 @@ public class Java2UmlEvaluationGoal3Test extends AbstractEvaluationTest {
     void test_512() throws IOException { test(512, false);  }
     @Test
     void test_512_hipe() throws IOException { test(512, true);  }
-//
-//    @Test
-//    void test_1024() throws IOException { test(1024, false);  }
-//    @Test
-//    void test_1024_hipe() throws IOException { test(1024, true);  }
 
-    // takes too long (over 20 mins)
-//    @Test
-//    void test_2048() throws IOException { test(2048, false);  }
-//    @Test
-//    void test_2048_hipe() throws IOException { test(2048, true);  }
-//    @Test
-//    void test_4096() throws IOException { test(4096);  }
+    @Test
+    void test_1024() throws IOException { test(1024, false);  }
+    @Test
+    void test_1024_hipe() throws IOException { test(1024, true);  }
+
+    @Test
+    void test_2048() throws IOException { test(2048, false);  }
+    @Test
+    void test_2048_hipe() throws IOException { test(2048, true);  }
 
     @Override
     List<VitruviusTGGChangePropagationResult> getCurrentChangePropagationResults() {

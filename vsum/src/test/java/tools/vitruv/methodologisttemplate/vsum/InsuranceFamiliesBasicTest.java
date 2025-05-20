@@ -2,7 +2,6 @@ package tools.vitruv.methodologisttemplate.vsum;
 
 import edu.kit.ipd.sdq.metamodels.families.*;
 import edu.kit.ipd.sdq.metamodels.insurance.InsurancePackage;
-import mir.reactions.model2Model2.Model2Model2ChangePropagationSpecification;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
@@ -19,11 +18,7 @@ import tools.vitruv.framework.views.View;
 import tools.vitruv.framework.views.ViewTypeFactory;
 import tools.vitruv.framework.vsum.VirtualModel;
 import tools.vitruv.framework.vsum.VirtualModelBuilder;
-import tools.vitruv.methodologisttemplate.model.model.ModelPackage;
-import tools.vitruv.methodologisttemplate.model.model2.Model2Factory;
-import tools.vitruv.methodologisttemplate.model.model2.Root;
 import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.FamiliesToInsuranceCPS;
-import tools.vitruv.methodologisttemplate.vsum.ChangePropSpec.Model2ToModel1TGGCPS;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -131,9 +126,6 @@ public class InsuranceFamiliesBasicTest {
                 .withChangePropagationSpecifications(cps)
                 .buildAndInitialize();
     }
-//    private VirtualModel createDefaultVirtualModel() {
-//        return createVirtualModel(new Model2Model2ChangePropagationSpecification());
-//    }
 
     private View getDefaultView(VirtualModel vsum) {
         var selector = vsum.createSelector(ViewTypeFactory.createIdentityMappingViewType("default"));
@@ -143,20 +135,9 @@ public class InsuranceFamiliesBasicTest {
 
     /**
      * Applies modifications from the given modificationFunction and commits the changes afterwards, triggering the change propagation
-     * @param view
-     * @param modificationFunction
      */
     private void modifyView(CommittableView view, Consumer<CommittableView> modificationFunction) {
         modificationFunction.accept(view);
         view.commitChanges();
-    }
-
-    private void sleepKSeconds(long seconds, String message) {
-        logger.info("Sleeping " + seconds + " seconds:" + message);
-        try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

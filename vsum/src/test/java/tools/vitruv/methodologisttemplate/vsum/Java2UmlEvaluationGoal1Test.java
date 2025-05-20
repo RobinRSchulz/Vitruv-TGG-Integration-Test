@@ -392,13 +392,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
         //TODO Problem: EClass "Final" only shows up as a proxy and cannot be resolved!
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//            <uml:Package name="peketsch">
-//              <packagedElement xsi:type="uml:Class" name="kless">
-//                <generalization general="/0/superKless"/>
-//              </packagedElement>
-//              <packagedElement xsi:type="uml:Class" name="superKless"/>
-//            </uml:Package>""");
         assertFileContainsLines(TARGET_MODEL_PATH, """
               <packagedElement xsi:type="uml:Class" name="kless">
                 <generalization general="/0/superKless"/>
@@ -504,13 +497,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
         assertEquals(5, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//            <uml:Package name="peketsch">
-//              <packagedElement xsi:type="uml:Interface" name="interfees"/>
-//              <packagedElement xsi:type="uml:Class" name="kless">
-//                <interfaceRealization client="/0/kless" supplier="/0/interfees" contract="/0/interfees"/>
-//              </packagedElement>
-//            </uml:Package>""");
         assertFileContainsLines(TARGET_MODEL_PATH, """
               <packagedElement xsi:type="uml:Class" name="kless">
                 <interfaceRealization client="/0/kless" supplier="/0/interfees" contract="/0/interfees"/>
@@ -1127,8 +1113,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
         assertEquals(0, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//            <uml:Package name="peketsch"/>""");
 
         assertView(currentVsum,
                 new EObjectExpectation(UML.getPackage())
@@ -1165,8 +1149,6 @@ public class Java2UmlEvaluationGoal1Test extends AbstractEvaluationTest {
         assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getAddedCorrespondences().size());
         assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedMatches().size());
         assertEquals(1, currentCPS.getVitruviusTGGChangePropagationResults().getLast().getRevokedCorrespondences().size());
-//        assertFileContainsLines(TARGET_MODEL_PATH, """
-//            <uml:Package name="peketsch"/>""");
 
         assertView(currentVsum,
                 new EObjectExpectation(UML.getPackage())
