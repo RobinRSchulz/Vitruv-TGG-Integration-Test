@@ -1,0 +1,33 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#rule EnumConstantToEnumConstant #with Java2Uml
+
+#source { 
+	javaEnum:java.classifiers.Enumeration {
+		++ -constants->javaConstant
+	}
+	++ javaConstant:java.members.EnumConstant
+}
+
+#target {
+	umlEnum:uml.Enumeration {
+		++ -ownedLiteral->umlLiteral
+	}
+	++umlLiteral:uml.EnumerationLiteral	
+}
+
+#correspondence {
+	j:JavaClassifierToUmlClassifier {
+		#src->javaEnum
+		#trg->umlEnum
+	}
+	++javaEnumConstantToUmlEnumLiteral:JavaEnumConstantToUmlEnumLiteral {
+		#src->javaConstant
+		#trg->umlLiteral
+	}
+}
+
+#attributeConditions {
+	eq_string(javaConstant.name, umlLiteral.name)
+}

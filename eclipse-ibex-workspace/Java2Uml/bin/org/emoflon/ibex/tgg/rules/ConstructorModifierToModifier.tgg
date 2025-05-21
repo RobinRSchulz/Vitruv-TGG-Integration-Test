@@ -1,0 +1,65 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule ConstructorModifierToModifier #with Java2Uml
+
+#source { 
+		javaConstructor:java.members.Constructor {
+			++ -annotationsAndModifiers->modifier
+		}
+		++modifier:java.modifiers.Modifier
+	}
+	#target {
+		umlOperation:uml.Operation {
+			/* 
+			 * Here, modifiers are represented as boolean attributes!
+			 * We need attribute conditions to represent that.
+			 * 
+			 */
+		}
+	}
+	#correspondence {
+		javaConstructorToOperation:JavaConstructorToOperation{
+			#src->javaConstructor
+			#trg->umlOperation
+		}
+	}
+
+/*
+ * -----------------------------------------------
+ *             VISIBILITY
+ * -----------------------------------------------
+ */
+
+#abstract #rule ConstructorPrivateToPrivate #extends ConstructorModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Private
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		expectPrivate(umlOperation.visibility)
+	}
+#abstract #rule ConstructorProtectedToProtected #extends ConstructorModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Protected
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		expectProtected(umlOperation.visibility)
+	}
+#abstract #rule ConstructorPublicToPublic #extends ConstructorModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Public
+	}
+	#target {
+		umlOperation:uml.Operation
+	}
+	#attributeConditions {
+		expectPublic(umlOperation.visibility)
+	}
+	//TODO package protected?
+		

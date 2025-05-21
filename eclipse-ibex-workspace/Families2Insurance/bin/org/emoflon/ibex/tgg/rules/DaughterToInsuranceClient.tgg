@@ -1,0 +1,52 @@
+
+#using Families2Insurance.*
+#using AttrCondDefLibrary.*
+
+/**
+ * This rule adds a new daughter to an existing family
+ */
+#rule DaughterToInsuranceClient #with Families2Insurance
+
+#source { 
+	familyRegister:FamilyRegister {
+		- families->family
+	}
+	family:Family {
+		++ -daughters->daughter
+	}
+	
+	++daughter:Member {
+		++ -familyDaughter->family
+	}
+}
+
+#target {
+	++insuranceClient:InsuranceClient {
+	}
+	insuranceDB:InsuranceDatabase {
+		++ - insuranceclient->insuranceClient 
+	}
+}
+
+#correspondence {
+	++memberToInsuranceClient:MemberToInsuranceClient{
+		#src->daughter
+		#trg->insuranceClient
+	}
+	++familyToInsuranceClient:FamilyToInsuranceClient{
+		#src->family
+		#trg->insuranceClient
+	}
+	familyRegisterToInsuranceDB:FamilyRegisterToInsuranceDatabase {
+		#src->familyRegister
+		#trg->insuranceDB
+	}
+}
+
+#attributeConditions {	 
+	// Mother "Erika", Family "Pan" <--> Insurance Client "Erika Pan"
+	concat(" ", daughter.firstName, family.lastName, insuranceClient.name)
+	
+	// insurance Client is female
+	expectFemale(insuranceClient.gender)
+}

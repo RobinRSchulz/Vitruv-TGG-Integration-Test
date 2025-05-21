@@ -1,0 +1,77 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule ParameterToParameter #with Java2Uml
+
+#source { 
+	javaParametrizable:java.parameters.Parametrizable {
+		++ -parameters->parameter
+	}
+	++parameter:java.parameters.Parameter
+}
+#target {
+	umlOperation:uml.Operation {
+		++ -ownedParameter->umlParameter
+	}
+	++umlParameter:uml.Parameter
+}
+#correspondence {
+	++parameterToParameter:JavaParameterToParameter {
+		#src->parameter
+		#trg->umlParameter
+	}
+}
+#attributeConditions {
+	eq_string(parameter.name, umlParameter.name)
+}
+
+#abstract #rule ConstructorParameterToParameter #extends ParameterToParameter #with Java2Uml
+	#source { javaParametrizable:java.members.Constructor }
+	#correspondence {
+		javaConstructorToOperation:JavaConstructorToOperation {
+			#src->javaParametrizable
+			#trg->umlOperation
+		}
+	}
+	#rule OrdinaryConstructorParameterToParameter #extends ConstructorParameterToParameter #with Java2Uml
+		#source { ++parameter:java.parameters.OrdinaryParameter }
+	#rule VariableLengthConstructorParameterToParameter #extends ConstructorParameterToParameter #with Java2Uml
+		#source { ++parameter:java.parameters.VariableLengthParameter }
+		#target {
+			++umlParameter:uml.Parameter{ 
+				++ -upperValue->upperValue
+			} 
+			++upperValue:uml.LiteralUnlimitedNatural
+		}
+		#attributeConditions {
+			eq_int(0, umlParameter.lower)
+			// see LiteralUnlimitedNatural.UNLIMITED
+			eq_int(-1, upperValue.value)
+		}
+		
+#abstract #rule MethodParameterToParameter #extends ParameterToParameter #with Java2Uml
+	#source { javaParametrizable:java.members.ClassMethod }
+	#correspondence {
+		javaMethodToOperation:JavaMethodToOperation {
+			#src->javaParametrizable
+			#trg->umlOperation
+		}
+	}
+	#rule OrdinaryMethodParameterToParameter #extends MethodParameterToParameter #with Java2Uml
+		#source { ++parameter:java.parameters.OrdinaryParameter }
+	#rule VariableLengthMethodParameterToParameter #extends MethodParameterToParameter #with Java2Uml
+		#source { ++parameter:java.parameters.VariableLengthParameter }
+		#target { 
+			++umlParameter:uml.Parameter{ 
+				++ -upperValue->upperValue
+			} 
+			++upperValue:uml.LiteralUnlimitedNatural
+		}
+		#attributeConditions {
+			eq_int(0, umlParameter.lower)
+			// see LiteralUnlimitedNatural.UNLIMITED
+			eq_int(-1, upperValue.value)
+		}
+
+
+//TODO Multiplicity

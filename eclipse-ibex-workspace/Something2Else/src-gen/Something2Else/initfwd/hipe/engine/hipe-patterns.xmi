@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HiPEPattern:HiPEContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="ComponentToEntity__CONSISTENCY" partialPatterns="//@patterns.27" nodes="//@nodes.2 //@nodes.5 //@nodes.6 //@nodes.7" edges="//@edges.2 //@edges.3 //@edges.4 //@edges.5 //@edges.6" children="//@patterns.27 //@patterns.28 //@patterns.29 //@patterns.30 //@patterns.31">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.2" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.2" value="//@nodes.0"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.3" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.5" value="//@nodes.3"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="ComponentToEntity__FWD" partialPatterns="//@patterns.32" nodes="//@nodes.8" children="//@patterns.32 //@patterns.33">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.2" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.8" value="//@nodes.0"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC" partialPatterns="//@patterns.21" nodes="//@nodes.0 //@nodes.1" edges="//@edges.0" invokedBy="//@patterns.0/@patternInvocations.0 //@patterns.1/@patternInvocations.0" children="//@patterns.21 //@patterns.22 //@patterns.23"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG" partialPatterns="//@patterns.24" nodes="//@nodes.3 //@nodes.4" edges="//@edges.1" invokedBy="//@patterns.0/@patternInvocations.1" children="//@patterns.24 //@patterns.25 //@patterns.26"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntityEmbedded__CONSISTENCY" partialPatterns="//@patterns.45" nodes="//@nodes.13 //@nodes.12 //@nodes.17 //@nodes.21 //@nodes.22 //@nodes.20 //@nodes.23 //@nodes.24 //@nodes.25 //@nodes.26 //@nodes.27 //@nodes.28 //@nodes.29" edges="//@edges.12 //@edges.13 //@edges.14 //@edges.15 //@edges.16 //@edges.17 //@edges.18 //@edges.19 //@edges.20 //@edges.21 //@edges.22 //@edges.23 //@edges.24 //@edges.25 //@edges.26 //@edges.27 //@edges.28 //@edges.29 //@edges.30 //@edges.31 //@edges.32 //@edges.33 //@edges.34 //@edges.35 //@edges.36" children="//@patterns.45 //@patterns.46 //@patterns.47 //@patterns.48 //@patterns.49 //@patterns.50 //@patterns.51 //@patterns.52 //@patterns.53 //@patterns.54 //@patterns.55 //@patterns.56 //@patterns.57 //@patterns.58">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.7" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.12" value="//@nodes.9"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.13" value="//@nodes.10"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.8" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.12" value="//@nodes.14"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.17" value="//@nodes.15"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.6" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.20" value="//@nodes.18"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntityEmbedded__FWD" partialPatterns="//@patterns.59" nodes="//@nodes.33 //@nodes.30 //@nodes.34 //@nodes.35 //@nodes.32 //@nodes.36 //@nodes.37 //@nodes.38 //@nodes.39 //@nodes.31" edges="//@edges.37 //@edges.38 //@edges.39 //@edges.40 //@edges.41 //@edges.42 //@edges.43 //@edges.44 //@edges.45 //@edges.46 //@edges.47" children="//@patterns.59 //@patterns.60 //@patterns.61 //@patterns.62 //@patterns.63 //@patterns.64 //@patterns.65 //@patterns.66 //@patterns.67 //@patterns.68 //@patterns.69">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.7" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.30" value="//@nodes.10"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.31" value="//@nodes.9"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.8" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.32" value="//@nodes.15"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.31" value="//@nodes.14"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG" partialPatterns="//@patterns.42" nodes="//@nodes.18 //@nodes.19" edges="//@edges.11" invokedBy="//@patterns.4/@patternInvocations.2" children="//@patterns.42 //@patterns.43 //@patterns.44"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC" partialPatterns="//@patterns.34" nodes="//@nodes.9 //@nodes.10 //@nodes.11" edges="//@edges.7 //@edges.8" invokedBy="//@patterns.4/@patternInvocations.0 //@patterns.5/@patternInvocations.0" children="//@patterns.34 //@patterns.35 //@patterns.36 //@patterns.37"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC" partialPatterns="//@patterns.38" nodes="//@nodes.14 //@nodes.15 //@nodes.16" edges="//@edges.9 //@edges.10" invokedBy="//@patterns.4/@patternInvocations.1 //@patterns.5/@patternInvocations.1" children="//@patterns.38 //@patterns.39 //@patterns.40 //@patterns.41"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntity__CONSISTENCY" partialPatterns="//@patterns.83" nodes="//@nodes.42 //@nodes.46 //@nodes.51 //@nodes.52 //@nodes.53" edges="//@edges.53 //@edges.54 //@edges.55 //@edges.56 //@edges.57 //@edges.58 //@edges.59" children="//@patterns.83 //@patterns.84 //@patterns.85 //@patterns.86 //@patterns.87 //@patterns.88">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.12" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.42" value="//@nodes.40"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.14" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.46" value="//@nodes.44"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.42" value="//@nodes.43"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.13" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.42" value="//@nodes.47"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.11" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.51" value="//@nodes.49"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntity__FWD" partialPatterns="//@patterns.89" nodes="//@nodes.55 //@nodes.54" edges="//@edges.60" children="//@patterns.89 //@patterns.90 //@patterns.91">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.12" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.54" value="//@nodes.40"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.14" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.55" value="//@nodes.44"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.54" value="//@nodes.43"/>
+    </patternInvocations>
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.13" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.54" value="//@nodes.47"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG" partialPatterns="//@patterns.80" nodes="//@nodes.49 //@nodes.50" edges="//@edges.52" invokedBy="//@patterns.9/@patternInvocations.3" children="//@patterns.80 //@patterns.81 //@patterns.82"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC" partialPatterns="//@patterns.70" nodes="//@nodes.40 //@nodes.41" edges="//@edges.48" invokedBy="//@patterns.9/@patternInvocations.0 //@patterns.10/@patternInvocations.0" children="//@patterns.70 //@patterns.71 //@patterns.72"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC" partialPatterns="//@patterns.77" nodes="//@nodes.47 //@nodes.48" edges="//@edges.51" invokedBy="//@patterns.9/@patternInvocations.2 //@patterns.10/@patternInvocations.2" children="//@patterns.77 //@patterns.78 //@patterns.79"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC" partialPatterns="//@patterns.73" nodes="//@nodes.43 //@nodes.44 //@nodes.45" edges="//@edges.49 //@edges.50" invokedBy="//@patterns.9/@patternInvocations.1 //@patterns.10/@patternInvocations.1" children="//@patterns.73 //@patterns.74 //@patterns.75 //@patterns.76"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="ProtocolToEntity__CONSISTENCY" partialPatterns="//@patterns.92" nodes="//@nodes.56 //@nodes.57 //@nodes.58 //@nodes.59 //@nodes.60 //@nodes.61 //@nodes.62" edges="//@edges.61 //@edges.62 //@edges.63 //@edges.64 //@edges.65 //@edges.66 //@edges.67 //@edges.68 //@edges.69 //@edges.70 //@edges.71 //@edges.72" children="//@patterns.92 //@patterns.93 //@patterns.94 //@patterns.95 //@patterns.96 //@patterns.97 //@patterns.98 //@patterns.99"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="ProtocolToEntity__FWD" partialPatterns="//@patterns.100" nodes="//@nodes.63 //@nodes.64 //@nodes.65 //@nodes.66" edges="//@edges.73 //@edges.74 //@edges.75" children="//@patterns.100 //@patterns.101 //@patterns.102 //@patterns.103 //@patterns.104"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="SystemRefdComponentToEntity__CONSISTENCY" partialPatterns="//@patterns.105" attributes="//@attributes.0 //@attributes.1" nodes="//@nodes.67 //@nodes.68 //@nodes.69 //@nodes.70 //@nodes.71 //@nodes.72 //@nodes.73" edges="//@edges.76 //@edges.77 //@edges.78 //@edges.79 //@edges.80 //@edges.81 //@edges.82 //@edges.83 //@edges.84 //@edges.85 //@edges.86 //@edges.87" children="//@patterns.105 //@patterns.106 //@patterns.107 //@patterns.108 //@patterns.109 //@patterns.110 //@patterns.111 //@patterns.112"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="SystemRefdComponentToEntity__FWD" partialPatterns="//@patterns.113" nodes="//@nodes.74 //@nodes.75 //@nodes.76 //@nodes.77" edges="//@edges.88 //@edges.89 //@edges.90" children="//@patterns.113 //@patterns.114 //@patterns.115 //@patterns.116 //@patterns.117"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="SystemToRoot__CONSISTENCY" partialPatterns="//@patterns.118" nodes="//@nodes.78 //@nodes.79 //@nodes.80 //@nodes.81" edges="//@edges.91 //@edges.92 //@edges.93 //@edges.94 //@edges.95" children="//@patterns.118 //@patterns.119 //@patterns.120 //@patterns.121 //@patterns.122"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="SystemToRoot__FWD" partialPatterns="//@patterns.123" nodes="//@nodes.82" children="//@patterns.123"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_1" partialPatterns="//@patterns.23 //@patterns.22" nodes="//@nodes.1 //@nodes.0" edges="//@edges.0" parentPattern="//@patterns.2 //@patterns.27 //@patterns.32" invokedNodes="//@nodes.0 //@nodes.1" patternType="EDGE" rootPattern="//@patterns.2"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_2" nodes="//@nodes.0" parentPattern="//@patterns.21" invokedNodes="//@nodes.0" patternType="NODE" rootPattern="//@patterns.2"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" nodes="//@nodes.1" parentPattern="//@patterns.21" invokedNodes="//@nodes.1" patternType="NODE" rootPattern="//@patterns.2"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_4" partialPatterns="//@patterns.26 //@patterns.25" nodes="//@nodes.4 //@nodes.3" edges="//@edges.1" parentPattern="//@patterns.3 //@patterns.27" invokedNodes="//@nodes.3 //@nodes.4" patternType="EDGE" rootPattern="//@patterns.3"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_5" nodes="//@nodes.3" parentPattern="//@patterns.24" invokedNodes="//@nodes.3" patternType="NODE" rootPattern="//@patterns.3"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" nodes="//@nodes.4" parentPattern="//@patterns.24" invokedNodes="//@nodes.4" patternType="NODE" rootPattern="//@patterns.3"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="ComponentToEntity__CONSISTENCY_7" partialPatterns="//@patterns.28 //@patterns.29 //@patterns.30 //@patterns.31 //@patterns.21 //@patterns.24" nodes="//@nodes.2 //@nodes.5 //@nodes.6 //@nodes.7" edges="//@edges.6 //@edges.5 //@edges.3 //@edges.2 //@edges.4" parentPattern="//@patterns.0" invokedNodes="//@nodes.2 //@nodes.5 //@nodes.6 //@nodes.7" invocation="//@patterns.0/@patternInvocations.0 //@patterns.0/@patternInvocations.1" rootPattern="//@patterns.0"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity__CONSISTENCY_8" nodes="//@nodes.2" parentPattern="//@patterns.27" invokedNodes="//@nodes.2" patternType="NODE" rootPattern="//@patterns.0"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity__CONSISTENCY_9" nodes="//@nodes.5" parentPattern="//@patterns.27" invokedNodes="//@nodes.5" patternType="NODE" rootPattern="//@patterns.0"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity__CONSISTENCY_10" nodes="//@nodes.6" parentPattern="//@patterns.27" invokedNodes="//@nodes.6" patternType="NODE" rootPattern="//@patterns.0"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity__CONSISTENCY_11" nodes="//@nodes.7" parentPattern="//@patterns.27" invokedNodes="//@nodes.7" patternType="NODE" rootPattern="//@patterns.0"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity__FWD_12" partialPatterns="//@patterns.33 //@patterns.21" nodes="//@nodes.8" parentPattern="//@patterns.1" positive="false" invokedNodes="//@nodes.8" invocation="//@patterns.1/@patternInvocations.0" patternType="NODE" rootPattern="//@patterns.1"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ComponentToEntity__FWD_13" nodes="//@nodes.8" parentPattern="//@patterns.32" invokedNodes="//@nodes.8" patternType="NODE" rootPattern="//@patterns.1"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_14" partialPatterns="//@patterns.35 //@patterns.36 //@patterns.37" nodeConstraints="//@nodeConstraints.0" nodes="//@nodes.9 //@nodes.10 //@nodes.11" edges="//@edges.7 //@edges.8" parentPattern="//@patterns.7 //@patterns.45 //@patterns.59" invokedNodes="//@nodes.9 //@nodes.10 //@nodes.11" rootPattern="//@patterns.7"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_15" nodes="//@nodes.9" parentPattern="//@patterns.34" invokedNodes="//@nodes.9" patternType="NODE" rootPattern="//@patterns.7"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_16" nodes="//@nodes.10" parentPattern="//@patterns.34" invokedNodes="//@nodes.10" patternType="NODE" rootPattern="//@patterns.7"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_17" nodes="//@nodes.11" parentPattern="//@patterns.34" invokedNodes="//@nodes.11" patternType="NODE" rootPattern="//@patterns.7"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_18" partialPatterns="//@patterns.39 //@patterns.40 //@patterns.41" nodeConstraints="//@nodeConstraints.1" nodes="//@nodes.14 //@nodes.15 //@nodes.16" edges="//@edges.10 //@edges.9" parentPattern="//@patterns.8 //@patterns.45 //@patterns.59" invokedNodes="//@nodes.14 //@nodes.15 //@nodes.16" rootPattern="//@patterns.8"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_19" nodes="//@nodes.14" parentPattern="//@patterns.38" invokedNodes="//@nodes.14" patternType="NODE" rootPattern="//@patterns.8"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_20" nodes="//@nodes.15" parentPattern="//@patterns.38" invokedNodes="//@nodes.15" patternType="NODE" rootPattern="//@patterns.8"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_21" nodes="//@nodes.16" parentPattern="//@patterns.38" invokedNodes="//@nodes.16" patternType="NODE" rootPattern="//@patterns.8"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_22" partialPatterns="//@patterns.44 //@patterns.43" nodes="//@nodes.19 //@nodes.18" edges="//@edges.11" parentPattern="//@patterns.6 //@patterns.45" invokedNodes="//@nodes.18 //@nodes.19" patternType="EDGE" rootPattern="//@patterns.6"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_23" nodes="//@nodes.18" parentPattern="//@patterns.42" invokedNodes="//@nodes.18" patternType="NODE" rootPattern="//@patterns.6"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_24" nodes="//@nodes.19" parentPattern="//@patterns.42" invokedNodes="//@nodes.19" patternType="NODE" rootPattern="//@patterns.6"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntityEmbedded__CONSISTENCY_25" partialPatterns="//@patterns.46 //@patterns.47 //@patterns.48 //@patterns.49 //@patterns.50 //@patterns.51 //@patterns.52 //@patterns.53 //@patterns.54 //@patterns.55 //@patterns.56 //@patterns.57 //@patterns.58 //@patterns.34 //@patterns.38 //@patterns.42" nodeConstraints="//@nodeConstraints.2" nodes="//@nodes.13 //@nodes.12 //@nodes.17 //@nodes.21 //@nodes.22 //@nodes.20 //@nodes.23 //@nodes.24 //@nodes.25 //@nodes.26 //@nodes.27 //@nodes.28 //@nodes.29" edges="//@edges.33 //@edges.18 //@edges.28 //@edges.17 //@edges.27 //@edges.22 //@edges.15 //@edges.30 //@edges.26 //@edges.23 //@edges.31 //@edges.21 //@edges.14 //@edges.20 //@edges.35 //@edges.16 //@edges.34 //@edges.36 //@edges.19 //@edges.32 //@edges.12 //@edges.13 //@edges.25 //@edges.29 //@edges.24" parentPattern="//@patterns.4" invokedNodes="//@nodes.13 //@nodes.12 //@nodes.17 //@nodes.21 //@nodes.22 //@nodes.20 //@nodes.23 //@nodes.24 //@nodes.25 //@nodes.26 //@nodes.27 //@nodes.28 //@nodes.29" invocation="//@patterns.4/@patternInvocations.0 //@patterns.4/@patternInvocations.1 //@patterns.4/@patternInvocations.2" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_26" nodes="//@nodes.13" parentPattern="//@patterns.45" invokedNodes="//@nodes.13" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_27" nodes="//@nodes.12" parentPattern="//@patterns.45" invokedNodes="//@nodes.12" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_28" nodes="//@nodes.17" parentPattern="//@patterns.45" invokedNodes="//@nodes.17" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_29" nodes="//@nodes.21" parentPattern="//@patterns.45" invokedNodes="//@nodes.21" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_30" nodes="//@nodes.22" parentPattern="//@patterns.45" invokedNodes="//@nodes.22" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_31" nodes="//@nodes.20" parentPattern="//@patterns.45" invokedNodes="//@nodes.20" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_32" nodes="//@nodes.23" parentPattern="//@patterns.45" invokedNodes="//@nodes.23" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_33" nodes="//@nodes.24" parentPattern="//@patterns.45" invokedNodes="//@nodes.24" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_34" nodes="//@nodes.25" parentPattern="//@patterns.45" invokedNodes="//@nodes.25" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_35" nodes="//@nodes.26" parentPattern="//@patterns.45" invokedNodes="//@nodes.26" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_36" nodes="//@nodes.27" parentPattern="//@patterns.45" invokedNodes="//@nodes.27" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_37" nodes="//@nodes.28" parentPattern="//@patterns.45" invokedNodes="//@nodes.28" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__CONSISTENCY_38" nodes="//@nodes.29" parentPattern="//@patterns.45" invokedNodes="//@nodes.29" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntityEmbedded__FWD_39" partialPatterns="//@patterns.60 //@patterns.61 //@patterns.62 //@patterns.63 //@patterns.64 //@patterns.65 //@patterns.66 //@patterns.67 //@patterns.68 //@patterns.69 //@patterns.34 //@patterns.38" nodeConstraints="//@nodeConstraints.3" nodes="//@nodes.33 //@nodes.30 //@nodes.34 //@nodes.35 //@nodes.32 //@nodes.36 //@nodes.37 //@nodes.38 //@nodes.39 //@nodes.31" edges="//@edges.43 //@edges.46 //@edges.38 //@edges.40 //@edges.47 //@edges.41 //@edges.45 //@edges.39 //@edges.37 //@edges.42 //@edges.44" parentPattern="//@patterns.5" invokedNodes="//@nodes.33 //@nodes.30 //@nodes.34 //@nodes.35 //@nodes.32 //@nodes.36 //@nodes.37 //@nodes.38 //@nodes.39 //@nodes.31" invocation="//@patterns.5/@patternInvocations.0 //@patterns.5/@patternInvocations.1" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_40" nodes="//@nodes.33" parentPattern="//@patterns.59" invokedNodes="//@nodes.33" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_41" nodes="//@nodes.30" parentPattern="//@patterns.59" invokedNodes="//@nodes.30" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_42" nodes="//@nodes.34" parentPattern="//@patterns.59" invokedNodes="//@nodes.34" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_43" nodes="//@nodes.35" parentPattern="//@patterns.59" invokedNodes="//@nodes.35" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_44" nodes="//@nodes.32" parentPattern="//@patterns.59" invokedNodes="//@nodes.32" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_45" nodes="//@nodes.36" parentPattern="//@patterns.59" invokedNodes="//@nodes.36" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_46" nodes="//@nodes.37" parentPattern="//@patterns.59" invokedNodes="//@nodes.37" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_47" nodes="//@nodes.38" parentPattern="//@patterns.59" invokedNodes="//@nodes.38" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_48" nodes="//@nodes.39" parentPattern="//@patterns.59" invokedNodes="//@nodes.39" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntityEmbedded__FWD_49" nodes="//@nodes.31" parentPattern="//@patterns.59" invokedNodes="//@nodes.31" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_50" partialPatterns="//@patterns.71 //@patterns.72" nodes="//@nodes.40 //@nodes.41" edges="//@edges.48" parentPattern="//@patterns.12 //@patterns.83 //@patterns.89" invokedNodes="//@nodes.40 //@nodes.41" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_51" nodes="//@nodes.40" parentPattern="//@patterns.70" invokedNodes="//@nodes.40" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_52" nodes="//@nodes.41" parentPattern="//@patterns.70" invokedNodes="//@nodes.41" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_53" partialPatterns="//@patterns.74 //@patterns.75 //@patterns.76" nodeConstraints="//@nodeConstraints.4" nodes="//@nodes.43 //@nodes.44 //@nodes.45" edges="//@edges.49 //@edges.50" parentPattern="//@patterns.14 //@patterns.83 //@patterns.89" invokedNodes="//@nodes.43 //@nodes.44 //@nodes.45" rootPattern="//@patterns.14"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_54" nodes="//@nodes.43" parentPattern="//@patterns.73" invokedNodes="//@nodes.43" patternType="NODE" rootPattern="//@patterns.14"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_55" nodes="//@nodes.44" parentPattern="//@patterns.73" invokedNodes="//@nodes.44" patternType="NODE" rootPattern="//@patterns.14"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_56" nodes="//@nodes.45" parentPattern="//@patterns.73" invokedNodes="//@nodes.45" patternType="NODE" rootPattern="//@patterns.14"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_57" partialPatterns="//@patterns.79 //@patterns.78" nodes="//@nodes.48 //@nodes.47" edges="//@edges.51" parentPattern="//@patterns.13 //@patterns.83 //@patterns.89" invokedNodes="//@nodes.47 //@nodes.48" patternType="EDGE" rootPattern="//@patterns.13"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_58" nodes="//@nodes.47" parentPattern="//@patterns.77" invokedNodes="//@nodes.47" patternType="NODE" rootPattern="//@patterns.13"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_59" nodes="//@nodes.48" parentPattern="//@patterns.77" invokedNodes="//@nodes.48" patternType="NODE" rootPattern="//@patterns.13"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_60" partialPatterns="//@patterns.82 //@patterns.81" nodes="//@nodes.50 //@nodes.49" edges="//@edges.52" parentPattern="//@patterns.11 //@patterns.83" invokedNodes="//@nodes.49 //@nodes.50" patternType="EDGE" rootPattern="//@patterns.11"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_61" nodes="//@nodes.49" parentPattern="//@patterns.80" invokedNodes="//@nodes.49" patternType="NODE" rootPattern="//@patterns.11"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_62" nodes="//@nodes.50" parentPattern="//@patterns.80" invokedNodes="//@nodes.50" patternType="NODE" rootPattern="//@patterns.11"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntity__CONSISTENCY_63" partialPatterns="//@patterns.84 //@patterns.85 //@patterns.86 //@patterns.87 //@patterns.88 //@patterns.70 //@patterns.73 //@patterns.77 //@patterns.80" nodes="//@nodes.42 //@nodes.46 //@nodes.51 //@nodes.52 //@nodes.53" edges="//@edges.56 //@edges.54 //@edges.57 //@edges.53 //@edges.59 //@edges.55 //@edges.58" parentPattern="//@patterns.9" invokedNodes="//@nodes.42 //@nodes.46 //@nodes.51 //@nodes.52 //@nodes.53" invocation="//@patterns.9/@patternInvocations.0 //@patterns.9/@patternInvocations.1 //@patterns.9/@patternInvocations.2 //@patterns.9/@patternInvocations.3" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__CONSISTENCY_64" nodes="//@nodes.42" parentPattern="//@patterns.83" invokedNodes="//@nodes.42" patternType="NODE" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__CONSISTENCY_65" nodes="//@nodes.46" parentPattern="//@patterns.83" invokedNodes="//@nodes.46" patternType="NODE" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__CONSISTENCY_66" nodes="//@nodes.51" parentPattern="//@patterns.83" invokedNodes="//@nodes.51" patternType="NODE" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__CONSISTENCY_67" nodes="//@nodes.52" parentPattern="//@patterns.83" invokedNodes="//@nodes.52" patternType="NODE" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__CONSISTENCY_68" nodes="//@nodes.53" parentPattern="//@patterns.83" invokedNodes="//@nodes.53" patternType="NODE" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="LinkToEntity__FWD_69" partialPatterns="//@patterns.91 //@patterns.90 //@patterns.70 //@patterns.73 //@patterns.77" nodes="//@nodes.54 //@nodes.55" edges="//@edges.60" parentPattern="//@patterns.10" invokedNodes="//@nodes.55 //@nodes.54" invocation="//@patterns.10/@patternInvocations.0 //@patterns.10/@patternInvocations.1 //@patterns.10/@patternInvocations.2" patternType="EDGE" rootPattern="//@patterns.10"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__FWD_70" nodes="//@nodes.55" parentPattern="//@patterns.89" invokedNodes="//@nodes.55" patternType="NODE" rootPattern="//@patterns.10"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="LinkToEntity__FWD_71" nodes="//@nodes.54" parentPattern="//@patterns.89" invokedNodes="//@nodes.54" patternType="NODE" rootPattern="//@patterns.10"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="ProtocolToEntity__CONSISTENCY_72" partialPatterns="//@patterns.93 //@patterns.94 //@patterns.95 //@patterns.96 //@patterns.97 //@patterns.98 //@patterns.99" nodes="//@nodes.56 //@nodes.57 //@nodes.58 //@nodes.59 //@nodes.60 //@nodes.61 //@nodes.62" edges="//@edges.70 //@edges.68 //@edges.71 //@edges.62 //@edges.63 //@edges.69 //@edges.61 //@edges.66 //@edges.64 //@edges.65 //@edges.67 //@edges.72" parentPattern="//@patterns.15" invokedNodes="//@nodes.56 //@nodes.57 //@nodes.58 //@nodes.59 //@nodes.60 //@nodes.61 //@nodes.62" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_73" nodes="//@nodes.56" parentPattern="//@patterns.92" invokedNodes="//@nodes.56" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_74" nodes="//@nodes.57" parentPattern="//@patterns.92" invokedNodes="//@nodes.57" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_75" nodes="//@nodes.58" parentPattern="//@patterns.92" invokedNodes="//@nodes.58" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_76" nodes="//@nodes.59" parentPattern="//@patterns.92" invokedNodes="//@nodes.59" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_77" nodes="//@nodes.60" parentPattern="//@patterns.92" invokedNodes="//@nodes.60" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_78" nodes="//@nodes.61" parentPattern="//@patterns.92" invokedNodes="//@nodes.61" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__CONSISTENCY_79" nodes="//@nodes.62" parentPattern="//@patterns.92" invokedNodes="//@nodes.62" patternType="NODE" rootPattern="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="ProtocolToEntity__FWD_80" partialPatterns="//@patterns.101 //@patterns.102 //@patterns.103 //@patterns.104" nodes="//@nodes.63 //@nodes.64 //@nodes.65 //@nodes.66" edges="//@edges.75 //@edges.74 //@edges.73" parentPattern="//@patterns.16" invokedNodes="//@nodes.63 //@nodes.64 //@nodes.65 //@nodes.66" rootPattern="//@patterns.16"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__FWD_81" nodes="//@nodes.63" parentPattern="//@patterns.100" invokedNodes="//@nodes.63" patternType="NODE" rootPattern="//@patterns.16"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__FWD_82" nodes="//@nodes.64" parentPattern="//@patterns.100" invokedNodes="//@nodes.64" patternType="NODE" rootPattern="//@patterns.16"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__FWD_83" nodes="//@nodes.65" parentPattern="//@patterns.100" invokedNodes="//@nodes.65" patternType="NODE" rootPattern="//@patterns.16"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="ProtocolToEntity__FWD_84" nodes="//@nodes.66" parentPattern="//@patterns.100" invokedNodes="//@nodes.66" patternType="NODE" rootPattern="//@patterns.16"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="SystemRefdComponentToEntity__CONSISTENCY_85" partialPatterns="//@patterns.106 //@patterns.107 //@patterns.108 //@patterns.109 //@patterns.110 //@patterns.111 //@patterns.112" attributeConstraints="//@attributeConstraints.0" attributes="//@attributes.0 //@attributes.1" nodes="//@nodes.67 //@nodes.68 //@nodes.69 //@nodes.70 //@nodes.71 //@nodes.72 //@nodes.73" edges="//@edges.79 //@edges.84 //@edges.77 //@edges.85 //@edges.81 //@edges.86 //@edges.80 //@edges.83 //@edges.82 //@edges.87 //@edges.78 //@edges.76" parentPattern="//@patterns.17" invokedNodes="//@nodes.67 //@nodes.68 //@nodes.69 //@nodes.70 //@nodes.71 //@nodes.72 //@nodes.73" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_86" nodes="//@nodes.67" parentPattern="//@patterns.105" invokedNodes="//@nodes.67" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_87" nodes="//@nodes.68" parentPattern="//@patterns.105" invokedNodes="//@nodes.68" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_88" nodes="//@nodes.69" parentPattern="//@patterns.105" invokedNodes="//@nodes.69" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_89" nodes="//@nodes.70" parentPattern="//@patterns.105" invokedNodes="//@nodes.70" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_90" nodes="//@nodes.71" parentPattern="//@patterns.105" invokedNodes="//@nodes.71" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_91" nodes="//@nodes.72" parentPattern="//@patterns.105" invokedNodes="//@nodes.72" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__CONSISTENCY_92" nodes="//@nodes.73" parentPattern="//@patterns.105" invokedNodes="//@nodes.73" patternType="NODE" rootPattern="//@patterns.17"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="SystemRefdComponentToEntity__FWD_93" partialPatterns="//@patterns.114 //@patterns.115 //@patterns.116 //@patterns.117" nodes="//@nodes.74 //@nodes.75 //@nodes.76 //@nodes.77" edges="//@edges.88 //@edges.90 //@edges.89" parentPattern="//@patterns.18" invokedNodes="//@nodes.74 //@nodes.75 //@nodes.76 //@nodes.77" rootPattern="//@patterns.18"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__FWD_94" nodes="//@nodes.74" parentPattern="//@patterns.113" invokedNodes="//@nodes.74" patternType="NODE" rootPattern="//@patterns.18"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__FWD_95" nodes="//@nodes.75" parentPattern="//@patterns.113" invokedNodes="//@nodes.75" patternType="NODE" rootPattern="//@patterns.18"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__FWD_96" nodes="//@nodes.76" parentPattern="//@patterns.113" invokedNodes="//@nodes.76" patternType="NODE" rootPattern="//@patterns.18"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemRefdComponentToEntity__FWD_97" nodes="//@nodes.77" parentPattern="//@patterns.113" invokedNodes="//@nodes.77" patternType="NODE" rootPattern="//@patterns.18"/>
+  <patterns xmi:type="HiPEPattern:HiPELargePattern" name="SystemToRoot__CONSISTENCY_98" partialPatterns="//@patterns.119 //@patterns.120 //@patterns.121 //@patterns.122" nodes="//@nodes.78 //@nodes.79 //@nodes.80 //@nodes.81" edges="//@edges.92 //@edges.95 //@edges.93 //@edges.91 //@edges.94" parentPattern="//@patterns.19" invokedNodes="//@nodes.78 //@nodes.79 //@nodes.80 //@nodes.81" rootPattern="//@patterns.19"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemToRoot__CONSISTENCY_99" nodes="//@nodes.78" parentPattern="//@patterns.118" invokedNodes="//@nodes.78" patternType="NODE" rootPattern="//@patterns.19"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemToRoot__CONSISTENCY_100" nodes="//@nodes.79" parentPattern="//@patterns.118" invokedNodes="//@nodes.79" patternType="NODE" rootPattern="//@patterns.19"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemToRoot__CONSISTENCY_101" nodes="//@nodes.80" parentPattern="//@patterns.118" invokedNodes="//@nodes.80" patternType="NODE" rootPattern="//@patterns.19"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemToRoot__CONSISTENCY_102" nodes="//@nodes.81" parentPattern="//@patterns.118" invokedNodes="//@nodes.81" patternType="NODE" rootPattern="//@patterns.19"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="SystemToRoot__FWD_103" nodes="//@nodes.82" parentPattern="//@patterns.20" invokedNodes="//@nodes.82" patternType="NODE" rootPattern="//@patterns.20"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.11" rightNode="//@nodes.10" abstractPatterns="//@patterns.34" targetPatterns="//@patterns.7 //@patterns.45 //@patterns.59"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.16" rightNode="//@nodes.15" abstractPatterns="//@patterns.38" targetPatterns="//@patterns.8 //@patterns.45 //@patterns.59"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.22" rightNode="//@nodes.23" abstractPatterns="//@patterns.45" targetPatterns="//@patterns.4"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.33" rightNode="//@nodes.35" abstractPatterns="//@patterns.59" targetPatterns="//@patterns.5"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.45" rightNode="//@nodes.44" abstractPatterns="//@patterns.73" targetPatterns="//@patterns.14 //@patterns.83 //@patterns.89"/>
+  <attributeConstraints xmi:type="HiPEPattern:ComplexConstraint" abstractPatterns="//@patterns.105" targetPatterns="//@patterns.17" attributes="//@attributes.0 //@attributes.1" predicateCode="csp_0.isSatisfied()" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_0 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, comp.getName(), &quot;java.lang.String&quot;));&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, entity.getName(), &quot;java.lang.String&quot;));&#xA;csp_0.solve();&#xA;"/>
+  <attributes xmi:type="HiPEPattern:HiPEAttribute" node="//@nodes.67" value="org.eclipse.emf.ecore.impl.EAttributeImpl@218fe464 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)" abstractPatterns="//@patterns.17 //@patterns.105">
+    <eAttribute xmi:type="ecore:EAttribute" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component/name"/>
+  </attributes>
+  <attributes xmi:type="HiPEPattern:HiPEAttribute" node="//@nodes.69" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4d8752fb (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)" abstractPatterns="//@patterns.17 //@patterns.105">
+    <eAttribute xmi:type="ecore:EAttribute" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity/name"/>
+  </attributes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="comp" abstractPatterns="//@patterns.2 //@patterns.22 //@patterns.21" invokingPartialPatterns="//@patterns.21 //@patterns.22">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.2 //@patterns.21 //@patterns.23" invokingPartialPatterns="//@patterns.21 //@patterns.23">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="comp" abstractPatterns="//@patterns.0 //@patterns.27 //@patterns.28" invokingPartialPatterns="//@patterns.27 //@patterns.28">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="entity" abstractPatterns="//@patterns.3 //@patterns.25 //@patterns.24" invokingPartialPatterns="//@patterns.24 //@patterns.25">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.3 //@patterns.24 //@patterns.26" invokingPartialPatterns="//@patterns.24 //@patterns.26">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="entity" abstractPatterns="//@patterns.0 //@patterns.27 //@patterns.29" invokingPartialPatterns="//@patterns.27 //@patterns.29">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ctoe" abstractPatterns="//@patterns.0 //@patterns.27 //@patterns.30" invokingPartialPatterns="//@patterns.27 //@patterns.30">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ComponentToEntity_eMoflon_ProtocolNode" abstractPatterns="//@patterns.0 //@patterns.27 //@patterns.31" invokingPartialPatterns="//@patterns.27 //@patterns.31">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity__Marker"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="comp" abstractPatterns="//@patterns.1 //@patterns.32 //@patterns.33" invokingPartialPatterns="//@patterns.32 //@patterns.33">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.7 //@patterns.34 //@patterns.35" invokingPartialPatterns="//@patterns.34 //@patterns.35">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="component" abstractPatterns="//@patterns.7 //@patterns.34 //@patterns.36" invokingPartialPatterns="//@patterns.34 //@patterns.36">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.7 //@patterns.34 //@patterns.37" invokingPartialPatterns="//@patterns.34 //@patterns.37">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.47" invokingPartialPatterns="//@patterns.45 //@patterns.47">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="component" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.46" invokingPartialPatterns="//@patterns.45 //@patterns.46">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.8 //@patterns.38 //@patterns.39" invokingPartialPatterns="//@patterns.38 //@patterns.39">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.8 //@patterns.38 //@patterns.40" invokingPartialPatterns="//@patterns.38 //@patterns.40">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.8 //@patterns.38 //@patterns.41" invokingPartialPatterns="//@patterns.38 //@patterns.41">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.48" invokingPartialPatterns="//@patterns.45 //@patterns.48">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="linkEntity" abstractPatterns="//@patterns.6 //@patterns.43 //@patterns.42" invokingPartialPatterns="//@patterns.42 //@patterns.43">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.6 //@patterns.42 //@patterns.44" invokingPartialPatterns="//@patterns.42 //@patterns.44">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="linkEntity" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.51" invokingPartialPatterns="//@patterns.45 //@patterns.51">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.49" invokingPartialPatterns="//@patterns.45 //@patterns.49">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="compEntity" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.50" invokingPartialPatterns="//@patterns.45 //@patterns.50">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protEntity" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.52" invokingPartialPatterns="//@patterns.45 //@patterns.52">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.53" invokingPartialPatterns="//@patterns.45 //@patterns.53">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ctoe" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.54" invokingPartialPatterns="//@patterns.45 //@patterns.54">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ltoe" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.55" invokingPartialPatterns="//@patterns.45 //@patterns.55">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ptoe" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.56" invokingPartialPatterns="//@patterns.45 //@patterns.56">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.57" invokingPartialPatterns="//@patterns.45 //@patterns.57">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="LinkToEntityEmbedded_eMoflon_ProtocolNode" abstractPatterns="//@patterns.4 //@patterns.45 //@patterns.58" invokingPartialPatterns="//@patterns.45 //@patterns.58">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="component" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.61" invokingPartialPatterns="//@patterns.59 //@patterns.61">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.69" invokingPartialPatterns="//@patterns.59 //@patterns.69">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.64" invokingPartialPatterns="//@patterns.59 //@patterns.64">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="compEntity" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.60" invokingPartialPatterns="//@patterns.59 //@patterns.60">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ctoe" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.62" invokingPartialPatterns="//@patterns.59 //@patterns.62">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protEntity" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.63" invokingPartialPatterns="//@patterns.59 //@patterns.63">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ptoe" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.65" invokingPartialPatterns="//@patterns.59 //@patterns.65">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.66" invokingPartialPatterns="//@patterns.59 //@patterns.66">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.67" invokingPartialPatterns="//@patterns.59 //@patterns.67">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.5 //@patterns.59 //@patterns.68" invokingPartialPatterns="//@patterns.59 //@patterns.68">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.12 //@patterns.70 //@patterns.71" invokingPartialPatterns="//@patterns.70 //@patterns.71">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.12 //@patterns.70 //@patterns.72" invokingPartialPatterns="//@patterns.70 //@patterns.72">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.9 //@patterns.83 //@patterns.84" invokingPartialPatterns="//@patterns.83 //@patterns.84">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.14 //@patterns.73 //@patterns.74" invokingPartialPatterns="//@patterns.73 //@patterns.74">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.14 //@patterns.73 //@patterns.75" invokingPartialPatterns="//@patterns.73 //@patterns.75">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.14 //@patterns.73 //@patterns.76" invokingPartialPatterns="//@patterns.73 //@patterns.76">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.9 //@patterns.83 //@patterns.85" invokingPartialPatterns="//@patterns.83 //@patterns.85">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.13 //@patterns.78 //@patterns.77" invokingPartialPatterns="//@patterns.77 //@patterns.78">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.13 //@patterns.77 //@patterns.79" invokingPartialPatterns="//@patterns.77 //@patterns.79">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="entity" abstractPatterns="//@patterns.11 //@patterns.81 //@patterns.80" invokingPartialPatterns="//@patterns.80 //@patterns.81">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="FILTER_NAC_NODE" abstractPatterns="//@patterns.11 //@patterns.80 //@patterns.82" invokingPartialPatterns="//@patterns.80 //@patterns.82">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="entity" abstractPatterns="//@patterns.9 //@patterns.83 //@patterns.86" invokingPartialPatterns="//@patterns.83 //@patterns.86">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ltoe" abstractPatterns="//@patterns.9 //@patterns.83 //@patterns.87" invokingPartialPatterns="//@patterns.83 //@patterns.87">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="LinkToEntity_eMoflon_ProtocolNode" abstractPatterns="//@patterns.9 //@patterns.83 //@patterns.88" invokingPartialPatterns="//@patterns.83 //@patterns.88">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity__Marker"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="link" abstractPatterns="//@patterns.10 //@patterns.89 //@patterns.91" invokingPartialPatterns="//@patterns.89 //@patterns.91">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.10 //@patterns.90 //@patterns.89" invokingPartialPatterns="//@patterns.89 //@patterns.90">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.93" invokingPartialPatterns="//@patterns.92 //@patterns.93">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.94" invokingPartialPatterns="//@patterns.92 //@patterns.94">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="entity" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.95" invokingPartialPatterns="//@patterns.92 //@patterns.95">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.96" invokingPartialPatterns="//@patterns.92 //@patterns.96">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ptoe" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.97" invokingPartialPatterns="//@patterns.92 //@patterns.97">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.98" invokingPartialPatterns="//@patterns.92 //@patterns.98">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ProtocolToEntity_eMoflon_ProtocolNode" abstractPatterns="//@patterns.15 //@patterns.92 //@patterns.99" invokingPartialPatterns="//@patterns.92 //@patterns.99">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.16 //@patterns.100 //@patterns.101" invokingPartialPatterns="//@patterns.100 //@patterns.101">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.16 //@patterns.100 //@patterns.102" invokingPartialPatterns="//@patterns.100 //@patterns.102">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.16 //@patterns.100 //@patterns.103" invokingPartialPatterns="//@patterns.100 //@patterns.103">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="protocol" abstractPatterns="//@patterns.16 //@patterns.100 //@patterns.104" invokingPartialPatterns="//@patterns.100 //@patterns.104">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="comp" attributes="//@attributes.0" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.106" invokingPartialPatterns="//@patterns.105 //@patterns.106">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.107" invokingPartialPatterns="//@patterns.105 //@patterns.107">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="entity" attributes="//@attributes.1" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.108" invokingPartialPatterns="//@patterns.105 //@patterns.108">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.109" invokingPartialPatterns="//@patterns.105 //@patterns.109">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="ctoe" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.110" invokingPartialPatterns="//@patterns.105 //@patterns.110">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.111" invokingPartialPatterns="//@patterns.105 //@patterns.111">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="SystemRefdComponentToEntity_eMoflon_ProtocolNode" abstractPatterns="//@patterns.17 //@patterns.105 //@patterns.112" invokingPartialPatterns="//@patterns.105 //@patterns.112">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.18 //@patterns.113 //@patterns.114" invokingPartialPatterns="//@patterns.113 //@patterns.114">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.18 //@patterns.113 //@patterns.115" invokingPartialPatterns="//@patterns.113 //@patterns.115">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.18 //@patterns.113 //@patterns.116" invokingPartialPatterns="//@patterns.113 //@patterns.116">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="comp" abstractPatterns="//@patterns.18 //@patterns.113 //@patterns.117" invokingPartialPatterns="//@patterns.113 //@patterns.117">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.19 //@patterns.118 //@patterns.119" invokingPartialPatterns="//@patterns.118 //@patterns.119">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="root" abstractPatterns="//@patterns.19 //@patterns.118 //@patterns.120" invokingPartialPatterns="//@patterns.118 //@patterns.120">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="stor" abstractPatterns="//@patterns.19 //@patterns.118 //@patterns.121" invokingPartialPatterns="//@patterns.118 //@patterns.121">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="SystemToRoot_eMoflon_ProtocolNode" abstractPatterns="//@patterns.19 //@patterns.118 //@patterns.122" invokingPartialPatterns="//@patterns.118 //@patterns.122">
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot__Marker"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="system" abstractPatterns="//@patterns.20 //@patterns.123" invokingPartialPatterns="//@patterns.123">
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </nodes>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_components" source="//@nodes.1" target="//@nodes.0" abstractPatterns="//@patterns.2 //@patterns.21">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Root_entities" source="//@nodes.4" target="//@nodes.3" abstractPatterns="//@patterns.3 //@patterns.24">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_source" source="//@nodes.6" target="//@nodes.2" abstractPatterns="//@patterns.0 //@patterns.27">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_target" source="//@nodes.6" target="//@nodes.5" abstractPatterns="//@patterns.0 //@patterns.27">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity__Marker_CREATE__SRC__comp" source="//@nodes.7" target="//@nodes.2" abstractPatterns="//@patterns.0 //@patterns.27">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity__Marker/CREATE__SRC__comp"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity__Marker_CREATE__TRG__entity" source="//@nodes.7" target="//@nodes.5" abstractPatterns="//@patterns.0 //@patterns.27">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity__Marker/CREATE__TRG__entity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity__Marker_CREATE__CORR__ctoe" source="//@nodes.7" target="//@nodes.6" abstractPatterns="//@patterns.0 //@patterns.27">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity__Marker/CREATE__CORR__ctoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_components" source="//@nodes.9" target="//@nodes.10" abstractPatterns="//@patterns.7 //@patterns.34">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_components" source="//@nodes.9" target="//@nodes.11" abstractPatterns="//@patterns.7 //@patterns.34">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.14" target="//@nodes.15" abstractPatterns="//@patterns.8 //@patterns.38">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.14" target="//@nodes.16" abstractPatterns="//@patterns.8 //@patterns.38">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Root_entities" source="//@nodes.19" target="//@nodes.18" abstractPatterns="//@patterns.6 //@patterns.42">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_source" source="//@nodes.25" target="//@nodes.13" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_target" source="//@nodes.25" target="//@nodes.22" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity_source" source="//@nodes.26" target="//@nodes.12" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity_target" source="//@nodes.26" target="//@nodes.20" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity_source" source="//@nodes.27" target="//@nodes.17" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity_target" source="//@nodes.27" target="//@nodes.23" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.28" target="//@nodes.21" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.28" target="//@nodes.24" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_components" source="//@nodes.12" target="//@nodes.13" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.12" target="//@nodes.17" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_components" source="//@nodes.21" target="//@nodes.13" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_protocols" source="//@nodes.21" target="//@nodes.17" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_links" source="//@nodes.21" target="//@nodes.12" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/links"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__SRC__component" source="//@nodes.29" target="//@nodes.13" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__SRC__component"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__SRC__protocol" source="//@nodes.29" target="//@nodes.17" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__SRC__protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__SRC__system" source="//@nodes.29" target="//@nodes.21" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__SRC__system"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__TRG__compEntity" source="//@nodes.29" target="//@nodes.22" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__TRG__compEntity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__TRG__protEntity" source="//@nodes.29" target="//@nodes.23" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__TRG__protEntity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__TRG__root" source="//@nodes.29" target="//@nodes.24" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__TRG__root"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CREATE__SRC__link" source="//@nodes.29" target="//@nodes.12" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CREATE__SRC__link"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CREATE__TRG__linkEntity" source="//@nodes.29" target="//@nodes.20" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CREATE__TRG__linkEntity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__CORR__ctoe" source="//@nodes.29" target="//@nodes.25" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__CORR__ctoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__CORR__ptoe" source="//@nodes.29" target="//@nodes.27" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__CORR__ptoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CONTEXT__CORR__stor" source="//@nodes.29" target="//@nodes.28" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CONTEXT__CORR__stor"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntityEmbedded__Marker_CREATE__CORR__ltoe" source="//@nodes.29" target="//@nodes.26" abstractPatterns="//@patterns.4 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntityEmbedded__Marker/CREATE__CORR__ltoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_source" source="//@nodes.34" target="//@nodes.30" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_target" source="//@nodes.34" target="//@nodes.33" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity_source" source="//@nodes.36" target="//@nodes.32" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity_target" source="//@nodes.36" target="//@nodes.35" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.38" target="//@nodes.39" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.38" target="//@nodes.37" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_components" source="//@nodes.39" target="//@nodes.30" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_protocols" source="//@nodes.39" target="//@nodes.32" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_components" source="//@nodes.31" target="//@nodes.30" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.31" target="//@nodes.32" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_links" source="//@nodes.39" target="//@nodes.31" abstractPatterns="//@patterns.5 //@patterns.59">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/links"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_components" source="//@nodes.40" target="//@nodes.41" abstractPatterns="//@patterns.12 //@patterns.70">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.43" target="//@nodes.44" abstractPatterns="//@patterns.14 //@patterns.73">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.43" target="//@nodes.45" abstractPatterns="//@patterns.14 //@patterns.73">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_links" source="//@nodes.48" target="//@nodes.47" abstractPatterns="//@patterns.13 //@patterns.77">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/links"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Root_entities" source="//@nodes.50" target="//@nodes.49" abstractPatterns="//@patterns.11 //@patterns.80">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity_source" source="//@nodes.52" target="//@nodes.42" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity_target" source="//@nodes.52" target="//@nodes.51" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.42" target="//@nodes.46" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity__Marker_CONTEXT__SRC__protocol" source="//@nodes.53" target="//@nodes.46" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity__Marker/CONTEXT__SRC__protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity__Marker_CREATE__SRC__link" source="//@nodes.53" target="//@nodes.42" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity__Marker/CREATE__SRC__link"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity__Marker_CREATE__TRG__entity" source="//@nodes.53" target="//@nodes.51" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity__Marker/CREATE__TRG__entity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="LinkToEntity__Marker_CREATE__CORR__ltoe" source="//@nodes.53" target="//@nodes.52" abstractPatterns="//@patterns.9 //@patterns.83">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity__Marker/CREATE__CORR__ltoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_protocol" source="//@nodes.54" target="//@nodes.55" abstractPatterns="//@patterns.10 //@patterns.89">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity_source" source="//@nodes.60" target="//@nodes.56" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity_target" source="//@nodes.60" target="//@nodes.58" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.61" target="//@nodes.57" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.61" target="//@nodes.59" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_protocols" source="//@nodes.57" target="//@nodes.56" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Root_entities" source="//@nodes.59" target="//@nodes.58" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity__Marker_CONTEXT__SRC__system" source="//@nodes.62" target="//@nodes.57" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker/CONTEXT__SRC__system"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity__Marker_CONTEXT__TRG__root" source="//@nodes.62" target="//@nodes.59" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker/CONTEXT__TRG__root"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity__Marker_CREATE__SRC__protocol" source="//@nodes.62" target="//@nodes.56" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker/CREATE__SRC__protocol"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity__Marker_CREATE__TRG__entity" source="//@nodes.62" target="//@nodes.58" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker/CREATE__TRG__entity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity__Marker_CONTEXT__CORR__stor" source="//@nodes.62" target="//@nodes.61" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker/CONTEXT__CORR__stor"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ProtocolToEntity__Marker_CREATE__CORR__ptoe" source="//@nodes.62" target="//@nodes.60" abstractPatterns="//@patterns.15 //@patterns.92">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity__Marker/CREATE__CORR__ptoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.64" target="//@nodes.65" abstractPatterns="//@patterns.16 //@patterns.100">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.64" target="//@nodes.63" abstractPatterns="//@patterns.16 //@patterns.100">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_protocols" source="//@nodes.65" target="//@nodes.66" abstractPatterns="//@patterns.16 //@patterns.100">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_source" source="//@nodes.71" target="//@nodes.67" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="ComponentToEntity_target" source="//@nodes.71" target="//@nodes.69" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.72" target="//@nodes.68" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.72" target="//@nodes.70" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_components" source="//@nodes.68" target="//@nodes.67" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Root_entities" source="//@nodes.70" target="//@nodes.69" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemRefdComponentToEntity__Marker_CONTEXT__SRC__system" source="//@nodes.73" target="//@nodes.68" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker/CONTEXT__SRC__system"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemRefdComponentToEntity__Marker_CONTEXT__TRG__root" source="//@nodes.73" target="//@nodes.70" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker/CONTEXT__TRG__root"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemRefdComponentToEntity__Marker_CREATE__SRC__comp" source="//@nodes.73" target="//@nodes.67" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker/CREATE__SRC__comp"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemRefdComponentToEntity__Marker_CREATE__TRG__entity" source="//@nodes.73" target="//@nodes.69" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker/CREATE__TRG__entity"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemRefdComponentToEntity__Marker_CONTEXT__CORR__stor" source="//@nodes.73" target="//@nodes.72" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker/CONTEXT__CORR__stor"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemRefdComponentToEntity__Marker_CREATE__CORR__ctoe" source="//@nodes.73" target="//@nodes.71" abstractPatterns="//@patterns.17 //@patterns.105">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemRefdComponentToEntity__Marker/CREATE__CORR__ctoe"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.75" target="//@nodes.76" abstractPatterns="//@patterns.18 //@patterns.113">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.75" target="//@nodes.74" abstractPatterns="//@patterns.18 //@patterns.113">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="System_components" source="//@nodes.76" target="//@nodes.77" abstractPatterns="//@patterns.18 //@patterns.113">
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_source" source="//@nodes.80" target="//@nodes.78" abstractPatterns="//@patterns.19 //@patterns.118">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot_target" source="//@nodes.80" target="//@nodes.79" abstractPatterns="//@patterns.19 //@patterns.118">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot__Marker_CREATE__SRC__system" source="//@nodes.81" target="//@nodes.78" abstractPatterns="//@patterns.19 //@patterns.118">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot__Marker/CREATE__SRC__system"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot__Marker_CREATE__TRG__root" source="//@nodes.81" target="//@nodes.79" abstractPatterns="//@patterns.19 //@patterns.118">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot__Marker/CREATE__TRG__root"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="SystemToRoot__Marker_CREATE__CORR__stor" source="//@nodes.81" target="//@nodes.80" abstractPatterns="//@patterns.19 //@patterns.118">
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot__Marker/CREATE__CORR__stor"/>
+  </edges>
+</HiPEPattern:HiPEContainer>

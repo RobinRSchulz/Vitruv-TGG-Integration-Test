@@ -1,0 +1,61 @@
+#using Something2Else.*
+#using AttrCondDefLibrary.*
+
+#rule LinkToEntityEmbedded #with Something2Else
+
+#source { 
+	
+	system:System{
+		-components->component
+		-protocols->protocol
+		++ -links->link
+	}
+	component:Component{
+		
+	}
+	protocol:Protocol{
+		
+	}
+	++link:Link{
+		++ -components->component
+		++ -protocol->protocol
+	}
+	
+}
+
+#target {
+	compEntity:Entity{
+		
+	}
+	protEntity:Entity{
+		
+	}
+	++linkEntity:Entity{
+		
+	}
+	root:Root{
+	}
+}
+
+#correspondence {
+	stor:SystemToRoot{
+		#src->system
+		#trg->root
+	}
+	++ltoe:LinkToEntity{
+		#src->link
+		#trg->linkEntity
+	}
+	ctoe:ComponentToEntity{
+		#src->component
+		#trg->compEntity
+	}
+	ptoe:ProtocolToEntity{
+		#src->protocol
+		#trg->protEntity
+	}
+}
+
+#attributeConditions {
+	
+}

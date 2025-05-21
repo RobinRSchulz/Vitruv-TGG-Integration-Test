@@ -1,0 +1,119 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+// --------------------------------------------------		
+// -- In case the superclasses don't already exist --
+// --------------------------------------------------
+#abstract #rule SuperClassifierToSuperClassifier #with Java2Uml
+	#source { 
+		javaConcreteClassifier:java.classifiers.ConcreteClassifier
+		++superclassTypeRef:java.types.ClassifierReference {
+			++ -target->superclassifier
+		}
+		++superclassifier:java.classifiers.Classifier
+	}
+	#target {
+		umlClassifier:uml.Classifier {
+			++ -generalization->generalization
+		}
+		++generalization:uml.Generalization {
+			++ -general->umlGeneralClassifier
+		}
+		//TODO generalize
+		++umlGeneralClassifier:uml.Classifier
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier {
+			#src->javaConcreteClassifier
+			#trg->umlClassifier
+		}
+		++classRefToGeneralization:JavaClassifierReferenceToUmlGeneralization {
+			#src->superclassTypeRef
+			#trg->generalization
+		}
+		++javaSuperClassifierToUmlSuperClassifier:JavaClassifierToUmlClassifier {
+			#src->superclassifier
+			#trg->umlGeneralClassifier
+		}
+	}
+	#attributeConditions {
+		eq_string(superclassifier.name, umlGeneralClassifier.name)
+	}
+	#rule SuperClassToSuperClass #extends SuperClassifierToSuperClassifier #with Java2Uml
+		#source { 
+			javaConcreteClassifier:java.classifiers.Class {
+				++ -extends->superclassTypeRef
+			}
+			++superclassifier:java.classifiers.Class
+		}
+		#target {
+			umlClassifier:uml.Class
+			++umlGeneralClassifier:uml.Class
+		}
+	#rule SuperInterfaceToSuperInterface #extends SuperClassifierToSuperClassifier #with Java2Uml
+		#source { 
+			javaConcreteClassifier:java.classifiers.Interface {
+				++ -extends->superclassTypeRef
+			}
+			++superclassifier:java.classifiers.Interface
+			
+		}
+		#target {
+			umlClassifier:uml.Interface
+			++umlGeneralClassifier:uml.Interface
+		}
+		
+// --------------------------------------------		
+// -- In case the superclasses already exist --
+// --------------------------------------------	
+#abstract #rule ExistingSuperClassifierToSuperClassifier #with Java2Uml
+	#source { 
+		javaConcreteClassifier:java.classifiers.ConcreteClassifier
+		++superclassTypeRef:java.types.ClassifierReference {
+			++ -target->superclassifier
+		}
+		superclassifier:java.classifiers.Classifier
+	}
+	#target {
+		umlClassifier:uml.Classifier {
+			++ -generalization->generalization
+		}
+		++generalization:uml.Generalization {
+			++ -general->umlGeneralClassifier
+		}
+		//TODO generalize
+		umlGeneralClassifier:uml.Classifier
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier {
+			#src->javaConcreteClassifier
+			#trg->umlClassifier
+		}
+		javaSuperClassifierToUmlSuperClassifier:JavaClassifierToUmlClassifier {
+			#src->superclassifier
+			#trg->umlGeneralClassifier
+		}
+	}
+	#rule ExistingSuperClassToSuperClass #extends ExistingSuperClassifierToSuperClassifier #with Java2Uml
+		#source { 
+			javaConcreteClassifier:java.classifiers.Class {
+				++ -extends->superclassTypeRef
+			}
+			superclassifier:java.classifiers.Class
+		}
+		#target {
+			umlClassifier:uml.Class
+			umlGeneralClassifier:uml.Class
+		}
+	#rule ExistingSuperInterfaceToSuperInterface #extends ExistingSuperClassifierToSuperClassifier #with Java2Uml
+		#source { 
+			javaConcreteClassifier:java.classifiers.Interface {
+				++ -extends->superclassTypeRef
+			}
+			superclassifier:java.classifiers.Interface
+			
+		}
+		#target {
+			umlClassifier:uml.Interface
+			umlGeneralClassifier:uml.Interface
+		}

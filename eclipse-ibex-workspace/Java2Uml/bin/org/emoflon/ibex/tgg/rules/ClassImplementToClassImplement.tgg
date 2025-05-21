@@ -1,0 +1,83 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+
+
+// --------------------------------------------------		
+// -- In case the Interfaces don't already exist --
+// --------------------------------------------------
+#rule ClassImplementToClassImplement #with Java2Uml
+	#source { 
+		javaClass:java.classifiers.Class {
+			++ -implements->interfaceTypeRef
+		}
+		++interfaceTypeRef:java.types.ClassifierReference {
+			++ -target->interface
+		}
+		++interface:java.classifiers.Interface
+	}
+	#target {
+		umlClass:uml.Class {
+			++ -interfaceRealization->umlInterfaceRealization
+		}
+		++umlInterfaceRealization:uml.InterfaceRealization {
+			++ -contract->umlInterface
+		}
+		//TODO generalize
+		++umlInterface:uml.Interface
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier {
+			#src->javaClass
+			#trg->umlClass
+		}
+		//That doesn't work because of the proxy stuff
+//		++classRefToGeneralization:JavaClassifierReferenceToUmlInterfaceRealization {
+//			#src->interfaceTypeRef
+//			#trg->umlInterfaceRealization
+//		}
+		++javaSuperClassifierToUmlSuperClassifier:JavaClassifierToUmlClassifier {
+			#src->interface
+			#trg->umlInterface
+		}
+	}
+
+// --------------------------------------------		
+// -- In case the Interfaces already exist --
+// --------------------------------------------	
+
+#rule ExistingClassImplementToClassImplement #with Java2Uml
+	#source { 
+		javaClass:java.classifiers.Class {
+			++ -implements->interfaceTypeRef
+		}
+		++interfaceTypeRef:java.types.ClassifierReference {
+			++ -target->interface
+		}
+		interface:java.classifiers.Interface
+	}
+	#target {
+		umlClass:uml.Class {
+			++ -interfaceRealization->umlInterfaceRealization
+		}
+		++umlInterfaceRealization:uml.InterfaceRealization {
+			++ -contract->umlInterface
+		}
+		//TODO generalize
+		umlInterface:uml.Interface
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier {
+			#src->javaClass
+			#trg->umlClass
+		}
+		//That doesn't work because of the proxy stuff
+//		++classRefToGeneralization:JavaClassifierReferenceToUmlInterfaceRealization {
+//			#src->interfaceTypeRef
+//			#trg->umlInterfaceRealization
+//		}
+		javaSuperClassifierToUmlSuperClassifier:JavaClassifierToUmlClassifier {
+			#src->interface
+			#trg->umlInterface
+		}
+	}

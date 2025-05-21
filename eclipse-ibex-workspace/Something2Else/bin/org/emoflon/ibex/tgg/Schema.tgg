@@ -1,0 +1,109 @@
+#import "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore"
+#import "platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore"
+
+#schema Something2Else
+
+#source {
+	model
+}
+
+#target {
+	model2
+}
+
+#correspondence {
+	
+	SystemToRoot{
+		#src->System
+		#trg->Root
+	}
+	
+	ComponentToEntity{
+		#src-> Component
+		#trg-> Entity
+	}
+	ProtocolToEntity{
+		#src-> Protocol
+		#trg-> Entity
+	}
+	LinkToEntity{
+		#src->Link
+		#trg->Entity
+	}
+//	HospitalToAdministration{
+//		#src->Hospital
+//		#trg->Administration
+//	}
+
+//	StaffToStaff{
+//		#src->Staff
+//		#trg->Staff
+//	}
+//
+//	PatientToPatient{
+//		#src->Patient
+//		#trg->Patient
+//	}
+//
+//	RoomToShiftplan{
+//		#src->Room
+//		#trg->Shiftplan
+//	}
+//	DoctorToStaff{
+//		#src->Doctor
+//		#trg->Staff
+//	}
+//	NurseToStaff{
+//		#src->Nurse
+//		#trg->Staff
+//	}
+}
+
+#attributeConditions {
+//	#userDefined doctorsalary(salary:EDouble){
+//		#sync: [F],[B]
+//		#gen: [F], [B]
+//	}
+//
+//	#userDefined nursesalary(salary:EDouble){
+//		#sync: [F],[B]
+//		#gen: [F], [B]
+//	}
+//
+//	#userDefined carelevelToMedication(carelevel:Carelevel, medication:Medication){
+//		#sync: [B B], [B F], [F B]
+//		#gen:  [B B], [B F], [F B], [F F]
+//	}
+//
+//	#userDefined nametoname(separator:EString, leftWord:EString, rightWord:EString, result:EString) {
+//		#sync: [B B B B], [B B B F], [B B F B], [B F F B], [B F B B]
+//		#gen: [B B B B] , [B B B F], [B B F B], [B F F B], [B F B B], [B F B F], [B B F F], [B F F F]
+//	}
+//
+//	#userDefined incrementingDepartmentID(id:EInt)
+//	{
+//		#sync:[B F]
+//		#gen:[F]
+//	
+//	}
+//
+//	#userDefined incrementingStaffID(id1:EInt, id2:EInt )
+//	{
+//		#sync: [B B],[B F], [F B]
+//		#gen: [B B], [B F], [F B], [F F]
+//	}
+//
+//	#userDefined incrementingPatientID(id1:EInt, id2:EInt)
+//	{
+//		#sync: [B B],[B F], [F B]
+//		#gen: [B B], [B F], [F B], [F F]
+//	}
+//
+//	#userDefined incrementingRoomID(id:EInt)
+//	{
+//		#sync:[B F]
+//		#gen:[F]
+//	}
+}
+
+

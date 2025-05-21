@@ -1,0 +1,45 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Fields: Covers modifiers: final, static
+ * TODO this does not seem to work...
+ */
+#abstract #rule FieldModifierToModifier #with Java2Uml
+	#source { 
+		javaField:java.members.Field {
+			++ -annotationsAndModifiers->modifier
+		}
+		++modifier:java.modifiers.Modifier
+	}
+	#target {
+		umlProperty:uml.Property
+	}
+	#correspondence {
+		javaClassifierToUmlProperty:JavaAttributeToUmlProperty{
+			#src->javaField
+			#trg->umlProperty
+		}
+	}
+	
+#rule FieldFinalToFinal #extends FieldModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Final
+	}
+	#target {
+		umlProperty:uml.Property
+	}
+	#attributeConditions {
+		eq_boolean(true, umlProperty.isReadOnly)
+	}
+	
+#rule FieldStaticToStatic #extends FieldModifierToModifier #with Java2Uml
+	#source {
+		++modifier:java.modifiers.Static
+	}
+	#target {
+		umlProperty:uml.Property
+	}
+	#attributeConditions {
+		eq_boolean(true, umlProperty.isStatic)
+	}

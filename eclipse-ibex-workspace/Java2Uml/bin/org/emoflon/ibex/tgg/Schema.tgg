@@ -1,0 +1,79 @@
+#import "platform:/plugin/org.emftext.language.java/metamodel/java.ecore"
+#import "platform:/plugin/org.eclipse.uml2.uml/model/UML.ecore"
+
+#schema Java2Uml
+	
+#source {
+	java
+}
+
+#target { 
+	uml
+} 
+
+#correspondence {
+	JavaClassifierToUmlClassifier {
+		#src->java.classifiers.Classifier
+		#trg->uml.Classifier
+	}
+	JavaCompilationUnitToUmlModel {
+		#src->java.containers.CompilationUnit
+		#trg->uml.Model
+	}
+	JavaPackageToUmlPackage {
+		#src->java.containers.Package
+		#trg->uml.Package
+	}
+	JavaAttributeToUmlProperty {
+		#src->java.members.Field
+		#trg->uml.Property
+	}
+	JavaClassifierReferenceToUmlGeneralization {
+		#src->java.types.ClassifierReference
+		#trg->uml.Generalization
+	}
+	JavaMethodToOperation {
+		#src->java.members.Method
+		#trg->uml.Operation
+	}
+	JavaConstructorToOperation {
+		#src->java.members.Constructor
+		#trg->uml.Operation
+	}
+	JavaParameterToParameter {
+		#src->java.parameters.Parameter
+		#trg->uml.Parameter
+	}
+	// for return values
+	JavaTypeReferenceToUmlReturnParameter {
+		#src->java.types.TypeReference
+		#trg->uml.Parameter
+	}
+	JavaClassifierReferenceToUmlInterfaceRealization {
+		#src->java.types.TypeReference
+		#trg->uml.InterfaceRealization
+	}
+	JavaEnumConstantToUmlEnumLiteral {
+		#src->java.members.EnumConstant
+		#trg->uml.EnumerationLiteral
+	}
+}
+
+#attributeConditions {
+	#userDefined expectPrivate(visibilityKind:uml.VisibilityKind){
+		#sync: [F],[B]
+		#gen: [F], [B]
+	}
+	#userDefined expectProtected(visibilityKind:uml.VisibilityKind){
+		#sync: [F],[B]
+		#gen: [F], [B]
+	}
+	#userDefined expectPublic(visibilityKind:uml.VisibilityKind){
+		#sync: [F],[B]
+		#gen: [F], [B]
+	}
+	#userDefined expectPackage(visibilityKind:uml.VisibilityKind){
+		#sync: [F],[B]
+		#gen: [F], [B]
+	}
+}

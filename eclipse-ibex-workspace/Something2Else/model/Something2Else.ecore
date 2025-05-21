@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Something2Else" nsURI="platform:/resource/Something2Else/model/Something2Else.ecore"
+    nsPrefix="Something2Else">
+  <eClassifiers xsi:type="ecore:EClass" name="SystemToRoot" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentToEntity" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtocolToEntity" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkToEntity" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentToEntity__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__comp" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__entity" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__ctoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkToEntity__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__link" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__protocol"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__entity" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__ltoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkToEntityEmbedded__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__component"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__link" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__protocol"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__compEntity"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__linkEntity"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__protEntity"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__root" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__ctoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__ltoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__ptoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__stor" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtocolToEntity__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__protocol"
+        lowerBound="1" eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__entity" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__root" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__ptoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__stor" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemRefdComponentToEntity__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__comp" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__system" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__entity" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__root" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__ctoe" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__stor" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemToRoot__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__system" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__root" lowerBound="1"
+        eType="ecore:EClass platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__stor" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </eClassifiers>
+</ecore:EPackage>

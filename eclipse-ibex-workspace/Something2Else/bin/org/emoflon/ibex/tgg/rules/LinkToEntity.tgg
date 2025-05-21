@@ -1,0 +1,32 @@
+#using Something2Else.*
+#using AttrCondDefLibrary.*
+
+#rule LinkToEntity #with Something2Else
+
+#source { 
+	
+	++link:Link {
+		++ -protocol->protocol
+		
+	}
+	protocol:Protocol{
+	}
+}
+
+#target {
+	++entity:Entity{
+		
+	}
+	
+}
+
+#correspondence {
+	++ltoe:LinkToEntity {
+		#src->link
+		#trg->entity
+	}
+}
+
+#attributeConditions {
+	
+}

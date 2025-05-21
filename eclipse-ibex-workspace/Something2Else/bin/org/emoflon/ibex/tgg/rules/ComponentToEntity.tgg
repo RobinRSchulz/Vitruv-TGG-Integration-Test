@@ -1,0 +1,23 @@
+#using Something2Else.*
+#using AttrCondDefLibrary.*
+
+#rule ComponentToEntity #with Something2Else
+
+#source { 
+	++comp:Component
+}
+
+#target {
+	++entity:Entity
+}
+
+#correspondence {
+	++ctoe:ComponentToEntity{
+		#src->comp
+		#trg->entity
+	}
+}
+
+#attributeConditions {
+
+}

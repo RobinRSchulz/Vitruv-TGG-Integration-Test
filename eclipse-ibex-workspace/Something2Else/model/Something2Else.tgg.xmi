@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Something2Else">
+  <src href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#/"/>
+  <trg href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#/"/>
+  <rules name="LinkToEntityEmbedded">
+    <nodes name="system" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.8 //@rules.0/@edges.9 //@rules.0/@edges.10" incomingCorrsSource="//@rules.0/@nodes.8">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+    <nodes name="component" incomingEdges="//@rules.0/@edges.4 //@rules.0/@edges.8 //@rules.0/@edges.11" incomingCorrsSource="//@rules.0/@nodes.10">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    </nodes>
+    <nodes name="protocol" incomingEdges="//@rules.0/@edges.6 //@rules.0/@edges.9 //@rules.0/@edges.12" incomingCorrsSource="//@rules.0/@nodes.11">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    </nodes>
+    <nodes name="link" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2 //@rules.0/@edges.10" outgoingEdges="//@rules.0/@edges.11 //@rules.0/@edges.12" incomingCorrsSource="//@rules.0/@nodes.9">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    </nodes>
+    <nodes name="compEntity" domainType="TRG" incomingEdges="//@rules.0/@edges.5" incomingCorrsTarget="//@rules.0/@nodes.10">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes name="protEntity" domainType="TRG" incomingEdges="//@rules.0/@edges.7" incomingCorrsTarget="//@rules.0/@nodes.11">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes name="linkEntity" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.3" incomingCorrsTarget="//@rules.0/@nodes.9">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes name="root" domainType="TRG" incomingEdges="//@rules.0/@edges.1" incomingCorrsTarget="//@rules.0/@nodes.8">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="stor" domainType="CORR" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.7">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ltoe" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.2 //@rules.0/@edges.3" source="//@rules.0/@nodes.3" target="//@rules.0/@nodes.6">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ctoe" domainType="CORR" outgoingEdges="//@rules.0/@edges.4 //@rules.0/@edges.5" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ptoe" domainType="CORR" outgoingEdges="//@rules.0/@edges.6 //@rules.0/@edges.7" source="//@rules.0/@nodes.2" target="//@rules.0/@nodes.5">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    </nodes>
+    <edges name="stor__source__system_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges name="stor__target__root_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.7">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <edges name="ltoe__source__link_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.9" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/source"/>
+    </edges>
+    <edges name="ltoe__target__linkEntity_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.9" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/target"/>
+    </edges>
+    <edges name="ctoe__source__component_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+    </edges>
+    <edges name="ctoe__target__compEntity_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+    </edges>
+    <edges name="ptoe__source__protocol_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.11" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+    </edges>
+    <edges name="ptoe__target__protEntity_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.11" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+    </edges>
+    <edges name="system__components__component_eMoflonEdge" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+    </edges>
+    <edges name="system__protocols__protocol_eMoflonEdge" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+    </edges>
+    <edges name="system__links__link_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/links"/>
+    </edges>
+    <edges name="link__components__component_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+    </edges>
+    <edges name="link__protocol__protocol_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ProtocolToEntity">
+    <nodes name="protocol" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0 //@rules.1/@edges.4" incomingCorrsSource="//@rules.1/@nodes.4">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    </nodes>
+    <nodes name="system" incomingEdges="//@rules.1/@edges.2" outgoingEdges="//@rules.1/@edges.4" incomingCorrsSource="//@rules.1/@nodes.5">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+    <nodes name="entity" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1 //@rules.1/@edges.5" incomingCorrsTarget="//@rules.1/@nodes.4">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes name="root" domainType="TRG" incomingEdges="//@rules.1/@edges.3" outgoingEdges="//@rules.1/@edges.5" incomingCorrsTarget="//@rules.1/@nodes.5">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ptoe" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0 //@rules.1/@edges.1" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="stor" domainType="CORR" outgoingEdges="//@rules.1/@edges.2 //@rules.1/@edges.3" source="//@rules.1/@nodes.1" target="//@rules.1/@nodes.3">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <edges name="ptoe__source__protocol_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.0">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+    </edges>
+    <edges name="ptoe__target__entity_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+    </edges>
+    <edges name="stor__source__system_eMoflonEdge" domainType="CORR" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges name="stor__target__root_eMoflonEdge" domainType="CORR" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <edges name="system__protocols__protocol_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.0">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+    </edges>
+    <edges name="root__entities__entity_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="SystemToRoot">
+    <nodes name="system" bindingType="CREATE" incomingEdges="//@rules.2/@edges.0" incomingCorrsSource="//@rules.2/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+    <nodes name="root" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.1" incomingCorrsTarget="//@rules.2/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="stor" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.2/@edges.0 //@rules.2/@edges.1" source="//@rules.2/@nodes.0" target="//@rules.2/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <edges name="stor__source__system_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.0">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges name="stor__target__root_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="ComponentToEntity">
+    <nodes name="comp" bindingType="CREATE" incomingEdges="//@rules.3/@edges.0" incomingCorrsSource="//@rules.3/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    </nodes>
+    <nodes name="entity" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.1" incomingCorrsTarget="//@rules.3/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ctoe" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.3/@edges.0 //@rules.3/@edges.1" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    </nodes>
+    <edges name="ctoe__source__comp_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.2" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+    </edges>
+    <edges name="ctoe__target__entity_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.3/@nodes.2" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="SystemRefdComponentToEntity">
+    <nodes name="comp" bindingType="CREATE" incomingEdges="//@rules.4/@edges.0 //@rules.4/@edges.4" incomingCorrsSource="//@rules.4/@nodes.4">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    </nodes>
+    <nodes name="system" incomingEdges="//@rules.4/@edges.2" outgoingEdges="//@rules.4/@edges.4" incomingCorrsSource="//@rules.4/@nodes.5">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+    <nodes name="entity" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.1 //@rules.4/@edges.5" incomingCorrsTarget="//@rules.4/@nodes.4">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes name="root" domainType="TRG" incomingEdges="//@rules.4/@edges.3" outgoingEdges="//@rules.4/@edges.5" incomingCorrsTarget="//@rules.4/@nodes.5">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ctoe" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.4/@edges.0 //@rules.4/@edges.1" source="//@rules.4/@nodes.0" target="//@rules.4/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="stor" domainType="CORR" outgoingEdges="//@rules.4/@edges.2 //@rules.4/@edges.3" source="//@rules.4/@nodes.1" target="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <edges name="ctoe__source__comp_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.4" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+    </edges>
+    <edges name="ctoe__target__entity_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.4" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+    </edges>
+    <edges name="stor__source__system_eMoflonEdge" domainType="CORR" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.1">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges name="stor__target__root_eMoflonEdge" domainType="CORR" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <edges name="system__components__comp_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.4/@nodes.1" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+    </edges>
+    <edges name="root__entities__entity_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.3" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.0 //@rules.4/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.4/@nodes.0">
+        <attribute href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" objectVar="//@rules.4/@nodes.2">
+        <attribute href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="LinkToEntity">
+    <nodes name="link" bindingType="CREATE" incomingEdges="//@rules.5/@edges.0" outgoingEdges="//@rules.5/@edges.2" incomingCorrsSource="//@rules.5/@nodes.3">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    </nodes>
+    <nodes name="protocol" incomingEdges="//@rules.5/@edges.2">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    </nodes>
+    <nodes name="entity" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.1" incomingCorrsTarget="//@rules.5/@nodes.3">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="ltoe" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.5/@edges.0 //@rules.5/@edges.1" source="//@rules.5/@nodes.0" target="//@rules.5/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity"/>
+    </nodes>
+    <edges name="ltoe__source__link_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/source"/>
+    </edges>
+    <edges name="ltoe__target__entity_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/Something2Else/model/Something2Else.ecore#//LinkToEntity/target"/>
+    </edges>
+    <edges name="link__protocol__protocol_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.5/@nodes.0" trgNode="//@rules.5/@nodes.1">
+      <type href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="eq_string" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_int" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_float" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_double" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_long" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_char" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_boolean" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addPrefix" userDefined="false">
+      <parameterDefinitions name="prefix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addSuffix" userDefined="false">
+      <parameterDefinitions name="suffix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="concat" userDefined="false">
+      <parameterDefinitions name="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultString" userDefined="false">
+      <parameterDefinitions name="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultNumber" userDefined="false">
+      <parameterDefinitions name="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToDouble" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="doubleValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToInt" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="multiply" userDefined="false">
+      <parameterDefinitions name="operand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="operand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="divide" userDefined="false">
+      <parameterDefinitions name="numerator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="denominator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="add" userDefined="false">
+      <parameterDefinitions name="summand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="summand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="sub" userDefined="false">
+      <parameterDefinitions name="minuend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="subtrahend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="max" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="max">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="smallerOrEqual" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setRandomString" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
+</language:TGG>

@@ -1,0 +1,38 @@
+#import "platform:/resource/Families/model/families.ecore"
+#import "platform:/resource/Insurance/model/insurance.ecore"
+
+#schema Families2Insurance
+	
+#source {
+	families
+}
+
+#target {
+	insurance 
+} 
+
+#correspondence {
+	FamilyRegisterToInsuranceDatabase{
+		#src->FamilyRegister
+		#trg->InsuranceDatabase
+	}
+	FamilyToInsuranceClient{
+		#src->Family
+		#trg->InsuranceClient
+	}
+	MemberToInsuranceClient{
+		#src->Member
+		#trg->InsuranceClient
+	}
+}
+
+#attributeConditions {
+	#userDefined expectMale(gender:Gender){
+		#sync: [F],[B]
+		#gen: [F], [B]
+	}
+	#userDefined expectFemale(gender:Gender){
+		#sync: [F],[B]
+		#gen: [F], [B]
+	}
+}

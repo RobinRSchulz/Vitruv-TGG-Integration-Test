@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="ASCII"?>
+<IBeXPatternModel:IBeXPatternSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXPatternModel="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore">
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DepartmentRule__CONSISTENCY">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.98"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.1"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.0"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.19"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.43"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.0"/>
+    <csps name="UserDefined_incrementingDepartmentID" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.19"/>
+      </values>
+    </csps>
+    <csps name="setDefaultNumber" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.19"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXConstant" value="ACED00057400023130" stringValue="10"/>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DepartmentRule__FWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.99"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.44"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.20"/>
+    <csps name="UserDefined_incrementingDepartmentID" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.20"/>
+      </values>
+    </csps>
+    <csps name="setDefaultNumber" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.20"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXConstant" value="ACED00057400023130" stringValue="10"/>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule__BWD">
+    <invocations invokedPattern="//@contextPatterns.5">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.148"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.150"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.172"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.174"/>
+      </mapping>
+    </invocations>
+    <invocations invokedPattern="//@contextPatterns.6">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.172"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.175"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.162"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.164"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.113"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.126"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.197"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.221"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.239"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.21"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.45"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.60"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.189"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.148"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.162"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.172"/>
+    <csps name="UserDefined_doctorsalary" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.148"/>
+      </values>
+    </csps>
+    <csps name="eq_int" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.21"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.148"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule__CONSISTENCY">
+    <invocations invokedPattern="//@contextPatterns.5">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.150"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.173"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.174"/>
+      </mapping>
+    </invocations>
+    <invocations invokedPattern="//@contextPatterns.6">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.173"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.175"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.163"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.164"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.114"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.127"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.231"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.233"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.109"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.189"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.198"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.222"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.240"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.2"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.3"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.10"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.5"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.6"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.7"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.8"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.4"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.9"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.22"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.46"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.140"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.163"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.173"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.190"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.61"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.184"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.1"/>
+    <csps name="UserDefined_doctorsalary" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+      </values>
+    </csps>
+    <csps name="eq_int" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.22"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_incrementingStaffID" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.140"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_nametoname" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXConstant" value="ACED0005740003222022" stringValue="&quot; &quot;"/>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.149"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.140"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule__FWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.115"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.128"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.110"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.190"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.23"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.47"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.62"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.191"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.141"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG">
+    <injectivityConstraints>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.4"/>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.174"/>
+    </injectivityConstraints>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.199"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.195"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.150"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.174"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.4"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG">
+    <injectivityConstraints>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.5"/>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.164"/>
+    </injectivityConstraints>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.223"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.215"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.175"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.164"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.5"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorShiftplanRule__BWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.149"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.153"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.160"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.200"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.207"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.211"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.224"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.217"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.77"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.92"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.105"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.142"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.151"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.158"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.165"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.176"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorShiftplanRule__CONSISTENCY">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.154"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.161"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.208"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.212"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.150"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.201"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.225"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.218"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.11"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.14"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.12"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.15"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.17"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.18"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.13"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.16"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.78"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.143"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.93"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.152"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.166"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.177"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.106"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.159"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.2"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorToPatient__BWD">
+    <invocations invokedPattern="//@contextPatterns.12">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.186"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.188"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.134"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.137"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.86"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.89"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.78"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.94"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.155"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.162"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.179"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.151"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.186"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.24"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.35"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.38"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.79"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.94"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.107"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.124"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.134"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.186"/>
+    <csps name="UserDefined_carelevelToMedication" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.79"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.186"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorToPatient__CONSISTENCY">
+    <invocations invokedPattern="//@contextPatterns.12">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.187"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.188"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.135"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.137"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.87"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.90"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.156"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.163"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.79"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.95"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.147"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.180"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.152"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.187"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.19"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.21"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.22"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.25"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.23"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.26"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.27"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.20"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.24"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.25"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.39"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.80"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.125"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.95"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.135"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.187"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.36"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.108"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.3"/>
+    <csps name="UserDefined_carelevelToMedication" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.80"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.187"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorToPatient__FWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.88"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.91"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.80"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.96"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.157"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.164"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.181"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.148"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.26"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.37"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.40"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.81"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.96"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.109"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.126"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.136"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG">
+    <injectivityConstraints>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.6"/>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.137"/>
+    </injectivityConstraints>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.188"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.30"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.188"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.137"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.6"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="HospitaltoAdministrationRule__BWD">
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.192"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="HospitaltoAdministrationRule__CONSISTENCY">
+    <invocations invokedPattern="//@contextPatterns.16">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.48"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.50"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.116"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.118"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.116"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.129"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.103"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.31"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.33"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.34"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.32"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.48"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.116"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.193"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.63"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.12"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="HospitaltoAdministrationRule__FWD">
+    <invocations invokedPattern="//@contextPatterns.16">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.49"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.50"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.117"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.118"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.104"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.49"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.117"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="HospitaltoAdministrationRule_h_reception_outgoing_SRC__FILTER_NAC_SRC">
+    <injectivityConstraints>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.7"/>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.118"/>
+    </injectivityConstraints>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.105"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.97"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.50"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.118"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.7"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseShiftplanRule__BWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.158"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.165"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.182"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.193"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.202"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.209"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.213"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.226"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.219"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.82"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.97"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.110"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.127"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.144"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.153"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.160"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.167"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.178"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseShiftplanRule__CONSISTENCY">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.159"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.166"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.210"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.214"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.183"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.194"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.203"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.227"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.220"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.35"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.38"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.39"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.36"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.40"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.42"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.43"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.37"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.41"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.83"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.128"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.145"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.98"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.154"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.168"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.179"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.111"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.161"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.13"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToRoomRule__CONSISTENCY">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.143"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.145"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.167"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.171"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.92"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.141"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.175"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.139"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.44"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.45"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.47"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.50"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.48"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.51"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.46"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.49"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.41"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.73"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.84"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.119"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.99"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.138"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.75"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.112"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.14"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToRoomRule__FWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.93"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.144"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.146"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.140"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.168"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.172"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.176"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.142"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.42"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.74"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.76"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.85"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.100"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.113"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.120"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.139"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule__BWD">
+    <invocations invokedPattern="//@contextPatterns.24">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.155"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.157"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.180"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.182"/>
+      </mapping>
+    </invocations>
+    <invocations invokedPattern="//@contextPatterns.25">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.180"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.183"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.169"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.171"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.117"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.130"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.204"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.228"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.241"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.27"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.51"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.64"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.194"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.155"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.169"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.180"/>
+    <csps name="eq_int" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.27"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.155"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_nursesalary" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.155"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule__CONSISTENCY">
+    <invocations invokedPattern="//@contextPatterns.24">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.157"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.181"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.182"/>
+      </mapping>
+    </invocations>
+    <invocations invokedPattern="//@contextPatterns.25">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.181"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.183"/>
+      </mapping>
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.170"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.171"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.118"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.131"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.232"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.234"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.111"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.191"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.205"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.229"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.242"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.52"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.53"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.60"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.55"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.56"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.57"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.58"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.54"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.59"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.28"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.52"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.146"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.170"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.181"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.195"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.65"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.185"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.15"/>
+    <csps name="eq_int" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.28"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_incrementingStaffID" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.146"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_nametoname" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXConstant" value="ACED0005740003222022" stringValue="&quot; &quot;"/>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.146"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_nursesalary" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.156"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule__FWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.119"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.132"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.112"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.192"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.29"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.53"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.66"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.196"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.147"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG">
+    <injectivityConstraints>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.8"/>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.182"/>
+    </injectivityConstraints>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.206"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.196"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.157"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.182"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.8"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG">
+    <injectivityConstraints>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.9"/>
+      <values href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.171"/>
+    </injectivityConstraints>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.230"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.216"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.183"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.171"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.9"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInReception__BWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.106"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.120"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.133"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.235"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.54"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.67"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.121"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.197"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.101"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInReception__CONSISTENCY">
+    <invocations invokedPattern="//@contextPatterns.29">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.86"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.88"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.121"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.134"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.169"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.173"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.107"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.177"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.236"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.61"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.66"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.67"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.63"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.64"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.62"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.65"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.55"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.86"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.122"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.102"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.198"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.68"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.114"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.16"/>
+    <csps name="UserDefined_incrementingPatientID" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.86"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.102"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_nametoname" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXConstant" value="ACED0005740003222022" stringValue="&quot; &quot;"/>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.102"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.102"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.86"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInReception__FWD">
+    <invocations invokedPattern="//@contextPatterns.29">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.87"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.88"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.108"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.122"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.135"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.178"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.56"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.69"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.123"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.199"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.87"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInReception_p1_lies_incoming_SRC__FILTER_NAC_SRC">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.28"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.88"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.10"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInRoom__BWD">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.81"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.100"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.123"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.136"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.237"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.30"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.57"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.70"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.129"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.200"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.103"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInRoom__CONSISTENCY">
+    <invocations invokedPattern="//@contextPatterns.33">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.89"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.91"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.124"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.137"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.170"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.174"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.82"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.101"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.184"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.238"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.68"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.69"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.74"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.75"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.71"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.72"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.70"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.73"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.31"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.58"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.89"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.130"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.104"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.201"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.71"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.115"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.17"/>
+    <csps name="UserDefined_incrementingPatientID" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.89"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.104"/>
+      </values>
+    </csps>
+    <csps name="UserDefined_nametoname" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administrationsolutions">
+      <values xsi:type="IBeXPatternModel:IBeXConstant" value="ACED0005740003222022" stringValue="&quot; &quot;"/>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.104"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.104"/>
+      </values>
+      <values xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.89"/>
+      </values>
+    </csps>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInRoom__FWD">
+    <invocations invokedPattern="//@contextPatterns.33">
+      <mapping>
+        <key href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.90"/>
+        <value href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.91"/>
+      </mapping>
+    </invocations>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.83"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.102"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.125"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.138"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.185"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.32"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.59"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.72"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.131"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.202"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.90"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInRoom_p1_waits_incoming_SRC__FILTER_NAC_SRC">
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.29"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.91"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.11"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="RoomRule__CONSISTENCY">
+    <attributeConstraint relation="EQUAL">
+      <lhs xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.132"/>
+      </lhs>
+      <rhs xsi:type="IBeXPatternModel:IBeXConstant" value="ACED0005737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000004" stringValue="4"/>
+    </attributeConstraint>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.84"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.76"/>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.77"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.33"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.132"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.18"/>
+  </contextPatterns>
+  <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="RoomRule__FWD">
+    <attributeConstraint relation="EQUAL">
+      <lhs xsi:type="IBeXPatternModel:IBeXAttributeExpression">
+        <attribute href="../../HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        <node href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.133"/>
+      </lhs>
+      <rhs xsi:type="IBeXPatternModel:IBeXConstant" value="ACED0005737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000004" stringValue="4"/>
+    </attributeConstraint>
+    <localEdges href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@edgeSet/@edges.85"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.34"/>
+    <signatureNodes href="file://C:\Users\XPS-15\IdeaProjects\Vitruv-TGG-Integration-Test\eclipse-ibex-workspace\git\emoflon-ibex-tutorial\Hospital2AdministrationSolutions\bin\Hospital2AdministrationSolutions\sync\hipe\engine\ibex-patterns.xmi#//@nodeSet/@nodes.133"/>
+  </contextPatterns>
+</IBeXPatternModel:IBeXPatternSet>

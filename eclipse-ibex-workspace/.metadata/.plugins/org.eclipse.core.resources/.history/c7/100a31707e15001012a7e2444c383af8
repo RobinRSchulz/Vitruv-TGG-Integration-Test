@@ -1,0 +1,152 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule ParameterTypeToParameterType #with Java2Uml
+	#source { 
+		javaParametrizable:java.parameters.Parametrizable {
+			-parameters->parameter
+		}
+		parameter:java.parameters.Parameter {
+			++ -typeReference->typeReference
+		}
+		++typeReference:java.types.TypeReference
+	}
+	#target {
+		umlOperation:uml.Operation {
+			-ownedParameter->umlParameter
+		}
+		umlParameter:uml.Parameter {
+			//type is done in subclasses
+		}
+	}
+	#correspondence {
+		parameterToParameter:JavaParameterToParameter {
+			#src->parameter
+			#trg->umlParameter
+		}
+	}
+	#attributeConditions {
+		eq_string(parameter.name, umlParameter.name)
+	}
+	
+#abstract #rule ConstructorParamTypeToParamType #extends ParameterTypeToParameterType #with Java2Uml
+	#source { javaParametrizable:java.members.Constructor }
+	#correspondence {
+		javaConstructorToOperation:JavaConstructorToOperation {
+			#src->javaParametrizable
+			#trg->umlOperation
+		}
+	}
+	#abstract #rule ConstructorClassifierParamTypeToParamType #extends ConstructorParamTypeToParamType #with Java2Uml
+		#source {
+			++typeReference:java.types.ClassifierReference {
+				++ -target->classifier
+			}
+			classifier:java.classifiers.Classifier
+		}
+		#target {
+			umlParameter:uml.Parameter {
+				++ -type->umlClassifier
+			}
+			umlClassifier:uml.Classifier
+		}
+		#correspondence {
+			javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier{
+				#src->classifier
+				#trg->umlClassifier
+			}
+		}
+		#rule ConstructorClassParamTypeToParamType #extends ConstructorClassifierParamTypeToParamType #with Java2Uml
+			#source { classifier:java.classifiers.Class }
+			#target { umlClassifier:uml.Class }
+		#rule ConstructorInterfaceParamTypeToParamType #extends ConstructorClassifierParamTypeToParamType #with Java2Uml
+			#source { classifier:java.classifiers.Interface }
+			#target { umlClassifier:uml.Interface }
+		#rule ConstructorEnumParamTypeToParamType #extends ConstructorClassifierParamTypeToParamType #with Java2Uml
+			#source { classifier:java.classifiers.Enumeration }
+			#target { umlClassifier:uml.Enumeration }
+		//TODO primitives cannot be supported (yet)
+			
+//TODO remove test BELOW
+//TODO remove test BELOW
+//TODO remove test BELOW
+#rule ConstructorTESTClassParamTypeToParamType #with Java2Uml
+	#source { 
+		classifier:java.classifiers.Class
+		javaParametrizable:java.members.Constructor {
+			-parameters->parameter
+		}
+		parameter:java.parameters.Parameter {
+			++ -typeReference->typeReference
+		}
+		++typeReference:java.types.ClassifierReference {
+			++ -target->classifier
+		}
+	}
+	#target {
+		umlClassifier:uml.Class
+		umlOperation:uml.Operation {
+			-ownedParameter->umlParameter
+		}
+		umlParameter:uml.Parameter {
+			++ -type->umlClassifier
+		}
+	}
+	#correspondence {
+		javaConstructorToOperation:JavaConstructorToOperation {
+			#src->javaParametrizable
+			#trg->umlOperation
+		}
+		parameterToParameter:JavaParameterToParameter {
+			#src->parameter
+			#trg->umlParameter
+		}
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier{
+			#src->classifier
+			#trg->umlClassifier
+		}
+	}
+	#attributeConditions {
+		eq_string(parameter.name, umlParameter.name)
+	}
+//TODO remove test ABOVE
+//TODO remove test ABOVE
+//TODO remove test ABOVE
+			
+#abstract #rule MethodParamTypeToParamType #extends ParameterTypeToParameterType #with Java2Uml
+	#source { javaParametrizable:java.members.ClassMethod }
+	#correspondence {
+		javaConstructorToOperation:JavaMethodToOperation {
+			#src->javaParametrizable
+			#trg->umlOperation
+		}
+	}
+	#abstract #rule MethodClassifierParamTypeToParamType #extends MethodParamTypeToParamType #with Java2Uml
+		#source {
+			++typeReference:java.types.ClassifierReference {
+				++ -target->classifier
+			}
+			classifier:java.classifiers.Classifier
+		}
+		#target {
+			umlParameter:uml.Parameter {
+				++ -type->umlClassifier
+			}
+			umlClassifier:uml.Classifier
+		}
+		#correspondence {
+			javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier{
+				#src->classifier
+				#trg->umlClassifier
+			}
+		}
+		#rule MethodClassParamTypeToParamType #extends MethodClassifierParamTypeToParamType #with Java2Uml
+			#source { classifier:java.classifiers.Class }
+			#target { umlClassifier:uml.Class }
+		#rule MethodInterfaceParamTypeToParamType #extends MethodClassifierParamTypeToParamType #with Java2Uml
+			#source { classifier:java.classifiers.Interface }
+			#target { umlClassifier:uml.Interface }
+		#rule MethodEnumParamTypeToParamType #extends MethodClassifierParamTypeToParamType #with Java2Uml
+			#source { classifier:java.classifiers.Enumeration }
+			#target { umlClassifier:uml.Enumeration }
+	//TODO primitives cannot be supported (yet)

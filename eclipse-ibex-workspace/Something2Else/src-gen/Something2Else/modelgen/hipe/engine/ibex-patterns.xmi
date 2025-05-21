@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IBeXPatternModel:IBeXModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXPatternModel="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore java://org.emoflon.ibex.patternmodel.IBeXPatternModel.IBeXPatternModelPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
+  <patternSet xmi:type="IBeXPatternModel:IBeXPatternSet">
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="LinkToEntityEmbedded__GEN" localEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.0 //@edgeSet/@edges.3 //@edgeSet/@edges.2 //@edgeSet/@edges.7 //@edgeSet/@edges.4 //@edgeSet/@edges.10 //@edgeSet/@edges.11" signatureNodes="//@nodeSet/@nodes.0 //@nodeSet/@nodes.1 //@nodeSet/@nodes.2 //@nodeSet/@nodes.3 //@nodeSet/@nodes.4 //@nodeSet/@nodes.6 //@nodeSet/@nodes.7 //@nodeSet/@nodes.10 //@nodeSet/@nodes.13">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.0 //@nodeSet/@nodes.3"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="LinkToEntity__GEN" signatureNodes="//@nodeSet/@nodes.5"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="ProtocolToEntity__GEN" localEdges="//@edgeSet/@edges.8 //@edgeSet/@edges.5" signatureNodes="//@nodeSet/@nodes.8 //@nodeSet/@nodes.11 //@nodeSet/@nodes.14"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="SystemRefdComponentToEntity__GEN" localEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.6" signatureNodes="//@nodeSet/@nodes.9 //@nodeSet/@nodes.12 //@nodeSet/@nodes.15"/>
+  </patternSet>
+  <nodeSet xmi:type="IBeXPatternModel:IBeXNodeSet">
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="compEntity" incomingEdges="//@edgeSet/@edges.0">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="component" incomingEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.10">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="ctoe" outgoingEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.0">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="protEntity" incomingEdges="//@edgeSet/@edges.2">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="protocol" incomingEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.11">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="protocol">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="ptoe" outgoingEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.2">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="root" incomingEdges="//@edgeSet/@edges.4">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="root" incomingEdges="//@edgeSet/@edges.5">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="root" incomingEdges="//@edgeSet/@edges.6">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="stor" outgoingEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.4">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="stor" outgoingEdges="//@edgeSet/@edges.8 //@edgeSet/@edges.5">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="stor" outgoingEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.6">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="system" incomingEdges="//@edgeSet/@edges.7" outgoingEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.11">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="system" incomingEdges="//@edgeSet/@edges.8">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="system" incomingEdges="//@edgeSet/@edges.9">
+      <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    </nodes>
+  </nodeSet>
+  <edgeSet xmi:type="IBeXPatternModel:IBeXEdgeSet">
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="ctoe->compEntity" sourceNode="//@nodeSet/@nodes.2" targetNode="//@nodeSet/@nodes.0">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="ctoe->component" sourceNode="//@nodeSet/@nodes.2" targetNode="//@nodeSet/@nodes.1">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="ptoe->protEntity" sourceNode="//@nodeSet/@nodes.6" targetNode="//@nodeSet/@nodes.3">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="ptoe->protocol" sourceNode="//@nodeSet/@nodes.6" targetNode="//@nodeSet/@nodes.4">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="stor->root" sourceNode="//@nodeSet/@nodes.10" targetNode="//@nodeSet/@nodes.7">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="stor->root" sourceNode="//@nodeSet/@nodes.11" targetNode="//@nodeSet/@nodes.8">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="stor->root" sourceNode="//@nodeSet/@nodes.12" targetNode="//@nodeSet/@nodes.9">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="stor->system" sourceNode="//@nodeSet/@nodes.10" targetNode="//@nodeSet/@nodes.13">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="stor->system" sourceNode="//@nodeSet/@nodes.11" targetNode="//@nodeSet/@nodes.14">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="stor->system" sourceNode="//@nodeSet/@nodes.12" targetNode="//@nodeSet/@nodes.15">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="system->component" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.1">
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="system->protocol" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.4">
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+    </edges>
+  </edgeSet>
+</IBeXPatternModel:IBeXModel>

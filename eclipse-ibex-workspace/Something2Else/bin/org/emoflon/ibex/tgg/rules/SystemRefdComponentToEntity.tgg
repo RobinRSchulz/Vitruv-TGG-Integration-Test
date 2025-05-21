@@ -1,0 +1,37 @@
+#using Something2Else.*
+#using AttrCondDefLibrary.*
+
+#rule SystemRefdComponentToEntity #with Something2Else
+
+
+
+#source { 
+	++comp:Component
+	system:System{
+		++ -components->comp
+	}
+}
+
+#target {
+	++entity:Entity
+	root:Root{
+		++ -entities->entity
+	}
+}
+
+
+
+#correspondence {
+	++ctoe:ComponentToEntity{
+		#src->comp
+		#trg->entity
+	}
+	stor:SystemToRoot{
+		#src->system
+		#trg->root
+	}
+}
+
+#attributeConditions {
+	eq_string(comp.name, entity.name)
+}

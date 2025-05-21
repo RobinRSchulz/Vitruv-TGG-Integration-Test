@@ -1,0 +1,58 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule AttributeTypeToPropertyType #with Java2Uml
+	#source { 
+//		classifier:java.classifiers.Classifier
+		field:java.members.Field {
+//			++ -typeReference->typeReference
+		}
+//		++typeReference:java.types.TypeReference
+	}
+	#target {
+//		umlClassifier:uml.Classifier
+		property:uml.Property
+	}
+	#correspondence {
+		attributeToProperty:JavaAttributeToUmlProperty{
+			#src->field
+			#trg->property
+		}
+	}
+	#attributeConditions {
+		eq_string(field.name, property.name)
+	}
+
+#abstract #rule ClassifierAttributeTypeToPropertyType #extends AttributeTypeToPropertyType #with Java2Uml
+	#source {
+		field:java.members.Field {
+			++ -typeReference->typeReference
+		}
+		++typeReference:java.types.ClassifierReference {
+			++ -target->classifier
+		}
+		classifier:java.classifiers.Classifier
+	}
+	#target {
+//		umlClassifier:uml.Classifier
+		property:uml.Property {
+			++ -type->umlClassifier
+		}
+		umlClassifier:uml.Classifier
+	}
+	#correspondence {
+		javaClassifierToUmlClassifier:JavaClassifierToUmlClassifier{
+			#src->classifier
+			#trg->umlClassifier
+		}
+	}
+	#rule ClassAttributeTypeToPropertyType #extends ClassifierAttributeTypeToPropertyType #with Java2Uml
+		#source { classifier:java.classifiers.Class }
+		#target { umlClassifier:uml.Class }
+	#rule InterfaceAttributeTypeToPropertyType #extends ClassifierAttributeTypeToPropertyType #with Java2Uml
+		#source { classifier:java.classifiers.Interface }
+		#target { umlClassifier:uml.Interface }
+	#rule EnumAttributeTypeToPropertyType #extends ClassifierAttributeTypeToPropertyType #with Java2Uml
+		#source { classifier:java.classifiers.Enumeration }
+		#target { umlClassifier:uml.Enumeration }
+	//TODO support primitives

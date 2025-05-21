@@ -1,0 +1,53 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule ClassifierMethodToMethod #with Java2Uml
+	#source { 
+		javaConcreteClassifier:java.classifiers.ConcreteClassifier {
+			++ -members->method
+		}
+		++method:java.members.Method
+	}
+	#target {
+		umlClassifier:uml.Classifier {
+//			++ -ownedOperation
+		}
+		++umlOperation:uml.Operation
+	}
+	#correspondence {
+		j:JavaClassifierToUmlClassifier {
+			#src->javaConcreteClassifier
+			#trg->umlClassifier
+		}
+		++javaMethodToOperation:JavaMethodToOperation{
+			#src->method
+			#trg->umlOperation
+		}
+	}
+	#attributeConditions {
+		eq_string(method.name, umlOperation.name)
+	}
+	#rule ClassMethodToMethod #extends ClassifierMethodToMethod #with Java2Uml
+		#source { 
+			javaConcreteClassifier:java.classifiers.Class
+			++method:java.members.ClassMethod
+		}
+		#target {
+			umlClassifier:uml.Class {
+				++ -ownedOperation->umlOperation
+			}
+		}
+	#rule InterfaceMethodToMethod #extends ClassifierMethodToMethod #with Java2Uml
+		#source { 
+			javaConcreteClassifier:java.classifiers.Interface
+			++method:java.members.InterfaceMethod
+		}
+		#target {
+			umlClassifier:uml.Interface {
+				++ -ownedOperation->umlOperation
+			}
+		}
+		
+		
+		
+		

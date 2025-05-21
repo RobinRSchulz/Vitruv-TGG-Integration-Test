@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hipe.network:HiPENetwork xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:hipe.network="platform:/resource/hipe.network/model/hiPENetwork" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage platform:/resource/hipe.network/model/hiPENetwork java://hipe.network.NetworkPackage">
+  <networknode xmi:type="hipe.network:DispatchNode" name="DispatchNode" objectNodes="//@networknode.13 //@networknode.26 //@networknode.31 //@networknode.65 //@networknode.66 //@networknode.67 //@networknode.68 //@networknode.69 //@networknode.70 //@networknode.71 //@networknode.72 //@networknode.73 //@networknode.74 //@networknode.75 //@networknode.76 //@networknode.77 //@networknode.78" notificationNode="//@networknode.1">
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#/"/>
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/Something2Else/model/Something2Else.ecore#/"/>
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#/"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NotificationNode" name="NotificationNode" dispatchNode="//@networknode.0"/>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_1_localSearch" inputPort="//@networknode.67/@ports/@port.0 //@networknode.65/@ports/@port.0" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_1">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.3" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_1" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.8" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_1" matchingNode="//@networknode.2"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.15"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.2/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.0"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.2/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.1"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.2/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.0"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.0"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="ComponentToEntity__CC_8_nacjunction" inputPort="//@networknode.66/@ports/@port.0 //@networknode.2/@ports/@port.0" patternName="ComponentToEntity__CC_8" overlaps="//@networknode.3/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.6" patternName="ComponentToEntity__CC_8" matchingNode="//@networknode.3"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_4_localSearch" inputPort="//@networknode.73/@ports/@port.0 //@networknode.70/@ports/@port.0" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_4">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.5" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_4" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.9" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_4" matchingNode="//@networknode.4"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.18"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.4/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.1"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.4/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.4"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.4/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.3"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.1"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="ComponentToEntity__CC_9_nacjunction" inputPort="//@networknode.71/@ports/@port.0 //@networknode.4/@ports/@port.0" patternName="ComponentToEntity__CC_9" overlaps="//@networknode.5/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.6" patternName="ComponentToEntity__CC_9" matchingNode="//@networknode.5"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="ComponentToEntity__CC_7_junction" inputPort="//@networknode.3/@ports/@port.0 //@networknode.5/@ports/@port.0" patternName="ComponentToEntity__CC_7" overlaps="//@networknode.6/@allOverlaps.0" mappings="//@networknode.6/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.7" patternName="ComponentToEntity__CC_7" matchingNode="//@networknode.6"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="ComponentToEntity__CC_production" inputPort="//@networknode.6/@ports/@port.0" patternName="ComponentToEntity__CC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="comp" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="entity" value="1"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_production" inputPort="//@networknode.2/@ports/@port.1" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="comp" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.4/@ports/@port.1" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="entity" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_20_localSearch" inputPort="//@networknode.74/@ports/@port.0 //@networknode.72/@ports/@port.0" patternName="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_20">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.11" patternName="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_20" matchingNode="//@networknode.10"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.42" patternName="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_20" matchingNode="//@networknode.10"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.34"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.10/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.6"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.10/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.16"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.10/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.15"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.6"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntityEmbedded__CC_24_nacjunction" inputPort="//@networknode.70/@ports/@port.1 //@networknode.10/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_24" overlaps="//@networknode.11/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.40" patternName="LinkToEntityEmbedded__CC_24" matchingNode="//@networknode.11"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="SystemToRoot_source_0_reference" inputPort="//@networknode.13/@ports/@port.0 //@networknode.68/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_33">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.15" patternName="LinkToEntityEmbedded__CC_33" matchingNode="//@networknode.12"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="SystemToRoot_object" patternName="LinkToEntityEmbedded__CC_41" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.12" patternName="LinkToEntityEmbedded__CC_41" matchingNode="//@networknode.13"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.14" patternName="LinkToEntityEmbedded__CC_41" matchingNode="//@networknode.13"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.59" patternName="LinkToEntityEmbedded__CC_41" matchingNode="//@networknode.13"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.61" patternName="LinkToEntityEmbedded__CC_41" matchingNode="//@networknode.13"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="SystemToRoot_target_0_reference" inputPort="//@networknode.13/@ports/@port.1 //@networknode.73/@ports/@port.1" patternName="LinkToEntityEmbedded__CC_34">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.15" patternName="LinkToEntityEmbedded__CC_34" matchingNode="//@networknode.14"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_29_junction" inputPort="//@networknode.12/@ports/@port.0 //@networknode.14/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_29" overlaps="//@networknode.15/@allOverlaps.0" mappings="//@networknode.15/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.21" patternName="LinkToEntityEmbedded__CC_29" matchingNode="//@networknode.15"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="System_links_0_reference" inputPort="//@networknode.69/@ports/@port.0 //@networknode.75/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_35">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.20" patternName="LinkToEntityEmbedded__CC_35" matchingNode="//@networknode.16"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/links"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Link_components_0_reference" inputPort="//@networknode.76/@ports/@port.0 //@networknode.65/@ports/@port.1" patternName="LinkToEntityEmbedded__CC_45">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.19" patternName="LinkToEntityEmbedded__CC_45" matchingNode="//@networknode.17"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_12_localSearch" inputPort="//@networknode.75/@ports/@port.1 //@networknode.66/@ports/@port.1" patternName="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_12">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.19" patternName="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_12" matchingNode="//@networknode.18" initializationCode="" constraintName="check_constraint_1" predicateCode="!FILTER_NAC_NODE.equals(component)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>component</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.26"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.43" patternName="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_12" matchingNode="//@networknode.18" initializationCode="" constraintName="check_constraint_4" predicateCode="!FILTER_NAC_NODE.equals(component)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>component</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.26"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.26"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.18/@orchestrationComponents.1 //@networknode.18/@orchestrationComponents.2 //@networknode.18/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.2"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.18/@orchestrationComponents.1 //@networknode.18/@orchestrationComponents.2 //@networknode.18/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.6"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.18/@orchestrationComponents.1 //@networknode.18/@orchestrationComponents.2 //@networknode.18/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.7"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.18/@orchestrationComponents.2 //@networknode.18/@orchestrationComponents.1 //@networknode.18/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.3"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.18/@orchestrationComponents.2 //@networknode.18/@orchestrationComponents.1 //@networknode.18/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.8"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.2"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.3"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntityEmbedded__CC_36_nacjunction" inputPort="//@networknode.17/@ports/@port.0 //@networknode.18/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_36" overlaps="//@networknode.19/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.20" patternName="LinkToEntityEmbedded__CC_36" matchingNode="//@networknode.19"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_30_junction" inputPort="//@networknode.16/@ports/@port.0 //@networknode.19/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_30" overlaps="//@networknode.20/@allOverlaps.0" mappings="//@networknode.20/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.21" patternName="LinkToEntityEmbedded__CC_30" matchingNode="//@networknode.20"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_27_junction" inputPort="//@networknode.15/@ports/@port.0 //@networknode.20/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_27" overlaps="//@networknode.21/@allOverlaps.0" mappings="//@networknode.21/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.39" patternName="LinkToEntityEmbedded__CC_27" matchingNode="//@networknode.21"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Link_protocol_0_reference" inputPort="//@networknode.76/@ports/@port.1 //@networknode.77/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_46">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.24" patternName="LinkToEntityEmbedded__CC_46" matchingNode="//@networknode.22"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.48" patternName="LinkToEntityEmbedded__CC_46" matchingNode="//@networknode.22"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_16_localSearch" inputPort="//@networknode.75/@ports/@port.2 //@networknode.78/@ports/@port.0" patternName="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_16">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.24" patternName="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_16" matchingNode="//@networknode.23" initializationCode="" constraintName="check_constraint_2" predicateCode="!FILTER_NAC_NODE.equals(protocol)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>protocol</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.30"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.44" patternName="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_16" matchingNode="//@networknode.23" initializationCode="" constraintName="check_constraint_5" predicateCode="!FILTER_NAC_NODE.equals(protocol)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>protocol</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.30"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.30"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.23/@orchestrationComponents.1 //@networknode.23/@orchestrationComponents.2 //@networknode.23/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.4"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.23/@orchestrationComponents.1 //@networknode.23/@orchestrationComponents.2 //@networknode.23/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.11"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.23/@orchestrationComponents.1 //@networknode.23/@orchestrationComponents.2 //@networknode.23/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.12"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.23/@orchestrationComponents.2 //@networknode.23/@orchestrationComponents.1 //@networknode.23/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.5"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.23/@orchestrationComponents.2 //@networknode.23/@orchestrationComponents.1 //@networknode.23/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.13"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.4"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.5"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntityEmbedded__CC_37_nacjunction" inputPort="//@networknode.22/@ports/@port.0 //@networknode.23/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_37" overlaps="//@networknode.24/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.29" patternName="LinkToEntityEmbedded__CC_37" matchingNode="//@networknode.24"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="ProtocolToEntity_source_0_reference" inputPort="//@networknode.26/@ports/@port.0 //@networknode.77/@ports/@port.1" patternName="LinkToEntityEmbedded__CC_47">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.28" patternName="LinkToEntityEmbedded__CC_47" matchingNode="//@networknode.25"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/source"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="ProtocolToEntity_object" patternName="LinkToEntityEmbedded__CC_55" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.25" patternName="LinkToEntityEmbedded__CC_55" matchingNode="//@networknode.26"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.27" patternName="LinkToEntityEmbedded__CC_55" matchingNode="//@networknode.26"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="ProtocolToEntity_target_0_reference" inputPort="//@networknode.26/@ports/@port.1 //@networknode.71/@ports/@port.1" patternName="LinkToEntityEmbedded__CC_48">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.28" patternName="LinkToEntityEmbedded__CC_48" matchingNode="//@networknode.27"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity/target"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ProtocolToEntity"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_38_junction" inputPort="//@networknode.25/@ports/@port.0 //@networknode.27/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_38" overlaps="//@networknode.28/@allOverlaps.0" mappings="//@networknode.28/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.29" patternName="LinkToEntityEmbedded__CC_38" matchingNode="//@networknode.28"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_31_junction" inputPort="//@networknode.24/@ports/@port.0 //@networknode.28/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_31" overlaps="//@networknode.29/@allOverlaps.0" mappings="//@networknode.29/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.38" patternName="LinkToEntityEmbedded__CC_31" matchingNode="//@networknode.29"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="ComponentToEntity_source_0_reference" inputPort="//@networknode.31/@ports/@port.0 //@networknode.65/@ports/@port.2" patternName="LinkToEntityEmbedded__CC_49">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.33" patternName="LinkToEntityEmbedded__CC_49" matchingNode="//@networknode.30"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/source"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="ComponentToEntity_object" patternName="LinkToEntityEmbedded__CC_57" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.30" patternName="LinkToEntityEmbedded__CC_57" matchingNode="//@networknode.31"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.32" patternName="LinkToEntityEmbedded__CC_57" matchingNode="//@networknode.31"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="ComponentToEntity_target_0_reference" inputPort="//@networknode.31/@ports/@port.1 //@networknode.72/@ports/@port.1" patternName="LinkToEntityEmbedded__CC_50">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.33" patternName="LinkToEntityEmbedded__CC_50" matchingNode="//@networknode.32"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity/target"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Something2Else/model/Something2Else.ecore#//ComponentToEntity"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_39_junction" inputPort="//@networknode.30/@ports/@port.0 //@networknode.32/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_39" overlaps="//@networknode.33/@allOverlaps.0" mappings="//@networknode.33/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.37" patternName="LinkToEntityEmbedded__CC_39" matchingNode="//@networknode.33"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="System_components_0_reference" inputPort="//@networknode.67/@ports/@port.1 //@networknode.66/@ports/@port.2" patternName="LinkToEntityEmbedded__CC_51">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.36" patternName="LinkToEntityEmbedded__CC_51" matchingNode="//@networknode.34"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="System_protocols_0_reference" inputPort="//@networknode.68/@ports/@port.1 //@networknode.78/@ports/@port.1" patternName="LinkToEntityEmbedded__CC_52">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.36" patternName="LinkToEntityEmbedded__CC_52" matchingNode="//@networknode.35"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_40_junction" inputPort="//@networknode.34/@ports/@port.0 //@networknode.35/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_40" overlaps="//@networknode.36/@allOverlaps.0" mappings="//@networknode.36/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.37" patternName="LinkToEntityEmbedded__CC_40" matchingNode="//@networknode.36"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_32_junction" inputPort="//@networknode.33/@ports/@port.0 //@networknode.36/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_32" overlaps="//@networknode.37/@allOverlaps.0" mappings="//@networknode.37/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.38" patternName="LinkToEntityEmbedded__CC_32" matchingNode="//@networknode.37"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_28_junction" inputPort="//@networknode.29/@ports/@port.0 //@networknode.37/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_28" overlaps="//@networknode.38/@allOverlaps.0" mappings="//@networknode.38/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.39" patternName="LinkToEntityEmbedded__CC_28" matchingNode="//@networknode.38" initializationCode="" constraintName="check_constraint_3" predicateCode="!compEntity.equals(protEntity)">
+        <indices>3</indices>
+        <indices>6</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+        <nodeNames>protEntity</nodeNames>
+        <nodeNames>compEntity</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.42"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="4"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_25_junction" inputPort="//@networknode.21/@ports/@port.0 //@networknode.38/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_25" overlaps="//@networknode.39/@allOverlaps.0" mappings="//@networknode.39/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.40" patternName="LinkToEntityEmbedded__CC_25" matchingNode="//@networknode.39"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="7"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="3"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="4" rightIndex="5"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" index="4"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="6"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntityEmbedded__CC_23_junction" inputPort="//@networknode.11/@ports/@port.0 //@networknode.39/@ports/@port.0" patternName="LinkToEntityEmbedded__CC_23" overlaps="//@networknode.40/@allOverlaps.0" mappings="//@networknode.40/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.41" patternName="LinkToEntityEmbedded__CC_23" matchingNode="//@networknode.40"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="5"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="6"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="7"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="8"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="9"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntityEmbedded__CC_production" inputPort="//@networknode.40/@ports/@port.0" patternName="LinkToEntityEmbedded__CC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="compEntity" value="10"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="component" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="ctoe" value="9"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="protEntity" value="8"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="protocol" value="6"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="ptoe" value="7"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="root" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="stor" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="system" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="4"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="linkEntity" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.10/@ports/@port.1" patternName="LinkToEntityEmbedded_linkEntity_entities_incoming_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="linkEntity" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC_production" inputPort="//@networknode.18/@ports/@port.1" patternName="LinkToEntityEmbedded_link_components_outgoing_SRC__FILTER_NAC_SRC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="component" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC_production" inputPort="//@networknode.23/@ports/@port.1" patternName="LinkToEntityEmbedded_link_protocol_outgoing_SRC__FILTER_NAC_SRC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="protocol" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_69_localSearch" inputPort="//@networknode.74/@ports/@port.1 //@networknode.70/@ports/@port.2" patternName="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_69">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.46" patternName="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_69" matchingNode="//@networknode.45"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_69" matchingNode="//@networknode.45"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.83"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.45/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.22"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.45/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.35"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.45/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.34"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.22"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntity__CC_73_nacjunction" inputPort="//@networknode.71/@ports/@port.2 //@networknode.45/@ports/@port.0" patternName="LinkToEntity__CC_73" overlaps="//@networknode.46/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.53" patternName="LinkToEntity__CC_73" matchingNode="//@networknode.46"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_59_localSearch" inputPort="//@networknode.76/@ports/@port.2 //@networknode.65/@ports/@port.3" patternName="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_59">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.48" patternName="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_59" matchingNode="//@networknode.47"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.56" patternName="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_59" matchingNode="//@networknode.47"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.73"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.47/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.18"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.47/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.25"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.47/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.26"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/components"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.18"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntity__CC_77_nacjunction" inputPort="//@networknode.22/@ports/@port.1 //@networknode.47/@ports/@port.0" patternName="LinkToEntity__CC_77" overlaps="//@networknode.48/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.50" patternName="LinkToEntity__CC_77" matchingNode="//@networknode.48"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_62_localSearch" inputPort="//@networknode.75/@ports/@port.3 //@networknode.77/@ports/@port.2" patternName="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_62">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.50" patternName="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_62" matchingNode="//@networknode.49" initializationCode="" constraintName="check_constraint_6" predicateCode="!FILTER_NAC_NODE.equals(protocol)">
+        <indices>1</indices>
+        <indices>2</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <nodeNames>protocol</nodeNames>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.76"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.58" patternName="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_62" matchingNode="//@networknode.49" initializationCode="" constraintName="check_constraint_7" predicateCode="!FILTER_NAC_NODE.equals(protocol)">
+        <indices>1</indices>
+        <indices>2</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+        <nodeNames>protocol</nodeNames>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.76"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.76"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.49/@orchestrationComponents.1 //@networknode.49/@orchestrationComponents.2 //@networknode.49/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.19"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.49/@orchestrationComponents.1 //@networknode.49/@orchestrationComponents.2 //@networknode.49/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.28"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.49/@orchestrationComponents.1 //@networknode.49/@orchestrationComponents.2 //@networknode.49/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.29"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.49/@orchestrationComponents.2 //@networknode.49/@orchestrationComponents.1 //@networknode.49/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.20"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.49/@orchestrationComponents.2 //@networknode.49/@orchestrationComponents.1 //@networknode.49/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.30"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.19"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link/protocol"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.20"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntity__CC_76_nacjunction" inputPort="//@networknode.48/@ports/@port.0 //@networknode.49/@ports/@port.0" patternName="LinkToEntity__CC_76" overlaps="//@networknode.50/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.52" patternName="LinkToEntity__CC_76" matchingNode="//@networknode.50"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_66_localSearch" inputPort="//@networknode.69/@ports/@port.1 //@networknode.76/@ports/@port.3" patternName="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_66">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.52" patternName="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_66" matchingNode="//@networknode.51"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.57" patternName="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_66" matchingNode="//@networknode.51"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.80"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.51/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.21"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.51/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.33"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.51/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.32"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/links"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.21"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="LinkToEntity__CC_74_nacjunction" inputPort="//@networknode.50/@ports/@port.0 //@networknode.51/@ports/@port.0" patternName="LinkToEntity__CC_74" overlaps="//@networknode.52/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.53" patternName="LinkToEntity__CC_74" matchingNode="//@networknode.52"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="LinkToEntity__CC_72_junction" inputPort="//@networknode.46/@ports/@port.0 //@networknode.52/@ports/@port.0" patternName="LinkToEntity__CC_72" overlaps="//@networknode.53/@allOverlaps.0" mappings="//@networknode.53/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.54" patternName="LinkToEntity__CC_72" matchingNode="//@networknode.53"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntity__CC_production" inputPort="//@networknode.53/@ports/@port.0" patternName="LinkToEntity__CC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="protocol" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="entity" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.45/@ports/@port.1" patternName="LinkToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="entity" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC_production" inputPort="//@networknode.47/@ports/@port.1" patternName="LinkToEntity_link_components_outgoing_SRC__FILTER_NAC_SRC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="1"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC_production" inputPort="//@networknode.51/@ports/@port.1" patternName="LinkToEntity_link_links_incoming_SRC__FILTER_NAC_SRC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC_production" inputPort="//@networknode.49/@ports/@port.1" patternName="LinkToEntity_link_protocol_outgoing_SRC__FILTER_NAC_SRC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="link" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="protocol" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="ProtocolToEntity__CC_81_localSearch" inputPort="//@networknode.73/@ports/@port.2 //@networknode.13/@ports/@port.2 //@networknode.67/@ports/@port.2 //@networknode.78/@ports/@port.2 //@networknode.72/@ports/@port.2" patternName="ProtocolToEntity__CC_81">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.60" patternName="ProtocolToEntity__CC_81" matchingNode="//@networknode.59"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.95"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.0 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.27"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.0 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.37"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.0 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.41"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.24"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.38"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.0" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.39"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.3 //@networknode.59/@orchestrationComponents.0" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.25"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.3 //@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.0" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.26"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.59/@orchestrationComponents.3 //@networknode.59/@orchestrationComponents.1 //@networknode.59/@orchestrationComponents.2 //@networknode.59/@orchestrationComponents.0" name="edge_explorer_5_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.40"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.27"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>1</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.24"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.25"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>2</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/protocols"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.26"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="ProtocolToEntity__CC_production" inputPort="//@networknode.59/@ports/@port.0" patternName="ProtocolToEntity__CC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="root" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="stor" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="system" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="protocol" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="entity" value="4"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="SystemRefdComponentToEntity__CC_87_localSearch" inputPort="//@networknode.74/@ports/@port.2 //@networknode.13/@ports/@port.3 //@networknode.68/@ports/@port.2 //@networknode.66/@ports/@port.3 //@networknode.70/@ports/@port.3" patternName="SystemRefdComponentToEntity__CC_87">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.62" patternName="SystemRefdComponentToEntity__CC_87" matchingNode="//@networknode.61" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_0 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, comp.getName(), &quot;java.lang.String&quot;));&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, entity.getName(), &quot;java.lang.String&quot;));&#xA;csp_0.solve();&#xA;" constraintName="check_constraint_8" predicateCode="csp_0.isSatisfied()">
+        <indices>3</indices>
+        <indices>4</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+        <nodeNames>comp</nodeNames>
+        <nodeNames>entity</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component/name"/>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity/name"/>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.101"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@patterns.101"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.30"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.44"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.45"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.29"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.43"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.42"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.28"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.31"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.61/@orchestrationComponents.4 //@networknode.61/@orchestrationComponents.2 //@networknode.61/@orchestrationComponents.3 //@networknode.61/@orchestrationComponents.1 //@networknode.61/@orchestrationComponents.0" name="edge_explorer_5_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@nodes.46"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="constraint_checker" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_0 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, comp.getName(), &quot;java.lang.String&quot;));&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, entity.getName(), &quot;java.lang.String&quot;));&#xA;csp_0.solve();&#xA;" predicateCode="csp_0.isSatisfied()">
+      <indices>3</indices>
+      <indices>4</indices>
+      <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+      <types xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+      <nodeNames>comp</nodeNames>
+      <nodeNames>entity</nodeNames>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>2</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System/components"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.30"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.29"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>1</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Something2Else/model/Something2Else.ecore#//SystemToRoot/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.28"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>0</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root/entities"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/XPS-15/IdeaProjects/Vitruv-TGG-Integration-Test/eclipse-ibex-workspace/Something2Else/src-gen/Something2Else/cc/hipe/engine//hipe-patterns.xmi#//@edges.31"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="SystemRefdComponentToEntity__CC_production" inputPort="//@networknode.61/@ports/@port.0" patternName="SystemRefdComponentToEntity__CC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="root" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="stor" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="system" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="comp" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="entity" value="4"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="SystemToRoot__CC_93_junction" inputPort="//@networknode.73/@ports/@port.3 //@networknode.69/@ports/@port.2" patternName="SystemToRoot__CC_93" overlaps="//@networknode.63/@allOverlaps.0" mappings="//@networknode.63/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.64" patternName="SystemToRoot__CC_93" matchingNode="//@networknode.63"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="SystemToRoot__CC_production" inputPort="//@networknode.63/@ports/@port.0" patternName="SystemToRoot__CC">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="system" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="root" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Component_object_SP0" patternName="ComponentToEntity__CC_10" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.2" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.65"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.17" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.65"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.30" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.65"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.47" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.65"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Component_object_SP1" patternName="ComponentToEntity__CC_10" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.3" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.66"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.18" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.66"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.34" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.66"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.61" patternName="ComponentToEntity__CC_10" matchingNode="//@networknode.66"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Component"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="System_object_SP0" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.2" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.67"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.34" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.67"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.59" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.67"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="System_object_SP1" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.12" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.68"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.35" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.68"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.61" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.68"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="System_object_SP2" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.16" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.69"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.51" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.69"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.63" patternName="ComponentToEntity_comp_components_incoming_SRC__FILTER_NAC_SRC_3" matchingNode="//@networknode.69"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//System"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Entity_object_SP0" patternName="ComponentToEntity__CC_11" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.4" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.70"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.11" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.70"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.45" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.70"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.61" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.70"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Entity_object_SP1" patternName="ComponentToEntity__CC_11" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.5" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.71"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.27" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.71"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.46" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.71"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Entity_object_SP2" patternName="ComponentToEntity__CC_11" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.10" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.72"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.32" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.72"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.59" patternName="ComponentToEntity__CC_11" matchingNode="//@networknode.72"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Entity"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Root_object_SP0" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.4" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.73"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.14" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.73"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.59" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.73"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.63" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.73"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Root_object_SP1" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.10" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.74"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.45" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.74"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.61" patternName="ComponentToEntity_entity_entities_incoming_TRG__FILTER_NAC_TRG_6" matchingNode="//@networknode.74"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model2.ecore#//Root"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Link_object_SP0" patternName="LinkToEntityEmbedded__CC_44" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.16" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.75"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.18" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.75"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.23" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.75"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.49" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.75"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Link_object_SP1" patternName="LinkToEntityEmbedded__CC_44" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.17" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.76"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.22" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.76"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.47" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.76"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.51" patternName="LinkToEntityEmbedded__CC_44" matchingNode="//@networknode.76"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Link"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Protocol_object_SP0" patternName="LinkToEntityEmbedded__CC_54" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.22" patternName="LinkToEntityEmbedded__CC_54" matchingNode="//@networknode.77"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.25" patternName="LinkToEntityEmbedded__CC_54" matchingNode="//@networknode.77"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.49" patternName="LinkToEntityEmbedded__CC_54" matchingNode="//@networknode.77"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Protocol_object_SP1" patternName="LinkToEntityEmbedded__CC_54" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.23" patternName="LinkToEntityEmbedded__CC_54" matchingNode="//@networknode.78"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.35" patternName="LinkToEntityEmbedded__CC_54" matchingNode="//@networknode.78"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.59" patternName="LinkToEntityEmbedded__CC_54" matchingNode="//@networknode.78"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/tools.vitruv.methodologisttemplate.model/src/main/ecore/model.ecore#//Protocol"/>
+  </networknode>
+</hipe.network:HiPENetwork>

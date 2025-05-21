@@ -1,0 +1,54 @@
+#using Java2Uml.*
+#using AttrCondDefLibrary.*
+
+/**
+ * Covers Classes and Enums
+ */
+#abstract #rule AttributeToProperty #with Java2Uml
+	#source { 
+		classifier:java.classifiers.Classifier
+		++field:java.members.Field 
+	}
+	#target {
+		umlClassifier:uml.Classifier
+		++property:uml.Property
+		
+	}
+	#correspondence {
+		classToUmlClass:JavaClassifierToUmlClassifier {
+			#src->classifier
+			#trg->umlClassifier
+		}
+		
+		++attributeToProperty:JavaAttributeToUmlProperty{
+			#src->field
+			#trg->property
+		}
+	}
+	#attributeConditions {
+		eq_string(field.name, property.name)
+	}
+
+#rule ClassAttributeToProperty #extends AttributeToProperty #with Java2Uml
+	#source {
+		classifier:java.classifiers.Class {
+			++ -members->field
+		}
+	}
+	#target {
+		umlClassifier:uml.Class {
+			++-ownedAttribute->property
+		}
+	}
+	
+#rule EnumAttributeToProperty #extends AttributeToProperty #with Java2Uml
+	#source {
+		classifier:java.classifiers.Enumeration {
+			++ -members->field
+		}
+	}
+	#target {
+		umlClassifier:uml.Enumeration {
+			++-ownedAttribute->property
+		}
+	}
