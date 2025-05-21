@@ -3,6 +3,23 @@ Vitruvius TGG Integration Tests
 Tests and evaluation cases for testing and evaluating the Vitruvius TGG support.<br/>
 Since this depends on eMoflon, we need at least a Java-21-SDK
 
+## Evaluation Results
+`Java2UML_plan_and_results.ods` (Table `GQM Plan`) shows the GQM plan and where to find the evaluation data.
+This is also described in the following:
+The evaluation results referred-to in the thesis can be found under `EvaluationDocumentationAndResults`:
+* Goal 1: The subfolder `testRunData/Java2UmlEvaluationGoal1` contains the raw data from the maven builds (if the test succeeded), including 
+  * the model files: `$TEST_NAME/java_instance.model` and `$TEST_NAME/uml_instance.model`.
+  * vitruvius files: `$TEST_NAME/vsum`
+  * ibex files:  `$TEST_NAME/ibexFiles/corr.xmi` and `$TEST_NAME/ibexFiles/protocol.xmi`.
+  The values derived from the raw data can be found in `Java2UML_plan_and_results.ods` in the table `G1 Results`
+* Goal 2: The results can be found in `Java2UML_plan_and_results.ods` in the table `G2 Results`.
+* Goal 3: The subfolder `testRunData/Hospital2AdministrationGoal3` contains the medians of each test size run in 
+  `medianTimeMeasurementsAccumulation.txt`. The single measurements for can be found in the subfolders
+  * `test_$K` for Vitruv-TGG measurements with change sequence size K.
+  * `test_$K_hipe` for HiPE measurements with change sequence size K.
+  
+  Each single test was run 20 times.
+
 ## Reproduce/ replicate Evaluation Results
 (Windows:Not use powershell. In IntelliJ: "Command Prompt")<br/>
 For all builds, use openjdk-21 (or higher, but this is untested).
