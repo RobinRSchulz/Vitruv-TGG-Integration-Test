@@ -1,36 +1,80 @@
 Vitruvius TGG Integration Tests
 ==============================
-Tests and, later, CaseStudies for testing and evaluating the Vitruvius TGG support.
-
+Tests and evaluation cases for testing and evaluating the Vitruvius TGG support.<br/>
 Since this depends on eMoflon, we need at least a Java-21-SDK
-## Install on windows
-* Not use powershell. In IntelliJ: "Command Prompt" 
-  OBACHT!In IntelliJ, that has to be re-opened each time the IDE is restarted (otherwise, it changes to powershell...)
-* Change your shell's JAVA_HOME to a Java-23 JDK path:
-    ```
-    set JAVA_HOME="C:\Users\XPS-15\.jdks\openjdk-23.0.1"
-    ```
-* Install
-    ```
-    mvnw clean install
-    ```
-* Reproduce the evaluation results for 
-  * Goal 2 (Build will be green although test failures are present, to be able to generate the surefire report site (evaluationReport.html))
-    ```
-    cd vsum
-    ..\mvnw clean test -Dtest=Java2UmlEvaluationGoal1Test -Dmaven.test.failure.ignore=true
-    ```
-  * Goal 3 (build takes ~ 8 hours, comment-out/ disable 2048 and 4096 for quicker builds...)
-    ```
-    cd vsum
-    ..\mvnw clean test -Dtest=Hospital2AdministrationGoal3Test
-    ```
-* Debug with IntelliJ
+
+## Reproduce/ replicate Evaluation Results
+(Windows:Not use powershell. In IntelliJ: "Command Prompt")<br/>
+For all builds, use openjdk-21 (or higher, but this is untested).
+1. Preparation: Build Dependency projects
+   1. Clone and build Vitruv-Change **from this repo**: 
+      https://gitlab.kit.edu/kit/kastel/sdq/stud/abschlussarbeiten/masterarbeiten/robinschulzg/vitruv-change:
+      ###### Windows
+      ```
+      mvnw clean install
+      ```
+      ###### Linux
+      ```
+      ./mvnw clean install
+      ```
+   2. Clone and build Vitruv-TGG from this repo:
+      https://gitlab.kit.edu/kit/kastel/sdq/stud/abschlussarbeiten/masterarbeiten/robinschulzg/vitruv-tgg.
+      
+      It might be that the properties `emoflon.ibex.version` and `hipe.version` in `pom.xml` need to be adjusted,
+      because the updatesite doesn't remember old releases when a new one is released...
+      ###### Windows
+      ```
+      mvnw clean install
+      ```
+      ###### Linux
+      ```
+      ./mvnw clean install
+      ```
+2. Build this project without tests:
+   ###### Windows
+     ```
+     mvnw clean -DskipTests
+     ```
+   ###### Linux
+     ```
+     ../mvnw clean install -DskipTests
+     ```
+3. Reproduce/ replicate the evaluation results for 
+   * Goal 1 (Build will be green although test failures are present, to be able to generate the surefire report site (evaluationReport.html))
+     ###### Windows
+     ```
+     cd vsum
+     ..\mvnw clean test -Dtest=Java2UmlEvaluationGoal1Test -Dmaven.test.failure.ignore=true
+     ```
+     ###### Linux
+     ```
+     cd vsum
+     ../mvnw clean test -Dtest=Java2UmlEvaluationGoal1Test -Dmaven.test.failure.ignore=true
+     ```
+     The Build should yield 31 tests, 3 failures, 1 Errors and 0 Skipped tests.<br/>
+     Find the results under `vsum/target/Java2UmlEvaluationGoal1`. <br/>
+     There, `tggRulesInfo.txt` contains the information on corrupt and intact tgg rules (referring to the proxy issue).
+   * Goal 3 (build takes ~ 8 hours (on my machine), comment-out/ disable 2048 and 4096 for quicker builds...)
+     ###### Windows
+     ```
+     cd vsum
+     ..\mvnw clean test -Dtest=Hospital2AdministrationGoal3Test
+     ```
+     ###### Linux
+     ```
+     cd vsum
+     ../mvnw clean test -Dtest=Hospital2AdministrationGoal3Test
+     ```
+     Find the results under `vsum/target/Hospital2AdministrationGoal3`.
+     There, `medianTimeMeasurementsAccumulation.txt` contains the median over all runs of all test sizes of HiPE and Vitruv-TGG.
+
+## Debug with IntelliJ
   1. Set a breakpoint
   2. Make sure to debug the forked surefire process, not the maven process. 
      This sets the standard debug jvm options (Port 5005)
     ```
-    mvnw clean install -Dmaven.surefire.debug
+    cd vsum
+    ..\mvnw clean install -Dmaven.surefire.debug
     ```
   3. It will wait for the debugger. 
   4. Optionally attatch a profiler now.
@@ -40,24 +84,9 @@ Since this depends on eMoflon, we need at least a Java-21-SDK
 ```
     git push gitlabAbgabe master
 ```
-Model
------
-This folder contains the model in the ecore format. When you do not use eclipse, please provide a genmodel of your ecore model so that code can be generated. 
 
-Consistency
------------
-This folder contains the consistency specifications, like reactions.
+# How to deal with IBeX-Projects and Eclipse
 
-ViewType
---------
-This folder contains the definition of the view types. These are necessary to create views of the vsum. 
-
-Vsum
-----
-This folder contains the VSUM
-
-How to deal with IBeX-Projects and Eclipse
-------------------------------------------
 ### Configuring Eclipse
 Just download the pre-built eclipse from [here](https://github.com/eMoflon/emoflon-ibex-eclipse-build/releases).
 Alternatively, you can install the ibex plugins or download an eclipse VM.
