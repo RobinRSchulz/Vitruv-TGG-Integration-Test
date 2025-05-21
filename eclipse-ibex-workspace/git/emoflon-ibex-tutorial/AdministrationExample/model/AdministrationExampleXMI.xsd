@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/AdministrationExample/model/AdministrationExample.ecore">
+  <xsd:annotation>
+    <xsd:documentation>TODO: Add documentation for AdministrationExample. Hint: You may copy this element in the Ecore editor to add documentation to EClasses, EOperations, ...</xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:simpleType name="Medication">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="weak"/>
+      <xsd:enumeration value="medium"/>
+      <xsd:enumeration value="strong"/>
+      <xsd:enumeration value="pending"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Daytime">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="night"/>
+      <xsd:enumeration value="early"/>
+      <xsd:enumeration value="late"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Administration">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="staff" type="AdministrationExample:Staff"/>
+      <xsd:element name="patient" type="AdministrationExample:Patient"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Administration" type="AdministrationExample:Administration"/>
+  <xsd:complexType name="Shift">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="time" type="AdministrationExample:Daytime"/>
+  </xsd:complexType>
+  <xsd:element name="Shift" type="AdministrationExample:Shift"/>
+  <xsd:complexType name="Staff">
+    <xsd:complexContent>
+      <xsd:extension base="AdministrationExample:Person">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="shiftPlan" type="AdministrationExample:Shiftplan"/>
+          <xsd:element name="treatment" type="AdministrationExample:Treatment"/>
+        </xsd:choice>
+        <xsd:attribute name="staffID" type="xsd:int" use="required"/>
+        <xsd:attribute name="salary" type="xsd:double"/>
+        <xsd:attribute name="dInt" type="xsd:int" use="required"/>
+        <xsd:attribute name="treatment" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Staff" type="AdministrationExample:Staff"/>
+  <xsd:complexType name="Person">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="firstName" type="xsd:string"/>
+    <xsd:attribute name="lastName" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Person" type="AdministrationExample:Person"/>
+  <xsd:complexType name="Treatment">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="medication" type="AdministrationExample:Medication"/>
+  </xsd:complexType>
+  <xsd:element name="Treatment" type="AdministrationExample:Treatment"/>
+  <xsd:complexType name="Shiftplan">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="covers" type="AdministrationExample:Patient"/>
+      <xsd:element name="shifts" type="AdministrationExample:Shift"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="covers" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Shiftplan" type="AdministrationExample:Shiftplan"/>
+  <xsd:complexType name="Patient">
+    <xsd:complexContent>
+      <xsd:extension base="AdministrationExample:Person">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="treatment" type="AdministrationExample:Treatment"/>
+          <xsd:element name="coveredBy" type="AdministrationExample:Shiftplan"/>
+        </xsd:choice>
+        <xsd:attribute name="patientID" type="xsd:int" use="required"/>
+        <xsd:attribute name="coveredBy" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Patient" type="AdministrationExample:Patient"/>
+</xsd:schema>

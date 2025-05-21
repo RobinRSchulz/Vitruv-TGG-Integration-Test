@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/HospitalExample/model/HospitalExample.ecore">
+  <xsd:annotation>
+    <xsd:documentation>TODO: Add documentation for HospitalExample. Hint: You may copy this element in the Ecore editor to add documentation to EClasses, EOperations, ...</xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:simpleType name="Carelevel">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="WEAK"/>
+      <xsd:enumeration value="MEDIUM"/>
+      <xsd:enumeration value="STRONG"/>
+      <xsd:enumeration value="PENDING"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Hospital">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="reception" type="HospitalExample:Reception"/>
+      <xsd:element name="staff" type="HospitalExample:Staff"/>
+      <xsd:element name="department" type="HospitalExample:Department"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Hospital" type="HospitalExample:Hospital"/>
+  <xsd:complexType name="Reception">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="waits" type="HospitalExample:Patient"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xsd:complexType>
+  <xsd:element name="Reception" type="HospitalExample:Reception"/>
+  <xsd:complexType abstract="true" name="Staff">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="works" type="HospitalExample:Department"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="staffID" type="xsd:int"/>
+    <xsd:attribute name="name" type="xsd:string"/>
+    <xsd:attribute name="works" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Staff" type="HospitalExample:Staff"/>
+  <xsd:complexType name="Doctor">
+    <xsd:complexContent>
+      <xsd:extension base="HospitalExample:Staff">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="caresfor" type="HospitalExample:Patient"/>
+        </xsd:choice>
+        <xsd:attribute name="patientCapacity" type="xsd:int"/>
+        <xsd:attribute name="caresfor" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Doctor" type="HospitalExample:Doctor"/>
+  <xsd:complexType name="Nurse">
+    <xsd:complexContent>
+      <xsd:extension base="HospitalExample:Staff">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="responsible" type="HospitalExample:Room"/>
+        </xsd:choice>
+        <xsd:attribute name="responsible" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Nurse" type="HospitalExample:Nurse"/>
+  <xsd:complexType name="Department">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="rooms" type="HospitalExample:Room"/>
+      <xsd:element name="staff" type="HospitalExample:Staff"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="dID" type="xsd:int"/>
+    <xsd:attribute name="maxRoomCount" type="xsd:int"/>
+    <xsd:attribute name="staff" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Department" type="HospitalExample:Department"/>
+  <xsd:complexType name="Patient">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="doctor" type="HospitalExample:Doctor"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="patientID" type="xsd:int"/>
+    <xsd:attribute name="name" type="xsd:string"/>
+    <xsd:attribute name="level" type="HospitalExample:Carelevel"/>
+    <xsd:attribute name="doctor" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Patient" type="HospitalExample:Patient"/>
+  <xsd:complexType name="Room">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="lies" type="HospitalExample:Patient"/>
+      <xsd:element name="nurses" type="HospitalExample:Nurse"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="capacity" type="xsd:int"/>
+    <xsd:attribute name="level" type="HospitalExample:Carelevel" use="required"/>
+    <xsd:attribute name="nurses" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="Room" type="HospitalExample:Room"/>
+</xsd:schema>
